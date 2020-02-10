@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 export const CaseStudyTemplate = ({
   content,
@@ -49,24 +50,39 @@ const CaseStudy = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
-      <CaseStudyTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      />
-    </Layout>
+    <PageTransition
+      // defaultStyle={{
+      //   transition: 'left 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
+      //   left: '100%',
+      //   position: 'absolute',
+      //   width: '100%',
+      // }}
+      // transitionStyles={{
+      //   entering: { left: '0%' },
+      //   entered: { left: '0%' },
+      //   exiting: { left: '100%' },
+      // }}
+      transitionTime={500}
+    >
+      <Layout>
+        <CaseStudyTemplate
+          content={post.html}
+          contentComponent={HTMLContent}
+          description={post.frontmatter.description}
+          helmet={
+            <Helmet titleTemplate="%s | Blog">
+              <title>{`${post.frontmatter.title}`}</title>
+              <meta
+                name="description"
+                content={`${post.frontmatter.description}`}
+              />
+            </Helmet>
+          }
+          tags={post.frontmatter.tags}
+          title={post.frontmatter.title}
+        />
+      </Layout>
+    </PageTransition>
   )
 }
 

@@ -1,6 +1,9 @@
 /*------------------------------------*\
   BASE
 \*------------------------------------*/
-@import "root",
+@import "colors",
+        "root",
         "typography",
-        "settings";
+        "settings",
+        "functions",
+        "mixins";
