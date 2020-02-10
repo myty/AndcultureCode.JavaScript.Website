@@ -6,12 +6,17 @@ class CaseStudyList extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
+    const numberOfPosts = posts.length;
 
     return (
-      <div className = "">
+      <div className = "o-case-study-list">
         {posts &&
-          posts.map(({ node: post }) => (
-            <CaseStudy key = { post.index } post = { post } />
+          posts.map(({ node: post }, index) => (
+            <CaseStudy 
+              key   = { index } 
+              post  = { post } 
+              count = { index + 1 } 
+              total = { numberOfPosts } />
           ))}
       </div>
     )
@@ -51,6 +56,8 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <CaseStudyList data={data} count={count} />}
+    render = {
+      (data, count) => <CaseStudyList data = { data } count = { count } />
+    }
   />
 )

@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import '../assets/scss/app.scss'
 import CaseStudyList from '../components/organisms/CaseStudyList'
+import ContactForm from '../components/organisms/ContactForm'
 
 export const IndexPageTemplate = ({
   title,
@@ -32,6 +33,7 @@ const IndexPage = ({ data }) => {
         subTitle       = { frontmatter.subTitle }
       />
       <CaseStudyList/>
+      <ContactForm/>
     </Layout>
   )
 }

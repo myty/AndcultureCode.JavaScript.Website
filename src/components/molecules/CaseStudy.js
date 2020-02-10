@@ -13,7 +13,7 @@ const CaseStudy = class extends React.Component {
             <div className = "m-case-studies__container" key = { this.props.post.id }>
                 <article className = "m-case-studies">
                     <div>
-                        { this.props.post.index }
+                        { this.props.count }/{ this.props.total }
                     </div>
                     { this.props.post.frontmatter.featuredimage ? (
                     <div className = "m-case-studies__image">
@@ -36,7 +36,7 @@ const CaseStudy = class extends React.Component {
                         <Link 
                             className = "" 
                             to        = { this.props.post.fields.slug }>
-                        See How
+                            See How
                         </Link>
                     </p>
                 </article>
