@@ -10,7 +10,7 @@ const CaseStudy = class extends React.Component {
 
     render() {
         return (
-            <div className = "m-case-studies__container" key = { this.props.post.id }>
+            <div className = "m-case-studies__container o-rhythm__col -span-six" key = { this.props.post.id }>
                 <article className = "m-case-studies">
                     <div>
                         { this.props.count }/{ this.props.total }

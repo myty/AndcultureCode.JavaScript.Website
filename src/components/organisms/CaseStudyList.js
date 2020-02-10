@@ -9,15 +9,17 @@ class CaseStudyList extends React.Component {
     const numberOfPosts = posts.length;
 
     return (
-      <div className = "o-case-study-list">
-        {posts &&
-          posts.map(({ node: post }, index) => (
-            <CaseStudy 
-              key   = { index } 
-              post  = { post } 
-              count = { index + 1 } 
-              total = { numberOfPosts } />
-          ))}
+      <div className = "o-case-study-list o-rhythm__container">
+        <div className = "o-rhythm__row">
+          {posts &&
+            posts.map(({ node: post }, index) => (
+              <CaseStudy 
+                key   = { index } 
+                post  = { post } 
+                count = { index + 1 } 
+                total = { numberOfPosts } />
+            ))}
+        </div>
       </div>
     )
   }
