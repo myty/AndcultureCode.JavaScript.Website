@@ -1,6 +1,6 @@
 import React from 'react'; 
 import PreviewCompatibleImage from '../PreviewCompatibleImage'; 
-import { Link } from 'gatsby'; 
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const CaseStudy = class extends React.Component {
 
@@ -21,11 +21,14 @@ const CaseStudy = class extends React.Component {
                     </div>
                     ) : null }
                     <p className = "">
-                        <Link
+                        <AniLink
                             className = ""
+                            cover
+                            bg="#19a87c"
+                            direction="up"
                             to        = { this.props.post.fields.slug }>
                             { this.props.post.frontmatter.title }
-                        </Link>
+                        </AniLink>
                         <span> &bull; </span>
                         <span className = "">
                             { this.props.post.frontmatter.description }
@@ -33,11 +36,11 @@ const CaseStudy = class extends React.Component {
                         </p>
                     <p>
                         { this.props.post.excerpt }
-                        <Link 
+                        <AniLink 
                             className = "" 
                             to        = { this.props.post.fields.slug }>
                             See How
-                        </Link>
+                        </AniLink>
                     </p>
                 </article>
             </div>

@@ -5,6 +5,7 @@ module.exports = {
       'andculture website',
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
