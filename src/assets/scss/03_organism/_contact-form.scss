@@ -1,0 +1,17 @@
+.o-contact-form {
+    height: 100vh;
+    background: get-color("primary", "after-hours"); 
+
+    .typeform-widget {
+        height: 100vh; 
+        background: get-color("primary", "after-hours"); 
+    }
+
+    #root {
+        background: get-color("primary", "after-hours"); 
+    }
+
+    div {
+        border: 1px solid blue; 
+    }
+}
