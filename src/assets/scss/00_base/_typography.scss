@@ -1,0 +1,84 @@
+body {
+    font-family: $font-primary;
+    font-weight: 200;
+}
+
+
+h1 {
+    @include font-size("largish"); 
+    @include line-height("medium-large"); 
+    color: get-color("neutral", "gray"); 
+
+    @include breakpoints("tablet") {
+        @include font-size("largest"); 
+        @include line-height("largest"); 
+    }
+}
+
+h2 {
+    @include font-size("medium-large"); 
+    @include line-height("medium-small"); 
+    color: get-color("neutral", "gray"); 
+
+    @include breakpoints("tablet") {
+        @include font-size("larger"); 
+        @include line-height("larger"); 
+    }
+}
+
+h3 {
+    @include font-size("small"); 
+    @include line-height("smaller"); 
+    color: get-color("neutral", "light-gray"); 
+
+    @include breakpoints("tablet") {
+        @include font-size("medium-large"); 
+        @include line-height("medium-large"); 
+    }
+}
+
+h4 {
+    @include font-size("medium"); 
+    @include line-height("small"); 
+    color: get-color("primary", "fresh"); 
+
+    @include breakpoints("tablet") {
+        @include font-size("large"); 
+        @include line-height("large"); 
+    }
+}
+
+h5 {
+    @include font-size("smaller"); 
+    @include line-height("smallest"); 
+    color: get-color("neutral", "light-gray"); 
+
+    @include breakpoints("tablet") {
+        @include font-size("medium-small"); 
+        @include line-height("small"); 
+    }
+}
+
+h6 {
+    @include font-size("smallest"); 
+    @include line-height("base"); 
+    color: get-color("primary", "after-hours"); 
+    font-family: $font-secondary; 
+    text-transform: uppercase;
+
+    @include breakpoints("tablet") {
+        @include font-size("base"); 
+        @include line-height("smaller"); 
+    }
+}
+
+p {
+    @include font-size("base"); 
+    @include line-height("smaller"); 
+    color: get-color("neutral", "medium-gray"); 
+
+    @include breakpoints("tablet") {
+        @include font-size("small"); 
+        @include line-height("small"); 
+    }
+}
