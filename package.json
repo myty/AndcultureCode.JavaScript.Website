@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "andculturecode.scss.rhythm": "^1.0.2",
+    "babel-eslint": "^10.0.3",
     "prettier": "^1.15.3"
   }
 }
