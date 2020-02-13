@@ -108,8 +108,7 @@ export default class CoverTransitionLink extends Component {
 							width: '100vw',
 							height: '100vh',
 							transform: 'translateY(100%)',
-						}}
-					/>
+						}}/>
 					<div
 						ref={n => (this.cover = n)}
 						style={{
@@ -120,8 +119,7 @@ export default class CoverTransitionLink extends Component {
 							width: '100vw',
 							height: '100vh',
 							transform: 'translateY(100%)',
-						}}
-					/>
+						}}/>
 				</TransitionPortal>
 			</>
 		)
