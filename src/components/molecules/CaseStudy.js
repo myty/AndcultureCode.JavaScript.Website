@@ -1,7 +1,6 @@
 import React from 'react';
 import PreviewCompatibleImage from '../PreviewCompatibleImage';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-import CoverLink from '../organisms/CoverLink';
+import CoverTransitionLink from '../organisms/CoverTransitionLink';
 
 const CaseStudy = class extends React.Component {
 
@@ -22,13 +21,12 @@ const CaseStudy = class extends React.Component {
                     </div>
                     ) : null }
                     <p className = "">
-                        <AniLink
+                        <CoverTransitionLink
                             className = ""
-                            swipe
-                            bg = "blue"
+                            direction = 'up'
                             to        = { this.props.post.fields.slug }>
-                            { this.props.post.frontmatter.title } /Ralph
-                        </AniLink>
+                            { this.props.post.frontmatter.title }
+                        </CoverTransitionLink>
                         <span> &bull; </span>
                         <span className = "">
                             { this.props.post.frontmatter.description }
@@ -36,12 +34,12 @@ const CaseStudy = class extends React.Component {
                         </p>
                     <p>
                         { this.props.post.excerpt }
-                        <CoverLink
+                        <CoverTransitionLink
                             className = ""
                             direction = 'up'
                             to        = { this.props.post.fields.slug }>
                             See How
-                        </CoverLink>
+                        </CoverTransitionLink>
                     </p>
                 </article>
             </div>

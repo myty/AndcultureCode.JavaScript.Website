@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link'
-import { TimelineMax, Power1, Power2, Power3, Power4 } from 'gsap'
+import { TimelineMax, Power1} from 'gsap'
 
-export default class CoverLink extends Component {
+export default class CoverTransitionLink extends Component {
 	constructor(props) {
 		super(props)
 
@@ -41,35 +41,22 @@ export default class CoverLink extends Component {
 		const directionTo = direction === 'up' ? '-100%' : '100%'
 		const directionFrom = direction === 'up' ? '100%' : '-100%'
 
-		const wait = seconds / 6
-		const half = (seconds - wait) / 2
-
-		console.log('DirectionTo', directionTo);
-		console.log('DirectionFrom', directionFrom);
-		console.log('wait', wait);
-		console.log('half', half);
-
-		return new TimelineMax({onStart: () => console.log('on start')})
-			// .set(transparentBg, { y: '100%' })
-			// .to(transparentBg, half, {
-			// 	y: '0%',
-			// 	ease: Power1.easeOut,
-			// })
-			.set(this.cover, { y: directionFrom })
-			.to(this.cover, half, {
+		return new TimelineMax()
+			.set(transparentBg, {y: directionFrom})
+			.to(transparentBg, .25, {
 				y: '0%',
 				ease: Power1.easeInOut,
 			})
-			.set(node, { opacity: 0 })
-			.to(
-				this.cover,
-				half,
-				{
-					y: directionTo,
-					ease: Power1.easeIn,
-				},
-				`+=${wait}`
-			)
+			.set(this.cover,{y: directionFrom}, .25)
+			.to(this.cover, .25, {
+				y: '0%',
+				ease: Power1.easeInOut
+			})
+			.set(node, {opacity: 0}, .5)
+			.to(this.cover, .5, {
+				y: directionTo,
+				ease: Power1.easeIn
+			})
 	}
 
 	moveInDirection = ({ props, direction, node, transparentBg }) => {
