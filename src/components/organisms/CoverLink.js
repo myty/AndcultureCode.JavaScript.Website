@@ -44,27 +44,21 @@ export default class CoverLink extends Component {
 		const wait = seconds / 6
 		const half = (seconds - wait) / 2
 
-		return new TimelineMax()
-			.set(transparentBg, { y: directionFrom })
-			.to(transparentBg, half, {
-				y: '0%',
-				ease: Power4.easeInOut,
-			})
-			// .set(node, { opacity: 0 })
-			// .to(
-			// 	transparentBg,
-			// 	half,
-			// 	{
-			// 		y: directionTo,
-			// 		ease: Power1.easeIn,
-			// 	},
-			// 	`+=${wait}`
-			// )
+		console.log('DirectionTo', directionTo);
+		console.log('DirectionFrom', directionFrom);
+		console.log('wait', wait);
+		console.log('half', half);
+
+		return new TimelineMax({onStart: () => console.log('on start')})
+			// .set(transparentBg, { y: '100%' })
+			// .to(transparentBg, half, {
+			// 	y: '0%',
+			// 	ease: Power1.easeOut,
+			// })
 			.set(this.cover, { y: directionFrom })
 			.to(this.cover, half, {
 				y: '0%',
-				ease: Power4.easeInOut,
-				delay: .1
+				ease: Power1.easeInOut,
 			})
 			.set(node, { opacity: 0 })
 			.to(
@@ -72,7 +66,7 @@ export default class CoverLink extends Component {
 				half,
 				{
 					y: directionTo,
-					ease: Power4.easeIn,
+					ease: Power1.easeIn,
 				},
 				`+=${wait}`
 			)
