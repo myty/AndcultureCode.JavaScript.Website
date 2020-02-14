@@ -6,16 +6,16 @@ export default class CoverTransitionLink extends Component {
 	constructor(props) {
 		super(props);
 
-		this.horizontal = this.horizontal.bind(this);
-		this.vertical 	= this.vertical.bind(this);
-		this.cover 		= React.createRef();
+		this.horizontal	= this.horizontal.bind(this);
+		this.vertical	= this.vertical.bind(this);
+		this.cover		= React.createRef();
 	}
 
 	horizontal = ({ node, props: { length: seconds }, direction }) => {
-		const directionTo 	= direction === 'left' ? '-100%' : '100%';
-		const directionFrom = direction === 'left' ? '100%' : '-100%';
-		const wait 			= seconds / 6;
-		const half 			= (seconds - wait) / 2;
+		const directionTo	= direction === 'left' ? '-100%' : '100%';
+		const directionFrom	= direction === 'left' ? '100%' : '-100%';
+		const wait			= seconds / 6;
+		const half			= (seconds - wait) / 2;
 
 		return new TimelineMax()
 			.set(this.cover, { y: 0, x: directionFrom, display: 'block' })
@@ -36,8 +36,8 @@ export default class CoverTransitionLink extends Component {
 	}
 
 	vertical = ({ node, props: { length: seconds }, direction, transparentBg }) => {
-		const directionTo 	= direction === 'up' ? '-100%' : '100%';
-		const directionFrom = direction === 'up' ? '100%' : '-100%';
+		const directionTo	= direction === 'up' ? '-100%' : '100%';
+		const directionFrom	= direction === 'up' ? '100%' : '-100%';
 
 		return new TimelineMax()
 			.set(transparentBg, {y: directionFrom})
@@ -65,9 +65,9 @@ export default class CoverTransitionLink extends Component {
 	}
 
 	render() {
-		const direction 	= this.props.direction || 'left';
-		const length 		= this.props.duration || 1;
-		const transparentBg = document.querySelector('.transparentBg');
+		const direction		= this.props.direction || 'left';
+		const length		= this.props.duration || 1;
+		const transparentBg	= document.querySelector('.transparentBg');
 		const {
 			exit: removedExit,
 			entry: removedEntry,
