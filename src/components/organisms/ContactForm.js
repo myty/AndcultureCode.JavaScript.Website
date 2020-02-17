@@ -79,6 +79,7 @@ const ContactForm = class extends React.Component {
                     progressCallback    = { this._updateProgressBar }
                     isSubmittedCallback = { this._isSubmitted } />
                 </div>
+            );
         // } else {
         //     this.setState({
         //         activeForm: '',
