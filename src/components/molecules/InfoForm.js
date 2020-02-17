@@ -102,6 +102,7 @@ const InfoForm = class extends React.Component {
                             className = "a-button">
                             Next
                         </a>
+                        <button type="submit">Send</button>
                     </div>
                 </div>
             </form>
