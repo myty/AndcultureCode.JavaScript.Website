@@ -92,10 +92,12 @@ const InfoForm = class extends React.Component {
                         }
                     </ReactCSSTransitionGroup>
                     <form name = "contact-info" method = "POST" data-netlify = "true">
-                        <input 
+                        <Input 
                                 name               = "name" 
-                                type = "hidden"
-                                value              = { "John Doe" } />
+                                type               = "hidden"
+                                inputValueCallback = { this._setInputValue } 
+                                value              = { this.state.formData.name } />
+                        <button type="submit">Send</button>
                     </form>
                     <div className = "o-contact-form__buttons">
                         <a

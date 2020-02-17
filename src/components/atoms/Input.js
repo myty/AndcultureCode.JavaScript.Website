@@ -50,16 +50,32 @@ const Input = class extends React.Component {
                     htmlFor   = { this.props.name }>
                     { this.props.name }
                 </label>
-                <input 
-                    value       = { this.props.value }
-                    onFocus     = { this._activateField }
-                    onBlur      = { this._disableField }
-                    onChange    = { this._updateInputValue }
-                    className   = "a-input" 
-                    type        = "text" 
-                    name        = { this.props.name }
-                    placeholder = { this.state.placeholderValue }
-                    id          = { this.props.name } />
+                { // if
+                    this.props.type === "hidden" &&
+                    <input 
+                        value       = { this.props.value }
+                        onFocus     = { this._activateField }
+                        onBlur      = { this._disableField }
+                        onChange    = { this._updateInputValue }
+                        className   = "a-input" 
+                        type        = "hidden" 
+                        name        = { this.props.name }
+                        placeholder = { this.state.placeholderValue }
+                        id          = { this.props.name } />
+                }
+                { // if
+                    this.props.type !== "hidden" &&
+                    <input 
+                        value       = { this.props.value }
+                        onFocus     = { this._activateField }
+                        onBlur      = { this._disableField }
+                        onChange    = { this._updateInputValue }
+                        className   = "a-input" 
+                        type        = "text" 
+                        name        = { this.props.name }
+                        placeholder = { this.state.placeholderValue }
+                        id          = { this.props.name } />
+                }
             </fieldset>
         )
     }
