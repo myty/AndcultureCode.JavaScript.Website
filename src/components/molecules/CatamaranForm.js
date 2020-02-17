@@ -59,7 +59,7 @@ const CatamaranForm = class extends React.Component {
     render() {
 
         return (
-            <form className = "o-contact-form">
+            <form className = "o-contact-form" name = "contact-catamaran" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>talk start-ups (Catamaran)</header>
                     <ReactCSSTransitionGroup

@@ -58,7 +58,7 @@ const JobForm = class extends React.Component {
     render() {
 
         return (
-            <form className = "o-contact-form">
+            <form className = "o-contact-form" name = "contact-job" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>join the team</header>
                     <ReactCSSTransitionGroup

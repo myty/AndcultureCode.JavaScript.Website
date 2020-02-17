@@ -59,7 +59,7 @@ const InfoForm = class extends React.Component {
     render() {
 
         return (
-            <form className = "o-contact-form" name="contact-info" method="POST" netlify data-netlify="true">
+            <form className = "o-contact-form" name = "contact-info" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>get quick info</header>
                     <ReactCSSTransitionGroup

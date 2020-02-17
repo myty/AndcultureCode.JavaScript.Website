@@ -1,5 +1,4 @@
 import React                   from 'react';
-import Recaptcha               from '../atoms/Recaptcha';
 import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
@@ -59,7 +58,7 @@ const ProjectForm = class extends React.Component {
     render() {
 
         return (
-            <form className = "o-contact-form">
+            <form className = "o-contact-form" data-netlify-recaptcha = "true" name = "contact-project" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>start a project together</header>
                     <ReactCSSTransitionGroup
@@ -114,7 +113,7 @@ const ProjectForm = class extends React.Component {
                         { // if
                             this.state.activeQuestion === 7 && 
                             <fieldset>
-                                <Recaptcha/>
+                                <div data-netlify-recaptcha="true"></div>
                             </fieldset>
                         }
                     </ReactCSSTransitionGroup>
