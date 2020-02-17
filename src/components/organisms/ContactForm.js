@@ -106,18 +106,15 @@ const ContactForm = class extends React.Component {
                     <div className = "o-rhythm__container">
                         <h6>Get In Touch</h6>
                     </div>
-                    <ProjectForm
-                        progressCallback    = { this._updateProgressBar }
-                        isSubmittedCallback = { this._isSubmitted } />
-                    <InfoForm
-                        progressCallback    = { this._updateProgressBar }
-                        isSubmittedCallback = { this._isSubmitted } />
-                    <JobForm
-                        progressCallback    = { this._updateProgressBar }
-                        isSubmittedCallback = { this._isSubmitted } />
-                    <CatamaranForm
-                        progressCallback    = { this._updateProgressBar }
-                        isSubmittedCallback = { this._isSubmitted } />
+                    <form name = { this.state.activeForm } data-netlify-recaptcha = "true" method = "POST" data-netlify = "true">
+                        { // if
+                            this.state.formActive === true &&
+                            <div>
+                                { this._returnForm() }
+                            </div>
+                        }
+                    </form>
+                    
                     { // if
                         this.state.formActive === false &&
                         this.state.isSubmitted === false &&
