@@ -61,31 +61,36 @@ const ContactForm = class extends React.Component {
     }
 
     _returnForm() {
+        if (this.state.activeForm === "project") {
             return (
-                <div>
                 <ProjectForm
                     progressCallback    = { this._updateProgressBar }
                     isSubmittedCallback = { this._isSubmitted } />
-         
+            );
+        }
+        else if (this.state.activeForm === "quick-info") {
+            return (
                 <InfoForm
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />
-       
+                    isSubmittedCallback = { this._isSubmitted } />);
+        }
+        else if (this.state.activeForm === "join-team") {
+            return (
                 <JobForm
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />
-    
+                    isSubmittedCallback = { this._isSubmitted } />);
+        }
+        else if (this.state.activeForm === "start-ups") {
+            return (
                 <CatamaranForm
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />
-                </div>
-            );
-        // } else {
-        //     this.setState({
-        //         activeForm: '',
-        //         formActive: false,
-        //     })
-        // }
+                    isSubmittedCallback = { this._isSubmitted } />);
+        } else {
+            this.setState({
+                activeForm: '',
+                formActive: false,
+            })
+        }
     }
 
     render() {
@@ -101,6 +106,18 @@ const ContactForm = class extends React.Component {
                     <div className = "o-rhythm__container">
                         <h6>Get In Touch</h6>
                     </div>
+                    <ProjectForm
+                        progressCallback    = { this._updateProgressBar }
+                        isSubmittedCallback = { this._isSubmitted } />
+                    <InfoForm
+                        progressCallback    = { this._updateProgressBar }
+                        isSubmittedCallback = { this._isSubmitted } />
+                    <JobForm
+                        progressCallback    = { this._updateProgressBar }
+                        isSubmittedCallback = { this._isSubmitted } />
+                    <CatamaranForm
+                        progressCallback    = { this._updateProgressBar }
+                        isSubmittedCallback = { this._isSubmitted } />
                     { // if
                         this.state.formActive === false &&
                         this.state.isSubmitted === false &&
