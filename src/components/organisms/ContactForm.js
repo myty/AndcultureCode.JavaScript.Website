@@ -61,36 +61,26 @@ const ContactForm = class extends React.Component {
     }
 
     _returnForm() {
-        if (this.state.activeForm === "project") {
-            return (
+        return (
+            <div>
                 <ProjectForm
+                    isActive            = { this.state.activeForm === "project" }
                     progressCallback    = { this._updateProgressBar }
                     isSubmittedCallback = { this._isSubmitted } />
-            );
-        }
-        else if (this.state.activeForm === "quick-info") {
-            return (
                 <InfoForm
+                    isActive            = { this.state.activeForm === "quick-info" }
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />);
-        }
-        else if (this.state.activeForm === "join-team") {
-            return (
+                    isSubmittedCallback = { this._isSubmitted } />
                 <JobForm
+                    isActive            = { this.state.activeForm === "join-team" }
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />);
-        }
-        else if (this.state.activeForm === "start-ups") {
-            return (
+                    isSubmittedCallback = { this._isSubmitted } />
                 <CatamaranForm
+                    isActive            = { this.state.activeForm === "start-ups" }
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />);
-        } else {
-            this.setState({
-                activeForm: '',
-                formActive: false,
-            })
-        }
+                    isSubmittedCallback = { this._isSubmitted } />
+            </div>
+        );
     }
 
     render() {
@@ -106,15 +96,6 @@ const ContactForm = class extends React.Component {
                     <div className = "o-rhythm__container">
                         <h6>Get In Touch</h6>
                     </div>
-                    <form name = { this.state.activeForm } data-netlify-recaptcha = "true" method = "POST" data-netlify = "true">
-                        { // if
-                            this.state.formActive === true &&
-                            <div>
-                                { this._returnForm() }
-                            </div>
-                        }
-                    </form>
-                    
                     { // if
                         this.state.formActive === false &&
                         this.state.isSubmitted === false &&
@@ -180,12 +161,9 @@ const ContactForm = class extends React.Component {
                             </div>
                         </div>
                     }
-                    { // if
-                        this.state.formActive === true &&
-                        <div>
-                            { this._returnForm() }
-                        </div>
-                    }
+                    <div>
+                        { this._returnForm() }
+                    </div>
                     { // if
                         this.state.isSubmitted === true &&
                         <div className = "o-contact-form__submitted o-rhythm__container">

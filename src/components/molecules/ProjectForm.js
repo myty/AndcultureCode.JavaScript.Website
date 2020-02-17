@@ -56,9 +56,11 @@ const ProjectForm = class extends React.Component {
     }
 
     render() {
+        let formClass = 'o-contact-form'; 
+        formClass += this.props.isActive ? ' -active' : '';
 
         return (
-            <form className = "o-contact-form" data-netlify-recaptcha = "true" name = "contact-project" method = "POST" data-netlify = "true">
+            <form className = { formClass } data-netlify-recaptcha = "true" name = "contact-project" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>start a project together</header>
                     <ReactCSSTransitionGroup

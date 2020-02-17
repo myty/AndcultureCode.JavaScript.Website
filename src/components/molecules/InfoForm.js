@@ -59,7 +59,7 @@ const InfoForm = class extends React.Component {
     render() {
 
         return (
-            <div className = "o-contact-form" name = "contact-info" method = "POST" data-netlify = "true">
+            <form className = "o-contact-form" name="contact-info" method="POST" netlify data-netlify="true">
                 <div className = "o-rhythm__container">
                     <header>get quick info</header>
                     <ReactCSSTransitionGroup
@@ -91,14 +91,6 @@ const InfoForm = class extends React.Component {
                                 value              = { this.state.formData.message } />
                         }
                     </ReactCSSTransitionGroup>
-                    <form name = "contact-info" method = "POST" data-netlify = "true">
-                        <Input 
-                                name               = "name" 
-                                type               = "hidden"
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.name } />
-                        <button type="submit">Send</button>
-                    </form>
                     <div className = "o-contact-form__buttons">
                         <a
                             onClick   = { this._onBackClick }
@@ -110,10 +102,9 @@ const InfoForm = class extends React.Component {
                             className = "a-button">
                             Next
                         </a>
-                        <button type="submit">Send</button>
                     </div>
                 </div>
-            </div>
+            </form>
         )
     }
 }
