@@ -19,14 +19,24 @@ const ProjectForm = class extends React.Component {
     }
 
     _onNextClick() {
+        if (this.state.activeQuestion === this.state.totalQuestions) {
+            this._caclulateProgress(1);
+            return;
+        }
+
         this.setState({
-            activeQuestion: this.state.activeQuestion + 1,
+            activeQuestion:  this.state.activeQuestion + 1,
         }, this._caclulateProgress(1));
     }
 
     _onBackClick() {
+        if (this.state.activeQuestion === 1) {
+            this._caclulateProgress(0);
+            return;
+        }
+
         this.setState({
-            activeQuestion: this.state.activeQuestion - 1,
+            activeQuestion:  this.state.activeQuestion  - 1,
         }, this._caclulateProgress(0));
     }
 

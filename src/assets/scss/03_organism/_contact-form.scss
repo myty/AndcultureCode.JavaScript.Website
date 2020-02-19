@@ -1,11 +1,42 @@
 .o-contact-form {
     @include clearfix(); 
     position: relative; 
+    display: none; 
+
+    &.-initial {
+        display: block;
+    }
+
+    &.-active {
+        display: block;
+    }
 
     &__container {
+        @include clearfix(); 
         position: relative;
         padding: 0 0 80px 0;
         background: get-color("primary", "after-hours");
+
+        h6 {
+            color: get-color("primary", "fresh"); 
+            margin: 118px 0 80px 0;
+        }
+
+
+        &.-active {
+
+            .-initial {
+                display: none;
+            }
+        }
+    }
+
+    &__forms {
+        display: none;
+
+        &.-active {
+            display: block;
+        }
     }
 
     &__submitted {
@@ -21,6 +52,7 @@
 
     &__buttons {
         margin-top: 80px;
+        margin-bottom: 4px;
 
         &.-space {
             padding: 0 56px;
@@ -45,11 +77,6 @@
         -moz-transition: width 1s ease-in-out;
         -o-transition: width 1s ease-in-out;
         transition: width 1s ease-in-out;
-    }
-
-    h6 {
-        color: get-color("primary", "fresh"); 
-        margin: 118px 0 80px 0;
     }
 
     header {

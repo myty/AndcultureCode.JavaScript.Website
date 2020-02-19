@@ -19,14 +19,24 @@ const JobForm = class extends React.Component {
     }
 
     _onNextClick() {
+        if (this.state.activeQuestion === this.state.totalQuestions) {
+            this._caclulateProgress(1);
+            return;
+        }
+
         this.setState({
-            activeQuestion: this.state.activeQuestion + 1,
+            activeQuestion:  this.state.activeQuestion + 1,
         }, this._caclulateProgress(1));
     }
 
     _onBackClick() {
+        if (this.state.activeQuestion === 1) {
+            this._caclulateProgress(0);
+            return;
+        }
+
         this.setState({
-            activeQuestion: this.state.activeQuestion - 1,
+            activeQuestion:  this.state.activeQuestion  - 1,
         }, this._caclulateProgress(0));
     }
 
@@ -56,9 +66,11 @@ const JobForm = class extends React.Component {
     }
 
     render() {
+        let formClass = 'o-contact-form'; 
+        formClass += this.props.isActive ? ' -active' : '';
 
         return (
-            <form className = "o-contact-form" name = "contact-job" method = "POST" data-netlify = "true">
+            <form className = { formClass } name = "contact-job" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>join the team</header>
                     <ReactCSSTransitionGroup

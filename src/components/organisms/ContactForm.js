@@ -31,12 +31,17 @@ const ContactForm = class extends React.Component {
 
     _deactiveForm(e) {
         e.preventDefault();
-        this.setState({ formActive: false });
+        this.setState({ 
+            formActive: false,
+            activeForm: '',
+        });
     }
 
     _activateForm(e) {
         e.preventDefault();
-        this.setState({ formActive: true });
+        this.setState({
+            formActive: true,
+        });
     }
 
     _updateProgressBar(percentComplete) {
@@ -84,18 +89,19 @@ const ContactForm = class extends React.Component {
     }
 
     render() {
-
+        let formContainerClass = "o-contact-form__container"; 
+        formContainerClass += this.state.formActive ? " -active" : "";
         var progressBarWidth = {
             width: this.state.percentComplete + "%",
         };
 
         return (
-            <div className = "o-contact-form__container">
+            <div className = { formContainerClass }>
                 <div className = "o-contact-form__progress" style = { progressBarWidth }></div>
-                <div className = "o-contact-form">
-                    <div className = "o-rhythm__container">
-                        <h6>Get In Touch</h6>
-                    </div>
+                <div className = "o-rhythm__container">
+                    <h6>Get In Touch</h6>
+                </div>
+                <div className = "o-contact-form -initial">
                     { // if
                         this.state.formActive === false &&
                         this.state.isSubmitted === false &&
@@ -161,17 +167,17 @@ const ContactForm = class extends React.Component {
                             </div>
                         </div>
                     }
-                    <div>
-                        { this._returnForm() }
-                    </div>
-                    { // if
-                        this.state.isSubmitted === true &&
-                        <div className = "o-contact-form__submitted o-rhythm__container">
-                            <h1>Thank you!</h1>
-                            <p>We will get back to you as quickly as possible.</p>
-                        </div>
-                    }
                 </div>
+                <div className = { this.state.formActive ? 'o-contact-form__forms -active' : 'o-contact-form__forms' }>
+                    { this._returnForm() }
+                </div>
+                { // if
+                    this.state.isSubmitted === true &&
+                    <div className = "o-contact-form__submitted o-rhythm__container">
+                        <h1>Thank you!</h1>
+                        <p>We will get back to you as quickly as possible.</p>
+                    </div>
+                }
             </div>
         )
     }
