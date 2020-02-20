@@ -3,14 +3,14 @@ import { TimelineMax, Power1 } from 'gsap';
 
 const HomeAnimation = () => {
     useEffect(() => {
-        const intro = document.querySelector('.o-home-intro');
+        const animation_container = document.querySelector('.o-home-animation');
         const logo = document.querySelector('.animation-logo');
         const first_word = document.querySelector('.first');
         const second_word = document.querySelector('.second');
         const third_word = document.querySelector('.third');
-        const tl = new TimelineMax()
+        const tl = new TimelineMax();
 
-        tl.set(intro, {y: "0%"})
+        tl.set(animation_container, {y: "0%"})
 
         tl.set(logo, {y: "7%"})
         tl.to(logo, 1, {
@@ -40,20 +40,20 @@ const HomeAnimation = () => {
             ease: Power1.easeInOut
         }, 4.5)
 
-        tl.to(intro, 2, {
+        tl.to(animation_container, 2, {
             y: '-100%',
             ease: Power1.easeInOut
         }, 6.5)
 
         tl.eventCallback("onComplete", function() {
             document.querySelector('body').style.overflow = "visible";
-            intro.style.display = 'none';
+            animation_container.style.display = 'none';
         })
     });
 
     return (
-        <div className = "o-home-intro">
-            <div className = "o-home-intro__container">
+        <div className = "o-home-animation">
+            <div className = "o-home-animation__container">
                 <div style={{position:"relative", width: "100%", textAlign: "center"}}>
                     <svg className="animation-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"x="0px" y="0px"
                         viewBox="0 0 100 100" style={{width: "55%", height: "auto"}}>
@@ -65,7 +65,7 @@ const HomeAnimation = () => {
                         c-0.38,0.97-0.99,1.83-1.81,2.52c-1.29,1.09-2.92,1.61-4.6,1.47C44.92,57.21,42.33,54.15,42.63,50.69z"/>
                     </svg>
                     <svg id="new" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" style={{width: "50%", height: "auto", position:"absolute", left: "50%", transform: "translate(-50%,0)", overflow: "visible"}}>
-                        <path fill="none" stroke="#fff" strokeMiterlimit="10" strokeWidth="5.72px" className="st0" d="M67.18,67.18a31.36,31.36,0,1,1,0-44.36"/>
+                        <path fill="none" stroke="#fff" strokeMiterlimit="10" strokeWidth="5.72px" className="animation-logo-c__path" d="M67.18,67.18a31.36,31.36,0,1,1,0-44.36"/>
                     </svg>
                 </div>
                 <div className="animation-text">

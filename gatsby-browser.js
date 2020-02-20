@@ -1,28 +1,13 @@
 // Logs when the client route changes
 module.exports.onRouteUpdate = ({ location, prevLocation }) => {
-  console.log('location', location);
-  console.log("new pathname", location.pathname);
-  console.log("old pathname", prevLocation ? prevLocation.pathname : null);
-
   function runHomePageAnimation() {
-    // if (prevLocation && prevLocation.hostname === 'localhost') {
-    //   console.log('It came from inside!');
-    //   return;
-    // }
-    // document.querySelector('body').style.overflow = 'hidden';
+    const body = document.querySelector('body');
+    const overlay = document.querySelector('.o-home-animation');
 
-    var body = document.querySelector('body');
-    var overlay = document.querySelector('.o-home-intro');
-
-    if (!prevLocation) {
+    // TODO - Change hostname to 'andculture' when deployed.
+    if (!prevLocation || prevLocation && prevLocation.hostname !== 'localhost') {
       body.style.overflow = 'hidden';
       overlay.style.display = 'block';
-      console.log('new!');
-      // setTimeout(function() {
-      //   body.style.overflow = 'visible';
-      //   overlay.style.display = 'none';
-      // }, 1000);
-      return;
     }
   }
 

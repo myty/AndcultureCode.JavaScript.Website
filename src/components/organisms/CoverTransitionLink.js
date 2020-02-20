@@ -14,8 +14,6 @@ export default class CoverTransitionLink extends Component {
 	horizontal = ({ node, props: { length: seconds }, direction, transparentBg }) => {
 		const directionTo	= direction === 'left' ? '-100%' : '100%';
 		const directionFrom	= direction === 'left' ? '100%' : '-100%';
-		const wait			= seconds / 6;
-		const half			= (seconds - wait) / 2;
 
 		return new TimelineMax()
 			.set(transparentBg,{ y: 0, x: directionFrom, display: 'block' })
@@ -29,10 +27,7 @@ export default class CoverTransitionLink extends Component {
 				ease: Power1.easeInOut,
 			})
 			.set(node, { opacity: 0 }, .5)
-			.to(
-				this.cover,
-				.5,
-				{
+			.to(this.cover, .5, {
 					x: directionTo,
 					ease: Power1.easeInOut,
 				}

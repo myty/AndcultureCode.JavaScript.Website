@@ -1,7 +1,7 @@
-.o-home-intro {
+.o-home-animation {
+    background: get-color("primary", "fresh");
     display: none;
     position: fixed;
-    background: #19a87c;
     top: 0;
     left: 0;
     width: 100vw;
@@ -18,6 +18,18 @@
 
         .animation-logo {
             opacity: 0;
+
+            &-c__path {
+                animation-name: draw, spin;
+                animation-delay: 0s, 2s;
+                animation-duration: 5s, 4s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1;
+                animation-timing-function: linear, ease-out;
+                stroke-dasharray: 450;
+                stroke-dashoffset: 450;
+                transform-origin: center center;
+            }
         }
 
         .animation-text {
@@ -42,18 +54,6 @@
                 display: inline-block;
                 opacity: 0;
             }
-        }
-
-        .st0 {
-            stroke-dasharray: 450;
-            stroke-dashoffset: 450;
-            animation-name: draw, spin;
-            animation-delay: 0s, 2s;
-            animation-duration: 5s, 4s;
-            animation-timing-function: linear, ease-out;
-            animation-iteration-count: 1;
-            transform-origin: center center;
-            animation-fill-mode: forwards;
         }
 
         @keyframes draw {
