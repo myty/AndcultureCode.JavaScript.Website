@@ -37,14 +37,6 @@ module.exports = {
         name: 'sass',
       },
     },
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: `${__dirname}/static/img/svg/`
-        }
-      }
-    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
