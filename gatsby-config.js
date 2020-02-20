@@ -5,7 +5,7 @@ module.exports = {
       'andculture website',
   },
   plugins: [
-    `gatsby-plugin-transition-link`,
+    'gatsby-plugin-transition-link',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
@@ -36,6 +36,14 @@ module.exports = {
         path: `${__dirname}/src/assets/scss`,
         name: 'sass',
       },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: `${__dirname}/static/img/svg/`
+        }
+      }
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

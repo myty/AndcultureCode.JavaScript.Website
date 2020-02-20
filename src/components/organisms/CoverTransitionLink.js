@@ -11,27 +11,31 @@ export default class CoverTransitionLink extends Component {
 		this.cover		= React.createRef();
 	}
 
-	horizontal = ({ node, props: { length: seconds }, direction }) => {
+	horizontal = ({ node, props: { length: seconds }, direction, transparentBg }) => {
 		const directionTo	= direction === 'left' ? '-100%' : '100%';
 		const directionFrom	= direction === 'left' ? '100%' : '-100%';
 		const wait			= seconds / 6;
 		const half			= (seconds - wait) / 2;
 
 		return new TimelineMax()
-			.set(this.cover, { y: 0, x: directionFrom, display: 'block' })
-			.to(this.cover, half, {
+			.set(transparentBg,{ y: 0, x: directionFrom, display: 'block' })
+			.to(transparentBg, .25, {
 				x: '0%',
 				ease: Power1.easeInOut,
 			})
-			.set(node, { opacity: 0 })
+			.set(this.cover, { y: 0, x: directionFrom, display: 'block' }, .25)
+			.to(this.cover, .25, {
+				x: '0%',
+				ease: Power1.easeInOut,
+			})
+			.set(node, { opacity: 0 }, .5)
 			.to(
 				this.cover,
-				half,
+				.5,
 				{
 					x: directionTo,
 					ease: Power1.easeInOut,
-				},
-				`+=${wait}`
+				}
 			)
 	}
 
@@ -59,7 +63,7 @@ export default class CoverTransitionLink extends Component {
 
 	moveInDirection = ({ props, direction, node, transparentBg }) => {
 		if (direction === 'left' || direction === 'right')
-			return this.horizontal({ props, direction, node });
+			return this.horizontal({ props, direction, node, transparentBg });
 
 		return this.vertical({ props, direction, node, transparentBg });
 	}

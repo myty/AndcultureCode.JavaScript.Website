@@ -1,0 +1,76 @@
+.o-home-intro {
+    display: none;
+    position: fixed;
+    background: #19a87c;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+
+    &__container {
+        position: relative;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+        width: 25%;
+        text-align: center;
+
+        .animation-logo {
+            opacity: 0;
+        }
+
+        .animation-text {
+            @include font-size(20px);
+            color: get-color("primary", "white");
+            font-weight: 500;
+            margin-top: 100px;
+            text-transform: uppercase;
+            word-spacing: 30px;
+
+            & .first {
+                display: inline-block;
+                opacity: 0;
+            }
+
+            & .second {
+                display: inline-block;
+                opacity: 0;
+            }
+
+            & .third {
+                display: inline-block;
+                opacity: 0;
+            }
+        }
+
+        .st0 {
+            stroke-dasharray: 450;
+            stroke-dashoffset: 450;
+            animation-name: draw, spin;
+            animation-delay: 0s, 2s;
+            animation-duration: 5s, 4s;
+            animation-timing-function: linear, ease-out;
+            animation-iteration-count: 1;
+            transform-origin: center center;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes spin {
+            from {
+                -webkit-transform:rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(720deg);
+                transform:rotate(720deg);
+            }
+        }
+    }
+}

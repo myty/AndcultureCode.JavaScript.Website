@@ -23,7 +23,7 @@ const CaseStudy = class extends React.Component {
                     <p className = "">
                         <CoverTransitionLink
                             className = ""
-                            direction = 'up'
+                            direction = 'left'
                             to        = { this.props.post.fields.slug }>
                             { this.props.post.frontmatter.title }
                         </CoverTransitionLink>
