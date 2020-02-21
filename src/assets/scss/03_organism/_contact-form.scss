@@ -1,7 +1,7 @@
 .o-contact-form {
-    @include clearfix(); 
-    position: relative; 
-    display: none; 
+    @include clearfix();
+    position: relative;
+    display: none;
 
     &.-initial {
         display: block;
@@ -12,13 +12,13 @@
     }
 
     &__container {
-        @include clearfix(); 
+        @include clearfix();
         position: relative;
         padding: 0 0 80px 0;
         background: get-color("primary", "after-hours");
 
         h6 {
-            color: get-color("primary", "fresh"); 
+            color: get-color("primary", "fresh");
             margin: 118px 0 80px 0;
         }
 
@@ -67,12 +67,12 @@
     }
 
     &__progress {
-        background: get-color("primary", "fresh"); 
+        background: get-color("primary", "fresh");
         position: absolute;
         top: 0;
-        left: 0; 
-        height: 4px; 
-        width: 100%; 
+        left: 0;
+        height: 4px;
+        width: 100%;
         -webkit-transition: width 1s ease-in-out;
         -moz-transition: width 1s ease-in-out;
         -o-transition: width 1s ease-in-out;
@@ -80,21 +80,21 @@
     }
 
     header {
-        @include font-size("medium-large"); 
-        color: get-color("primary", "white"); 
+        @include font-size("medium-large");
+        color: get-color("primary", "white");
     }
-    
+
     .o-rhythm__container {
         overflow: hidden;
     }
 
     .typeform-widget {
-        height: 100vh; 
-        background: get-color("primary", "after-hours"); 
+        height: 100vh;
+        background: get-color("primary", "after-hours");
     }
 
     #root {
-        background: get-color("primary", "after-hours"); 
+        background: get-color("primary", "after-hours");
     }
 }
 
@@ -112,17 +112,17 @@
     opacity: 0.01;
     left: -100%;
   }
-  
+
   .animate-enter.animate-enter-active {
     opacity: 1;
     transition: all 500ms ease-in;
     left: 0;
   }
-  
+
   .animate-leave {
     opacity: 1;
   }
-  
+
   .animate-leave.animate-leave-active {
     opacity: 0.01;
     transition: opacity 300ms ease-in;

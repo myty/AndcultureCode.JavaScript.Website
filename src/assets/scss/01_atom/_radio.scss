@@ -1,30 +1,30 @@
 .a-radio {
-    position: absolute; 
+    position: absolute;
     opacity: 0;
 
     &:checked + label {
-        color: white; 
+        color: white;
 
-        &:before, 
+        &:before,
         &:after {
             content: "";
             position: absolute;
-            display: inline-block; 
-            z-index: -1; 
+            display: inline-block;
+            z-index: -1;
         }
 
         &:before {
-            top: 50%; 
+            top: 50%;
             transform: translateY(-50%);
-            height: 2px; 
+            height: 2px;
             left: -30px;
-            right: -20px; 
+            right: -20px;
             background: get-color("primary", "fresh");
         }
 
         &:after {
             right: -19px;
-            top: 12px; 
+            top: 12px;
             width: 16px;
             height: 16px;
             border-right: 2px solid get-color("primary", "fresh");
@@ -34,35 +34,35 @@
     }
 
     & + label {
-        @include font-size(32px); 
+        @include font-size(32px);
         position: relative;
         padding: 0 16px;
-        background: get-color("primary", "after-hours"); 
-        color: get-color("neutral", "light-gray"); 
+        background: get-color("primary", "after-hours");
+        color: get-color("neutral", "light-gray");
         z-index: 1;
 
         &:hover {
 
-            &:before, 
+            &:before,
             &:after {
                 content: "";
                 position: absolute;
-                display: inline-block; 
-                z-index: -1; 
+                display: inline-block;
+                z-index: -1;
             }
-    
+
             &:before {
-                top: 50%; 
+                top: 50%;
                 transform: translateY(-50%);
-                height: 2px; 
+                height: 2px;
                 left: -30px;
-                right: -20px; 
+                right: -20px;
                 background: get-color("primary", "fresh");
             }
-    
+
             &:after {
                 right: -19px;
-                top: 12px; 
+                top: 12px;
                 width: 16px;
                 height: 16px;
                 border-right: 2px solid get-color("primary", "fresh");
