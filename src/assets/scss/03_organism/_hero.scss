@@ -1,13 +1,18 @@
 .o-hero {
     position: relative;
     min-height: 100vh;
+    background: -moz-linear-gradient(top, rgba(223,235,238,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(223,235,238,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(223,235,238,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dfebee', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
 
     .o-rhythm__container {
         position: relative;
     }
 
     &__top {
-        height: 100vh; 
+        margin-bottom: 200px;
         padding-top: 218px;
     }
 
@@ -18,15 +23,6 @@
 
         @include breakpoints("tablet") {
             padding-left: 160px;
-        }
-
-        .x5 {
-            white-space: normal;
-        }
-
-        * {
-            max-width: 100%; 
-            overflow-wrap: break-word;
         }
     }
 
@@ -45,16 +41,13 @@
         &.-after {
 
             &:after {
-                content: '*'; 
+                content: '';
+                background: url('../../../static/img/asterisk.png') no-repeat center center / contain;
+                height: 24px;
+                width: 24px; 
                 display: inline-block;
-            }
-        }
-
-        &.-before {
-
-            &:before {
-                content: '*'; 
-                display: inline-block;
+                vertical-align: top;
+                margin-left: 20px;
             }
         }
     }
@@ -75,6 +68,27 @@
 
         @include breakpoints("tablet") {
             display: block;
+        }
+    }
+
+    p {
+        position: relative;
+        float: right;
+        max-width: 160px;
+
+        &.-before {
+
+            &:before {
+                content: '';
+                background: url('../../../static/img/asterisk.png') no-repeat center center / contain;
+                height: 12px;
+                width: 12px;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 10px;
+                position: absolute;
+                left: -28px;
+            }
         }
     }
 }

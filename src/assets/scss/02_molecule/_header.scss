@@ -1,18 +1,20 @@
 .m-header {
     @include clearfix(); 
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
-    padding: 40px 0; 
+    top: 40px; 
+    z-index: 8;
 
     @include breakpoints("tablet") {
-        padding: 50px 0; 
+        top: 50px; 
     }
 
     &__logo {
         display: block;
         float: left;
         width: 80px; 
+        mix-blend-mode: difference;
 
         @include breakpoints("tablet") {
             width: 100px; 
@@ -33,4 +35,22 @@
             @include font-size(24px);
         }
     }
+}
+
+/* ----- Browser Support ----- */
+
+/* Display mix-blend-mode button for all browsers */
+.light-svg {
+    display: block;
+}
+.dark-svg {
+    display: none;
+}
+
+/* Change button class (and SVG color) for IE and Edge only */
+_:-ms-lang(x), .light-svg {
+    display: none;
+}
+_:-ms-lang(x), .dark-svg {
+    display: block;
 }

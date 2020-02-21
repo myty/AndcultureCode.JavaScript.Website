@@ -1,7 +1,6 @@
 import React                   from 'react';
 import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const CatamaranForm = class extends React.Component {
     constructor(props) {
@@ -67,74 +66,70 @@ const CatamaranForm = class extends React.Component {
     }
 
     render() {
-        let formClass = 'o-contact-form'; 
+        let formClass   = 'o-contact-form'; 
+        let buttonClass = 'a-button';
         formClass += this.props.isActive ? ' -active' : '';
+        if (this.state.activeQuestion === this.state.totalQuestions) {
+            buttonClass += ' -active'
+        }
 
         return (
             <form className = { formClass } name = "contact-catamaran" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>talk start-ups (Catamaran)</header>
-                    <ReactCSSTransitionGroup
-                        transitionName          = "animate"
-                        transitionAppear        = { true }
-                        transitionAppearTimeout = { 500 }
-                        transitionEnter         = { true }
-                        transitionEnterTimeout  = { 1000 }
-                        transitionLeave         = { false }>
-                        { // if
-                            this.state.activeQuestion === 1 &&
-                            <Input 
-                                name               = "name" 
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.name } />
-                        }
-                        { // if
-                            this.state.activeQuestion === 2 &&
-                            <Input 
-                                name               = "email" 
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.email } />
-                        }
-                        { // if
-                            this.state.activeQuestion === 3 &&
-                            <fieldset>
-                                <label
-                                    className = "a-label -static"
-                                    htmlFor   = "interest">
-                                    What are you interested in talking to us about?
-                                </label>
-                                <div className = "a-dropdown">
-                                    <select id = "interest">
-                                        <option value="existing">I have a startup I’d like to talk to you about</option>
-                                        <option value="story">I have an entrepreneurship story to share</option>
-                                        <option value="event">I have an event for your community calendar</option>
-                                        <option value="partner">I’m interested in a partnership</option>
-                                        <option value="job">I’m interested in a job or internship with Catamaran</option>
-                                        <option value="training">I’m interested in training</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </fieldset>
-                        }
-                        { // if
-                            this.state.activeQuestion === 4 && 
-                            <Textarea 
-                                name               = "message" 
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.message } />
-                        }
-                    </ReactCSSTransitionGroup>
+                    <Input 
+                        className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                        name               = "name" 
+                        inputValueCallback = { this._setInputValue } 
+                        value              = { this.state.formData.name } />
+                    <Input 
+                        className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                        name               = "email" 
+                        inputValueCallback = { this._setInputValue } 
+                        value              = { this.state.formData.email } />
+                    <fieldset className = { this.state.activeQuestion === 3 ? '-active': '' }>
+                        <label
+                            className = "a-label -static"
+                            htmlFor   = "interest">
+                            What are you interested in talking to us about?
+                        </label>
+                        <div className = "a-dropdown">
+                            <select id = "interest">
+                                <option value="existing">I have a startup I’d like to talk to you about</option>
+                                <option value="story">I have an entrepreneurship story to share</option>
+                                <option value="event">I have an event for your community calendar</option>
+                                <option value="partner">I’m interested in a partnership</option>
+                                <option value="job">I’m interested in a job or internship with Catamaran</option>
+                                <option value="training">I’m interested in training</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <Textarea 
+                        className          = { this.state.activeQuestion === 4 ? '-active': '' }
+                        name               = "message" 
+                        inputValueCallback = { this._setInputValue } 
+                        value              = { this.state.formData.message } />
                     <div className = "o-contact-form__buttons">
-                        <a 
+                        <a
                             onClick   = { this._onBackClick }
                             className = "a-button">
                             Go Back
                         </a>
-                        <a 
+                        {  // if
+                            this.state.activeQuestion !== this.state.totalQuestions &&
+                            <a
+                                onClick   = { this._onNextClick }
+                                className = "a-button">
+                                Next
+                            </a>
+                        }
+                        <button
+                            type      = "submit"
                             onClick   = { this._onNextClick }
-                            className = "a-button">
-                            Next
-                        </a>
+                            className = {  buttonClass }>
+                            Submit
+                        </button>
                     </div>
                 </div>
             </form>

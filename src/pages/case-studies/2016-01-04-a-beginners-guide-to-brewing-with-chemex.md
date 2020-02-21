@@ -1,9 +1,12 @@
 ---
 templateKey: case-studies
-title: A beginners’ guide to brewing with Chemex
-date: 2017-01-04T15:04:10.000Z
+title: hacking for good
+partnerName: Hacker One
+date: 2016-01-04T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/chemex.jpg
+featuredimage: /img/h1-swag.png
+texture: img/h1-brushes.png
+color: '#F953A9'
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - brewing

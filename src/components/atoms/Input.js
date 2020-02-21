@@ -44,7 +44,7 @@ const Input = class extends React.Component {
         }
 
         return (
-            <fieldset>
+            <fieldset className = { this.props.className }>
                 <label 
                     className = { cssClassName }
                     htmlFor   = { this.props.name }>

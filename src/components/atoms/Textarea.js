@@ -40,7 +40,7 @@ const Textarea = class extends React.Component {
         const labelClassName = this.state.fieldActive ? "a-label -field-active" : "a-label";
 
         return (
-            <fieldset>
+            <fieldset className = { this.props.className }>
                 <label 
                     className = { labelClassName }
                     htmlFor   = { this.props.name }>
