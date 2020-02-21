@@ -1,6 +1,5 @@
 .o-hero {
     position: relative;
-    min-height: 100vh;
     background: -moz-linear-gradient(top, rgba(223,235,238,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(223,235,238,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(223,235,238,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -13,7 +12,11 @@
 
     &__top {
         margin-bottom: 200px;
-        padding-top: 218px;
+        padding-top: 100px;
+
+        @include breakpoints("tablet") {
+            padding-top: 218px;
+        }
     }
 
     &__titles {
@@ -39,22 +42,61 @@
         position: absolute;
         
         &.-jigglydoo {
+            right: -120px;
+            top: 60px;
+            max-width: 75%;
+
+            @include breakpoints("tablet") {
+                right: -24px;
+                top: -54px;
+                max-width: 800px;
+            }
+        }
+
+        &.-terrazo {
+            display: none;
             right: 0;
+            top: 100px;
+
+            @include breakpoints("tablet") {
+                display: block;
+            }
+        }
+
+        &.-greenbrush {
+            display: none;
+            left: 0;
+            bottom: 20%;
+
+            @include breakpoints("tablet") {
+                display: block;
+            }
         }
 
         &.-greenblob {
+            display: none;
             right: 180px;
             top: 80vh;
+
+            @include breakpoints("tablet") {
+                display: block;
+            }
         }
 
         &.-dots {
-            top: -40px;
-            right: 24%;
+            top: 50%;
+            right: -114px;
+            width: 200px;
+
+            @include breakpoints("tablet") {
+                top: -40px;
+                right: 24%;
+                width: auto;
+            }
         }
     }
 
     h1 {
-        width: 800px; 
 
         &.-after {
 
@@ -71,7 +113,11 @@
     }
 
     h3 {
-        margin: 0 0 280px 0;
+        margin: 0 0 80px 0;
+        
+        @include breakpoints("tablet") {
+            margin: 0 0 280px 0;
+        }
     }
 
     h6 {
@@ -93,6 +139,11 @@
         position: relative;
         float: right;
         max-width: 160px;
+        display: none;
+
+        @include breakpoints("tablet") {
+            display: block;
+        }
 
         &.-before {
 

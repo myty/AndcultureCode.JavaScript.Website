@@ -1,20 +1,38 @@
 .m-case-study {
     position: relative;
+    padding: 80px 0 0 0;
     border-top: 2px solid get-color("neutral", "lighter-gray");
     overflow: hidden;
     margin: 0;
     transition: all 0.6s ease;
 
+    @include breakpoints("tablet") {
+        padding: 0;
+    }
+
     &__block {
         height: 110px;
         transition: all 0.6s ease;
+        display: none;
+
+        @include breakpoints("tablet") {
+            display: block;
+        }
     }
 
     &.-secondary {
 
+        .m-case-study__image-container {
+            margin-bottom: 0px;
+            margin-top: 50px;
+        }
+
         .m-case-study__image {
-            top: 50%;
-            transform: translateY(-50%);
+
+            @include breakpoints("tablet") {
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
 
         .m-case-study__texture {
@@ -60,12 +78,22 @@
     }
 
     &__content {
-        @include span-col(6);
+        @include span-col(12);
+
+        @include breakpoints("tablet") {
+            @include span-col(6);
+        }
     }
 
     &__image-container {
-        @include span-col(6);
+        @include span-col(12);
         position: relative;
+        margin-bottom: -80px;
+
+        @include breakpoints("tablet") {
+            @include span-col(6);
+            margin-bottom: 0;
+        }
     }
 
     &__texture {
@@ -74,6 +102,11 @@
         left: 0;
         transform: translate(-50%, -50%);
         z-index: -1;
+        display: none;
+
+        @include breakpoints("tablet") {
+            display: block;
+        }
 
         img {
             transition: all 0.6s ease !important;
@@ -81,12 +114,21 @@
     }
 
     &__image {
-        position: absolute !important;
         right: 0;
         bottom: calc(-30% + -110px);
 
+        @include breakpoints("tablet") {
+            position: absolute !important;
+            max-width: 100%;
+        }
+
         img {
+            max-width: 400px;
             transition: all 0.6s ease !important;
+
+            @include breakpoints("tablet") {
+                max-width: 100%;
+            }
         }
     }
 
@@ -99,22 +141,38 @@
     }
 
     .a-button {
+        @include font-size("smaller");
         color: get-color("secondary", "center-lane");
         border-color: get-color("secondary", "center-lane");
+        letter-spacing: .1em;
+
+        @include breakpoints("tablet") {
+            @include font-size("smallest");
+        }
     }
 
     h5 {
-        @include font-size("medium");
+        @include font-size("small");
+        @include line-height("medium-large"); 
         color: get-color("neutral", "gray"); 
         font-family: $font-secondary;
+        text-transform: uppercase;
         letter-spacing: 0.2em;
-        font-weight: 500;
+        font-weight: 600;
+
+        @include breakpoints("tablet") {
+            @include font-size("medium-small");
+        }
     }
 
     p {
-        @include font-size("larger"); 
+        @include font-size(48); 
         @include line-height("larger"); 
         color: get-color("neutral", "gray"); 
         margin: 15px 0 25px;
+
+        @include breakpoints("tablet") {
+            @include font-size("larger");
+        }
     }
 }
