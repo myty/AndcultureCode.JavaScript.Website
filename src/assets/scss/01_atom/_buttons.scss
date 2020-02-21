@@ -9,7 +9,7 @@
     border: none;
 
     &.-disabled {
-        color: get-color("neutral", "light-gray"); 
+        color: get-color("neutral", "light-gray");
         pointer-events: none;
     }
 }

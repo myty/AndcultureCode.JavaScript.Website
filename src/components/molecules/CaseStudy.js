@@ -1,5 +1,5 @@
 import React from 'react'; 
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import CoverTransitionLink from '../organisms/CoverTransitionLink';
 
 const CaseStudy = class extends React.Component {
 
@@ -69,13 +69,13 @@ const CaseStudy = class extends React.Component {
                             <p>
                                 { this.props.post.frontmatter.title }
                             </p>
-                            <AniLink 
+                            <CoverTransitionLink 
                                 onMouseEnter = { this._handleHover } 
                                 className = "a-button" 
                                 to        = { this.props.post.fields.slug }
                                 style     = { linkStyle }>
                                 See How
-                            </AniLink>
+                            </CoverTransitionLink>
                         </div>
                         <div className = "m-case-study__image-container">
                             { this.props.post.frontmatter.featuredimage ? (
