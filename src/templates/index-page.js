@@ -15,10 +15,8 @@ export const IndexPageTemplate = ({
     <div className = "o-rhythm__container">
       <div className = "o-hero__top">
         <div className = "o-hero__titles">
-          <TextLoop>
             <h1 className = "-after">{ title }</h1>
-            <h1 className = "-before">{ secondaryTitle }</h1>
-          </TextLoop>
+            <p className = "-before">{ secondaryTitle }</p>
         </div>
       </div>
       <div className = "o-hero__subtitles">
