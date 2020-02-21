@@ -1,7 +1,7 @@
 ---
 templateKey: case-studies
 title: hacking for good
-partnerName: Hacker One
+partnerName: Hackerone
 date: 2016-01-04T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/h1-swag.png
