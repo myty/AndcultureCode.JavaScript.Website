@@ -19,7 +19,7 @@ const Header = class extends React.Component {
             className  = "m-header__navigation" 
             role       = "navigation" 
             aria-label = "main-navigation">
-            <a href="">contact us</a>
+            <a href="/contact">contact</a>
           </nav>
         </div>
       </header>

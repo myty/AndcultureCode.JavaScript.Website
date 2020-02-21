@@ -1,49 +1,96 @@
 import React from 'react'; 
-import PreviewCompatibleImage from '../PreviewCompatibleImage'; 
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const CaseStudy = class extends React.Component {
 
     constructor(props) {
-        super(props)
+        super(props); 
+
+        this.state = {
+            isHovered: false
+        };
+
+        this._handleHover   = this._handleHover.bind(this);
+        this._handleUnhover = this._handleUnhover.bind(this);
+    }
+
+    _handleHover() {
+        this.setState({
+            isHovered: true,
+        });
+    }
+
+    _handleUnhover() {
+        this.setState({
+            isHovered: false
+        });
     }
 
     render() {
+        let caseStudyClass = "m-case-study";
+        if (this.state.isHovered) {
+            caseStudyClass += " -hovered"
+        }
+        if (this.props.post.frontmatter.secondaryLayout) {
+            caseStudyClass += " -secondary";
+        }
+        let caseStudyStyle;
+        let linkStyle;
+        linkStyle = {
+            color:       this.props.post.frontmatter.color,
+            borderColor: this.props.post.frontmatter.color,
+        }
+
+        if (this.state.isHovered) {
+            caseStudyStyle = { 
+                backgroundColor: this.props.post.frontmatter.color,
+            }
+        }
+
+        if (this.state.isHovered) {
+            linkStyle = {
+                color:       '#ffffff',
+                borderColor: '#ffffff',
+            }
+        }
+
+        console.log(this.props.post.frontmatter.texture);
+
         return (
-            <div className = "m-case-studies__container o-rhythm__col -span-six" key = { this.props.post.id }>
-                <article className = "m-case-studies">
-                    <div>
-                        { this.props.count }/{ this.props.total }
+            <article className = { caseStudyClass } style = { caseStudyStyle } key = { this.props.post.id } onMouseLeave = { this._handleUnhover }>
+                <div className = "m-case-study__block -top"></div>
+                <div className = "o-rhythm__container">
+                    <div className = "o-rhythm__row">
+                        <div className = "m-case-study__content">
+                            <div className = "m-case-study__count">
+                                { this.props.count }/{ this.props.total }
+                            </div>
+                            <h5>{ this.props.post.frontmatter.partnerName }</h5>
+                            <p>
+                                { this.props.post.frontmatter.title }
+                            </p>
+                            <AniLink 
+                                onMouseEnter = { this._handleHover } 
+                                className = "a-button" 
+                                to        = { this.props.post.fields.slug }
+                                style     = { linkStyle }>
+                                See How
+                            </AniLink>
+                        </div>
+                        <div className = "m-case-study__image-container">
+                            { this.props.post.frontmatter.featuredimage ? (
+                            <div className = "m-case-study__image">
+                                <img src = { this.props.post.frontmatter.featuredimage.childImageSharp.fluid.src } />
+                            </div>
+                            ) : null }
+                            <div className = "m-case-study__texture">
+                                <img src = { this.props.post.frontmatter.texture } />
+                            </div>
+                        </div>
                     </div>
-                    { this.props.post.frontmatter.featuredimage ? (
-                    <div className = "m-case-studies__image">
-                        <PreviewCompatibleImage imageInfo = {{ image: this.props.post.frontmatter.featuredimage, alt: `featured image thumbnail for post ${ this.props.post.frontmatter.title }`, }} />
-                    </div>
-                    ) : null }
-                    <p className = "">
-                        <AniLink
-                            className = ""
-                            cover
-                            bg="#19a87c"
-                            direction="up"
-                            to        = { this.props.post.fields.slug }>
-                            { this.props.post.frontmatter.title }
-                        </AniLink>
-                        <span> &bull; </span>
-                        <span className = "">
-                            { this.props.post.frontmatter.description }
-                        </span>
-                        </p>
-                    <p>
-                        { this.props.post.excerpt }
-                        <AniLink 
-                            className = "" 
-                            to        = { this.props.post.fields.slug }>
-                            See How
-                        </AniLink>
-                    </p>
-                </article>
-            </div>
+                </div>
+                <div className = "m-case-study__block -bottom"></div>
+            </article>
         )
     }
 }

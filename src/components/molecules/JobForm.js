@@ -1,7 +1,6 @@
 import React                   from 'react';
 import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const JobForm = class extends React.Component {
     constructor(props) {
@@ -67,82 +66,74 @@ const JobForm = class extends React.Component {
 
     render() {
         let formClass = 'o-contact-form'; 
+        let buttonClass = 'a-button';
         formClass += this.props.isActive ? ' -active' : '';
+        if (this.state.activeQuestion === this.state.totalQuestions) {
+            buttonClass += ' -active'
+        }
 
         return (
             <form className = { formClass } name = "contact-job" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>join the team</header>
-                    <ReactCSSTransitionGroup
-                        transitionName          = "animate"
-                        transitionAppear        = { true }
-                        transitionAppearTimeout = { 500 }
-                        transitionEnter         = { true }
-                        transitionEnterTimeout  = { 1000 }
-                        transitionLeave         = { false }>
-                        { // if
-                            this.state.activeQuestion === 1 && 
-                            <Input 
-                                name               = "name" 
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.name } />
-                        }
-                        { // if
-                            this.state.activeQuestion === 2 && 
-                            <Input 
-                                name               = "email" 
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.email } />
-                        }
-                        { // if
-                            this.state.activeQuestion === 3 && 
-                            <Input 
-                                name               = "phone" 
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.phone } />
-                        }
-                        { // if
-                            this.state.activeQuestion === 4 && 
-                            <Input 
-                                name               = "linkedin_profile" 
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.linkedin_profile } />
-                        }
-                        { // if
-                            this.state.activeQuestion === 5 && 
-                            <Textarea 
-                                name               = "message" 
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.message } />
-                        }
-                        { // if
-                            this.state.activeQuestion === 6 && 
-                            <fieldset>
-                                <input 
-                                    className = "a-checkbox" 
-                                    type      = "checkbox" 
-                                    name      = "acknowledge" 
-                                    value     = "acknowledge" 
-                                    id        = "acknowledge"/>
-                                <label 
-                                    className = "a-label" 
-                                    htmlFor   = "acknowledge">
-                                        I acknoledge that this position is located in Harrisburg, PA
-                                </label>
-                            </fieldset>
-                        }
-                    </ReactCSSTransitionGroup>
+                    <Input 
+                        className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                        name               = "name" 
+                        inputValueCallback = { this._setInputValue } 
+                        value              = { this.state.formData.name } />
+                    <Input 
+                        className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                        name               = "email" 
+                        inputValueCallback = { this._setInputValue } 
+                        value              = { this.state.formData.email } />
+                    <Input 
+                        className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                        name               = "phone" 
+                        inputValueCallback = { this._setInputValue } 
+                        value              = { this.state.formData.phone } />
+                    <Input 
+                        className          = { this.state.activeQuestion === 4 ? '-active': '' }
+                        name               = "linkedin_profile" 
+                        inputValueCallback = { this._setInputValue } 
+                        value              = { this.state.formData.linkedin_profile } />
+                    <Textarea 
+                        className          = { this.state.activeQuestion === 5 ? '-active': '' }
+                        name               = "message" 
+                        inputValueCallback = { this._setInputValue } 
+                        value              = { this.state.formData.message } />
+                    <fieldset className = { this.state.activeQuestion === 6 ? '-active': '' }>
+                        <input 
+                            className = "a-checkbox" 
+                            type      = "checkbox" 
+                            name      = "acknowledge" 
+                            value     = "acknowledge" 
+                            id        = "acknowledge"/>
+                        <label 
+                            className = "a-label" 
+                            htmlFor   = "acknowledge">
+                                I acknoledge that this position is located in Harrisburg, PA
+                        </label>
+                    </fieldset>
                     <div className = "o-contact-form__buttons">
-                        <a 
+                        <a
                             onClick   = { this._onBackClick }
                             className = "a-button">
                             Go Back
                         </a>
-                        <a 
+                        {  // if
+                            this.state.activeQuestion !== this.state.totalQuestions &&
+                            <a
+                                onClick   = { this._onNextClick }
+                                className = "a-button">
+                                Next
+                            </a>
+                        }
+                        <button
+                            type      = "submit"
                             onClick   = { this._onNextClick }
-                            className = "a-button">
-                            Next
-                        </a>
+                            className = {  buttonClass }>
+                            Submit
+                        </button>
                     </div>
                 </div>
             </form>

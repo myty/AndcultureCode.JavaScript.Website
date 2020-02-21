@@ -9,17 +9,15 @@ class CaseStudyList extends React.Component {
     const numberOfPosts = posts.length;
 
     return (
-      <div className = "o-case-study-list o-rhythm__container">
-        <div className = "o-rhythm__row">
-          {posts &&
-            posts.map(({ node: post }, index) => (
-              <CaseStudy 
-                key   = { index } 
-                post  = { post } 
-                count = { index + 1 } 
-                total = { numberOfPosts } />
-            ))}
-        </div>
+      <div>
+        {posts &&
+          posts.map(({ node: post }, index) => (
+            <CaseStudy 
+              key   = { index } 
+              post  = { post } 
+              count = { index + 1 } 
+              total = { numberOfPosts } />
+          ))}
       </div>
     )
   }
@@ -30,7 +28,7 @@ export default () => (
     query={graphql`
       query CaseStudyListQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { order: ASC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "case-studies" } } }
         ) {
           edges {
@@ -42,12 +40,16 @@ export default () => (
               }
               frontmatter {
                 title
+                color
+                secondaryLayout
+                texture
+                partnerName
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 1920, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }

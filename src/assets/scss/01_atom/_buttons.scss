@@ -1,10 +1,12 @@
 .a-button {
     @include font-size("smallest");
-    color: get-color("primary", "white"); 
+    color: get-color("primary", "white");
     font-family: $font-secondary;
-    border-bottom: 1px solid get-color("primary", "fresh"); 
-    text-transform: uppercase; 
+    border-bottom: 1px solid get-color("primary", "fresh");
+    text-transform: uppercase;
     font-weight: 400;
+    background: transparent;
+    border: none;
 
     &.-disabled {
         color: get-color("neutral", "light-gray"); 

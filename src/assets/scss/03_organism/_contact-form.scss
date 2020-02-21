@@ -5,10 +5,22 @@
 
     &.-initial {
         display: block;
+
+        fieldset {
+            display: block;
+        }
     }
 
     &.-active {
         display: block;
+    }
+
+    fieldset {
+        display: none;
+
+        &.-active {
+            display: block;
+        }
     }
 
     &__container {
@@ -58,10 +70,15 @@
             padding: 0 56px;
         }
 
-        a {
+        .a-button {
+            margin-right: 60px;
+        }
 
-            &:first-of-type {
-                margin-right: 60px;
+        button {
+            display: none;
+
+            &.-active {
+                display: inline-block;
             }
         }
     }

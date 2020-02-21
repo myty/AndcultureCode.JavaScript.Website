@@ -1,7 +1,6 @@
 import React                   from 'react';
 import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const InfoForm = class extends React.Component {
     constructor(props) {
@@ -68,52 +67,51 @@ const InfoForm = class extends React.Component {
 
     render() {
         let formClass = 'o-contact-form'; 
+        let buttonClass = 'a-button';
         formClass += this.props.isActive ? ' -active' : '';
+        if (this.state.activeQuestion === this.state.totalQuestions) {
+            buttonClass += ' -active'
+        }
 
         return (
             <form className = { formClass } name="contact-info" method="POST" data-netlify="true">
                 <div className = "o-rhythm__container">
                     <header>get quick info</header>
-                    <ReactCSSTransitionGroup
-                        transitionName          = "animate"
-                        transitionAppear        = { true }
-                        transitionAppearTimeout = { 500 }
-                        transitionEnter         = { true }
-                        transitionEnterTimeout  = { 1000 }
-                        transitionLeave         = { false }>
-                        { // if
-                            this.state.activeQuestion === 1 &&
-                            <Input 
-                                name               = "name" 
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.name } />
-                        }
-                        { // if
-                            this.state.activeQuestion === 2 &&
-                            <Input 
-                                name               = "email" 
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.email } />
-                        }
-                        { // if
-                            this.state.activeQuestion === 3 &&
-                            <Textarea 
-                                name               = "message" 
-                                inputValueCallback = { this._setInputValue } 
-                                value              = { this.state.formData.message } />
-                        }
-                    </ReactCSSTransitionGroup>
+                    <Input 
+                        className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                        name               = "name" 
+                        inputValueCallback = { this._setInputValue } 
+                        value              = { this.state.formData.name } />
+                    <Input 
+                        className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                        name               = "email" 
+                        inputValueCallback = { this._setInputValue } 
+                        value              = { this.state.formData.email } />
+                    <Textarea 
+                        className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                        name               = "message" 
+                        inputValueCallback = { this._setInputValue } 
+                        value              = { this.state.formData.message } />
                     <div className = "o-contact-form__buttons">
                         <a
                             onClick   = { this._onBackClick }
                             className = "a-button">
                             Go Back
                         </a>
-                        <a
+                        {  // if
+                            this.state.activeQuestion !== this.state.totalQuestions &&
+                            <a
+                                onClick   = { this._onNextClick }
+                                className = "a-button">
+                                Next
+                            </a>
+                        }
+                        <button
+                            type      = "submit"
                             onClick   = { this._onNextClick }
-                            className = "a-button">
-                            Next
-                        </a>
+                            className = {  buttonClass }>
+                            Submit
+                        </button>
                     </div>
                 </div>
             </form>
