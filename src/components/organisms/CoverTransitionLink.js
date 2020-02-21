@@ -18,18 +18,18 @@ export default class CoverTransitionLink extends Component {
 		return new TimelineMax()
 			.set(transparentBg,{ y: 0, x: directionFrom, display: 'block' })
 			.to(transparentBg, .25, {
-				x: '0%',
-				ease: Power1.easeInOut,
+				x:		'0%',
+				ease:	Power1.easeInOut,
 			})
 			.set(this.cover, { y: 0, x: directionFrom, display: 'block' }, .25)
 			.to(this.cover, .25, {
-				x: '0%',
-				ease: Power1.easeInOut,
+				x:		'0%',
+				ease:	Power1.easeInOut,
 			})
 			.set(node, { opacity: 0 }, .5)
 			.to(this.cover, .5, {
-					x: directionTo,
-					ease: Power1.easeInOut,
+					x:		directionTo,
+					ease:	Power1.easeInOut,
 				}
 			)
 	}
@@ -41,18 +41,18 @@ export default class CoverTransitionLink extends Component {
 		return new TimelineMax()
 			.set(transparentBg, {y: directionFrom})
 			.to(transparentBg, .25, {
-				y: '0%',
-				ease: Power1.easeInOut,
+				y:		'0%',
+				ease:	Power1.easeInOut,
 			})
 			.set(this.cover,{y: directionFrom}, .25)
 			.to(this.cover, .25, {
-				y: '0%',
-				ease: Power1.easeInOut
+				y:		'0%',
+				ease:	Power1.easeInOut
 			})
 			.set(node, {opacity: 0}, .5)
 			.to(this.cover, .5, {
-				y: directionTo,
-				ease: Power1.easeIn
+				y:		directionTo,
+				ease:	Power1.easeIn
 			})
 	}
 
@@ -68,9 +68,9 @@ export default class CoverTransitionLink extends Component {
 		const length		= this.props.duration || 1;
 		const transparentBg	= document.querySelector('.transparentBg');
 		const {
-			exit: removedExit,
-			entry: removedEntry,
-			cover: removedProp,
+			exit:	removedExit,
+			entry:	removedEntry,
+			cover:	removedProp,
 			...props
 		} = this.props;
 		return (
@@ -97,25 +97,25 @@ export default class CoverTransitionLink extends Component {
 					<div
 						className="transparentBg"
 						style={{
-							position: 'fixed',
-							background: '#19a87c',
-							top: 0,
-							left: 0,
-							opacity: .4,
-							width: '100vw',
-							height: '100vh',
-							transform: 'translateY(100%)',
+							position:	'fixed',
+							background:	'#19a87c',
+							top:		0,
+							left:		0,
+							opacity:	.4,
+							width:		'100vw',
+							height:		'100vh',
+							transform:	'translateY(100%)',
 					}}/>
 					<div
 						ref={n => (this.cover = n)}
 						style={{
-							position: 'fixed',
-							background: this.props.bg || '#19a87c',
-							top: 0,
-							left: 0,
-							width: '100vw',
-							height: '100vh',
-							transform: 'translateY(100%)',
+							position:	'fixed',
+							background:	this.props.bg || '#19a87c',
+							top:		0,
+							left:		0,
+							width:		'100vw',
+							height:		'100vh',
+							transform:	'translateY(100%)',
 					}}/>
 				</TransitionPortal>
 			</>

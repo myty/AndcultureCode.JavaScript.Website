@@ -14,35 +14,35 @@ const HomeAnimation = () => {
 
         tl.set(logo, {y: "7%"})
         tl.to(logo, 1, {
-            y: "0%",
-            opacity: 1,
-            ease: Power1.easeInOut
+            y:          "0%",
+            opacity:    1,
+            ease:       Power1.easeInOut
         }, 1.5)
 
         tl.set(first_word, {y: "50%"})
         tl.to(first_word, 1, {
-            y: "0%",
-            opacity: 1,
-            ease: Power1.easeInOut
+            y:          "0%",
+            opacity:    1,
+            ease:       Power1.easeInOut
         }, 2.5)
 
         tl.set(second_word, {y: "50%"})
         tl.to(second_word, 1, {
-            y: "0%",
-            opacity: 1,
-            ease: Power1.easeInOut
+            y:          "0%",
+            opacity:    1,
+            ease:       Power1.easeInOut
         }, 3.5)
 
         tl.set(third_word, {y: "50%"})
         tl.to(third_word, 1, {
-            y: "0%",
-            opacity: 1,
-            ease: Power1.easeInOut
+            y:          "0%",
+            opacity:    1,
+            ease:       Power1.easeInOut
         }, 4.5)
 
         tl.to(animation_container, 2, {
-            y: '-100%',
-            ease: Power1.easeInOut
+            y:      '-100%',
+            ease:   Power1.easeInOut
         }, 6.5)
 
         tl.eventCallback("onComplete", function() {
