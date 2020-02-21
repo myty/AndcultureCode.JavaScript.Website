@@ -3,8 +3,10 @@ import { TimelineMax, Power1 } from 'gsap';
 
 const HomeAnimation = () => {
     useEffect(() => {
+        this.logo = React.createRef();
+
         const animation_container   = document.querySelector('.o-home-animation');
-        const logo                  = document.querySelector('.animation-logo');
+        const logo                  = this.logo;
         const first_word            = document.querySelector('.first');
         const second_word           = document.querySelector('.second');
         const third_word            = document.querySelector('.third');
@@ -55,7 +57,7 @@ const HomeAnimation = () => {
         <div className = "o-home-animation">
             <div className = "o-home-animation__container">
                 <div style={{position:"relative", width: "100%", textAlign: "center"}}>
-                    <svg className="animation-logo" viewBox="0 0 100 100" style={{width: "55%", height: "auto"}}>
+                    <svg ref={n => (this.logo = n)} viewBox="0 0 100 100" style={{width: "55%", height: "auto"}}>
                         <path className="st1" fill="#fff" d="M37.5,50.26c-0.53,6.29,4.16,11.84,10.45,12.37c0.33,0.03,0.65,0.04,0.98,0.04c2.7,0,5.28-0.94,7.37-2.7
                         c1.06-0.89,1.93-1.95,2.59-3.13c1.45,1.18,2.44,1.98,2.61,2.12l3.24-4c-6.2-5.03-18.02-14.61-18.4-14.93
                         c-1.15-0.95-1.74-2.27-1.62-3.62c0.19-2.24,2.17-3.92,4.41-3.73c1.09,0.09,2.07,0.6,2.78,1.43c0.19,0.22,0.35,0.47,0.49,0.72
