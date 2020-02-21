@@ -3,12 +3,12 @@ import { TimelineMax, Power1 } from 'gsap';
 
 const HomeAnimation = () => {
     useEffect(() => {
-        const animation_container = document.querySelector('.o-home-animation');
-        const logo = document.querySelector('.animation-logo');
-        const first_word = document.querySelector('.first');
-        const second_word = document.querySelector('.second');
-        const third_word = document.querySelector('.third');
-        const tl = new TimelineMax();
+        const animation_container   = document.querySelector('.o-home-animation');
+        const logo                  = document.querySelector('.animation-logo');
+        const first_word            = document.querySelector('.first');
+        const second_word           = document.querySelector('.second');
+        const third_word            = document.querySelector('.third');
+        const tl                    = new TimelineMax();
 
         tl.set(animation_container, {y: "0%"})
 
