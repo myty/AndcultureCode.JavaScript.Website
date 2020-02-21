@@ -6,9 +6,10 @@ export default class CoverTransitionLink extends Component {
 	constructor(props) {
 		super(props);
 
-		this.horizontal	= this.horizontal.bind(this);
-		this.vertical	= this.vertical.bind(this);
-		this.cover		= React.createRef();
+		this.horizontal		= this.horizontal.bind(this);
+		this.vertical		= this.vertical.bind(this);
+		this.cover			= React.createRef();
+		this.transparentBg	= React.createRef();
 	}
 
 	horizontal = ({ node, props: { length: seconds }, direction, transparentBg }) => {
@@ -66,7 +67,7 @@ export default class CoverTransitionLink extends Component {
 	render() {
 		const direction		= this.props.direction || 'left';
 		const length		= this.props.duration || 1;
-		const transparentBg	= document.querySelector('.transparentBg');
+		const transparentBg	= this.transparentBg
 		const {
 			exit:	removedExit,
 			entry:	removedEntry,
@@ -96,6 +97,7 @@ export default class CoverTransitionLink extends Component {
 				<TransitionPortal>
 					<div
 						className="transparentBg"
+						ref={n => (this.transparentBg = n)}
 						style={{
 							position:	'fixed',
 							background:	'#19a87c',
