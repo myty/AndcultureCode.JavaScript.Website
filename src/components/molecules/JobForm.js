@@ -65,7 +65,7 @@ const JobForm = class extends React.Component {
     }
 
     render() {
-        let formClass = 'o-contact-form'; 
+        let formClass   = 'o-contact-form'; 
         let buttonClass = 'a-button';
         formClass += this.props.isActive ? ' -active' : '';
         if (this.state.activeQuestion === this.state.totalQuestions) {

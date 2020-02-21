@@ -7,13 +7,12 @@ const ContactPagePreview = ({ entry }) => {
   if (data) {
     return (
       <ContactPageTemplate
-        image={data.image}
-        title={data.title}
-        heading={data.heading}
-        subheading={data.subheading}
-        description={data.description}
-        intro={data.intro || { blurbs: [] }}
-        mainpitch={data.mainpitch || {}}
+        title       = { data.title }
+        heading     = { data.heading }
+        subheading  = { data.subheading }
+        description = { data.description }
+        intro       = { data.intro || { blurbs: [] } }
+        mainpitch   = { data.mainpitch || {} }
       />
     )
   } else {

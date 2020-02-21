@@ -115,6 +115,6 @@
         @include font-size("larger"); 
         @include line-height("larger"); 
         color: get-color("neutral", "gray"); 
-        margin: 15px 0 25px 0;
+        margin: 15px 0 25px;
     }
 }

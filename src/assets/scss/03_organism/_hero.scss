@@ -24,15 +24,6 @@
         @include breakpoints("tablet") {
             padding-left: 160px;
         }
-
-        // .x5 {
-        //     white-space: normal;
-        // }
-
-        // * {
-        //     max-width: 100%; 
-        //     overflow-wrap: break-word;
-        // }
     }
 
     &__subtitles {
@@ -51,21 +42,12 @@
 
             &:after {
                 content: '';
-                background: url('') no-repeat center center / contain;
+                background: url('../../../static/img/asterisk.png') no-repeat center center / contain;
                 height: 24px;
                 width: 24px; 
-                background: get-color("primary", "fresh");
                 display: inline-block;
                 vertical-align: top;
                 margin-left: 20px;
-            }
-        }
-
-        &.-before {
-
-            &:before {
-                content: '*'; 
-                display: inline-block;
             }
         }
     }
@@ -98,10 +80,9 @@
 
             &:before {
                 content: '';
-                background: url('') no-repeat center center / contain;
+                background: url('../../../static/img/asterisk.png') no-repeat center center / contain;
                 height: 12px;
                 width: 12px;
-                background: get-color("primary", "fresh");
                 display: inline-block;
                 vertical-align: top;
                 margin-right: 10px;
