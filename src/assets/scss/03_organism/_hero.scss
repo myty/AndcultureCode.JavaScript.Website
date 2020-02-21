@@ -35,6 +35,24 @@
         }
     }
 
+    &__background {
+        position: absolute;
+        
+        &.-jigglydoo {
+            right: 0;
+        }
+
+        &.-greenblob {
+            right: 180px;
+            top: 80vh;
+        }
+
+        &.-dots {
+            top: -40px;
+            right: 24%;
+        }
+    }
+
     h1 {
         width: 800px; 
 

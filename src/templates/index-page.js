@@ -6,6 +6,10 @@ import CaseStudyList from '../components/organisms/CaseStudyList'
 import ContactForm from '../components/organisms/ContactForm'
 import HomePageAnimation from '../components/organisms/HomeAnimation'
 
+import jigglyDoo from './../../static/img/jigglydoo.png';
+import greenBlob from './../../static/img/greenblob.png';
+import dots from './../../static/img/center_lane_dots.png';
+
 export const IndexPageTemplate = ({
   title,
   secondaryTitle,
@@ -14,6 +18,9 @@ export const IndexPageTemplate = ({
     <div>
       <HomePageAnimation />
       <div className = "o-hero">
+        <img className = "o-hero__background -jigglydoo" src = { jigglyDoo } />
+        <img className = "o-hero__background -dots" src = { dots } />
+        <img className = "o-hero__background -greenblob" src = { greenBlob } />
         <div className = "o-rhythm__container">
           <div className = "o-hero__top">
             <div className = "o-hero__titles">
