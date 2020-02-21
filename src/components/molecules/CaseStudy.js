@@ -1,10 +1,10 @@
-import React from 'react'; 
+import React from 'react';
 import CoverTransitionLink from '../organisms/CoverTransitionLink';
 
 const CaseStudy = class extends React.Component {
 
     constructor(props) {
-        super(props); 
+        super(props);
 
         this.state = {
             isHovered: false
@@ -42,7 +42,7 @@ const CaseStudy = class extends React.Component {
         }
 
         if (this.state.isHovered) {
-            caseStudyStyle = { 
+            caseStudyStyle = {
                 backgroundColor: this.props.post.frontmatter.color,
             }
         }
@@ -53,8 +53,6 @@ const CaseStudy = class extends React.Component {
                 borderColor: '#ffffff',
             }
         }
-
-        console.log(this.props.post.frontmatter.texture);
 
         return (
             <article className = { caseStudyClass } style = { caseStudyStyle } key = { this.props.post.id } onMouseLeave = { this._handleUnhover }>
@@ -69,9 +67,9 @@ const CaseStudy = class extends React.Component {
                             <p>
                                 { this.props.post.frontmatter.title }
                             </p>
-                            <CoverTransitionLink 
-                                onMouseEnter = { this._handleHover } 
-                                className = "a-button" 
+                            <CoverTransitionLink
+                                onMouseEnter = { this._handleHover }
+                                className = "a-button"
                                 to        = { this.props.post.fields.slug }
                                 style     = { linkStyle }>
                                 See How

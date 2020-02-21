@@ -12,6 +12,6 @@ module.exports.onRouteUpdate = ({ location, prevLocation }) => {
   }
 
   if (location.pathname === '/') {
-    runHomePageAnimation();
+    // runHomePageAnimation();
   }
 }
