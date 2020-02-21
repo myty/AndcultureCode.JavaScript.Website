@@ -1,6 +1,7 @@
 import React                   from 'react';
 import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
+import $ from 'jquery'
 
 const InfoForm = class extends React.Component {
     constructor(props) {
@@ -14,6 +15,7 @@ const InfoForm = class extends React.Component {
 
         this._onNextClick       = this._onNextClick.bind(this);
         this._onBackClick       = this._onBackClick.bind(this);
+        this._onSubmitClick     = this._onSubmitClick.bind(this);
         this._caclulateProgress = this._caclulateProgress.bind(this);
         this._setInputValue     = this._setInputValue.bind(this);
     }
@@ -38,6 +40,17 @@ const InfoForm = class extends React.Component {
         this.setState({
             activeQuestion:  this.state.activeQuestion  - 1,
         }, this._caclulateProgress(0));
+    }
+
+    _onSubmitClick() {
+        $(".o-contact-form").submit(function(e) {
+            e.preventDefault();
+
+            var $form = $(this);
+            $.post($form.attr("action"), $form.serialize()).then(function() {
+                alert("Thank you!");
+            });
+        });
     }
 
     _caclulateProgress(direction) {
@@ -108,7 +121,7 @@ const InfoForm = class extends React.Component {
                         }
                         <button
                             type      = "submit"
-                            onClick   = { this._onNextClick }
+                            onClick   = { this._onSubmitClick }
                             className = {  buttonClass }>
                             Submit
                         </button>
