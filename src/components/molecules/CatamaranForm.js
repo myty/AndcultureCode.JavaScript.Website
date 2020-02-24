@@ -2,6 +2,12 @@ import React                   from 'react';
 import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
 
+function encode(data) {
+    return Object.keys(data)
+        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+}
+
 const CatamaranForm = class extends React.Component {
     constructor(props) {
         super(props);
@@ -14,6 +20,7 @@ const CatamaranForm = class extends React.Component {
 
         this._onNextClick       = this._onNextClick.bind(this);
         this._onBackClick       = this._onBackClick.bind(this);
+        this._onSubmitClick     = this._onSubmitClick.bind(this);
         this._caclulateProgress = this._caclulateProgress.bind(this);
         this._setInputValue     = this._setInputValue.bind(this);
     }
@@ -38,6 +45,18 @@ const CatamaranForm = class extends React.Component {
         this.setState({
             activeQuestion:  this.state.activeQuestion  - 1,
         }, this._caclulateProgress(0));
+    }
+
+    _onSubmitClick(e) {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact-catamaran", ...this.state.formData })
+        })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
+    
+        e.preventDefault();
     }
 
     _caclulateProgress(direction) {
