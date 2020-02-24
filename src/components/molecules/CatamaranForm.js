@@ -145,7 +145,7 @@ const CatamaranForm = class extends React.Component {
                         }
                         <button
                             type      = "submit"
-                            onClick   = { this._onNextClick }
+                            onClick   = { this._onSubmitClick }
                             className = {  buttonClass }>
                             Submit
                         </button>
