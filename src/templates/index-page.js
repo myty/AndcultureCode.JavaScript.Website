@@ -13,6 +13,11 @@ import dots from './../../static/img/center_lane_dots.png';
 import terrazo from './../../static/img/terrazo.png';
 import greenBrush from './../../static/img/greenbrush.png';
 
+import { gsap } from 'gsap';
+import { TimelineMax, Power1 } from 'gsap';
+gsap.registerPlugin(TimelineMax)
+gsap.registerPlugin(Power1)
+
 export const IndexPageTemplate = ({
   title,
   secondaryTitle,
