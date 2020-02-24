@@ -50,7 +50,8 @@ const InfoForm = class extends React.Component {
         $(".o-contact-form.-active").submit(function(e) {
             e.preventDefault();
 
-            const $form = $(this);
+            var $form = $(this);
+            console.log($form);
             $.post($form.attr("action"), $form.serialize()).then(function() {
                 alert("Thank you!");
             });
