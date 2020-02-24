@@ -8,6 +8,10 @@
     font-weight: 400;
     background: transparent;
 
+    &.-light {
+        color: get-color("primary", "after-hours");
+    }
+
     &.-disabled {
         color: get-color("neutral", "light-gray");
         pointer-events: none;

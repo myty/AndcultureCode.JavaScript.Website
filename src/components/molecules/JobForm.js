@@ -56,7 +56,7 @@ const JobForm = class extends React.Component {
                 this._caclulateProgress(1)
             )
             .catch(error => alert(error));
-    
+
         e.preventDefault();
     }
 
@@ -86,9 +86,12 @@ const JobForm = class extends React.Component {
     }
 
     render() {
-        let formClass   = 'o-contact-form'; 
-        let buttonClass = 'a-button';
+        let formClass   = 'o-contact-form';
         formClass += this.props.isActive ? ' -active' : '';
+
+        let buttonClass = 'a-button';
+        buttonClass += this.props.lightTheme ? ' -light ' : '';
+
         if (this.state.activeQuestion === this.state.totalQuestions) {
             buttonClass += ' -active'
         }
@@ -97,40 +100,45 @@ const JobForm = class extends React.Component {
             <form className = { formClass } name = "contact-job" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>join the team</header>
-                    <Input 
+                    <Input
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
-                        name               = "name" 
-                        inputValueCallback = { this._setInputValue } 
-                        value              = { this.state.formData.name } />
-                    <Input 
+                        name               = "name"
+                        inputValueCallback = { this._setInputValue }
+                        value              = { this.state.formData.name }
+                        lightTheme         = { this.props.lightTheme } />
+                    <Input
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
-                        name               = "email" 
-                        inputValueCallback = { this._setInputValue } 
-                        value              = { this.state.formData.email } />
-                    <Input 
+                        name               = "email"
+                        inputValueCallback = { this._setInputValue }
+                        value              = { this.state.formData.email }
+                        lightTheme         = { this.props.lightTheme } />
+                    <Input
                         className          = { this.state.activeQuestion === 3 ? '-active': '' }
-                        name               = "phone" 
-                        inputValueCallback = { this._setInputValue } 
-                        value              = { this.state.formData.phone } />
-                    <Input 
+                        name               = "phone"
+                        inputValueCallback = { this._setInputValue }
+                        value              = { this.state.formData.phone }
+                        lightTheme         = { this.props.lightTheme } />
+                    <Input
                         className          = { this.state.activeQuestion === 4 ? '-active': '' }
-                        name               = "linkedin_profile" 
-                        inputValueCallback = { this._setInputValue } 
-                        value              = { this.state.formData.linkedin_profile } />
-                    <Textarea 
+                        name               = "linkedin_profile"
+                        inputValueCallback = { this._setInputValue }
+                        value              = { this.state.formData.linkedin_profile }
+                        lightTheme         = { this.props.lightTheme } />
+                    <Textarea
                         className          = { this.state.activeQuestion === 5 ? '-active': '' }
-                        name               = "message" 
-                        inputValueCallback = { this._setInputValue } 
-                        value              = { this.state.formData.message } />
+                        name               = "message"
+                        inputValueCallback = { this._setInputValue }
+                        value              = { this.state.formData.message }
+                        lightTheme         = { this.props.lightTheme } />
                     <fieldset className = { this.state.activeQuestion === 6 ? '-active': '' }>
-                        <input 
-                            className = "a-checkbox" 
-                            type      = "checkbox" 
-                            name      = "acknowledge" 
-                            value     = "acknowledge" 
+                        <input
+                            className = "a-checkbox"
+                            type      = "checkbox"
+                            name      = "acknowledge"
+                            value     = "acknowledge"
                             id        = "acknowledge"/>
-                        <label 
-                            className = "a-label" 
+                        <label
+                            className = "a-label"
                             htmlFor   = "acknowledge">
                                 I acknoledge that this position is located in Harrisburg, PA
                         </label>
@@ -138,14 +146,14 @@ const JobForm = class extends React.Component {
                     <div className = "o-contact-form__buttons">
                         <a
                             onClick   = { this._onBackClick }
-                            className = "a-button">
+                            className = {  buttonClass }>
                             Go Back
                         </a>
                         {  // if
                             this.state.activeQuestion !== this.state.totalQuestions &&
                             <a
                                 onClick   = { this._onNextClick }
-                                className = "a-button">
+                                className = {  buttonClass }>
                                 Next
                             </a>
                         }

@@ -71,26 +71,37 @@ const ContactForm = class extends React.Component {
                 <ProjectForm
                     isActive            = { this.state.activeForm === "project" }
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />
+                    isSubmittedCallback = { this._isSubmitted }
+                    lightTheme          = { this.props.lightTheme } />
                 <InfoForm
                     isActive            = { this.state.activeForm === "quick-info" }
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />
+                    isSubmittedCallback = { this._isSubmitted }
+                    lightTheme          = { this.props.lightTheme } />
                 <JobForm
                     isActive            = { this.state.activeForm === "join-team" }
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />
+                    isSubmittedCallback = { this._isSubmitted }
+                    lightTheme          = { this.props.lightTheme } />
                 <CatamaranForm
                     isActive            = { this.state.activeForm === "start-ups" }
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />
+                    isSubmittedCallback = { this._isSubmitted }
+                    lightTheme          = { this.props.lightTheme } />
             </div>
         );
     }
 
     render() {
         let formContainerClass = "o-contact-form__container";
-        formContainerClass += this.state.formActive ? " -active" : "";
+        formContainerClass += this.state.formActive ? " -active " : "";
+        formContainerClass += this.props.lightTheme ? " -light " : "";
+
+        let radioInputClass = "a-radio";
+        radioInputClass += this.props.lightTheme ? " -light " : "";
+
+        let buttonClass = "a-button";
+        buttonClass += this.props.lightTheme ? " -light " : "";
         var progressBarWidth = {
             width: this.state.percentComplete + "%",
         };
@@ -112,7 +123,7 @@ const ContactForm = class extends React.Component {
                                     <input
                                         onChange  = { this._onFormTypeChange }
                                         checked   = { this.state.activeForm === "project" }
-                                        className = "a-radio"
+                                        className = { radioInputClass }
                                         type      = "radio"
                                         name      = "type"
                                         value     = "project"
@@ -123,7 +134,7 @@ const ContactForm = class extends React.Component {
                                     <input
                                         onChange  = { this._onFormTypeChange }
                                         checked   = { this.state.activeForm === "quick-info" }
-                                        className = "a-radio"
+                                        className = { radioInputClass }
                                         type      = "radio"
                                         name      = "type"
                                         value     = "quick-info"
@@ -134,7 +145,7 @@ const ContactForm = class extends React.Component {
                                     <input
                                         onChange  = { this._onFormTypeChange }
                                         checked   = { this.state.activeForm === "join-team" }
-                                        className = "a-radio"
+                                        className = { radioInputClass }
                                         type      = "radio"
                                         name      = "type"
                                         value     = "join-team"
@@ -145,7 +156,7 @@ const ContactForm = class extends React.Component {
                                     <input
                                         onChange  = { this._onFormTypeChange }
                                         checked   = { this.state.activeForm === "start-ups" }
-                                        className = "a-radio"
+                                        className = { radioInputClass }
                                         type      = "radio"
                                         name      = "type"
                                         value     = "start-ups"
@@ -155,12 +166,12 @@ const ContactForm = class extends React.Component {
                                 <div className = "o-contact-form__buttons -space">
                                     <a
                                         onClick = { this._deactiveForm }
-                                        className = "a-button -disabled">
+                                        className = { `${buttonClass} -disabled` }>
                                         Go Back
                                     </a>
                                     <a
                                         onClick = { this._activateForm }
-                                        className = "a-button">
+                                        className = { buttonClass }>
                                         Next
                                     </a>
                                 </div>

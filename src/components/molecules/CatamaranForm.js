@@ -87,9 +87,15 @@ const CatamaranForm = class extends React.Component {
     }
 
     render() {
-        let formClass   = 'o-contact-form'; 
-        let buttonClass = 'a-button';
+        let formClass   = 'o-contact-form';
         formClass += this.props.isActive ? ' -active' : '';
+
+        let buttonClass = 'a-button';
+        buttonClass += this.props.lightTheme ? ' -light ' : '';
+
+        let selectClass = 'a-dropdown';
+        selectClass += this.props.lightTheme ? ' -light ' : '';
+
         if (this.state.activeQuestion === this.state.totalQuestions) {
             buttonClass += ' -active'
         }
@@ -98,23 +104,25 @@ const CatamaranForm = class extends React.Component {
             <form className = { formClass } name = "contact-catamaran" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>talk start-ups (Catamaran)</header>
-                    <Input 
+                    <Input
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
-                        name               = "name" 
-                        inputValueCallback = { this._setInputValue } 
-                        value              = { this.state.formData.name } />
-                    <Input 
+                        name               = "name"
+                        inputValueCallback = { this._setInputValue }
+                        value              = { this.state.formData.name }
+                        lightTheme         = { this.props.lightTheme } />
+                    <Input
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
-                        name               = "email" 
-                        inputValueCallback = { this._setInputValue } 
-                        value              = { this.state.formData.email } />
+                        name               = "email"
+                        inputValueCallback = { this._setInputValue }
+                        value              = { this.state.formData.email }
+                        lightTheme         = { this.props.lightTheme } />
                     <fieldset className = { this.state.activeQuestion === 3 ? '-active': '' }>
                         <label
                             className = "a-label -static"
                             htmlFor   = "interest">
                             What are you interested in talking to us about?
                         </label>
-                        <div className = "a-dropdown">
+                        <div className = { selectClass }>
                             <select id = "interest">
                                 <option value="existing">I have a startup I’d like to talk to you about</option>
                                 <option value="story">I have an entrepreneurship story to share</option>
@@ -126,29 +134,30 @@ const CatamaranForm = class extends React.Component {
                             </select>
                         </div>
                     </fieldset>
-                    <Textarea 
+                    <Textarea
                         className          = { this.state.activeQuestion === 4 ? '-active': '' }
-                        name               = "message" 
-                        inputValueCallback = { this._setInputValue } 
-                        value              = { this.state.formData.message } />
+                        name               = "message"
+                        inputValueCallback = { this._setInputValue }
+                        value              = { this.state.formData.message }
+                        lightTheme         = { this.props.lightTheme } />
                     <div className = "o-contact-form__buttons">
                         <a
                             onClick   = { this._onBackClick }
-                            className = "a-button">
+                            className = { buttonClass }>
                             Go Back
                         </a>
                         {  // if
                             this.state.activeQuestion !== this.state.totalQuestions &&
                             <a
                                 onClick   = { this._onNextClick }
-                                className = "a-button">
+                                className = { buttonClass }>
                                 Next
                             </a>
                         }
                         <button
                             type      = "submit"
                             onClick   = { this._onSubmitClick }
-                            className = {  buttonClass }>
+                            className = { buttonClass }>
                             Submit
                         </button>
                     </div>

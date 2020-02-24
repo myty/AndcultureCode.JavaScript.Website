@@ -37,41 +37,44 @@ const Input = class extends React.Component {
     }
 
     render() {
-        let cssClassName = 'a-label'; 
+        let cssClassName = 'a-label';
 
         if (this.state.fieldActive) {
             cssClassName += ' -field-active';
         }
 
+        let inputClassName = 'a-input';
+        inputClassName += this.props.lightTheme ? ' -light ' : '';
+
         return (
             <fieldset className = { this.props.className }>
-                <label 
+                <label
                     className = { cssClassName }
                     htmlFor   = { this.props.name }>
                     { this.props.name }
                 </label>
                 { // if
                     this.props.type === "hidden" &&
-                    <input 
+                    <input
                         value       = { this.props.value }
                         onFocus     = { this._activateField }
                         onBlur      = { this._disableField }
                         onChange    = { this._updateInputValue }
-                        className   = "a-input" 
-                        type        = "hidden" 
+                        className   = "a-input"
+                        type        = "hidden"
                         name        = { this.props.name }
                         placeholder = { this.state.placeholderValue }
                         id          = { this.props.name } />
                 }
                 { // if
                     this.props.type !== "hidden" &&
-                    <input 
+                    <input
                         value       = { this.props.value }
                         onFocus     = { this._activateField }
                         onBlur      = { this._disableField }
                         onChange    = { this._updateInputValue }
-                        className   = "a-input" 
-                        type        = "text" 
+                        className   = { inputClassName }
+                        type        = "text"
                         name        = { this.props.name }
                         placeholder = { this.state.placeholderValue }
                         id          = { this.props.name } />
