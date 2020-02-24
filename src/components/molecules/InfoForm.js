@@ -43,7 +43,7 @@ const InfoForm = class extends React.Component {
     }
 
     _onSubmitClick() {
-        $(".o-contact-form").submit(function(e) {
+        $(".o-contact-form.-active").submit(function(e) {
             e.preventDefault();
 
             var $form = $(this);
