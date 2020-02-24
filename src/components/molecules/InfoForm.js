@@ -1,7 +1,12 @@
 import React                   from 'react';
 import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
-import $ from 'jquery'
+
+function encode(data) {
+    return Object.keys(data)
+        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+}
 
 const InfoForm = class extends React.Component {
     constructor(props) {
@@ -42,16 +47,16 @@ const InfoForm = class extends React.Component {
         }, this._caclulateProgress(0));
     }
 
-    _onSubmitClick() {
-        $(".o-contact-form.-active").submit(function(e) {
-            e.preventDefault();
-
-            var $form = $(this);
-            console.log($form);
-            $.post($form.attr("action"), $form.serialize()).then(function() {
-                alert("Thank you!");
-            });
-        });
+    _onSubmitClick(e) {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact-info", ...this.state.formData })
+        })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
+    
+        e.preventDefault();
     }
 
     _caclulateProgress(direction) {
@@ -91,6 +96,8 @@ const InfoForm = class extends React.Component {
             <form className = { formClass } name="contact-info" method="POST" data-netlify="true">
                 <div className = "o-rhythm__container">
                     <header>get quick info</header>
+                    <input type = "hidden" data-netlify="true" />
+                    <input type="hidden" name="form-name" value="contact-info" />
                     <Input 
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
                         name               = "name" 
