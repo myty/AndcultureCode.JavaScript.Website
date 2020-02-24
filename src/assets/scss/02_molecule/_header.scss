@@ -13,11 +13,11 @@
     &__logo {
         display: block;
         float: left;
-        width: 80px; 
+        width: 50px; 
         mix-blend-mode: difference;
 
         @include breakpoints("tablet") {
-            width: 100px; 
+            width: 60px; 
         }
     }
 
