@@ -53,9 +53,11 @@ const InfoForm = class extends React.Component {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact-info", ...this.state.formData })
         })
-            .then(() => alert("Success!"))
+            .then(() => 
+                this._caclulateProgress(1)
+            )
             .catch(error => alert(error));
-    
+
         e.preventDefault();
     }
 

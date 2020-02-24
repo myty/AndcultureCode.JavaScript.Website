@@ -52,7 +52,9 @@ const JobForm = class extends React.Component {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact-job", ...this.state.formData })
         })
-            .then(() => alert("Success!"))
+            .then(() =>
+                this._caclulateProgress(1)
+            )
             .catch(error => alert(error));
     
         e.preventDefault();
