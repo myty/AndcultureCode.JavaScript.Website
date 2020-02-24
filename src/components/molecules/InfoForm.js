@@ -1,7 +1,7 @@
 import React                   from 'react';
 import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
-import $ from 'jquery'
+import $ from 'jquery';
 
 const InfoForm = class extends React.Component {
     constructor(props) {
@@ -43,10 +43,14 @@ const InfoForm = class extends React.Component {
     }
 
     _onSubmitClick() {
+        if (typeof jQuery == 'undefined') {
+            console.log("jQuery is not loaded.");
+        }
+
         $(".o-contact-form.-active").submit(function(e) {
             e.preventDefault();
 
-            var $form = $(this);
+            const $form = $(this);
             $.post($form.attr("action"), $form.serialize()).then(function() {
                 alert("Thank you!");
             });
@@ -77,6 +81,11 @@ const InfoForm = class extends React.Component {
     _setInputValue(name, value) {
         this.setState({ formData: {...this.state.formData, [name]: value }});
     }
+
+    // componentDidUpdate() {
+    //     const $form = $('.o-contact-form.-active');
+    //     console.log($form.serialize());
+    // }
 
     render() {
         let formClass   = 'o-contact-form'; 
