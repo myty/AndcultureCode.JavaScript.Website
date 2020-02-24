@@ -43,10 +43,6 @@ const InfoForm = class extends React.Component {
     }
 
     _onSubmitClick() {
-        if (typeof jQuery == 'undefined') {
-            console.log("jQuery is not loaded.");
-        }
-
         $(".o-contact-form.-active").submit(function(e) {
             e.preventDefault();
 
