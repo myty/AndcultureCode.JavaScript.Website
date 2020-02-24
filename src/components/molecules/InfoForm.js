@@ -47,6 +47,7 @@ const InfoForm = class extends React.Component {
             e.preventDefault();
 
             var $form = $(this);
+            console.log($form);
             $.post($form.attr("action"), $form.serialize()).then(function() {
                 alert("Thank you!");
             });
