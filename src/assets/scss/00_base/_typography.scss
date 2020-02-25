@@ -1,4 +1,5 @@
 body {
+    color: get-color("primary", "after-hours");
     font-family: $font-primary;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
@@ -18,7 +19,6 @@ h6 {
 h1 {
     @include font-size(44px);
     @include line-height(48px);
-    color: get-color("neutral", "gray");
 
     @include breakpoints("tablet") {
         @include font-size(85px);
@@ -29,7 +29,6 @@ h1 {
 h2 {
     @include font-size("medium-large");
     @include line-height("medium-small");
-    color: get-color("neutral", "gray");
 
     @include breakpoints("tablet") {
         @include font-size("larger");
@@ -44,7 +43,7 @@ h3 {
 
     @include breakpoints("tablet") {
         @include font-size("medium-large");
-        @include line-height("medium-large");
+        @include line-height("larger");
     }
 }
 
@@ -87,7 +86,6 @@ h6 {
 p {
     @include font-size("base");
     @include line-height("smaller");
-    color: get-color("neutral", "medium-gray");
 
     @include breakpoints("tablet") {
         @include font-size("small");
@@ -101,4 +99,8 @@ a {
     letter-spacing: .05em;
     font-weight: 500;
     text-decoration: none;
+
+    &:hover {
+        color: get-color("neutral", "gray");
+    }
 }

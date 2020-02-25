@@ -76,7 +76,8 @@
         &.-greenblob {
             display: none;
             right: 180px;
-            top: 80vh;
+            top: 460px;
+            z-index: 1;
 
             @include breakpoints("tablet") {
                 display: block;
@@ -107,7 +108,8 @@
                 width: 24px; 
                 display: inline-block;
                 vertical-align: top;
-                margin-left: 20px;
+                margin-left: 6px;
+                margin-top: 14px;
             }
         }
     }
@@ -121,14 +123,16 @@
     }
 
     h6 {
+        @include font-size(14px);
         color: get-color("neutral", "light-gray"); 
-        position: absolute;
+        position: fixed;
         writing-mode: tb-rl;
         transform: rotate(-180deg);
         top: 50%; 
-        left: 0;
-        height: 124px; 
+        left: 3%;
         display: none;
+        word-spacing: 2em;
+        letter-spacing: .15em;
 
         @include breakpoints("tablet") {
             display: block;
@@ -138,8 +142,8 @@
     p {
         position: relative;
         float: right;
-        max-width: 160px;
         display: none;
+        max-width: 144px;
 
         @include breakpoints("tablet") {
             display: block;
@@ -156,8 +160,30 @@
                 vertical-align: top;
                 margin-right: 10px;
                 position: absolute;
-                left: -28px;
+                left: -18px;
             }
         }
     }
+}
+
+:root {
+    --backgroundColor: #232323;
+    --firstColor: #00D69C;
+    --secondColor: #C52AFC;
+    --thirdColor: #FF1F00;
+    --fourthColor: #FFD600;
+    --dropShadowColor: rgba(0, 0, 0, .7);
+}
+
+svg {
+    transform-origin: 50% 50%;
+    animation: move 24s ease-in-out infinite;
+}
+
+@keyframes move {
+    0%   { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
+    25%  { transform: scale(0.8) translate(5vw, 10vh) rotate(55deg); stroke: var(--secondColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
+    50%  { transform: scale(0.6) translate(15vw, 5vh) rotate(180deg); stroke: var(--thirdColor); filter: drop-shadow( -16px -16px 16px var(--dropShadowColor)); }
+    75%  { transform: scale(0.8) translate(5vw, 10h) rotate(55deg); stroke: var(--fourthColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
+    100% { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
 }
