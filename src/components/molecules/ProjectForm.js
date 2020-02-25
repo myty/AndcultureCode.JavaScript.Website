@@ -10,7 +10,8 @@ function encode(data) {
 
 const ProjectForm = class extends React.Component {
     constructor(props) {
-        super(props)
+        super(props); 
+
         this.state = {
             activeQuestion:  1,
             totalQuestions:  6,
@@ -94,7 +95,7 @@ const ProjectForm = class extends React.Component {
         }
 
         return (
-            <form className = { formClass } data-netlify-recaptcha = "true" name = "contact-project" method = "POST" data-netlify = "true">
+            <form className = { formClass }  name="contact-project" method="POST" data-netlify="true">
                 <div className = "o-rhythm__container">
                     <header>start a project together</header>
                     <input type = "hidden" data-netlify="true" />
