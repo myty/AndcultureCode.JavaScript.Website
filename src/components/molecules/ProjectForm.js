@@ -13,7 +13,7 @@ const ProjectForm = class extends React.Component {
         super(props)
         this.state = {
             activeQuestion:  1,
-            totalQuestions:  7,
+            totalQuestions:  6,
             formData:        {},
         }
 
@@ -101,16 +101,19 @@ const ProjectForm = class extends React.Component {
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
                         name               = "name" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
                         value              = { this.state.formData.name } />
                     <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
                         name               = "email" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
                         value              = { this.state.formData.email } />
                     <Input 
                         className          = { this.state.activeQuestion === 3 ? '-active': '' }
                         name               = "phone" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
                         value              = { this.state.formData.phone } />
                     <Input 
                         className          = { this.state.activeQuestion === 4 ? '-active': '' }
@@ -127,9 +130,6 @@ const ProjectForm = class extends React.Component {
                         name               = "message" 
                         inputValueCallback = { this._setInputValue } 
                         value              = { this.state.formData.message } />
-                    <fieldset className = { this.state.activeQuestion === 7 ? '-active': '' }>
-                        <div data-netlify-recaptcha="true"></div>
-                    </fieldset>
                     <div className = "o-contact-form__buttons">
                         <a
                             onClick   = { this._onBackClick }

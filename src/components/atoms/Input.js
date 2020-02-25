@@ -9,6 +9,7 @@ const Input = class extends React.Component {
             inputValue:       '',
             fieldActive:      false,
             placeholderValue: this.props.name,
+            error: false,
         }
 
         this._updateInputValue = this._updateInputValue.bind(this);
@@ -29,6 +30,18 @@ const Input = class extends React.Component {
                 fieldActive:      false,
                 placeholderValue: this.props.name,
             })
+
+            if (this.props.isRequired) {
+                this.setState({
+                    error: true,
+                })
+            }
+        } else {
+            if (this.props.isRequired) {
+                this.setState({
+                    error: false,
+                })
+            }
         }
     }
 
@@ -41,6 +54,12 @@ const Input = class extends React.Component {
 
         if (this.state.fieldActive) {
             cssClassName += ' -field-active';
+        }
+
+        let inputProps = {};
+        
+        if (this.props.isRequired) {
+            inputProps.required = true;
         }
 
         return (
@@ -66,6 +85,7 @@ const Input = class extends React.Component {
                 { // if
                     this.props.type !== "hidden" &&
                     <input 
+                        { ...inputProps }
                         value       = { this.props.value }
                         onFocus     = { this._activateField }
                         onBlur      = { this._disableField }
@@ -75,6 +95,11 @@ const Input = class extends React.Component {
                         name        = { this.props.name }
                         placeholder = { this.state.placeholderValue }
                         id          = { this.props.name } />
+                }
+                { // if
+                    this.state.error &&
+                    <span className = "a-label__error">Please Enter Your { this.props.name }</span>
+
                 }
             </fieldset>
         )

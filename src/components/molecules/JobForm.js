@@ -101,16 +101,19 @@ const JobForm = class extends React.Component {
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
                         name               = "name" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
                         value              = { this.state.formData.name } />
                     <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
                         name               = "email" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
                         value              = { this.state.formData.email } />
                     <Input 
                         className          = { this.state.activeQuestion === 3 ? '-active': '' }
                         name               = "phone" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
                         value              = { this.state.formData.phone } />
                     <Input 
                         className          = { this.state.activeQuestion === 4 ? '-active': '' }

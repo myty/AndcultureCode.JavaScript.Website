@@ -102,11 +102,13 @@ const CatamaranForm = class extends React.Component {
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
                         name               = "name" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
                         value              = { this.state.formData.name } />
                     <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
                         name               = "email" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
                         value              = { this.state.formData.email } />
                     <fieldset className = { this.state.activeQuestion === 3 ? '-active': '' }>
                         <label

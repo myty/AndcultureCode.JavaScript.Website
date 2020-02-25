@@ -1,4 +1,4 @@
-import React                   from 'react';
+import * as React from 'react';
 import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
 
@@ -86,11 +86,6 @@ const InfoForm = class extends React.Component {
         this.setState({ formData: {...this.state.formData, [name]: value }});
     }
 
-    // componentDidUpdate() {
-    //     const $form = $('.o-contact-form.-active');
-    //     console.log($form.serialize());
-    // }
-
     render() {
         let formClass   = 'o-contact-form'; 
         let buttonClass = 'a-button';
@@ -109,11 +104,13 @@ const InfoForm = class extends React.Component {
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
                         name               = "name" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
                         value              = { this.state.formData.name } />
                     <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
                         name               = "email" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
                         value              = { this.state.formData.email } />
                     <Textarea 
                         className          = { this.state.activeQuestion === 3 ? '-active': '' }

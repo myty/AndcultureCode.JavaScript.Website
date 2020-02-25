@@ -1,8 +1,8 @@
-import React from 'react';
-import ProjectForm from '../molecules/ProjectForm'
-import InfoForm from '../molecules/InfoForm'
-import JobForm from '../molecules/JobForm'
-import CatamaranForm from '../molecules/CatamaranForm'
+import * as React from 'react';
+import ProjectForm from '../molecules/ProjectForm';
+import InfoForm from '../molecules/InfoForm';
+import JobForm from '../molecules/JobForm';
+import CatamaranForm from '../molecules/CatamaranForm';
 
 
 const ContactForm = class extends React.Component {
@@ -106,64 +106,62 @@ const ContactForm = class extends React.Component {
                         this.state.formActive === false &&
                         this.state.isSubmitted === false &&
                         <div className = "o-rhythm__container">
-                            <div>
-                                <header>what can we help you with today?</header>
-                                <fieldset className = "-space">
-                                    <input
-                                        onChange  = { this._onFormTypeChange }
-                                        checked   = { this.state.activeForm === "project" }
-                                        className = "a-radio"
-                                        type      = "radio"
-                                        name      = "type"
-                                        value     = "project"
-                                        id        = "project"/>
-                                    <label htmlFor="project">start a project together</label>
-                                </fieldset>
-                                <fieldset className = "-space">
-                                    <input
-                                        onChange  = { this._onFormTypeChange }
-                                        checked   = { this.state.activeForm === "quick-info" }
-                                        className = "a-radio"
-                                        type      = "radio"
-                                        name      = "type"
-                                        value     = "quick-info"
-                                        id        = "quick-info"/>
-                                    <label htmlFor="quick-info">get quick info</label>
-                                </fieldset>
-                                <fieldset className = "-space">
-                                    <input
-                                        onChange  = { this._onFormTypeChange }
-                                        checked   = { this.state.activeForm === "join-team" }
-                                        className = "a-radio"
-                                        type      = "radio"
-                                        name      = "type"
-                                        value     = "join-team"
-                                        id        = "join-team"/>
-                                    <label htmlFor="join-team">join the team</label>
-                                </fieldset>
-                                <fieldset className = "-space">
-                                    <input
-                                        onChange  = { this._onFormTypeChange }
-                                        checked   = { this.state.activeForm === "start-ups" }
-                                        className = "a-radio"
-                                        type      = "radio"
-                                        name      = "type"
-                                        value     = "start-ups"
-                                        id        = "start-ups"/>
-                                    <label htmlFor="start-ups">talk start-ups (catamaran)</label>
-                                </fieldset>
-                                <div className = "o-contact-form__buttons -space">
-                                    <a
-                                        onClick = { this._deactiveForm }
-                                        className = "a-button -disabled">
-                                        Go Back
-                                    </a>
-                                    <a
-                                        onClick = { this._activateForm }
-                                        className = "a-button">
-                                        Next
-                                    </a>
-                                </div>
+                            <header>what can we help you with today?</header>
+                            <fieldset className = "-space">
+                                <input
+                                    onChange  = { this._onFormTypeChange }
+                                    checked   = { this.state.activeForm === "project" }
+                                    className = "a-radio"
+                                    type      = "radio"
+                                    name      = "type"
+                                    value     = "project"
+                                    id        = "project"/>
+                                <label htmlFor="project">start a project together</label>
+                            </fieldset>
+                            <fieldset className = "-space">
+                                <input
+                                    onChange  = { this._onFormTypeChange }
+                                    checked   = { this.state.activeForm === "quick-info" }
+                                    className = "a-radio"
+                                    type      = "radio"
+                                    name      = "type"
+                                    value     = "quick-info"
+                                    id        = "quick-info"/>
+                                <label htmlFor="quick-info">get quick info</label>
+                            </fieldset>
+                            <fieldset className = "-space">
+                                <input
+                                    onChange  = { this._onFormTypeChange }
+                                    checked   = { this.state.activeForm === "join-team" }
+                                    className = "a-radio"
+                                    type      = "radio"
+                                    name      = "type"
+                                    value     = "join-team"
+                                    id        = "join-team"/>
+                                <label htmlFor="join-team">join the team</label>
+                            </fieldset>
+                            <fieldset className = "-space">
+                                <input
+                                    onChange  = { this._onFormTypeChange }
+                                    checked   = { this.state.activeForm === "start-ups" }
+                                    className = "a-radio"
+                                    type      = "radio"
+                                    name      = "type"
+                                    value     = "start-ups"
+                                    id        = "start-ups"/>
+                                <label htmlFor="start-ups">talk start-ups (catamaran)</label>
+                            </fieldset>
+                            <div className = "o-contact-form__buttons -space">
+                                <a
+                                    onClick = { this._deactiveForm }
+                                    className = "a-button -disabled">
+                                    Go Back
+                                </a>
+                                <a
+                                    onClick = { this._activateForm }
+                                    className = "a-button">
+                                    Next
+                                </a>
                             </div>
                         </div>
                     }
