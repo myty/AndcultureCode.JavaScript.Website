@@ -100,12 +100,14 @@ const CatamaranForm = class extends React.Component {
                     <header>talk start-ups (Catamaran)</header>
                     <Input 
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                        type               = "text"
                         name               = "name" 
                         inputValueCallback = { this._setInputValue } 
                         isRequired         = { true }
                         value              = { this.state.formData.name } />
                     <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                        type               = "email"
                         name               = "email" 
                         inputValueCallback = { this._setInputValue } 
                         isRequired         = { true }

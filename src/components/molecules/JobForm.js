@@ -99,24 +99,28 @@ const JobForm = class extends React.Component {
                     <header>join the team</header>
                     <Input 
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                        type               = "text"
                         name               = "name" 
                         inputValueCallback = { this._setInputValue } 
                         isRequired         = { true }
                         value              = { this.state.formData.name } />
                     <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                        type               = "email"
                         name               = "email" 
                         inputValueCallback = { this._setInputValue } 
                         isRequired         = { true }
                         value              = { this.state.formData.email } />
                     <Input 
                         className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                        type               = "number"
                         name               = "phone" 
                         inputValueCallback = { this._setInputValue } 
                         isRequired         = { true }
                         value              = { this.state.formData.phone } />
                     <Input 
                         className          = { this.state.activeQuestion === 4 ? '-active': '' }
+                        type               = "text"
                         name               = "linkedin_profile" 
                         inputValueCallback = { this._setInputValue } 
                         value              = { this.state.formData.linkedin_profile } />

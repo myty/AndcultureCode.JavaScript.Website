@@ -101,6 +101,7 @@ const InfoForm = class extends React.Component {
                     <input type = "hidden" data-netlify="true" />
                     <input type="hidden" name="form-name" value="contact-info" />
                     <Input 
+                        type               = "text"
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
                         name               = "name" 
                         inputValueCallback = { this._setInputValue } 
@@ -108,6 +109,7 @@ const InfoForm = class extends React.Component {
                         value              = { this.state.formData.name } />
                     <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                        type               = "email"
                         name               = "email" 
                         inputValueCallback = { this._setInputValue } 
                         isRequired         = { true }
