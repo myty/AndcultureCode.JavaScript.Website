@@ -80,8 +80,15 @@
     &__content {
         @include span-col(12);
 
+        &-inner {
+
+            @include breakpoints("tablet") {
+                padding-left: 160px;
+            }
+        }
+
         @include breakpoints("tablet") {
-            @include span-col(5);
+            @include span-col(6);
         }
     }
 
@@ -91,7 +98,7 @@
         margin-bottom: -80px;
 
         @include breakpoints("tablet") {
-            @include span-col(7);
+            @include span-col(6);
             margin-bottom: 0;
         }
     }
@@ -136,9 +143,19 @@
     &__count {
         color: get-color("neutral", "gray"); 
         font-family: $font-secondary;
+        position: absolute;
         margin-bottom: 20px;
         font-weight: 500;
         letter-spacing: .2em;
+        writing-mode: tb-rl;
+        transform: rotate(-180deg);
+        left: 3%;
+        word-spacing: 2em;
+        letter-spacing: .15em;
+
+        span {
+            color: get-color("neutral", "lighter-gray"); 
+        }
     }
 
     .a-button {
