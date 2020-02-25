@@ -70,6 +70,7 @@ const Input = class extends React.Component {
                     { this.props.name }
                 </label>
                 <input 
+                    { ...inputProps }
                     value       = { this.props.value }
                     onFocus     = { this._activateField }
                     onBlur      = { this._disableField }

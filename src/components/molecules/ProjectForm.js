@@ -97,6 +97,8 @@ const ProjectForm = class extends React.Component {
             <form className = { formClass } data-netlify-recaptcha = "true" name = "contact-project" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>start a project together</header>
+                    <input type = "hidden" data-netlify="true" />
+                    <input type="hidden" name="form-name" value="contact-project" />
                     <Input 
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
                         type               = "text"
