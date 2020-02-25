@@ -86,6 +86,11 @@ const InfoForm = class extends React.Component {
         this.setState({ formData: {...this.state.formData, [name]: value }});
     }
 
+    // componentDidUpdate() {
+    //     const $form = $('.o-contact-form.-active');
+    //     console.log($form.serialize());
+    // }
+
     render() {
         let formClass   = 'o-contact-form'; 
         let buttonClass = 'a-button';
