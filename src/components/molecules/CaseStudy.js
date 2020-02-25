@@ -60,20 +60,22 @@ const CaseStudy = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "o-rhythm__row">
                         <div className = "m-case-study__content">
-                            <div className = "m-case-study__count">
-                                { this.props.count }/{ this.props.total }
+                            <div className = "m-case-study__content-inner">
+                                <div className = "m-case-study__count">
+                                    { this.props.count }<span>/{ this.props.total }</span>
+                                </div>
+                                <h5>{ this.props.post.frontmatter.partnerName }</h5>
+                                <p>
+                                    { this.props.post.frontmatter.title }
+                                </p>
+                                <CoverTransitionLink
+                                    onMouseEnter = { this._handleHover }
+                                    className = "a-button"
+                                    to        = { this.props.post.fields.slug }
+                                    style     = { linkStyle }>
+                                    See How
+                                </CoverTransitionLink>
                             </div>
-                            <h5>{ this.props.post.frontmatter.partnerName }</h5>
-                            <p>
-                                { this.props.post.frontmatter.title }
-                            </p>
-                            <CoverTransitionLink
-                                onMouseEnter = { this._handleHover }
-                                className = "a-button"
-                                to        = { this.props.post.fields.slug }
-                                style     = { linkStyle }>
-                                See How
-                            </CoverTransitionLink>
                         </div>
                         <div className = "m-case-study__image-container">
                             { this.props.post.frontmatter.featuredimage ? (
