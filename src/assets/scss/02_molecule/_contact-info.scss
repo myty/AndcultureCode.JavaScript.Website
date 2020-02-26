@@ -13,6 +13,8 @@
             @include line-height(36px);
             color: get-color("primary", "white"); 
             text-decoration: underline; 
+            display: block;
+            margin-bottom: 20px;
         }
     }
     

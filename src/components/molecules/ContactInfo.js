@@ -15,7 +15,7 @@ const ContactInfo = class extends React.Component {
                         <a href="">
                             614 N. Front Street<br/>
                             Harrisburg, PA<br/>
-                            17102
+                            17102<br/>
                         </a>
                         <a href="tel:7172332881">717.233.2881</a>
                     </div>

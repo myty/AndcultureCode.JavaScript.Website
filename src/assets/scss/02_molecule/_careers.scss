@@ -1,0 +1,26 @@
+.m-careers {
+    background: get-color("primary", "after-hours");
+    padding-bottom: 200px;
+
+    &__left {
+
+        @include breakpoints("tablet") {
+            @include span-col(4);
+        }
+    }
+
+    &__right {
+        
+        @include breakpoints("tablet") {
+            @include span-col(8);
+        }
+    }
+
+    h2 {
+        color: get-color("primary", "white");
+    }
+
+    h6 {
+        margin-bottom: 60px; 
+    }
+}
