@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import '../assets/scss/app.scss';
 import ContactForm from '../components/organisms/ContactForm';
 import ContactInfo from '../components/molecules/ContactInfo';
+import Careers from '../components/molecules/Careers';
 import ContactHeroGraphic from '../../static/img/contact/contact_hero_graphic.png';
 import HeroBluePaint from '../../static/img/contact/blue_paint.png';
 
@@ -89,11 +90,7 @@ const ContactPage = ({ data }) => {
           </div>
           <div>
             <ContactInfo />
-            <div>Map</div>
-            <div>
-              <p>If you are traveling down N. Front St. from I-81, our parking entrance is just past the Harvey Taylor Bridge on the right. If you are traveling on 2nd St. from I-83, go down past Forster St. and turn left onto either Boas St. or Cumberland St., then make a left onto N. Front St. and get in the third lane to the right immediately. You cannot make a left turn from Forster St. onto Front St.</p>
-              <p>Once you’ve turned into our parking lot, stay to the left and enter the top parking deck. There, you will find several “Visitor” parking spaces. Enter through the doors on the top parking deck and go straight ahead. You’ll turn a slight left around the railing and then turn right to enter through the glass doors leading to our office.</p>
-            </div>
+            <Careers />
             <div>Careers</div>
           </div>
         </div>
