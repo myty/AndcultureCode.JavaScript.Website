@@ -5,6 +5,7 @@
     overflow: hidden;
     margin: 0;
     transition: all 0.6s ease;
+    background: white;
 
     @include breakpoints("tablet") {
         padding: 0;
@@ -44,8 +45,7 @@
 
     &.-hovered {
         z-index: 9;
-
-        margin-top: -100px;
+        margin-top: -90px;
 
         .m-case-study__block {
             height: 200px;
@@ -80,6 +80,13 @@
     &__content {
         @include span-col(12);
 
+        &-inner {
+
+            @include breakpoints("tablet") {
+                padding-left: 160px;
+            }
+        }
+
         @include breakpoints("tablet") {
             @include span-col(6);
         }
@@ -100,7 +107,8 @@
         max-width: 200px;
         position: absolute;
         left: 0;
-        z-index: -1;
+        top: -70px;
+        z-index: 0;
         display: none;
 
         @include breakpoints("tablet") {
@@ -115,6 +123,7 @@
     &__image {
         right: 0;
         bottom: calc(-30% + -110px);
+        z-index: 1;
 
         @include breakpoints("tablet") {
             position: absolute !important;
@@ -134,9 +143,19 @@
     &__count {
         color: get-color("neutral", "gray"); 
         font-family: $font-secondary;
+        position: absolute;
         margin-bottom: 20px;
         font-weight: 500;
         letter-spacing: .2em;
+        writing-mode: tb-rl;
+        transform: rotate(-180deg);
+        left: 3%;
+        word-spacing: 2em;
+        letter-spacing: .15em;
+
+        span {
+            color: get-color("neutral", "lighter-gray"); 
+        }
     }
 
     .a-button {

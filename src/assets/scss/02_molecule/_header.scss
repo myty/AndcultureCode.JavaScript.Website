@@ -13,11 +13,23 @@
     &__logo {
         display: block;
         float: left;
-        width: 80px;
-        mix-blend-mode: difference;
+        width: 50px; 
 
         @include breakpoints("tablet") {
-            width: 100px;
+            width: 60px; 
+        }
+    }
+
+    &__title {
+        display: none;
+        position: absolute;
+        top: 62px;
+        left: calc(3% + 100px);
+        width: 220px;
+        z-index: 9;
+
+        @include breakpoints("tablet") {
+            display: block;
         }
     }
 
@@ -42,6 +54,56 @@
         @include font-size("base");
         color: get-color("primary", "fresh");
         font-family: $font-primary;
+        position: relative;
+        transition: all .5s ease;
+        
+        &:hover {
+            color: #19a87c;
+
+            span:before,
+            span:after {
+                opacity: 1;
+            }
+            span:before {
+                top: -5px;
+                transform: rotate(45deg);
+            }
+            span:after {
+                bottom: -5px;
+                transform: rotate(-45deg);
+            }
+        }
+
+        span,
+        span:before,
+        span:after {
+            height: 2px;
+            background: #19a87c;
+            display: block;
+            position: absolute;
+        }
+
+        span {
+            top: 14px;
+            width: 30px;
+            left: -40px;
+        }
+
+        span:before,
+        span:after {
+            content:'';
+            opacity: 0;
+            right: -2px;
+            width: 15px;
+            transition: all .5s ease;
+        }
+
+        span:before {
+            top: 0;
+        }
+        span:after {
+            bottom: 0;
+        }
 
         @include breakpoints("tablet") {
             @include font-size(24px);

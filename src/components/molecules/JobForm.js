@@ -60,6 +60,22 @@ const JobForm = class extends React.Component {
         e.preventDefault();
     }
 
+    _validateFormData() {
+        if (this.state.activeQuestion === 1 && this.state.formData.name && this.state.formData.name !== "") {
+            return false;
+        }
+
+        if (this.state.activeQuestion === 2 && this.state.formData.email && this.state.formData.email !== "") {
+            return false;
+        }
+
+        if (this.state.activeQuestion === 3 && this.state.formData.phone && this.state.formData.phone !== "") {
+            return false;
+        }
+
+        return true;
+    }
+
     _caclulateProgress(direction) {
         let percentComplete = this.state.activeQuestion / this.state.totalQuestions * 100;
         if (this.state.activeQuestion === this.state.totalQuestions && direction === 1) {
@@ -92,9 +108,18 @@ const JobForm = class extends React.Component {
         let buttonClass = 'a-button';
         buttonClass += this.props.lightTheme ? ' -light ' : '';
 
+        let nextButtonClass = 'a-button';
+        formClass += this.props.isActive ? ' -active' : '';
+
         if (this.state.activeQuestion === this.state.totalQuestions) {
             buttonClass += ' -active'
         }
+
+        if (this._validateFormData()) {
+            nextButtonClass += ' -disabled'
+        }
+
+        nextButtonClass += this.props.lightTheme ? ' -light ' : '';
 
         return (
             <form className = { formClass } name = "contact-job" method = "POST" data-netlify = "true">
@@ -102,29 +127,36 @@ const JobForm = class extends React.Component {
                     <header>join the team</header>
                     <Input
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
-                        name               = "name"
-                        inputValueCallback = { this._setInputValue }
-                        value              = { this.state.formData.name }
-                        lightTheme         = { this.props.lightTheme } />
-                    <Input
+                        type               = "text"
+                        name               = "name" 
+                        inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
+                        value              = { this.state.formData.name } />
+                    <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
-                        name               = "email"
-                        inputValueCallback = { this._setInputValue }
-                        value              = { this.state.formData.email }
-                        lightTheme         = { this.props.lightTheme } />
-                    <Input
+                        type               = "email"
+                        name               = "email" 
+                        inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
+                        value              = { this.state.formData.email } />
+                    <Input 
                         className          = { this.state.activeQuestion === 3 ? '-active': '' }
-                        name               = "phone"
-                        inputValueCallback = { this._setInputValue }
-                        value              = { this.state.formData.phone }
-                        lightTheme         = { this.props.lightTheme } />
-                    <Input
+                        type               = "number"
+                        name               = "phone" 
+                        inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
+                        value              = { this.state.formData.phone } />
+                    <Input 
                         className          = { this.state.activeQuestion === 4 ? '-active': '' }
-                        name               = "linkedin_profile"
-                        inputValueCallback = { this._setInputValue }
-                        value              = { this.state.formData.linkedin_profile }
-                        lightTheme         = { this.props.lightTheme } />
-                    <Textarea
+                        type               = "text"
+                        name               = "linkedin_profile" 
+                        inputValueCallback = { this._setInputValue } 
+                        lightTheme         = { this.props.lightTheme }
+                        value              = { this.state.formData.linkedin_profile } />
+                    <Textarea 
                         className          = { this.state.activeQuestion === 5 ? '-active': '' }
                         name               = "message"
                         inputValueCallback = { this._setInputValue }
@@ -153,7 +185,7 @@ const JobForm = class extends React.Component {
                             this.state.activeQuestion !== this.state.totalQuestions &&
                             <a
                                 onClick   = { this._onNextClick }
-                                className = {  buttonClass }>
+                                className = { nextButtonClass }>
                                 Next
                             </a>
                         }

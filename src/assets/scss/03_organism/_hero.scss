@@ -1,10 +1,17 @@
+:root {
+    --backgroundColor: #232323;
+    --firstColor: #FFABFF;
+    --secondColor: #3D5CC2;
+    --thirdColor: #76C1B9;
+    --fourthColor: #FCB43D;
+}
+
 .o-hero {
     position: relative;
     background: -moz-linear-gradient(top, rgba(223,235,238,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(223,235,238,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(223,235,238,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dfebee', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-
 
     .o-rhythm__container {
         position: relative;
@@ -53,6 +60,16 @@
             }
         }
 
+        &.-blinky {
+            display: none;
+
+            @include breakpoints("tablet") {
+                display: block;
+                left: 40%;
+                top: 80px;
+            }
+        }
+
         &.-terrazo {
             display: none;
             right: 0;
@@ -76,7 +93,8 @@
         &.-greenblob {
             display: none;
             right: 180px;
-            top: 80vh;
+            top: 460px;
+            z-index: 1;
 
             @include breakpoints("tablet") {
                 display: block;
@@ -116,7 +134,8 @@
                 width: 24px;
                 display: inline-block;
                 vertical-align: top;
-                margin-left: 20px;
+                margin-left: 6px;
+                margin-top: 14px;
             }
         }
     }
@@ -130,14 +149,16 @@
     }
 
     h6 {
-        color: get-color("neutral", "light-gray");
-        position: absolute;
+        @include font-size(14px);
+        color: get-color("neutral", "light-gray"); 
+        position: fixed;
         writing-mode: tb-rl;
         transform: rotate(-180deg);
-        top: 50%;
-        left: 0;
-        height: 124px;
+        top: 50%; 
+        left: 3%;
         display: none;
+        word-spacing: 2em;
+        letter-spacing: .15em;
 
         @include breakpoints("tablet") {
             display: block;
@@ -147,8 +168,8 @@
     p {
         position: relative;
         float: right;
-        max-width: 160px;
         display: none;
+        max-width: 144px;
 
         @include breakpoints("tablet") {
             display: block;
@@ -165,8 +186,22 @@
                 vertical-align: top;
                 margin-right: 10px;
                 position: absolute;
-                left: -28px;
+                left: -18px;
             }
         }
     }
+
+    svg {
+        transform-origin: 50% 50%;
+        animation: move 24s ease-in-out infinite;
+    }
+
+    @keyframes move {
+        0%   { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); }
+        25%  { transform: scale(0.8) translate(5vw, 10vh) rotate(55deg); stroke: var(--secondColor); }
+        50%  { transform: scale(0.6) translate(15vw, 5vh) rotate(180deg); stroke: var(--thirdColor); }
+        75%  { transform: scale(0.8) translate(5vw, 10h) rotate(55deg); stroke: var(--fourthColor); }
+        100% { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); }
+    }
+
 }

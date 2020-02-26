@@ -9,6 +9,7 @@ const Input = class extends React.Component {
             inputValue:       '',
             fieldActive:      false,
             placeholderValue: this.props.name,
+            error: false,
         }
 
         this._updateInputValue = this._updateInputValue.bind(this);
@@ -29,6 +30,18 @@ const Input = class extends React.Component {
                 fieldActive:      false,
                 placeholderValue: this.props.name,
             })
+
+            if (this.props.isRequired) {
+                this.setState({
+                    error: true,
+                })
+            }
+        } else {
+            if (this.props.isRequired) {
+                this.setState({
+                    error: false,
+                })
+            }
         }
     }
 
@@ -45,6 +58,11 @@ const Input = class extends React.Component {
 
         let inputClassName = 'a-input';
         inputClassName += this.props.lightTheme ? ' -light ' : '';
+        let inputProps = {};
+        
+        if (this.props.isRequired) {
+            inputProps.required = true;
+        }
 
         return (
             <fieldset className = { this.props.className }>
@@ -53,31 +71,21 @@ const Input = class extends React.Component {
                     htmlFor   = { this.props.name }>
                     { this.props.name }
                 </label>
+                <input 
+                    { ...inputProps }
+                    value       = { this.props.value }
+                    onFocus     = { this._activateField }
+                    onBlur      = { this._disableField }
+                    onChange    = { this._updateInputValue }
+                    className   = { inputClassName }
+                    type        = { this.props.type }
+                    name        = { this.props.name }
+                    placeholder = { this.state.placeholderValue }
+                    id          = { this.props.name } />
                 { // if
-                    this.props.type === "hidden" &&
-                    <input
-                        value       = { this.props.value }
-                        onFocus     = { this._activateField }
-                        onBlur      = { this._disableField }
-                        onChange    = { this._updateInputValue }
-                        className   = "a-input"
-                        type        = "hidden"
-                        name        = { this.props.name }
-                        placeholder = { this.state.placeholderValue }
-                        id          = { this.props.name } />
-                }
-                { // if
-                    this.props.type !== "hidden" &&
-                    <input
-                        value       = { this.props.value }
-                        onFocus     = { this._activateField }
-                        onBlur      = { this._disableField }
-                        onChange    = { this._updateInputValue }
-                        className   = { inputClassName }
-                        type        = "text"
-                        name        = { this.props.name }
-                        placeholder = { this.state.placeholderValue }
-                        id          = { this.props.name } />
+                    this.state.error &&
+                    <span className = "a-label__error">Please Enter Your { this.props.name }</span>
+
                 }
             </fieldset>
         )

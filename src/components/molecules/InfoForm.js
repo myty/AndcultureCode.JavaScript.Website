@@ -61,6 +61,18 @@ const InfoForm = class extends React.Component {
         e.preventDefault();
     }
 
+    _validateFormData() {
+        if (this.state.activeQuestion === 1 && this.state.formData.name && this.state.formData.name !== "") {
+            return false;
+        }
+
+        if (this.state.activeQuestion === 2 && this.state.formData.email && this.state.formData.email !== "") {
+            return false;
+        }
+
+        return true;
+    }
+
     _caclulateProgress(direction) {
         let percentComplete = this.state.activeQuestion / this.state.totalQuestions * 100;
         if (this.state.activeQuestion === this.state.totalQuestions && direction === 1) {
@@ -93,9 +105,18 @@ const InfoForm = class extends React.Component {
         let buttonClass = 'a-button';
         buttonClass += this.props.lightTheme ? ' -light ' : '';
 
+        let nextButtonClass = 'a-button';
+        formClass += this.props.isActive ? ' -active' : '';
+
         if (this.state.activeQuestion === this.state.totalQuestions) {
             buttonClass += ' -active'
         }
+
+        if (this._validateFormData()) {
+            nextButtonClass += ' -disabled'
+        }
+
+        nextButtonClass += this.props.lightTheme ? ' -light ' : '';
 
         return (
             <form className = { formClass } name="contact-info" method="POST" data-netlify="true">
@@ -103,19 +124,23 @@ const InfoForm = class extends React.Component {
                     <header>get quick info</header>
                     <input type = "hidden" data-netlify="true" />
                     <input type="hidden" name="form-name" value="contact-info" />
-                    <Input
+                    <Input 
+                        type               = "text"
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
-                        name               = "name"
-                        inputValueCallback = { this._setInputValue }
-                        value              = { this.state.formData.name }
-                        lightTheme         = { this.props.lightTheme } />
-                    <Input
+                        name               = "name" 
+                        inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
+                        value              = { this.state.formData.name } />
+                    <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
-                        name               = "email"
-                        inputValueCallback = { this._setInputValue }
-                        value              = { this.state.formData.email }
-                        lightTheme         = { this.props.lightTheme } />
-                    <Textarea
+                        type               = "email"
+                        name               = "email" 
+                        inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
+                        value              = { this.state.formData.email } />
+                    <Textarea 
                         className          = { this.state.activeQuestion === 3 ? '-active': '' }
                         name               = "message"
                         inputValueCallback = { this._setInputValue }
@@ -131,7 +156,7 @@ const InfoForm = class extends React.Component {
                             this.state.activeQuestion !== this.state.totalQuestions &&
                             <a
                                 onClick   = { this._onNextClick }
-                                className = { buttonClass }>
+                                className = { nextButtonClass }>
                                 Next
                             </a>
                         }

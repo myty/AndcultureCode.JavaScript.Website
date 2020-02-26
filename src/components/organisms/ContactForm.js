@@ -1,8 +1,8 @@
-import React from 'react';
-import ProjectForm from '../molecules/ProjectForm'
-import InfoForm from '../molecules/InfoForm'
-import JobForm from '../molecules/JobForm'
-import CatamaranForm from '../molecules/CatamaranForm'
+import * as React from 'react';
+import ProjectForm from '../molecules/ProjectForm';
+import InfoForm from '../molecules/InfoForm';
+import JobForm from '../molecules/JobForm';
+import CatamaranForm from '../molecules/CatamaranForm';
 
 
 const ContactForm = class extends React.Component {
