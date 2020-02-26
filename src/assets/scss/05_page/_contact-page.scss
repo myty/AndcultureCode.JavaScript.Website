@@ -41,5 +41,25 @@
             display: block;
             z-index: -1;
         }
+
+        .slick-dots {
+            text-align: right;
+        }
+
+        .slick-list {
+            // padding:0 20% 0 0;
+        }
+
+        .slick-next {
+            top: auto;
+            bottom: -65px;
+            left: 36px;
+        }
+
+        .slick-prev {
+            top: auto;
+            bottom: -65px;
+            left: 0;
+        }
     }
 }
