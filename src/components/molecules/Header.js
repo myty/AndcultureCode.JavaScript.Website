@@ -17,7 +17,6 @@ const Header = class extends React.Component {
               className =  "m-header__logo">
               <img src = { logo } alt="andculture" />
             </a>
-            <div className = "m-header__page-title">{ this.props.pageTitle }</div>
             { // if
               !this.props.hideNavigation &&
               <nav
@@ -30,7 +29,14 @@ const Header = class extends React.Component {
           </div>
         </header>
         <div className = "m-header__title">
-          <img src = { wordmark } alt="andculture" />
+          { // if
+            this.props.pageTitle != "home" &&
+              <div className = "m-header__page-title">{ this.props.pageTitle }</div>
+          }
+          { // if
+            this.props.pageTitle === "home" &&
+              <img src = { wordmark } alt="andculture" />
+          }
         </div>
       </div>
     )

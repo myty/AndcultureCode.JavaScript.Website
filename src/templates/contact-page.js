@@ -1,21 +1,22 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import '../assets/scss/app.scss'
-import ContactForm from '../components/organisms/ContactForm'
-import ContactHeroGraphic from '../../static/img/contact/contact_hero_graphic.png'
-import HeroBluePaint from '../../static/img/contact/blue_paint.png'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import '../assets/scss/app.scss';
+import ContactForm from '../components/organisms/ContactForm';
+import ContactInfo from '../components/molecules/ContactInfo';
+import ContactHeroGraphic from '../../static/img/contact/contact_hero_graphic.png';
+import HeroBluePaint from '../../static/img/contact/blue_paint.png';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import sliderImage1 from '../../static/img/contact/slider/Contact_1.jpg'
-import sliderImage2 from '../../static/img/contact/slider/Contact_2.jpg'
-import sliderImage3 from '../../static/img/contact/slider/Contact_3.jpg'
-import sliderImage4 from '../../static/img/contact/slider/Contact_4.jpg'
-import sliderImage5 from '../../static/img/contact/slider/Contact_5.jpg'
-import sliderImage6 from '../../static/img/contact/slider/Contact_6.jpg'
+import sliderImage1 from '../../static/img/contact/slider/Contact_1.jpg';
+import sliderImage2 from '../../static/img/contact/slider/Contact_2.jpg';
+import sliderImage3 from '../../static/img/contact/slider/Contact_3.jpg';
+import sliderImage4 from '../../static/img/contact/slider/Contact_4.jpg';
+import sliderImage5 from '../../static/img/contact/slider/Contact_5.jpg';
+import sliderImage6 from '../../static/img/contact/slider/Contact_6.jpg';
 
 export const ContactPageTemplate = ({
   title,
@@ -87,15 +88,7 @@ const ContactPage = ({ data }) => {
             </div>
           </div>
           <div>
-            <div style={{ display: "flex" }}>
-              <div>
-                <div>614 N. Front Street</div>
-                <div>Harrisburg, PA</div>
-                <div>17102</div>
-                <div>717. 233. 2881</div>
-            </div>
-              <div>Social</div>
-            </div>
+            <ContactInfo />
             <div>Map</div>
             <div>
               <p>If you are traveling down N. Front St. from I-81, our parking entrance is just past the Harvey Taylor Bridge on the right. If you are traveling on 2nd St. from I-83, go down past Forster St. and turn left onto either Boas St. or Cumberland St., then make a left onto N. Front St. and get in the third lane to the right immediately. You cannot make a left turn from Forster St. onto Front St.</p>

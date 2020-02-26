@@ -20,7 +20,10 @@ export const IndexPageTemplate = ({
 }) => (
     <div className="p-home">
       <HomePageAnimation />
-      <Hero title = { title } secondaryTitle = { secondaryTitle } subTitle = { subTitle } />
+      <Hero 
+        title          = { title } 
+        secondaryTitle = { secondaryTitle } 
+        subTitle       = { subTitle } />
     </div>
 )
 
@@ -28,12 +31,11 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout pageTitle = "home">
       <IndexPageTemplate
         title          = { frontmatter.title }
         secondaryTitle = { frontmatter.secondaryTitle }
-        subTitle       = { frontmatter.subTitle }
-      />
+        subTitle       = { frontmatter.subTitle }/>
       <CaseStudyList/>
       <ContactForm/>
       <EasterEgg />

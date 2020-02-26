@@ -81,6 +81,11 @@ h6 {
         @include font-size("base");
         @include line-height("smaller");
     }
+
+    &.-secondary {
+        color: get-color("primary", "fresh");
+        letter-spacing: .2em; 
+    }
 }
 
 p {
@@ -89,7 +94,7 @@ p {
 
     @include breakpoints("tablet") {
         @include font-size("small");
-        @include line-height("small");
+        @include line-height("medium-large");
     }
 }
 
