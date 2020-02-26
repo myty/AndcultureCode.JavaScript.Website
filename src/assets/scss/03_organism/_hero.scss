@@ -1,10 +1,9 @@
 :root {
     --backgroundColor: #232323;
-    --firstColor: #00D69C;
-    --secondColor: #C52AFC;
-    --thirdColor: #FF1F00;
-    --fourthColor: #FFD600;
-    --dropShadowColor: rgba(0, 0, 0, .7);
+    --firstColor: #FFABFF;
+    --secondColor: #3D5CC2;
+    --thirdColor: #76C1B9;
+    --fourthColor: #FCB43D;
 }
 
 .o-hero {
@@ -58,6 +57,16 @@
                 right: -24px;
                 top: -54px;
                 max-width: 800px;
+            }
+        }
+
+        &.-blinky {
+            display: none;
+
+            @include breakpoints("tablet") {
+                display: block;
+                left: 40%;
+                top: 80px;
             }
         }
 
@@ -179,11 +188,11 @@
     }
 
     @keyframes move {
-        0%   { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
-        25%  { transform: scale(0.8) translate(5vw, 10vh) rotate(55deg); stroke: var(--secondColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
-        50%  { transform: scale(0.6) translate(15vw, 5vh) rotate(180deg); stroke: var(--thirdColor); filter: drop-shadow( -16px -16px 16px var(--dropShadowColor)); }
-        75%  { transform: scale(0.8) translate(5vw, 10h) rotate(55deg); stroke: var(--fourthColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
-        100% { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
+        0%   { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); }
+        25%  { transform: scale(0.8) translate(5vw, 10vh) rotate(55deg); stroke: var(--secondColor); }
+        50%  { transform: scale(0.6) translate(15vw, 5vh) rotate(180deg); stroke: var(--thirdColor); }
+        75%  { transform: scale(0.8) translate(5vw, 10h) rotate(55deg); stroke: var(--fourthColor); }
+        100% { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); }
     }
 
 }
