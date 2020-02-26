@@ -21,6 +21,19 @@
         }
     }
 
+    &__title {
+        display: none;
+        position: absolute;
+        top: 56px;
+        left: calc(3% + 80px);
+        width: 300px;
+        z-index: 9;
+
+        @include breakpoints("tablet") {
+            display: block;
+        }
+    }
+
     &__navigation {
         float: right;
         margin-top: 14px;
