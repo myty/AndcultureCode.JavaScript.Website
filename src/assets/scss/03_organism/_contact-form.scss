@@ -103,6 +103,10 @@
     header {
         @include font-size("medium-large");
         color: get-color("primary", "white");
+
+        &.-light {
+            color: get-color("primary", "after-hours");
+        }
     }
 
     .o-rhythm__container {

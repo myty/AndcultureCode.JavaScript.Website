@@ -1,23 +1,23 @@
 .m-header {
-    @include clearfix(); 
+    @include clearfix();
     position: fixed;
     top: 0;
     width: 100%;
-    top: 40px; 
+    top: 40px;
     z-index: 8;
 
     @include breakpoints("tablet") {
-        top: 50px; 
+        top: 50px;
     }
 
     &__logo {
         display: block;
         float: left;
-        width: 80px; 
+        width: 80px;
         mix-blend-mode: difference;
 
         @include breakpoints("tablet") {
-            width: 100px; 
+            width: 100px;
         }
     }
 
@@ -25,10 +25,22 @@
         float: right;
         margin-top: 14px;
     }
-    
+
+    &__page-title {
+        @include font-size(24px);
+        color: get-color("neutral", "light-gray");
+        float: left;
+        letter-spacing: 5px;
+        font-weight: 500;
+        margin-left: 195px;
+        margin-top: 42px;
+        font-family: $font-secondary;
+        text-transform: uppercase;
+    }
+
     a {
-        @include font-size("base"); 
-        color: get-color("primary", "fresh"); 
+        @include font-size("base");
+        color: get-color("primary", "fresh");
         font-family: $font-primary;
 
         @include breakpoints("tablet") {

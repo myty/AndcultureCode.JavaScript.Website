@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({
   secondaryTitle,
   subTitle,
 }) => (
-    <div>
+    <div className="p-home">
       <HomePageAnimation />
       <div className = "o-hero">
         <img className = "o-hero__background -jigglydoo" src = { jigglyDoo } />

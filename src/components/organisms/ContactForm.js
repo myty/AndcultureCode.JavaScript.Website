@@ -106,6 +106,8 @@ const ContactForm = class extends React.Component {
             width: this.state.percentComplete + "%",
         };
 
+        let headerClass = this.props.lightTheme ? " -light " : "";
+
         return (
             <div className = { formContainerClass }>
                 <div className = "o-contact-form__progress" style = { progressBarWidth }></div>
@@ -118,7 +120,7 @@ const ContactForm = class extends React.Component {
                         this.state.isSubmitted === false &&
                         <div className = "o-rhythm__container">
                             <div>
-                                <header>what can we help you with today?</header>
+                                <header className = {headerClass}>what can we help you with today?</header>
                                 <fieldset className = "-space">
                                     <input
                                         onChange  = { this._onFormTypeChange }
