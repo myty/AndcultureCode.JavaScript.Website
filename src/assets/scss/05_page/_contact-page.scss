@@ -1,31 +1,19 @@
 .p-contact-page {
     .o-hero__top {
-        // @include span-col(12);
-
-        // @include breakpoints("tablet") {
-        //     @include span-col(6);
-        // }
         margin-bottom: 115px;
     }
 
     .o-hero__subtitles {
-        // @include span-col(12);
         font-family: $font-secondary;
         letter-spacing: 0px;
         padding-left: 0;
 
         margin-left: 675px;
-        // @include breakpoints("tablet") {
-        //     @include span-col(6);
-        // }
 
         h3 {
             line-height: 50px;
+            margin-bottom: 0;
         }
-    }
-
-    .o-contact-form__container {
-        margin-bottom: 600px;
     }
 
     .-slider {
@@ -44,6 +32,13 @@
 
         .slick-dots {
             text-align: right;
+            right: 16px;
+            bottom: -45px;
+
+            li.slick-active button:before {
+                border: get-color("primary", "white");
+                color: transparent;
+            }
         }
 
         .slick-list {
