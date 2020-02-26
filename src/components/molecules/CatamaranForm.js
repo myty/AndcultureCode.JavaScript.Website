@@ -61,6 +61,18 @@ const CatamaranForm = class extends React.Component {
         e.preventDefault();
     }
 
+    _validateFormData() {
+        if (this.state.activeQuestion === 1 && this.state.formData.name && this.state.formData.name !== "") {
+            return false;
+        }
+
+        if (this.state.activeQuestion === 2 && this.state.formData.email && this.state.formData.email !== "") {
+            return false;
+        }
+
+        return true;
+    }
+
     _caclulateProgress(direction) {
         let percentComplete = this.state.activeQuestion / this.state.totalQuestions * 100;
         if (this.state.activeQuestion === this.state.totalQuestions && direction === 1) {
@@ -87,13 +99,18 @@ const CatamaranForm = class extends React.Component {
     }
 
     render() {
+        let nextButtonClass = 'a-button';
         let formClass   = 'o-contact-form'; 
         let buttonClass = 'a-button';
         formClass += this.props.isActive ? ' -active' : '';
+
         if (this.state.activeQuestion === this.state.totalQuestions) {
             buttonClass += ' -active'
         }
 
+        if (this._validateFormData()) {
+            nextButtonClass += ' -disabled'
+        }
         return (
             <form className = { formClass } name = "contact-catamaran" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
@@ -145,7 +162,7 @@ const CatamaranForm = class extends React.Component {
                             this.state.activeQuestion !== this.state.totalQuestions &&
                             <a
                                 onClick   = { this._onNextClick }
-                                className = "a-button">
+                                className = { nextButtonClass }>
                                 Next
                             </a>
                         }

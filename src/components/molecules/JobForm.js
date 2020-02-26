@@ -56,8 +56,24 @@ const JobForm = class extends React.Component {
                 this._caclulateProgress(1)
             )
             .catch(error => alert(error));
-    
+
         e.preventDefault();
+    }
+
+    _validateFormData() {
+        if (this.state.activeQuestion === 1 && this.state.formData.name && this.state.formData.name !== "") {
+            return false;
+        }
+
+        if (this.state.activeQuestion === 2 && this.state.formData.email && this.state.formData.email !== "") {
+            return false;
+        }
+
+        if (this.state.activeQuestion === 3 && this.state.formData.phone && this.state.formData.phone !== "") {
+            return false;
+        }
+
+        return true;
     }
 
     _caclulateProgress(direction) {
@@ -86,11 +102,17 @@ const JobForm = class extends React.Component {
     }
 
     render() {
+        let nextButtonClass = 'a-button';
         let formClass   = 'o-contact-form'; 
         let buttonClass = 'a-button';
         formClass += this.props.isActive ? ' -active' : '';
+
         if (this.state.activeQuestion === this.state.totalQuestions) {
             buttonClass += ' -active'
+        }
+
+        if (this._validateFormData()) {
+            nextButtonClass += ' -disabled'
         }
 
         return (
@@ -152,7 +174,7 @@ const JobForm = class extends React.Component {
                             this.state.activeQuestion !== this.state.totalQuestions &&
                             <a
                                 onClick   = { this._onNextClick }
-                                className = "a-button">
+                                className = { nextButtonClass }>
                                 Next
                             </a>
                         }
