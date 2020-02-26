@@ -24,9 +24,9 @@
     &__title {
         display: none;
         position: absolute;
-        top: 56px;
-        left: calc(3% + 80px);
-        width: 300px;
+        top: 62px;
+        left: calc(3% + 100px);
+        width: 220px;
         z-index: 9;
 
         @include breakpoints("tablet") {
@@ -38,7 +38,7 @@
         float: right;
         margin-top: 14px;
     }
-    
+
     a {
         @include font-size("base"); 
         color: get-color("primary", "fresh"); 
