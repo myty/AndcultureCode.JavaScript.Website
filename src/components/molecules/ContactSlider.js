@@ -14,9 +14,9 @@ function PrevArrow(props) {
     const { className, style, onClick } = props;
     return (
         <div
-            className={className}
-            style={{ ...style, display: "block"}}
-            onClick={onClick}
+            className   = {className}
+            style       = {{ ...style, display: "block"}}
+            onClick     = {onClick}
         >
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 viewBox="0 0 34.51 27.08">
@@ -32,9 +32,9 @@ function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
         <div
-            className={className}
-            style={{ ...style, display: "block"}}
-            onClick={onClick}
+            className   = {className}
+            style       = {{ ...style, display: "block"}}
+            onClick     = {onClick}
         >
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 viewBox="0 0 34.51 27.08">
@@ -47,14 +47,14 @@ function NextArrow(props) {
 }
 
 var settings = {
-    dots: true,
-    draggable: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
+    dots:           true,
+    draggable:      true,
+    infinite:       true,
+    speed:          500,
+    slidesToShow:   1,
     slidesToScroll: 1,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+    prevArrow:      <PrevArrow />,
+    nextArrow:      <NextArrow />,
   };
 
 const ContactSlider = class extends React.Component {
@@ -66,7 +66,7 @@ const ContactSlider = class extends React.Component {
         return (
             <div className = "-slider__container">
                 <div className = "-slider">
-                    <div className="o-rhythm__container">
+                    <div className = "o-rhythm__container">
                         <Slider {...settings}>
                             <img src = { sliderImage1 } />
                             <img src = { sliderImage2 } />

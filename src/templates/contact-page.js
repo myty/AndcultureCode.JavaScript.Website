@@ -38,7 +38,7 @@ const ContactPage = ({ data }) => {
 
   return (
     <Layout pageTitle = "contact" hideNavigation = { true }>
-      <div className="p-contact-page">
+      <div className = "p-contact-page">
         <ContactPageTemplate
           title          = { frontmatter.title }
           secondaryTitle = { frontmatter.secondaryTitle }

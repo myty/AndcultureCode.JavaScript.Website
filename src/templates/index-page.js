@@ -18,11 +18,11 @@ export const IndexPageTemplate = ({
   secondaryTitle,
   subTitle,
 }) => (
-    <div className="p-home">
+    <div className = "p-home">
       <HomePageAnimation />
-      <Hero 
-        title          = { title } 
-        secondaryTitle = { secondaryTitle } 
+      <Hero
+        title          = { title }
+        secondaryTitle = { secondaryTitle }
         subTitle       = { subTitle } />
     </div>
 )
