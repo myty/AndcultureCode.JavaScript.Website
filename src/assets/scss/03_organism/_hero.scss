@@ -114,12 +114,22 @@
         }
 
         &.-circles-crosses {
-            bottom: 225px;
-            left: -100px;
+            display: none;
+            bottom: 0;
+            left: 260px;
+
+            @include breakpoints("tablet") {
+                display: block;
+            }
         }
 
         &.-blue-paint {
-            right: 375px;
+            display: none;
+            right: 506px;
+
+            @include breakpoints("tablet") {
+                display: block;
+            }
         }
     }
 
@@ -150,11 +160,11 @@
 
     h6 {
         @include font-size(14px);
-        color: get-color("neutral", "light-gray"); 
+        color: get-color("neutral", "light-gray");
         position: fixed;
         writing-mode: tb-rl;
         transform: rotate(-180deg);
-        top: 50%; 
+        top: 50%;
         left: 3%;
         display: none;
         word-spacing: 2em;

@@ -30,6 +30,16 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "careers"
+    label: "Careers"
+    folder: "src/pages/careers"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careers"}
+      - {label: "Position", name: "position", widget: "string"}
+      - {label: "Link", name: "position", widget: "string"}
+
+
   - name: "pages"
     label: "Pages"
     files:
@@ -41,12 +51,12 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Secondary, name: secondaryTitle, widget: string}
           - {label: Subtitle, name: subTitle, widget: string}
-  - file: "src/pages/contact.md"
+      - file: "src/pages/contact.md"
         label: "Contact Page"
         name: "contact"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
           - {label: Title, name: title, widget: string}
           - {label: Secondary, name: secondaryTitle, widget: string}
-          - {label: Subtitle, name: subTitle, widget: string} 
+          - {label: Subtitle, name: subTitle, widget: string}
 

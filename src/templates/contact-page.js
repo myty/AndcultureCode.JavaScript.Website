@@ -4,11 +4,10 @@ import Layout from '../components/Layout';
 import '../assets/scss/app.scss';
 import ContactForm from '../components/organisms/ContactForm';
 import ContactInfo from '../components/molecules/ContactInfo';
-import ConactSlider from '../components/molecules/ContactSlider';
-import Careers from '../components/molecules/Careers';
+import ContactSlider from '../components/molecules/ContactSlider';
+import CareersList from '../components/organisms/CareersList';
 import ContactHeroGraphic from '../../static/img/contact/contact_hero_graphic.png';
 import HeroBluePaint from '../../static/img/contact/blue_paint.png';
-import ContactSlider from '../components/molecules/ContactSlider';
 
 export const ContactPageTemplate = ({
   title,
@@ -22,8 +21,8 @@ export const ContactPageTemplate = ({
       <div className = "o-rhythm__row">
         <div className = "o-hero__top">
           <div className = "o-hero__titles">
+            <h2 className = "-before">{ secondaryTitle }</h2>
             <h1>{ title }</h1>
-            <h1 className = "-before">{ secondaryTitle }</h1>
           </div>
         </div>
         <div className = "o-hero__subtitles">
@@ -46,12 +45,9 @@ const ContactPage = ({ data }) => {
           subTitle       = { frontmatter.subTitle }
         />
         <ContactForm lightTheme = { true } />
-          <ContactSlider />
-          <div>
-            <ContactInfo />
-            <Careers />
-            <div>Careers</div>
-          </div>
+        <ContactSlider />
+        <ContactInfo />
+        <CareersList />
       </div>
     </Layout>
   )

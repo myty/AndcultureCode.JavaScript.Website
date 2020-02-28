@@ -28,7 +28,7 @@ const ContactInfo = class extends React.Component {
                             <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs></defs><title>social icons</title><path d="M17.7,3.39A7.44,7.44,0,0,1,15.61,4,3.6,3.6,0,0,0,17.2,2a7.27,7.27,0,0,1-2.3.88A3.62,3.62,0,0,0,8.63,5.32a3.68,3.68,0,0,0,.08.82A10.26,10.26,0,0,1,1.23,2.35,3.65,3.65,0,0,0,2.35,7.2,3.5,3.5,0,0,1,.71,6.75v0a3.66,3.66,0,0,0,2.9,3.57,3.58,3.58,0,0,1-.95.12A3.08,3.08,0,0,1,2,10.41a3.65,3.65,0,0,0,3.39,2.53,7.27,7.27,0,0,1-4.5,1.55A6.26,6.26,0,0,1,0,14.44a10.19,10.19,0,0,0,5.57,1.63A10.25,10.25,0,0,0,15.89,5.74c0-.16,0-.31,0-.47A7.39,7.39,0,0,0,17.7,3.39Z"/></svg>
                         </a>
                         <a href="">
-                            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs></defs><title>social icons</title><path d="M12.25.32H5.75A5.43,5.43,0,0,0,.32,5.75v6.5a5.43,5.43,0,0,0,5.43,5.43h6.5a5.43,5.43,0,0,0,5.43-5.43V5.75A5.43,5.43,0,0,0,12.25.32Zm3.8,11.93a3.8,3.8,0,0,1-3.8,3.8H5.75A3.8,3.8,0,0,1,2,12.25V5.75A3.8,3.8,0,0,1,5.75,2h6.5a3.8,3.8,0,0,1,3.8,3.8Z"/><path class="cls-1" d="M9,4.66A4.34,4.34,0,1,0,13.34,9,4.34,4.34,0,0,0,9,4.66Zm0,7.05A2.71,2.71,0,1,1,11.71,9,2.72,2.72,0,0,1,9,11.71Z"/><circle class="cls-1" cx="13.66" cy="4.34" r="0.58"/></svg>
+                            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs></defs><title>social icons</title><path d="M12.25.32H5.75A5.43,5.43,0,0,0,.32,5.75v6.5a5.43,5.43,0,0,0,5.43,5.43h6.5a5.43,5.43,0,0,0,5.43-5.43V5.75A5.43,5.43,0,0,0,12.25.32Zm3.8,11.93a3.8,3.8,0,0,1-3.8,3.8H5.75A3.8,3.8,0,0,1,2,12.25V5.75A3.8,3.8,0,0,1,5.75,2h6.5a3.8,3.8,0,0,1,3.8,3.8Z"/><path className="cls-1" d="M9,4.66A4.34,4.34,0,1,0,13.34,9,4.34,4.34,0,0,0,9,4.66Zm0,7.05A2.71,2.71,0,1,1,11.71,9,2.72,2.72,0,0,1,9,11.71Z"/><circle className="cls-1" cx="13.66" cy="4.34" r="0.58"/></svg>
                         </a>
                         <a href="">
                             <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs></defs><title>social icons</title><path d="M9.05.59A8.51,8.51,0,0,0,7.72,17.51v-6H5.56V9.1H7.72V7.23a3,3,0,0,1,3.22-3.31,13.48,13.48,0,0,1,1.9.16v2.1H11.77a1.23,1.23,0,0,0-1.39,1.33V9.1h2.36l-.38,2.46h-2v6A8.51,8.51,0,0,0,9.05.59Z"/></svg>
@@ -42,20 +42,22 @@ const ContactInfo = class extends React.Component {
                     </div>
                 </div>
             </div>
-            <div className = "m-contact-info__map">
-                MAAAAAAAAAP!
+            <div className = "o-rhythm__container -fluid">
+                <div className = "m-contact-info__map">
+                    <iframe src="https://snazzymaps.com/embed/222814" width="87%" height="537px" frameBorder="0"></iframe>
+                </div>
             </div>
             <div className = "o-rhythm__container">
                 <div className = "m-contact-info__directions">
                     <h6 className = "-secondary">Directions</h6>
                     <p>
-                        If you are traveling down N. Front St. from I-81, our parking entrance is just past the Harvey Taylor Bridge on the right. If you are traveling on 2nd St. 
-                        from I-83, go down past Forster St. and turn left onto either Boas St. or Cumberland St., then make a left onto N. Front St. and get in the third lane 
+                        If you are traveling down N. Front St. from I-81, our parking entrance is just past the Harvey Taylor Bridge on the right. If you are traveling on 2nd St.
+                        from I-83, go down past Forster St. and turn left onto either Boas St. or Cumberland St., then make a left onto N. Front St. and get in the third lane
                         to the right immediately. You cannot make a left turn from Forster St. onto Front St.
                     </p>
                     <p>
-                        Once you’ve turned into our parking lot, stay to the left and enter the top parking deck. There, you will find several “Visitor” parking spaces. Enter through 
-                        the doors on the top parking deck and go straight ahead. You’ll turn a slight left around the railing and then turn right to enter through the glass doors 
+                        Once you’ve turned into our parking lot, stay to the left and enter the top parking deck. There, you will find several “Visitor” parking spaces. Enter through
+                        the doors on the top parking deck and go straight ahead. You’ll turn a slight left around the railing and then turn right to enter through the glass doors
                         leading to our office.
                     </p>
                 </div>
