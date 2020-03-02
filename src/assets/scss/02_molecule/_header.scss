@@ -1,23 +1,42 @@
 .m-header {
-    @include clearfix(); 
+    @include clearfix();
     position: fixed;
     top: 0;
     width: 100%;
-    top: 40px; 
+    top: 0;
+    padding: 15px 0;
+    background: get-color("primary", "white");
     z-index: 8;
 
     @include breakpoints("tablet") {
-        top: 50px; 
+        top: 50px;
+        padding: 0;
+        background: transparent;
     }
 
     &__logo {
         display: block;
         float: left;
         width: 50px; 
-        mix-blend-mode: difference;
 
         @include breakpoints("tablet") {
             width: 60px; 
+        }
+    }
+
+    &__title {
+        position: fixed;
+        left: calc(3% + 70px);
+        top: 30px;
+        width: 140px;
+        z-index: 9;
+
+        @include breakpoints("tablet") {
+            position: absolute;
+            display: block;
+            left: calc(3% + 100px);
+            width: 220px;
+            top: 62px;
         }
     }
 
@@ -25,11 +44,72 @@
         float: right;
         margin-top: 14px;
     }
-    
+
+    &__page-title {
+        @include font-size(24px);
+        color: get-color("neutral", "light-gray");
+        float: left;
+        letter-spacing: 5px;
+        font-weight: 500;
+        margin-top: 6px;
+        font-family: $font-secondary;
+        text-transform: uppercase;
+    }
+
     a {
-        @include font-size("base"); 
-        color: get-color("primary", "fresh"); 
+        @include font-size("base");
+        color: get-color("primary", "fresh");
         font-family: $font-primary;
+        position: relative;
+        transition: all .5s ease;
+        
+        &:hover {
+            color: #19a87c;
+
+            span:before,
+            span:after {
+                opacity: 1;
+            }
+            span:before {
+                top: -5px;
+                transform: rotate(45deg);
+            }
+            span:after {
+                bottom: -5px;
+                transform: rotate(-45deg);
+            }
+        }
+
+        span,
+        span:before,
+        span:after {
+            height: 2px;
+            background: #19a87c;
+            display: block;
+            position: absolute;
+        }
+
+        span {
+            top: 14px;
+            width: 30px;
+            left: -40px;
+        }
+
+        span:before,
+        span:after {
+            content:'';
+            opacity: 0;
+            right: -2px;
+            width: 15px;
+            transition: all .5s ease;
+        }
+
+        span:before {
+            top: 0;
+        }
+        span:after {
+            bottom: 0;
+        }
 
         @include breakpoints("tablet") {
             @include font-size(24px);

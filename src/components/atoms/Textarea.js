@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 
 const Textarea = class extends React.Component {
 
@@ -7,8 +7,8 @@ const Textarea = class extends React.Component {
 
         this.state = {
             inputValue: '',
-            fieldActive: false, 
-            placeholderValue: this.props.name, 
+            fieldActive: false,
+            placeholderValue: this.props.name,
         }
 
         this._updateInputValue = this._updateInputValue.bind(this);
@@ -18,7 +18,7 @@ const Textarea = class extends React.Component {
 
     _activateField() {
         this.setState({
-            fieldActive: true, 
+            fieldActive: true,
             placeholderValue: '',
         })
     }
@@ -26,7 +26,7 @@ const Textarea = class extends React.Component {
     _disableField(e) {
         if (e.target.value === "") {
             this.setState({
-                fieldActive: false, 
+                fieldActive: false,
                 placeholderValue: this.props.name,
             })
         }
@@ -39,19 +39,22 @@ const Textarea = class extends React.Component {
     render() {
         const labelClassName = this.state.fieldActive ? "a-label -field-active" : "a-label";
 
+        let textAreaClass = "a-textarea";
+        textAreaClass += this.props.lightTheme ? ' -light ' : '';
+
         return (
             <fieldset className = { this.props.className }>
-                <label 
+                <label
                     className = { labelClassName }
                     htmlFor   = { this.props.name }>
                     { this.props.name }
                 </label>
-                <textarea 
+                <textarea
                     value       = { this.props.value }
                     onFocus     = { this._activateField }
                     onBlur      = { this._disableField }
                     onChange    = { this._updateInputValue }
-                    className   = "a-textarea" 
+                    className   = { textAreaClass }
                     name        = { this.props.name }
                     placeholder = { this.state.placeholderValue }
                     id          = { this.props.name } />

@@ -53,12 +53,24 @@ const InfoForm = class extends React.Component {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact-info", ...this.state.formData })
         })
-            .then(() => 
+            .then(() =>
                 this._caclulateProgress(1)
             )
             .catch(error => alert(error));
 
         e.preventDefault();
+    }
+
+    _validateFormData() {
+        if (this.state.activeQuestion === 1 && this.state.formData.name && this.state.formData.name !== "") {
+            return false;
+        }
+
+        if (this.state.activeQuestion === 2 && this.state.formData.email && this.state.formData.email !== "") {
+            return false;
+        }
+
+        return true;
     }
 
     _caclulateProgress(direction) {
@@ -87,12 +99,24 @@ const InfoForm = class extends React.Component {
     }
 
     render() {
-        let formClass   = 'o-contact-form'; 
-        let buttonClass = 'a-button';
+        let formClass   = 'o-contact-form';
         formClass += this.props.isActive ? ' -active' : '';
+
+        let buttonClass = 'a-button';
+        buttonClass += this.props.lightTheme ? ' -light ' : '';
+
+        let nextButtonClass = 'a-button';
+        formClass += this.props.isActive ? ' -active' : '';
+
         if (this.state.activeQuestion === this.state.totalQuestions) {
             buttonClass += ' -active'
         }
+
+        if (this._validateFormData()) {
+            nextButtonClass += ' -disabled'
+        }
+
+        nextButtonClass += this.props.lightTheme ? ' -light ' : '';
 
         return (
             <form className = { formClass } name="contact-info" method="POST" data-netlify="true">
@@ -101,38 +125,45 @@ const InfoForm = class extends React.Component {
                     <input type = "hidden" data-netlify="true" />
                     <input type="hidden" name="form-name" value="contact-info" />
                     <Input 
+                        type               = "text"
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
                         name               = "name" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.name } />
                     <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                        type               = "email"
                         name               = "email" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.email } />
                     <Textarea 
                         className          = { this.state.activeQuestion === 3 ? '-active': '' }
-                        name               = "message" 
-                        inputValueCallback = { this._setInputValue } 
-                        value              = { this.state.formData.message } />
+                        name               = "message"
+                        inputValueCallback = { this._setInputValue }
+                        value              = { this.state.formData.message }
+                        lightTheme         = { this.props.lightTheme } />
                     <div className = "o-contact-form__buttons">
                         <a
                             onClick   = { this._onBackClick }
-                            className = "a-button">
+                            className = { buttonClass }>
                             Go Back
                         </a>
                         {  // if
                             this.state.activeQuestion !== this.state.totalQuestions &&
                             <a
                                 onClick   = { this._onNextClick }
-                                className = "a-button">
+                                className = { nextButtonClass }>
                                 Next
                             </a>
                         }
                         <button
                             type      = "submit"
                             onClick   = { this._onSubmitClick }
-                            className = {  buttonClass }>
+                            className = { buttonClass }>
                             Submit
                         </button>
                     </div>

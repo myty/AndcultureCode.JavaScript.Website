@@ -5,7 +5,7 @@ import Footer from './molecules/Footer'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, pageTitle, hideNavigation }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -47,10 +47,8 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Header />
-      <div className = "p-home">
-        { children }
-      </div>
+      <Header pageTitle = { pageTitle } hideNavigation = { hideNavigation } />
+      { children }
       <Footer/>
     </div>
   )

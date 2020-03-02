@@ -1,3 +1,11 @@
+:root {
+    --backgroundColor: #232323;
+    --firstColor: #FFABFF;
+    --secondColor: #3D5CC2;
+    --thirdColor: #76C1B9;
+    --fourthColor: #FCB43D;
+}
+
 .o-hero {
     position: relative;
     background: -moz-linear-gradient(top, rgba(223,235,238,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
@@ -5,32 +13,32 @@
     background: linear-gradient(to bottom, rgba(223,235,238,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dfebee', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 
-
     .o-rhythm__container {
         position: relative;
     }
 
     &__top {
-        margin-bottom: 200px;
-        padding-top: 100px;
+        margin-bottom: 84px;
+        padding-top: 240px;
 
         @include breakpoints("tablet") {
+            margin-bottom: 200px;
             padding-top: 218px;
         }
     }
 
     &__titles {
-        margin-top: 60px;
-        max-width: 800px; 
+        max-width: 800px;
         width: 100%;
 
         @include breakpoints("tablet") {
+            margin-top: 60px;
             padding-left: 160px;
         }
     }
 
     &__subtitles {
-        max-width: 800px; 
+        max-width: 800px;
         width: 100%;
 
         @include breakpoints("tablet") {
@@ -40,26 +48,46 @@
 
     &__background {
         position: absolute;
-        
+
         &.-jigglydoo {
-            right: -120px;
+            right: auto;
+            left: 0;
             top: 60px;
             max-width: 75%;
 
             @include breakpoints("tablet") {
                 right: -24px;
+                left: auto;
                 top: -54px;
                 max-width: 800px;
             }
         }
 
-        &.-terrazo {
+        &.-blinky {
+            left: 56%;
+            top: 120px;
+            width: 40px; 
             display: none;
-            right: 0;
-            top: 100px;
 
             @include breakpoints("tablet") {
                 display: block;
+                left: 40%;
+                top: 80px;
+                width: auto;
+            }
+        }
+
+        &.-terrazo {
+            display: none;
+            right: -130px;
+            top: 100px;
+            width: 260px; 
+
+            @include breakpoints("tablet") {
+                display: block;
+                right: 0;
+                top: 100px;
+                width: auto;
             }
         }
 
@@ -74,25 +102,49 @@
         }
 
         &.-greenblob {
-            display: none;
-            right: 180px;
-            top: 460px;
+            display: block;
+            right: 70px;
+            top: 360px;
             z-index: 1;
+            width: 92px; 
+
+            @include breakpoints("tablet") {
+                width: auto;
+                right: 180px;
+                top: 460px;
+            }
+        }
+
+        &.-dots {
+            top: 110px;
+            right: auto;
+            left: 70px;
+            width: 112px;
+
+            @include breakpoints("tablet") {
+                top: -40px;
+                left: auto;
+                right: 24%;
+                width: auto;
+            }
+        }
+
+        &.-circles-crosses {
+            display: none;
+            bottom: 0;
+            left: 260px;
 
             @include breakpoints("tablet") {
                 display: block;
             }
         }
 
-        &.-dots {
-            top: 50%;
-            right: -114px;
-            width: 200px;
+        &.-blue-paint {
+            display: none;
+            right: 506px;
 
             @include breakpoints("tablet") {
-                top: -40px;
-                right: 24%;
-                width: auto;
+                display: block;
             }
         }
     }
@@ -105,7 +157,7 @@
                 content: '';
                 background: url('../../../static/img/asterisk.png') no-repeat center center / contain;
                 height: 24px;
-                width: 24px; 
+                width: 24px;
                 display: inline-block;
                 vertical-align: top;
                 margin-left: 6px;
@@ -116,7 +168,7 @@
 
     h3 {
         margin: 0 0 80px 0;
-        
+
         @include breakpoints("tablet") {
             margin: 0 0 280px 0;
         }
@@ -124,11 +176,11 @@
 
     h6 {
         @include font-size(14px);
-        color: get-color("neutral", "light-gray"); 
+        color: get-color("neutral", "light-gray");
         position: fixed;
         writing-mode: tb-rl;
         transform: rotate(-180deg);
-        top: 50%; 
+        top: 50%;
         left: 3%;
         display: none;
         word-spacing: 2em;
@@ -141,12 +193,15 @@
 
     p {
         position: relative;
-        float: right;
-        display: none;
         max-width: 144px;
+        margin-left: 50px; 
+        margin-top: 40px;
 
         @include breakpoints("tablet") {
             display: block;
+            float: right;
+            margin-left: 50px; 
+            margin-top: 40px;
         }
 
         &.-before {
@@ -164,26 +219,18 @@
             }
         }
     }
-}
 
-:root {
-    --backgroundColor: #232323;
-    --firstColor: #00D69C;
-    --secondColor: #C52AFC;
-    --thirdColor: #FF1F00;
-    --fourthColor: #FFD600;
-    --dropShadowColor: rgba(0, 0, 0, .7);
-}
+    svg {
+        transform-origin: 50% 50%;
+        animation: move 24s ease-in-out infinite;
+    }
 
-svg {
-    transform-origin: 50% 50%;
-    animation: move 24s ease-in-out infinite;
-}
+    @keyframes move {
+        0%   { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); }
+        25%  { transform: scale(0.8) translate(5vw, 10vh) rotate(55deg); stroke: var(--secondColor); }
+        50%  { transform: scale(0.6) translate(15vw, 5vh) rotate(180deg); stroke: var(--thirdColor); }
+        75%  { transform: scale(0.8) translate(5vw, 10h) rotate(55deg); stroke: var(--fourthColor); }
+        100% { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); }
+    }
 
-@keyframes move {
-    0%   { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
-    25%  { transform: scale(0.8) translate(5vw, 10vh) rotate(55deg); stroke: var(--secondColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
-    50%  { transform: scale(0.6) translate(15vw, 5vh) rotate(180deg); stroke: var(--thirdColor); filter: drop-shadow( -16px -16px 16px var(--dropShadowColor)); }
-    75%  { transform: scale(0.8) translate(5vw, 10h) rotate(55deg); stroke: var(--fourthColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
-    100% { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
 }

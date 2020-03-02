@@ -1,6 +1,6 @@
 import React from 'react';
 
-import jigglyDoo from './../../../static/img/jiggly-01.svg';
+import blinky from './../../../static/img/eye-15s.gif';
 import greenBlob from './../../../static/img/greenblob.png';
 import dots from './../../../static/img/center_lane_dots.png';
 import terrazo from './../../../static/img/terrazo.png';
@@ -44,6 +44,7 @@ const Hero = class extends React.Component {
             </path>
           </svg>
         </div>
+        <img className = "o-hero__background -blinky" src = { blinky } />
         <img className = "o-hero__background -dots" src = { dots } />
         <img className = "o-hero__background -greenblob" src = { greenBlob } />
         <img className = "o-hero__background -terrazo" src = { terrazo } />

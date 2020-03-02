@@ -29,6 +29,10 @@
         padding: 0 0 80px 0;
         background: get-color("primary", "after-hours");
 
+        &.-light {
+            background: get-color("primary", "white");
+        }
+
         h6 {
             color: get-color("primary", "fresh");
             margin: 118px 0 80px 0;
@@ -99,6 +103,10 @@
     header {
         @include font-size("medium-large");
         color: get-color("primary", "white");
+
+        &.-light {
+            color: get-color("primary", "after-hours");
+        }
     }
 
     .o-rhythm__container {

@@ -10,10 +10,11 @@ function encode(data) {
 
 const ProjectForm = class extends React.Component {
     constructor(props) {
-        super(props)
+        super(props); 
+
         this.state = {
             activeQuestion:  1,
-            totalQuestions:  7,
+            totalQuestions:  6,
             formData:        {},
         }
 
@@ -60,6 +61,22 @@ const ProjectForm = class extends React.Component {
         e.preventDefault();
     }
 
+    _validateFormData() {
+        if (this.state.activeQuestion === 1 && this.state.formData.name && this.state.formData.name !== "") {
+            return false;
+        }
+
+        if (this.state.activeQuestion === 2 && this.state.formData.email && this.state.formData.email !== "") {
+            return false;
+        }
+
+        if (this.state.activeQuestion === 3 && this.state.formData.phone && this.state.formData.phone !== "") {
+            return false;
+        }
+        
+        return true;
+    }
+
     _caclulateProgress(direction) {
         let percentComplete = this.state.activeQuestion / this.state.totalQuestions * 100;
         if (this.state.activeQuestion === this.state.totalQuestions && direction === 1) {
@@ -86,68 +103,93 @@ const ProjectForm = class extends React.Component {
     }
 
     render() {
-        let formClass   = 'o-contact-form'; 
-        let buttonClass = 'a-button';
+        let formClass   = 'o-contact-form';
         formClass += this.props.isActive ? ' -active' : '';
+
+        let buttonClass = 'a-button';
+        buttonClass += this.props.lightTheme ? ' -light ' : '';
+
+        let nextButtonClass = 'a-button';
+        formClass += this.props.isActive ? ' -active' : '';
+
         if (this.state.activeQuestion === this.state.totalQuestions) {
             buttonClass += ' -active'
         }
 
+        if (this._validateFormData()) {
+            nextButtonClass += ' -disabled'
+        }
+
+        nextButtonClass += this.props.lightTheme ? ' -light ' : '';
+
         return (
-            <form className = { formClass } data-netlify-recaptcha = "true" name = "contact-project" method = "POST" data-netlify = "true">
+            <form className = { formClass }  name="contact-project" method="POST" data-netlify="true">
                 <div className = "o-rhythm__container">
                     <header>start a project together</header>
+                    <input type = "hidden" data-netlify="true" />
+                    <input type="hidden" name="form-name" value="contact-project" />
                     <Input 
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                        type               = "text"
                         name               = "name" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.name } />
                     <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                        type               = "email"
                         name               = "email" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.email } />
                     <Input 
                         className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                        type               = "number"
                         name               = "phone" 
                         inputValueCallback = { this._setInputValue } 
+                        isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.phone } />
                     <Input 
                         className          = { this.state.activeQuestion === 4 ? '-active': '' }
+                        type               = "text"
                         name               = "industry" 
                         inputValueCallback = { this._setInputValue } 
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.industry } />
                     <Input 
                         className          = { this.state.activeQuestion === 5 ? '-active': '' }
+                        type               = "text"
                         name               = "job_title" 
                         inputValueCallback = { this._setInputValue } 
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.job_title } />
                     <Textarea 
                         className          = { this.state.activeQuestion === 6 ? '-active': '' }
                         name               = "message" 
                         inputValueCallback = { this._setInputValue } 
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.message } />
-                    <fieldset className = { this.state.activeQuestion === 7 ? '-active': '' }>
-                        <div data-netlify-recaptcha="true"></div>
-                    </fieldset>
                     <div className = "o-contact-form__buttons">
                         <a
                             onClick   = { this._onBackClick }
-                            className = "a-button">
+                            className = { buttonClass }>
                             Go Back
                         </a>
                         {  // if
                             this.state.activeQuestion !== this.state.totalQuestions &&
                             <a
                                 onClick   = { this._onNextClick }
-                                className = "a-button">
+                                className = { nextButtonClass }>
                                 Next
                             </a>
                         }
                         <button
                             type      = "submit"
                             onClick   = { this._onSubmitClick }
-                            className = {  buttonClass }>
+                            className = { buttonClass }>
                             Submit
                         </button>
                     </div>
