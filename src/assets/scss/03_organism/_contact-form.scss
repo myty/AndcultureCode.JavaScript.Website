@@ -21,6 +21,14 @@
         &.-active {
             display: block;
         }
+
+        label {
+            @include font-size("small");
+
+            @include breakpoints("tablet") {
+                @include font-size(24px);
+            }
+        }
     }
 
     &__container {
@@ -35,7 +43,9 @@
 
         h6 {
             color: get-color("primary", "fresh");
-            margin: 79px 0 22px;
+            margin: 64px 0 8px;
+            letter-spacing: 2px;
+            font-weight: 600;
 
             @include breakpoints("tablet") {
                 margin: 118px 0 80px;
@@ -105,8 +115,12 @@
     }
 
     header {
-        @include font-size("medium-large");
+        @include font-size(30px);
         color: get-color("primary", "white");
+
+        @include breakpoints("tablet") {
+            @include font-size("medium-large");
+        }
 
         &.-light {
             color: get-color("primary", "after-hours");
