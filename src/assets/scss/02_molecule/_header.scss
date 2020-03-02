@@ -3,33 +3,40 @@
     position: fixed;
     top: 0;
     width: 100%;
-    top: 40px;
+    top: 0;
+    padding: 15px 0;
+    background: get-color("primary", "white");
     z-index: 8;
 
     @include breakpoints("tablet") {
         top: 50px;
+        padding: 0;
+        background: transparent;
     }
 
     &__logo {
         display: block;
         float: left;
-        width: 50px; 
+        width: 50px;
 
         @include breakpoints("tablet") {
-            width: 60px; 
+            width: 60px;
         }
     }
 
     &__title {
-        display: none;
-        position: absolute;
-        top: 62px;
-        left: calc(3% + 100px);
-        width: 220px;
+        position: fixed;
+        left: calc(3% + 70px);
+        top: 30px;
+        width: 140px;
         z-index: 9;
 
         @include breakpoints("tablet") {
+            position: absolute;
             display: block;
+            left: calc(3% + 100px);
+            width: 220px;
+            top: 62px;
         }
     }
 
@@ -55,7 +62,7 @@
         font-family: $font-primary;
         position: relative;
         transition: all .5s ease;
-        
+
         &:hover {
             color: #19a87c;
 

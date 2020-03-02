@@ -18,10 +18,11 @@
     }
 
     &__top {
-        margin-bottom: 200px;
-        padding-top: 100px;
+        margin-bottom: 84px;
+        padding-top: 240px;
 
         @include breakpoints("tablet") {
+            margin-bottom: 200px;
             padding-top: 218px;
         }
     }
@@ -32,6 +33,7 @@
         width: 100%;
 
         @include breakpoints("tablet") {
+            margin-top: 60px;
             padding-left: 160px;
         }
     }
@@ -49,34 +51,44 @@
         position: absolute;
 
         &.-jigglydoo {
-            right: -120px;
+            right: auto;
+            left: 0;
             top: 60px;
             max-width: 75%;
 
             @include breakpoints("tablet") {
                 right: -24px;
+                left: auto;
                 top: -54px;
                 max-width: 800px;
             }
         }
 
         &.-blinky {
+            left: 56%;
+            top: 120px;
+            width: 40px;
             display: none;
 
             @include breakpoints("tablet") {
                 display: block;
                 left: 40%;
                 top: 80px;
+                width: auto;
             }
         }
 
         &.-terrazo {
             display: none;
-            right: 0;
+            right: -130px;
             top: 100px;
+            width: 260px;
 
             @include breakpoints("tablet") {
                 display: block;
+                right: 0;
+                top: 100px;
+                width: auto;
             }
         }
 
@@ -91,23 +103,28 @@
         }
 
         &.-greenblob {
-            display: none;
-            right: 180px;
-            top: 460px;
+            display: block;
+            right: 70px;
+            top: 360px;
             z-index: 1;
+            width: 92px;
 
             @include breakpoints("tablet") {
-                display: block;
+                width: auto;
+                right: 180px;
+                top: 460px;
             }
         }
 
         &.-dots {
-            top: 50%;
-            right: -114px;
-            width: 200px;
+            top: 110px;
+            right: auto;
+            left: 70px;
+            width: 112px;
 
             @include breakpoints("tablet") {
                 top: -40px;
+                left: auto;
                 right: 24%;
                 width: auto;
             }
@@ -177,12 +194,15 @@
 
     p {
         position: relative;
-        float: right;
-        display: none;
         max-width: 144px;
+        margin-left: 50px;
+        margin-top: 40px;
 
         @include breakpoints("tablet") {
             display: block;
+            float: right;
+            margin-left: 50px;
+            margin-top: 40px;
         }
 
         &.-before {

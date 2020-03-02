@@ -35,7 +35,6 @@ export const ContactPageTemplate = ({
 
 const ContactPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  console.log(frontmatter);
 
   return (
     <Layout pageTitle = "contact" hideNavigation = { true }>
