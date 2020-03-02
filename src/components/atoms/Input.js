@@ -50,12 +50,14 @@ const Input = class extends React.Component {
     }
 
     render() {
-        let cssClassName = 'a-label'; 
+        let cssClassName = 'a-label';
 
         if (this.state.fieldActive) {
             cssClassName += ' -field-active';
         }
 
+        let inputClassName = 'a-input';
+        inputClassName += this.props.lightTheme ? ' -light ' : '';
         let inputProps = {};
         
         if (this.props.isRequired) {
@@ -64,7 +66,7 @@ const Input = class extends React.Component {
 
         return (
             <fieldset className = { this.props.className }>
-                <label 
+                <label
                     className = { cssClassName }
                     htmlFor   = { this.props.name }>
                     { this.props.name }
@@ -75,7 +77,7 @@ const Input = class extends React.Component {
                     onFocus     = { this._activateField }
                     onBlur      = { this._disableField }
                     onChange    = { this._updateInputValue }
-                    className   = "a-input" 
+                    className   = { inputClassName }
                     type        = { this.props.type }
                     name        = { this.props.name }
                     placeholder = { this.state.placeholderValue }

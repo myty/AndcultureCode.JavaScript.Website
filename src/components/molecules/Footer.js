@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from '../../../static/img/ac_footer_wordmark.svg'; 
-import dribble from '../../../static/img/dribble.svg'; 
-import twitter from '../../../static/img/twitter.svg'; 
-import instagram from '../../../static/img/instagram.svg'; 
-import linkedin from '../../../static/img/linkedin.svg'; 
-import facebook from '../../../static/img/facebook.svg'; 
-import github from '../../../static/img/github.svg'; 
+import logo from '../../../static/img/ac_footer_wordmark.svg';
+import dribble from '../../../static/img/dribble.svg';
+import twitter from '../../../static/img/twitter.svg';
+import instagram from '../../../static/img/instagram.svg';
+import linkedin from '../../../static/img/linkedin.svg';
+import facebook from '../../../static/img/facebook.svg';
+import github from '../../../static/img/github.svg';
 
 const Footer = class extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ const Footer = class extends React.Component {
                   <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs></defs><title>social icons</title><path d="M17.7,3.39A7.44,7.44,0,0,1,15.61,4,3.6,3.6,0,0,0,17.2,2a7.27,7.27,0,0,1-2.3.88A3.62,3.62,0,0,0,8.63,5.32a3.68,3.68,0,0,0,.08.82A10.26,10.26,0,0,1,1.23,2.35,3.65,3.65,0,0,0,2.35,7.2,3.5,3.5,0,0,1,.71,6.75v0a3.66,3.66,0,0,0,2.9,3.57,3.58,3.58,0,0,1-.95.12A3.08,3.08,0,0,1,2,10.41a3.65,3.65,0,0,0,3.39,2.53,7.27,7.27,0,0,1-4.5,1.55A6.26,6.26,0,0,1,0,14.44a10.19,10.19,0,0,0,5.57,1.63A10.25,10.25,0,0,0,15.89,5.74c0-.16,0-.31,0-.47A7.39,7.39,0,0,0,17.7,3.39Z"/></svg>
                 </a>
                 <a href="">
-                  <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs></defs><title>social icons</title><path d="M12.25.32H5.75A5.43,5.43,0,0,0,.32,5.75v6.5a5.43,5.43,0,0,0,5.43,5.43h6.5a5.43,5.43,0,0,0,5.43-5.43V5.75A5.43,5.43,0,0,0,12.25.32Zm3.8,11.93a3.8,3.8,0,0,1-3.8,3.8H5.75A3.8,3.8,0,0,1,2,12.25V5.75A3.8,3.8,0,0,1,5.75,2h6.5a3.8,3.8,0,0,1,3.8,3.8Z"/><path class="cls-1" d="M9,4.66A4.34,4.34,0,1,0,13.34,9,4.34,4.34,0,0,0,9,4.66Zm0,7.05A2.71,2.71,0,1,1,11.71,9,2.72,2.72,0,0,1,9,11.71Z"/><circle class="cls-1" cx="13.66" cy="4.34" r="0.58"/></svg>
+                  <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs></defs><title>social icons</title><path d="M12.25.32H5.75A5.43,5.43,0,0,0,.32,5.75v6.5a5.43,5.43,0,0,0,5.43,5.43h6.5a5.43,5.43,0,0,0,5.43-5.43V5.75A5.43,5.43,0,0,0,12.25.32Zm3.8,11.93a3.8,3.8,0,0,1-3.8,3.8H5.75A3.8,3.8,0,0,1,2,12.25V5.75A3.8,3.8,0,0,1,5.75,2h6.5a3.8,3.8,0,0,1,3.8,3.8Z"/><path className="cls-1" d="M9,4.66A4.34,4.34,0,1,0,13.34,9,4.34,4.34,0,0,0,9,4.66Zm0,7.05A2.71,2.71,0,1,1,11.71,9,2.72,2.72,0,0,1,9,11.71Z"/><circle className="cls-1" cx="13.66" cy="4.34" r="0.58"/></svg>
                 </a>
                 <a href="">
                   <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs></defs><title>social icons</title><path d="M9.05.59A8.51,8.51,0,0,0,7.72,17.51v-6H5.56V9.1H7.72V7.23a3,3,0,0,1,3.22-3.31,13.48,13.48,0,0,1,1.9.16v2.1H11.77a1.23,1.23,0,0,0-1.39,1.33V9.1h2.36l-.38,2.46h-2v6A8.51,8.51,0,0,0,9.05.59Z"/></svg>

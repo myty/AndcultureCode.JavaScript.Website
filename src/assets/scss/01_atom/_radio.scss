@@ -33,6 +33,10 @@
         }
     }
 
+    &:checked.-light + label {
+        color: get-color("primary", "after-hours");
+    }
+
     & + label {
         @include font-size(24px);
         position: relative;
@@ -74,6 +78,10 @@
                 transform: rotate(45deg);
             }
         }
+    }
+
+    &.-light + label {
+        background: get-color("primary", "white");
     }
 }
 

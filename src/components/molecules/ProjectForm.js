@@ -103,9 +103,13 @@ const ProjectForm = class extends React.Component {
     }
 
     render() {
-        let nextButtonClass = 'a-button';
-        let formClass   = 'o-contact-form'; 
+        let formClass   = 'o-contact-form';
+        formClass += this.props.isActive ? ' -active' : '';
+
         let buttonClass = 'a-button';
+        buttonClass += this.props.lightTheme ? ' -light ' : '';
+
+        let nextButtonClass = 'a-button';
         formClass += this.props.isActive ? ' -active' : '';
 
         if (this.state.activeQuestion === this.state.totalQuestions) {
@@ -115,6 +119,8 @@ const ProjectForm = class extends React.Component {
         if (this._validateFormData()) {
             nextButtonClass += ' -disabled'
         }
+
+        nextButtonClass += this.props.lightTheme ? ' -light ' : '';
 
         return (
             <form className = { formClass }  name="contact-project" method="POST" data-netlify="true">
@@ -128,6 +134,7 @@ const ProjectForm = class extends React.Component {
                         name               = "name" 
                         inputValueCallback = { this._setInputValue } 
                         isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.name } />
                     <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
@@ -135,6 +142,7 @@ const ProjectForm = class extends React.Component {
                         name               = "email" 
                         inputValueCallback = { this._setInputValue } 
                         isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.email } />
                     <Input 
                         className          = { this.state.activeQuestion === 3 ? '-active': '' }
@@ -142,28 +150,32 @@ const ProjectForm = class extends React.Component {
                         name               = "phone" 
                         inputValueCallback = { this._setInputValue } 
                         isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.phone } />
                     <Input 
                         className          = { this.state.activeQuestion === 4 ? '-active': '' }
                         type               = "text"
                         name               = "industry" 
                         inputValueCallback = { this._setInputValue } 
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.industry } />
                     <Input 
                         className          = { this.state.activeQuestion === 5 ? '-active': '' }
                         type               = "text"
                         name               = "job_title" 
                         inputValueCallback = { this._setInputValue } 
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.job_title } />
                     <Textarea 
                         className          = { this.state.activeQuestion === 6 ? '-active': '' }
                         name               = "message" 
                         inputValueCallback = { this._setInputValue } 
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.message } />
                     <div className = "o-contact-form__buttons">
                         <a
                             onClick   = { this._onBackClick }
-                            className = "a-button">
+                            className = { buttonClass }>
                             Go Back
                         </a>
                         {  // if
@@ -177,7 +189,7 @@ const ProjectForm = class extends React.Component {
                         <button
                             type      = "submit"
                             onClick   = { this._onSubmitClick }
-                            className = {  buttonClass }>
+                            className = { buttonClass }>
                             Submit
                         </button>
                     </div>

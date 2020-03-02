@@ -1,10 +1,13 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import TextLoop from "react-text-loop"
-import Layout from '../components/Layout'
-import '../assets/scss/app.scss'
-import CaseStudyList from '../components/organisms/CaseStudyList'
-import ContactForm from '../components/organisms/ContactForm'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import '../assets/scss/app.scss';
+import ContactForm from '../components/organisms/ContactForm';
+import ContactInfo from '../components/molecules/ContactInfo';
+import ContactSlider from '../components/molecules/ContactSlider';
+import CareersList from '../components/organisms/CareersList';
+import ContactHeroGraphic from '../../static/img/contact/contact_hero_graphic.png';
+import HeroBluePaint from '../../static/img/contact/blue_paint.png';
 
 export const ContactPageTemplate = ({
   title,
@@ -12,40 +15,45 @@ export const ContactPageTemplate = ({
   subTitle,
 }) => (
   <div className = "o-hero">
+    <img src = {ContactHeroGraphic} className = "o-hero__background -circles-crosses" />
+    <img src = {HeroBluePaint} className = "o-hero__background -blue-paint" />
     <div className = "o-rhythm__container">
-      <div className = "o-hero__top">
-        <div className = "o-hero__titles">
-          <TextLoop>
-            <h1 className = "-after">{ title }</h1>
-            <h1 className = "-before">{ secondaryTitle }</h1>
-          </TextLoop>
+      <div className = "o-rhythm__row">
+        <div className = "o-hero__top">
+          <div className = "o-hero__titles">
+            <h2 className = "-before">{ secondaryTitle }</h2>
+            <h1>{ title }</h1>
+          </div>
+        </div>
+        <div className = "o-hero__subtitles">
+          <h3>{ subTitle }</h3>
         </div>
       </div>
-      <div className = "o-hero__subtitles">
-        <h3>{ subTitle }</h3>
-      </div>
-      <h6>A Design Company</h6>
     </div>
   </div>
 )
 
-const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+const ContactPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
-      <ContactPageTemplate
-        title          = { frontmatter.title }
-        secondaryTitle = { frontmatter.secondaryTitle }
-        subTitle       = { frontmatter.subTitle }
-      />
-      <CaseStudyList/>
-      <ContactForm/>
+    <Layout pageTitle = "contact" hideNavigation = { true }>
+      <div className = "p-contact-page">
+        <ContactPageTemplate
+          title          = { frontmatter.title }
+          secondaryTitle = { frontmatter.secondaryTitle }
+          subTitle       = { frontmatter.subTitle }
+        />
+        <ContactForm lightTheme = { true } />
+        <ContactSlider />
+        <ContactInfo streetAddress = { frontmatter.streetAddress } phoneNumber = { frontmatter.phoneNumber } directions = { frontmatter.directions } mapLink = { frontmatter.mapLink } />
+        <CareersList />
+      </div>
     </Layout>
   )
 }
 
-export default IndexPage
+export default ContactPage
 
 export const pageQuery = graphql`
   query ContactPageTemplate {
@@ -54,6 +62,10 @@ export const pageQuery = graphql`
         title
         secondaryTitle
         subTitle
+        streetAddress
+        mapLink
+        phoneNumber
+        directions
       }
     }
   }

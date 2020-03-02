@@ -71,29 +71,42 @@ const ContactForm = class extends React.Component {
                 <ProjectForm
                     isActive            = { this.state.activeForm === "project" }
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />
+                    isSubmittedCallback = { this._isSubmitted }
+                    lightTheme          = { this.props.lightTheme } />
                 <InfoForm
                     isActive            = { this.state.activeForm === "quick-info" }
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />
+                    isSubmittedCallback = { this._isSubmitted }
+                    lightTheme          = { this.props.lightTheme } />
                 <JobForm
                     isActive            = { this.state.activeForm === "join-team" }
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />
+                    isSubmittedCallback = { this._isSubmitted }
+                    lightTheme          = { this.props.lightTheme } />
                 <CatamaranForm
                     isActive            = { this.state.activeForm === "start-ups" }
                     progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted } />
+                    isSubmittedCallback = { this._isSubmitted }
+                    lightTheme          = { this.props.lightTheme } />
             </div>
         );
     }
 
     render() {
         let formContainerClass = "o-contact-form__container";
-        formContainerClass += this.state.formActive ? " -active" : "";
+        formContainerClass += this.state.formActive ? " -active " : "";
+        formContainerClass += this.props.lightTheme ? " -light " : "";
+
+        let radioInputClass = "a-radio";
+        radioInputClass += this.props.lightTheme ? " -light " : "";
+
+        let buttonClass = "a-button";
+        buttonClass += this.props.lightTheme ? " -light " : "";
         var progressBarWidth = {
             width: this.state.percentComplete + "%",
         };
+
+        let headerClass = this.props.lightTheme ? " -light " : "";
 
         return (
             <div className = { formContainerClass }>
@@ -106,62 +119,64 @@ const ContactForm = class extends React.Component {
                         this.state.formActive === false &&
                         this.state.isSubmitted === false &&
                         <div className = "o-rhythm__container">
-                            <header>what can we help you with today?</header>
-                            <fieldset className = "-space">
-                                <input
-                                    onChange  = { this._onFormTypeChange }
-                                    checked   = { this.state.activeForm === "project" }
-                                    className = "a-radio"
-                                    type      = "radio"
-                                    name      = "type"
-                                    value     = "project"
-                                    id        = "project"/>
-                                <label htmlFor="project">start a project together</label>
-                            </fieldset>
-                            <fieldset className = "-space">
-                                <input
-                                    onChange  = { this._onFormTypeChange }
-                                    checked   = { this.state.activeForm === "quick-info" }
-                                    className = "a-radio"
-                                    type      = "radio"
-                                    name      = "type"
-                                    value     = "quick-info"
-                                    id        = "quick-info"/>
-                                <label htmlFor="quick-info">get quick info</label>
-                            </fieldset>
-                            <fieldset className = "-space">
-                                <input
-                                    onChange  = { this._onFormTypeChange }
-                                    checked   = { this.state.activeForm === "join-team" }
-                                    className = "a-radio"
-                                    type      = "radio"
-                                    name      = "type"
-                                    value     = "join-team"
-                                    id        = "join-team"/>
-                                <label htmlFor="join-team">join the team</label>
-                            </fieldset>
-                            <fieldset className = "-space">
-                                <input
-                                    onChange  = { this._onFormTypeChange }
-                                    checked   = { this.state.activeForm === "start-ups" }
-                                    className = "a-radio"
-                                    type      = "radio"
-                                    name      = "type"
-                                    value     = "start-ups"
-                                    id        = "start-ups"/>
-                                <label htmlFor="start-ups">talk start-ups (catamaran)</label>
-                            </fieldset>
-                            <div className = "o-contact-form__buttons -space">
-                                <a
-                                    onClick = { this._deactiveForm }
-                                    className = "a-button -disabled">
-                                    Go Back
-                                </a>
-                                <a
-                                    onClick = { this._activateForm }
-                                    className = "a-button">
-                                    Next
-                                </a>
+                            <div>
+                                <header className = {headerClass}>what can we help you with today?</header>
+                                <fieldset className = "-space">
+                                    <input
+                                        onChange  = { this._onFormTypeChange }
+                                        checked   = { this.state.activeForm === "project" }
+                                        className = { radioInputClass }
+                                        type      = "radio"
+                                        name      = "type"
+                                        value     = "project"
+                                        id        = "project"/>
+                                    <label htmlFor="project">start a project together</label>
+                                </fieldset>
+                                <fieldset className = "-space">
+                                    <input
+                                        onChange  = { this._onFormTypeChange }
+                                        checked   = { this.state.activeForm === "quick-info" }
+                                        className = { radioInputClass }
+                                        type      = "radio"
+                                        name      = "type"
+                                        value     = "quick-info"
+                                        id        = "quick-info"/>
+                                    <label htmlFor="quick-info">get quick info</label>
+                                </fieldset>
+                                <fieldset className = "-space">
+                                    <input
+                                        onChange  = { this._onFormTypeChange }
+                                        checked   = { this.state.activeForm === "join-team" }
+                                        className = { radioInputClass }
+                                        type      = "radio"
+                                        name      = "type"
+                                        value     = "join-team"
+                                        id        = "join-team"/>
+                                    <label htmlFor="join-team">join the team</label>
+                                </fieldset>
+                                <fieldset className = "-space">
+                                    <input
+                                        onChange  = { this._onFormTypeChange }
+                                        checked   = { this.state.activeForm === "start-ups" }
+                                        className = { radioInputClass }
+                                        type      = "radio"
+                                        name      = "type"
+                                        value     = "start-ups"
+                                        id        = "start-ups"/>
+                                    <label htmlFor="start-ups">talk start-ups (catamaran)</label>
+                                </fieldset>
+                                <div className = "o-contact-form__buttons -space">
+                                    <a
+                                        onClick = { this._deactiveForm }
+                                        className = { `${buttonClass} -disabled` }>
+                                        Go Back
+                                    </a>
+                                    <a
+                                        onClick = { this._activateForm }
+                                        className = { buttonClass }>
+                                        Next
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     }

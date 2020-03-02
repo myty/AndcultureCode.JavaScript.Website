@@ -59,6 +59,16 @@ const CaseStudy = class extends React.Component {
                 <div className = "m-case-study__block -top"></div>
                 <div className = "o-rhythm__container">
                     <div className = "o-rhythm__row">
+                    <div className = "m-case-study__image-container">
+                            { this.props.post.frontmatter.featuredimage ? (
+                            <div className = "m-case-study__image">
+                                <img src = { this.props.post.frontmatter.featuredimage.childImageSharp.fluid.src } />
+                            </div>
+                            ) : null }
+                            <div className = "m-case-study__texture">
+                                <img src = { this.props.post.frontmatter.texture } />
+                            </div>
+                        </div>
                         <div className = "m-case-study__content">
                             <div className = "m-case-study__content-inner">
                                 <div className = "m-case-study__count">
@@ -75,16 +85,6 @@ const CaseStudy = class extends React.Component {
                                     style     = { linkStyle }>
                                     See How
                                 </CoverTransitionLink>
-                            </div>
-                        </div>
-                        <div className = "m-case-study__image-container">
-                            { this.props.post.frontmatter.featuredimage ? (
-                            <div className = "m-case-study__image">
-                                <img src = { this.props.post.frontmatter.featuredimage.childImageSharp.fluid.src } />
-                            </div>
-                            ) : null }
-                            <div className = "m-case-study__texture">
-                                <img src = { this.props.post.frontmatter.texture } />
                             </div>
                         </div>
                     </div>

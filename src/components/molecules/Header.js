@@ -12,24 +12,33 @@ const Header = class extends React.Component {
       <div>
         <header className = "m-header">
           <div className = "o-rhythm__container -fluid">
-            <a 
-              href      = "/" 
+            <a
+              href      = "/"
               className =  "m-header__logo">
               <img src = { logo } alt="andculture" />
             </a>
-            <nav 
-              className  = "m-header__navigation" 
-              role       = "navigation" 
-              aria-label = "main-navigation">
-              <a href="/contact"><span></span>contact</a>
-            </nav>
+            { // if
+              !this.props.hideNavigation &&
+              <nav
+                className  = "m-header__navigation"
+                role       = "navigation"
+                aria-label = "main-navigation">
+                <a href="/contact">contact</a>
+              </nav>
+            }
           </div>
         </header>
         <div className = "m-header__title">
-          <img src = { wordmark } alt="andculture" />
+          { // if
+            this.props.pageTitle != "home" &&
+              <div className = "m-header__page-title">{ this.props.pageTitle }</div>
+          }
+          { // if
+            this.props.pageTitle === "home" &&
+              <img src = { wordmark } alt="andculture" />
+          }
         </div>
       </div>
-     
     )
   }
 }

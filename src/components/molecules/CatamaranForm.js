@@ -99,9 +99,16 @@ const CatamaranForm = class extends React.Component {
     }
 
     render() {
-        let nextButtonClass = 'a-button';
-        let formClass   = 'o-contact-form'; 
+        let formClass   = 'o-contact-form';
+        formClass += this.props.isActive ? ' -active' : '';
+
         let buttonClass = 'a-button';
+        buttonClass += this.props.lightTheme ? ' -light ' : '';
+
+        let selectClass = 'a-dropdown';
+        selectClass += this.props.lightTheme ? ' -light ' : '';
+
+        let nextButtonClass = 'a-button';
         formClass += this.props.isActive ? ' -active' : '';
 
         if (this.state.activeQuestion === this.state.totalQuestions) {
@@ -111,16 +118,20 @@ const CatamaranForm = class extends React.Component {
         if (this._validateFormData()) {
             nextButtonClass += ' -disabled'
         }
+
+        nextButtonClass += this.props.lightTheme ? ' -light ' : '';
+
         return (
             <form className = { formClass } name = "contact-catamaran" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <header>talk start-ups (Catamaran)</header>
-                    <Input 
+                    <Input
                         className          = { this.state.activeQuestion === 1 ? '-active': '' }
                         type               = "text"
                         name               = "name" 
                         inputValueCallback = { this._setInputValue } 
                         isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.name } />
                     <Input 
                         className          = { this.state.activeQuestion === 2 ? '-active': '' }
@@ -128,6 +139,7 @@ const CatamaranForm = class extends React.Component {
                         name               = "email" 
                         inputValueCallback = { this._setInputValue } 
                         isRequired         = { true }
+                        lightTheme         = { this.props.lightTheme }
                         value              = { this.state.formData.email } />
                     <fieldset className = { this.state.activeQuestion === 3 ? '-active': '' }>
                         <label
@@ -135,7 +147,7 @@ const CatamaranForm = class extends React.Component {
                             htmlFor   = "interest">
                             What are you interested in talking to us about?
                         </label>
-                        <div className = "a-dropdown">
+                        <div className = { selectClass }>
                             <select id = "interest">
                                 <option value="existing">I have a startup I’d like to talk to you about</option>
                                 <option value="story">I have an entrepreneurship story to share</option>
@@ -147,15 +159,16 @@ const CatamaranForm = class extends React.Component {
                             </select>
                         </div>
                     </fieldset>
-                    <Textarea 
+                    <Textarea
                         className          = { this.state.activeQuestion === 4 ? '-active': '' }
-                        name               = "message" 
-                        inputValueCallback = { this._setInputValue } 
-                        value              = { this.state.formData.message } />
+                        name               = "message"
+                        inputValueCallback = { this._setInputValue }
+                        value              = { this.state.formData.message }
+                        lightTheme         = { this.props.lightTheme } />
                     <div className = "o-contact-form__buttons">
                         <a
                             onClick   = { this._onBackClick }
-                            className = "a-button">
+                            className = { buttonClass }>
                             Go Back
                         </a>
                         {  // if
@@ -169,7 +182,7 @@ const CatamaranForm = class extends React.Component {
                         <button
                             type      = "submit"
                             onClick   = { this._onSubmitClick }
-                            className = {  buttonClass }>
+                            className = { buttonClass }>
                             Submit
                         </button>
                     </div>
