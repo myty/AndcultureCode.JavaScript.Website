@@ -1,6 +1,6 @@
 .m-case-study {
     position: relative;
-    padding: 80px 0 0 0;
+    padding: 60px 0;
     border-top: 2px solid get-color("neutral", "lighter-gray");
     overflow: hidden;
     margin: 0;
@@ -23,53 +23,48 @@
 
     &.-secondary {
 
-        .m-case-study__image-container {
-            margin-bottom: 0px;
-            margin-top: 50px;
-        }
-
-        .m-case-study__image {
-
-            @include breakpoints("tablet") {
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-
         .m-case-study__texture {
-            right: -120px;
+            right: 0;
+            top: 110px;
             transform: none;
             left: auto;
+
+            @include breakpoints("tablet") {
+                top: 0;
+            }
         }
     }
 
-    &.-hovered {
-        z-index: 9;
-        margin-top: -90px;
+    @include breakpoints("tablet") { 
 
-        .m-case-study__block {
-            height: 200px;
-            display: block;
-        }
+        &.-hovered {
+            z-index: 9;
+            margin-top: -90px;
 
-        img {
-            transform: scale(1.2);
-        }
-
-        .m-case-study__texture {
+            .m-case-study__block {
+                height: 200px;
+                display: block;
+            }
 
             img {
-                transform: scale(1.1);
+                transform: scale(1.2);
             }
-        }
+
+            .m-case-study__texture {
+
+                img {
+                    transform: scale(1.1);
+                }
+            }
 
 
-        .a-button, 
-        h5, 
-        p, 
-        .m-case-study__count {
-            color: get-color("primary", "white"); 
-            border-color: get-color("primary", "white"); 
+            .a-button, 
+            h5, 
+            p, 
+            .m-case-study__count {
+                color: get-color("primary", "white"); 
+                border-color: get-color("primary", "white"); 
+            }
         }
     }
 
@@ -95,7 +90,6 @@
     &__image-container {
         @include span-col(12);
         position: relative;
-        margin-bottom: -80px;
 
         @include breakpoints("tablet") {
             @include span-col(6);
@@ -107,12 +101,11 @@
         max-width: 200px;
         position: absolute;
         left: 0;
-        top: -70px;
+        top: 110px;
         z-index: 0;
-        display: none;
 
         @include breakpoints("tablet") {
-            display: block;
+            top: 0;
         }
 
         img {
@@ -122,20 +115,23 @@
 
     &__image {
         right: 0;
-        bottom: calc(-30% + -110px);
         z-index: 1;
 
         @include breakpoints("tablet") {
             position: absolute !important;
+            top: 50%;
+            transform: translateY(-50%);
             max-width: 100%;
         }
 
         img {
-            max-width: 400px;
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
             transition: all 0.6s ease !important;
 
             @include breakpoints("tablet") {
-                max-width: 100%;
+                width: 550px;
             }
         }
     }
@@ -152,6 +148,11 @@
         left: 3%;
         word-spacing: 2em;
         letter-spacing: .15em;
+        display: none;
+        
+        @include breakpoints("tablet") {
+            display: block;
+        }
 
         span {
             color: get-color("neutral", "lighter-gray"); 

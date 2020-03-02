@@ -38,7 +38,7 @@ h2 {
 
 h3 {
     @include font-size("small");
-    @include line-height("smaller");
+    @include line-height(32px);
     color: get-color("neutral", "light-gray");
 
     @include breakpoints("tablet") {

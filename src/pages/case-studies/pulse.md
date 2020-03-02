@@ -4,8 +4,8 @@ title: rearchitecting nurse workflows
 partnerName: Pulse
 date: 2020-02-21T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/pulse-ss-flat.png
-texture: img/pulse-dots.png
+featuredimage: /img/pulse-main.png
+texture: img/pulse-shape.png
 color: '#76c1b9'
 description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
 tags:
