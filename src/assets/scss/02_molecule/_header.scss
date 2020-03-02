@@ -53,10 +53,13 @@
         letter-spacing: 0.2em;
         font-weight: 500;
         font-family: $font-secondary;
+        margin-top: 2px;
+        margin-left: 8px;
         text-transform: uppercase;
 
         @include breakpoints("tablet") {
             @include font-size(24px);
+            margin-left: auto;
             margin-top: 6px;
         }
     }
