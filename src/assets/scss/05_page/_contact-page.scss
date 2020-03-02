@@ -13,9 +13,9 @@
             }
 
             h2 {
+                @include font-size("smaller");
                 color: get-color("primary", "fresh");
                 font-weight: 100;
-                font-size: 18px;
                 margin-bottom: 16px;
 
                 @include breakpoints("tablet") {
@@ -44,12 +44,12 @@
         }
 
         h3 {
+            @include line-height(24px);
             margin-bottom: 0;
-            line-height: 24px;
 
             @include breakpoints("tablet") {
                 @include font-size(30px);
-                line-height: 50px;
+                @include line-height(50px);
             }
         }
     }

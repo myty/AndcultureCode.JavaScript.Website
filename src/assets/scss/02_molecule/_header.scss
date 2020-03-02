@@ -38,6 +38,7 @@
             width: 220px;
             top: 62px;
         }
+
     }
 
     &__navigation {
@@ -46,14 +47,18 @@
     }
 
     &__page-title {
-        @include font-size(24px);
+        @include font-size(16px);
         color: get-color("neutral", "light-gray");
         float: left;
-        letter-spacing: 5px;
+        letter-spacing: 0.2em;
         font-weight: 500;
-        margin-top: 6px;
         font-family: $font-secondary;
         text-transform: uppercase;
+
+        @include breakpoints("tablet") {
+            @include font-size(24px);
+            margin-top: 6px;
+        }
     }
 
     a {
