@@ -46,7 +46,7 @@ function NextArrow(props) {
     );
 }
 
-var settings = {
+const settings = {
     dots:           true,
     draggable:      true,
     infinite:       true,
