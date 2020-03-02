@@ -3,6 +3,7 @@
     padding-bottom: 200px;
 
     &__left {
+        @include span-col(12);
 
         @include breakpoints("tablet") {
             @include span-col(4);
@@ -10,9 +11,12 @@
     }
 
     &__right {
+        @include span-col(12);
+        margin-top: 40px;
         
         @include breakpoints("tablet") {
             @include span-col(8);
+            margin-top: 0;
         }
     }
 

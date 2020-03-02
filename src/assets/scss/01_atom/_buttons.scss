@@ -31,7 +31,11 @@
         }
 
         span {
-            padding-left: 80px;
+            padding-left: 0;
+
+            @include breakpoints("tablet") {
+                padding-left: 80px;
+            }
         }
     }
 
