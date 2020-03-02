@@ -34,7 +34,8 @@ export const ContactPageTemplate = ({
 )
 
 const ContactPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
+  console.log(frontmatter);
 
   return (
     <Layout pageTitle = "contact" hideNavigation = { true }>
@@ -46,7 +47,7 @@ const ContactPage = ({ data }) => {
         />
         <ContactForm lightTheme = { true } />
         <ContactSlider />
-        <ContactInfo />
+        <ContactInfo streetAddress = { frontmatter.streetAddress } phoneNumber = { frontmatter.phoneNumber } directions = { frontmatter.directions } mapLink = { frontmatter.mapLink } />
         <CareersList />
       </div>
     </Layout>
@@ -62,6 +63,10 @@ export const pageQuery = graphql`
         title
         secondaryTitle
         subTitle
+        streetAddress
+        mapLink
+        phoneNumber
+        directions
       }
     }
   }

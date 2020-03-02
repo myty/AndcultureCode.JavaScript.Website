@@ -12,12 +12,10 @@ const ContactInfo = class extends React.Component {
                 <div className = "o-rhythm__row">
                     <div className = "m-contact-info__address">
                         <h6 className = "-secondary">Location</h6>
-                        <a href="">
-                            614 N. Front Street<br/>
-                            Harrisburg, PA<br/>
-                            17102<br/>
+                        <a href = { this.props.mapLink } target = "_blank">
+                            { this.props.streetAddress }
                         </a>
-                        <a href="tel:7172332881">717.233.2881</a>
+                        <a href={`tel:${this.props.phoneNumber}`}>{ this.props.phoneNumber }</a>
                     </div>
                     <div className = "m-contact-info__social">
                         <h6 className = "-secondary">Social</h6>
@@ -50,16 +48,7 @@ const ContactInfo = class extends React.Component {
             <div className = "o-rhythm__container">
                 <div className = "m-contact-info__directions">
                     <h6 className = "-secondary">Directions</h6>
-                    <p>
-                        If you are traveling down N. Front St. from I-81, our parking entrance is just past the Harvey Taylor Bridge on the right. If you are traveling on 2nd St.
-                        from I-83, go down past Forster St. and turn left onto either Boas St. or Cumberland St., then make a left onto N. Front St. and get in the third lane
-                        to the right immediately. You cannot make a left turn from Forster St. onto Front St.
-                    </p>
-                    <p>
-                        Once you’ve turned into our parking lot, stay to the left and enter the top parking deck. There, you will find several “Visitor” parking spaces. Enter through
-                        the doors on the top parking deck and go straight ahead. You’ll turn a slight left around the railing and then turn right to enter through the glass doors
-                        leading to our office.
-                    </p>
+                    <p>{ this.props.directions }</p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,126 @@
+.o-slider__container {
+    position: relative;
+}
+
+.o-slider {
+    position: relative;
+
+    &:before {
+        content: '';
+        background: get-color("primary", "white");
+        height: 100%;
+        width: 1000px;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: -1000px;
+        display: block;
+        z-index: 1;
+    }
+
+    @include breakpoints("tablet") {
+        height: 930px;
+    }
+
+    .o-rhythm__container {
+        padding: 0;
+
+        @include breakpoints("tablet") {
+            padding: 0 20px;
+        }
+    }
+
+    .slick-dots {
+
+        li {
+
+            button {
+
+                &:before {
+                    color: get-color("primary", "white");
+                    opacity: 1;
+                }
+            }
+
+            &.slick-active {
+
+                button {
+
+                    &:before {
+                        color: get-color("primary", "white");
+                        content: "\2218";
+                        font-size: 22px;
+                        top: -3px;
+                    }
+                }
+            }
+        }
+
+        @include breakpoints("tablet") {
+            text-align: right;
+            right: 342px;
+            bottom: -47px;
+            width: auto;
+        }
+    }
+
+    .slick-list {
+
+        @include breakpoints("tablet") {
+            overflow: visible;
+
+            .slick-slide {
+
+                div {
+                    margin: auto 10px;
+                }
+            }
+        }
+    }
+
+    .slick-prev {
+        top: auto;
+        bottom: -67px;
+        left: -335px;
+        width: 28px;
+        height: 23px;
+
+        &::before {
+            content: '';
+        }
+
+        svg {
+            fill: get-color("neutral", "lighter-gray");
+            transition: all 400ms ease;
+        }
+
+        &:hover {
+            svg {
+                fill: get-color("primary", "fresh");
+            }
+        }
+    }
+
+    .slick-next {
+        top: auto;
+        bottom: -67px;
+        left: -275px;
+        width: 28px;
+        height: 23px;
+
+        &::before {
+            content: '';
+        }
+
+        svg {
+            fill: get-color("neutral", "lighter-gray");
+            transition: all 400ms ease;
+        }
+
+        &:hover {
+            svg {
+                fill: get-color("primary", "fresh");
+            }
+        }
+    }
+}
