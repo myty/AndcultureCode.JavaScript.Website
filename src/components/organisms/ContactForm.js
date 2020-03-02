@@ -120,7 +120,7 @@ const ContactForm = class extends React.Component {
                         this.state.isSubmitted === false &&
                         <div className = "o-rhythm__container">
                             <div>
-                                <header className = {headerClass}>what can we help you with today?</header>
+                                <header className = {headerClass}>what can we help you with?</header>
                                 <fieldset className = "-space">
                                     <input
                                         onChange  = { this._onFormTypeChange }

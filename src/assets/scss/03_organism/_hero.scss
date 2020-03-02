@@ -28,6 +28,7 @@
     }
 
     &__titles {
+        margin-top: 60px;
         max-width: 800px;
         width: 100%;
 
@@ -66,7 +67,7 @@
         &.-blinky {
             left: 56%;
             top: 120px;
-            width: 40px; 
+            width: 40px;
             display: none;
 
             @include breakpoints("tablet") {
@@ -81,7 +82,7 @@
             display: none;
             right: -130px;
             top: 100px;
-            width: 260px; 
+            width: 260px;
 
             @include breakpoints("tablet") {
                 display: block;
@@ -106,7 +107,7 @@
             right: 70px;
             top: 360px;
             z-index: 1;
-            width: 92px; 
+            width: 92px;
 
             @include breakpoints("tablet") {
                 width: auto;
@@ -194,13 +195,13 @@
     p {
         position: relative;
         max-width: 144px;
-        margin-left: 50px; 
+        margin-left: 50px;
         margin-top: 40px;
 
         @include breakpoints("tablet") {
             display: block;
             float: right;
-            margin-left: 50px; 
+            margin-left: 50px;
             margin-top: 40px;
         }
 

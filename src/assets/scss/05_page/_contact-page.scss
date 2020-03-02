@@ -13,24 +13,37 @@
             }
 
             h2 {
+                @include font-size("smaller");
                 color: get-color("primary", "fresh");
-                font-weight: 100;
-                font-size: 18px;
+                font-weight: 300;
+                margin-bottom: 16px;
 
                 @include breakpoints("tablet") {
                     @include font-size(36px);
-                    margin-bottom: 51px;
+                    margin-bottom: 12px;
                 }
             }
         }
 
         &__top {
-            margin-bottom: 64px;
+            margin-bottom: 29px;
 
             @include breakpoints("tablet") {
                 margin-bottom: 112px;
             }
         }
+
+        // Mobile section divider
+        // &::after {
+        //     content: '';
+        //     display: block;
+        //     bottom: 0;
+        //     left: 0;
+        //     height: 2px;
+        //     position: absolute;
+        //     background: get-color("primary", "fresh");
+        //     width: 20px;
+        // }
     }
 
     .o-hero__subtitles {
@@ -43,11 +56,12 @@
         }
 
         h3 {
-            line-height: 50px;
+            @include line-height(24px);
             margin-bottom: 0;
 
             @include breakpoints("tablet") {
                 @include font-size(30px);
+                @include line-height(50px);
             }
         }
     }
