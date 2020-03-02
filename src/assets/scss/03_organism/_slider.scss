@@ -1,6 +1,9 @@
 .o-slider {
     position: relative;
-    height: 354px;
+
+    @include breakpoints("tablet") {
+        height: 354px;
+    }
 
     &:before {
         content: '';
@@ -28,7 +31,7 @@
     }
 
     .slick-dots {
-        bottom: -28px;
+        bottom: -40px;
 
         li {
 
@@ -73,6 +76,13 @@
                     margin: auto 10px;
                 }
             }
+        }
+    }
+
+    .slick-slide {
+        img {
+            vertical-align: bottom;
+            margin-bottom: -1px;
         }
     }
 

@@ -1,6 +1,10 @@
 .m-careers {
     background: get-color("primary", "after-hours");
-    padding-bottom: 200px;
+    padding-bottom: 120px;
+
+    @include breakpoints("tablet") {
+        padding-bottom: 200px;
+    }
 
     &__left {
         @include span-col(12);
@@ -13,7 +17,7 @@
     &__right {
         @include span-col(12);
         margin-top: 40px;
-        
+
         @include breakpoints("tablet") {
             @include span-col(8);
             margin-top: 0;
@@ -25,6 +29,6 @@
     }
 
     h6 {
-        margin-bottom: 60px; 
+        margin-bottom: 60px;
     }
 }
