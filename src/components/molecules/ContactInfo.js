@@ -40,10 +40,8 @@ const ContactInfo = class extends React.Component {
                     </div>
                 </div>
             </div>
-            <div className = "o-rhythm__container -fluid">
-                <div className = "m-contact-info__map">
-                    <iframe src="https://snazzymaps.com/embed/222814" width="87%" height="537px" frameBorder="0"></iframe>
-                </div>
+            <div className = "m-contact-info__map">
+                <iframe src="https://snazzymaps.com/embed/222814" width="87%" height="537px" frameBorder="0"></iframe>
             </div>
             <div className = "o-rhythm__container">
                 <div className = "m-contact-info__directions">

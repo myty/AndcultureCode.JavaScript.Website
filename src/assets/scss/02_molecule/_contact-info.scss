@@ -55,16 +55,8 @@
         width: 100%;
         position: relative;
 
-        @include breakpoints("tablet") {
-            left: 293px;
-        }
-
         iframe {
             width: 100%;
-
-            @include breakpoints("tablet") {
-                width: 87%;
-            }
         }
     }
 
