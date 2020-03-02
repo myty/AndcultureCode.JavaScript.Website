@@ -35,7 +35,11 @@
 
         h6 {
             color: get-color("primary", "fresh");
-            margin: 118px 0 80px 0;
+            margin: 79px 0 22px;
+
+            @include breakpoints("tablet") {
+                margin: 118px 0 80px;
+            }
         }
 
 

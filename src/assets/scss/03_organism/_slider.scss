@@ -1,5 +1,6 @@
 .o-slider {
     position: relative;
+    height: 324px;
 
     &:before {
         content: '';
@@ -15,7 +16,7 @@
     }
 
     @include breakpoints("tablet") {
-        height: 930px;
+        height: 986px;
     }
 
     .o-rhythm__container {
@@ -27,13 +28,14 @@
     }
 
     .slick-dots {
+        bottom: -28px;
 
         li {
 
             button {
 
                 &:before {
-                    color: get-color("primary", "white");
+                    color: get-color("neutral", "light-gray");
                     opacity: 1;
                 }
             }
@@ -43,7 +45,7 @@
                 button {
 
                     &:before {
-                        color: get-color("primary", "white");
+                        color: get-color("neutral", "light-gray");
                         content: "\2218";
                         font-size: 22px;
                         top: -3px;
@@ -54,8 +56,8 @@
 
         @include breakpoints("tablet") {
             text-align: right;
-            right: 342px;
-            bottom: -47px;
+            right: 0;
+            bottom: -58px;
             width: auto;
         }
     }
@@ -75,18 +77,23 @@
     }
 
     .slick-prev {
+        display: none !important;
         top: auto;
-        bottom: -67px;
-        left: -335px;
+        bottom: -72px;
+        left: 8px;
         width: 28px;
         height: 23px;
+
+        @include breakpoints("tablet") {
+            display: block !important;
+        }
 
         &::before {
             content: '';
         }
 
         svg {
-            fill: get-color("neutral", "lighter-gray");
+            fill: get-color("neutral", "light-gray");
             transition: all 400ms ease;
         }
 
@@ -98,18 +105,23 @@
     }
 
     .slick-next {
+        display: none !important;
         top: auto;
-        bottom: -67px;
-        left: -275px;
+        bottom: -72px;
+        left: 72px;
         width: 28px;
         height: 23px;
+
+        @include breakpoints("tablet") {
+            display: block !important;
+        }
 
         &::before {
             content: '';
         }
 
         svg {
-            fill: get-color("neutral", "lighter-gray");
+            fill: get-color("neutral", "light-gray");
             transition: all 400ms ease;
         }
 
