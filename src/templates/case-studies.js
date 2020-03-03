@@ -5,26 +5,20 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import CaseStudyHero from '../components/molecules/CaseStudyHero';
+import CaseStudyContent from '../components/molecules/CaseStudyContent';
 
 export const CaseStudyTemplate = ({
-  content,
-  contentComponent,
-  description,
-  tags,
-  featuredimage,
-  color,
-  title,
-  helmet,
+  caseStudyContent
 }) => {
-  const PostContent = contentComponent || Content
-
   return (
-    <CaseStudyHero
-        color = { color }
-        title          = { title }
-        featuredimage = { featuredimage }
-        tags          = { tags }/>
-    
+    <div>
+      <CaseStudyHero
+          color         = { caseStudyContent.color }
+          title         = { caseStudyContent.title }
+          featuredimage = { caseStudyContent.featuredimage }
+          tags          = { caseStudyContent.tags }/>
+      <CaseStudyContent />
+    </div>
   )
 }
 
@@ -36,10 +30,7 @@ const CaseStudy = ({ data }) => {
       <Layout pageTitle = "pinnaclehealth pulse" hideNavigation = { true }>
         <div className = "p-interior-page">
           <CaseStudyTemplate
-            color = { post.frontmatter.color }
-            tags          = { post.frontmatter.tags }
-            title         = { post.frontmatter.title }
-            featuredimage = { post.frontmatter.featuredimage } />
+            caseStudyContent = { post.frontmatter }/>
         </div>
       </Layout>
   )

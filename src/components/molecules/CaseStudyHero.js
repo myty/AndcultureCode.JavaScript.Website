@@ -43,6 +43,10 @@ const CaseStudyHero = class extends React.Component {
               </div>
             </div>
         </div>
+        <div className = "o-rhythm__row">
+          <div className = "o-rhythm__col -span-six">Image</div>
+          <div className = "o-rhythm__col -span-six">Image</div>
+        </div>
       </div>
     )
   }
