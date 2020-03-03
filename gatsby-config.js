@@ -73,6 +73,12 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-page-creator',
+      options: {
+        path: `${__dirname}/src/pages/careers`
+      }
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
