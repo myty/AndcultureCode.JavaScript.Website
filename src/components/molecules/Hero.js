@@ -59,7 +59,7 @@ const Hero = class extends React.Component {
           <div className = "o-hero__subtitles">
             <h3>{ this.props.subTitle }</h3>
           </div>
-          <h6 style = { verticalTextStyle }>A Design Company</h6>
+          <h6 style = { verticalTextStyle } className = "-vert">A Design Company</h6>
         </div>
       </div>
     )

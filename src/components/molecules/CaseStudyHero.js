@@ -6,6 +6,9 @@ const CaseStudyHero = class extends React.Component {
   }
 
   render() {
+    const backgroundStyle = {
+      background: this.props.color,
+    }
 
     return (
       <div className = "o-hero -case-study">
@@ -20,16 +23,25 @@ const CaseStudyHero = class extends React.Component {
               ) : null }
             </div>
           </div>
-          {this.props.tags && this.props.tags.length ? (
-          <div>
-            <h4>Services</h4>
-            <ul>
-              {this.props.tags.map(tag => (
-                <li key={tag + `tag`}>{tag}</li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
+        </div>
+        <div className = "o-hero__meta" style = { backgroundStyle }>
+          <div className = "o-rhythm__container">
+            <div className = "o-rhythm__row">
+              <div className = "o-hero__left">
+                <strong>Lorem Ipsum </strong>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              </div>
+              {this.props.tags && this.props.tags.length ? (
+                <div className = "o-hero__right">
+                  <h6>Services</h6>
+                  <ul>
+                    {this.props.tags.map(tag => (
+                      <li key={tag + `tag`}>{tag}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              </div>
+            </div>
         </div>
       </div>
     )
