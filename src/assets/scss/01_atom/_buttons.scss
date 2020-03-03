@@ -9,10 +9,10 @@
     background: transparent;
 
     &.-large {
-        @include font-size(30px);
-        font-family: $font-primary; 
+        @include font-size(20px);
+        font-family: $font-primary;
         position: relative;
-        width: 100%; 
+        width: 100%;
         text-transform: none;
         display: block;
         border-bottom: 1px solid get-color("primary", "white");
@@ -24,9 +24,9 @@
             background: url('../../../static/img/contact/right_green_arrow.png') no-repeat center center / contain;
             position: absolute;
             right: 0;
-            top: 40px;
+            top: 32px;
             display: block;
-            width: 40px; 
+            width: 24px;
             height: 30px;
         }
 

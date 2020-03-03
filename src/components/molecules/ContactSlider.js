@@ -65,7 +65,7 @@ const ContactSlider = class extends React.Component {
     render() {
         return (
             <div className = "o-slider__container">
-                <div className = "o-rhythm__container">
+                <div className = "o-rhythm__container -full-width__mobile">
                     <div className = "o-slider">
                         <Slider {...settings}>
                             <img src = { sliderImage1 } />

@@ -17,10 +17,10 @@
     &__logo {
         display: block;
         float: left;
-        width: 50px; 
+        width: 50px;
 
         @include breakpoints("tablet") {
-            width: 60px; 
+            width: 60px;
         }
     }
 
@@ -53,14 +53,21 @@
     }
 
     &__page-title {
-        @include font-size(24px);
+        @include font-size(16px);
         color: get-color("neutral", "light-gray");
         float: left;
-        letter-spacing: 5px;
+        letter-spacing: 0.2em;
         font-weight: 500;
-        margin-top: 6px;
         font-family: $font-secondary;
+        margin-top: 2px;
+        margin-left: 8px;
         text-transform: uppercase;
+
+        @include breakpoints("tablet") {
+            @include font-size(24px);
+            margin-left: auto;
+            margin-top: 6px;
+        }
     }
 
     a {
@@ -69,7 +76,7 @@
         font-family: $font-primary;
         position: relative;
         transition: all .5s ease;
-        
+
         &:hover {
             color: #19a87c;
 
