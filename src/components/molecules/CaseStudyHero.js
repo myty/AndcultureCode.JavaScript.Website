@@ -1,4 +1,6 @@
 import React from 'react';
+import ScheduleImage from '../../../static/img/case-studies/pulse/schedule.png'
+import PeopleRolesImage from '../../../static/img/case-studies/pulse/peopleroles.png'
 
 const CaseStudyHero = class extends React.Component {
   constructor(props) {
@@ -44,8 +46,12 @@ const CaseStudyHero = class extends React.Component {
             </div>
         </div>
         <div className = "o-rhythm__row">
-          <div className = "o-rhythm__col -span-six">Image</div>
-          <div className = "o-rhythm__col -span-six">Image</div>
+          <div className = "o-hero__image">
+            <img src = { ScheduleImage } />
+          </div>
+          <div className = "o-hero__image">
+            <img src = { PeopleRolesImage } />
+          </div>
         </div>
       </div>
     )

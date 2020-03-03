@@ -59,8 +59,10 @@
         }
 
         .o-hero__image {
+            margin: 0;
 
             img {
+                display: block;
                 max-width: 99999px;
             }
         }
