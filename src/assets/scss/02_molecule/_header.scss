@@ -28,15 +28,22 @@
         position: fixed;
         left: calc(3% + 70px);
         top: 30px;
-        width: 140px;
         z-index: 9;
 
         @include breakpoints("tablet") {
             position: absolute;
             display: block;
             left: calc(3% + 100px);
-            width: 220px;
             top: 62px;
+        }
+
+        img {
+            width: 140px;
+
+            @include breakpoints("tablet") {
+                width: 220px;
+            }
+
         }
     }
 

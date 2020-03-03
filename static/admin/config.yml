@@ -63,4 +63,11 @@ collections:
           - {label: Map Link, name: mapLink, widget: string}
           - {label: Phone Number, name: phoneNumber, widget: string}
           - {label: Directions, name: directions, widget: string}
-
+      - file: "src/pages/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Secondary, name: secondaryTitle, widget: string}
+          - {label: Subtitle, name: subTitle, widget: string}

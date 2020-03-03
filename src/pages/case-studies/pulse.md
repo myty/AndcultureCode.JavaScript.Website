@@ -9,8 +9,9 @@ texture: img/pulse-shape.png
 color: '#76c1b9'
 description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
 tags:
-  - flavor
-  - tasting
+  - ux design
+  - web design
+  - strategy
 ---
 ![flavor wheel](/img/flavor_wheel.jpg)
 

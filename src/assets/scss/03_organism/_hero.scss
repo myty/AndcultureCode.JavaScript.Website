@@ -13,6 +13,25 @@
     background: linear-gradient(to bottom, rgba(223,235,238,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dfebee', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 
+    &.-case-study {
+
+        .o-hero__title, 
+        .o-hero__image {
+            @include span-col(6);
+        }
+
+        .o-hero__title {
+            padding-top: 300px;
+        }
+
+        .o-hero__image {
+            
+            img {
+                max-width: 99999px; 
+            }
+        }
+    }
+
     .o-rhythm__container {
         position: relative;
     }
