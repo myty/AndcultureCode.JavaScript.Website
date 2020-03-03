@@ -1,7 +1,6 @@
 .m-case-study-page-content {
     &__copy-section {
-        padding-top: 252px;
-        padding-bottom: 252px;
+        padding: 252px 0;
 
         @include span-col(12);
 
@@ -19,6 +18,22 @@
 
         p {
             color: get-color("neutral", "medium-gray");
+        }
+
+        .research {
+            &__header {
+                @include span-col(2);
+            }
+            &__copy {
+                @include span-col(8);
+                @include push-col(2);
+                position: relative;
+                top: -8px;
+
+                p:first-of-type {
+                    margin-top: 0;
+                }
+            }
         }
     }
 }
