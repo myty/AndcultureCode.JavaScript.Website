@@ -27,12 +27,14 @@ export const CaseStudyTemplate = ({
 }
 
 const CaseStudy = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
+  console.log(post.frontmatter.tags);
 
   return (
       <Layout pageTitle = "pinnaclehealth pulse" hideNavigation = { true }>
         <div className = "p-interior-page">
           <CaseStudyTemplate
+            tags          = { post.frontmatter.tags }
             title         = { post.frontmatter.title }
             featuredimage = { post.frontmatter.featuredimage } />
         </div>
