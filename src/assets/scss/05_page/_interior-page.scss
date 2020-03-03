@@ -1,9 +1,9 @@
 .p-interior-page {
-    .o-hero {
-        @include breakpoints ("tablet") {
-            padding-bottom: 100px;
-        }
+    .o-contact-form__container {
+        margin-top: 100px;
+    }
 
+    .o-hero {
         &__titles {
             margin-top: 40px;
             padding-left: 0;

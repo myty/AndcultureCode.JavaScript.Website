@@ -5,7 +5,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import CaseStudyHero from '../components/molecules/CaseStudyHero';
-import CaseStudyContent from '../components/molecules/CaseStudyContent';
+import CaseStudyPageContent from '../components/molecules/CaseStudyPageContent';
 
 export const CaseStudyTemplate = ({
   caseStudyContent
@@ -17,7 +17,7 @@ export const CaseStudyTemplate = ({
           title         = { caseStudyContent.title }
           featuredimage = { caseStudyContent.featuredimage }
           tags          = { caseStudyContent.tags }/>
-      <CaseStudyContent />
+      <CaseStudyPageContent />
     </div>
   )
 }
