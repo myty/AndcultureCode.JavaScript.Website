@@ -27,13 +27,13 @@ const CaseStudyHero = class extends React.Component {
         <div className = "o-hero__meta" style = { backgroundStyle }>
           <div className = "o-rhythm__container">
             <div className = "o-rhythm__row">
-              <div className = "o-hero__left">
-                <strong>Lorem Ipsum </strong>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              <div className = "o-hero__copy-container">
+                Hospital staffing is a headache. Patients appear whether you are properly staffed or not. How could PinnacleHealth nurse managers make real-time, data-driven decisions on how many nurses to have on hand, rather than best guesses using limited data locked in spreadsheets?
               </div>
               {this.props.tags && this.props.tags.length ? (
-                <div className = "o-hero__right">
+                <div className = "o-hero__list-container">
                   <h6>Services</h6>
-                  <ul>
+                  <ul className = "o-hero__list">
                     {this.props.tags.map(tag => (
                       <li key={tag + `tag`}>{tag}</li>
                     ))}
