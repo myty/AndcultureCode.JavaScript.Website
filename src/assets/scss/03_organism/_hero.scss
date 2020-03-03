@@ -16,7 +16,9 @@
     &.-case-study {
 
         .o-hero__title, 
-        .o-hero__image {
+        .o-hero__image, 
+        .o-hero__left, 
+        .o-hero__right {
             @include span-col(6);
         }
 
@@ -28,6 +30,15 @@
             
             img {
                 max-width: 99999px; 
+            }
+        }
+
+        .o-hero__meta {
+            color: get-color("primary", "white");
+            padding: 270px;
+
+            h6 {
+                color: get-color("primary", "white");
             }
         }
     }
@@ -194,7 +205,7 @@
         }
     }
 
-    h6 {
+    h6.-vert {
         @include font-size(14px);
         color: get-color("neutral", "light-gray");
         position: fixed;

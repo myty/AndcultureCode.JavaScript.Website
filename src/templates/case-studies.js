@@ -12,6 +12,7 @@ export const CaseStudyTemplate = ({
   description,
   tags,
   featuredimage,
+  color,
   title,
   helmet,
 }) => {
@@ -19,6 +20,7 @@ export const CaseStudyTemplate = ({
 
   return (
     <CaseStudyHero
+        color = { color }
         title          = { title }
         featuredimage = { featuredimage }
         tags          = { tags }/>
@@ -34,6 +36,7 @@ const CaseStudy = ({ data }) => {
       <Layout pageTitle = "pinnaclehealth pulse" hideNavigation = { true }>
         <div className = "p-interior-page">
           <CaseStudyTemplate
+            color = { post.frontmatter.color }
             tags          = { post.frontmatter.tags }
             title         = { post.frontmatter.title }
             featuredimage = { post.frontmatter.featuredimage } />
