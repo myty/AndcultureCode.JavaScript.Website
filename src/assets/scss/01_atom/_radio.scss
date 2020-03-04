@@ -24,12 +24,16 @@
 
         &:after {
             right: -19px;
-            top: 12px;
+            top: 4px;
             width: 16px;
             height: 16px;
             border-right: 2px solid get-color("primary", "fresh");
             border-top: 2px solid get-color("primary", "fresh");
             transform: rotate(45deg);
+
+            @include breakpoints("tablet") {
+                top: 12px;
+            }
         }
     }
 
@@ -70,12 +74,16 @@
 
             &:after {
                 right: -19px;
-                top: 12px;
+                top: 4px;
                 width: 16px;
                 height: 16px;
                 border-right: 2px solid get-color("primary", "fresh");
                 border-top: 2px solid get-color("primary", "fresh");
                 transform: rotate(45deg);
+
+                @include breakpoints("tablet") {
+                    top: 12px;
+                }
             }
         }
     }
