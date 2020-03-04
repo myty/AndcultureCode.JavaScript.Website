@@ -5,7 +5,9 @@ module.exports = {
       'andculture website',
   },
   plugins: [
-    `gatsby-plugin-mdx`,
+    'gatsby-plugin-transition-link',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',

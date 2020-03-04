@@ -78,11 +78,6 @@ const ContactForm = class extends React.Component {
                     progressCallback    = { this._updateProgressBar }
                     isSubmittedCallback = { this._isSubmitted }
                     lightTheme          = { this.props.lightTheme } />
-                <JobForm
-                    isActive            = { this.state.activeForm === "join-team" }
-                    progressCallback    = { this._updateProgressBar }
-                    isSubmittedCallback = { this._isSubmitted }
-                    lightTheme          = { this.props.lightTheme } />
                 <CatamaranForm
                     isActive            = { this.state.activeForm === "start-ups" }
                     progressCallback    = { this._updateProgressBar }
@@ -142,17 +137,6 @@ const ContactForm = class extends React.Component {
                                         value     = "quick-info"
                                         id        = "quick-info"/>
                                     <label htmlFor="quick-info">get quick info</label>
-                                </fieldset>
-                                <fieldset className = "-space">
-                                    <input
-                                        onChange  = { this._onFormTypeChange }
-                                        checked   = { this.state.activeForm === "join-team" }
-                                        className = { radioInputClass }
-                                        type      = "radio"
-                                        name      = "type"
-                                        value     = "join-team"
-                                        id        = "join-team"/>
-                                    <label htmlFor="join-team">join the team</label>
                                 </fieldset>
                                 <fieldset className = "-space">
                                     <input
