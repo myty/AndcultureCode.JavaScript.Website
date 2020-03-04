@@ -41,7 +41,9 @@ tags:
     </div>
 </div>
 <div class = "sketches">
-    <img class= "sketches__one" src = "../../../static/img/case-studies/pulse/sketchbook1.png" />
+    <div>
+    <img src = "../../../static/img/case-studies/pulse/sketchbook1.png" />
+    </div>
     <img class= "sketches__two" src = "../../../static/img/case-studies/pulse/sketchbook2.png" />
 </div>
 <div class = "o-rhythm__container">
