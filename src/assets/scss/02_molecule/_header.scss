@@ -131,20 +131,49 @@
     }
 }
 
-/* ----- Browser Support ----- */
-
-/* Display mix-blend-mode button for all browsers */
-.light-svg {
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  svg {
+    
+  }
+  
+  .row {
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .logo {
     display: block;
-}
-.dark-svg {
-    display: none;
-}
-
-/* Change button class (and SVG color) for IE and Edge only */
-_:-ms-lang(x), .light-svg {
-    display: none;
-}
-_:-ms-lang(x), .dark-svg {
-    display: block;
-}
+    top: 20px;
+    left: 20px;
+    width: 60px;
+  }
+  
+  .startLogo {
+    position: fixed;
+  }
+  
+  .altLogo {
+    position: absolute;
+  }
+  
+  .logo-green {
+    fill: #19a87c;
+  }
+  
+  .logo-white {
+    fill: white;
+  }
+  
+  .white {
+    background: white;
+  }
+  
+  .yellow {
+    background: #fcb43d;
+  }

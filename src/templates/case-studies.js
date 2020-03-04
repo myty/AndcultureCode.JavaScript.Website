@@ -8,7 +8,8 @@ import CaseStudyHero from '../components/molecules/CaseStudyHero';
 import CaseStudyPageContent from '../components/molecules/CaseStudyPageContent';
 
 export const CaseStudyTemplate = ({
-  caseStudyContent
+  caseStudyContent,
+  html
 }) => {
   return (
     <div>
@@ -17,7 +18,7 @@ export const CaseStudyTemplate = ({
           title         = { caseStudyContent.title }
           featuredimage = { caseStudyContent.featuredimage }
           tags          = { caseStudyContent.tags }/>
-      <CaseStudyPageContent />
+      <CaseStudyPageContent data = { html } />
     </div>
   )
 }
@@ -30,6 +31,7 @@ const CaseStudy = ({ data }) => {
       <Layout pageTitle = "pinnaclehealth pulse" hideNavigation = { true }>
         <div className = "p-interior-page">
           <CaseStudyTemplate
+            html = { post.html }
             caseStudyContent = { post.frontmatter }/>
         </div>
       </Layout>

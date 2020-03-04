@@ -13,25 +13,53 @@ tags:
   - web design
   - strategy
 ---
-![flavor wheel](/img/flavor_wheel.jpg)
 
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
-
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
-
-## What the updates mean to you
-
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
-
-* producers
-* roasters
-* importers/exporters
-* retailers
-* manufacturers
-* baristas
-
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
-
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
-
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+<div class = "o-rhythm__container">
+    <div class = "o-rhythm__col">
+        <div class = "m-case-study-page-content__copy-section -push">
+            <header>so what was broken?</header>
+            <p>PinnacleHealth (now UPMC Pinnacle) needed a partner to turn static reports into a platform that could easily give nurse managers data to make scheduling their team second nature.</p>
+            <p>Nobody wants to walk into a hospital and realize they don’t have enough nurses. Having too many nurses around isn’t great for the bottom line, either. Without the 10,000-foot view of how adequate staffing has been in recent days and months, how could a nurse manager realistically fill up a schedule with any confidence? PinnacleHealth needed to be focused on providing excellent patient care, not scheduling staff. The right platform can do help you schedule staff more effectively so you can provide excellent patient care.</p>
+        </div>
+    </div>
+</div>
+<div>
+    <img src = "../../../static/img/case-studies/pulse/nurse_hallway.png" />
+</div>
+<div class = "o-rhythm__container">
+    <div class = "m-case-study-page-content__copy-section">
+        <header>There’s a data side and a human side to this problem.</header>
+        <div class = "o-rhythm__row">
+            <h6 class = "reseach__header">Research</h6>
+            <div class = "research__copy">
+                <p>For data, we know a problem is easier to tackle if you can see it. We took what our partner provided and turned it into sketched concepts; we also input data into our visualization tools. Voila, now we could start to see shortcomings where before it was spreadsheets and hunches. </p>
+                <p>The human side led to interviewing each nurse manager. How do they schedule? What tools do they use to do that? What about their job drives them up a wall?*</p>
+                <p>That’s not enough, though. So we met with people from other parts of the hospital system so we could get the full picture.</p>
+                <div>* ”Is your job just like on ‘Grey’s Anatomy’?” likely is one.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>Image</div>
+<div class = "o-rhythm__container">
+    <div>What's the common thread</div>
+</div>
+<div>Image</div>
+<div class = "o-rhythm__container">
+    <div>Colored background - Sketches become thumbnails...</div>
+    <div>Image</div>
+</div>
+<div class = "o-rhythm__container">
+    <div>One of the biggest challenges</div>
+</div>
+<div>Image</div>
+<div class = "o-rhythm__container">
+    <div>Priorities and process</div>
+</div>
+<div>Image</div>
+<div class = "o-rhythm__container">
+    <div>Evolving the system to increase...</div>
+</div>
+<div class = "o-rhythm__container">
+    <div>Next project</div>
+</div>
