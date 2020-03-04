@@ -42,7 +42,7 @@
             }
         }
 
-        .research {
+        .content {
             &__header {
                 @include span-col(1);
                 color: get-color("neutral", "medium-gray");
