@@ -16,8 +16,7 @@ const Hero = class extends React.Component {
   }
 
   componentDidMount() {
-    
-    window.onscroll =()=>{
+    window.onscroll = () => {
       let height = window.innerHeight;
       const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
       height = height / 1;
