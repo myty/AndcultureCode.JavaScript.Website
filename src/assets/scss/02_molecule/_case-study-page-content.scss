@@ -57,5 +57,17 @@
                 }
             }
         }
+
+        .sketches {
+            position: relative;
+
+            &__one {
+                position: absolute;
+            }
+
+            &__two {
+                position: absolute;
+            }
+        }
     }
 }

@@ -40,9 +40,9 @@ tags:
         </div>
     </div>
 </div>
-<div class = "m-case-study-page-content__sketches">
-    <img class= "sketch1" src = "../../../static/img/case-studies/pulse/sketchbook1.png" />
-    <img class= "sketch2" src = "../../../static/img/case-studies/pulse/sketchbook2.png" />
+<div class = "sketches">
+    <img class= "sketches__one" src = "../../../static/img/case-studies/pulse/sketchbook1.png" />
+    <img class= "sketches__two" src = "../../../static/img/case-studies/pulse/sketchbook2.png" />
 </div>
 <div class = "o-rhythm__container">
     <div>What's the common thread</div>
