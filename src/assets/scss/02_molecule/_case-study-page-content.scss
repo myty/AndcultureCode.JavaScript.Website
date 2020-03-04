@@ -1,6 +1,8 @@
 .m-case-study-page-content {
-    &__copy-section {
-        padding: 252px 0;
+    padding-top: 252px;
+
+    &__section {
+        padding-bottom: 252px;
 
         @include span-col(12);
 
@@ -57,17 +59,20 @@
                 }
             }
         }
+    }
 
-        .sketches {
-            position: relative;
+    .sketch {
+        @include span-col(6);
+        box-shadow: none;
+        position: relative;
 
-            &__one {
-                position: absolute;
-            }
+        &.-one {
+            top: -160px;
+            right: -40px;
+        }
 
-            &__two {
-                position: absolute;
-            }
+        &.-two {
+
         }
     }
 }
