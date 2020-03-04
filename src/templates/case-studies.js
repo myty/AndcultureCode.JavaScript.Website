@@ -25,7 +25,6 @@ export const CaseStudyTemplate = ({
 
 const CaseStudy = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(post.frontmatter.tags);
 
   return (
       <Layout pageTitle = "pinnaclehealth pulse" hideNavigation = { true }>

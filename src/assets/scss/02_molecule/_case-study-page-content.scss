@@ -13,17 +13,39 @@
 
         header {
             @include font-size(60px);
+            color: get-color("primary", "after-hours");
             margin-bottom: 113px;
         }
 
         p {
             color: get-color("neutral", "medium-gray");
+            margin-bottom: 32px;
+        }
+
+        .easter-egg {
+            color: get-color("neutral", "light-gray");
+            margin-left: 18px;
+            position: relative;
+
+            &:before {
+                content: '';
+                background: url('../../../static/img/asterisk.png') no-repeat center center / contain;
+                height: 12px;
+                width: 12px;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 10px;
+                position: absolute;
+                left: -18px;
+            }
         }
 
         .research {
             &__header {
-                @include span-col(2);
+                @include span-col(1);
+                color: get-color("neutral", "medium-gray");
             }
+
             &__copy {
                 @include span-col(8);
                 @include push-col(2);
@@ -33,6 +55,18 @@
                 p:first-of-type {
                     margin-top: 0;
                 }
+            }
+        }
+
+        .sketches {
+            position: relative;
+
+            &__one {
+                position: absolute;
+            }
+
+            &__two {
+                position: absolute;
             }
         }
     }
