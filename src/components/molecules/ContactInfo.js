@@ -12,10 +12,14 @@ const ContactInfo = class extends React.Component {
                 <div className = "o-rhythm__row">
                     <div className = "m-contact-info__address">
                         <h6 className = "-secondary">Location</h6>
-                        <a href = { this.props.mapLink } target = "_blank">
-                            { this.props.streetAddress }
-                        </a>
-                        <a href={`tel:${this.props.phoneNumber}`}>{ this.props.phoneNumber }</a>
+                        <div>
+                            <a href = { this.props.mapLink } target = "_blank">
+                                { this.props.streetAddress }
+                            </a>
+                        </div>
+                        <div>
+                            <a href={`tel:${this.props.phoneNumber}`}>{ this.props.phoneNumber }</a>
+                        </div>
                     </div>
                     <div className = "m-contact-info__social">
                         <h6 className = "-secondary">Social</h6>

@@ -17,8 +17,8 @@ h6 {
 }
 
 h1 {
-    @include font-size(44px);
-    @include line-height(48px);
+    @include font-size(54px);
+    @include line-height(54px);
 
     @include breakpoints("tablet") {
         @include font-size(85px);
@@ -106,6 +106,6 @@ a {
     text-decoration: none;
 
     &:hover {
-        color: get-color("neutral", "gray");
+        opacity: .6;;
     }
 }

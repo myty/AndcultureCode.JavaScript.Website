@@ -58,34 +58,32 @@ const CaseStudy = class extends React.Component {
             <article className = { caseStudyClass } style = { caseStudyStyle } key = { this.props.post.id } onMouseLeave = { this._handleUnhover }>
                 <div className = "m-case-study__block -top"></div>
                 <div className = "o-rhythm__container">
-                    <div className = "o-rhythm__row">
                     <div className = "m-case-study__image-container">
-                            { this.props.post.frontmatter.featuredimage ? (
-                            <div className = "m-case-study__image">
-                                <img src = { this.props.post.frontmatter.featuredimage.childImageSharp.fluid.src } />
-                            </div>
-                            ) : null }
-                            <div className = "m-case-study__texture">
-                                <img src = { this.props.post.frontmatter.texture } />
-                            </div>
+                        { this.props.post.frontmatter.featuredimage ? (
+                        <div className = "m-case-study__image">
+                            <img src = { this.props.post.frontmatter.featuredimage.childImageSharp.fluid.src } />
                         </div>
-                        <div className = "m-case-study__content">
-                            <div className = "m-case-study__content-inner">
-                                <div className = "m-case-study__count">
-                                    { this.props.count }<span>/{ this.props.total }</span>
-                                </div>
-                                <h5>{ this.props.post.frontmatter.partnerName }</h5>
-                                <p>
-                                    { this.props.post.frontmatter.title }
-                                </p>
-                                <CoverTransitionLink
-                                    onMouseEnter = { this._handleHover }
-                                    className = "a-button"
-                                    to        = { this.props.post.fields.slug }
-                                    style     = { linkStyle }>
-                                    See How
-                                </CoverTransitionLink>
+                        ) : null }
+                        <div className = "m-case-study__texture">
+                            <img src = { this.props.post.frontmatter.texture } />
+                        </div>
+                    </div>
+                    <div className = "m-case-study__content">
+                        <div className = "m-case-study__content-inner">
+                            <div className = "m-case-study__count">
+                                { this.props.count }<span>/{ this.props.total }</span>
                             </div>
+                            <h5>{ this.props.post.frontmatter.partnerName }</h5>
+                            <p>
+                                { this.props.post.frontmatter.title }
+                            </p>
+                            <CoverTransitionLink
+                                onMouseEnter = { this._handleHover }
+                                className = "a-button"
+                                to        = { this.props.post.fields.slug }
+                                style     = { linkStyle }>
+                                See How
+                            </CoverTransitionLink>
                         </div>
                     </div>
                 </div>

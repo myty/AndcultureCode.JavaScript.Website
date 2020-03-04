@@ -33,7 +33,7 @@ const Hero = class extends React.Component {
     }
 
     return (
-      <div className = "o-hero">
+      <div className = "o-hero -gradient">
         <div className = "o-hero__background -jigglydoo" >
           <JigglyDoo />
           {/* <svg width="900" height="900" viewBox="0 0 600 600">

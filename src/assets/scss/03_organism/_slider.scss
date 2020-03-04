@@ -5,6 +5,10 @@
         height: 354px;
     }
 
+    &__container {
+        margin-bottom: 120px;
+    }
+
     &:before {
         content: '';
         background: get-color("primary", "white");

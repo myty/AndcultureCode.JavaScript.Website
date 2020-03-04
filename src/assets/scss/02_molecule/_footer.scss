@@ -27,7 +27,11 @@
 
     &__contact, 
     &__social {
-        display: inline-block;
+        display: block;
+
+        @include breakpoints("tablet") {
+            display: inline-block;
+        }
     }
 
     &__contact {
