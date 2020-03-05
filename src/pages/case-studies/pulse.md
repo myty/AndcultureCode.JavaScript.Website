@@ -124,7 +124,7 @@ tags:
 </div>
 <div class = "o-rhythm__container">
   <div class = "m-case-study-page-content__copy-section">
-    <h6 class = "content__header -desktop-only">Iteration</h6>
+    <h6 class = "content__header -mobile-only">Iteration</h6>
     <header class = "-push-three">Evolving the system to increase effectiveness</header>
     <div class = "o-rhythm__row">
       <h6 class = "content__header -desktop-only">Iteration</h6>
