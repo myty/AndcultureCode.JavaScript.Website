@@ -1,15 +1,7 @@
 .m-case-study-page-content {
+
     &__copy-section {
         padding: 252px 0;
-
-        @include span-col(12);
-
-        &.-push {
-            @include breakpoints("tablet") {
-                @include span-col(8);
-                @include push-col(1);
-            }
-        }
 
         header {
             @include font-size(60px);
