@@ -29,9 +29,10 @@ tags:
 </div>
 <div class = "o-rhythm__container">
     <div class = "m-case-study-page-content__copy-section">
+        <h6 class = "content__header -mobile-only">Research</h6>
         <header class = "-push-three">There’s a data side and a human side to this problem.</header>
         <div class = "o-rhythm__row">
-            <h6 class = "content__header">Research</h6>
+            <h6 class = "content__header -desktop-only">Research</h6>
             <div class = "content__copy">
                 <p>For data, we know a problem is easier to tackle if you can see it. We took what our partner provided and turned it into sketched concepts; we also input data into our visualization tools. Voila, now we could start to see shortcomings where before it was spreadsheets and hunches. </p>
                 <p>The human side led to interviewing each nurse manager. How do they schedule? What tools do they use to do that? What about their job drives them up a wall?*</p>
@@ -55,9 +56,10 @@ tags:
 </div>
 <div class = "o-rhythm__container">
   <div class = "m-case-study-page-content__copy-section">
+    <h6 class = "content__header -mobile-only">Synthesis</h6>
     <header class = "-push-three">What’s the common thread we’re seeing?</header>
     <div class = "o-rhythm__row">
-      <h6 class = "content__header">Synthesis</h6>
+      <h6 class = "content__header -desktop-only">Synthesis</h6>
       <div class = "content__copy">
         <p>What kind of issues do all of these nurse managers have? The Synthesis stage makes it clear what’s a shared pain and what’s an isolated incident.</p>
         <p>We pinned interview profiles on a wall and highlighted answers that point to those shared pain points. At the same time, we mapped out PinnacleHealth’s processes, too, so it was a tangible system and not just a set of technical paragraphs in a dusty binder.</p>
@@ -88,9 +90,10 @@ tags:
 </div>
 <div class = "o-rhythm__container">
   <div class = "m-case-study-page-content__copy-section">
+    <h6 class = "content__header -mobile-only">User Testing</h6>
     <header class = "-push-three">One of the biggest challenges in designing an experience isn’t making the idea into a reality...</header>
     <div class = "o-rhythm__row">
-      <h6 class = "content__header">User Testing</h6>
+      <h6 class = "content__header -desktop-only">User Testing</h6>
       <div class = "content__copy">
         <p>It’s getting people to use it! That’s why we gathered a small group of (brave?) initial users to try this new platform, something way out of the box compared to the static reports they had grown accustomed to. We needed to watch them use it, and they needed to see how we turned a bunch of spreadsheets into an accessible, chart-filled, problem-solving dashboard.</p>
         <p>We observed. We interviewed. We met with nurse managers and administrators to discuss how they used the platform, and more importantly, what shortcomings it may have at this early stage. Was something confusing? Was a task more challenging to complete than we expected? </p>
@@ -100,13 +103,14 @@ tags:
   </div>
 </div>
 <div>
-    <img src = "../../../static/img/case-studies/pulse/hand_on_ipad.png" />
+    <img src = "../../../static/img/case-studies/pulse/pulse_block_doodle.jpg" />
 </div>
 <div class = "o-rhythm__container">
   <div class = "m-case-study-page-content__copy-section">
+    <h6 class = "content__header -mobile-only">Next Steps</h6>
     <header class = "-push-three">Priorities and process moving forward</header>
     <div class = "o-rhythm__row">
-      <h6 class = "content__header">Next Steps</h6>
+      <h6 class = "content__header -desktop-only">Next Steps</h6>
       <div class = "content__copy">
         <p>Can we be candid? It was pretty f’ing cool to see the positive reaction of hard-working nurse managers knowing their job was made easier. But we weren’t done yet. Beyond the initial feedback, we needed to understand what was a functional priority for continued effectiveness, and what was simply additional value.</p>
         <p>We didn’t want to lose a single valuable suggestion—all of those interviews matter—as these help us explore future feature expansions. It’s an ongoing process.</p>
@@ -120,9 +124,10 @@ tags:
 </div>
 <div class = "o-rhythm__container">
   <div class = "m-case-study-page-content__copy-section">
+    <h6 class = "content__header -desktop-only">Iteration</h6>
     <header class = "-push-three">Evolving the system to increase effectiveness</header>
     <div class = "o-rhythm__row">
-      <h6 class = "content__header">Iteration</h6>
+      <h6 class = "content__header -desktop-only">Iteration</h6>
       <div class = "content__copy">
         <p>We had initial user feedback plus data, and now we could update the platform design. We tweaked how the info was presented and modified the navigation. Charts were added to make the experience more comprehensive; you really could get a sense of how the entire hospital operated.*</p>
         <p>We didn’t veer off our initial guiding principles. We just worked with our partner to evolve the system into an even more effective version to address their problem.</p>
@@ -133,6 +138,6 @@ tags:
 <div class = "m-case-study-page-content__next">
   <div class = "o-rhythm__container">
     <h6>Next project</h6>
-    <h3>Commonwealth Charter Academy</h3>
+    <h2>Commonwealth Charter Academy</h2>
   </div>
 </div>

@@ -10,20 +10,41 @@
     }
 
     &__copy-section {
-        padding: 252px 0;
+        padding: 80px 0;
+
+        @include breakpoints("tablet") {
+            padding: 252px 0;
+        }
 
         &.-with-image {
             position: relative;
             padding: 0;
 
+            .content__image {
+                display: none;
+
+                @include breakpoints("tablet") {
+                    display: block;
+                }
+            }
+
             .content__copy {
-                padding: 252px 0 150px 0;
+                padding: 80px 0;
+
+                @include breakpoints("tablet") {
+                    padding: 252px 0 150px 0;
+                }
             }
         }
 
         header {
-            @include font-size(60px);
-            margin-bottom: 113px;
+            @include font-size(40px);
+            margin-bottom: 40px;
+
+            @include breakpoints("tablet") {
+                @include font-size(60px);
+                margin-bottom: 113px;
+            }
         }
 
         p {
@@ -53,7 +74,13 @@
             &__header {
                 @include span-col(2);
                 color: get-color("neutral", "medium-gray");
+                margin-bottom: 20px;
+                margin-left: 0;
                 font-weight: 600;
+
+                @include breakpoints("tablet") {
+                    margin-bottom: 0;
+                }
             }
 
             &__image {
@@ -64,14 +91,22 @@
             }
 
             &__copy {
-                @include span-col(8);
-                @include push-col(1);
+                @include span-col(12);
                 position: relative;
                 top: -8px;
+                margin-left: 0;
+
+                @include breakpoints("tablet") {
+                    @include span-col(8);
+                    @include push-col(1);
+                }
 
                 &.-left {
-                    @include push-col(0);
-                    @include span-col(7);
+
+                    @include breakpoints("tablet") { 
+                        @include push-col(0);
+                        @include span-col(7);
+                    }
                 }
 
                 p:first-of-type {
@@ -83,30 +118,49 @@
 
     &__next {
         background: get-color("neutral", "gray");
-        padding: 157px 0 335px 0;
+        padding: 40px 0 80px 0;
+
+        @include breakpoints("tablet") {
+            padding: 157px 0 335px 0;
+        }
 
         h6, 
-        h3 {
+        h2 {
             color: get-color("primary", "white");
         }
 
         h6 {
-            margin-bottom: 60px;
+            margin-bottom: 20px;
+
+            @include breakpoints("tablet") {
+                margin-bottom: 60px;
+            }
         }
     }
 
     .sketch {
-        @include span-col(6);
+        @include span-col(12);
         box-shadow: none;
         position: relative;
 
+        @include breakpoints("tablet") {
+            @include span-col(6);
+        }
+
         &.-one {
-            top: -160px;
-            right: -40px;
+
+            @include breakpoints("tablet") {
+                top: -160px;
+                right: -40px;
+            }
         }
 
         &.-two {
+            top: -40px; 
 
+            @include breakpoints("tablet") {
+                top: 0;
+            }
         }
     }
 }

@@ -28,7 +28,7 @@ h1 {
 
 h2 {
     @include font-size("medium-large");
-    @include line-height("medium-small");
+    @include line-height(46px);
 
     @include breakpoints("tablet") {
         @include font-size("larger");
@@ -90,7 +90,7 @@ h6 {
 
 p {
     @include font-size("base");
-    @include line-height("smaller");
+    @include line-height(24px);
 
     @include breakpoints("tablet") {
         @include font-size("small");
