@@ -103,7 +103,7 @@
 
                 &.-left {
 
-                    @include breakpoints("tablet") { 
+                    @include breakpoints("tablet") {
                         @include push-col(0);
                         @include span-col(7);
                     }
@@ -117,11 +117,28 @@
     }
 
     &__image {
-        display: block;
-        max-width: 99999px;
+        margin: 0;
+
+        &-container {
+            display: flex;
+        }
 
         &.-half {
-            @include span-col(6);
+            min-width: 0;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: calc(50% - 12px);
+            max-width: calc(50% - 12px);
+            width: 100%;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+
+            @include breakpoints("tablet") {
+                max-width: 99999px;
+            }
         }
     }
 
@@ -133,7 +150,7 @@
             padding: 157px 0 335px 0;
         }
 
-        h6, 
+        h6,
         h2 {
             color: get-color("primary", "white");
         }
@@ -165,7 +182,7 @@
         }
 
         &.-two {
-            top: -40px; 
+            top: -40px;
 
             @include breakpoints("tablet") {
                 top: 0;

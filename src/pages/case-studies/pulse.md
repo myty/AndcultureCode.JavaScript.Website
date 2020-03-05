@@ -14,7 +14,7 @@ tags:
   - strategy
 ---
 
-<div className = "o-rhythm__row">
+<div class = "m-case-study-page-content__image-container">
   <div class = "m-case-study-page-content__image -half">
     <img src = "../../../static/img/case-studies/pulse/schedule.png" />
   </div>
