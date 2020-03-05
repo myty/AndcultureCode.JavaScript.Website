@@ -24,15 +24,19 @@ tags:
   </div>
 </div>
 <div class = "o-rhythm__container">
-  <div class = "o-rhythm__col">
-      <div class = "m-case-study-page-content__copy-section -push-one">
-          <header>so what was broken?</header>
-          <p>PinnacleHealth (now UPMC Pinnacle) needed a partner to turn static reports into a platform that could easily give nurse managers data to make scheduling their team second nature.</p>
-          <p>Nobody wants to walk into a hospital and realize they don’t have enough nurses. Having too many nurses around isn’t great for the bottom line, either. Without the 10,000-foot view of how adequate staffing has been in recent days and months, how could a nurse manager realistically fill up a schedule with any confidence? PinnacleHealth needed to be focused on providing excellent patient care, not scheduling staff. The right platform can do help you schedule staff more effectively so you can provide excellent patient care.</p>
+  <div class = "m-case-study-page-content__copy-section">
+    <h6 class = "content__header -mobile-only">Synthesis</h6>
+    <header>What’s the common thread we’re seeing?</header>
+    <div class = "o-rhythm__row">
+      <div class = "content__copy">
+        <p>What kind of issues do all of these nurse managers have? The Synthesis stage makes it clear what’s a shared pain and what’s an isolated incident.</p>
+        <p>We pinned interview profiles on a wall and highlighted answers that point to those shared pain points. At the same time, we mapped out PinnacleHealth’s processes, too, so it was a tangible system and not just a set of technical paragraphs in a dusty binder.</p>
+        <p>With all of that together, we went over our research and sketches to come up with guiding principles and design constraints—here’s what’s important, and here’s what we have to work with. Having a partnership approach helps immensely here to make sure there aren’t unrealistic expectations or missed goals.</p>
       </div>
+      <h6 class = "content__header -desktop-only">Synthesis</h6>
+    </div>
   </div>
 </div>
-
 <div>
   <img src = "../../../static/img/case-studies/pulse/nurse_hallway.png" />
 </div>

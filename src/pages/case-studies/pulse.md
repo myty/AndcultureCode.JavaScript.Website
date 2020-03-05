@@ -43,7 +43,7 @@ tags:
             <h6 class = "content__header -desktop-only">Research</h6>
             <div class = "content__copy">
                 <p>For data, we know a problem is easier to tackle if you can see it. We took what our partner provided and turned it into sketched concepts; we also input data into our visualization tools. Voila, now we could start to see shortcomings where before it was spreadsheets and hunches. </p>
-                <p>The human side led to interviewing each nurse manager. How do they schedule? What tools do they use to do that? What about their job drives them up a wall?*</p>
+                <p>The human side led to interviewing each nurse manager. How do they schedule? What tools do they use to do that? <span class = "easter-egg__right -no-gray">What about their job drives them up a wall?</span></p>
                 <p>That’s not enough, though. So we met with people from other parts of the hospital system so we could get the full picture.</p>
                 <div class = "easter-egg">”Is your job just like on ‘Grey’s Anatomy’?” likely is one.</div>
             </div>
