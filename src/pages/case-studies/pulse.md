@@ -54,33 +54,81 @@ tags:
     </div>
 </div>
 <div class = "o-rhythm__container">
-    <div class = "m-case-study-page-content__section">
-        <header>What’s the common thread we’re seeing?</header>
-        <div class = "o-rhythm__row">
-            <h6 class = "content__header">Synthesis</h6>
-            <div class = "content__copy">
-                <p>What kind of issues do all of these nurse managers have? The Synthesis stage makes it clear what’s a shared pain and what’s an isolated incident.</p>
-                <p>We pinned interview profiles on a wall and highlighted answers that point to those shared pain points. At the same time, we mapped out PinnacleHealth’s processes, too, so it was a tangible system and not just a set of technical paragraphs in a dusty binder.</p>
-                <p>With all of that together, we went over our research and sketches to come up with guiding principles and design constraints—here’s what’s important, and here’s what we have to work with. Having a partnership approach helps immensely here to make sure there aren’t unrealistic expectations or missed goals.</p>
-            </div>
-        </div>
+  <div class = "m-case-study-page-content__copy-section">
+    <header class = "-push-three">What’s the common thread we’re seeing?</header>
+    <div class = "o-rhythm__row">
+      <h6 class = "content__header">Synthesis</h6>
+      <div class = "content__copy">
+        <p>What kind of issues do all of these nurse managers have? The Synthesis stage makes it clear what’s a shared pain and what’s an isolated incident.</p>
+        <p>We pinned interview profiles on a wall and highlighted answers that point to those shared pain points. At the same time, we mapped out PinnacleHealth’s processes, too, so it was a tangible system and not just a set of technical paragraphs in a dusty binder.</p>
+        <p>With all of that together, we went over our research and sketches to come up with guiding principles and design constraints—here’s what’s important, and here’s what we have to work with. Having a partnership approach helps immensely here to make sure there aren’t unrealistic expectations or missed goals.</p>
+      </div>
     </div>
+  </div>
 </div>
-<div>Image</div>
-<div class = "o-rhythm__container">
-    <div>Colored background - Sketches become thumbnails...</div>
-    <div>Image</div>
+<div>
+    <img src = "../../../static/img/case-studies/pulse/nurse_station.png" />
+</div>
+<div class = "m-case-study-page-content__color-block">
+  <div class = "o-rhythm__container">
+    <div class = "m-case-study-page-content__copy-section -with-image">
+      <div class = "o-rhythm__row">
+        <div class = "content__copy -left">
+          <header>Sketches become thumbnails. Thumbnails become mockups.</header>
+          <p>What was once a loose concept from PinnacleHealth to give nurse managers a powerful scheduling tool was turning into a beautifully designed healthcare management experience.</p> 
+          <p>Undoubtedly, healthcare’s regulations and incredible pace made this a unique challenge. But that only made us want to take even more care to ensure each detail was covered. We wanted to deliver a great experience, not just a scheduling tool. Well-designed experiences get used, day in and day out, even when things get hectic. And what hospital isn’t hectic?</p>
+        </div>
+        <div class = "content__image">
+          <img src = "../../../static/img/case-studies/pulse/white_sketches.png" />
+        </div>
+      </div>
+      <img src = "../../../static/img/case-studies/pulse/unit-workload-safari.png" />
+    </div>
+  </div>
 </div>
 <div class = "o-rhythm__container">
-    <div>One of the biggest challenges</div>
+  <div class = "m-case-study-page-content__copy-section">
+    <header class = "-push-three">One of the biggest challenges in designing an experience isn’t making the idea into a reality...</header>
+    <div class = "o-rhythm__row">
+      <h6 class = "content__header">User Testing</h6>
+      <div class = "content__copy">
+        <p>It’s getting people to use it! That’s why we gathered a small group of (brave?) initial users to try this new platform, something way out of the box compared to the static reports they had grown accustomed to. We needed to watch them use it, and they needed to see how we turned a bunch of spreadsheets into an accessible, chart-filled, problem-solving dashboard.</p>
+        <p>We observed. We interviewed. We met with nurse managers and administrators to discuss how they used the platform, and more importantly, what shortcomings it may have at this early stage. Was something confusing? Was a task more challenging to complete than we expected? </p>
+        <p>A tip: Work with companies that don’t assume the first version of what they produced is perfect.* It should be about testing and evolving.</p>
+      </div>
+    </div>
+  </div>
 </div>
-<div>Image</div>
-<div class = "o-rhythm__container">
-    <div>Priorities and process</div>
+<div>
+    <img src = "../../../static/img/case-studies/pulse/hand_on_ipad.png" />
 </div>
-<div>Image</div>
 <div class = "o-rhythm__container">
-    <div>Evolving the system to increase...</div>
+  <div class = "m-case-study-page-content__copy-section">
+    <header class = "-push-three">Priorities and process moving forward</header>
+    <div class = "o-rhythm__row">
+      <h6 class = "content__header">Next Steps</h6>
+      <div class = "content__copy">
+        <p>Can we be candid? It was pretty f’ing cool to see the positive reaction of hard-working nurse managers knowing their job was made easier. But we weren’t done yet. Beyond the initial feedback, we needed to understand what was a functional priority for continued effectiveness, and what was simply additional value.</p>
+        <p>We didn’t want to lose a single valuable suggestion—all of those interviews matter—as these help us explore future feature expansions. It’s an ongoing process.</p>
+        <p>We’re not just dropping something we created in your lap and saying “best of luck!” That’s not a partnership. That’s a mother-in-law.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+    <img src = "../../../static/img/case-studies/pulse/data-leveling.png" />
+</div>
+<div class = "o-rhythm__container">
+  <div class = "m-case-study-page-content__copy-section">
+    <header class = "-push-three">Evolving the system to increase effectiveness</header>
+    <div class = "o-rhythm__row">
+      <h6 class = "content__header">Iteration</h6>
+      <div class = "content__copy">
+        <p>We had initial user feedback plus data, and now we could update the platform design. We tweaked how the info was presented and modified the navigation. Charts were added to make the experience more comprehensive; you really could get a sense of how the entire hospital operated.*</p>
+        <p>We didn’t veer off our initial guiding principles. We just worked with our partner to evolve the system into an even more effective version to address their problem.</p>
+      </div>
+    </div>
+  </div>
 </div>
 <div class = "o-rhythm__container">
     <div>Next project</div>

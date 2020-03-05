@@ -1,16 +1,32 @@
 .m-case-study-page-content {
 
+    img {
+        box-shadow: none !important;
+    }
+
+    &__color-block {
+        background: #76c1b9;
+        color: get-color("primary", "white");
+    }
+
     &__copy-section {
         padding: 252px 0;
 
+        &.-with-image {
+            position: relative;
+            padding: 0;
+
+            .content__copy {
+                padding: 252px 0 150px 0;
+            }
+        }
+
         header {
             @include font-size(60px);
-            color: get-color("primary", "after-hours");
             margin-bottom: 113px;
         }
 
         p {
-            color: get-color("neutral", "medium-gray");
             margin-bottom: 32px;
         }
 
@@ -33,9 +49,18 @@
         }
 
         .content {
+
             &__header {
                 @include span-col(1);
                 color: get-color("neutral", "medium-gray");
+                font-weight: 600;
+            }
+
+            &__image {
+                width: 50%;
+                position: absolute;
+                right: -14%;
+                margin-top: 60px;
             }
 
             &__copy {
@@ -43,6 +68,11 @@
                 @include push-col(2);
                 position: relative;
                 top: -8px;
+
+                &.-left {
+                    @include push-col(0);
+                    @include span-col(7);
+                }
 
                 p:first-of-type {
                     margin-top: 0;
