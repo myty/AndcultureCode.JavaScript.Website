@@ -1,6 +1,4 @@
 import React from 'react';
-import ScheduleImage from '../../../static/img/case-studies/pulse/schedule.png'
-import PeopleRolesImage from '../../../static/img/case-studies/pulse/peopleroles.png'
 
 const CaseStudyHero = class extends React.Component {
   constructor(props) {
@@ -30,7 +28,7 @@ const CaseStudyHero = class extends React.Component {
           <div className = "o-rhythm__container">
             <div className = "o-rhythm__row">
               <div className = "o-hero__copy-container">
-                Hospital staffing is a headache. Patients appear whether you are properly staffed or not. How could PinnacleHealth nurse managers make real-time, data-driven decisions on how many nurses to have on hand, rather than best guesses using limited data locked in spreadsheets?
+                { this.props.heroIntroCopy }
               </div>
               {this.props.tags && this.props.tags.length ? (
                 <div className = "o-hero__list-container">
@@ -44,14 +42,6 @@ const CaseStudyHero = class extends React.Component {
               ) : null}
               </div>
             </div>
-        </div>
-        <div className = "o-rhythm__row">
-          <div className = "o-hero__image">
-            <img src = { ScheduleImage } />
-          </div>
-          <div className = "o-hero__image">
-            <img src = { PeopleRolesImage } />
-          </div>
         </div>
       </div>
     )

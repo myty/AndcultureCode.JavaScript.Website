@@ -17,6 +17,7 @@ export const CaseStudyTemplate = ({
           color         = { caseStudyContent.color }
           title         = { caseStudyContent.title }
           featuredimage = { caseStudyContent.featuredimage }
+          heroIntroCopy = { caseStudyContent.heroIntroCopy }
           tags          = { caseStudyContent.tags }/>
       <CaseStudyPageContent data = { html } />
     </div>
@@ -57,6 +58,7 @@ export const pageQuery = graphql`
         }
         color
         tags
+        heroIntroCopy
       }
     }
   }

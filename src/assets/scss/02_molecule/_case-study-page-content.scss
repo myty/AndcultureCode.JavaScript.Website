@@ -81,11 +81,20 @@
         }
     }
 
+    &__image {
+        display: block;
+        max-width: 99999px;
+
+        &.-half {
+            @include span-col(6);
+        }
+    }
+
     &__next {
         background: get-color("neutral", "gray");
         padding: 157px 0 335px 0;
 
-        h6, 
+        h6,
         h3 {
             color: get-color("primary", "white");
         }
