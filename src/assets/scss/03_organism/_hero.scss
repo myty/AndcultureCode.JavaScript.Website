@@ -42,10 +42,12 @@
 
             &-container {
                 @include span-col(12);
+                margin-top: 40px;
 
                 @include breakpoints("tablet") {
                     @include span-col(1);
                     @include push-col(2);
+                    margin-top: 0;
                 }
             }
         }
@@ -54,11 +56,19 @@
         .o-hero__image,
         .o-hero__left,
         .o-hero__right {
-            @include span-col(6);
+            @include span-col(12);
+
+            @include breakpoints("tablet") {
+                @include span-col(6);
+            }
         }
 
         .o-hero__title {
-            padding-top: 300px;
+            padding-top: 160px;
+
+            @include breakpoints("tablet") {
+                padding-top: 300px;
+            }
         }
 
         .o-hero__image {
@@ -66,12 +76,21 @@
 
             img {
                 display: block;
-                max-width: 99999px;
+                max-width: 100%;
+
+                @include breakpoints("tablet") {
+                    max-width: 99999px;
+                }
             }
         }
 
         .o-hero__meta {
             color: get-color("primary", "white");
+            padding: 80px 0;
+
+            @include breakpoints("tablet") {
+                padding: 0;;
+            }
 
             h6 {
                 color: get-color("primary", "white");

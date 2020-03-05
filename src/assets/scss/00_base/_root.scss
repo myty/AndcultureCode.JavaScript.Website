@@ -21,3 +21,19 @@ img {
         @include push-col(3);
     }
   }
+
+  .-mobile-only {
+      display: block;
+
+    @include breakpoints("tablet") {
+        display: none;
+    }
+  }
+
+  .-desktop-only {
+      display: none;
+
+    @include breakpoints("tablet") {
+        display: block;
+    }
+  }
