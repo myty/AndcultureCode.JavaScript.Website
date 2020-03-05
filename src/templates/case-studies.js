@@ -28,7 +28,7 @@ const CaseStudy = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-      <Layout pageTitle = "pinnaclehealth pulse" hideNavigation = { true }>
+      <Layout pageTitle = { post.frontmatter.partnerName } hideNavigation = { true }>
         <div className = "p-interior-page">
           <CaseStudyTemplate
             html = { post.html }
@@ -48,6 +48,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        partnerName
         description
         featuredimage {
           childImageSharp {

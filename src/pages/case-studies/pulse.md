@@ -16,10 +16,10 @@ tags:
 
 <div class = "m-case-study-page-content__image-container">
   <div class = "m-case-study-page-content__image -half">
-    <img src = "../../../static/img/case-studies/pulse/schedule.png" />
+    <img src = "../../../static/img/case-studies/pulse/schedule.jpg" />
   </div>
   <div class = "m-case-study-page-content__image -half">
-    <img src = "../../../static/img/case-studies/pulse/peopleroles.png" />
+    <img src = "../../../static/img/case-studies/pulse/peopleroles.jpg" />
   </div>
 </div>
 <div class = "o-rhythm__container">
