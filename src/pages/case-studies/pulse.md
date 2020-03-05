@@ -130,6 +130,9 @@ tags:
     </div>
   </div>
 </div>
-<div class = "o-rhythm__container">
-    <div>Next project</div>
+<div class = "m-case-study-page-content__next">
+  <div class = "o-rhythm__container">
+    <h6>Next project</h6>
+    <h3>Commonwealth Charter Academy</h3>
+  </div>
 </div>

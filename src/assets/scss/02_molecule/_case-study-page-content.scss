@@ -51,7 +51,7 @@
         .content {
 
             &__header {
-                @include span-col(1);
+                @include span-col(2);
                 color: get-color("neutral", "medium-gray");
                 font-weight: 600;
             }
@@ -65,7 +65,7 @@
 
             &__copy {
                 @include span-col(8);
-                @include push-col(2);
+                @include push-col(1);
                 position: relative;
                 top: -8px;
 
@@ -78,6 +78,20 @@
                     margin-top: 0;
                 }
             }
+        }
+    }
+
+    &__next {
+        background: get-color("neutral", "gray");
+        padding: 157px 0 335px 0;
+
+        h6, 
+        h3 {
+            color: get-color("primary", "white");
+        }
+
+        h6 {
+            margin-bottom: 60px;
         }
     }
 
