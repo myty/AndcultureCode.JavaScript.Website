@@ -86,6 +86,15 @@
         }
 
         .content {
+            &__easter-egg {
+                @include span-col(12);
+
+                @include breakpoints("tablet") {
+                    @include span-col(2);
+                    @include push-col(1);
+                }
+            }
+
 
             &__header {
                 @include span-col(2);

@@ -28,11 +28,9 @@ tags:
     <header class = "-push-one">so what was broken?</header>
     <div class = "o-rhythm__row">
       <div class = "content__copy">
-        <p>What kind of issues do all of these nurse managers have? The Synthesis stage makes it clear what’s a shared pain and what’s an isolated incident.</p>
-        <p>We pinned interview profiles on a wall and highlighted answers that point to those shared pain points. At the same time, we mapped out PinnacleHealth’s processes, too, so it was a tangible system and not just a set of technical paragraphs in a dusty binder.</p>
-        <p>With all of that together, we went over our research and sketches to come up with guiding principles and design constraints—here’s what’s important, and here’s what we have to work with. Having a partnership approach helps immensely here to make sure there aren’t unrealistic expectations or missed goals.</p>
+        <p>In a word, magazines. None of the content was digital — it was all print. Kids Discover saw that the way to expand reach was through online subscriptions and content syndication. For obvious reasons, the current format was not going to support these growth opportunities. Kids Discover needed a partner to do a heavy lift — take all this offline content, organize it, architect both front- and back-end platforms and design user-friendly interfaces and then build it to support new business models in a scalable way. <span class = "easter-egg__right">Easy peasy.</span></p>
       </div>
-      <div class = "-push-one">Easter egg</div>
+      <div class = "content__easter-egg easter-egg">Not really. But we love a good challenge.</div>
     </div>
   </div>
 </div>
@@ -42,14 +40,12 @@ tags:
 <div class = "o-rhythm__container">
     <div class = "m-case-study-page-content__copy-section">
         <h6 class = "content__header -mobile-only">Research</h6>
-        <header class = "-push-three">There’s a data side and a human side to this problem.</header>
+        <header class = "-push-three">Okay, so how did andculture tackle the problem?</header>
         <div class = "o-rhythm__row">
             <h6 class = "content__header -desktop-only">Research</h6>
             <div class = "content__copy">
-                <p>For data, we know a problem is easier to tackle if you can see it. We took what our partner provided and turned it into sketched concepts; we also input data into our visualization tools. Voila, now we could start to see shortcomings where before it was spreadsheets and hunches. </p>
-                <p>The human side led to interviewing each nurse manager. How do they schedule? What tools do they use to do that? What about their job drives them up a wall?*</p>
-                <p>That’s not enough, though. So we met with people from other parts of the hospital system so we could get the full picture.</p>
-                <div class = "easter-egg">”Is your job just like on ‘Grey’s Anatomy’?” likely is one.</div>
+                <p>To dig into the education space, we held two teacher roundtable discussions, attended industry-related conferences, interviewed educational consultants and surveyed teachers across the country. We focus this qualitative and quantitative research on current and future states of education, access to technology in the modern classroom and other educational trends.</p>
+                <p>Once business needs were defined, we kicked off a second phase of research in 10 schools throuout the Northeastern U.S. Through observations and interviews, we learned how supplemental content is applied in the classroom and how students and teachers used and interacted with technology. With all of these findings, we were able to make informed product recommendations and start to write rules (e.g., “must make reading an active process”)</p>
             </div>
         </div>
       </div>
@@ -69,14 +65,12 @@ tags:
 </div>
 <div class = "o-rhythm__container">
   <div class = "m-case-study-page-content__copy-section">
-    <h6 class = "content__header -mobile-only">Synthesis</h6>
+    <h6 class = "content__header -mobile-only">Takeaway</h6>
     <header class = "-push-three">What’s the common thread we’re seeing?</header>
     <div class = "o-rhythm__row">
-      <h6 class = "content__header -desktop-only">Synthesis</h6>
+      <h6 class = "content__header -desktop-only">Takeaway</h6>
       <div class = "content__copy">
-        <p>What kind of issues do all of these nurse managers have? The Synthesis stage makes it clear what’s a shared pain and what’s an isolated incident.</p>
-        <p>We pinned interview profiles on a wall and highlighted answers that point to those shared pain points. At the same time, we mapped out PinnacleHealth’s processes, too, so it was a tangible system and not just a set of technical paragraphs in a dusty binder.</p>
-        <p>With all of that together, we went over our research and sketches to come up with guiding principles and design constraints—here’s what’s important, and here’s what we have to work with. Having a partnership approach helps immensely here to make sure there aren’t unrealistic expectations or missed goals.</p>
+        <p>We found that student research is a pillar in the modern classroom, and teachers were the gatekeepers in terms of accessing the K-12 market. The way teachers secured technology resources — both devices and software — varied greatly by school, but, clearly, teachers were the drivers. We needed to figure out how to target teachers individually and support them in sourcing and paying for our product, in order to drive adoption. Additionally, we needed to support a growing homeschooling population. We had to confirm that a student-centric version made sense to address both teachers and homeschoolers, in terms of user acquisition, value proposition and pricing.</p>
       </div>
     </div>
   </div>
