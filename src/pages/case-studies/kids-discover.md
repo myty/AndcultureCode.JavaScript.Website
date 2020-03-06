@@ -25,15 +25,14 @@ tags:
 </div>
 <div class = "o-rhythm__container">
   <div class = "m-case-study-page-content__copy-section">
-    <h6 class = "content__header -mobile-only">Synthesis</h6>
-    <header>What’s the common thread we’re seeing?</header>
+    <header class = "-push-one">so what was broken?</header>
     <div class = "o-rhythm__row">
       <div class = "content__copy">
         <p>What kind of issues do all of these nurse managers have? The Synthesis stage makes it clear what’s a shared pain and what’s an isolated incident.</p>
         <p>We pinned interview profiles on a wall and highlighted answers that point to those shared pain points. At the same time, we mapped out PinnacleHealth’s processes, too, so it was a tangible system and not just a set of technical paragraphs in a dusty binder.</p>
         <p>With all of that together, we went over our research and sketches to come up with guiding principles and design constraints—here’s what’s important, and here’s what we have to work with. Having a partnership approach helps immensely here to make sure there aren’t unrealistic expectations or missed goals.</p>
       </div>
-      <h6 class = "content__header -desktop-only">Synthesis</h6>
+      <div class = "-push-one">Easter egg</div>
     </div>
   </div>
 </div>
