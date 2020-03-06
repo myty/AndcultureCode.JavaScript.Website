@@ -6,7 +6,7 @@ date: 2014-01-04T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/kd-main.png
 texture: img/kd-shape.png
-color: '#FCB43D'
+color: '#2AB2C1'
 heroIntroCopy: In two decades, Kids Discover became well known for providing high-quality notification content for children in grades 3-8. With more than 200 magazine titles, each with 20 pages, Kids Discover was a treasure trove of iconic photographs, original illustrations, timelines and kid-friendly facts on hundreds of science and social studies topics. This all seems pretty awesome
 secondaryLayout: true
 description: >-
@@ -35,7 +35,7 @@ tags:
   </div>
 </div>
 <div>
-  <img src = "../../../static/img/case-studies/pulse/nurse_hallway.png" />
+  <img src = "../../../static/img/case-studies/kids-discover/magazines.png" />
 </div>
 <div class = "o-rhythm__container">
     <div class = "m-case-study-page-content__copy-section">
@@ -97,14 +97,12 @@ tags:
 </div>
 <div class = "o-rhythm__container">
   <div class = "m-case-study-page-content__copy-section">
-    <h6 class = "content__header -mobile-only">User Testing</h6>
-    <header class = "-push-three">One of the biggest challenges in designing an experience isn’t making the idea into a reality...</header>
+    <h6 class = "content__header -mobile-only">Synthesis</h6>
+    <header class = "-push-three">turning data into a plan</header>
     <div class = "o-rhythm__row">
-      <h6 class = "content__header -desktop-only">User Testing</h6>
+      <h6 class = "content__header -desktop-only">Synthesis</h6>
       <div class = "content__copy">
-        <p>It’s getting people to use it! That’s why we gathered a small group of (brave?) initial users to try this new platform, something way out of the box compared to the static reports they had grown accustomed to. We needed to watch them use it, and they needed to see how we turned a bunch of spreadsheets into an accessible, chart-filled, problem-solving dashboard.</p>
-        <p>We observed. We interviewed. We met with nurse managers and administrators to discuss how they used the platform, and more importantly, what shortcomings it may have at this early stage. Was something confusing? Was a task more challenging to complete than we expected? </p>
-        <p>A tip: Work with companies that don’t assume the first version of what they produced is perfect.* It should be about testing and evolving.</p>
+        <p>We collected and visualized all of our research findings (also known as “the fun part”). Drawing on this consolidated data, we wireframed VIP screens of the platform and worked out user flows for each audience.</p>
       </div>
     </div>
   </div>
