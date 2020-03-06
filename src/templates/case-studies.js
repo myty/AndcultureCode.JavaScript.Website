@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import CaseStudyHero from '../components/molecules/CaseStudyHero';
 import CaseStudyPageContent from '../components/molecules/CaseStudyPageContent';
+import Pulse from '../../src/templates/case-studies/pulse'
 
 export const CaseStudyTemplate = ({
   caseStudyContent,
@@ -30,9 +31,17 @@ const CaseStudy = ({ data }) => {
   return (
       <Layout pageTitle = { post.frontmatter.partnerName } hideNavigation = { true }>
         <div className = "p-interior-page">
-          <CaseStudyTemplate
+          {
+            post.frontmatter.partnerName === 'Kids Discover' &&
+            <div>Kids Discover</div>
+          }
+          {
+            post.frontmatter.partnerName === 'Pulse' &&
+            <Pulse />
+          }
+          {/* <CaseStudyTemplate
             html = { post.html }
-            caseStudyContent = { post.frontmatter }/>
+            caseStudyContent = { post.frontmatter }/> */}
         </div>
       </Layout>
   )
