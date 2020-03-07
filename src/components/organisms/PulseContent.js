@@ -10,13 +10,12 @@ import safariImg from '../../../static/img/case-studies/pulse/unit-workload-safa
 import doodleImg from '../../../static/img/case-studies/pulse/pulse_block_doodle.jpg';
 import dataImg from '../../../static/img/case-studies/pulse/data-leveling.png';
 
-const Pulse = class extends React.Component {
+const PulseContent = class extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-
         return (
             <div>
                 <div className = "m-case-study-page-content__image-container">
@@ -158,4 +157,4 @@ const Pulse = class extends React.Component {
     }
 }
 
-export default Pulse
+export default PulseContent;

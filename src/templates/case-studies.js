@@ -7,6 +7,9 @@ import Content, { HTMLContent } from '../components/Content'
 import CaseStudyHero from '../components/molecules/CaseStudyHero';
 import CaseStudyPageContent from '../components/molecules/CaseStudyPageContent';
 import Pulse from '../../src/templates/case-studies/pulse'
+import KidsDiscover from '../../src/templates/case-studies/kids-discover'
+import CCA from '../../src/templates/case-studies/cca'
+import Hackerone from '../../src/templates/case-studies/hackerone'
 
 export const CaseStudyTemplate = ({
   caseStudyContent,
@@ -20,7 +23,22 @@ export const CaseStudyTemplate = ({
           featuredimage = { caseStudyContent.featuredimage }
           heroIntroCopy = { caseStudyContent.heroIntroCopy }
           tags          = { caseStudyContent.tags }/>
-      <CaseStudyPageContent data = { html } />
+      { // if 
+        caseStudyContent.partnerName === 'Pulse' &&
+        <Pulse />
+      }
+      { // if 
+        caseStudyContent.partnerName === 'Kids Discover' &&
+        <KidsDiscover />
+      }
+      { // if 
+        caseStudyContent.partnerName === 'CCA' &&
+        <CCA />
+      }
+      { // if 
+        caseStudyContent.partnerName === 'Hackerone' &&
+        <Hackerone />
+      }
     </div>
   )
 }
@@ -31,17 +49,9 @@ const CaseStudy = ({ data }) => {
   return (
       <Layout pageTitle = { post.frontmatter.partnerName } hideNavigation = { true }>
         <div className = "p-interior-page">
-          {
-            post.frontmatter.partnerName === 'Kids Discover' &&
-            <div>Kids Discover</div>
-          }
-          {
-            post.frontmatter.partnerName === 'Pulse' &&
-            <Pulse />
-          }
-          {/* <CaseStudyTemplate
+          <CaseStudyTemplate
             html = { post.html }
-            caseStudyContent = { post.frontmatter }/> */}
+            caseStudyContent = { post.frontmatter }/>
         </div>
       </Layout>
   )
