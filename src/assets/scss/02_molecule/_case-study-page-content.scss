@@ -146,6 +146,12 @@
 
         &-container {
             display: flex;
+
+            &.-kd {
+                &-gradient {
+                    background: linear-gradient(white, #E0ECEF);
+                }
+            }
         }
 
         &.-half {
@@ -158,6 +164,7 @@
 
         img {
             display: block;
+            margin: 0 auto;
             max-width: 100%;
 
             @include breakpoints("tablet") {
@@ -188,28 +195,53 @@
         }
     }
 
-    .sketch {
-        @include span-col(12);
-        box-shadow: none;
+    &__section {
         position: relative;
 
-        @include breakpoints("tablet") {
-            @include span-col(6);
-        }
+        .kd {
+            &-image {
+                position: relative;
 
-        &.-one {
+                &.-dot-grid {
 
-            @include breakpoints("tablet") {
-                top: -160px;
-                right: -40px;
+                }
+
+                &.-phone {
+                    top: -104px;
+                    left: 284px;
+                    z-index: 1;
+                }
+
+                &.-teachers-students {
+                    right: -134px;
+                }
+
             }
         }
 
-        &.-two {
-            top: -40px;
+        .sketch {
+            @include span-col(12);
+            box-shadow: none;
+            position: relative;
 
             @include breakpoints("tablet") {
-                top: 0;
+                @include span-col(6);
+            }
+
+            &.-one {
+
+                @include breakpoints("tablet") {
+                    top: -160px;
+                    right: -80px;
+                }
+            }
+
+            &.-two {
+                top: -40px;
+
+                @include breakpoints("tablet") {
+                    top: 0;
+                }
             }
         }
     }
