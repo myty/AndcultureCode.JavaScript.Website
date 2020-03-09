@@ -288,6 +288,7 @@
         max-width: 144px;
         margin-left: 50px;
         margin-top: 40px;
+        z-index: 1;
 
         @include breakpoints("tablet") {
             display: block;

@@ -10,8 +10,8 @@ const CaseStudy = class extends React.Component {
             isHovered: false
         };
 
-        this._handleHover   = this._handleHover.bind(this);
-        this._handleUnhover = this._handleUnhover.bind(this);
+        this._handleHover            = this._handleHover.bind(this);
+        this._handleUnhover          = this._handleUnhover.bind(this);
     }
 
     _handleHover() {
@@ -24,13 +24,15 @@ const CaseStudy = class extends React.Component {
         this.setState({
             isHovered: false
         });
+        
+        setTimeout(this._handleUnhoverAnimation, 600);
     }
 
     render() {
         let caseStudyClass = "m-case-study";
         if (this.state.isHovered) {
             caseStudyClass += " -hovered"
-        }
+        } 
         if (this.props.post.frontmatter.secondaryLayout) {
             caseStudyClass += " -secondary";
         }
@@ -45,7 +47,7 @@ const CaseStudy = class extends React.Component {
             caseStudyStyle = {
                 backgroundColor: this.props.post.frontmatter.color,
             }
-        }
+        } 
 
         if (this.state.isHovered) {
             linkStyle = {
