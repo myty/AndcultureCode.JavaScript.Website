@@ -8,8 +8,9 @@ featuredimage: /img/cca-main.png
 texture: img/cca-shape.png
 color: '#3D5CC2'
 secondaryLayout: true
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+heroIntroCopy: When we connected with Commonwealth Charter Academy (CCA), they had just dropped “Connections” from their name and shifted away from their parent company. Competition for students was fierce among cyber schools, not to mention school districts and private schools.
 tags:
-  - flavor
-  - tasting
+  - ux design
+  - web design
+  - strategy
 ---
