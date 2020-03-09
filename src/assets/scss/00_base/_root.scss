@@ -8,31 +8,31 @@ img {
 }
 
 .-push-one {
-    @include span-col(12);
+@include span-col(12);
 
     @include breakpoints("tablet") {
         @include span-col(8);
         @include push-col(1);
     }
-  }
+}
   
-  .-push-three {
+.-push-three {
   
     @include breakpoints("tablet") {
         @include push-col(3);
     }
   }
 
-  .-mobile-only {
-      display: block;
+.-mobile-only {
+    display: block;
 
     @include breakpoints("tablet") {
         display: none;
     }
-  }
+}
 
-  .-desktop-only {
-      display: none;
+.-desktop-only {
+    display: none;
 
     @include breakpoints("tablet") {
         display: block;

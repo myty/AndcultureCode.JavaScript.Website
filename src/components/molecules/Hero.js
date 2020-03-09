@@ -20,10 +20,10 @@ const Hero = class extends React.Component {
     window.onscroll = () => {
       let height = window.innerHeight;
       const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-      height = height / 1;
+      height = height / 10;
 
       const opacity = (height - scrollTop) / height;
-      this.setState({currentScrollHeight: opacity});
+      this.setState({ currentScrollHeight: opacity });
     }
   }
 
@@ -33,8 +33,8 @@ const Hero = class extends React.Component {
     }
 
     return (
-      <div className = "o-hero -gradient">
-        <div className = "o-hero__background -jigglydoo" >
+      <div className="o-hero -gradient">
+        <div className="o-hero__background -jigglydoo" >
           <JigglyDoo />
           {/* <svg width="900" height="900" viewBox="0 0 600 600">
             <path fill="transparent" strokeWidth="7">
@@ -46,22 +46,22 @@ const Hero = class extends React.Component {
           </svg> */}
 
         </div>
-        <img className = "o-hero__background -blinky" src = { blinky } />
-        <img className = "o-hero__background -dots" src = { dots } />
-        <img className = "o-hero__background -greenblob" src = { greenBlob } />
-        <img className = "o-hero__background -terrazo" src = { terrazo } />
-        <img className = "o-hero__background -greenbrush" src = { greenBrush } />
-        <div className = "o-rhythm__container">
-          <div className = "o-hero__top">
-            <div className = "o-hero__titles">
-                <h1 className = "-after">{ this.props.title }</h1>
-                <p className = "-before">{ this.props.secondaryTitle }</p>
+        <img className="o-hero__background -blinky" src={blinky} />
+        <img className="o-hero__background -dots" src={dots} />
+        <img className="o-hero__background -greenblob" src={greenBlob} />
+        <img className="o-hero__background -terrazo" src={terrazo} />
+        <img className="o-hero__background -greenbrush" src={greenBrush} />
+        <div className="o-rhythm__container">
+          <div className="o-hero__top">
+            <div className="o-hero__titles">
+              <h1 className="-after">{this.props.title}</h1>
+              <p className="-before">{this.props.secondaryTitle}</p>
             </div>
           </div>
-          <div className = "o-hero__subtitles">
-            <h3>{ this.props.subTitle }</h3>
+          <div className="o-hero__subtitles">
+            <h3>{this.props.subTitle}</h3>
           </div>
-          <h6 style = { verticalTextStyle } className = "-vert">A Design Company</h6>
+          <h6 style={verticalTextStyle} className="-vert">A Design Company</h6>
         </div>
       </div>
     )

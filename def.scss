@@ -4,7 +4,7 @@
         box-shadow: none !important;
     }
 
-    &__mosaic {
+	&__mosaic {
         position: relative;
 
         .-float {
@@ -23,7 +23,7 @@
 
             &:after {
                 content: '';
-                display: block;
+                display: block; 
                 position: absolute;
                 left: 0;
                 right: 0;
@@ -39,13 +39,12 @@
             }
         }
     }
-
     &__color-block {
         position: relative;
 
-        h6.content__header,
-        p,
-        ul,
+        h6.content__header, 
+        p, 
+        ul, 
         header {
             color: get-color("primary", "white");
         }
@@ -189,7 +188,7 @@
         p {
             margin-bottom: 32px;
         }
-
+        
         ul {
             list-style: none;
             padding: 0;
@@ -214,7 +213,6 @@
 
             &__right {
                 position: relative;
-
                 &:after {
                     content: '';
                     background: url('../../../static/img/asterisk.png') no-repeat center center / contain;
@@ -230,6 +228,7 @@
         }
 
         .content {
+
             &__easter-egg {
                 @include span-col(12);
 
@@ -238,7 +237,6 @@
                     @include push-col(1);
                 }
             }
-
 
             &__header {
                 @include span-col(2);
@@ -276,7 +274,6 @@
                         @include span-col(7);
                     }
                 }
-
                 p:first-of-type {
                     margin-top: 0;
                 }
@@ -291,106 +288,95 @@
         &-container {
             display: flex;
 
-            &.-kd {
-
-                &-gradient {
-                    background: linear-gradient(white, #E0ECEF);
-                }
+            &.-kd {	
+                &-gradient {	
+                    background: linear-gradient(white, #E0ECEF);	
+                }	
             }
-        }
+        }	
 
-        &.-half {
-            min-width: 0;
-            flex-grow: 0;
-            flex-shrink: 0;
-            flex-basis: calc(50% - 12px);
-            max-width: calc(50% - 12px);
-        }
+        &.-half {	
+            min-width: 0;	
+            flex-grow: 0;	
+            flex-shrink: 0;	
+            flex-basis: calc(50% - 12px);	
+            max-width: calc(50% - 12px);	
+        }	
 
-        img {
-            display: block;
-            max-width: 100%;
-            margin: 0 auto;
+        img {	
+            display: block;	
+            margin: 0 auto;	
+            max-width: 100%;	
+            @include breakpoints("tablet") {	
+                max-width: 99999px;	
+            }	
+        }	
+    }	
 
-            @include breakpoints("tablet") {
-                max-width: 99999px;
-            }
-        }
-    }
+    &__next {	
+        background: get-color("neutral", "gray");	
+        padding: 40px 0 80px 0;	
+        @include breakpoints("tablet") {	
+            padding: 157px 0 335px 0;	
+        }	
+        h6,	
+        h2 {	
+            color: get-color("primary", "white");	
+        }	
+        h6 {	
+            margin-bottom: 20px;	
+            @include breakpoints("tablet") {	
+                margin-bottom: 60px;	
+            }	
+        }	
+    }	
 
-    &__next {
-        background: get-color("neutral", "gray");
-        padding: 40px 0 80px 0;
+    &__section {	
+        position: relative;	
 
-        @include breakpoints("tablet") {
-            padding: 157px 0 335px 0;
-        }
+        .kd {	
 
-        h6,
-        h2 {
-            color: get-color("primary", "white");
-        }
+            &-image {	
+                position: relative;	
 
-        h6 {
-            margin-bottom: 20px;
+                &.-absolute {	
+                    position: absolute;	
+                }	
 
-            @include breakpoints("tablet") {
-                margin-bottom: 60px;
-            }
-        }
-    }
+                &.-dot-grid {	
+                }	
 
-    &__section {
-        position: relative;
+                &.-phone {	
+                    top: -104px;	
+                    left: 284px;	
+                    z-index: 1;	
+                }	
 
-        .kd {
-
-            &-image {
-                position: relative;
-
-                &.-absolute {
-                    position: absolute;
-                }
-
-                &.-dot-grid {
-                }
-
-                &.-phone {
-                    top: -104px;
-                    left: 284px;
-                    z-index: 1;
-                }
-
-                &.-teachers-students {
-                    right: -134px;
-                }
-            }
-        }
-
-        .sketch {
-            @include span-col(12);
-            box-shadow: none;
-            position: relative;
-
-            @include breakpoints("tablet") {
-                @include span-col(6);
-            }
-
-            &.-one {
-
-                @include breakpoints("tablet") {
-                    top: -160px;
-                    right: -80px;
-                }
-            }
-
-            &.-two {
-                top: -40px;
-
-                @include breakpoints("tablet") {
-                    top: 0;
-                }
-            }
-        }
-    }
+                &.-teachers-students {	
+                    right: -134px;	
+                }	
+            }	
+        }	
+        
+        .sketch {	
+            @include span-col(12);	
+            box-shadow: none;	
+            position: relative;	
+            @include breakpoints("tablet") {	
+                @include span-col(6);	
+            }	
+            &.-one {	
+                @include breakpoints("tablet") {	
+                    top: -160px;	
+                    right: -80px;	
+                }	
+            }	
+            &.-two {	
+                top: -40px;	
+                @include breakpoints("tablet") {	
+                    top: 0;	
+                }	
+            }	
+        }	
+    }	
 }
