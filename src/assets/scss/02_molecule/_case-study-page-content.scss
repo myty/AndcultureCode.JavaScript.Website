@@ -110,6 +110,10 @@
             }
         }
 
+        &.-kd {
+            background: #25B3C2;
+        }
+
         &.-pulse {
             background: #76c1b9;
         }
@@ -353,6 +357,17 @@
                 }
 
                 &.-dot-grid {
+                    left: -432px;
+                    top: -156px;
+                }
+
+                &.-student-homework {
+                    right: -720px;
+                }
+
+                &.-feed-lockup {
+                    left: 212px;
+                    top: -36px;
                 }
 
                 &.-phone {

@@ -8,6 +8,8 @@ import collage from '../../../static/img/case-studies/kids-discover/collage.png'
 import dotGrid from '../../../static/img/case-studies/kids-discover/dot-grid.png';
 import studentHomework from '../../../static/img/case-studies/kids-discover/student-homework.png';
 import feedLockup from '../../../static/img/case-studies/kids-discover/feed-lockup.png';
+import discoverMap from '../../../static/img/case-studies/kids-discover/discovermap.png';
+import cubeDoodle from '../../../static/img/case-studies/kids-discover/cube-doodle.png';
 
 
 const KidsDiscover = class extends React.Component {
@@ -111,14 +113,55 @@ const KidsDiscover = class extends React.Component {
                 </div>
                 <div className = "m-case-study-page-content__section">
                     <div className = "o-rhythm__row">
-                        <div className = "kd-image -dot-grid">
+                        <div className = "kd-image -dot-grid -absolute">
                             <img src = { dotGrid } />
                         </div>
                         <div className = "kd-image -student-homework">
                             <img src = { studentHomework } />
                         </div>
-                        <div className = "kd-image -feed-lockup">
+                        <div className = "kd-image -feed-lockup -absolute">
                             <img src = { feedLockup } />
+                        </div>
+                    </div>
+                </div>
+                <div className = "o-rhythm__container -fluid">
+                    <div className = "m-case-study-page-content__copy-section">
+                        <div className = "o-rhythm__row">
+                            <div className = "o-rhythm__col -span-six">
+                                <div className = "kd-image">
+                                    <img src = { discoverMap } />
+                                </div>
+                            </div>
+                            <div className = "o-rhythm__col -span-five">
+                                <header>the discover map encouraged exploration</header>
+                                <div className = "">
+                                    <p>This engaging interactive map lets users dig into subject areas to discover related units and topics within the Kids Discover library. When a unit or topic is added to the CMS, it is assigned to related content and weighted based on relevancy. This back-end process determines where that particular unit or topic appears on the map.</p>
+                                    <p>To optimize the experience for teachers, we added classrooms and desks. Accessible by teachers and students, “classrooms” serve as shared folders that teachers can curated for students. “Desks” act as personal folders for teachers to store content for later use.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className = "m-case-study-page-content__color-block -kd">
+                    <div className = "o-rhythm__container -fluid">
+                        <div className = "o-rhythm__row -space-between">
+                            <div className = "o-rhythm__col -span-six -push-one">
+                                <div className = "m-case-study-page-content__copy-section">
+                                    <h6 className = "content__header -mobile-only">deployment &amp; Testing</h6>
+                                    <header className = "-push-three">time for final exams</header>
+                                    <div className = "o-rhythm__row">
+                                        <h6 className = "content__header -desktop-only">deployment &amp; Testing</h6>
+                                        <div className = "content__copy">
+                                            <p>As soon as the beta product was ready, we took it to classrooms to test. We collected feedback from students and teachers, which helped us make final product adjustments and enhancements before going to market.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className = "o-rhythm__col -span-two">
+                                <div className = "kd-image">
+                                    <img src = { cubeDoodle } />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
