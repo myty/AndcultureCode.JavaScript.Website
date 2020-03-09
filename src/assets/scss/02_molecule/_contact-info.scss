@@ -16,15 +16,13 @@
 
         a {
             @include font-size("medium");
-            @include line-height(36px);
+            @include line-height(34px);
             font-family: $font-primary;
             font-weight: 100;
             color: get-color("primary", "white");
             display: inline;
-            margin-bottom: 20px;
             position: relative;
             text-decoration: none;
-            border-bottom: 1px solid get-color("primary", "white");
         }
     }
 

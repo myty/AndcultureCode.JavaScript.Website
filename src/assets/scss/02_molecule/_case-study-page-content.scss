@@ -80,6 +80,7 @@
                 @include breakpoints("tablet") {
                     top: 280px;
                     right: -40px;
+                    left: auto;
                 }
             }
 

@@ -13,12 +13,12 @@ const ContactInfo = class extends React.Component {
                     <div className = "m-contact-info__address">
                         <h6 className = "-secondary">Location</h6>
                         <div>
-                            <a href = { this.props.mapLink } target = "_blank">
+                            <a href = { this.props.mapLink } className = "-inline" target = "_blank">
                                 { this.props.streetAddress }
                             </a>
                         </div>
                         <div>
-                            <a href={`tel:${this.props.phoneNumber}`}>{ this.props.phoneNumber }</a>
+                            <a href={`tel:${this.props.phoneNumber}`} className = "-inline">{ this.props.phoneNumber }</a>
                         </div>
                     </div>
                     <div className = "m-contact-info__social">

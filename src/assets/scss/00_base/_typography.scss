@@ -106,7 +106,18 @@ a {
     font-weight: 500;
     text-decoration: none;
 
-    &:hover {
-        opacity: .6;;
+    &:not(.-inline) { 
+        &:hover {
+            opacity: .6;;
+        }
+    }
+
+    &.-inline {
+        border-bottom: 2px dotted get-color("primary", "fresh");
+
+        &:hover {
+            color: get-color("primary", "white");
+            background-color: get-color("primary", "fresh");
+        }
     }
 }
