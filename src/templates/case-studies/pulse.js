@@ -83,7 +83,7 @@ const Pulse = class extends React.Component {
                 <div>
                     <img src = { stationImg } />
                 </div>
-                <div className = "m-case-study-page-content__color-block">
+                <div className = "m-case-study-page-content__color-block -pulse">
                     <div className = "o-rhythm__container">
                         <div className = "m-case-study-page-content__copy-section -with-image">
                             <div className = "o-rhythm__row">
@@ -158,4 +158,4 @@ const Pulse = class extends React.Component {
     }
 }
 
-export default Pulse
+export default Pulse;
