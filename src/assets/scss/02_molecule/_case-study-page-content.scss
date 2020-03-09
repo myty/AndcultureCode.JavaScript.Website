@@ -4,154 +4,16 @@
         box-shadow: none !important;
     }
 
-    &__mosaic {
-        position: relative;
-
-        .-float {
-            position: absolute;
-            right: 20px;
-            top: 62px;
-            display: none;
-
-            @include breakpoints("tablet") {
-                display: block;
-            }
-        }
-
-        .-with-border {
-            position: relative;
-
-            &:after {
-                content: '';
-                display: block; 
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-                height: 300px;
-                background: get-color("secondary", "violet");
-                z-index: -1;
-            }
-
-            img {
-                margin-left: 10%;
-            }
-        }
-    }
-
     &__color-block {
-        position: relative;
-
-        h6.content__header, 
-        p, 
-        ul, 
-        header {
-            color: get-color("primary", "white");
-        }
-        
-        .-background-texture {
-            position: absolute;
-            bottom: 0;
-
-            &.-rainbow {
-                top: 170px;
-                left: -70px;
-                display: none;
-
-                @include breakpoints("tablet") {
-                    display: block;
-                }
-            }
-
-            &.-triangle {
-                right: 5%;
-                top: -140px;
-
-                @include breakpoints("tablet") {
-                    top: 10px;
-                }
-            }
-
-            &.-dots {
-                top: 0;
-                left: -128px;
-
-                @include breakpoints("tablet") {
-                    top: 280px;
-                    right: -40px;
-                }
-            }
-
-            &.-block {
-                bottom: -100px;
-                left: 5%;
-                display: none;
-
-                @include breakpoints("tablet") {
-                    display: block;
-                }
-            }
-
-            &.-dots-two {
-                bottom: 300px;
-                left: -80px;
-                display: none;
-
-                @include breakpoints("tablet") {
-                    display: block;
-                }
-            }
-
-            &.-dots-small {
-                right: -100px;
-                bottom: 180px;
-            }
-        }
-
-        &.-pulse {
-            background: #76c1b9;
-        }
-
-        &.-cca {
-            background: get-color("secondary", "violet");
-            padding: 80px 0;
-
-            @include breakpoints("tablet") {
-                padding: 252px 0;
-            }
-
-            .m-case-study-page-content__copy-section {
-                padding-bottom: 0;
-            }
-
-            img {
-
-                &.-front {
-                    position: relative;
-                    z-index: 1;
-                }
-            }
-        }
+        background: #76c1b9;
+        color: get-color("primary", "white");
     }
 
     &__copy-section {
-        position: relative;
         padding: 80px 0;
 
         @include breakpoints("tablet") {
             padding: 252px 0;
-        }
-
-        &.-image-right {
-            position: relative;
-            padding-right: 90px;
-
-            img {
-                position: absolute;
-                left: calc(100% - 100px);
-                top: 0;
-            }
         }
 
         &.-with-image {
@@ -187,11 +49,6 @@
 
         p {
             margin-bottom: 32px;
-        }
-        
-        ul {
-            list-style: none;
-            padding: 0;
         }
 
         .easter-egg {
@@ -345,6 +202,10 @@
             &-image {
                 position: relative;
 
+                &.-absolute {
+                    position: absolute;
+                }
+
                 &.-dot-grid {
 
                 }
@@ -358,7 +219,6 @@
                 &.-teachers-students {
                     right: -134px;
                 }
-
             }
         }
 

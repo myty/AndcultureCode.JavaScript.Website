@@ -7,6 +7,7 @@ import tabletPencil from '../../../static/img/case-studies/kids-discover/tablet-
 import collage from '../../../static/img/case-studies/kids-discover/collage.png';
 import dotGrid from '../../../static/img/case-studies/kids-discover/dot-grid.png';
 import studentHomework from '../../../static/img/case-studies/kids-discover/student-homework.png';
+import feedLockup from '../../../static/img/case-studies/kids-discover/feed-lockup.png';
 
 
 const KidsDiscover = class extends React.Component {
@@ -109,14 +110,16 @@ const KidsDiscover = class extends React.Component {
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__section">
-                    <div className = "kd-image -dot-grid">
-                        <img src = { dotGrid } />
-                    </div>
-                    <div className = "kd-image">
-                        <img src = '' />
-                    </div>
-                    <div className = "kd-image">
-                        <img src = { studentHomework } />
+                    <div className = "o-rhythm__row">
+                        <div className = "kd-image -dot-grid">
+                            <img src = { dotGrid } />
+                        </div>
+                        <div className = "kd-image -student-homework">
+                            <img src = { studentHomework } />
+                        </div>
+                        <div className = "kd-image -feed-lockup">
+                            <img src = { feedLockup } />
+                        </div>
                     </div>
                 </div>
             </div>
