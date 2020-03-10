@@ -11,6 +11,7 @@ $no-gutter-grid: (
     gutter: 50px,
 );
 @media (max-width: 1280px) {
+
   .o-rhythm__container {
       box-sizing: border-box;
       padding: 0 32px;
@@ -22,7 +23,9 @@ $no-gutter-grid: (
 }
 
 @media (max-width: 1280px) {
+
   .o-rhythm__container {
+
     &.-full-width {
       &__mobile {
         padding: 0;
@@ -34,12 +37,22 @@ $no-gutter-grid: (
 @media (max-width: 1280px) {
 
   .o-rhythm__container {
-      box-sizing: border-box;
-      padding: 0 32px;
+    box-sizing: border-box;
+    padding: 0 32px;
 
-      &.-fluid {
-        padding: 0;
-      }
+    &.-fluid {
+      padding: 0;
+    }
+  }
+}
+
+.o-rhythm__row {
+
+  &.-flex-wrap {
+
+    &__no-wrap {
+      flex-wrap: nowrap;
+    }
   }
 }
 
