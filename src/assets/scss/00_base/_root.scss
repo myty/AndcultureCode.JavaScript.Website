@@ -15,9 +15,9 @@ img {
         @include push-col(1);
     }
 }
-  
+
 .-push-three {
-  
+
     @include breakpoints("tablet") {
         @include push-col(3);
     }
@@ -27,7 +27,7 @@ img {
     display: block;
 
     @include breakpoints("tablet") {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -37,4 +37,10 @@ img {
     @include breakpoints("tablet") {
         display: block;
     }
-  }
+}
+
+.-flex-wrap {
+    &__no-wrap {
+        flex-wrap: nowrap;
+    }
+}
