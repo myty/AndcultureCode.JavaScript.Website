@@ -5,7 +5,7 @@ import ipadImg from '../../../static/img/case-studies/cca/ipadCCA.png';
 import timelineImg from '../../../static/img/case-studies/cca/timeline.png';
 import studentImg from '../../../static/img/case-studies/cca/student.png';
 import scienceImg from '../../../static/img/case-studies/cca/science.png';
-import laptopImg from '../../../static/img/case-studies/cca/macbook_CCA.png';
+import laptopImg from '../../../static/img/case-studies/cca/Macbook_CCA.png';
 import iphoneImg from '../../../static/img/case-studies/cca/3_Phone_X.png';
 import rainbow from '../../../static/img/case-studies/cca/rainbow_doodle.png';
 import traingle from '../../../static/img/case-studies/cca/doodle_triangle.png';
