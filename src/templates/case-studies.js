@@ -1,19 +1,14 @@
-import React from 'react'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
 import CaseStudyHero from '../components/molecules/CaseStudyHero';
-import CaseStudyPageContent from '../components/molecules/CaseStudyPageContent';
-import Pulse from '../../src/templates/case-studies/pulse'
-import KidsDiscover from '../../src/templates/case-studies/kids-discover'
-import CCA from '../../src/templates/case-studies/cca'
-import Hackerone from '../../src/templates/case-studies/hackerone'
+import Pulse from '../../src/templates/case-studies/pulse';
+import KidsDiscover from '../../src/templates/case-studies/kids-discover';
+import CCA from '../../src/templates/case-studies/cca';
+import Hackerone from '../../src/templates/case-studies/hackerone';
 
 export const CaseStudyTemplate = ({
   caseStudyContent,
-  html
 }) => {
   return (
     <div>
@@ -23,19 +18,19 @@ export const CaseStudyTemplate = ({
           featuredimage = { caseStudyContent.featuredimage }
           heroIntroCopy = { caseStudyContent.heroIntroCopy }
           tags          = { caseStudyContent.tags }/>
-      { // if 
+      { // if
         caseStudyContent.partnerName === 'Pulse' &&
         <Pulse />
       }
-      { // if 
+      { // if
         caseStudyContent.partnerName === 'Kids Discover' &&
         <KidsDiscover />
       }
-      { // if 
+      { // if
         caseStudyContent.partnerName === 'CCA' &&
         <CCA />
       }
-      { // if 
+      { // if
         caseStudyContent.partnerName === 'Hackerone' &&
         <Hackerone />
       }
