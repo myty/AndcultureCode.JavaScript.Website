@@ -10,11 +10,20 @@ import Blinky from '../atoms/Blinky';
 const Hero = class extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      windowHeight: null,
+    };
   }
 
+  componentDidMount() {
+    this.setState({
+      windowWidth: window.innerHeight,
+    })
+  }
 
   render() {
-    let height = window.innerHeight;
+    let height = this.state.innerHeight;
     const scrollTop = this.props.scrollTop;
     height = height / 5;
 

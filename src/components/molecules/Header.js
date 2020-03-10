@@ -6,33 +6,40 @@ const Header = class extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { screenWidth: null };
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.state = {
+      windowWidth: null,
+    };
   }
 
-  updateWindowDimensions() {
-    this.setState({ screenWidth: window.innerWidth });
+  componentDidMount() {
+    this.setState({
+      windowWidth: window.innerWidth,
+    })
   }
 
   _isMobile() {
-    console.log(this.state.screenWidth);
-    if (this.state.screenWidth > 1024) {
-      return false;
+    if (this.state.window < 1024) {
+      return true;
     }
-
-    return true;
+    return false;
   }
 
   render() {
-    const fadeBegin = 500;
-    const fadeFinish = 800;
+    let opacity = 0;
 
-    const offset = this.props.scrollTop
-    let opacity = 1;
-    if (offset <= fadeBegin) {
-      opacity = 0;
-    } else if (offset <= fadeFinish) {
-      opacity = 0 + offset / fadeFinish;
+    if (this._isMobile()) {
+      const fadeBegin = 500;
+      const fadeFinish = 800;
+
+      const offset = this.props.scrollTop
+      opacity = 1;
+      if (offset <= fadeBegin) {
+        opacity = 0;
+      } else if (offset <= fadeFinish) {
+        opacity = 0 + offset / fadeFinish;
+      }
+
+      // return opacity;
     }
 
     const headerBackgroundStyle = {
