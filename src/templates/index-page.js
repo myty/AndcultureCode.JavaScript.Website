@@ -1,43 +1,59 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import React, { useEffect, useState } from 'react';
+import { graphql }                    from 'gatsby';
+import Layout                         from '../components/Layout'
+import CaseStudyList                  from '../components/organisms/CaseStudyList'
+import ContactForm                    from '../components/organisms/ContactForm'
+import HomePageAnimation              from '../components/organisms/HomeAnimation'
+import EasterEgg                      from '../components/atoms/EasterEgg';
 import '../assets/scss/app.scss'
-import CaseStudyList from '../components/organisms/CaseStudyList'
-import ContactForm from '../components/organisms/ContactForm'
-import HomePageAnimation from '../components/organisms/HomeAnimation'
-import EasterEgg from '../components/atoms/EasterEgg'
 
 import { gsap } from 'gsap';
 import { TimelineMax, Power1 } from 'gsap';
-import Hero from '../components/molecules/Hero'
-gsap.registerPlugin(TimelineMax)
-gsap.registerPlugin(Power1)
+import Hero from '../components/molecules/Hero';
+gsap.registerPlugin(TimelineMax);
+gsap.registerPlugin(Power1);
 
 export const IndexPageTemplate = ({
   title,
   secondaryTitle,
   subTitle,
+  scrollTop,
 }) => (
-    <div className = "p-home">
+    <div className="p-home">
       <HomePageAnimation />
       <Hero
-        title          = { title }
-        secondaryTitle = { secondaryTitle }
-        subTitle       = { subTitle } />
+        scrollTop={scrollTop}
+        title={title}
+        secondaryTitle={secondaryTitle}
+        subTitle={subTitle} />
     </div>
-)
+  )
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
+  const [scrollTop, setScrollTop] = useState(0);
+
+  useEffect(() => {
+    const onScroll = e => {
+      setScrollTop(e.target.documentElement.scrollTop);
+    };
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [scrollTop]);
+
   return (
-    <Layout pageTitle = "home">
+    <Layout
+      pageTitle = "home"
+      scrollTop = {scrollTop}>
       <IndexPageTemplate
-        title          = { frontmatter.title }
-        secondaryTitle = { frontmatter.secondaryTitle }
-        subTitle       = { frontmatter.subTitle }/>
-      <CaseStudyList/>
-      <ContactForm/>
+        scrollTop      = {scrollTop}
+        title          = {frontmatter.title}
+        secondaryTitle = {frontmatter.secondaryTitle}
+        subTitle       = {frontmatter.subTitle} />
+      <CaseStudyList />
+      <ContactForm />
       <EasterEgg />
     </Layout>
   )
