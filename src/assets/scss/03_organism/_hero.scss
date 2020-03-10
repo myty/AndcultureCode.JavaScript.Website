@@ -313,7 +313,16 @@
         }
     }
 
-    svg {
+    .-blinky svg {
+        width: 100px;
+        height: 100px;
+
+        .st0 {
+            fill: get-color("primary", "after-hours");
+        }
+    }
+
+    .-jigglydoo svg {
         transform-origin: 50% 50%;
         animation: move 24s ease-in-out infinite;
     }

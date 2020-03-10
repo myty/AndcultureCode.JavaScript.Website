@@ -5,12 +5,44 @@ import wordmark from '../../../static/img/ac-wordmark.svg';
 const Header = class extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = { screenWidth: null };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ screenWidth: window.innerWidth });
+  }
+
+  _isMobile() {
+    console.log(this.state.screenWidth);
+    if (this.state.screenWidth > 1024) {
+      return false;
+    }
+
+    return true;
   }
 
   render() {
+    const fadeBegin = 500;
+    const fadeFinish = 800;
+
+    const offset = this.props.scrollTop
+    let opacity = 1;
+    if (offset <= fadeBegin) {
+      opacity = 0;
+    } else if (offset <= fadeFinish) {
+      opacity = 0 + offset / fadeFinish;
+    }
+
+    const headerBackgroundStyle = {
+      opacity: opacity,
+    }
+
     return (
       <div>
         <header className="m-header">
+          <div className = "m-header__background"  style = { headerBackgroundStyle }></div>
           <div className="o-rhythm__container -fluid">
             <a
               href="/"
