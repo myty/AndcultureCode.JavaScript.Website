@@ -19,10 +19,8 @@ const Header = class extends React.Component {
 
   _isMobile() {
     if (this.state.windowWidth < 1024) {
-      console.log("mobile");
       return true;
     }
-    console.log("not mobile");
     return false;
   }
 
@@ -40,8 +38,6 @@ const Header = class extends React.Component {
       } else if (offset <= fadeFinish) {
         opacity = 0 + offset / fadeFinish;
       }
-
-      // return opacity;
     }
 
     const headerBackgroundStyle = {
