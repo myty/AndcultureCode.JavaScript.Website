@@ -148,7 +148,7 @@ const KidsDiscover = class extends React.Component {
                                     <img src = { discoverMap } />
                                 </div>
                             </div>
-                            <div className = "o-rhythm__col -span-five">
+                            <div className = "o-rhythm__col -span-five -y-align-center">
                                 <header>the discover map encouraged exploration</header>
                                 <div className = "">
                                     <p>This engaging interactive map lets users dig into subject areas to discover related units and topics within the Kids Discover library. When a unit or topic is added to the CMS, it is assigned to related content and weighted based on relevancy. This back-end process determines where that particular unit or topic appears on the map.</p>

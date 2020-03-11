@@ -395,6 +395,9 @@
                 }
 
                 &.-feed-lockup {
+                    @include span-col(10);
+                    margin: 48px auto 16px;
+
                     @include breakpoints("tablet") {
                         left: 212px;
                         position: absolute;
