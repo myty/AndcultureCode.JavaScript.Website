@@ -189,7 +189,7 @@
     }
 
     h5 {
-        @include font-size(18px);
+        @include font-size(19px);
         @include line-height("medium-large");
         color: get-color("primary", "after-hours");
         font-family: $font-secondary;
@@ -209,6 +209,7 @@
 
         @include breakpoints("tablet") {
             @include font-size("larger");
+            @include line-height(60px);
         }
     }
 }
