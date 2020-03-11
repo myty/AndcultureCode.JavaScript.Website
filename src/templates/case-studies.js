@@ -23,19 +23,19 @@ export const CaseStudyTemplate = ({
           featuredimage = { caseStudyContent.featuredimage }
           heroIntroCopy = { caseStudyContent.heroIntroCopy }
           tags          = { caseStudyContent.tags }/>
-      { // if 
+      { // if
         caseStudyContent.partnerName === 'Pulse' &&
         <Pulse />
       }
-      { // if 
+      { // if
         caseStudyContent.partnerName === 'Kids Discover' &&
         <KidsDiscover />
       }
-      { // if 
+      { // if
         caseStudyContent.partnerName === 'CCA' &&
         <CCA />
       }
-      { // if 
+      { // if
         caseStudyContent.partnerName === 'Hackerone' &&
         <Hackerone />
       }
