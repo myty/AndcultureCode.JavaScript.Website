@@ -46,12 +46,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout
       pageTitle = "home"
-      scrollTop = {scrollTop}>
+      scrollTop = { scrollTop }>
       <IndexPageTemplate
-        scrollTop      = {scrollTop}
-        title          = {frontmatter.title}
-        secondaryTitle = {frontmatter.secondaryTitle}
-        subTitle       = {frontmatter.subTitle} />
+        scrollTop      = { scrollTop }
+        title          = { frontmatter.title }
+        secondaryTitle = { frontmatter.secondaryTitle }
+        subTitle       = { frontmatter.subTitle } />
       <CaseStudyList />
       <ContactForm />
       <EasterEgg />
