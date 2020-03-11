@@ -18,9 +18,11 @@ const Header = class extends React.Component {
   }
 
   _isMobile() {
-    if (this.state.window < 1024) {
+    if (this.state.windowWidth < 1024) {
+      console.log("mobile");
       return true;
     }
+    console.log("not mobile");
     return false;
   }
 

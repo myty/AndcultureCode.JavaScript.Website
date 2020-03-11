@@ -32,10 +32,10 @@ const KidsDiscover = class extends React.Component {
                     <div className = "m-case-study-page-content__copy-section">
                         <header className = "-push-one">so what was broken?</header>
                         <div className = "o-rhythm__row">
-                        <div className = "content__copy">
-                            <p>In a word, magazines. None of the content was digital — it was all print. Kids Discover saw that the way to expand reach was through online subscriptions and content syndication. For obvious reasons, the current format was not going to support these growth opportunities. Kids Discover needed a partner to do a heavy lift — take all this offline content, organize it, architect both front- and back-end platforms and design user-friendly interfaces and then build it to support new business models in a scalable way. <span className = "easter-egg__right">Easy peasy.</span></p>
-                        </div>
-                        <div className = "content__easter-egg easter-egg">Not really. But we love a good challenge.</div>
+                            <div className = "content__copy">
+                                <p>In a word, magazines. None of the content was digital — it was all print. Kids Discover saw that the way to expand reach was through online subscriptions and content syndication. For obvious reasons, the current format was not going to support these growth opportunities. Kids Discover needed a partner to do a heavy lift — take all this offline content, organize it, architect both front- and back-end platforms and design user-friendly interfaces and then build it to support new business models in a scalable way. <span className = "easter-egg__right">Easy peasy.</span></p>
+                            </div>
+                            <div className = "content__easter-egg easter-egg">Not really. But we love a good challenge.</div>
                         </div>
                     </div>
                 </div>

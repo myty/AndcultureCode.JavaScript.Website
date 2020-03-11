@@ -37,7 +37,7 @@
         position: fixed;
         left: calc(3% + 56px);
         top: 32px;
-        z-index: 9;
+        z-index: 10;
 
         @include breakpoints("tablet") {
             position: absolute;

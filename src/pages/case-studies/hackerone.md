@@ -7,8 +7,9 @@ featuredpost: false
 featuredimage: /img/h1-main.png
 texture: img/h1-shape.png
 color: '#F953A9'
-description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
+heroIntroCopy: Every day seems to bring another headline about a data breach, malware or other security issue affecting companies who build software, people who use software and pretty much anyone on the internet. HackerOne’s clients stay a step ahead of cybercriminals by hiring and paying ethical hackers to find bugs and vulnerabilities before the bad guys do. Three cheers for the good guys!
 tags:
-  - brewing
-  - chemex
+  - identity design
+  - strategy
+  - illustration
 ---
