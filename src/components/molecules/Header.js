@@ -26,6 +26,7 @@ const Header = class extends React.Component {
 
   render() {
     let opacity = 0;
+    let titleClass = "m-header__title";
 
     if (this._isMobile()) {
       const fadeBegin = 500;
@@ -38,6 +39,10 @@ const Header = class extends React.Component {
       } else if (offset <= fadeFinish) {
         opacity = 0 + offset / fadeFinish;
       }
+    }
+
+    if (this.props.pageTitle === "home") {
+      titleClass += " -home";
     }
 
     const headerBackgroundStyle = {
@@ -65,15 +70,9 @@ const Header = class extends React.Component {
             }
           </div>
         </header>
-        <div className="m-header__title">
-          { // if
-            this.props.pageTitle != "home" &&
+        <div className = { titleClass }>
             <div className="m-header__page-title">{this.props.pageTitle}</div>
-          }
-          { // if
-            this.props.pageTitle === "home" &&
             <img src={wordmark} alt="andculture" />
-          }
         </div>
       </div>
     )

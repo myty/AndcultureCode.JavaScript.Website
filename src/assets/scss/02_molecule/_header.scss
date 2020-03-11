@@ -4,7 +4,7 @@
     top: 0;
     width: 100%;
     top: 0;
-    padding: 15px 0;
+    padding: 10px 0;
     z-index: 10;
 
     @include breakpoints("tablet") {
@@ -35,9 +35,35 @@
 
     &__title {
         position: fixed;
-        left: calc(3% + 56px);
-        top: 32px;
+        left: calc(3% + 50px);
+        top: 28px;
         z-index: 10;
+
+        &.-home {
+
+            .m-header__page-title {
+                display: none;
+            }
+        }
+
+        &:not(.-home) {
+
+            img {
+                display: block;
+
+                @include breakpoints("tablet") {
+                    display: none;
+                }
+            }
+
+            .m-header__page-title {
+                display: none;
+
+                @include breakpoints("tablet") {
+                    display: block;
+                }
+            }
+        }
 
         @include breakpoints("tablet") {
             position: absolute;
@@ -47,7 +73,7 @@
         }
 
         img {
-            width: 140px;
+            width: 120px;
 
             @include breakpoints("tablet") {
                 width: 192px;
@@ -84,13 +110,14 @@
     }
 
     a {
-        @include font-size(24px);
+        @include font-size(20px);
         color: get-color("primary", "fresh");
         font-family: $font-primary;
         position: relative;
         transition: all .5s ease;
 
         @include breakpoints("tablet") {
+            @include font-size(24px);
 
             &:hover {
                 color: #19a87c;
@@ -123,6 +150,11 @@
             top: 17px;
             width: 30px;
             left: -40px;
+            display: none;
+
+            @include breakpoints("tablet") {
+                display: inline;
+            }
         }
 
         span:before,

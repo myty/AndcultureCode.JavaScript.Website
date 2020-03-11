@@ -3,6 +3,7 @@ import pullScrollImage1 from '../../../static/img/case-studies/hackerone/badge.p
 import pullScrollImage2 from '../../../static/img/case-studies/hackerone/luke.png';
 import pullScrollImage3 from '../../../static/img/case-studies/hackerone/tshirt.png';
 import pullScrollImage4 from '../../../static/img/case-studies/hackerone/badge_2.png';
+import pullScrollImage5 from '../../../static/img/case-studies/hackerone/h165_sticker.png';
 
 
 const PullScroller = class extends React.Component {
@@ -48,6 +49,7 @@ const PullScroller = class extends React.Component {
         <img src = { pullScrollImage2 } />
         <img src = { pullScrollImage3 } />
         <img src = { pullScrollImage4 } />
+        <img src = { pullScrollImage5 } />
       </div>
     )
   }

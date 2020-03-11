@@ -32,7 +32,7 @@
             transform: rotate(45deg);
 
             @include breakpoints("tablet") {
-                top: 12px;
+                top: 8px;
             }
         }
     }
@@ -82,7 +82,7 @@
                 transform: rotate(45deg);
 
                 @include breakpoints("tablet") {
-                    top: 12px;
+                    top: 8px;
                 }
             }
         }
