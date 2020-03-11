@@ -3,7 +3,8 @@ import teacherClassRom from '../../../static/img/case-studies/kids-discover/teac
 import magazines from '../../../static/img/case-studies/kids-discover/magazines.png';
 import phone from '../../../static/img/case-studies/kids-discover/phone.png';
 import teacherStudents from '../../../static/img/case-studies/kids-discover/teacher-students.png';
-import tabletPencil from '../../../static/img/case-studies/kids-discover/tablet-pencil.png';
+import applePencil from '../../../static/img/case-studies/kids-discover/apple-pencil.png';
+import homePageFeed from '../../../static/img/case-studies/kids-discover/homepage-feed.png';
 import collage from '../../../static/img/case-studies/kids-discover/collage.png';
 import dotGrid from '../../../static/img/case-studies/kids-discover/dot-grid.png';
 import studentHomework from '../../../static/img/case-studies/kids-discover/student-homework.png';
@@ -12,6 +13,7 @@ import discoverMap from '../../../static/img/case-studies/kids-discover/discover
 import cubeDoodle from '../../../static/img/case-studies/kids-discover/cube-doodle.png';
 import editorScreens from '../../../static/img/case-studies/kids-discover/editor-screens.png';
 import siteHomePage from '../../../static/img/case-studies/kids-discover/site-home-page.png';
+import triangleDoodle from '../../../static/img/case-studies/kids-discover/triangle_doodle.png';
 
 
 const KidsDiscover = class extends React.Component {
@@ -93,11 +95,29 @@ const KidsDiscover = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__image-container -kd-gradient">
-                    <div className = "m-case-study-page-content__image">
-                        <img src = { tabletPencil } />
+                <div className = "m-case-study-page-content__section -desktop-only -gradient">
+                    <div className = "o-rhythm__row -flex-wrap__no-wrap">
+                        <div className = "o-rhythm__col -justify-center">
+                            <div className = "kd-image -home-page-feed">
+                                <img src = { homePageFeed } />
+                            </div>
+                            <div className = "kd-image -apple-pencil">
+                                <img src = { applePencil } />
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div className = "m-case-study-page-content__image-container -mobile-only ">
+                    <div className = "m-case-study-page-content__image -apple-pencil">
+                        <img src = { applePencil } />
+                    </div>
+                </div>
+                <div className = "m-case-study-page-content__image-container -mobile-only ">
+                    <div className = "m-case-study-page-content__image">
+                        <img src = { homePageFeed } />
+                    </div>
+                </div>
+
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Synthesis</h6>
@@ -129,7 +149,7 @@ const KidsDiscover = class extends React.Component {
                 </div>
                 <div className = "m-case-study-page-content__section">
                     <div className = "o-rhythm__row">
-                        <div className = "kd-image -dot-grid -absolute -desktop-only">
+                        <div className = "kd-image -dot-grid -desktop-only">
                             <img src = { dotGrid } />
                         </div>
                         <div className = "kd-image -student-homework">
@@ -163,24 +183,33 @@ const KidsDiscover = class extends React.Component {
                         <div className = "o-rhythm__row -space-between">
                             <div className = "o-rhythm__col -span-six -push-one">
                                 <div className = "m-case-study-page-content__copy-section">
-                                    <h6 className = "content__header -mobile-only">deployment &amp; Testing</h6>
+                                    <h6 className = "content__header -mobile-only">deployment &amp; testing</h6>
                                     <header className = "-push-three">time for final exams</header>
                                     <div className = "o-rhythm__row">
-                                        <h6 className = "content__header -desktop-only">deployment &amp; Testing</h6>
+                                        <h6 className = "content__header -desktop-only">deployment &amp; testing</h6>
                                         <div className = "content__copy">
                                             <p>As soon as the beta product was ready, we took it to classrooms to test. We collected feedback from students and teachers, which helped us make final product adjustments and enhancements before going to market.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className = "o-rhythm__col -span-two">
+                            <div className = "o-rhythm__col">
                                 <div className = "kd-image -cube-doodle">
                                     <img src = { cubeDoodle } />
                                 </div>
                             </div>
                         </div>
-                        <div className = "kd-image -editor-screens">
-                            <img src = { editorScreens } />
+                        <div className = "m-case-study-page-content__section -margin__bottom">
+                            <div className = "o-rhythm__row">
+                                <div className = "o-rhythm__col">
+                                    <div className = "kd-image -triangle-doodle">
+                                        <img src = { triangleDoodle } />
+                                    </div>
+                                </div>
+                                <div className = "kd-image -editor-screens">
+                                    <img src = { editorScreens } />
+                                </div>
+                            </div>
                         </div>
                         <div className = "o-rhythm__row -space-between">
                             <div className = "o-rhythm__col -span-four -push-one">

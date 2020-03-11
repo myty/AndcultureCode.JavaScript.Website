@@ -117,12 +117,37 @@
                 position: relative;
 
                 &.-cube-doodle {
-                    right: -116px;
-                    top: 216px;
+                    @include span-col(4);
+                    position: absolute;
+                    right: -16px;
+                    top: 320px;
+
+                    @include breakpoints("tablet") {
+                        right: -64px;
+                        top: 216px;
+                        text-align: right;
+                    }
                 }
 
                 &.-editor-screens {
                     margin-bottom: 160px;
+                    left: -76px;
+                    top: 64px;
+
+                    @include breakpoints("tablet") {
+                        top: initial;
+                        left: initial;
+                    }
+
+                    img {
+                        max-width: fit-content;
+                        width: 650px;
+
+                        @include breakpoints("tablet") {
+                            max-width: 100%;
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }
@@ -155,7 +180,7 @@
 
     &__copy-section {
         position: relative;
-        padding: 80px 0;
+        padding: 80px 0 40px;
 
         @include breakpoints("tablet") {
             padding: 252px 0;
@@ -202,7 +227,7 @@
                 padding: 80px 0;
 
                 @include breakpoints("tablet") {
-                    padding: 252px 0 150px 0;
+                    padding: 252px 0 150px;
                 }
             }
         }
@@ -273,13 +298,14 @@
 
 
             &__header {
-                @include span-col(2);
+                @include span-col(12);
                 color: get-color("neutral", "medium-gray");
                 margin-bottom: 20px;
                 margin-left: 0;
                 font-weight: 600;
 
                 @include breakpoints("tablet") {
+                    @include span-col(2);
                     margin-bottom: 0;
                 }
             }
@@ -322,13 +348,10 @@
 
         &-container {
             display: flex;
+        }
 
-            &.-kd {
-
-                &-gradient {
-                    background: linear-gradient(white, #E0ECEF);
-                }
-            }
+        &.-apple-pencil {
+            margin-bottom: 48px;
         }
 
         &.-half {
@@ -375,6 +398,19 @@
     &__section {
         position: relative;
 
+        &.-gradient {
+            background: linear-gradient(white, #E0ECEF);
+        }
+
+        &.-margin {
+
+            &__bottom {
+                @include breakpoints("tablet") {
+                    margin-bottom: 160px;
+                }
+            }
+        }
+
         .kd {
 
             &-image {
@@ -406,6 +442,7 @@
                 }
 
                 &.-magazines {
+
                     img {
                         max-width: fit-content;
                         width: 650px;
@@ -417,6 +454,12 @@
                     }
                 }
 
+                &.-apple-pencil {
+                    position: absolute;
+                    top: -184px;
+                    right: 140px;
+                }
+
                 &.-phone {
                     top: -104px;
                     left: 284px;
@@ -425,6 +468,17 @@
 
                 &.-teachers-students {
                     right: -134px;
+                }
+
+                &.-triangle-doodle {
+                    @include span-col(4);
+                    position: absolute;
+                    bottom: 56px;
+
+                    @include breakpoints("tablet") {
+                        bottom: 120px;
+                        left: 44px;
+                    }
                 }
             }
         }
