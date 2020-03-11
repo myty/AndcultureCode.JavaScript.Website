@@ -10,6 +10,8 @@ import studentHomework from '../../../static/img/case-studies/kids-discover/stud
 import feedLockup from '../../../static/img/case-studies/kids-discover/feed-lockup.png';
 import discoverMap from '../../../static/img/case-studies/kids-discover/discovermap.png';
 import cubeDoodle from '../../../static/img/case-studies/kids-discover/cube-doodle.png';
+import editorScreens from '../../../static/img/case-studies/kids-discover/editor-screens.png';
+import siteHomePage from '../../../static/img/case-studies/kids-discover/site-home-page.png';
 
 
 const KidsDiscover = class extends React.Component {
@@ -37,9 +39,13 @@ const KidsDiscover = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__image-container">
-                    <div className = "m-case-study-page-content__image">
-                        <img src = { magazines } />
+                <div className = "m-case-study-page-content__section">
+                    <div className = "m-case-study-page-content__image-container">
+                        <div className = "m-case-study-page-content__image">
+                            <div className = "kd-image -magazines">
+                                <img src = { magazines } />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
@@ -55,14 +61,24 @@ const KidsDiscover = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__section">
-                    <div className = "o-rhythm__row">
+                <div className = "m-case-study-page-content__section -desktop-only">
+                    <div className = "o-rhythm__row -flex-wrap__no-wrap">
                         <div className = "kd-image -phone">
                             <img src = { phone } />
                         </div>
                         <div className = "kd-image -teachers-students">
                             <img src = { teacherStudents } />
                         </div>
+                    </div>
+                </div>
+                <div className = "m-case-study-page-content__image-container -mobile-only ">
+                    <div className = "m-case-study-page-content__image">
+                        <img src = { phone} />
+                    </div>
+                </div>
+                <div className = "m-case-study-page-content__image-container -mobile-only ">
+                    <div className = "m-case-study-page-content__image">
+                        <img src = { teacherStudents } />
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
@@ -113,20 +129,20 @@ const KidsDiscover = class extends React.Component {
                 </div>
                 <div className = "m-case-study-page-content__section">
                     <div className = "o-rhythm__row">
-                        <div className = "kd-image -dot-grid -absolute">
+                        <div className = "kd-image -dot-grid -absolute -desktop-only">
                             <img src = { dotGrid } />
                         </div>
                         <div className = "kd-image -student-homework">
                             <img src = { studentHomework } />
                         </div>
-                        <div className = "kd-image -feed-lockup -absolute">
+                        <div className = "kd-image -feed-lockup">
                             <img src = { feedLockup } />
                         </div>
                     </div>
                 </div>
                 <div className = "o-rhythm__container -fluid">
                     <div className = "m-case-study-page-content__copy-section">
-                        <div className = "o-rhythm__row">
+                        <div className = "o-rhythm__row -mobile-flex-direction__column-reverse">
                             <div className = "o-rhythm__col -span-six">
                                 <div className = "kd-image">
                                     <img src = { discoverMap } />
@@ -158,11 +174,37 @@ const KidsDiscover = class extends React.Component {
                                 </div>
                             </div>
                             <div className = "o-rhythm__col -span-two">
-                                <div className = "kd-image">
+                                <div className = "kd-image -cube-doodle">
                                     <img src = { cubeDoodle } />
                                 </div>
                             </div>
                         </div>
+                        <div className = "kd-image -editor-screens">
+                            <img src = { editorScreens } />
+                        </div>
+                        <div className = "o-rhythm__row -space-between">
+                            <div className = "o-rhythm__col -span-four -push-one">
+                                <div className = "m-case-study-page-content__copy-section -with-image ">
+                                    <header>checking back in</header>
+                                    <div className = "o-rhythm__row">
+                                        <div>
+                                            <p>As soon as the beta product was ready, we took it to classrooms to test. We collected feedback from students and teachers, which helped us make final product adjustments and enhancements before going to market.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className = "o-rhythm__col -span-six">
+                                <div className = "kd-image">
+                                    <img src = { siteHomePage } />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className = "m-case-study-page-content__next">
+                    <div className = "o-rhythm__container">
+                        <h6>Next project</h6>
+                        <h2>HackerOne</h2>
                     </div>
                 </div>
             </div>

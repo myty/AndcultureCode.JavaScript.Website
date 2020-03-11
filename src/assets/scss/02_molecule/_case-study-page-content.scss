@@ -112,6 +112,19 @@
 
         &.-kd {
             background: #25B3C2;
+
+            .kd-image {
+                position: relative;
+
+                &.-cube-doodle {
+                    right: -116px;
+                    top: 216px;
+                }
+
+                &.-editor-screens {
+                    margin-bottom: 160px;
+                }
+            }
         }
 
         &.-pulse {
@@ -148,6 +161,20 @@
             padding: 252px 0;
         }
 
+        & .-mobile {
+            &-flex-direction {
+                &__column {
+                    &-reverse {
+                        flex-direction: column-reverse;
+
+                        @include breakpoints("tablet") {
+                            flex-direction: initial;
+                        }
+                    }
+                }
+            }
+        }
+
         &.-image-right {
             position: relative;
             padding-right: 90px;
@@ -182,6 +209,7 @@
 
         header {
             @include font-size(40px);
+            @include line-height(44px);
             margin-bottom: 40px;
 
             @include breakpoints("tablet") {
@@ -352,22 +380,38 @@
             &-image {
                 position: relative;
 
-                &.-absolute {
-                    position: absolute;
-                }
-
                 &.-dot-grid {
-                    left: -432px;
-                    top: -156px;
+                    @include breakpoints("tablet") {
+                        position: absolute;
+                        left: -432px;
+                        top: -156px;
+                    }
                 }
 
                 &.-student-homework {
-                    right: -720px;
+                    @include breakpoints("tablet") {
+                        right: -720px;
+                    }
                 }
 
                 &.-feed-lockup {
-                    left: 212px;
-                    top: -36px;
+                    @include breakpoints("tablet") {
+                        left: 212px;
+                        position: absolute;
+                        top: -36px;
+                    }
+                }
+
+                &.-magazines {
+                    img {
+                        max-width: fit-content;
+                        width: 650px;
+
+                        @include breakpoints("tablet") {
+                            max-width: 100%;
+                            width: 100%;
+                        }
+                    }
                 }
 
                 &.-phone {
