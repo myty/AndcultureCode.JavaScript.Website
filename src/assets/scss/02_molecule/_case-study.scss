@@ -7,6 +7,13 @@
     background: white;
     z-index: 0;
 
+    &.m-case-study-page-content__next {
+
+        &:before {
+            display: none;
+        }
+    }
+
     &:before {
         content: '';
         position: absolute;

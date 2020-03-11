@@ -24,7 +24,7 @@ import sliderImage10 from '../../../static/img/case-studies/hackerone/Security12
 import sliderImage11 from '../../../static/img/case-studies/hackerone/Security16.jpg';
 import sliderImage12 from '../../../static/img/case-studies/hackerone/Security21.jpg';
 import sliderImage13 from '../../../static/img/case-studies/hackerone/Security25.jpg';
-
+import nextImg from '../../../static/img/case-studies/cca/kids_at_window_board.png';
 
 const Hackerone = class extends React.Component {
     constructor(props) {
@@ -47,6 +47,10 @@ const Hackerone = class extends React.Component {
             sliderImage12,
             sliderImage13,
         ];
+
+        const nextImageBlockStyle = {
+            background: "url('" + nextImg + "') no-repeat center center / cover"
+        }
 
         return (
             <div>
@@ -160,10 +164,17 @@ const Hackerone = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__next">
-                    <div className = "o-rhythm__container">
-                        <h6>Next project</h6>
-                        <h2>Kids Discover</h2>
+                <div className = "m-case-study-page-content__next m-case-study">
+                    <div className = "-background-image__container">
+                        <div
+                            style     = { nextImageBlockStyle }
+                            className = "-background-image">
+                        </div>
+                    </div>
+                    <div className = "-content">
+                        <h5>CCA</h5>
+                        <p>redefining what cyber education can do</p>
+                        <a href = "/case-studies/cca" className = "a-button">See How</a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import scheduleImg from '../../../static/img/case-studies/pulse/schedule.jpg'; 
-import peopleImg from '../../../static/img/case-studies/pulse/peopleroles.jpg'; 
+import scheduleImg from '../../../static/img/case-studies/pulse/schedule.jpg';
+import peopleImg from '../../../static/img/case-studies/pulse/peopleroles.jpg';
 import nurseImg from '../../../static/img/case-studies/pulse/nurse_hallway.png';
 import sketchImgOne from '../../../static/img/case-studies/pulse/sketchbook1.png';
 import sketchImgTwo from '../../../static/img/case-studies/pulse/sketchbook2.png';
@@ -9,6 +9,7 @@ import whiteSketches from '../../../static/img/case-studies/pulse/white_sketches
 import safariImg from '../../../static/img/case-studies/pulse/unit-workload-safari.png';
 import doodleImg from '../../../static/img/case-studies/pulse/pulse_block_doodle.jpg';
 import dataImg from '../../../static/img/case-studies/pulse/data-leveling.png';
+import nextImg from '../../../static/img/case-studies/kids-discover/student-homework.png';
 
 const Pulse = class extends React.Component {
     constructor(props) {
@@ -16,6 +17,10 @@ const Pulse = class extends React.Component {
     }
 
     render() {
+
+        const nextImageBlockStyle = {
+            background: "url('" + nextImg + "') no-repeat center center / cover"
+        }
 
         return (
             <div>
@@ -147,10 +152,17 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__next">
-                    <div className = "o-rhythm__container">
-                        <h6>Next project</h6>
-                        <h2>Commonwealth Charter Academy</h2>
+                <div className = "m-case-study-page-content__next m-case-study">
+                    <div className = "-background-image__container">
+                        <div
+                            style     = { nextImageBlockStyle }
+                            className = "-background-image">
+                        </div>
+                    </div>
+                    <div className = "-content">
+                        <h5>Kids Discover</h5>
+                        <p>changing the face of education</p>
+                        <a href = "/case-studies/kids-discover" className = "a-button">See How</a>
                     </div>
                 </div>
             </div>

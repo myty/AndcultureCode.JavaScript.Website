@@ -18,12 +18,12 @@ const Hero = class extends React.Component {
 
   componentDidMount() {
     this.setState({
-      windowWidth: window.innerHeight,
+      windowHeight: window.innerHeight,
     })
   }
 
   render() {
-    let height = this.state.innerHeight;
+    let height = this.state.windowHeight;
     const scrollTop = this.props.scrollTop;
     height = height / 5;
 
@@ -55,7 +55,11 @@ const Hero = class extends React.Component {
           <div className="o-hero__subtitles">
             <h3>{this.props.subTitle}</h3>
           </div>
-          <h6 style={verticalTextStyle} className="-vert">A Design Company</h6>
+          <h6
+            style     = { verticalTextStyle }
+            className = "-vert">
+            A Design Company
+          </h6>
         </div>
       </div>
     )

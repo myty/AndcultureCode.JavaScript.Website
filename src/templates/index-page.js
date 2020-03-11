@@ -22,10 +22,10 @@ export const IndexPageTemplate = ({
     <div className="p-home">
       <HomePageAnimation />
       <Hero
-        scrollTop={scrollTop}
-        title={title}
-        secondaryTitle={secondaryTitle}
-        subTitle={subTitle} />
+        scrollTop      = { scrollTop }
+        title          = { title }
+        secondaryTitle = { secondaryTitle }
+        subTitle       = { subTitle } />
     </div>
   )
 

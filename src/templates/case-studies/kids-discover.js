@@ -14,6 +14,7 @@ import cubeDoodle from '../../../static/img/case-studies/kids-discover/cube-dood
 import editorScreens from '../../../static/img/case-studies/kids-discover/editor-screens.png';
 import siteHomePage from '../../../static/img/case-studies/kids-discover/site-home-page.png';
 import triangleDoodle from '../../../static/img/case-studies/kids-discover/triangle_doodle.png';
+import nextImg from '../../../static/img/case-studies/hackerone/billboard.png';
 
 
 const KidsDiscover = class extends React.Component {
@@ -22,6 +23,9 @@ const KidsDiscover = class extends React.Component {
     }
 
     render() {
+        const nextImageBlockStyle = {
+            background: "url('" + nextImg + "') no-repeat center center / cover"
+        }
 
         return (
             <div>
@@ -117,7 +121,6 @@ const KidsDiscover = class extends React.Component {
                         <img src = { homePageFeed } />
                     </div>
                 </div>
-
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Synthesis</h6>
@@ -230,10 +233,17 @@ const KidsDiscover = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__next">
-                    <div className = "o-rhythm__container">
-                        <h6>Next project</h6>
-                        <h2>HackerOne</h2>
+                <div className = "m-case-study-page-content__next m-case-study">
+                    <div className = "-background-image__container">
+                        <div
+                            style     = { nextImageBlockStyle }
+                            className = "-background-image">
+                        </div>
+                    </div>
+                    <div className = "-content">
+                        <h5>Hackerone</h5>
+                        <p>hacking for good</p>
+                        <a href = "/case-studies/hackerone" className = "a-button">See How</a>
                     </div>
                 </div>
             </div>

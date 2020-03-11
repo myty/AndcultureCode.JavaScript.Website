@@ -21,6 +21,7 @@ import sliderImage5 from '../../../static/img/case-studies/cca/CCA_gallery_5.png
 import sliderImage6 from '../../../static/img/case-studies/cca/CCA_gallery_6.png';
 import sliderImage7 from '../../../static/img/case-studies/cca/CCA_gallery_7.png';
 import sliderImage8 from '../../../static/img/case-studies/cca/CCA_gallery_8.png';
+import nextImg from '../../../static/img/case-studies/pulse/nurse_hallway.png';
 
 const CCA = class extends React.Component {
     constructor(props) {
@@ -38,6 +39,10 @@ const CCA = class extends React.Component {
             sliderImage7,
             sliderImage8,
         ];
+
+        const nextImageBlockStyle = {
+            background: "url('" + nextImg + "') no-repeat center center / cover"
+        }
 
         return (
             <div>
@@ -142,10 +147,17 @@ const CCA = class extends React.Component {
                     </div>
                     <img src = { iphoneImg } className = "-front" />
                 </div>
-                <div className = "m-case-study-page-content__next">
-                    <div className = "o-rhythm__container">
-                        <h6>Next project</h6>
-                        <h2>Kids Discover</h2>
+                <div className = "m-case-study-page-content__next m-case-study">
+                    <div className = "-background-image__container">
+                        <div
+                            style     = { nextImageBlockStyle }
+                            className = "-background-image">
+                        </div>
+                    </div>
+                    <div className = "-content">
+                        <h5>Pulse</h5>
+                        <p>rearchitecting nurse workflows</p>
+                        <a href = "/case-studies/pulse" className = "a-button">See How</a>
                     </div>
                 </div>
             </div>
