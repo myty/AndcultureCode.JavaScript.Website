@@ -152,6 +152,28 @@
             }
         }
 
+        .-kd {
+            &-color-block {
+                &__first {
+                    @include span-col(12);
+
+                    @include breakpoints("tablet") {
+                        @include span-col(6);
+                        @include push-col(1);
+                    }
+                }
+
+                &__last {
+                    @include span-col(12);
+
+                    @include breakpoints("tablet") {
+                        @include span-col(4);
+                        @include push-col(1);
+                    }
+                }
+            }
+        }
+
         &.-pulse {
             background: #76c1b9;
         }
@@ -230,16 +252,21 @@
                     padding: 252px 0 150px;
                 }
             }
+
+            p {
+                margin-top: 0;
+            }
         }
 
         header {
             @include font-size(40px);
             @include line-height(44px);
-            margin-bottom: 40px;
+            margin-bottom: 32px;
 
             @include breakpoints("tablet") {
                 @include font-size(60px);
-                margin-bottom: 113px;
+                @include line-height(65px);
+                margin-bottom: 48px;
             }
         }
 
@@ -289,6 +316,7 @@
         .content {
             &__easter-egg {
                 @include span-col(12);
+                margin-left: 22px;
 
                 @include breakpoints("tablet") {
                     @include span-col(2);
@@ -319,6 +347,7 @@
 
             &__copy {
                 @include span-col(12);
+                margin-left:0;
                 position: relative;
                 top: -8px;
 
