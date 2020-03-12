@@ -55,6 +55,20 @@
         }
     }
 
+    &.-visible {
+
+        .a-button,
+        h5,
+        p,
+        .m-case-study__count {
+
+            @media (max-width: 1024px) {
+                color: get-color("primary", "white") !important;
+                border-color: get-color("primary", "white") !important;
+            }
+        }
+    }
+
     @include breakpoints("tablet") {
 
         &.-hovered {

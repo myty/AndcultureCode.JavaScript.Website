@@ -341,14 +341,19 @@
     .-jigglydoo svg {
         transform-origin: 50% 50%;
         animation: move 24s ease-in-out infinite;
+
+        @include breakpoints("tablet") {
+            width: 800px;
+            height: 800px;
+        }
     }
 
     @keyframes move {
-        0%   { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); }
-        25%  { transform: scale(0.8) translate(5vw, 10vh) rotate(55deg); stroke: var(--secondColor); }
-        50%  { transform: scale(0.6) translate(15vw, 5vh) rotate(180deg); stroke: var(--thirdColor); }
-        75%  { transform: scale(0.8) translate(5vw, 10h) rotate(55deg); stroke: var(--fourthColor); }
-        100% { transform: scale(1)   translate(0, 0) rotate(0); stroke: var(--firstColor); }
+        0%   { transform: scale(1)   translate(0, 0); stroke: var(--firstColor); }
+        25%  { transform: scale(0.8) translate(5vw, 10vh); stroke: var(--secondColor); }
+        50%  { transform: scale(0.6) translate(15vw, 5vh); stroke: var(--thirdColor); }
+        75%  { transform: scale(0.8) translate(5vw, 10h); stroke: var(--fourthColor); }
+        100% { transform: scale(1)   translate(0, 0); stroke: var(--firstColor); }
     }
 
 }
