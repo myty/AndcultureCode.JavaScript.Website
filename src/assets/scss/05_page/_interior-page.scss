@@ -8,14 +8,6 @@
         &__titles {
             margin-top: 40px;
 
-            @include breakpoints("sm-desktop") {
-                margin-top: 0;
-            }
-
-            @include breakpoints("lg-desktop") {
-                padding-left: 0;
-            }
-
             h2 {
                 @include font-size("smaller");
                 color: get-color("primary", "fresh");
@@ -55,15 +47,6 @@
         @include breakpoints("tablet") {
             font-weight: 100;
             letter-spacing: 0px;
-            margin-left: 0;
-        }
-
-        @include breakpoints("sm-desktop") {
-            margin-left: 800px;
-        }
-
-        @include breakpoints("lg-desktop") {
-            padding-left: 0;
         }
 
         h3 {

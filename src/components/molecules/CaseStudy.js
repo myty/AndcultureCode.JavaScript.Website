@@ -23,7 +23,7 @@ const CaseStudy = class extends React.Component {
     componentDidMount() {
         this.setState({
           windowWidth: window.innerWidth,
-        })
+        }), () => this._setIsMobile
     }
 
     _onChange(isVisible) {
@@ -32,10 +32,14 @@ const CaseStudy = class extends React.Component {
         });
     }
 
-    _isMobile() {
-        if (window.innerWidth < 1024) {
+    _setIsMobile() {
+        if (this.state.windowWidth < 1024) {
             this.setState({
                 isMobile: true,
+            });
+        } else {
+            this.setState({
+                isMobile: false,
             });
         }
     }
@@ -59,7 +63,7 @@ const CaseStudy = class extends React.Component {
         if (this.state.isHovered) {
             caseStudyClass += " -hovered"
         }
-        if (this.state.isVisible) {
+        if (this.state.isVisible & this.state.windowWidth < 1024) {
             caseStudyClass += " -visible";
         }
         if (this.props.post.frontmatter.secondaryLayout) {
@@ -72,7 +76,7 @@ const CaseStudy = class extends React.Component {
             borderColor: this.props.post.frontmatter.color,
         }
 
-        if (this.state.isHovered || this.state.isVisible && this.state.isMobile) {
+        if (this.state.isHovered || this.state.isVisible && this.state.windowWidth < 1024) {
             caseStudyStyle = {
                 backgroundColor: this.props.post.frontmatter.color,
             }

@@ -61,7 +61,7 @@
 
         &:not(.-home) {
 
-            img {
+            svg {
                 display: block;
 
                 @include breakpoints("tablet") {
@@ -85,13 +85,17 @@
             top: 66px;
         }
 
-        img {
+        svg {
             width: 120px;
 
             @include breakpoints("tablet") {
                 width: 192px;
             }
 
+            path,
+            rect {
+                fill: get-color("primary", "fresh");
+            }
         }
     }
 
