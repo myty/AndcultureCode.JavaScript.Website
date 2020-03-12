@@ -1,5 +1,5 @@
 import React from 'react';
-import teacherClassRom from '../../../static/img/case-studies/kids-discover/teacher-classroom.png';
+import teacherClassRoom from '../../../static/img/case-studies/kids-discover/teacher-classroom.jpg';
 import magazines from '../../../static/img/case-studies/kids-discover/magazines.png';
 import phone from '../../../static/img/case-studies/kids-discover/phone.png';
 import teacherStudents from '../../../static/img/case-studies/kids-discover/teacher-students.png';
@@ -31,12 +31,12 @@ const KidsDiscover = class extends React.Component {
             <div>
                 <div className = "m-case-study-page-content__image-container">
                     <div className = "m-case-study-page-content__image">
-                        <img src = { teacherClassRom } />
+                        <img src = { teacherClassRoom } />
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
-                        <header className = "-push-one">so what was broken?</header>
+                        <header className = "-push-one">what was the broken reality with Kids Discover?</header>
                         <div className = "o-rhythm__row">
                             <div className = "content__copy">
                                 <p>In a word, magazines. None of the content was digital — it was all print. Kids Discover saw that the way to expand reach was through online subscriptions and content syndication. For obvious reasons, the current format was not going to support these growth opportunities. Kids Discover needed a partner to do a heavy lift — take all this offline content, organize it, architect both front- and back-end platforms and design user-friendly interfaces and then build it to support new business models in a scalable way. <span className = "easter-egg__right">Easy peasy.</span></p>
@@ -111,14 +111,16 @@ const KidsDiscover = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__image-container -mobile-only ">
-                    <div className = "m-case-study-page-content__image -apple-pencil">
-                        <img src = { applePencil } />
+                <div className = "-mobile-only">
+                    <div className = "m-case-study-page-content__image-container">
+                        <div className = "m-case-study-page-content__image -apple-pencil">
+                            <img src = { applePencil } />
+                        </div>
                     </div>
-                </div>
-                <div className = "m-case-study-page-content__image-container -mobile-only ">
-                    <div className = "m-case-study-page-content__image">
-                        <img src = { homePageFeed } />
+                    <div className = "m-case-study-page-content__image-container">
+                        <div className = "m-case-study-page-content__image">
+                            <img src = { homePageFeed } />
+                        </div>
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
@@ -184,7 +186,7 @@ const KidsDiscover = class extends React.Component {
                 <div className = "m-case-study-page-content__color-block -kd">
                     <div className = "o-rhythm__container -fluid">
                         <div className = "o-rhythm__row -space-between">
-                            <div className = "o-rhythm__col -span-six -push-one">
+                            <div className = "o-rhythm__col -kd-color-block__first">
                                 <div className = "m-case-study-page-content__copy-section">
                                     <h6 className = "content__header -mobile-only">deployment &amp; testing</h6>
                                     <header className = "-push-three">time for final exams</header>
@@ -215,7 +217,7 @@ const KidsDiscover = class extends React.Component {
                             </div>
                         </div>
                         <div className = "o-rhythm__row -space-between">
-                            <div className = "o-rhythm__col -span-four -push-one">
+                            <div className = "o-rhythm__col -kd-color-block__last">
                                 <div className = "m-case-study-page-content__copy-section -with-image ">
                                     <header>checking back in</header>
                                     <div className = "o-rhythm__row">
