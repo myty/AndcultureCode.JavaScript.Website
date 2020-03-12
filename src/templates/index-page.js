@@ -26,6 +26,9 @@ export const IndexPageTemplate = ({
         title          = { title }
         secondaryTitle = { secondaryTitle }
         subTitle       = { subTitle } />
+      <CaseStudyList />
+      <ContactForm />
+      <EasterEgg />
     </div>
   )
 
@@ -52,9 +55,6 @@ const IndexPage = ({ data }) => {
         title          = { frontmatter.title }
         secondaryTitle = { frontmatter.secondaryTitle }
         subTitle       = { frontmatter.subTitle } />
-      <CaseStudyList />
-      <ContactForm />
-      <EasterEgg />
     </Layout>
   )
 }
