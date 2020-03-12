@@ -106,7 +106,7 @@ const Hackerone = class extends React.Component {
                 </div>
                 <CustomSlider images = { sliderImages } />
                 <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
+                    <div className = "m-case-study-page-content__copy-section -mobile-padding__top-none">
                         <h6 className = "content__header -mobile-only">Social Media</h6>
                         <header className = "-push-three">analog and digital</header>
                         <div className = "o-rhythm__row">
@@ -153,7 +153,7 @@ const Hackerone = class extends React.Component {
                     <img src = { skateboardImg } className = "-skateboard" />
                 </div>
                 <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
+                    <div className = "m-case-study-page-content__copy-section -mobile-padding__top-none">
                         <h6 className = "content__header -mobile-only">Mission</h6>
                         <header className = "-push-three">why we love HackerOne</header>
                         <div className = "o-rhythm__row">

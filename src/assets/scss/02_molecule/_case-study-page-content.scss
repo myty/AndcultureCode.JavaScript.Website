@@ -60,11 +60,7 @@
         }
 
         &.-hackerone {
-            padding: 100px 0 0 0;
-
-            @include breakpoints("tablet") {
-                padding: 0;
-            }
+            padding: 0;
 
             .-dots {
                 position: absolute;
@@ -123,14 +119,15 @@
 
             .-sticker-two {
                 position: absolute;
-                width: 200px;
-                left: 0;
-                top: -100px;
+                width: 150px;
+                left: 10px;
+                top: -44px;
 
                 @include breakpoints("tablet") {
-                    left: 60px;
-                    bottom: -160px;
+                    left: -64px;
+                    bottom: -248px;
                     top: auto;
+                    width: 304px;
                 }
             }
 
@@ -138,7 +135,7 @@
                 position: relative;
                 right: 0;
                 bottom: -40%;
-                top: -80px;
+                top: -48px;
 
                 @include breakpoints("tablet") {
                     position: absolute;
@@ -374,6 +371,20 @@
             }
         }
 
+        &.-mobile {
+            &-padding {
+                &__top {
+                    &-none {
+                        padding-top: 0;
+
+                        @include breakpoints("tablet") {
+                            padding: 252px 0;
+                        }
+                    }
+                }
+            }
+        }
+
         &.-image-right {
             position: relative;
             padding-right: 90px;
@@ -520,6 +531,12 @@
                 p:first-of-type {
                     margin-top: 0;
                 }
+            }
+        }
+
+        &:last-of-type {
+            @include breakpoints("tablet") {
+                padding-bottom: 200px;
             }
         }
     }
