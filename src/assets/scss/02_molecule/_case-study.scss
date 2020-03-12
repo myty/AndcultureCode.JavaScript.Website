@@ -111,8 +111,13 @@
         float: none;
 
         &-inner {
+            padding-left: 0;
 
             @include breakpoints("tablet") {
+                padding-left: 80px;
+            }
+
+            @include breakpoints("sm-desktop") {
                 padding-left: 160px;
             }
         }
@@ -129,6 +134,12 @@
         position: relative;
 
         @include breakpoints("tablet") {
+            width: calc(50% - 62px);
+            float: right;
+            margin-right: 64px;
+        }
+
+        @include breakpoints("sm-desktop") {
             margin-bottom: 0;
             width: 50%;
             float: right;
@@ -229,6 +240,11 @@
         margin: 0 0 16px 0;
 
         @include breakpoints("tablet") {
+            @include font-size(44px);
+            @include line-height(52px);
+        }
+
+        @include breakpoints("sm-desktop") {
             @include font-size("larger");
             @include line-height(60px);
         }

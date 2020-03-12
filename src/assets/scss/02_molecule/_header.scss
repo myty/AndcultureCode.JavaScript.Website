@@ -6,6 +6,7 @@
     top: 0;
     padding: 10px 0;
     z-index: 10;
+    mix-blend-mode: difference;
 
     @include breakpoints("tablet") {
         top: 50px;
@@ -35,6 +36,13 @@
 
         @include breakpoints("tablet") {
             width: 60px;
+        }
+
+        svg {
+
+            path {
+                fill: get-color("primary", "fresh");
+            }
         }
     }
 

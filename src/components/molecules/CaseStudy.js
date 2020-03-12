@@ -24,7 +24,7 @@ const CaseStudy = class extends React.Component {
         this.setState({
           windowWidth: window.innerWidth,
         })
-      }
+    }
 
     _onChange(isVisible) {
         this.setState({

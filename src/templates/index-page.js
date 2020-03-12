@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { graphql }                    from 'gatsby';
-import Layout                         from '../components/Layout'
-import CaseStudyList                  from '../components/organisms/CaseStudyList'
-import ContactForm                    from '../components/organisms/ContactForm'
-import HomePageAnimation              from '../components/organisms/HomeAnimation'
+import Layout                         from '../components/Layout';
+import CaseStudyList                  from '../components/organisms/CaseStudyList';
+import ContactForm                    from '../components/organisms/ContactForm';
+import HomePageAnimation              from '../components/organisms/HomeAnimation';
 import EasterEgg                      from '../components/atoms/EasterEgg';
 import '../assets/scss/app.scss'
 

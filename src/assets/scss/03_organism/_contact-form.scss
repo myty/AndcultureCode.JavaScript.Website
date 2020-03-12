@@ -36,6 +36,11 @@
         position: relative;
         padding: 80px 0;
         background: get-color("primary", "after-hours");
+        padding-left: 0;
+
+        @include breakpoints("tablet") {
+            padding-left: 80px;
+        }
 
         &.-light {
             background: get-color("primary", "white");

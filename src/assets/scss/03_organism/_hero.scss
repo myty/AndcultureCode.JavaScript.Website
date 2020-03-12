@@ -139,6 +139,10 @@
 
         @include breakpoints("tablet") {
             margin-top: 60px;
+            padding-left: 80px;
+        }
+
+        @include breakpoints("sm-desktop") {
             padding-left: 160px;
         }
     }
@@ -148,9 +152,13 @@
         width: 100%;
 
         @include breakpoints("tablet") {
-            padding-left: 160px;
             width: 800px;
             max-width: calc(100% - 160px);
+            padding-left: 80px;
+        }
+
+        @include breakpoints("sm-desktop") {
+            padding-left: 160px;
         }
     }
 
