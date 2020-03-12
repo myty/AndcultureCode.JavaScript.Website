@@ -1,11 +1,11 @@
 import React from 'react';
-import ContactSlider from '../../components/molecules/ContactSlider';
+import CustomSlider from '../../components/molecules/CustomSlider';
 import boardImg from '../../../static/img/case-studies/cca/kids_at_window_board.png';
 import ipadImg from '../../../static/img/case-studies/cca/ipadCCA.png';
 import timelineImg from '../../../static/img/case-studies/cca/timeline.png';
 import studentImg from '../../../static/img/case-studies/cca/student.png';
 import scienceImg from '../../../static/img/case-studies/cca/science.png';
-import laptopImg from '../../../static/img/case-studies/cca/macbook_CCA.png';
+import laptopImg from '../../../static/img/case-studies/cca/Macbook_CCA.png';
 import iphoneImg from '../../../static/img/case-studies/cca/3_Phone_X.png';
 import rainbow from '../../../static/img/case-studies/cca/rainbow_doodle.png';
 import traingle from '../../../static/img/case-studies/cca/doodle_triangle.png';
@@ -13,6 +13,15 @@ import dots from '../../../static/img/case-studies/cca/yellow_dots.png';
 import block from '../../../static/img/case-studies/cca/doodle_block.png';
 import dotsTwo from '../../../static/img/case-studies/cca/yellow_dots.png';
 import dotsSmall from '../../../static/img/case-studies/cca/dotted_area.png';
+import sliderImage1 from '../../../static/img/case-studies/cca/CCA_gallery_1.png';
+import sliderImage2 from '../../../static/img/case-studies/cca/CCA_gallery_2.png';
+import sliderImage3 from '../../../static/img/case-studies/cca/CCA_gallery_3.png';
+import sliderImage4 from '../../../static/img/case-studies/cca/CCA_gallery_4.png';
+import sliderImage5 from '../../../static/img/case-studies/cca/CCA_gallery_5.png';
+import sliderImage6 from '../../../static/img/case-studies/cca/CCA_gallery_6.png';
+import sliderImage7 from '../../../static/img/case-studies/cca/CCA_gallery_7.png';
+import sliderImage8 from '../../../static/img/case-studies/cca/CCA_gallery_8.png';
+import nextImg from '../../../static/img/case-studies/pulse/nurse_hallway.png';
 
 const CCA = class extends React.Component {
     constructor(props) {
@@ -20,6 +29,20 @@ const CCA = class extends React.Component {
     }
 
     render() {
+        const sliderImages = [
+            sliderImage1,
+            sliderImage2,
+            sliderImage3,
+            sliderImage4,
+            sliderImage5,
+            sliderImage6,
+            sliderImage7,
+            sliderImage8,
+        ];
+
+        const nextImageBlockStyle = {
+            background: "url('" + nextImg + "') no-repeat center center / cover"
+        }
 
         return (
             <div>
@@ -56,7 +79,7 @@ const CCA = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <ContactSlider />
+                <CustomSlider images = { sliderImages } />
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section -image-right">
                         <h6 className = "content__header -mobile-only">Synthesis</h6>
@@ -124,11 +147,17 @@ const CCA = class extends React.Component {
                     </div>
                     <img src = { iphoneImg } className = "-front" />
                 </div>
-
-                <div className = "m-case-study-page-content__next">
-                    <div className = "o-rhythm__container">
-                        <h6>Next project</h6>
-                        <h2>Kids Discover</h2>
+                <div className = "m-case-study-page-content__next m-case-study">
+                    <div className = "-background-image__container">
+                        <div
+                            style     = { nextImageBlockStyle }
+                            className = "-background-image">
+                        </div>
+                    </div>
+                    <div className = "-content">
+                        <h5>Pulse</h5>
+                        <p>rearchitecting nurse workflows</p>
+                        <a href = "/case-studies/pulse" className = "a-button">See How</a>
                     </div>
                 </div>
             </div>

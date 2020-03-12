@@ -38,3 +38,32 @@ img {
         display: block;
     }
 }
+
+.p-home {
+
+    @include breakpoints("tablet") {
+
+        .o-hero__top,
+        .o-hero__subtitles {
+            padding-left: 80px;
+
+            p {
+                margin-right: 60px;
+            }
+        }
+
+        .o-hero__subtitles {
+            padding-right: 60px;
+        }
+
+
+    }
+
+    // @include breakpoints("sm-desktop") {
+    //     border: 1px solid green;
+    // }
+}
+
+.p-interior-page {
+
+}

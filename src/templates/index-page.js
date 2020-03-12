@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { graphql }                    from 'gatsby';
-import Layout                         from '../components/Layout'
-import CaseStudyList                  from '../components/organisms/CaseStudyList'
-import ContactForm                    from '../components/organisms/ContactForm'
-import HomePageAnimation              from '../components/organisms/HomeAnimation'
+import Layout                         from '../components/Layout';
+import CaseStudyList                  from '../components/organisms/CaseStudyList';
+import ContactForm                    from '../components/organisms/ContactForm';
+import HomePageAnimation              from '../components/organisms/HomeAnimation';
 import EasterEgg                      from '../components/atoms/EasterEgg';
 import '../assets/scss/app.scss'
 
@@ -22,10 +22,10 @@ export const IndexPageTemplate = ({
     <div className="p-home">
       <HomePageAnimation />
       <Hero
-        scrollTop={scrollTop}
-        title={title}
-        secondaryTitle={secondaryTitle}
-        subTitle={subTitle} />
+        scrollTop      = { scrollTop }
+        title          = { title }
+        secondaryTitle = { secondaryTitle }
+        subTitle       = { subTitle } />
     </div>
   )
 
@@ -46,12 +46,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout
       pageTitle = "home"
-      scrollTop = {scrollTop}>
+      scrollTop = { scrollTop }>
       <IndexPageTemplate
-        scrollTop      = {scrollTop}
-        title          = {frontmatter.title}
-        secondaryTitle = {frontmatter.secondaryTitle}
-        subTitle       = {frontmatter.subTitle} />
+        scrollTop      = { scrollTop }
+        title          = { frontmatter.title }
+        secondaryTitle = { frontmatter.secondaryTitle }
+        subTitle       = { frontmatter.subTitle } />
       <CaseStudyList />
       <ContactForm />
       <EasterEgg />
