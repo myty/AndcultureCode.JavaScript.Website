@@ -73,7 +73,7 @@ const CCA = class extends React.Component {
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Takeaway</h6>
                             <div className = "content__copy">
-                                <p>andculture &aamp; CCA took the time necessary to understand the shortcomings of their website, opportunities to improve and what goals we had.</p>
+                                <p>andculture &amp; CCA took the time necessary to understand the shortcomings of their website, opportunities to improve and what goals we had.</p>
                                 <div className = "easter-egg">We could say “brought in various stakeholders to evaluate the end-user experience” but that makes puppies cry.</div>
                             </div>
                         </div>

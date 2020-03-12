@@ -351,6 +351,15 @@
             padding: 252px 0;
         }
 
+        &.-body-intro {
+            header {
+                @include breakpoints("tablet") {
+                    @include span-col(8);
+                    @include push-col(1);
+                }
+            }
+        }
+
         & .-mobile {
             &-flex-direction {
                 &__column {
@@ -518,6 +527,13 @@
     &__image {
         margin: 0;
         width: 100%;
+
+        &.-border {
+
+            &__bottom {
+                border-bottom: 1px solid get-color('neutral', 'light-gray');
+            }
+        }
 
         &-container {
             display: flex;

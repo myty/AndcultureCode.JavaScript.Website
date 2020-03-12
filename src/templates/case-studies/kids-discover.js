@@ -35,8 +35,8 @@ const KidsDiscover = class extends React.Component {
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
-                        <header className = "-push-one">what was the broken reality with Kids Discover?</header>
+                    <div className = "m-case-study-page-content__copy-section -body-intro">
+                        <header>what was the broken reality with Kids Discover?</header>
                         <div className = "o-rhythm__row">
                             <div className = "content__copy">
                                 <p>In a word, magazines. None of the content was digital — it was all print. Kids Discover saw that the way to expand reach was through online subscriptions and content syndication. For obvious reasons, the current format was not going to support these growth opportunities. Kids Discover needed a partner to do a heavy lift — take all this offline content, organize it, architect both front- and back-end platforms and design user-friendly interfaces and then build it to support new business models in a scalable way. <span className = "easter-egg__right">Easy peasy.</span></p>
@@ -118,7 +118,7 @@ const KidsDiscover = class extends React.Component {
                         </div>
                     </div>
                     <div className = "m-case-study-page-content__image-container">
-                        <div className = "m-case-study-page-content__image">
+                        <div className = "m-case-study-page-content__image -border__bottom">
                             <img src = { homePageFeed } />
                         </div>
                     </div>

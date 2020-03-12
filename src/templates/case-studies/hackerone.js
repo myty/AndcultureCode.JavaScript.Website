@@ -58,8 +58,8 @@ const Hackerone = class extends React.Component {
                     <img src = { billboardImg } />
                 </div>
                 <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
-                        <header className = "-push-one">what was the broken reality with h1?</header>
+                    <div className = "m-case-study-page-content__copy-section -body-intro">
+                        <header>what was the broken reality with h1?</header>
                         <div className = "o-rhythm__row">
                             <div className = "content__copy">
                                 <p><span className = "easter-egg__right">Not surprisingly, HackerOne wants to work with the best hackers, wherever they are.</span> To that end, they put a lot of energy into being “the” community for hackers, in order to be the best platform for hiring hacker-powered security. Hackers live on the bleeding edge, fueled by different motivations, coming to HackerOne both for money and for the challenge. How does HackerOne stay fresh, continue to engage and keep the best coming back for more?</p>
