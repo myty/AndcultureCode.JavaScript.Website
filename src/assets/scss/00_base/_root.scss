@@ -42,6 +42,7 @@ img {
 .p-home {
 
     @include breakpoints("tablet") {
+        border: 10px solid red;
 
         .o-hero__top,
         .o-hero__subtitles {
@@ -56,7 +57,16 @@ img {
             padding-right: 60px;
         }
 
+        .o-contact-form__wrapper {
+            margin-left: 72px;
+        }
+    }
 
+    @include breakpoints("lg-desktop") {
+
+        .o-contact-form__wrapper {
+            margin-left: 0;
+        }
     }
 
     // @include breakpoints("sm-desktop") {
