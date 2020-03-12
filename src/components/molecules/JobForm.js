@@ -124,77 +124,79 @@ const JobForm = class extends React.Component {
         return (
             <form className = { formClass } name = "contact-job" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
-                    <header>join the team</header>
-                    <Input
-                        className          = { this.state.activeQuestion === 1 ? '-active': '' }
-                        type               = "text"
-                        name               = "name" 
-                        inputValueCallback = { this._setInputValue } 
-                        isRequired         = { true }
-                        lightTheme         = { this.props.lightTheme }
-                        value              = { this.state.formData.name } />
-                    <Input 
-                        className          = { this.state.activeQuestion === 2 ? '-active': '' }
-                        type               = "email"
-                        name               = "email" 
-                        inputValueCallback = { this._setInputValue } 
-                        isRequired         = { true }
-                        lightTheme         = { this.props.lightTheme }
-                        value              = { this.state.formData.email } />
-                    <Input 
-                        className          = { this.state.activeQuestion === 3 ? '-active': '' }
-                        type               = "number"
-                        name               = "phone" 
-                        inputValueCallback = { this._setInputValue } 
-                        isRequired         = { true }
-                        lightTheme         = { this.props.lightTheme }
-                        value              = { this.state.formData.phone } />
-                    <Input 
-                        className          = { this.state.activeQuestion === 4 ? '-active': '' }
-                        type               = "text"
-                        name               = "linkedin_profile" 
-                        inputValueCallback = { this._setInputValue } 
-                        lightTheme         = { this.props.lightTheme }
-                        value              = { this.state.formData.linkedin_profile } />
-                    <Textarea 
-                        className          = { this.state.activeQuestion === 5 ? '-active': '' }
-                        name               = "message"
-                        inputValueCallback = { this._setInputValue }
-                        value              = { this.state.formData.message }
-                        lightTheme         = { this.props.lightTheme } />
-                    <fieldset className = { this.state.activeQuestion === 6 ? '-active': '' }>
-                        <input
-                            className = "a-checkbox"
-                            type      = "checkbox"
-                            name      = "acknowledge"
-                            value     = "acknowledge"
-                            id        = "acknowledge"/>
-                        <label
-                            className = "a-label"
-                            htmlFor   = "acknowledge">
-                                I acknoledge that this position is located in Harrisburg, PA
-                        </label>
-                    </fieldset>
-                    <div className = "o-contact-form__buttons">
-                        <a
-                            onClick   = { this._onBackClick }
-                            className = {  buttonClass }>
-                            Go Back
-                        </a>
-                        {  // if
-                            this.state.activeQuestion !== this.state.totalQuestions &&
+                    <div className = "o-contact-form__wrapper">
+                        <header>join the team</header>
+                        <Input
+                            className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                            type               = "text"
+                            name               = "name"
+                            inputValueCallback = { this._setInputValue }
+                            isRequired         = { true }
+                            lightTheme         = { this.props.lightTheme }
+                            value              = { this.state.formData.name } />
+                        <Input
+                            className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                            type               = "email"
+                            name               = "email"
+                            inputValueCallback = { this._setInputValue }
+                            isRequired         = { true }
+                            lightTheme         = { this.props.lightTheme }
+                            value              = { this.state.formData.email } />
+                        <Input
+                            className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                            type               = "number"
+                            name               = "phone"
+                            inputValueCallback = { this._setInputValue }
+                            isRequired         = { true }
+                            lightTheme         = { this.props.lightTheme }
+                            value              = { this.state.formData.phone } />
+                        <Input
+                            className          = { this.state.activeQuestion === 4 ? '-active': '' }
+                            type               = "text"
+                            name               = "linkedin_profile"
+                            inputValueCallback = { this._setInputValue }
+                            lightTheme         = { this.props.lightTheme }
+                            value              = { this.state.formData.linkedin_profile } />
+                        <Textarea
+                            className          = { this.state.activeQuestion === 5 ? '-active': '' }
+                            name               = "message"
+                            inputValueCallback = { this._setInputValue }
+                            value              = { this.state.formData.message }
+                            lightTheme         = { this.props.lightTheme } />
+                        <fieldset className = { this.state.activeQuestion === 6 ? '-active': '' }>
+                            <input
+                                className = "a-checkbox"
+                                type      = "checkbox"
+                                name      = "acknowledge"
+                                value     = "acknowledge"
+                                id        = "acknowledge"/>
+                            <label
+                                className = "a-label"
+                                htmlFor   = "acknowledge">
+                                    I acknoledge that this position is located in Harrisburg, PA
+                            </label>
+                        </fieldset>
+                        <div className = "o-contact-form__buttons">
                             <a
-                                onClick   = { this._onNextClick }
-                                className = { nextButtonClass }>
-                                Next
+                                onClick   = { this._onBackClick }
+                                className = {  buttonClass }>
+                                Go Back
                             </a>
-                        }
-                        <button
-                            type      = "submit"
-                            onClick   = { this._onSubmitClick }
-                            className = {  buttonClass }>
-                            Submit
-                        </button>
+                            {  // if
+                                this.state.activeQuestion !== this.state.totalQuestions &&
+                                <a
+                                    onClick   = { this._onNextClick }
+                                    className = { nextButtonClass }>
+                                    Next
+                                </a>
+                            }
+                            <button
+                                type      = "submit"
+                                onClick   = { this._onSubmitClick }
+                                className = {  buttonClass }>
+                                Submit
+                            </button>
+                        </div>
                     </div>
                 </div>
             </form>

@@ -17,7 +17,6 @@ const CaseStudy = class extends React.Component {
         this._handleHover            = this._handleHover.bind(this);
         this._handleUnhover          = this._handleUnhover.bind(this);
         this._onChange               = this._onChange.bind(this);
-        this._isMobile               = this._isMobile.bind(this);
     }
 
     componentDidMount() {

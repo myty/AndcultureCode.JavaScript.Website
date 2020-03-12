@@ -121,51 +121,53 @@ const InfoForm = class extends React.Component {
         return (
             <form className = { formClass } name="contact-info" method="POST" data-netlify="true">
                 <div className = "o-rhythm__container">
-                    <header>get quick info</header>
-                    <input type = "hidden" data-netlify="true" />
-                    <input type="hidden" name="form-name" value="contact-info" />
-                    <Input 
-                        type               = "text"
-                        className          = { this.state.activeQuestion === 1 ? '-active': '' }
-                        name               = "name" 
-                        inputValueCallback = { this._setInputValue } 
-                        isRequired         = { true }
-                        lightTheme         = { this.props.lightTheme }
-                        value              = { this.state.formData.name } />
-                    <Input 
-                        className          = { this.state.activeQuestion === 2 ? '-active': '' }
-                        type               = "email"
-                        name               = "email" 
-                        inputValueCallback = { this._setInputValue } 
-                        isRequired         = { true }
-                        lightTheme         = { this.props.lightTheme }
-                        value              = { this.state.formData.email } />
-                    <Textarea 
-                        className          = { this.state.activeQuestion === 3 ? '-active': '' }
-                        name               = "message"
-                        inputValueCallback = { this._setInputValue }
-                        value              = { this.state.formData.message }
-                        lightTheme         = { this.props.lightTheme } />
-                    <div className = "o-contact-form__buttons">
-                        <a
-                            onClick   = { this._onBackClick }
-                            className = { buttonClass }>
-                            Go Back
-                        </a>
-                        {  // if
-                            this.state.activeQuestion !== this.state.totalQuestions &&
+                    <div className = "o-contact-form__wrapper">
+                        <header>get quick info</header>
+                        <input type = "hidden" data-netlify="true" />
+                        <input type="hidden" name="form-name" value="contact-info" />
+                        <Input
+                            type               = "text"
+                            className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                            name               = "name"
+                            inputValueCallback = { this._setInputValue }
+                            isRequired         = { true }
+                            lightTheme         = { this.props.lightTheme }
+                            value              = { this.state.formData.name } />
+                        <Input
+                            className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                            type               = "email"
+                            name               = "email"
+                            inputValueCallback = { this._setInputValue }
+                            isRequired         = { true }
+                            lightTheme         = { this.props.lightTheme }
+                            value              = { this.state.formData.email } />
+                        <Textarea
+                            className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                            name               = "message"
+                            inputValueCallback = { this._setInputValue }
+                            value              = { this.state.formData.message }
+                            lightTheme         = { this.props.lightTheme } />
+                        <div className = "o-contact-form__buttons">
                             <a
-                                onClick   = { this._onNextClick }
-                                className = { nextButtonClass }>
-                                Next
+                                onClick   = { this._onBackClick }
+                                className = { buttonClass }>
+                                Go Back
                             </a>
-                        }
-                        <button
-                            type      = "submit"
-                            onClick   = { this._onSubmitClick }
-                            className = { buttonClass }>
-                            Submit
-                        </button>
+                            {  // if
+                                this.state.activeQuestion !== this.state.totalQuestions &&
+                                <a
+                                    onClick   = { this._onNextClick }
+                                    className = { nextButtonClass }>
+                                    Next
+                                </a>
+                            }
+                            <button
+                                type      = "submit"
+                                onClick   = { this._onSubmitClick }
+                                className = { buttonClass }>
+                                Submit
+                            </button>
+                        </div>
                     </div>
                 </div>
             </form>
