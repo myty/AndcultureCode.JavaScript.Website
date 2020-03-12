@@ -42,7 +42,7 @@ img {
 .p-home {
 
     @include breakpoints("tablet") {
-        border: 10px solid red;
+        // border: 10px solid red;
 
         .o-hero__top,
         .o-hero__subtitles {
