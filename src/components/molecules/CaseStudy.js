@@ -10,7 +10,8 @@ const CaseStudy = class extends React.Component {
         this.state = {
             isHovered: false,
             isVisible: false,
-            isMobile: window.innerWidth < 1024 ? true : false
+            isMobile: true,
+            windowWidth: null,
         };
 
         this._handleHover            = this._handleHover.bind(this);
@@ -18,6 +19,12 @@ const CaseStudy = class extends React.Component {
         this._onChange               = this._onChange.bind(this);
         this._isMobile               = this._isMobile.bind(this);
     }
+
+    componentDidMount() {
+        this.setState({
+          windowWidth: window.innerWidth,
+        })
+      }
 
     _onChange(isVisible) {
         this.setState({
