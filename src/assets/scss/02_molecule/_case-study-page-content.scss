@@ -548,10 +548,10 @@
     }
 
     &__next {
-        display: flex;
+        display: block;
 
         @include breakpoints("tablet") {
-            display: block;
+            display: flex;
 
             &:hover {
 
@@ -619,6 +619,7 @@
 
             @include breakpoints("tablet") {
                 padding: 180px 80px;
+                width: auto;
             }
         }
 
