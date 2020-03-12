@@ -66,4 +66,46 @@ img {
 
 .p-interior-page {
 
+    .o-hero__top {
+        padding-top: 100px;
+    }
+
+    .o-hero__subtitles {
+        max-width: 760px;
+    }
+
+    @include breakpoints("tablet") {
+
+        .o-hero__top,
+        .o-hero__subtitles,
+        .m-contact-info__directions,
+        .m-careers {
+            margin-left: 80px;
+
+            p {
+                margin-right: 60px;
+            }
+        }
+
+        .o-slider,
+        .o-contact-form__wrapper {
+            margin-left: 72px;
+        }
+
+        .o-hero__subtitles {
+            margin-right: 60px;
+        }
+    }
+
+    @include breakpoints("lg-desktop") {
+
+        .o-hero__top,
+        .o-hero__subtitles,
+        .o-contact-form__wrapper,
+        .o-slider,
+        .m-contact-info__directions,
+        .m-careers {
+            margin-left: 0;
+        }
+    }
 }

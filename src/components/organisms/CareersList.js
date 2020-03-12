@@ -9,22 +9,24 @@ class CareersList extends React.Component {
         const numberOfPosts = posts.length;
 
         return (
-          <div className = "m-careers">
+          <div className = "m-careers__container">
             <div className = "o-rhythm__container">
-              <h6 className = "-secondary">Careers</h6>
-              <div className = "o-rhythm__row">
-                <div className = "m-careers__left">
-                  <h2>join the team</h2>
-                </div>
-                <div className = "m-careers__right">
-                  {posts &&
-                    posts.map(({ node: post }, index) => (
-                      <CareerPosition
-                        key   = { index }
-                        post  = { post }
-                        count = { index + 1 }
-                        total = { numberOfPosts } />
-                  ))}
+              <div className = "m-careers">
+                <h6 className = "-secondary">Careers</h6>
+                <div className = "o-rhythm__row">
+                  <div className = "m-careers__left">
+                    <h2>join the team</h2>
+                  </div>
+                  <div className = "m-careers__right">
+                    {posts &&
+                      posts.map(({ node: post }, index) => (
+                        <CareerPosition
+                          key   = { index }
+                          post  = { post }
+                          count = { index + 1 }
+                          total = { numberOfPosts } />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

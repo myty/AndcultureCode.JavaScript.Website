@@ -107,14 +107,16 @@ const ContactForm = class extends React.Component {
             <div className = { formContainerClass }>
                 <div className = "o-contact-form__progress" style = { progressBarWidth }></div>
                 <div className = "o-rhythm__container">
-                    <h6>Get In Touch</h6>
+                    <div className = "o-contact-form__wrapper">
+                        <h6>Get In Touch</h6>
+                    </div>
                 </div>
                 <div className = "o-contact-form -initial">
                     { // if
                         this.state.formActive === false &&
                         this.state.isSubmitted === false &&
                         <div className = "o-rhythm__container">
-                            <div>
+                            <div className = "o-contact-form__wrapper">
                                 <header className = {headerClass}>what can we help you with?</header>
                                 <fieldset className = "-space">
                                     <input
