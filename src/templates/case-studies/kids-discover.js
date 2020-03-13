@@ -57,7 +57,7 @@ const KidsDiscover = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Research</h6>
-                        <header className = "-push-three">okay, so how did andculture tackle the problem?</header>
+                        <header className = "">okay, so how did andculture tackle the problem?</header>
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Research</h6>
                             <div className = "content__copy">
@@ -79,7 +79,7 @@ const KidsDiscover = class extends React.Component {
                 </div>
                 <div className = "m-case-study-page-content__image-container -mobile-only ">
                     <div className = "m-case-study-page-content__image">
-                        <img src = { phone} />
+                        <img className = "phone" src = { phone} />
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__image-container -mobile-only ">
@@ -90,7 +90,7 @@ const KidsDiscover = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Takeaway</h6>
-                        <header className = "-push-three">students needed to be at the center.</header>
+                        <header className = "">students needed to be at the center.</header>
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Takeaway</h6>
                             <div className = "content__copy">
@@ -126,7 +126,7 @@ const KidsDiscover = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Synthesis</h6>
-                        <header className = "-push-three">turning data into a plan</header>
+                        <header className = "">turning data into a plan</header>
                         <div className = "o-rhythm__row">
                         <h6 className = "content__header -desktop-only">Synthesis</h6>
                         <div className = "content__copy">
@@ -143,7 +143,7 @@ const KidsDiscover = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">design & development</h6>
-                        <header className = "-push-three">bringing magazines — and learning — to life</header>
+                        <header className = "">bringing magazines — and learning — to life</header>
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">design & development</h6>
                             <div className = "content__copy">
@@ -166,16 +166,16 @@ const KidsDiscover = class extends React.Component {
                     </div>
                 </div>
                 <div className = "o-rhythm__container -fluid">
-                    <div className = "m-case-study-page-content__copy-section">
+                    <div className = "m-case-study-page-content__copy-section -kd_discover-map">
                         <div className = "o-rhythm__row -mobile-flex-direction__column-reverse">
-                            <div className = "o-rhythm__col -span-six">
+                            <div className = "o-rhythm__col -image">
                                 <div className = "kd-image">
                                     <img src = { discoverMap } />
                                 </div>
                             </div>
-                            <div className = "o-rhythm__col -span-five -y-align-center">
-                                <header>the discover map encouraged exploration</header>
-                                <div className = "">
+                            <div className = "o-rhythm__col -y-align-center -content">
+                                <header className = "-no-push">the discover map encouraged exploration</header>
+                                <div>
                                     <p>This engaging interactive map lets users dig into subject areas to discover related units and topics within the Kids Discover library. When a unit or topic is added to the CMS, it is assigned to related content and weighted based on relevancy. This back-end process determines where that particular unit or topic appears on the map.</p>
                                     <p>To optimize the experience for teachers, we added classrooms and desks. Accessible by teachers and students, “classrooms” serve as shared folders that teachers can curated for students. “Desks” act as personal folders for teachers to store content for later use.</p>
                                 </div>
@@ -189,7 +189,7 @@ const KidsDiscover = class extends React.Component {
                             <div className = "o-rhythm__col -kd-color-block__first">
                                 <div className = "m-case-study-page-content__copy-section">
                                     <h6 className = "content__header -mobile-only">deployment &amp; testing</h6>
-                                    <header className = "-push-three">time for final exams</header>
+                                    <header className = "">time for final exams</header>
                                     <div className = "o-rhythm__row">
                                         <h6 className = "content__header -desktop-only">deployment &amp; testing</h6>
                                         <div className = "content__copy">
@@ -227,7 +227,7 @@ const KidsDiscover = class extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className = "o-rhythm__col -span-six">
+                            <div className = "o-rhythm__col -kd-color-block__last-image">
                                 <div className = "kd-image">
                                     <img src = { siteHomePage } />
                                 </div>

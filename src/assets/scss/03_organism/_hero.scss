@@ -25,14 +25,25 @@
             letter-spacing: .35px;
             font-weight: 100;
 
+            @include breakpoints("sm-tablet") {
+                @include span-col(10);
+                @include push-col(1);
+            }
+
             @include breakpoints("tablet") {
-                @include span-col(9);
-                @include font-size(36px);
+                @include span-col(6);
+                @include push-col(1);
+                @include font-size(24px);
 
                 line-height: normal;
                 position: relative;
                 top: -8px;
             }
+
+            // @include breakpoints("laptop") {
+            //     @include span-col(6);
+            //     @include font-size(24px);
+            // }
         }
 
         .o-hero__list {
@@ -50,7 +61,18 @@
                 @include span-col(12);
                 margin-top: 40px;
 
+                @include breakpoints("sm-tablet") {
+                    @include span-col(10);
+                    @include push-col(1);
+                }
+
                 @include breakpoints("tablet") {
+                    @include span-col(3);
+                    @include push-col(2);
+                    margin-top: 0;
+                }
+
+                @include breakpoints("laptop") {
                     @include span-col(1);
                     @include push-col(2);
                     margin-top: 0;

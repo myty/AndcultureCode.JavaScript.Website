@@ -307,8 +307,15 @@
                     @include span-col(12);
 
                     @include breakpoints("tablet") {
-                        @include span-col(4);
+                        @include span-col(5);
                         @include push-col(1);
+                    }
+
+                    &-image {
+                        @include breakpoints("tablet") {
+                            @include span-col(5);
+                            @include push-col(1);
+                        }
                     }
                 }
             }
@@ -344,6 +351,11 @@
         position: relative;
         padding: 80px 0 40px;
 
+        @include breakpoints("sm-tablet") {
+            @include span-col(10);
+            @include push-col(1);
+        }
+
         @include breakpoints("tablet") {
             padding: 252px 0;
         }
@@ -351,7 +363,24 @@
         &.-body-intro {
             header {
                 @include breakpoints("tablet") {
+                    @include span-col(10);
+                }
+
+                @include breakpoints("desktop") {
                     @include span-col(8);
+                    @include push-col(1);
+                }
+            }
+
+            .content__copy {
+                @include breakpoints("tablet") {
+                    @include span-col(8);
+                }
+            }
+
+            .content__easter-egg {
+                @include breakpoints("tablet") {
+                    @include span-col(3);
                     @include push-col(1);
                 }
             }
@@ -421,15 +450,44 @@
             }
         }
 
+        &.-kd {
+            &_discover-map {
+                .-image {
+                    @include span-col(12);
+
+                    @include breakpoints("tablet") {
+                        @include span-col(4);
+                    }
+                }
+
+                .-content {
+                    @include span-col(12);
+
+                    @include breakpoints("tablet") {
+                        @include span-col(7);
+                        @include push-col(1);
+                    }
+                }
+
+            }
+        }
+
         header {
             @include font-size(40px);
             @include line-height(44px);
             margin-bottom: 32px;
 
             @include breakpoints("tablet") {
+                @include span-col(10);
+                @include push-col(2);
                 @include font-size(60px);
                 @include line-height(65px);
                 margin-bottom: 48px;
+            }
+
+            &.-no-push {
+                @include span-col(12);
+                @include push-col(0);
             }
         }
 
@@ -482,7 +540,7 @@
                 @include span-col(12);
                 margin-left: 22px;
 
-                @include breakpoints("tablet") {
+                @include breakpoints("desktop") {
                     @include span-col(2);
                     @include push-col(1);
                 }
@@ -498,6 +556,7 @@
 
                 @include breakpoints("tablet") {
                     @include span-col(2);
+                    @include font-size(12px);
                     margin-bottom: 0;
                 }
             }
@@ -513,11 +572,13 @@
                 @include span-col(12);
                 margin-left:0;
                 position: relative;
-                top: -8px;
 
                 @include breakpoints("tablet") {
-                    @include span-col(8);
-                    @include push-col(1);
+                    @include span-col(10);
+                    @include push-col(2);
+
+                    top: -25px;
+
                 }
 
                 &.-left {
@@ -531,6 +592,12 @@
                 p:first-of-type {
                     margin-top: 0;
                 }
+            }
+        }
+
+        .kd-image {
+            @include breakpoints("laptop") {
+                text-align: center;
             }
         }
 
@@ -573,6 +640,12 @@
             max-width: 100%;
             margin: 0 auto;
             width: 100%;
+
+            &.phone {
+                @include breakpoints("sm-tablet") {
+                    width: 50%;
+                }
+            }
 
             @include breakpoints("tablet") {
                 max-width: 99999px;
