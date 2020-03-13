@@ -5,13 +5,14 @@ import Footer from './molecules/Footer'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children, pageTitle, hideNavigation, scrollTop }) => {
-  const { title, description } = useSiteMetadata()
+const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop }) => {
+  const { title, description } = useSiteMetadata();
+  console.log(data);
   return (
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
+        <title>{ data.title }</title>
         <meta name="description" content={description} />
 
         <link

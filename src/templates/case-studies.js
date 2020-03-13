@@ -42,7 +42,7 @@ const CaseStudy = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-      <Layout pageTitle = { post.frontmatter.partnerName } hideNavigation = { true }>
+      <Layout pageTitle = { post.frontmatter.partnerName } data = { post.frontmatter }>
         <div className = "p-interior-page">
           <CaseStudyTemplate
             html = { post.html }

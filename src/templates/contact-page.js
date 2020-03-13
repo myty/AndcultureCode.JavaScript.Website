@@ -42,7 +42,7 @@ const ContactPage = ({ data }) => {
   ];
 
   return (
-    <Layout pageTitle = "contact" hideNavigation = { true }>
+    <Layout pageTitle = "contact" hideNavigation = { true } data = { frontmatter }>
       <div className = "p-interior-page">
         <ContactPageTemplate
           title          = { frontmatter.title }

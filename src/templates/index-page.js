@@ -48,6 +48,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout
+      data = { frontmatter }
       pageTitle = "home"
       scrollTop = { scrollTop }>
       <IndexPageTemplate

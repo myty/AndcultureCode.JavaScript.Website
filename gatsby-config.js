@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'andculture 2020',
+    title: 'anculture - a design company in harrisburg, PA',
     description:
-      'andculture website',
+      'We are a design company in harrisburg PA that fixes broken realities through cutting edge design, strategy, and engineering solutions.',
   },
   plugins: [
     'gatsby-plugin-transition-link',
