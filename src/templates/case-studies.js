@@ -13,6 +13,7 @@ export const CaseStudyTemplate = ({
   return (
     <div>
       <CaseStudyHero
+          partnerName   = { caseStudyContent.partnerName }
           color         = { caseStudyContent.color }
           title         = { caseStudyContent.title }
           featuredimage = { caseStudyContent.featuredimage }

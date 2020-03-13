@@ -105,9 +105,6 @@ const CaseStudy = class extends React.Component {
                         </div>
                         <div className = "m-case-study__content">
                             <div className = "m-case-study__content-inner">
-                                <div className = "m-case-study__count">
-                                    { this.props.count }<span>/{ this.props.total }</span>
-                                </div>
                                 <h5>{ this.props.post.frontmatter.partnerName }</h5>
                                 <p>
                                     { this.props.post.frontmatter.title }
