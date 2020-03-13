@@ -12,5 +12,6 @@ directions: >
 
     Once you’ve turned into our parking lot, stay to the left and enter the top parking deck. There, you will find several “Visitor” parking spaces. Enter through the doors on the top parking deck and go straight ahead. You’ll turn a slight left around the railing and then turn right to enter through the glass doors leading to our office.
 metaTitle: anculture - a design company in harrisburg, PA
-metaDescription: We are a design company in harrisburg PA that fixes broken realities through cutting edge design, strategy, and engineering solutions.
+metaDescription: andculture's contact information to reach the engineering, design, strategy, and engagement teams
+socialDescription: Get in touch with andculture, a Harrisburg, PA-based design agency
 ---

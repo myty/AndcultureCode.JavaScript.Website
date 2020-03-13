@@ -40,6 +40,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careers"}
       - {label: "Position", name: "position", widget: "string"}
       - {label: "Link", name: "position", widget: "string"}
+      - {label: Meta Title, name: metaTitle, widget: string}
+      - {label: Meta Description, name: metaDescription, widget: string}
 
 
   - name: "pages"

@@ -90,6 +90,7 @@ export const pageQuery = graphql`
         heroIntroCopy
         metaTitle
         metaDescription
+        socialDescription
       }
     }
   }

@@ -12,4 +12,7 @@ tags:
   - identity design
   - strategy
   - illustration
+metaTitle: HackerOne case study | andculture
+metaDescription: A case study for andculture and HackerOne's event marketing
+socialDescription: Using event marketing to help HackerOne bring ethical hackers together for better security outcomes
 ---

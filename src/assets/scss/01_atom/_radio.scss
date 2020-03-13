@@ -17,16 +17,15 @@
 
         &:before {
             background: url('../../../static/img/arrow-front.svg') no-repeat center center / contain;
-            width: 100px;
-            width: 100px;
-            height: 12px;
-            left: -100px;
+            width: 50px;
+            height: 6px;
+            left: -50px;
         }
 
         &:after {
             background: url('../../../static/img/arrow.svg') no-repeat center center / contain;
-            width: 64px;
-            height: 36px;
+            width: 60px;
+            height: 18px;
         }
     }
 
@@ -60,16 +59,15 @@
 
             &:before {
                 background: url('../../../static/img/arrow-front.svg') no-repeat center center / contain;
-                width: 100px;
-                width: 100px;
-                height: 12px;
-                left: -100px;
+                width: 50px;
+                height: 6px;
+                left: -50px;
             }
 
             &:after {
                 background: url('../../../static/img/arrow.svg') no-repeat center center / contain;
-                width: 64px;
-                height: 36px;
+                width: 60px;
+                height: 18px;
             }
         }
     }

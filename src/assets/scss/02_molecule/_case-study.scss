@@ -120,10 +120,6 @@
                 padding-left: 80px;
             }
 
-            @include breakpoints("sm-desktop") {
-                padding-left: 160px;
-            }
-
             @include breakpoints("lg-desktop") {
                 padding-left: 0;
             }

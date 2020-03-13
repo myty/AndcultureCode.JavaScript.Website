@@ -6,14 +6,18 @@ import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop }) => {
-  const { title, description } = useSiteMetadata();
-  console.log(data);
+  let { title, description, socialDescription } = useSiteMetadata();
+  if (data) {
+    title = data.metaTitle;
+    description = data.metaDescription;
+    socialDescription = data.metaDescription
+  }
   return (
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{ data.metaTitle }</title>
-        <meta name = "description" content = { data.metaDescription } />
+        <title>{ title }</title>
+        <meta name = "description" content = { description } />
 
         <link
           rel="apple-touch-icon"
@@ -41,7 +45,8 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={ data.metaTitle } />
+        <meta property="og:title" content={ title } />
+        <meta property="og:description" content={ title } />
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
