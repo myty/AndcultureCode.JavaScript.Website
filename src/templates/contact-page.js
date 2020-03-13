@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import ContactForm from '../components/organisms/ContactForm';
@@ -41,8 +41,23 @@ const ContactPage = ({ data }) => {
     sliderImage7,
   ];
 
+  const [scrollTop, setScrollTop] = useState(0);
+
+  useEffect(() => {
+    const onScroll = e => {
+      setScrollTop(e.target.documentElement.scrollTop);
+    };
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [scrollTop]);
+
   return (
-    <Layout pageTitle = "contact" hideNavigation = { true } data = { frontmatter }>
+    <Layout
+      pageTitle      = "contact"
+      hideNavigation = { true }
+      data           = { frontmatter }
+      scrollTop      = { scrollTop }>
       <div className = "p-interior-page">
         <ContactPageTemplate
           title          = { frontmatter.title }

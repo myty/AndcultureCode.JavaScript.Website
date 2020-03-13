@@ -6,12 +6,12 @@
     top: 0;
     padding: 10px 0;
     z-index: 8;
-    mix-blend-mode: difference;
 
     @include breakpoints("tablet") {
         top: 50px;
         padding: 0;
         background: transparent;
+        mix-blend-mode: difference;
     }
 
     &__background {
