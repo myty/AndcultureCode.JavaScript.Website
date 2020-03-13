@@ -86,6 +86,9 @@ export const pageQuery = graphql`
         mapLink
         phoneNumber
         directions
+        metaTitle
+        metaDescription
+        socialDescription
       }
     }
   }

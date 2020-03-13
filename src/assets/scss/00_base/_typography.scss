@@ -103,8 +103,9 @@ a {
     @include font-size("medium-large");
     font-family: $font-secondary;
     letter-spacing: .05em;
-    font-weight: 500;
     text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
 
     &:not(.-inline) {
         &:hover {

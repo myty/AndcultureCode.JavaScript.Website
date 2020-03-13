@@ -11,29 +11,21 @@
             position: absolute;
             display: inline-block;
             z-index: -1;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         &:before {
-            top: 50%;
-            transform: translateY(-50%);
-            height: 2px;
-            left: -30px;
-            right: -20px;
-            background: get-color("primary", "fresh");
+            background: url('../../../static/img/arrow-front.svg') no-repeat center center / contain;
+            width: 50px;
+            height: 6px;
+            left: -50px;
         }
 
         &:after {
-            right: -19px;
-            top: 4px;
-            width: 16px;
-            height: 16px;
-            border-right: 2px solid get-color("primary", "fresh");
-            border-top: 2px solid get-color("primary", "fresh");
-            transform: rotate(45deg);
-
-            @include breakpoints("tablet") {
-                top: 8px;
-            }
+            background: url('../../../static/img/arrow.svg') no-repeat center center / contain;
+            width: 60px;
+            height: 18px;
         }
     }
 
@@ -61,29 +53,21 @@
                 position: absolute;
                 display: inline-block;
                 z-index: -1;
+                top: 50%;
+                transform: translateY(-50%);
             }
 
             &:before {
-                top: 50%;
-                transform: translateY(-50%);
-                height: 2px;
-                left: -30px;
-                right: -20px;
-                background: get-color("primary", "fresh");
+                background: url('../../../static/img/arrow-front.svg') no-repeat center center / contain;
+                width: 50px;
+                height: 6px;
+                left: -50px;
             }
 
             &:after {
-                right: -19px;
-                top: 4px;
-                width: 16px;
-                height: 16px;
-                border-right: 2px solid get-color("primary", "fresh");
-                border-top: 2px solid get-color("primary", "fresh");
-                transform: rotate(45deg);
-
-                @include breakpoints("tablet") {
-                    top: 8px;
-                }
+                background: url('../../../static/img/arrow.svg') no-repeat center center / contain;
+                width: 60px;
+                height: 18px;
             }
         }
     }

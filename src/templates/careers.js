@@ -1,18 +1,36 @@
-import React from 'react'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
 
-const Career = ({ data }) => {
-    // const { markdownRemark: post } = data
+const Careers = ({ data }) => {
+  const { markdownRemark: post } = data;
 
-    return (
-        <Layout>
-
-        </Layout>
-    )
+  return (
+      <Layout
+        pageTitle = { post.frontmatter.partnerName }
+        data      = { post.frontmatter }>
+        <div className = "p-interior-page">
+        </div>
+      </Layout>
+  )
 }
 
-export default Career
+export default Careers;
+
+export const pageQuery = graphql`
+  query CareerByID($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+        link
+        position
+        metaTitle
+        metaDescription
+        socialDescription
+      }
+    }
+  }
+`

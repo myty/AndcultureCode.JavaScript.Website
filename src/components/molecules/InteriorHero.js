@@ -10,7 +10,7 @@ const InteriorHero = class extends React.Component {
   }
 
   componentDidMount() {
-    
+
     window.onscroll =()=>{
       let height = window.innerHeight;
       const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
@@ -22,9 +22,6 @@ const InteriorHero = class extends React.Component {
   }
 
   render() {
-    const verticalTextStyle = {
-      opacity: this.state.currentScrollHeight
-    }
 
     return (
       <div className = "o-hero">
