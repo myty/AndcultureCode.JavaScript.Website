@@ -12,7 +12,7 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{ data.title }</title>
+        {/* <title>{ data.title }</title> */}
         <meta name="description" content={description} />
 
         <link
