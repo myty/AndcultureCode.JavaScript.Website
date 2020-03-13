@@ -88,6 +88,8 @@ export const pageQuery = graphql`
         color
         tags
         heroIntroCopy
+        metaTitle
+        metaDescription
       }
     }
   }

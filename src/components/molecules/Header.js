@@ -29,8 +29,8 @@ const Header = class extends React.Component {
     let titleClass = "m-header__title";
 
     if (this._isMobile()) {
-      const fadeBegin = 500;
-      const fadeFinish = 800;
+      const fadeBegin = 0;
+      const fadeFinish = 300;
 
       const offset = this.props.scrollTop
       opacity = 1;

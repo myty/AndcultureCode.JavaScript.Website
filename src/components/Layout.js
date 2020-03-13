@@ -12,8 +12,8 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
     <div>
       <Helmet>
         <html lang="en" />
-        {/* <title>{ data.title }</title> */}
-        <meta name="description" content={description} />
+        <title>{ data.metaTitle }</title>
+        <meta name = "description" content = { data.metaDescription } />
 
         <link
           rel="apple-touch-icon"
@@ -41,7 +41,7 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={ data.metaTitle } />
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
