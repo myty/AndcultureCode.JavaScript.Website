@@ -136,8 +136,12 @@
             }
 
             @include breakpoints("tablet") {
-                padding: 270px 0;
+                padding: 120px 0;
             }
+
+            // @include breakpoints("tablet") {
+            //     padding: 270px 0;
+            // }
         }
     }
 

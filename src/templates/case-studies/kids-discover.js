@@ -142,10 +142,10 @@ const KidsDiscover = class extends React.Component {
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
-                        <h6 className = "content__header -mobile-only">design & development</h6>
+                        <h6 className = "content__header -mobile-only">design &amp; development</h6>
                         <header className = "">bringing magazines — and learning — to life</header>
                         <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">design & development</h6>
+                            <h6 className = "content__header -desktop-only">design &amp; development</h6>
                             <div className = "content__copy">
                                 <p>At last, we were ready to design and develop the Kids Discover Online product from the ground up. In order to design a product that stayed true to Kids Discover print experience, we converted each magazine into a “unit” and each magazine spread into a “topic.” Using a custom (and super intuitive, of course) content management system, Kids Discover is able to create pages using its print content and assets. The back-end is configured to allow for three Lexile® levels for each content block, in an effort to meet kids where they are.</p>
                             </div>

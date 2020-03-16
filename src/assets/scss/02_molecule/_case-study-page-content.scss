@@ -297,9 +297,9 @@
                 &__first {
                     @include span-col(12);
 
-                    @include breakpoints("tablet") {
-                        @include span-col(6);
-                        @include push-col(1);
+                    @include breakpoints("sm-tablet") {
+                        @include span-col(10);
+                        // @include push-col(0);
                     }
                 }
 
@@ -309,6 +309,12 @@
                     @include breakpoints("tablet") {
                         @include span-col(5);
                         @include push-col(1);
+                    }
+
+                    header {
+                        @include breakpoints("tablet") {
+                            @include push-col(0);
+                        }
                     }
 
                     &-image {
@@ -357,8 +363,18 @@
         }
 
         @include breakpoints("tablet") {
-            padding: 252px 0;
+            padding: 120px 0;
         }
+
+        @include breakpoints("desktop") {
+            @include span-col(12);
+            @include push-col(0);
+        }
+
+
+        // @include breakpoints("tablet") {
+        //     padding: 252px 0;
+        // }
 
         &.-body-intro {
             header {
@@ -366,9 +382,12 @@
                     @include span-col(10);
                 }
 
-                @include breakpoints("desktop") {
+                @include breakpoints("lg-laptop") {
                     @include span-col(8);
-                    @include push-col(1);
+                }
+
+                @include breakpoints("lg-desktop") {
+                    @include push-col(0);
                 }
             }
 
@@ -479,10 +498,14 @@
 
             @include breakpoints("tablet") {
                 @include span-col(10);
-                @include push-col(2);
+                @include push-col(3);
                 @include font-size(60px);
                 @include line-height(65px);
                 margin-bottom: 48px;
+            }
+
+            @include breakpoints("desktop") {
+                @include push-col(2);
             }
 
             &.-no-push {
@@ -575,10 +598,13 @@
 
                 @include breakpoints("tablet") {
                     @include span-col(10);
+                    @include push-col(3);
+
+                    top: -42px;
+                }
+
+                @include breakpoints("desktop") {
                     @include push-col(2);
-
-                    top: -25px;
-
                 }
 
                 &.-left {
@@ -601,11 +627,11 @@
             }
         }
 
-        &:last-of-type {
-            @include breakpoints("tablet") {
-                padding-bottom: 200px;
-            }
-        }
+        // &:last-of-type {
+        //     @include breakpoints("tablet") {
+        //         padding-bottom: 200px;
+        //     }
+        // }
     }
 
     &__image {
@@ -822,6 +848,15 @@
                         bottom: 120px;
                         left: 44px;
                     }
+                }
+            }
+        }
+
+        &.-pulse {
+
+            &__sketches {
+                &-container {
+                    top: 80px;
                 }
             }
         }
