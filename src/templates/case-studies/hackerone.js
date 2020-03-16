@@ -64,7 +64,7 @@ const Hackerone = class extends React.Component {
                             <div className = "content__copy">
                                 <p><span className = "easter-egg__right">Not surprisingly, HackerOne wants to work with the best hackers, wherever they are.</span> To that end, they put a lot of energy into being “the” community for hackers, in order to be the best platform for hiring hacker-powered security. Hackers live on the bleeding edge, fueled by different motivations, coming to HackerOne both for money and for the challenge. How does HackerOne stay fresh, continue to engage and keep the best coming back for more?</p>
                             </div>
-                            <div className = "content__easter-egg easter-egg">Turns out that’s a pretty broad geography—122 countries and counting.</div>
+                            <div className = "content__easter-egg easter-egg">Turns out that’s a pretty broad geography—170 countries and counting.</div>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ const Hackerone = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Research</h6>
-                        <header className = "-push-three">each live hacking event is unique.</header>
+                        <header className = "-push-three">each event is unique.</header>
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Research</h6>
                             <div className = "content__copy">
@@ -99,7 +99,7 @@ const Hackerone = class extends React.Component {
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Event Branding</h6>
                             <div className = "content__copy">
-                                <p>From HackerOne’s own annual Security@ conference to live hacking events for some of the world’s top companies, we create logos and design assets that speak to hackers and security leaders alike. Live hacking events take place all over the world, and our illustrative visual identities take inspiration from these locales. You will see hackers wearing these logos on hats, t-shirts and even prize belts, should they be so talented to win one.</p>
+                                <p>From HackerOne’s own annual Security@ conference to live hacking events for some of the world’s top organizations like the U.S. Department of Defense and Verizon Media, we create logos and design assets that speak to hackers and security leaders alike. Live hacking events take place all over the world, and our illustrative visual identities take inspiration from these locales. You will see hackers wearing these logos on hats, t-shirts and even prize belts, should they be so talented to win one.</p>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@ const Hackerone = class extends React.Component {
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Social Media</h6>
                             <div className = "content__copy">
-                                <p>Analog and digital, we’re designing for all aspects of h1’s live-hacking eventsWe help HackerOne promote all the live hacking events, Security@ and their presence at many other trade shows, including InfoSecurity, GES, Black Hat, Money 20/20, Gartner Security &amp; Risk Management and DEFCON, on social media.</p>
+                                <p>Analog and digital, we’re designing for all aspects of h1’s live-hacking eventsWe help HackerOne promote all live hacking events, Security@ conference and their presence at many other trade shows, including InfoSecurity, GES, Black Hat, Money 20/20, Gartner Security &amp; Risk Management and DEFCON, on social media.</p>
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@ const Hackerone = class extends React.Component {
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Mission</h6>
                             <div className = "content__copy">
-                                <p>HackerOne believes everyone is a hacker. We love the modesty, but mostly we love the mission to keep our internet safe, our software secure and our personal information, well, personal.</p>
+                                <p>HackerOne believes everyone is a hacker — one who enjoys the intellectual challenge of creatively overcoming limitations. We love the modesty, but mostly we love the mission to &quot;empower the world to build a safer internet,&quot; keeping our software secure and our personal information, well, personal.</p>
                             </div>
                         </div>
                     </div>

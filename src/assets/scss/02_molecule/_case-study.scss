@@ -65,11 +65,8 @@
         h5,
         p,
         .m-case-study__count {
-
-            @media (max-width: 768px) {
-                color: get-color("primary", "white") !important;
-                border-color: get-color("primary", "white") !important;
-            }
+            color: get-color("primary", "white") !important;
+            border-color: get-color("primary", "white") !important;
         }
     }
 
