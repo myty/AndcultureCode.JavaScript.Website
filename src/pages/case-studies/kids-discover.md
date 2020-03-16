@@ -15,5 +15,6 @@ tags:
   - illustration
 metaTitle: Kids Discover case study | andculture
 metaDescription: A case study for andculture and Kids Discover's online learning platform
-socialDescription: Cool, rewarding, and fun: That's what happened when Kids Discover partnered with andculture to transform the way students experience science and social studies magazines in the classroom. "Boring" isn't in our vocabulary.
+socialDescription: >
+  'Cool, rewarding, and fun: That's what happened when Kids Discover partnered with andculture to transform the way students experience science and social studies magazines in the classroom. "Boring" isn't in our vocabulary.'
 ---
