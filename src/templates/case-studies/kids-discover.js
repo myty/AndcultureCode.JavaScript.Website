@@ -204,7 +204,7 @@ const KidsDiscover = class extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className = "m-case-study-page-content__section -margin__bottom">
+                        <div className = "m-case-study-page-content__section">
                             <div className = "o-rhythm__row">
                                 <div className = "o-rhythm__col">
                                     <div className = "kd-image -triangle-doodle">

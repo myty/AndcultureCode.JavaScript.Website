@@ -14,7 +14,7 @@
     &__left {
 
         img {
-            width: 120px; 
+            width: 120px;
         }
     }
 
@@ -25,7 +25,7 @@
         }
     }
 
-    &__contact, 
+    &__contact,
     &__social {
         display: block;
 
@@ -42,14 +42,14 @@
             margin: 0 40px 0 0;
 
             &:after {
-                content: ''; 
-                width: 2px; 
-                height: 100%; 
-                display: block; 
+                content: '';
+                width: 2px;
+                height: 100%;
+                display: block;
                 position: absolute;
                 top: 0;
-                right: -20px; 
-                background: get-color("primary", "fresh"); 
+                right: -20px;
+                background: get-color("primary", "fresh");
             }
         }
     }
@@ -59,8 +59,8 @@
 
         a {
             display: inline-block;
-            width: 20px; 
-            height: 20px; 
+            width: 20px;
+            height: 20px;
             margin-right: 20px;
 
             svg {
