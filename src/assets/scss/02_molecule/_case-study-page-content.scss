@@ -67,8 +67,9 @@
                 right: 0;
                 top: 40px;
                 display: none;
+                z-index: -1;
 
-                @include breakpoints("tablet") {
+                @include breakpoints("laptop") {
                     display: block;
                 }
 
@@ -617,9 +618,8 @@
 
                 @include breakpoints("tablet") {
                     @include span-col(10);
-                    @include push-col(3);
 
-                    top: -42px;
+                    top: -8px;
                 }
 
                 @include breakpoints("desktop") {
