@@ -95,7 +95,7 @@ const Hackerone = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Event Branding</h6>
-                        <header className = "-push-three">a world of possibilities</header>
+                        <header className = "">a world of possibilities</header>
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Event Branding</h6>
                             <div className = "content__copy">
@@ -142,7 +142,7 @@ const Hackerone = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__mosaic -hackerone">
+                <div className = "m-case-study-page-content__mosaic -hackerone -beer-stickers">
                     <div className = "o-rhythm__container">
                         <img src = { hackerImg } className = "-desktop-only" />
                         <img src = { stickerTwo } className = "-sticker-two" />
