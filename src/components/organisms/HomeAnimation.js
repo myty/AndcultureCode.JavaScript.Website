@@ -49,7 +49,7 @@ const HomeAnimation = () => {
             document.querySelector('body').style.overflow = "visible";
             animation_container.style.display = 'none';
         })
-    });
+    }, []);
 
     return (
         <div className = "o-home-animation">
