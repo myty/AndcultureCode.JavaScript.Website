@@ -179,7 +179,7 @@
             top: 62px;
             display: none;
 
-            @include breakpoints("tablet") {
+            @include breakpoints("lg-desktop") {
                 display: block;
             }
         }
@@ -233,8 +233,10 @@
             &.-triangle {
                 right: 5%;
                 top: -140px;
+                display: none;
 
-                @include breakpoints("tablet") {
+                @include breakpoints("laptop") {
+                    display: block;
                     top: 10px;
                 }
             }
@@ -242,8 +244,10 @@
             &.-dots {
                 top: 0;
                 left: -128px;
+                display: none;
 
-                @include breakpoints("tablet") {
+                @include breakpoints("laptop") {
+                    display: block;
                     top: 280px;
                     right: -40px;
                     left: auto;
@@ -256,6 +260,8 @@
                 display: none;
 
                 @include breakpoints("tablet") {
+                    bottom: -170px;
+                    left: -80px;
                     display: block;
                 }
             }
@@ -377,6 +383,10 @@
             padding: 80px 0;
 
             @include breakpoints("tablet") {
+                padding: 120px 0;
+            }
+
+            @include breakpoints("laptop") {
                 padding: 252px 0;
             }
 
@@ -456,7 +466,10 @@
             }
 
             .content__easter-egg {
-                @include breakpoints("tablet") {
+                margin-top: 32px;
+
+                @include breakpoints("laptop") {
+                    margin-top: 0;
                     @include span-col(3);
                     @include push-col(1);
                 }
@@ -517,7 +530,7 @@
             .content__copy {
                 padding: 80px 0;
 
-                @include breakpoints("tablet") {
+                @include breakpoints("laptop") {
                     padding: 252px 0 150px;
                 }
             }
@@ -574,6 +587,10 @@
 
         p {
             margin-bottom: 32px;
+
+            // &:last-of-type {
+            //     margin-bottom: 0;
+            // }
         }
 
         ul {
@@ -584,7 +601,12 @@
         .easter-egg {
             color: get-color("neutral", "light-gray");
             margin-left: 18px;
+            margin-top: 32px;
             position: relative;
+
+            @include breakpoints("laptop") {
+                margin-top: 0;
+            }
 
             &:before {
                 content: '';
@@ -677,6 +699,12 @@
                         @include push-col(0);
                         @include span-col(7);
                     }
+
+                    header {
+                        @include breakpoints("tablet") {
+                            @include push-col(0);
+                        }
+                    }
                 }
 
                 p:first-of-type {
@@ -714,7 +742,7 @@
         }
 
         &.-apple-pencil {
-            margin-bottom: 48px;
+            margin: auto 80px 48px;
         }
 
         &.-half {
@@ -722,8 +750,8 @@
                 min-width: 0;
                 flex-grow: 0;
                 flex-shrink: 0;
-                flex-basis: calc(50% - 12px);
-                max-width: calc(50% - 12px);
+                flex-basis: 50%;
+                max-width: 50%;
             }
         }
 
