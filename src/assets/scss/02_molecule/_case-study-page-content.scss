@@ -331,7 +331,6 @@
 
                     @include breakpoints("sm-tablet") {
                         @include span-col(10);
-                        // @include push-col(0);
                     }
 
                     header {
@@ -346,6 +345,10 @@
                                 @include span-col(8);
                                 @include push-col(4);
                             }
+
+                            @include breakpoints("laptop") {
+                                top: -44px;
+                            }
                         }
                     }
                 }
@@ -353,7 +356,7 @@
                 &__last {
                     @include span-col(12);
 
-                    @include breakpoints("laptop") {
+                    @include breakpoints("lg-laptop") {
                         @include span-col(5);
                         @include push-col(1);
                     }
@@ -365,7 +368,7 @@
                     }
 
                     &-image {
-                        @include breakpoints("laptop") {
+                        @include breakpoints("lg-laptop") {
                             @include span-col(5);
                             @include push-col(1);
                         }
@@ -468,7 +471,7 @@
             .content__easter-egg {
                 margin-top: 32px;
 
-                @include breakpoints("laptop") {
+                @include breakpoints("desktop") {
                     margin-top: 0;
                     @include span-col(3);
                     @include push-col(1);
@@ -482,7 +485,7 @@
                     &-reverse {
                         flex-direction: column-reverse;
 
-                        @include breakpoints("laptop") {
+                        @include breakpoints("lg-laptop") {
                             flex-direction: initial;
                         }
                     }
@@ -545,7 +548,7 @@
                 .-image {
                     @include span-col(12);
 
-                    @include breakpoints("laptop") {
+                    @include breakpoints("lg-laptop") {
                         @include span-col(4);
                     }
                 }
@@ -553,7 +556,7 @@
                 .-content {
                     @include span-col(12);
 
-                    @include breakpoints("laptop") {
+                    @include breakpoints("lg-laptop") {
                         @include span-col(7);
                         @include push-col(1);
                     }
@@ -885,14 +888,35 @@
                     @include breakpoints("laptop") {
                         display: block;
                         position: absolute;
+                        left: -464px;
+                        top: -100px;
+                    }
+
+                    @include breakpoints("xl-desktop") {
                         left: -432px;
                         top: -156px;
+                    }
+
+                    img {
+                        @include breakpoints("laptop") {
+                            width: 75%;
+                        }
+
+                        @include breakpoints("xl-desktop") {
+                            width: 100%;
+                        }
                     }
                 }
 
                 &.-student-homework {
                     @include breakpoints("laptop") {
+                        right: -244px;
+                        top: -44px;
+                    }
+
+                    @include breakpoints("xl-desktop") {
                         right: -720px;
+                        top: initial;
                     }
                 }
 
@@ -902,9 +926,23 @@
                     text-align: center;
 
                     @include breakpoints("laptop") {
-                        left: 212px;
                         position: absolute;
                         top: -36px;
+                        left: -162px;
+                    }
+
+                    @include breakpoints("xl-desktop") {
+                        left: -266px;
+                    }
+
+                    img {
+                        @include breakpoints("laptop") {
+                            width: 50%;
+                        }
+
+                        @include breakpoints("xl-desktop") {
+                            width: 100%;
+                        }
                     }
                 }
 

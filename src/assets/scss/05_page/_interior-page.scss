@@ -68,7 +68,7 @@
         &-desktop-only {
             display: none;
 
-            @include breakpoints("laptop") {
+            @include breakpoints("desktop") {
                 display: block;
             }
         }
@@ -76,8 +76,8 @@
         &-mobile-only {
             display: block;
 
-            @include breakpoints("laptop") {
-                display: hidden;
+            @include breakpoints("desktop") {
+                display: none;
             }
         }
     }
