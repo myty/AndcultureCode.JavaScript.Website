@@ -34,7 +34,7 @@ const Pulse = class extends React.Component {
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "o-rhythm__col">
-                        <div className = "m-case-study-page-content__copy-section -push-one">
+                        <div className = "m-case-study-page-content__copy-section -body-intro">
                             <header>so what was broken?</header>
                             <p>PinnacleHealth (now UPMC Pinnacle) needed a partner to turn static reports into a platform that could easily give nurse managers data to make scheduling their team second nature.</p>
                             <p>Nobody wants to walk into a hospital and realize they don’t have enough nurses. Having too many nurses around isn’t great for the bottom line, either. Without the 10,000-foot view of how adequate staffing has been in recent days and months, how could a nurse manager realistically fill up a schedule with any confidence? PinnacleHealth needed to be focused on providing excellent patient care, not scheduling staff. The right platform can do help you schedule staff more effectively so you can provide excellent patient care.</p>
@@ -60,7 +60,7 @@ const Pulse = class extends React.Component {
                     </div>
                 </div>
                 <div className = "o-rhythm__container -fluid">
-                    <div className = "m-case-study-page-content__section">
+                    <div className = "m-case-study-page-content__section -pulse__sketches-container">
                         <div className = "o-rhythm__row">
                             <div className = "sketch -one">
                                 <img src = { sketchImgOne } />

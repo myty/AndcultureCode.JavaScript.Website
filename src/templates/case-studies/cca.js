@@ -50,7 +50,7 @@ const CCA = class extends React.Component {
                     <img src = { boardImg } />
                 </div>
                 <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
+                    <div className = "m-case-study-page-content__copy-section -body-intro -cca">
                         <div className = "o-rhythm__row">
                             <div className = "content__copy">
                                 <header>what was CCA’s reality?</header>
@@ -58,7 +58,11 @@ const CCA = class extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <img src = { ipadImg } />
+                    {/* <img src = { ipadImg } /> */}
+
+                    <div className = "m-case-study-page-content__image">
+                        <img src = { ipadImg } />
+                    </div>
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
