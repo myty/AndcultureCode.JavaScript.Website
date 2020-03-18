@@ -14,7 +14,6 @@ import dots from './../../../static/img/homepage-hero/dot_pattern.png';
 import drops from './../../../static/img/homepage-hero/drops.png';
 import eye from './../../../static/img/homepage-hero/eye.png';
 import paint from './../../../static/img/homepage-hero/large_paint.png';
-import matrix from './../../../static/img/homepage-hero/matrix.png';
 import plant from './../../../static/img/homepage-hero/plant.png';
 import paintbrush from './../../../static/img/homepage-hero/paintbrush.png';
 import blob from './../../../static/img/homepage-hero/pink_blob.png';
@@ -27,6 +26,9 @@ import whiteDots from './../../../static/img/homepage-hero/white_dots.png';
 import eyeDoodles from './../../../static/img/homepage-hero/eye_doodles.png';
 import blueBlob from './../../../static/img/homepage-hero/blue_blob.png';
 import pinkBlob from './../../../static/img/homepage-hero/pink_blob.png';
+
+import matrix from './../../../static/img/homepage-hero/matrix.png';
+import greenPaint from './../../../static/img/homepage-hero/green_screenpaint.png';
 
 const Hero = class extends React.Component {
   constructor(props) {
@@ -84,10 +86,14 @@ const Hero = class extends React.Component {
         {/* <img className = "o-hero__background -terrazo" src = { tear } /> */}
         {/* <img className = "o-hero__background -terrazo" src = { whiteDots } /> */}
 
-        <div className = "o-hero__background-group">
-          {/* <img className = "o-hero__background -blue-blob" src = { blueBlob } /> */}
+        {/* <div className = "o-hero__background-group">
           <img className = "o-hero__background -pink-blob" src = { pinkBlob } />
           <img className = "o-hero__background -eye-doodles" src = { eyeDoodles } />
+        </div> */}
+
+        <div className = "o-hero__background-group">
+          <img className = "o-hero__background -green-paint" src = { greenPaint } />
+          <img className = "o-hero__background -matrix" src = { matrix } />
         </div>
 
         <div className="o-rhythm__container">

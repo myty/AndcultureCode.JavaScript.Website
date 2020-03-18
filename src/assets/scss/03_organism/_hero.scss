@@ -208,6 +208,21 @@
             }
         }
 
+        &.-matrix {
+            right: 80px;
+            top: 60px;
+            display: none;
+
+            @include breakpoints("tablet") {
+                display: block;
+            }
+        }
+
+        &.-green-paint {
+            top: 0;
+            right: 0;
+        }
+
         // &.-jigglydoo {
         //     right: auto;
         //     left: 0;
