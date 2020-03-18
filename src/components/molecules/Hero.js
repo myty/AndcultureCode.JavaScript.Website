@@ -1,4 +1,5 @@
 import React from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 
 // import greenBlob from './../../../static/img/greenblob.png';
 // import dots from './../../../static/img/center_lane_dots.png';
@@ -38,14 +39,34 @@ const Hero = class extends React.Component {
     super(props);
 
     this.state = {
+      headingVisible: false,
+      easterEggVisible: false,
+    };
+
+    this.state = {
       windowHeight: null,
     };
+
+    this._onHeadingChange = this._onHeadingChange.bind(this);
+    this._onEasterEggChange = this._onEasterEggChange.bind(this);
   }
 
   componentDidMount() {
     this.setState({
       windowHeight: window.innerHeight,
     })
+  }
+
+  _onHeadingChange(headingVisible) {
+    this.setState({
+      headingVisible: headingVisible ? true : false,
+    });
+  }
+
+  _onEasterEggChange(easterEggVisible) {
+    this.setState({
+      easterEggVisible: easterEggVisible ? true : false,
+    });
   }
 
   render() {
@@ -57,6 +78,15 @@ const Hero = class extends React.Component {
 
     const verticalTextStyle = {
       opacity: opacity,
+    }
+
+    let headingClass = "-fade";
+    if (this.state.headingVisible) {
+      headingClass += " -visible";
+    }
+    let easterEggClass = "-fade";
+    if (this.state.easterEggVisible) {
+      easterEggClass += " -visible";
     }
 
     return (
@@ -89,27 +119,35 @@ const Hero = class extends React.Component {
         {/* <img className = "o-hero__background -terrazo" src = { tear } /> */}
         {/* <img className = "o-hero__background -terrazo" src = { whiteDots } /> */}
 
-        {/* <div className = "o-hero__background-group">
+        <div className = "o-hero__background-group">
           <img className = "o-hero__background -pink-blob" src = { pinkBlob } />
           <img className = "o-hero__background -eye-doodles" src = { eyeDoodles } />
-        </div> */}
+        </div>
 
         {/* <div className = "o-hero__background-group">
           <img className = "o-hero__background -green-paint" src = { greenPaint } />
           <img className = "o-hero__background -matrix" src = { matrix } />
         </div> */}
 
-        <div className = "o-hero__background-group">
+        {/* <div className = "o-hero__background-group">
           <img className = "o-hero__background -orangsicle" src = { orangSicle } />
           <img className = "o-hero__background -pink-elephant" src = { pinkElephant } />
           <img className = "o-hero__background -blue-blob" src = { blueBlob } />
-        </div>
+        </div> */}
 
         <div className="o-rhythm__container">
           <div className="o-hero__top">
             <div className="o-hero__titles">
-              <h1 className="-after">{this.props.title}</h1>
-              <p className="-before">{this.props.secondaryTitle}</p>
+              <VisibilitySensor onChange = { this._onHeadingChange }>
+                <div className = { headingClass }>
+                  <h1 className="-after">{this.props.title}</h1>
+                </div>
+              </VisibilitySensor>
+              <VisibilitySensor onChange = { this._onEasterEggChange }>
+                <div className = { easterEggClass }>
+                  <p className="-before">{this.props.secondaryTitle}</p>
+                </div>
+              </VisibilitySensor>
             </div>
           </div>
           <div className="o-hero__subtitles">
