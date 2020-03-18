@@ -67,6 +67,11 @@ img {
         .o-contact-form__wrapper {
             margin-left: 0;
         }
+
+        .o-hero__top,
+        .o-hero__subtitles {
+            padding-left: 0;
+        }
     }
 
     // @include breakpoints("sm-desktop") {

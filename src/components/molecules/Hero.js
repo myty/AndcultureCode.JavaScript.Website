@@ -84,9 +84,11 @@ const Hero = class extends React.Component {
         {/* <img className = "o-hero__background -terrazo" src = { tear } /> */}
         {/* <img className = "o-hero__background -terrazo" src = { whiteDots } /> */}
 
-        <img className = "o-hero__background -blue-blob" src = { blueBlob } />
-        <img className = "o-hero__background -pink-blob" src = { pinkBlob } />
-        <img className = "o-hero__background -eye-doodles" src = { eyeDoodles } />
+        <div className = "o-hero__background-group">
+          {/* <img className = "o-hero__background -blue-blob" src = { blueBlob } /> */}
+          <img className = "o-hero__background -pink-blob" src = { pinkBlob } />
+          <img className = "o-hero__background -eye-doodles" src = { eyeDoodles } />
+        </div>
 
         <div className="o-rhythm__container">
           <div className="o-hero__top">

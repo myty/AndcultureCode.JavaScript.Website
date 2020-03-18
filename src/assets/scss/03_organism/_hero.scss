@@ -152,16 +152,16 @@
     &__top {
         @include clearfix();
         margin-bottom: 84px;
-        padding-top: 240px;
+        padding-top: 160px;
 
         @include breakpoints("tablet") {
             margin-bottom: 200px;
-            padding-top: 218px;
+            padding-top: 700px;
         }
     }
 
     &__titles {
-        max-width: 800px;
+        max-width: 690px;
         width: 100%;
     }
 
@@ -182,16 +182,30 @@
             top: 0;
             right: 0;
             width: 800px;
+            display: none;
+
+            @include breakpoints("tablet") {
+                display: block;
+            }
         }
 
         &.-blue-blob {
             right: 60px;
             top: 100px;
+            display: none;
+
+            @include breakpoints("tablet") {
+                display: block;
+            }
         }
 
         &.-eye-doodles {
-            right: 100px;
+            right: -160px;
             top: 10px;
+
+            @include breakpoints("tablet") {
+                right: 100px;
+            }
         }
 
         // &.-jigglydoo {
@@ -339,12 +353,12 @@
     p {
         position: relative;
         max-width: 144px;
-        margin-top: 40px;
+        margin-top: 80px;
+        margin-left: 20px;
         z-index: 1;
 
         @include breakpoints("tablet") {
             display: block;
-            margin-left: 20px;
             margin-top: 180px;
         }
 
