@@ -99,7 +99,7 @@ const KidsDiscover = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__section -desktop-only -gradient">
+                <div className = "m-case-study-page-content__section -kd-desktop-only -gradient">
                     <div className = "o-rhythm__row -flex-wrap__no-wrap">
                         <div className = "o-rhythm__col -justify-center">
                             <div className = "kd-image -home-page-feed">
@@ -111,7 +111,7 @@ const KidsDiscover = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "-mobile-only">
+                <div className = "-kd-mobile-only">
                     <div className = "m-case-study-page-content__image-container">
                         <div className = "m-case-study-page-content__image -apple-pencil">
                             <img src = { applePencil } />

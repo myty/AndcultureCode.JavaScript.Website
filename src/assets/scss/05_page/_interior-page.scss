@@ -56,4 +56,29 @@
             }
         }
     }
+
+    .ipad-img {
+        @include breakpoints("tablet") {
+            position: relative;
+            right: -80px;
+        }
+    }
+
+    .-kd {
+        &-desktop-only {
+            display: none;
+
+            @include breakpoints("laptop") {
+                display: block;
+            }
+        }
+
+        &-mobile-only {
+            display: block;
+
+            @include breakpoints("laptop") {
+                display: hidden;
+            }
+        }
+    }
 }
