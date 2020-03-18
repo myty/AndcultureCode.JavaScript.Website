@@ -167,105 +167,127 @@
 
     &__background {
         position: absolute;
+        mix-blend-mode: multiply;
 
-        &.-jigglydoo {
-            right: auto;
-            left: 0;
-            top: 60px;
-            max-width: 75%;
-
-            @include breakpoints("tablet") {
-                right: -24px;
-                left: auto;
-                top: -54px;
-                max-width: 800px;
-            }
+        &.-drops {
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        &.-blinky {
-            left: 56%;
-            top: 120px;
-            width: 40px;
-            display: none;
-
-            @include breakpoints("tablet") {
-                display: block;
-                left: 40%;
-                top: 80px;
-                width: auto;
-            }
+        &.-pink-blob {
+            top: 0;
+            right: 0;
+            width: 800px;
         }
 
-        &.-terrazo {
-            display: none;
-            right: -130px;
+        &.-blue-blob {
+            right: 60px;
             top: 100px;
-            width: 260px;
-
-            @include breakpoints("tablet") {
-                display: block;
-                right: 0;
-                top: 100px;
-                width: auto;
-            }
         }
 
-        &.-greenbrush {
-            display: none;
-            left: 0;
-            bottom: 20%;
-
-            @include breakpoints("tablet") {
-                display: block;
-            }
+        &.-eye-doodles {
+            right: 100px;
+            top: 10px;
         }
 
-        &.-greenblob {
-            display: block;
-            right: 70px;
-            top: 360px;
-            z-index: 1;
-            width: 92px;
+        // &.-jigglydoo {
+        //     right: auto;
+        //     left: 0;
+        //     top: 60px;
+        //     max-width: 75%;
 
-            @include breakpoints("tablet") {
-                width: auto;
-                right: 180px;
-                top: 460px;
-            }
-        }
+        //     @include breakpoints("tablet") {
+        //         right: -24px;
+        //         left: auto;
+        //         top: -54px;
+        //         max-width: 800px;
+        //     }
+        // }
 
-        &.-dots {
-            top: 110px;
-            right: auto;
-            left: 70px;
-            width: 112px;
+        // &.-blinky {
+        //     left: 56%;
+        //     top: 120px;
+        //     width: 40px;
+        //     display: none;
 
-            @include breakpoints("tablet") {
-                top: -40px;
-                left: auto;
-                right: 24%;
-                width: auto;
-            }
-        }
+        //     @include breakpoints("tablet") {
+        //         display: block;
+        //         left: 40%;
+        //         top: 80px;
+        //         width: auto;
+        //     }
+        // }
 
-        &.-circles-crosses {
-            display: none;
-            bottom: 0;
-            left: 260px;
+        // &.-terrazo {
+        //     display: none;
+        //     right: -130px;
+        //     top: 100px;
+        //     width: 260px;
 
-            @include breakpoints("tablet") {
-                display: block;
-            }
-        }
+        //     @include breakpoints("tablet") {
+        //         display: block;
+        //         right: 0;
+        //         top: 100px;
+        //         width: auto;
+        //     }
+        // }
 
-        &.-blue-paint {
-            display: none;
-            right: 506px;
+        // &.-greenbrush {
+        //     display: none;
+        //     left: 0;
+        //     bottom: 20%;
 
-            @include breakpoints("tablet") {
-                display: block;
-            }
-        }
+        //     @include breakpoints("tablet") {
+        //         display: block;
+        //     }
+        // }
+
+        // &.-greenblob {
+        //     display: block;
+        //     right: 70px;
+        //     top: 360px;
+        //     z-index: 1;
+        //     width: 92px;
+
+        //     @include breakpoints("tablet") {
+        //         width: auto;
+        //         right: 180px;
+        //         top: 460px;
+        //     }
+        // }
+
+        // &.-dots {
+        //     top: 110px;
+        //     right: auto;
+        //     left: 70px;
+        //     width: 112px;
+
+        //     @include breakpoints("tablet") {
+        //         top: -40px;
+        //         left: auto;
+        //         right: 24%;
+        //         width: auto;
+        //     }
+        // }
+
+        // &.-circles-crosses {
+        //     display: none;
+        //     bottom: 0;
+        //     left: 260px;
+
+        //     @include breakpoints("tablet") {
+        //         display: block;
+        //     }
+        // }
+
+        // &.-blue-paint {
+        //     display: none;
+        //     right: 506px;
+
+        //     @include breakpoints("tablet") {
+        //         display: block;
+        //     }
+        // }
     }
 
     h1 {
@@ -312,16 +334,14 @@
 
     p {
         position: relative;
-        float: right;
         max-width: 144px;
         margin-top: 40px;
         z-index: 1;
 
         @include breakpoints("tablet") {
             display: block;
-            float: right;
-            margin-left: 50px;
-            margin-top: 40px;
+            margin-left: 20px;
+            margin-top: 180px;
         }
 
         &.-before {

@@ -9,13 +9,13 @@ class CaseStudyList extends React.Component {
     const numberOfPosts = posts.length;
 
     return (
-      <div>
+      <div className = "o-case-study-list">
         {posts &&
           posts.map(({ node: post }, index) => (
-            <CaseStudy 
-              key   = { index } 
-              post  = { post } 
-              count = { index + 1 } 
+            <CaseStudy
+              key   = { index }
+              post  = { post }
+              count = { index + 1 }
               total = { numberOfPosts } />
           ))}
       </div>
