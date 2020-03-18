@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { TimelineMax, Power1 } from 'gsap';
 
-import eyeDoodles from './../../../static/img/homepage-hero/eye_doodles.png';
+import doodles from './../../../static/img/homepage-hero/doodles.png';
 import pinkBlob from './../../../static/img/homepage-hero/pink_blob.png';
 import blueBlob from './../../../static/img/homepage-hero/blue_blob.png';
 
@@ -16,7 +16,7 @@ const HeroAnimation = () => {
         const groupOne = document.querySelector('.group-one');
         const groupOneImgOne = groupOne.querySelector('.-pink-blob');
         const groupOneImgTwo = groupOne.querySelector('.-blue-blob-two');
-        const groupOneImgThree = groupOne.querySelector('.-eye-doodles');
+        const groupOneImgThree = groupOne.querySelector('.-doodles');
         const groupTwo = document.querySelector('.group-two');
         const groupTwoImgOne = groupTwo.querySelector('.-green-paint');
         const groupTwoImgTwo = groupTwo.querySelector('.-matrix');
@@ -94,7 +94,7 @@ const HeroAnimation = () => {
             <div className = "o-hero__background-group group-one">
                 <img className = "o-hero__background -pink-blob" src = { pinkBlob } />
                 <img className = "o-hero__background -blue-blob-two" src = { blueBlob } />
-                <img className = "o-hero__background -eye-doodles" src = { eyeDoodles } />
+                <img className = "o-hero__background -doodles" src = { doodles } />
             </div>
             <div className = "o-hero__background-group group-two">
                 <img className = "o-hero__background -green-paint" src = { greenPaint } />
