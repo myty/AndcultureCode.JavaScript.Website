@@ -350,6 +350,10 @@
                             @include breakpoints("laptop") {
                                 top: -44px;
                             }
+
+                            @include breakpoints("desktop") {
+                                top: -26px;
+                            }
                         }
                     }
                 }
@@ -358,20 +362,36 @@
                     @include span-col(12);
 
                     @include breakpoints("sm-desktop") {
+                        @include span-col(6);
+                        @include push-col(0);
+                    }
+
+                    @include breakpoints("desktop") {
                         @include span-col(5);
                         @include push-col(1);
                     }
 
                     header {
                         @include breakpoints("tablet") {
+                            @include span-col(12);
                             @include push-col(0);
                         }
                     }
 
                     &-image {
                         @include breakpoints("sm-desktop") {
-                            @include span-col(5);
-                            @include push-col(1);
+                            @include span-col(6);
+                            @include push-col(0);
+                        }
+
+                        @include breakpoints("desktop") {
+                            @include span-col(6);
+                        }
+                    }
+
+                    .-site-home-page {
+                        @include breakpoints("desktop") {
+                            right: -74px;
                         }
                     }
                 }
@@ -430,11 +450,6 @@
             @include push-col(0);
         }
 
-
-        // @include breakpoints("tablet") {
-        //     padding: 252px 0;
-        // }
-
         &.-body-intro {
             @include breakpoints("desktop") {
                 @include push-col(1);
@@ -444,7 +459,7 @@
                 @include breakpoints("tablet") {
                     padding-bottom: 30px;
                 }
-                @include breakpoints("lg-laptop") {
+                @include breakpoints("sm-desktop") {
                     padding-bottom: 120px;
                 }
             }
@@ -486,7 +501,7 @@
                     &-reverse {
                         flex-direction: column-reverse;
 
-                        @include breakpoints("lg-laptop") {
+                        @include breakpoints("desktop") {
                             flex-direction: initial;
                         }
                     }
@@ -545,11 +560,17 @@
         }
 
         &.-kd {
+            &_data {
+                @include breakpoints("desktop") {
+                    padding-bottom: 64px;
+                }
+            }
+
             &_discover-map {
                 .-image {
                     @include span-col(12);
 
-                    @include breakpoints("lg-laptop") {
+                    @include breakpoints("desktop") {
                         @include span-col(4);
                     }
                 }
@@ -557,13 +578,17 @@
                 .-content {
                     @include span-col(12);
 
-                    @include breakpoints("lg-laptop") {
+                    @include breakpoints("desktop") {
                         @include span-col(7);
                         @include push-col(1);
                     }
                 }
 
             }
+        }
+
+        &.-hackerone-gear-cred {
+            padding-bottom: 30px;
         }
 
         header {
@@ -580,6 +605,7 @@
             }
 
             @include breakpoints("desktop") {
+                @include span-col(8);
                 @include push-col(3);
             }
 
@@ -695,6 +721,8 @@
                 @include breakpoints("desktop") {
                     @include span-col(8);
                     @include push-col(3);
+
+                    top: -28px;
                 }
 
                 &.-left {
@@ -875,6 +903,10 @@
 
         &.-gradient {
             background: linear-gradient(white, #E0ECEF);
+
+            @include breakpoints("desktop") {
+                margin: 72px 0 32px;
+            }
         }
 
         &.-margin {

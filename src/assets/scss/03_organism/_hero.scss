@@ -23,7 +23,7 @@
             @include font-size(16px);
             @include line-height(24px);
             letter-spacing: .35px;
-            font-weight: 100;
+            font-weight: 300;
 
             @include breakpoints("sm-tablet") {
                 @include span-col(10);
@@ -40,10 +40,11 @@
                 top: -8px;
             }
 
-            // @include breakpoints("laptop") {
-            //     @include span-col(6);
-            //     @include font-size(24px);
-            // }
+            @include breakpoints("desktop") {
+                @include span-col(7);
+                @include push-col(0);
+                @include font-size(24px);
+            }
         }
 
         .o-hero__list {

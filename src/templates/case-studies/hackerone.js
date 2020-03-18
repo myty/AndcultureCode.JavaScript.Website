@@ -121,7 +121,7 @@ const Hackerone = class extends React.Component {
                     <img src = { cardsImg } />
                 </div>
                 <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
+                    <div className = "m-case-study-page-content__copy-section -hackerone-gear-cred">
                         <h6 className = "content__header -mobile-only">Swag</h6>
                         <header className = "-push-three">gear cred</header>
                         <div className = "o-rhythm__row">
