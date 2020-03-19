@@ -74,6 +74,10 @@ const ProjectForm = class extends React.Component {
             return false;
         }
 
+        if ([4, 5, 6].indexOf(this.state.activeQuestion) != -1) {
+            return false;
+        }
+
         return true;
     }
 
@@ -115,6 +119,7 @@ const ProjectForm = class extends React.Component {
         if (this.state.activeQuestion === this.state.totalQuestions) {
             buttonClass += ' -active'
         }
+        console.log(this.state.formData);
 
         if (this._validateFormData()) {
             nextButtonClass += ' -disabled'
@@ -150,6 +155,7 @@ const ProjectForm = class extends React.Component {
                             type               = "number"
                             name               = "phone"
                             inputValueCallback = { this._setInputValue }
+                            isRequiredCallback = { this._setIsRequired }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
                             value              = { this.state.formData.phone } />

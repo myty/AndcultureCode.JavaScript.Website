@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Input = class extends React.Component {
+const Select = class extends React.Component {
 
     constructor(props) {
         super(props);
@@ -9,7 +9,7 @@ const Input = class extends React.Component {
             inputValue:       '',
             fieldActive:      false,
             placeholderValue: this.props.name,
-            error:            false,
+            error: false,
         }
 
         this._updateInputValue = this._updateInputValue.bind(this);
@@ -56,12 +56,12 @@ const Input = class extends React.Component {
             cssClassName += ' -field-active';
         }
 
-        let inputClassName = 'a-input';
-        inputClassName += this.props.lightTheme ? ' -light ' : '';
-        let inputProps = {};
+        let selectClassName = 'a-dropdown';
+        selectClassName += this.props.lightTheme ? ' -light ' : '';
+        let selectProps = {};
 
         if (this.props.isRequired) {
-            inputProps.required = true;
+            selectProps.required = true;
         }
 
         return (
@@ -71,25 +71,20 @@ const Input = class extends React.Component {
                     htmlFor   = { this.props.name }>
                     { this.props.name }
                 </label>
-                <input
-                    { ...inputProps }
-                    value       = { this.props.value }
-                    onFocus     = { this._activateField }
-                    onBlur      = { this._disableField }
-                    onChange    = { this._updateInputValue }
-                    className   = { inputClassName }
-                    type        = { this.props.type }
-                    name        = { this.props.name }
-                    placeholder = { this.state.placeholderValue }
-                    id          = { this.props.name } />
-                { // if
-                    this.state.error &&
-                    <span className = "a-label__error">Please Enter Your { this.props.name }</span>
-
-                }
+                <div className = { selectClassName }>
+                    <select { ...selectProps } onChange = { this._updateInputValue } onBlur = { this._disableField } onFocus = { this._activateField }>
+                        <option value="existing">I have a startup I’d like to talk to you about</option>
+                        <option value="story">I have an entrepreneurship story to share</option>
+                        <option value="event">I have an event for your community calendar</option>
+                        <option value="partner">I’m interested in a partnership</option>
+                        <option value="job">I’m interested in a job or internship with Catamaran</option>
+                        <option value="training">I’m interested in training</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
             </fieldset>
         )
     }
 }
 
-export default Input
+export default Select;

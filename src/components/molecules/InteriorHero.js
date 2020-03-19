@@ -1,4 +1,5 @@
 import React from 'react';
+import contactHero from './../../../static/img/contact_hero.png';
 
 const InteriorHero = class extends React.Component {
   constructor(props) {
@@ -29,14 +30,14 @@ const InteriorHero = class extends React.Component {
         <img src = { this.props.backgroundImages[1] } className = "o-hero__background -blue-paint" />
         <div className = "o-rhythm__container">
           <div className = "o-rhythm__row">
-            <div className = "o-hero__top">
+            <div className = "o-hero__left">
               <div className = "o-hero__titles">
-                <h2 className = "-before">{ this.props.secondaryTitle }</h2>
                 <h1>{ this.props.title }</h1>
+                <h3>{ this.props.subTitle }</h3>
               </div>
             </div>
-            <div className = "o-hero__subtitles">
-              <h3>{ this.props.subTitle }</h3>
+            <div className = "o-hero__right">
+              <img src = { contactHero } />
             </div>
           </div>
         </div>

@@ -32,13 +32,9 @@
     }
 
     &__block {
-        height: 110px;
+        height: 180px;
         transition: all 0.6s ease;
         display: none;
-
-        &.-top {
-            height: 180px;
-        }
 
         @include breakpoints("tablet") {
             display: block;
@@ -246,7 +242,7 @@
 
         @include breakpoints("sm-desktop") {
             @include font-size("larger");
-            @include line-height(60px);
+            @include line-height(48px);
         }
     }
 }

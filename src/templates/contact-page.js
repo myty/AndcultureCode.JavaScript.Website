@@ -66,8 +66,8 @@ const ContactPage = ({ data }) => {
         />
         <ContactForm lightTheme = { true } />
         <CustomSlider images = { sliderImages } />
-        <ContactInfo streetAddress = { frontmatter.streetAddress } phoneNumber = { frontmatter.phoneNumber } directions = { frontmatter.directions } mapLink = { frontmatter.mapLink } />
-        <CareersList />
+        <ContactInfo streetAddressLineOne = { frontmatter.streetAddressLineOne } streetAddressLineTwo = { frontmatter.streetAddressLineTwo } phoneNumber = { frontmatter.phoneNumber } directions = { frontmatter.directions } mapLink = { frontmatter.mapLink } />
+        {/* <CareersList /> */}
       </div>
     </Layout>
   )
@@ -82,7 +82,8 @@ export const pageQuery = graphql`
         title
         secondaryTitle
         subTitle
-        streetAddress
+        streetAddressLineOne
+        streetAddressLineTwo
         mapLink
         phoneNumber
         directions

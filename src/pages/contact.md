@@ -1,9 +1,10 @@
 ---
 templateKey: contact-page
-title: let's get connected
+title: let's connect
 secondaryTitle: ahoy hoy/bonjour/anyoung
 subTitle: Whether it's a potential project or to get more information about what we do, we'd be glad to talk with you.
-streetAddress: '614 N. Front Street Harrisburg, PA 17102'
+streetAddressLineOne: 614 N. Front Street
+streetAddressLineTwo: Harrisburg, PA 17102
 mapLink: https://www.google.com/maps/place/614+N+Front+St,+Harrisburg,+PA+17101/@40.2635209,-76.8896603,19.5z/data=!4m5!3m4!1s0x89c8c1122c1856d1:0xd99ac746de9d10e4!8m2!3d40.263578!4d-76.889796
 phoneNumber: '717.233.2881'
 directions: >
@@ -11,7 +12,7 @@ directions: >
 
 
     Once you’ve turned into our parking lot, stay to the left and enter the top parking deck. There, you will find several “Visitor” parking spaces. Enter through the doors on the top parking deck and go straight ahead. You’ll turn a slight left around the railing and then turn right to enter through the glass doors leading to our office.
-metaTitle: anculture - a design company in harrisburg, PA
+metaTitle: andculture - a design company in harrisburg, PA
 metaDescription: andculture's contact information to reach the engineering, design, strategy, and engagement teams
 socialDescription: Get in touch with andculture, a Harrisburg, PA-based design agency
 ---

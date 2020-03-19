@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'anculture - a design company in harrisburg, PA',
+    title: 'andculture - a design company in harrisburg, PA',
     description:
       'We are a design company in harrisburg PA that fixes broken realities through cutting edge design, strategy, and engineering solutions.',
   },
