@@ -179,7 +179,7 @@
             top: 62px;
             display: none;
 
-            @include breakpoints("lg-desktop") {
+            @include breakpoints("desktop") {
                 display: block;
             }
         }
@@ -240,6 +240,12 @@
                     top: 10px;
                     right: -104px;
                 }
+
+                @include breakpoints("desktop") {
+                    display: block;
+                    top: 64px;
+                    right: 0;
+                }
             }
 
             &.-dots {
@@ -253,6 +259,13 @@
                     right: -120px;
                     left: auto;
                 }
+
+                @include breakpoints("desktop") {
+                    display: block;
+                    top: 400px;
+                    right: -64px;
+                    left: auto;
+                }
             }
 
             &.-block {
@@ -263,6 +276,12 @@
                 @include breakpoints("tablet") {
                     bottom: -170px;
                     left: -80px;
+                    display: block;
+                }
+
+                @include breakpoints("desktop") {
+                    bottom: -170px;
+                    left: 60px;
                     display: block;
                 }
             }
@@ -457,10 +476,15 @@
 
             &.-cca {
                 @include breakpoints("tablet") {
-                    padding-bottom: 30px;
+                    padding-bottom: 32px;
                 }
+
                 @include breakpoints("sm-desktop") {
                     padding-bottom: 120px;
+                }
+
+                @include breakpoints("desktop") {
+                    padding-bottom: 32px;
                 }
             }
 
