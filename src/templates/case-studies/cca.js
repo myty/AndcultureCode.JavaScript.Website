@@ -147,7 +147,7 @@ const CCA = class extends React.Component {
                     </div>
                     <img src = { iphoneImg } className = "-front" />
                 </div>
-                <div className = "m-case-study-page-content__next m-case-study">
+                <div className = "m-case-study-page-content__next m-case-study -pulse">
                     <div className = "-background-image__container">
                         <div
                             style     = { nextImageBlockStyle }

@@ -816,6 +816,78 @@
     &__next {
         display: block;
 
+        &.-kd {
+
+            .a-button {
+                color: #2AB2C1;
+                border-color: #2AB2C1;
+            }
+
+            @include breakpoints("tablet") {
+
+                &:hover {
+
+                    .-content {
+                        background-color: #2AB2C1;
+                    }
+                }
+            }
+        }
+
+        &.-pulse {
+
+            .a-button {
+                color: #76c1b9;
+                border-color: #76c1b9;
+            }
+
+            @include breakpoints("tablet") {
+
+                &:hover {
+
+                    .-content {
+                        background-color: #76c1b9;
+                    }
+                }
+            }
+        }
+
+        &.-cca {
+
+            .a-button {
+                color: #3D5CC2;
+                border-color: #3D5CC2;
+            }
+
+            @include breakpoints("tablet") {
+
+                &:hover {
+
+                    .-content {
+                        background-color: #3D5CC2;
+                    }
+                }
+            }
+        }
+
+        &.-h1 {
+
+            .a-button {
+                color: #F953A9;
+                border-color: #F953A9;
+            }
+
+            @include breakpoints("tablet") {
+
+                &:hover {
+
+                    .-content {
+                        background-color: #F953A9;
+                    }
+                }
+            }
+        }
+
         @include breakpoints("tablet") {
             display: flex;
 
@@ -830,7 +902,6 @@
                 }
 
                 .-content {
-                    background-color: get-color("secondary", "center-lane");
 
                     p,
                     h5,

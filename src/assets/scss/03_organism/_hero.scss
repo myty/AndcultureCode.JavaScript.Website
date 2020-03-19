@@ -160,7 +160,11 @@
         max-width: 690px;
         width: 100%;
         position: absolute;
-        top: calc(100vh - 200px);
+        top: calc(100vh - 250px);
+
+        @media (min-height: 1024px) {
+            top: calc(100vh - 300px);
+        }
 
         .-fade {
             animation: fadeInAnimation ease 6s;
