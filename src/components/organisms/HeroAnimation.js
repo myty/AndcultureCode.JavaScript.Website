@@ -38,55 +38,55 @@ const HeroAnimation = () => {
         tl.to(groupOneImgOne, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 0)
+        }, 1)
         tl.to(groupOneImgTwo, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 2)
+        }, 3)
         tl.to(groupOneImgThree, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 4)
+        }, 5)
         tl.to(groupOneImgOne, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 6)
+        }, 7)
         tl.to(groupOneImgTwo, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 6)
+        }, 7)
         tl.to(groupOneImgThree, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 6)
+        }, 7)
         tl.to(groupTwoImgOne, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 8)
+        }, 9)
         tl.to(groupTwoImgTwo, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 10)
+        }, 11)
         tl.to(groupTwoImgOne, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 12)
+        }, 13)
         tl.to(groupTwoImgTwo, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 12)
+        }, 13)
         tl.to(groupThreeImgOne, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 14)
+        }, 15)
         tl.to(groupThreeImgTwo, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 16)
+        }, 17)
         tl.to(groupThreeImgThree, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 18)
+        }, 19)
     }, []);
 
     return (

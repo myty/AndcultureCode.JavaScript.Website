@@ -7,7 +7,7 @@ featuredpost: false
 featuredimage: /img/CCA_girl.png
 texture: img/block_doodle.png
 color: '#3D5CC2'
-secondaryLayout: true
+secondaryLayout: false
 heroIntroCopy: When we connected with Commonwealth Charter Academy (CCA), they had just dropped “Connections” from their name and shifted away from their parent company. Competition for students was fierce among cyber schools, not to mention school districts and private schools.
 tags:
   - ux design
