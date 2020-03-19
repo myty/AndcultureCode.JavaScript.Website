@@ -111,6 +111,7 @@
 
             @include breakpoints("tablet") {
                 padding-left: 80px;
+                padding-right: 50px;
             }
 
             @include breakpoints("lg-desktop") {
