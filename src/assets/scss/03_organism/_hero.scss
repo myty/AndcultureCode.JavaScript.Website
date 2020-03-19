@@ -179,9 +179,9 @@
     &__top {
         @include clearfix();
         margin-bottom: 84px;
-        height: 100vh;
 
         @include breakpoints("tablet") {
+            height: 100vh;
             margin-bottom: 280px;
         }
     }
@@ -189,11 +189,16 @@
     &__titles {
         max-width: 690px;
         width: 100%;
-        position: absolute;
         top: calc(100vh - 250px);
+        padding-top: 100px;
+
+        @include breakpoints("tablet") {
+            position: absolute;
+        }
 
         @media (min-height: 1024px) {
             top: calc(100vh - 345px);
+            padding-top: 0;
         }
 
         .-fade {

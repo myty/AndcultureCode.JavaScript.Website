@@ -21,14 +21,6 @@
         &.-active {
             display: block;
         }
-
-        label {
-            @include font-size("small");
-
-            @include breakpoints("tablet") {
-                @include font-size(18px);
-            }
-        }
     }
 
     &__container {
@@ -121,6 +113,7 @@
 
         @include breakpoints("tablet") {
             @include font-size("medium-large");
+            margin-bottom: 60px;
         }
 
         &.-light {
