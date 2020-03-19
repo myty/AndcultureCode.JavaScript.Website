@@ -4,7 +4,7 @@ title: redefining what cyber education can do
 partnerName: CCA
 date: 2017-12-17T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/home_CCA_hero_Students.png
+featuredimage: /img/CCA_phone.png
 texture: img/block_doodle.png
 color: '#3D5CC2'
 secondaryLayout: true

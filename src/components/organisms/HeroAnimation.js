@@ -6,7 +6,7 @@ import pinkBlob from './../../../static/img/homepage-hero/pink_blob.png';
 import blueBlob from './../../../static/img/homepage-hero/blue_blob.png';
 
 import matrix from './../../../static/img/homepage-hero/matrix.png';
-import greenPaint from './../../../static/img/homepage-hero/green_screenpaint.png';
+import greenPaint from './../../../static/img/homepage-hero/grey_brush.png';
 
 import pinkElephant from './../../../static/img/homepage-hero/pink_elephant.png';
 import orangSicle from './../../../static/img/homepage-hero/orangsicle.png';
@@ -38,55 +38,55 @@ const HeroAnimation = () => {
         tl.to(groupOneImgOne, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 0)
+        }, 1)
         tl.to(groupOneImgTwo, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 2)
+        }, 3)
         tl.to(groupOneImgThree, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 4)
+        }, 5)
         tl.to(groupOneImgOne, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 6)
+        }, 7)
+        tl.to(groupTwoImgOne, 1.5, {
+            opacity:    1,
+            ease:       Power1.easeIn
+        }, 7)
         tl.to(groupOneImgTwo, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 6)
+        }, 9)
+        tl.to(groupTwoImgTwo, 1.5, {
+            opacity:    1,
+            ease:       Power1.easeIn
+        }, 9)
         tl.to(groupOneImgThree, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 6)
-        tl.to(groupTwoImgOne, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 8)
-        tl.to(groupTwoImgTwo, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 10)
+        }, 11)
         tl.to(groupTwoImgOne, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 12)
-        tl.to(groupTwoImgTwo, 1.5, {
-            opacity:    0,
-            ease:       Power1.easeOut
-        }, 12)
+        }, 13)
         tl.to(groupThreeImgOne, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 14)
+        }, 13)
+        tl.to(groupTwoImgTwo, 1.5, {
+            opacity:    0,
+            ease:       Power1.easeOut
+        }, 15)
         tl.to(groupThreeImgTwo, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 16)
+        }, 15)
         tl.to(groupThreeImgThree, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 18)
+        }, 17)
     }, []);
 
     return (

@@ -111,6 +111,7 @@
 
             @include breakpoints("tablet") {
                 padding-left: 80px;
+                padding-right: 50px;
             }
 
             @include breakpoints("lg-desktop") {
@@ -128,11 +129,13 @@
         width: 100%;
         float: none;
         position: relative;
+        margin-bottom: 40px;
 
         @include breakpoints("tablet") {
             width: calc(50% - 62px);
             float: right;
             margin-right: 64px;
+            margin-bottom: 0;
         }
 
         @include breakpoints("sm-desktop") {
@@ -147,8 +150,10 @@
         position: absolute;
         left: 0;
         top: 110px;
+        display: none;
 
         @include breakpoints("tablet") {
+            display: block;
             top: 0;
         }
 
@@ -173,9 +178,12 @@
             z-index: 1;
             max-width: 100%;
             transition: all 0.6s ease !important;
+            max-height: 400px;
+            margin: 0 auto;
+            display: block;
 
             @include breakpoints("tablet") {
-                width: 550px;
+                max-height: initial;
             }
         }
     }

@@ -193,7 +193,7 @@
         top: calc(100vh - 250px);
 
         @media (min-height: 1024px) {
-            top: calc(100vh - 300px);
+            top: calc(100vh - 345px);
         }
 
         .-fade {
@@ -239,7 +239,7 @@
 
         &.-blue-blob-two {
             right: 60px;
-            top: 100px;
+            top: 380px;
             display: none;
 
             @include breakpoints("tablet") {
@@ -252,7 +252,7 @@
             top: 10px;
 
             @include breakpoints("tablet") {
-                right: 100px;
+                right: 20%;
             }
         }
 
