@@ -1,4 +1,4 @@
-.a-radio {
+fieldset .a-radio {
     position: absolute;
     opacity: 0;
 
@@ -34,7 +34,7 @@
     }
 
     & + label {
-        @include font-size(24px);
+        @include font-size(32px);
         position: relative;
         padding: 0 16px;
         background: get-color("primary", "after-hours");

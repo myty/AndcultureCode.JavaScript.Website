@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import ContactForm from '../components/organisms/ContactForm';
 import ContactInfo from '../components/molecules/ContactInfo';
 import CustomSlider from '../components/molecules/CustomSlider';
-import CareersList from '../components/organisms/CareersList';
+// import CareersList from '../components/organisms/CareersList';
 import ContactHeroGraphic from '../../static/img/contact/contact_hero_graphic.png';
 import HeroBluePaint from '../../static/img/contact/blue_paint.png';
 import InteriorHero from '../components/molecules/InteriorHero';
