@@ -388,6 +388,8 @@
                     @include breakpoints("desktop") {
                         @include span-col(5);
                         @include push-col(1);
+
+                        margin-top: 100px;
                     }
 
                     header {
@@ -419,6 +421,12 @@
 
         &.-pulse {
             background: #76c1b9;
+
+            header {
+                @include breakpoints("sm-desktop") {
+                    @include span-col(12);
+                }
+            };
         }
 
         &.-cca {
@@ -474,6 +482,50 @@
                 @include push-col(1);
             }
 
+            header {
+                @include breakpoints("tablet") {
+                    @include span-col(12);
+                }
+
+                @include breakpoints("lg-laptop") {
+                    @include span-col(8);
+                }
+
+                @include breakpoints("desktop") {
+                    @include span-col(6);
+                }
+
+                // @include breakpoints("lg-desktop") {
+                //     @include push-col(0);
+                // }
+            }
+
+            .content__copy {
+                @include breakpoints("tablet") {
+                    @include span-col(12);
+                }
+
+                @include breakpoints("desktop") {
+                    @include span-col(6);
+                }
+
+                p {
+                    @include breakpoints("desktop") {
+                        @include span-col(12);
+                    }
+                }
+            }
+
+            .content__easter-egg {
+                margin-top: 32px;
+
+                @include breakpoints("desktop") {
+                    margin-top: -16px;
+                    @include span-col(3);
+                    @include push-col(3);
+                }
+            }
+
             &.-cca {
                 @include breakpoints("tablet") {
                     padding-bottom: 32px;
@@ -486,35 +538,15 @@
                 @include breakpoints("desktop") {
                     padding-bottom: 32px;
                 }
-            }
 
-            header {
-                @include breakpoints("tablet") {
-                    @include span-col(10);
+                .content__copy {
+                    @include breakpoints("desktop") {
+                        @include span-col(8);
+                    }
                 }
 
-                @include breakpoints("lg-laptop") {
-                    @include span-col(8);
-                }
-
-                @include breakpoints("lg-desktop") {
-                    @include push-col(0);
-                }
-            }
-
-            .content__copy {
-                @include breakpoints("desktop") {
-                    @include span-col(8);
-                }
-            }
-
-            .content__easter-egg {
-                margin-top: 32px;
-
-                @include breakpoints("desktop") {
-                    margin-top: 0;
-                    @include span-col(3);
-                    @include push-col(1);
+                header {
+                    @include span-col(12);
                 }
             }
         }
@@ -688,6 +720,10 @@
                     margin-right: 10px;
                     position: absolute;
                     right: -10px;
+
+                    @include breakpoints("lg-desktop") {
+                        right: initial;
+                    }
                 }
             }
         }
@@ -777,17 +813,19 @@
 
         .-white-sketches {
             img {
-                @include breakpoints("laptop") {
-                    width: 325px;
+                z-index: 1;
+                position: relative;
+
+                @include breakpoints("desktop") {
+                    width: 85%;
                 }
             }
         }
 
-        // &:last-of-type {
-        //     @include breakpoints("tablet") {
-        //         padding-bottom: 200px;
-        //     }
-        // }
+        .-safari-img {
+            z-index: 2;
+            position: relative;
+        }
     }
 
     &__image {
@@ -1006,7 +1044,7 @@
                         }
 
                         @include breakpoints("xl-desktop") {
-                            width: 100%;
+                            width: initial;
                         }
                     }
                 }
@@ -1054,6 +1092,9 @@
         }
 
         &.-pulse {
+            @include breakpoints("desktop") {
+                padding-top: 120px;
+            }
 
             &__sketches {
                 &-container {

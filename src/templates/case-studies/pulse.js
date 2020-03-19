@@ -52,7 +52,7 @@ const Pulse = class extends React.Component {
                             <h6 className = "content__header -desktop-only">Research</h6>
                             <div className = "content__copy">
                                 <p>For data, we know a problem is easier to tackle if you can see it. We took what our partner provided and turned it into sketched concepts; we also input data into our visualization tools. Voila, now we could start to see shortcomings where before it was spreadsheets and hunches. </p>
-                                <p>The human side led to interviewing each nurse manager. How do they schedule? What tools do they use to do that? What about their job drives them up a wall?*</p>
+                                <p>The human side led to interviewing each nurse manager. How do they schedule? What tools do they use to do that? What about their job drives them up a wall?</p>
                                 <p>That’s not enough, though. So we met with people from other parts of the hospital system so we could get the full picture.</p>
                                 <div className = "easter-egg">”Is your job just like on ‘Grey’s Anatomy’?” likely is one.</div>
                             </div>
@@ -101,7 +101,7 @@ const Pulse = class extends React.Component {
                                     <img src = { whiteSketches } />
                                 </div>
                             </div>
-                            <img src = { safariImg } />
+                            <img className = "-safari-img" src = { safariImg } />
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ const Pulse = class extends React.Component {
                             <div className = "content__copy">
                                 <p>It’s getting people to use it! That’s why we gathered a small group of (brave?) initial users to try this new platform, something way out of the box compared to the static reports they had grown accustomed to. We needed to watch them use it, and they needed to see how we turned a bunch of spreadsheets into an accessible, chart-filled, problem-solving dashboard.</p>
                                 <p>We observed. We interviewed. We met with nurse managers and administrators to discuss how they used the platform, and more importantly, what shortcomings it may have at this early stage. Was something confusing? Was a task more challenging to complete than we expected? </p>
-                                <p>A tip: Work with companies that don’t assume the first version of what they produced is perfect.* It should be about testing and evolving.</p>
+                                <p>A tip: Work with companies that don’t assume the first version of what they produced is perfect. It should be about testing and evolving.</p>
                             </div>
                         </div>
                     </div>
@@ -146,7 +146,7 @@ const Pulse = class extends React.Component {
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Iteration</h6>
                             <div className = "content__copy">
-                                <p>We had initial user feedback plus data, and now we could update the platform design. We tweaked how the info was presented and modified the navigation. Charts were added to make the experience more comprehensive; you really could get a sense of how the entire hospital operated.*</p>
+                                <p>We had initial user feedback plus data, and now we could update the platform design. We tweaked how the info was presented and modified the navigation. Charts were added to make the experience more comprehensive; you really could get a sense of how the entire hospital operated.</p>
                                 <p>We didn’t veer off our initial guiding principles. We just worked with our partner to evolve the system into an even more effective version to address their problem.</p>
                             </div>
                         </div>
