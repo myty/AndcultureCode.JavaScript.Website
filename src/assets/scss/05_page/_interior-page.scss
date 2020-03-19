@@ -1,20 +1,14 @@
 .p-interior-page {
 
     .o-hero {
+        padding-top: 180px;
 
         &__titles {
+            position: static;
             margin-top: 40px;
 
-            h2 {
-                @include font-size("smaller");
-                color: get-color("primary", "fresh");
-                font-weight: 300;
-                margin-bottom: 16px;
-
-                @include breakpoints("tablet") {
-                    @include font-size(36px);
-                    margin-bottom: 12px;
-                }
+            h1 {
+                margin-bottom: 20px;
             }
         }
 
@@ -23,6 +17,15 @@
 
             @include breakpoints("tablet") {
                 margin-bottom: 112px;
+            }
+        }
+
+        &__left,
+        &__right {
+            @include span-col(12);
+
+            @include breakpoints("tablet") {
+                @include span-col(6);
             }
         }
 

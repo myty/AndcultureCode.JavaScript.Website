@@ -39,9 +39,11 @@ const ContactForm = class extends React.Component {
 
     _activateForm(e) {
         e.preventDefault();
-        this.setState({
-            formActive: true,
-        });
+        if (this.state.activeForm) {
+            this.setState({
+                formActive: true,
+            });
+        }
     }
 
     _updateProgressBar(percentComplete) {
@@ -158,6 +160,7 @@ const ContactForm = class extends React.Component {
                                         Go Back
                                     </a>
                                     <a
+                                        disabled = { true }
                                         onClick = { this._activateForm }
                                         className = { buttonClass }>
                                         Next

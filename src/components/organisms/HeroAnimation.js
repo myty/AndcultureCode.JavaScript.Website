@@ -35,58 +35,58 @@ const HeroAnimation = () => {
         tl.set(groupThreeImgOne, {opacity: 0})
         tl.set(groupThreeImgTwo, {opacity: 0})
         tl.set(groupThreeImgThree, {opacity: 0})
-        tl.to(groupOneImgOne, 1, {
+        tl.to(groupOneImgOne, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
         }, 0)
-        tl.to(groupOneImgTwo, 1, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 1)
-        tl.to(groupOneImgThree, 1, {
+        tl.to(groupOneImgTwo, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
         }, 2)
-        tl.to(groupOneImgOne, 1, {
-            opacity:    0,
-            ease:       Power1.easeOut
-        }, 3)
-        tl.to(groupOneImgTwo, 1, {
-            opacity:    0,
-            ease:       Power1.easeOut
+        tl.to(groupOneImgThree, 1.5, {
+            opacity:    1,
+            ease:       Power1.easeIn
         }, 4)
-        tl.to(groupOneImgThree, 1, {
+        tl.to(groupOneImgOne, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 5)
-        tl.to(groupTwoImgOne, 1, {
-            opacity:    1,
-            ease:       Power1.easeIn
         }, 6)
-        tl.to(groupTwoImgTwo, 1, {
+        tl.to(groupOneImgTwo, 1.5, {
+            opacity:    0,
+            ease:       Power1.easeOut
+        }, 6)
+        tl.to(groupOneImgThree, 1.5, {
+            opacity:    0,
+            ease:       Power1.easeOut
+        }, 6)
+        tl.to(groupTwoImgOne, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 7)
-        tl.to(groupTwoImgOne, 1, {
-            opacity:    0,
-            ease:       Power1.easeOut
         }, 8)
-        tl.to(groupTwoImgTwo, 1, {
-            opacity:    0,
-            ease:       Power1.easeOut
-        }, 9)
-        tl.to(groupThreeImgOne, 1, {
+        tl.to(groupTwoImgTwo, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
         }, 10)
-        tl.to(groupThreeImgTwo, 1, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 11)
-        tl.to(groupThreeImgThree, 1, {
-            opacity:    1,
-            ease:       Power1.easeIn
+        tl.to(groupTwoImgOne, 1.5, {
+            opacity:    0,
+            ease:       Power1.easeOut
         }, 12)
+        tl.to(groupTwoImgTwo, 1.5, {
+            opacity:    0,
+            ease:       Power1.easeOut
+        }, 12)
+        tl.to(groupThreeImgOne, 1.5, {
+            opacity:    1,
+            ease:       Power1.easeIn
+        }, 14)
+        tl.to(groupThreeImgTwo, 1.5, {
+            opacity:    1,
+            ease:       Power1.easeIn
+        }, 16)
+        tl.to(groupThreeImgThree, 1.5, {
+            opacity:    1,
+            ease:       Power1.easeIn
+        }, 18)
     }, []);
 
     return (

@@ -235,7 +235,7 @@ const KidsDiscover = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__next m-case-study">
+                <div className = "m-case-study-page-content__next m-case-study -h1">
                     <div className = "-background-image__container">
                         <div
                             style     = { nextImageBlockStyle }

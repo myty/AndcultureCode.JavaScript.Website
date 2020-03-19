@@ -7,7 +7,6 @@ const Hero = class extends React.Component {
     super(props);
 
     this.state = {
-      headingVisible: false,
       easterEggVisible: false,
     };
 
@@ -15,7 +14,6 @@ const Hero = class extends React.Component {
       windowHeight: null,
     };
 
-    this._onHeadingChange = this._onHeadingChange.bind(this);
     this._onEasterEggChange = this._onEasterEggChange.bind(this);
   }
 
@@ -23,12 +21,6 @@ const Hero = class extends React.Component {
     this.setState({
       windowHeight: window.innerHeight,
     })
-  }
-
-  _onHeadingChange(headingVisible) {
-    this.setState({
-      headingVisible: headingVisible ? true : false,
-    });
   }
 
   _onEasterEggChange(easterEggVisible) {
@@ -48,13 +40,9 @@ const Hero = class extends React.Component {
       opacity: opacity,
     }
 
-    let headingClass = "-fade";
-    if (this.state.headingVisible) {
-      headingClass += " -visible";
-    }
-    let easterEggClass = "-fade";
+    let easterEggClass = "-scroll-fade";
     if (this.state.easterEggVisible) {
-      easterEggClass += " -visible";
+      easterEggClass += " -active";
     }
 
     return (
@@ -63,11 +51,9 @@ const Hero = class extends React.Component {
         <div className="o-rhythm__container">
           <div className="o-hero__top">
             <div className="o-hero__titles">
-              <VisibilitySensor onChange = { this._onHeadingChange }>
-                <div className = { headingClass }>
-                  <h1 className="-after">{this.props.title}</h1>
-                </div>
-              </VisibilitySensor>
+              <div className = "-fade">
+                <h1 className="-after">{this.props.title}</h1>
+              </div>
               <VisibilitySensor onChange = { this._onEasterEggChange }>
                 <div className = { easterEggClass }>
                   <p className="-before">{this.props.secondaryTitle}</p>

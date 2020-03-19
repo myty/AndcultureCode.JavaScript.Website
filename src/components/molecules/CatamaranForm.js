@@ -1,5 +1,6 @@
 import React                   from 'react';
 import Input                   from '../atoms/Input';
+import Select                  from '../atoms/Select';
 import Textarea                from '../atoms/Textarea';
 
 function encode(data) {
@@ -70,6 +71,14 @@ const CatamaranForm = class extends React.Component {
             return false;
         }
 
+        if (this.state.activeQuestion === 3 && this.state.formData.interest && this.state.formData.interest !== "") {
+            return false;
+        }
+
+        if ([4].indexOf(this.state.activeQuestion) != -1) {
+            return false;
+        }
+
         return true;
     }
 
@@ -105,15 +114,13 @@ const CatamaranForm = class extends React.Component {
         let buttonClass = 'a-button';
         buttonClass += this.props.lightTheme ? ' -light ' : '';
 
-        let selectClass = 'a-dropdown';
-        selectClass += this.props.lightTheme ? ' -light ' : '';
-
         let nextButtonClass = 'a-button';
         formClass += this.props.isActive ? ' -active' : '';
 
         if (this.state.activeQuestion === this.state.totalQuestions) {
             buttonClass += ' -active'
         }
+        console.log(this.state.formData);
 
         if (this._validateFormData()) {
             nextButtonClass += ' -disabled'
@@ -142,24 +149,12 @@ const CatamaranForm = class extends React.Component {
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
                             value              = { this.state.formData.email } />
-                        <fieldset className = { this.state.activeQuestion === 3 ? '-active': '' }>
-                            <label
-                                className = "a-label -static"
-                                htmlFor   = "interest">
-                                What are you interested in talking to us about?
-                            </label>
-                            <div className = { selectClass }>
-                                <select id = "interest">
-                                    <option value="existing">I have a startup I’d like to talk to you about</option>
-                                    <option value="story">I have an entrepreneurship story to share</option>
-                                    <option value="event">I have an event for your community calendar</option>
-                                    <option value="partner">I’m interested in a partnership</option>
-                                    <option value="job">I’m interested in a job or internship with Catamaran</option>
-                                    <option value="training">I’m interested in training</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                        </fieldset>
+                        <Select
+                            className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                            name               = "interest"
+                            inputValueCallback = { this._setInputValue }
+                            lightTheme         = { this.props.lightTheme }
+                            value              = { this.state.formData.interest } />
                         <Textarea
                             className          = { this.state.activeQuestion === 4 ? '-active': '' }
                             name               = "message"
