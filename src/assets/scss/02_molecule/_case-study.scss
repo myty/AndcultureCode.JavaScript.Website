@@ -44,7 +44,7 @@
     &.-secondary {
 
         .m-case-study__texture {
-            right: 0;
+            right: -20px;
             top: 110px;
             transform: none;
             left: auto;
@@ -147,7 +147,6 @@
         position: absolute;
         left: 0;
         top: 110px;
-        z-index: 0;
 
         @include breakpoints("tablet") {
             top: 0;
