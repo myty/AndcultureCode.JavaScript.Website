@@ -18,7 +18,9 @@ const Footer = class extends React.Component {
         <div className = "o-rhythm__container">
           <div className = "o-rhythm__row">
             <div className = "m-footer__left o-rhythm__col -span-six">
-              <img src = { logo } alt = "andculture" />
+              <a href="/">
+                <img src = { logo } alt = "andculture" />
+              </a>
             </div>
             <div className = "m-footer__right o-rhythm__col -span-six">
               <div className = "m-footer__contact">
