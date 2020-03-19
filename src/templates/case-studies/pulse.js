@@ -97,7 +97,7 @@ const Pulse = class extends React.Component {
                                     <p>What was once a loose concept from PinnacleHealth to give nurse managers a powerful scheduling tool was turning into a beautifully designed healthcare management experience.</p>
                                     <p>Undoubtedly, healthcare’s regulations and incredible pace made this a unique challenge. But that only made us want to take even more care to ensure each detail was covered. We wanted to deliver a great experience, not just a scheduling tool. Well-designed experiences get used, day in and day out, even when things get hectic. And what hospital isn’t hectic?</p>
                                 </div>
-                                <div className = "content__image">
+                                <div className = "content__image -white-sketches">
                                     <img src = { whiteSketches } />
                                 </div>
                             </div>

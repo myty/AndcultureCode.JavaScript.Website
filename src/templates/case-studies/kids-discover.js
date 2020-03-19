@@ -124,7 +124,7 @@ const KidsDiscover = class extends React.Component {
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
+                    <div className = "m-case-study-page-content__copy-section -kd_data">
                         <h6 className = "content__header -mobile-only">Synthesis</h6>
                         <header className = "">turning data into a plan</header>
                         <div className = "o-rhythm__row">
@@ -228,7 +228,7 @@ const KidsDiscover = class extends React.Component {
                                 </div>
                             </div>
                             <div className = "o-rhythm__col -kd-color-block__last-image">
-                                <div className = "kd-image">
+                                <div className = "kd-image -site-home-page">
                                     <img src = { siteHomePage } />
                                 </div>
                             </div>

@@ -112,7 +112,7 @@
                     right: -274px;
                 }
 
-                @include breakpoints("laptop") {
+                @include breakpoints("desktop") {
                     top: -180px;
                     right: 40px;
                 }
@@ -238,6 +238,7 @@
                 @include breakpoints("laptop") {
                     display: block;
                     top: 10px;
+                    right: -104px;
                 }
             }
 
@@ -249,7 +250,7 @@
                 @include breakpoints("laptop") {
                     display: block;
                     top: 280px;
-                    right: -40px;
+                    right: -120px;
                     left: auto;
                 }
             }
@@ -331,7 +332,6 @@
 
                     @include breakpoints("sm-tablet") {
                         @include span-col(10);
-                        // @include push-col(0);
                     }
 
                     header {
@@ -346,6 +346,14 @@
                                 @include span-col(8);
                                 @include push-col(4);
                             }
+
+                            @include breakpoints("laptop") {
+                                top: -44px;
+                            }
+
+                            @include breakpoints("desktop") {
+                                top: -26px;
+                            }
                         }
                     }
                 }
@@ -353,21 +361,37 @@
                 &__last {
                     @include span-col(12);
 
-                    @include breakpoints("laptop") {
+                    @include breakpoints("sm-desktop") {
+                        @include span-col(6);
+                        @include push-col(0);
+                    }
+
+                    @include breakpoints("desktop") {
                         @include span-col(5);
                         @include push-col(1);
                     }
 
                     header {
                         @include breakpoints("tablet") {
+                            @include span-col(12);
                             @include push-col(0);
                         }
                     }
 
                     &-image {
-                        @include breakpoints("laptop") {
-                            @include span-col(5);
-                            @include push-col(1);
+                        @include breakpoints("sm-desktop") {
+                            @include span-col(6);
+                            @include push-col(0);
+                        }
+
+                        @include breakpoints("desktop") {
+                            @include span-col(6);
+                        }
+                    }
+
+                    .-site-home-page {
+                        @include breakpoints("desktop") {
+                            right: -74px;
                         }
                     }
                 }
@@ -386,7 +410,7 @@
                 padding: 120px 0;
             }
 
-            @include breakpoints("laptop") {
+            @include breakpoints("lg-laptop") {
                 padding: 252px 0;
             }
 
@@ -426,11 +450,6 @@
             @include push-col(0);
         }
 
-
-        // @include breakpoints("tablet") {
-        //     padding: 252px 0;
-        // }
-
         &.-body-intro {
             @include breakpoints("desktop") {
                 @include push-col(1);
@@ -440,7 +459,7 @@
                 @include breakpoints("tablet") {
                     padding-bottom: 30px;
                 }
-                @include breakpoints("laptop") {
+                @include breakpoints("sm-desktop") {
                     padding-bottom: 120px;
                 }
             }
@@ -468,7 +487,7 @@
             .content__easter-egg {
                 margin-top: 32px;
 
-                @include breakpoints("laptop") {
+                @include breakpoints("desktop") {
                     margin-top: 0;
                     @include span-col(3);
                     @include push-col(1);
@@ -482,7 +501,7 @@
                     &-reverse {
                         flex-direction: column-reverse;
 
-                        @include breakpoints("laptop") {
+                        @include breakpoints("desktop") {
                             flex-direction: initial;
                         }
                     }
@@ -528,9 +547,9 @@
             }
 
             .content__copy {
-                padding: 80px 0;
+                padding: 80px 0 120px;
 
-                @include breakpoints("laptop") {
+                @include breakpoints("xl-desktop") {
                     padding: 252px 0 150px;
                 }
             }
@@ -541,11 +560,17 @@
         }
 
         &.-kd {
+            &_data {
+                @include breakpoints("desktop") {
+                    padding-bottom: 64px;
+                }
+            }
+
             &_discover-map {
                 .-image {
                     @include span-col(12);
 
-                    @include breakpoints("laptop") {
+                    @include breakpoints("desktop") {
                         @include span-col(4);
                     }
                 }
@@ -553,13 +578,17 @@
                 .-content {
                     @include span-col(12);
 
-                    @include breakpoints("laptop") {
+                    @include breakpoints("desktop") {
                         @include span-col(7);
                         @include push-col(1);
                     }
                 }
 
             }
+        }
+
+        &.-hackerone-gear-cred {
+            padding-bottom: 30px;
         }
 
         header {
@@ -576,6 +605,7 @@
             }
 
             @include breakpoints("desktop") {
+                @include span-col(8);
                 @include push-col(3);
             }
 
@@ -691,6 +721,8 @@
                 @include breakpoints("desktop") {
                     @include span-col(8);
                     @include push-col(3);
+
+                    top: -28px;
                 }
 
                 &.-left {
@@ -716,6 +748,14 @@
         .kd-image {
             @include breakpoints("laptop") {
                 text-align: center;
+            }
+        }
+
+        .-white-sketches {
+            img {
+                @include breakpoints("laptop") {
+                    width: 325px;
+                }
             }
         }
 
@@ -863,6 +903,10 @@
 
         &.-gradient {
             background: linear-gradient(white, #E0ECEF);
+
+            @include breakpoints("desktop") {
+                margin: 72px 0 32px;
+            }
         }
 
         &.-margin {
@@ -885,14 +929,35 @@
                     @include breakpoints("laptop") {
                         display: block;
                         position: absolute;
+                        left: -464px;
+                        top: -100px;
+                    }
+
+                    @include breakpoints("xl-desktop") {
                         left: -432px;
                         top: -156px;
+                    }
+
+                    img {
+                        @include breakpoints("laptop") {
+                            width: 75%;
+                        }
+
+                        @include breakpoints("xl-desktop") {
+                            width: 100%;
+                        }
                     }
                 }
 
                 &.-student-homework {
                     @include breakpoints("laptop") {
+                        right: -244px;
+                        top: -44px;
+                    }
+
+                    @include breakpoints("xl-desktop") {
                         right: -720px;
+                        top: initial;
                     }
                 }
 
@@ -902,9 +967,23 @@
                     text-align: center;
 
                     @include breakpoints("laptop") {
-                        left: 212px;
                         position: absolute;
                         top: -36px;
+                        left: -162px;
+                    }
+
+                    @include breakpoints("xl-desktop") {
+                        left: -266px;
+                    }
+
+                    img {
+                        @include breakpoints("laptop") {
+                            width: 50%;
+                        }
+
+                        @include breakpoints("xl-desktop") {
+                            width: 100%;
+                        }
                     }
                 }
 
