@@ -3,8 +3,15 @@
     .o-hero {
         padding-top: 60px;
 
+        &.-case-study {
+
+            @include breakpoints("desktop") {
+                padding-top: 80px;
+            }
+        }
+
         @include breakpoints("desktop") {
-            padding-top: 80px;
+            padding-top: 180px;
         }
 
         &__titles {
