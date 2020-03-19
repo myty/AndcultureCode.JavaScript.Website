@@ -838,20 +838,29 @@
     }
 
     &__next {
+        padding: 0;
         display: block;
 
         &.-kd {
 
-            .a-button {
+            a.a-button {
                 color: #2AB2C1;
                 border-color: #2AB2C1;
+            }
+
+            div.-content {
+                background-color: #2AB2C1;
+
+                @include breakpoints("tablet") {
+                    background-color: rgba(245,245,245,1);
+                }
             }
 
             @include breakpoints("tablet") {
 
                 &:hover {
 
-                    .-content {
+                    div.-content {
                         background-color: #2AB2C1;
                     }
                 }
@@ -860,16 +869,24 @@
 
         &.-pulse {
 
-            .a-button {
+            a.a-button {
                 color: #76c1b9;
                 border-color: #76c1b9;
+            }
+
+            div.-content {
+                background-color: #76c1b9;
+
+                @include breakpoints("tablet") {
+                    background-color: rgba(245,245,245,1);
+                }
             }
 
             @include breakpoints("tablet") {
 
                 &:hover {
 
-                    .-content {
+                    div.-content {
                         background-color: #76c1b9;
                     }
                 }
@@ -878,16 +895,24 @@
 
         &.-cca {
 
-            .a-button {
+            a.a-button {
                 color: #3D5CC2;
                 border-color: #3D5CC2;
+            }
+
+            div.-content {
+                background-color: #3D5CC2;
+
+                @include breakpoints("tablet") {
+                    background-color: rgba(245,245,245,1);
+                }
             }
 
             @include breakpoints("tablet") {
 
                 &:hover {
 
-                    .-content {
+                    div.-content {
                         background-color: #3D5CC2;
                     }
                 }
@@ -896,16 +921,24 @@
 
         &.-h1 {
 
-            .a-button {
+            a.a-button {
                 color: #F953A9;
                 border-color: #F953A9;
+            }
+
+            div.-content {
+                background-color: #F953A9;
+
+                @include breakpoints("tablet") {
+                    background-color: rgba(245,245,245,1);
+                }
             }
 
             @include breakpoints("tablet") {
 
                 &:hover {
 
-                    .-content {
+                    div.-content {
                         background-color: #F953A9;
                     }
                 }
@@ -968,10 +1001,9 @@
             }
         }
 
-        .-content {
-            width: 94%;
+        div.-content {
             margin: 0 auto;
-            padding: 60px 0;
+            padding: 60px 32px;
             background-color: rgba(245,245,245,1);
             transition: background-color .6s linear;
             -moz-transition: background-color .6s linear;
@@ -981,6 +1013,28 @@
             @include breakpoints("tablet") {
                 padding: 180px 80px;
                 width: auto;
+            }
+
+            @media (max-width: 767px) {
+
+                h5,
+                p,
+                a.a-button {
+                    color: get-color("primary", "white");
+                    border-color: get-color("primary", "white");
+                }
+            }
+
+            h5,
+            p,
+            .a-button {
+                color: get-color("primary", "white");
+                border-color: get-color("primary", "white");
+
+                @include breakpoints("tablet") {
+                    color: get-color("primary", "after-hours");
+                    border-color: get-color("primary", "after-hours");
+                }
             }
         }
 

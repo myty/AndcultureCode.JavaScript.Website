@@ -54,39 +54,39 @@ const HeroAnimation = () => {
         tl.to(groupOneImgTwo, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 8)
+        }, 6)
         tl.to(groupOneImgThree, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
+        }, 6)
+        tl.to(groupTwoImgOne, 1.5, {
+            opacity:    1,
+            ease:       Power1.easeIn
+        }, 8)
+        tl.to(groupTwoImgTwo, 1.5, {
+            opacity:    1,
+            ease:       Power1.easeIn
         }, 10)
         tl.to(groupTwoImgOne, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
+            opacity:    0,
+            ease:       Power1.easeOut
         }, 12)
         tl.to(groupTwoImgTwo, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 14)
-        tl.to(groupTwoImgOne, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 16)
-        tl.to(groupTwoImgTwo, 1.5, {
-            opacity:    0,
-            ease:       Power1.easeOut
-        }, 18)
+        }, 12)
         tl.to(groupThreeImgOne, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 20)
+        }, 14)
         tl.to(groupThreeImgTwo, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 22)
+        }, 16)
         tl.to(groupThreeImgThree, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 24)
+        }, 18)
     }, []);
 
     return (
