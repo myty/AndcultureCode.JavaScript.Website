@@ -14,6 +14,7 @@ const PullScroller = class extends React.Component {
 
   componentDidMount() {
     const slider = document.querySelector('.pull-scroll');
+    const pullIcon = document.querySelector('.pull-icon');
     let isDown = false;
     let startX;
     let scrollLeft;
@@ -39,19 +40,23 @@ const PullScroller = class extends React.Component {
       const walk = (x - startX) * 3; //scroll-fast
       slider.scrollLeft = scrollLeft - walk;
       console.log(walk);
+      pullIcon.classList.add('-paused');
     });
   }
 
   render() {
 
     return (
-      <div className = "pull-scroll">
-        <img src = { pullScrollImage6 } />
-        <img src = { pullScrollImage1 } />
-        <img src = { pullScrollImage2 } />
-        <img src = { pullScrollImage3 } />
-        <img src = { pullScrollImage4 } />
-        <img src = { pullScrollImage5 } />
+      <div>
+        <div className = "pull-scroll">
+          <img src = { pullScrollImage6 } />
+          <img src = { pullScrollImage1 } />
+          <img src = { pullScrollImage2 } />
+          <img src = { pullScrollImage3 } />
+          <img src = { pullScrollImage4 } />
+          <img src = { pullScrollImage5 } />
+        </div>
+        <div className = "pull-icon">Pull<span></span></div>
       </div>
     )
   }

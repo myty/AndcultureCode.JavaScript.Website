@@ -28,11 +28,33 @@
             }
         }
 
-        &:before {
-            content: 'Pull';
+        // &:after {
+        //     content: 'Pull';
+        //     display: block;
+        //     position: absolute;
+        //     right: 30px;
+        //     top: 50%;
+        //     transform: translateY(-50%);
+        //     background: get-color("secondary", "pink");
+        //     border-radius: 50%;
+        //     width: 90px;
+        //     height: 90px;
+        //     color: get-color("primary", "white");
+        //     text-transform: uppercase;
+        //     font-weight: 600;
+        //     text-align: center;
+        //     line-height: 90px;
+        //     z-index: 9;
+        //     animation-name: pull-indicator;
+        //     animation-delay: 2s;
+        //     animation-duration: 2s;
+        //     animation-iteration-count: infinite;
+        // }
+
+        .pull-icon {
             display: block;
             position: absolute;
-            left: 30px;
+            right: 30px;
             top: 50%;
             transform: translateY(-50%);
             background: get-color("secondary", "pink");
@@ -45,7 +67,40 @@
             text-align: center;
             line-height: 90px;
             z-index: 9;
+            animation-name: pull-indicator;
+            animation-delay: 2s;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+            &.-paused{
+                // -webkit-animation-play-state:paused;
+                // -moz-animation-play-state:paused;
+                // -o-animation-play-state:paused;
+                // animation-play-state:paused;
+                -webkit-animation: none;
+                -moz-animation: none;
+                -o-animation: none;
+                animation: none;
+            }
         }
+
+        @keyframes pull-indicator {
+            0% {
+              opacity: 0;
+            }
+            25% {
+              opacity: 1;
+            }
+            50% {
+              right: 30px;
+              opacity: 1;
+            }
+            100% {
+              right: 150px;
+              opacity: 0;
+            }
+        }
+
 
         img {
             display: inline-block;
