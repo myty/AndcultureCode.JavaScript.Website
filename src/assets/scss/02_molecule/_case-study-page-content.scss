@@ -1256,6 +1256,31 @@
     }
 }
 
+.ipad-img {
+    @include breakpoints("tablet") {
+        position: relative;
+        right: -80px;
+    }
+}
+
+.-kd {
+    &-desktop-only {
+        display: none;
+
+        @include breakpoints("desktop") {
+            display: block;
+        }
+    }
+
+    &-mobile-only {
+        display: block;
+
+        @include breakpoints("desktop") {
+            display: none;
+        }
+    }
+}
+
 .pull-scroll::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
