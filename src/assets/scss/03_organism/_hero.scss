@@ -194,7 +194,7 @@
     &__titles {
         max-width: 690px;
         width: 100%;
-        top: calc(100vh - 300px);
+        top: calc(100vh - 340px);
         padding-top: 100px;
 
         @media (min-height: 1024px) {
@@ -204,6 +204,10 @@
 
         @include breakpoints("tablet") {
             position: absolute;
+        }
+
+        p {
+            @include line-height(25px);
         }
 
         .-fade {
