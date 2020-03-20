@@ -11,7 +11,7 @@
         }
 
         @include breakpoints("desktop") {
-            padding-top: 180px;
+            padding-top: 0;
         }
 
         &__titles {
