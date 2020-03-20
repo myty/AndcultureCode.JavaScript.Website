@@ -21,6 +21,10 @@
         top: 0;
         bottom: 0;
         background: get-color("primary", "white");
+
+        @include breakpoints("tablet") {
+            display: none;
+        }
     }
 
     &__logo {
