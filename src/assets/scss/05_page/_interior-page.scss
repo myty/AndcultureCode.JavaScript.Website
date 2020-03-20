@@ -25,6 +25,7 @@
 
         &__top {
             margin-bottom: 29px;
+            height: auto;
 
             @include breakpoints("tablet") {
                 margin-bottom: 0;
