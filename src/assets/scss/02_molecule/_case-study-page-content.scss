@@ -261,10 +261,14 @@
             .-blue-banner {
                 position: absolute;
                 bottom: 0;
-                height: 315px;
+                height: 115px;
                 width: 100%;
                 background: rgba(37, 179, 194, .75);
                 z-index: -1;
+
+                @include breakpoints("desktop") {
+                    height: 315px;
+                }
             }
 
             .-collage-maps {
