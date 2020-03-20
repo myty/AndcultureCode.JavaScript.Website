@@ -244,11 +244,6 @@
             top: 0;
             right: 0;
             width: 800px;
-            display: none;
-
-            @include breakpoints("lg-desktop") {
-                display: block;
-            }
         }
 
         &.-blue-blob-two {
