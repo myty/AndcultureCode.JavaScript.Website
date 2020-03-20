@@ -137,9 +137,18 @@ const KidsDiscover = class extends React.Component {
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__mosaic -kd">
-                    <img src = { collageMaps } className = "-collage-maps" />
-                    <img src = { whiteBoardSketches } className = "-white-board-sketches" />
-                    <div className = "-blue-banner"></div>
+                    <div className = "mobile-group">
+                        <div className = "grouped">
+                            <img src = { collageMaps } className = "-collage-maps" />
+                            <div className = "-blue-banner"></div>
+                        </div>
+                        <img src = { whiteBoardSketches } className = "-white-board-sketches" />
+                    </div>
+                    <div className = "desktop-group">
+                        <img src = { collageMaps } className = "-collage-maps" />
+                        <img src = { whiteBoardSketches } className = "-white-board-sketches" />
+                        <div className = "-blue-banner"></div>
+                    </div>
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">

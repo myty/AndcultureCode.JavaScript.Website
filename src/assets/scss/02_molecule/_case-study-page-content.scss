@@ -230,7 +230,33 @@
         }
 
         &.-kd {
-            margin-bottom: 160px;
+            @include breakpoints("desktop") {
+                margin-top: -72px;
+            }
+
+            .mobile-group {
+                position: relative;
+                text-align: center;
+
+                .grouped {
+                    position: relative;
+                    margin-bottom: 64px;
+                }
+
+                @include breakpoints("desktop") {
+                    display: none;
+                }
+            }
+
+            .desktop-group {
+                display: none;
+                position: relative;
+                margin-bottom: 108px;
+
+                @include breakpoints("desktop") {
+                    display: block;
+                }
+            }
 
             .-blue-banner {
                 position: absolute;
@@ -243,15 +269,24 @@
 
             .-collage-maps {
                 position: relative;
+                bottom: 0;
                 z-index: 2;
-                left: 220px;
+
+                @include breakpoints("desktop") {
+                    position: absolute;
+                    left: 120px;
+                }
             }
 
             .-white-board-sketches {
                 position: relative;
+                bottom: 0;
                 z-index: -1;
-                right: -160px;
-                bottom: -116px;
+
+                @include breakpoints("desktop") {
+                    right: -50%;
+                    bottom: -110px;
+                }
             }
         }
 
