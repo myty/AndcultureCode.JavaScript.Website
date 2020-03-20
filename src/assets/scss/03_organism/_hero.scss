@@ -242,6 +242,11 @@
         position: absolute;
         mix-blend-mode: multiply;
         opacity: 0;
+        width: 50%;
+
+        @include breakpoints("tablet") {
+            width: auto;
+        }
 
         &.-drops {
             left: 50%;
@@ -251,12 +256,6 @@
         &.-pink-blob {
             top: 0;
             right: 0;
-            width: 800px;
-            display: none;
-
-            @include breakpoints("tablet") {
-                display: block;
-            }
         }
 
         &.-blue-blob-two {
@@ -264,7 +263,7 @@
             top: 380px;
             display: none;
 
-            @include breakpoints("tablet") {
+            @include breakpoints("lg-desktop") {
                 display: block;
             }
         }
@@ -273,7 +272,7 @@
             right: -160px;
             top: 10px;
 
-            @include breakpoints("tablet") {
+            @include breakpoints("lg-desktop") {
                 right: 20%;
             }
         }
@@ -288,7 +287,7 @@
             right: 0;
             display: none;
 
-            @include breakpoints("tablet") {
+            @include breakpoints("lg-desktop") {
                 display: block;
             }
         }
@@ -301,7 +300,7 @@
             right: 160px;
             display: none;
 
-            @include breakpoints("tablet") {
+            @include breakpoints("lg-desktop") {
                 display: block;
             }
         }
@@ -311,7 +310,7 @@
             top: 160px;
             display: none;
 
-            @include breakpoints("tablet") {
+            @include breakpoints("lg-desktop") {
                 display: block;
             }
         }
