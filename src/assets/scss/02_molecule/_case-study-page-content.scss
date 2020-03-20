@@ -229,6 +229,32 @@
             }
         }
 
+        &.-kd {
+            margin-bottom: 160px;
+
+            .-blue-banner {
+                position: absolute;
+                bottom: 0;
+                height: 315px;
+                width: 100%;
+                background: rgba(37, 179, 194, .75);
+                z-index: -1;
+            }
+
+            .-collage-maps {
+                position: relative;
+                z-index: 2;
+                left: 220px;
+            }
+
+            .-white-board-sketches {
+                position: relative;
+                z-index: -1;
+                right: -160px;
+                bottom: -116px;
+            }
+        }
+
         .-float {
             position: absolute;
             right: 20px;

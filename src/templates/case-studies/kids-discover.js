@@ -5,7 +5,6 @@ import phone from '../../../static/img/case-studies/kids-discover/phone.png';
 import teacherStudents from '../../../static/img/case-studies/kids-discover/teacher-students.png';
 import applePencil from '../../../static/img/case-studies/kids-discover/apple-pencil.png';
 import homePageFeed from '../../../static/img/case-studies/kids-discover/homepage-feed.png';
-import collage from '../../../static/img/case-studies/kids-discover/collage.png';
 import dotGrid from '../../../static/img/case-studies/kids-discover/dot-grid.png';
 import studentHomework from '../../../static/img/case-studies/kids-discover/student-homework.png';
 import feedLockup from '../../../static/img/case-studies/kids-discover/feed-lockup.png';
@@ -15,6 +14,8 @@ import editorScreens from '../../../static/img/case-studies/kids-discover/editor
 import siteHomePage from '../../../static/img/case-studies/kids-discover/site-home-page.png';
 import triangleDoodle from '../../../static/img/case-studies/kids-discover/triangle_doodle.png';
 import nextImg from '../../../static/img/case-studies/hackerone/billboard.png';
+import collageMaps from '../../../static/img/case-studies/kids-discover/collage-mags.png';
+import whiteBoardSketches from '../../../static/img/case-studies/kids-discover/sketches.png';
 
 
 const KidsDiscover = class extends React.Component {
@@ -135,10 +136,10 @@ const KidsDiscover = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__image-container">
-                    <div className = "m-case-study-page-content__image">
-                        <img src = { collage } />
-                    </div>
+                <div className = "m-case-study-page-content__mosaic -kd">
+                    <img src = { collageMaps } className = "-collage-maps" />
+                    <img src = { whiteBoardSketches } className = "-white-board-sketches" />
+                    <div className = "-blue-banner"></div>
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
