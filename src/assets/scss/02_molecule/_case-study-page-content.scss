@@ -5,6 +5,7 @@
     }
 
     &__pull-scroll {
+        @include push-col(1);
         position: relative;
 
         .pull-scroll {
