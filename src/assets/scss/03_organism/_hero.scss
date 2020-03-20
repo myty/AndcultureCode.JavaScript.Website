@@ -194,16 +194,20 @@
     &__titles {
         max-width: 690px;
         width: 100%;
-        top: calc(100vh - 250px);
+        top: calc(100vh - 340px);
         padding-top: 100px;
+
+        @media (min-height: 1024px) {
+            top: calc(100vh - 395px);
+            padding-top: 0;
+        }
 
         @include breakpoints("tablet") {
             position: absolute;
         }
 
-        @media (min-height: 1024px) {
-            top: calc(100vh - 345px);
-            padding-top: 0;
+        p {
+            @include line-height(25px);
         }
 
         .-fade {
@@ -286,7 +290,7 @@
         }
 
         &.-pink-elephant {
-            right: 60px;
+            right: 160px;
             display: none;
 
             @include breakpoints("tablet") {
