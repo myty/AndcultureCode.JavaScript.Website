@@ -84,8 +84,7 @@ const Input = class extends React.Component {
                     id          = { this.props.name } />
                 { // if
                     this.state.error &&
-                    <span className = "a-label__error">Please Enter Your { this.props.name }</span>
-
+                    <span className = "a-label__error">please enter your { this.props.name }</span>
                 }
             </fieldset>
         )

@@ -50,7 +50,7 @@ const Select = class extends React.Component {
     }
 
     render() {
-        let cssClassName = 'a-label';
+        let cssClassName = 'a-label -dropdown';
 
         if (this.state.fieldActive) {
             cssClassName += ' -field-active';

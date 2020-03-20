@@ -13,17 +13,19 @@
         position: relative;
     }
 
+    &.-dropdown {
+        top: -20px;
+    }
 
     &.-field-active {
         top: -26px;
     }
 
     &__error {
-        color: red;
+        color: #FB5C54;
         position: absolute;
-        font-style: italic;
         width: 100%;
         left: 0;
-        bottom: -100%;
+        bottom: -26px;
     }
 }
