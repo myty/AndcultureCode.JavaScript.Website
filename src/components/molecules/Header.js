@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from '../../../static/img/ac_Logo.svg';
-import wordmark from '../../../static/img/ac-wordmark.svg';
 
 const Header = class extends React.Component {
   constructor(props) {
@@ -18,7 +16,7 @@ const Header = class extends React.Component {
   }
 
   _isMobile() {
-    if (this.state.windowWidth < 1024) {
+    if (this.state.windowWidth < 769) {
       return true;
     }
     return false;
