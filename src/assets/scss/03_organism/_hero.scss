@@ -42,8 +42,12 @@
 
             @include breakpoints("desktop") {
                 @include span-col(7);
-                @include push-col(0);
+                @include push-col(1);
                 @include font-size(24px);
+            }
+
+            @include breakpoints("lg-desktop") {
+                @include push-col(0);
             }
         }
 
@@ -107,8 +111,12 @@
             }
 
             @include breakpoints("desktop") {
-                @include push-col(0);
+                @include push-col(1);
                 padding-top: 220px;
+            }
+
+            @include breakpoints("lg-desktop") {
+                @include push-col(0);
             }
 
             h1 {
