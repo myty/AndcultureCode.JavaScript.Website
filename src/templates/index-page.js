@@ -20,7 +20,7 @@ export const IndexPageTemplate = ({
   scrollTop,
 }) => (
     <div className="p-home">
-      <HomePageAnimation />
+      {/* <HomePageAnimation /> */}
       <Hero
         scrollTop      = { scrollTop }
         title          = { title }
