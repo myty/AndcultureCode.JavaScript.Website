@@ -108,7 +108,7 @@
 
             @include breakpoints("desktop") {
                 @include push-col(0);
-                padding-top: 164px;
+                padding-top: 220px;
             }
 
             h1 {
@@ -141,14 +141,15 @@
 
             @include breakpoints("desktop") {
                 @include push-col(1);
+                margin-left: 0;
             }
 
             img {
                 display: block;
                 max-width: 100%;
 
-                @include breakpoints("tablet") {
-                    // max-width: 99999px;
+                @include breakpoints("desktop") {
+                    max-width: 125%;
                 }
             }
         }
@@ -168,6 +169,10 @@
 
             @include breakpoints("tablet") {
                 padding: 120px 0;
+            }
+
+            @include breakpoints("desktop") {
+                margin-top: -100px;
             }
         }
     }
