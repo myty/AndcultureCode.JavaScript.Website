@@ -32,6 +32,10 @@
 
         &.-light {
             background: get-color("primary", "white");
+
+            header {
+                color: get-color("primary", "after-hours");
+            }
         }
 
         h6 {
