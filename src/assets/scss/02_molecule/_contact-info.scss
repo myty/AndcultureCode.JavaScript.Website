@@ -11,6 +11,7 @@
 
         @include breakpoints("tablet") {
             @include span-col(4);
+            @include push-col(1);
             margin-bottom: auto;
         }
 
@@ -34,13 +35,15 @@
         vertical-align: middle;
 
         @include breakpoints("tablet") {
-            @include span-col(8);
+            @include span-col(7);
         }
 
         a {
+            @include font-size(16px);
             display: inline-block;
             width: 20px;
             height: 20px;
+            margin-top: 6px;
             margin-right: 20px;
 
             svg {
