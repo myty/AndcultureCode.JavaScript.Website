@@ -203,7 +203,7 @@
         max-width: 690px;
         width: 100%;
         top: calc(100vh - 350px);
-        padding-top: 100px;
+        padding-top: 200px;
 
         @media (min-height: 1024px) {
             top: calc(100vh - 395px);
@@ -244,9 +244,9 @@
         opacity: 0;
         width: 50%;
 
-        @include breakpoints("tablet") {
-            width: auto;
-        }
+        // @include breakpoints("tablet") {
+        //     width: auto;
+        // }
 
         &.-drops {
             left: 50%;
@@ -325,6 +325,7 @@
                 background: url('../../../static/img/asterisk.png') no-repeat center center / contain;
                 height: 13px;
                 width: 24px;
+                position: absolute;
                 display: inline-block;
                 vertical-align: top;
                 margin-left: 1px;
@@ -371,13 +372,13 @@
             &:before {
                 content: '';
                 background: url('../../../static/img/asterisk.png') no-repeat center center / contain;
-                height: 12px;
+                height: 8px;
                 width: 12px;
                 display: inline-block;
                 vertical-align: top;
-                margin-right: 10px;
+                margin-right: 7px;
                 position: absolute;
-                left: -18px;
+                left: -14px;
             }
         }
     }

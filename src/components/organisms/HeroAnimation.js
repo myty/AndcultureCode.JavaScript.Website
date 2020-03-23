@@ -1,25 +1,28 @@
 import React, { useEffect } from 'react';
 import { TimelineMax, Power1 } from 'gsap';
 
-import doodles from './../../../static/img/homepage-hero/doodles.png';
-import pinkBlob from './../../../static/img/homepage-hero/pink_blob.png';
-import blueBlob from './../../../static/img/homepage-hero/blue_blob.png';
+import rainbow from './../../../static/img/homepage-hero-two/rainbow_assterisk_drops.png';
+import pinkBlob from './../../../static/img/homepage-hero-two/pink_blob.png';
+import blueBlobTwo from './../../../static/img/homepage-hero-two/blue_blob_two.png';
 
-import matrix from './../../../static/img/homepage-hero/matrix.png';
-import greenPaint from './../../../static/img/homepage-hero/grey_brush.png';
+import matrix from './../../../static/img/homepage-hero-two/matrix.png';
+import greenPaint from './../../../static/img/homepage-hero-two/paint_swash.png';
+import eye from './../../../static/img/homepage-hero-two/eye.png';
 
-import pinkElephant from './../../../static/img/homepage-hero/pink_elephant.png';
-import orangSicle from './../../../static/img/homepage-hero/orangsicle.png';
+import pinkElephant from './../../../static/img/homepage-hero-two/pink_elephant.png';
+import orangSicle from './../../../static/img/homepage-hero-two/orangsicle.png';
+import blueBlob from './../../../static/img/homepage-hero-two/blue_blob.png';
 
 const HeroAnimation = () => {
     useEffect(() => {
         const groupOne = document.querySelector('.group-one');
         const groupOneImgOne = groupOne.querySelector('.-pink-blob');
         const groupOneImgTwo = groupOne.querySelector('.-blue-blob-two');
-        const groupOneImgThree = groupOne.querySelector('.-doodles');
+        const groupOneImgThree = groupOne.querySelector('.-rainbow');
         const groupTwo = document.querySelector('.group-two');
         const groupTwoImgOne = groupTwo.querySelector('.-green-paint');
         const groupTwoImgTwo = groupTwo.querySelector('.-matrix');
+        const groupTwoImgThree = groupTwo.querySelector('.-eye');
         const groupThree = document.querySelector('.group-three');
         const groupThreeImgOne = groupThree.querySelector('.-orangsicle');
         const groupThreeImgTwo = groupThree.querySelector('.-pink-elephant');
@@ -32,6 +35,7 @@ const HeroAnimation = () => {
         tl.set(groupOneImgThree, {opacity: 0})
         tl.set(groupTwoImgOne, {opacity: 0})
         tl.set(groupTwoImgTwo, {opacity: 0})
+        tl.set(groupTwoImgThree, {opacity: 0})
         tl.set(groupThreeImgOne, {opacity: 0})
         tl.set(groupThreeImgTwo, {opacity: 0})
         tl.set(groupThreeImgThree, {opacity: 0})
@@ -67,6 +71,10 @@ const HeroAnimation = () => {
             opacity:    0,
             ease:       Power1.easeOut
         }, 11)
+        tl.to(groupTwoImgThree, 1.5, {
+            opacity:    1,
+            ease:       Power1.easeIn
+        }, 11)
         tl.to(groupTwoImgOne, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
@@ -93,11 +101,12 @@ const HeroAnimation = () => {
         <div>
             <div className = "o-hero__background-group group-one">
                 <img className = "o-hero__background -pink-blob" src = { pinkBlob } />
-                <img className = "o-hero__background -blue-blob-two" src = { blueBlob } />
-                <img className = "o-hero__background -doodles" src = { doodles } />
+                <img className = "o-hero__background -blue-blob-two" src = { blueBlobTwo } />
+                <img className = "o-hero__background -rainbow" src = { rainbow } />
             </div>
             <div className = "o-hero__background-group group-two">
                 <img className = "o-hero__background -green-paint" src = { greenPaint } />
+                <img className = "o-hero__background -eye" src = { eye } />
                 <img className = "o-hero__background -matrix" src = { matrix } />
             </div>
             <div className = "o-hero__background-group group-three">
