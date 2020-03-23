@@ -11,7 +11,7 @@ import eye from './../../../static/img/homepage-hero-two/eye@2x.png';
 
 import pinkElephant from './../../../static/img/homepage-hero-two/pink_elephant@2x.png';
 import orangSicle from './../../../static/img/homepage-hero-two/orangsicle@2x.png';
-import blueBlob from './../../../static/img/homepage-hero-two/blue_blob@2x.png';
+import blueBlob from './../../../static/img/homepage-hero-two/blue_blob2.png';
 
 const HeroAnimation = () => {
     useEffect(() => {
