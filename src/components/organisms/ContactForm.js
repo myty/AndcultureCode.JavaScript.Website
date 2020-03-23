@@ -25,10 +25,6 @@ const ContactForm = class extends React.Component {
         this._isSubmitted       = this._isSubmitted.bind(this);
     }
 
-    componentDidMount() {
-        document.addEventListener("keypress", this._activateForm.bind(this));
-    }
-
     _onFormTypeChange(e) {
         this.setState({ activeForm: e.target.value });
     }
@@ -42,6 +38,9 @@ const ContactForm = class extends React.Component {
     }
 
     _activateForm(e) {
+        if (e.key !== 'Enter') {
+            return;
+        }
         e.preventDefault();
         if (this.state.activeForm) {
             this.setState({
@@ -127,6 +126,7 @@ const ContactForm = class extends React.Component {
                                 <fieldset className = "-space">
                                     <input
                                         onChange  = { this._onFormTypeChange }
+                                        onKeyPress = { this._activateForm.bind(this) }
                                         checked   = { this.state.activeForm === "project" }
                                         className = { radioInputClass }
                                         type      = "radio"
@@ -138,6 +138,7 @@ const ContactForm = class extends React.Component {
                                 <fieldset className = "-space">
                                     <input
                                         onChange  = { this._onFormTypeChange }
+                                        onKeyPress = { this._activateForm }
                                         checked   = { this.state.activeForm === "quick-info" }
                                         className = { radioInputClass }
                                         type      = "radio"
@@ -149,6 +150,7 @@ const ContactForm = class extends React.Component {
                                 <fieldset className = "-space">
                                     <input
                                         onChange  = { this._onFormTypeChange }
+                                        onKeyPress = { this._activateForm }
                                         checked   = { this.state.activeForm === "start-ups" }
                                         className = { radioInputClass }
                                         type      = "radio"
@@ -166,7 +168,7 @@ const ContactForm = class extends React.Component {
                                     <a
                                         disabled = { true }
                                         onClick = { this._activateForm }
-                                        className = { buttonClass }>
+                                        className = { buttonClass} >
                                         Next
                                     </a>
                                 </div>
