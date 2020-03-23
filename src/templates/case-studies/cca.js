@@ -1,27 +1,25 @@
 import React from 'react';
 import CustomSlider from '../../components/molecules/CustomSlider';
-import boardImg from '../../../static/img/case-studies/cca/kids_at_window_board.png';
-import ipadImg from '../../../static/img/case-studies/cca/ipadCCA.png';
 import timelineImg from '../../../static/img/case-studies/cca/timeline.png';
-import studentImg from '../../../static/img/case-studies/cca/student.png';
-import scienceImg from '../../../static/img/case-studies/cca/science.png';
+import studentImg from '../../../static/img/case-studies/cca/girl_laptop.png';
 import laptopImg from '../../../static/img/case-studies/cca/Macbook_CCA.png';
-import iphoneImg from '../../../static/img/case-studies/cca/3_Phone_X.png';
+import backgroundImg from '../../../static/img/case-studies/cca/background.jpg';
 import rainbow from '../../../static/img/case-studies/cca/rainbow_doodle.png';
 import traingle from '../../../static/img/case-studies/cca/doodle_triangle.png';
 import dots from '../../../static/img/case-studies/cca/yellow_dots.png';
 import block from '../../../static/img/case-studies/cca/doodle_block.png';
 import dotsTwo from '../../../static/img/case-studies/cca/yellow_dots.png';
 import dotsSmall from '../../../static/img/case-studies/cca/dotted_area.png';
-import sliderImage1 from '../../../static/img/case-studies/cca/CCA_gallery_1.png';
-import sliderImage2 from '../../../static/img/case-studies/cca/CCA_gallery_2.png';
-import sliderImage3 from '../../../static/img/case-studies/cca/CCA_gallery_3.png';
-import sliderImage4 from '../../../static/img/case-studies/cca/CCA_gallery_4.png';
-import sliderImage5 from '../../../static/img/case-studies/cca/CCA_gallery_5.png';
-import sliderImage6 from '../../../static/img/case-studies/cca/CCA_gallery_6.png';
-import sliderImage7 from '../../../static/img/case-studies/cca/CCA_gallery_7.png';
-import sliderImage8 from '../../../static/img/case-studies/cca/CCA_gallery_8.png';
+import sliderImage1 from '../../../static/img/case-studies/cca/gallery_CCA_mtg.jpg';
+import sliderImage2 from '../../../static/img/case-studies/cca/gallery_exercise.jpg';
+import sliderImage3 from '../../../static/img/case-studies/cca/gallery_homeschool.jpg';
+import sliderImage4 from '../../../static/img/case-studies/cca/gallery_look_feel_cards.jpg';
+import sliderImage5 from '../../../static/img/case-studies/cca/gallery_tele_teaching.jpg';
+import sliderImage6 from '../../../static/img/case-studies/cca/gallery_wireframe.jpg';
+import studyImg from '../../../static/img/case-studies/cca/studying.jpg';
+import ipadLargeImg from '../../../static/img/case-studies/cca/cca_ipad_large.png';
 import nextImg from '../../../static/img/case-studies/pulse/nurse_hallway.png';
+
 
 const CCA = class extends React.Component {
     constructor(props) {
@@ -36,8 +34,6 @@ const CCA = class extends React.Component {
             sliderImage4,
             sliderImage5,
             sliderImage6,
-            sliderImage7,
-            sliderImage8,
         ];
 
         const nextImageBlockStyle = {
@@ -47,7 +43,7 @@ const CCA = class extends React.Component {
         return (
             <div>
                 <div>
-                    <img src = { boardImg } />
+                    <img src = { studyImg } />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section -body-intro -cca">
@@ -58,7 +54,7 @@ const CCA = class extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <img className = "ipad-img" src = { ipadImg } />
+                    <img className = "ipad-img" src = { ipadLargeImg } />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
@@ -98,7 +94,6 @@ const CCA = class extends React.Component {
                     <div className = "-with-border">
                         <img src = { studentImg } />
                     </div>
-                    <img className = "-float -cca -science-img" src = { scienceImg } />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
@@ -145,7 +140,9 @@ const CCA = class extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <img src = { iphoneImg } className = "-front" />
+                </div>
+                <div>
+                    <img src = { backgroundImg } />
                 </div>
                 <div className = "m-case-study-page-content__next m-case-study -pulse">
                     <div className = "-background-image__container">
