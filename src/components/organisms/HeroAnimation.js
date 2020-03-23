@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { TimelineMax, Power1 } from 'gsap';
 
 import rainbow from './../../../static/img/homepage-hero-two/rainbow_assterisk_drops@2x.png';
-import pinkBlob from './../../../static/img/homepage-hero-two/pink_blob@2x.png';
+import pinkBlob from './../../../static/img/homepage-hero-two/pink_blob2.png';
 import blueBlobTwo from './../../../static/img/homepage-hero-two/blue_blob_two@2x.png';
 
 import matrix from './../../../static/img/homepage-hero-two/matrix@2x.png';
