@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { TimelineMax, Power1 } from 'gsap';
 
-import rainbow from './../../../static/img/homepage-hero-two/rainbow_assterisk_drops@2x.png';
+import rainbow from './../../../static/img/homepage-hero-two/rainbow_assterisk_drops2.png';
 import pinkBlob from './../../../static/img/homepage-hero-two/pink_blob2.png';
-import blueBlobTwo from './../../../static/img/homepage-hero-two/blue_blob_two@2x.png';
+import blueBlobTwo from './../../../static/img/homepage-hero-two/blue_blob_two2.png';
 
-import matrix from './../../../static/img/homepage-hero-two/matrix@2x.png';
-import greenPaint from './../../../static/img/homepage-hero-two/paint_swash@2x.png';
-import eye from './../../../static/img/homepage-hero-two/eye@2x.png';
+import matrix from './../../../static/img/homepage-hero-two/matrix2.png';
+import greenPaint from './../../../static/img/homepage-hero-two/paint_swash2.png';
+import eye from './../../../static/img/homepage-hero-two/eye2.png';
 
-import pinkElephant from './../../../static/img/homepage-hero-two/pink_elephant@2x.png';
-import orangSicle from './../../../static/img/homepage-hero-two/orangsicle@2x.png';
+import pinkElephant from './../../../static/img/homepage-hero-two/pink_elephant2.png';
+import orangSicle from './../../../static/img/homepage-hero-two/orangsicle2.png';
 import blueBlob from './../../../static/img/homepage-hero-two/blue_blob2.png';
 
 const HeroAnimation = () => {
