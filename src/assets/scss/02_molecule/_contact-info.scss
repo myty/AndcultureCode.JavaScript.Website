@@ -15,6 +15,10 @@
             margin-bottom: auto;
         }
 
+        @include breakpoints("lg-desktop") {
+            @include push-col(0);
+        }
+
         .-space {
             margin-bottom: 40px;
         }
