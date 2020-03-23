@@ -103,11 +103,30 @@ const CCA = class extends React.Component {
                             <h6 className = "content__header -desktop-only">Design &amp; Development</h6>
                             <div className = "content__copy">
                                 <p>We wireframe (sketch out a rough draft) the main site based on everything we’ve agreed on, and create a design kit with CCA’s newly approved brand, like an emperor with new clothes. VIP pages were custom designed after getting CCA’s approval (noticing a pattern here? Nothing happens with us in a vacuum. You’re right here with us.) </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src = { backgroundImg } />
+                </div>
+
+
+                <div className = "o-rhythm__container">
+                    <div className = "m-case-study-page-content__copy-section">
+                        <header className = "-push-three">getting the word out</header>
+                        <div className = "o-rhythm__row">
+                            <div className = "content__copy">
                                 <p>In the meantime, we launched a preliminary website to help Commonwealth Charter Academy shout from the rooftops that they’ve got a new name but the same incredible mission of innovative education for students throughout the state. Even as a preliminary site, we still made sure to include the basic info, media information and upcoming events to make this media friendly (gotta get that buzz going in the news).</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+
+
                 <div className = "m-case-study-page-content__color-block -cca">
                     <img src = { rainbow } className = "-background-texture -rainbow" />
                     <img src = { dotsTwo } className = "-background-texture -dots-two" />
@@ -140,9 +159,6 @@ const CCA = class extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <img src = { backgroundImg } />
                 </div>
                 <div className = "m-case-study-page-content__next m-case-study -pulse">
                     <div className = "-background-image__container">

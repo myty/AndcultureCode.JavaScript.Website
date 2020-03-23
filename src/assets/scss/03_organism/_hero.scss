@@ -202,8 +202,8 @@
     &__titles {
         max-width: 690px;
         width: 100%;
-        top: calc(100vh - 340px);
-        padding-top: 100px;
+        top: calc(100vh - 450px);
+        padding-top: 200px;
 
         @media (min-height: 1024px) {
             top: calc(100vh - 395px);
@@ -242,49 +242,19 @@
         position: absolute;
         mix-blend-mode: multiply;
         opacity: 0;
-        width: 50%;
-
-        @include breakpoints("tablet") {
-            width: auto;
-        }
-
-        &.-drops {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        &.-pink-blob {
-            top: 0;
-            right: 0;
-        }
+        width: 100%;
+        top: 0;
+        right: 0;
 
         &.-blue-blob-two {
-            right: 60px;
-            top: 380px;
             display: none;
 
             @include breakpoints("lg-desktop") {
                 display: block;
             }
-        }
-
-        &.-doodles {
-            right: -160px;
-            top: 10px;
-
-            @include breakpoints("lg-desktop") {
-                right: 20%;
-            }
-        }
-
-        &.-matrix {
-            right: 80px;
-            top: 60px;
         }
 
         &.-green-paint {
-            top: 0;
-            right: 0;
             display: none;
 
             @include breakpoints("lg-desktop") {
@@ -292,12 +262,7 @@
             }
         }
 
-        &.-orangsicle {
-            right: 0;
-        }
-
         &.-pink-elephant {
-            right: 160px;
             display: none;
 
             @include breakpoints("lg-desktop") {
@@ -306,8 +271,6 @@
         }
 
         &.-blue-blob {
-            right: 28%;
-            top: 160px;
             display: none;
 
             @include breakpoints("lg-desktop") {
@@ -323,11 +286,12 @@
             &:after {
                 content: '';
                 background: url('../../../static/img/asterisk.png') no-repeat center center / contain;
-                height: 24px;
+                height: 13px;
                 width: 24px;
+                position: absolute;
                 display: inline-block;
                 vertical-align: top;
-                margin-left: 6px;
+                margin-left: 1px;
                 margin-top: 14px;
             }
         }
@@ -356,13 +320,13 @@
 
     p {
         position: relative;
-        max-width: 144px;
         margin-top: 80px;
         margin-left: 20px;
         z-index: 1;
 
         @include breakpoints("tablet") {
             display: block;
+            max-width: 144px;
             margin-top: 100px;
         }
 
@@ -371,13 +335,13 @@
             &:before {
                 content: '';
                 background: url('../../../static/img/asterisk.png') no-repeat center center / contain;
-                height: 12px;
+                height: 8px;
                 width: 12px;
                 display: inline-block;
                 vertical-align: top;
-                margin-right: 10px;
+                margin-right: 7px;
                 position: absolute;
-                left: -18px;
+                left: -14px;
             }
         }
     }

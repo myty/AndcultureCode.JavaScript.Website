@@ -17,7 +17,7 @@ h6 {
 }
 
 h1 {
-    @include font-size(54px);
+    @include font-size(48px);
     @include line-height(54px);
 
     @include breakpoints("tablet") {
