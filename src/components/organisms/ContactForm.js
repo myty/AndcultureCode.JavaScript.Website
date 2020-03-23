@@ -25,6 +25,10 @@ const ContactForm = class extends React.Component {
         this._isSubmitted       = this._isSubmitted.bind(this);
     }
 
+    componentDidMount() {
+        document.addEventListener("keypress", this._activateForm.bind(this));
+    }
+
     _onFormTypeChange(e) {
         this.setState({ activeForm: e.target.value });
     }
