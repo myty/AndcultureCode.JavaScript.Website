@@ -61,11 +61,12 @@ const JobForm = class extends React.Component {
     }
 
     _validateFormData() {
+        const pattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
         if (this.state.activeQuestion === 1 && this.state.formData.name && this.state.formData.name !== "") {
             return false;
         }
 
-        if (this.state.activeQuestion === 2 && this.state.formData.email && this.state.formData.email !== "") {
+        if (this.state.activeQuestion === 2 && this.state.formData.email && this.state.formData.email !== "" && pattern.test(this.state.formData.email)) {
             return false;
         }
 
@@ -144,7 +145,7 @@ const JobForm = class extends React.Component {
                             value              = { this.state.formData.email } />
                         <Input
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
-                            type               = "number"
+                            type               = "text"
                             name               = "phone"
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }

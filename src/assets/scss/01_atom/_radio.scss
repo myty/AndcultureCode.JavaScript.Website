@@ -34,7 +34,7 @@ fieldset .a-radio {
     }
 
     & + label {
-        @include font-size(32px);
+        @include font-size(22px);
         position: relative;
         padding: 0 16px;
         background: get-color("primary", "after-hours");
