@@ -229,6 +229,71 @@
             }
         }
 
+        &.-kd {
+            @include breakpoints("desktop") {
+                margin-top: -72px;
+            }
+
+            .mobile-group {
+                position: relative;
+                text-align: center;
+
+                .grouped {
+                    position: relative;
+                    margin-bottom: 64px;
+                }
+
+                @include breakpoints("desktop") {
+                    display: none;
+                }
+            }
+
+            .desktop-group {
+                display: none;
+                position: relative;
+                margin-bottom: 108px;
+
+                @include breakpoints("desktop") {
+                    display: block;
+                }
+            }
+
+            .-blue-banner {
+                position: absolute;
+                bottom: 0;
+                height: 115px;
+                width: 100%;
+                background: rgba(37, 179, 194, .75);
+                z-index: -1;
+
+                @include breakpoints("desktop") {
+                    height: 315px;
+                }
+            }
+
+            .-collage-maps {
+                position: relative;
+                bottom: 0;
+                z-index: 2;
+
+                @include breakpoints("desktop") {
+                    position: absolute;
+                    left: 120px;
+                }
+            }
+
+            .-white-board-sketches {
+                position: relative;
+                bottom: 0;
+                z-index: -1;
+
+                @include breakpoints("desktop") {
+                    right: -50%;
+                    bottom: -110px;
+                }
+            }
+        }
+
         .-float {
             position: absolute;
             right: 20px;
@@ -846,6 +911,14 @@
                     @include breakpoints("tablet") {
                         @include push-col(0);
                         @include span-col(7);
+                    }
+
+                    @include breakpoints("desktop") {
+                        @include push-col(1);
+                    }
+
+                    @include breakpoints("lg-desktop") {
+                        @include push-col(0);
                     }
 
                     header {
