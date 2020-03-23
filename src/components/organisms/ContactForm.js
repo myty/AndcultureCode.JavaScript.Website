@@ -38,9 +38,6 @@ const ContactForm = class extends React.Component {
     }
 
     _activateForm(e) {
-        if (e.key !== 'Enter') {
-            return;
-        }
         e.preventDefault();
         if (this.state.activeForm) {
             this.setState({
@@ -126,7 +123,6 @@ const ContactForm = class extends React.Component {
                                 <fieldset className = "-space">
                                     <input
                                         onChange  = { this._onFormTypeChange }
-                                        onKeyPress = { this._activateForm.bind(this) }
                                         checked   = { this.state.activeForm === "project" }
                                         className = { radioInputClass }
                                         type      = "radio"
@@ -138,7 +134,6 @@ const ContactForm = class extends React.Component {
                                 <fieldset className = "-space">
                                     <input
                                         onChange  = { this._onFormTypeChange }
-                                        onKeyPress = { this._activateForm }
                                         checked   = { this.state.activeForm === "quick-info" }
                                         className = { radioInputClass }
                                         type      = "radio"
@@ -150,7 +145,6 @@ const ContactForm = class extends React.Component {
                                 <fieldset className = "-space">
                                     <input
                                         onChange  = { this._onFormTypeChange }
-                                        onKeyPress = { this._activateForm }
                                         checked   = { this.state.activeForm === "start-ups" }
                                         className = { radioInputClass }
                                         type      = "radio"
