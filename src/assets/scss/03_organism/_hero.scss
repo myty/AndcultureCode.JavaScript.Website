@@ -356,13 +356,13 @@
 
     p {
         position: relative;
-        max-width: 144px;
         margin-top: 80px;
         margin-left: 20px;
         z-index: 1;
 
         @include breakpoints("tablet") {
             display: block;
+            max-width: 144px;
             margin-top: 100px;
         }
 
