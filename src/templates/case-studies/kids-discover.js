@@ -13,7 +13,7 @@ import cubeDoodle from '../../../static/img/case-studies/kids-discover/cube-dood
 import editorScreens from '../../../static/img/case-studies/kids-discover/editor-screens.png';
 import siteHomePage from '../../../static/img/case-studies/kids-discover/site-home-page.png';
 import triangleDoodle from '../../../static/img/case-studies/kids-discover/triangle_doodle.png';
-import nextImg from '../../../static/img/case-studies/hackerone/billboard.png';
+import nextImg from '../../../static/img/case-studies/hackerone/billboard.jpg';
 import collageMaps from '../../../static/img/case-studies/kids-discover/collage-mags.png';
 import whiteBoardSketches from '../../../static/img/case-studies/kids-discover/sketches.png';
 
