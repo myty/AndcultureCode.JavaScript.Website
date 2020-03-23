@@ -913,6 +913,14 @@
                         @include span-col(7);
                     }
 
+                    @include breakpoints("desktop") {
+                        @include push-col(1);
+                    }
+
+                    @include breakpoints("lg-desktop") {
+                        @include push-col(0);
+                    }
+
                     header {
                         @include breakpoints("tablet") {
                             @include push-col(0);
