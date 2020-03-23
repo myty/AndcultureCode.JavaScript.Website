@@ -242,49 +242,19 @@
         position: absolute;
         mix-blend-mode: multiply;
         opacity: 0;
-        width: 50%;
-
-        // @include breakpoints("tablet") {
-        //     width: auto;
-        // }
-
-        &.-drops {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        &.-pink-blob {
-            top: 0;
-            right: 0;
-        }
+        width: 100%;
+        top: 0;
+        right: 0;
 
         &.-blue-blob-two {
-            right: 60px;
-            top: 380px;
             display: none;
 
             @include breakpoints("lg-desktop") {
                 display: block;
             }
-        }
-
-        &.-doodles {
-            right: -160px;
-            top: 10px;
-
-            @include breakpoints("lg-desktop") {
-                right: 20%;
-            }
-        }
-
-        &.-matrix {
-            right: 80px;
-            top: 60px;
         }
 
         &.-green-paint {
-            top: 0;
-            right: 0;
             display: none;
 
             @include breakpoints("lg-desktop") {
@@ -292,12 +262,7 @@
             }
         }
 
-        &.-orangsicle {
-            right: 0;
-        }
-
         &.-pink-elephant {
-            right: 160px;
             display: none;
 
             @include breakpoints("lg-desktop") {
@@ -306,8 +271,6 @@
         }
 
         &.-blue-blob {
-            right: 28%;
-            top: 160px;
             display: none;
 
             @include breakpoints("lg-desktop") {
