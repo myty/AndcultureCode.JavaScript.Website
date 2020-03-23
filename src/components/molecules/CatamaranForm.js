@@ -121,7 +121,6 @@ const CatamaranForm = class extends React.Component {
         if (this.state.activeQuestion === this.state.totalQuestions) {
             buttonClass += ' -active'
         }
-        console.log(this.state.formData);
 
         if (this._validateFormData()) {
             nextButtonClass += ' -disabled'
