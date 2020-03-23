@@ -25,6 +25,15 @@ const Input = class extends React.Component {
     }
 
     _disableField(e) {
+        if (this.props.type === "email") {
+            const pattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+            if (!pattern.test(e.target.value)) {
+                this.setState({
+                    error: true,
+                })
+                return;
+            }
+        }
         if (e.target.value === "") {
             this.setState({
                 fieldActive:      false,
