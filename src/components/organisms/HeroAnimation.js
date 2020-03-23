@@ -91,6 +91,10 @@ const HeroAnimation = () => {
             opacity:    1,
             ease:       Power1.easeIn
         }, 15)
+        tl.to(groupTwoImgThree, 1.5, {
+            opacity:    0,
+            ease:       Power1.easeOut
+        }, 17)
         tl.to(groupThreeImgThree, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
