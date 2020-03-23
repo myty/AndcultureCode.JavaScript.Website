@@ -120,5 +120,14 @@ a {
             color: get-color("primary", "white");
             background-color: get-color("primary", "fresh");
         }
+
+        &.-content {
+            @include font-size(16px);
+            font-family: $font-primary;
+
+            @include breakpoints("desktop") {
+                @include font-size(20px);
+            }
+        }
     }
 }

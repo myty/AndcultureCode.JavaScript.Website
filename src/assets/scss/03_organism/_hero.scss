@@ -156,7 +156,7 @@
                 display: block;
                 max-width: 100%;
 
-                @include breakpoints("desktop") {
+                @include breakpoints("lg-desktop") {
                     max-width: 125%;
                 }
             }
@@ -182,6 +182,12 @@
             @include breakpoints("desktop") {
                 margin-top: -100px;
             }
+        }
+    }
+
+    &.-four-o-four{
+        .o-hero__titles {
+            padding-top: 0;
         }
     }
 
