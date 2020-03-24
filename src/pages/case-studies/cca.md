@@ -5,6 +5,7 @@ partnerName: CCA
 date: 2017-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/case-studies/CCA_hero_phone.png
+homeimage: /img/case-studies/home/CCA_hero_phone.png
 texture: img/cca-shape-triangle.png
 color: '#3D5CC2'
 secondaryLayout: true
