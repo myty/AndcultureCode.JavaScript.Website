@@ -23,6 +23,10 @@ export default function Header(props) {
     }
   }, []);
 
+  console.log(width);
+
+
+
   let opacity = 0;
   let titleClass = "m-header__title";
 
