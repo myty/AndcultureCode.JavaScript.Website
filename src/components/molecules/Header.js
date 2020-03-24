@@ -5,7 +5,7 @@ const Header = class extends React.Component {
     super(props);
 
     this.state = {
-      windowWidth: null,
+      windowWidth: null
     };
   }
 
@@ -13,18 +13,16 @@ const Header = class extends React.Component {
     this.setState({
       windowWidth: window.innerWidth,
     })
+    window.addEventListener('resize', this._adjustForMobile());
   }
 
-  _isMobile() {
-    if (this.state.windowWidth < 769) {
-      return true;
-    }
-    return false;
+  componentWillUnmount() {
+    window.addEventListener('resize', this._adjustForMobile());
   }
 
-  render() {
+  _adjustForMobile() {
     let opacity = 0;
-    let titleClass = "m-header__title";
+    const headerBackground = document.querySelector('.m-header__background');
 
     if (this._isMobile()) {
       const fadeBegin = 0;
@@ -39,18 +37,46 @@ const Header = class extends React.Component {
       }
     }
 
+    headerBackground.style.opacity = opacity;
+  }
+
+  _isMobile() {
+    if (this.state.windowWidth < 769) {
+      return true;
+    }
+    return false;
+  }
+
+  render() {
+    // let opacity = 0;
+    let titleClass = "m-header__title";
+
+    // if (this._isMobile()) {
+    //   const fadeBegin = 0;
+    //   const fadeFinish = 300;
+
+    //   const offset = this.props.scrollTop
+    //   opacity = 1;
+    //   if (offset <= fadeBegin) {
+    //     opacity = 0;
+    //   } else if (offset <= fadeFinish) {
+    //     opacity = 0 + offset / fadeFinish;
+    //   }
+    // }
+
     if (this.props.pageTitle === "home") {
       titleClass += " -home";
     }
 
-    const headerBackgroundStyle = {
-      opacity: opacity,
-    }
+    // const headerBackgroundStyle = {
+    //   opacity: opacity,
+    // }
+    // console.log(headerBackgroundStyle);
 
     return (
       <div>
         <div className="m-header">
-          <div className = "m-header__background"  style = { headerBackgroundStyle }></div>
+          <div className = "m-header__background"></div>
           <div className="o-rhythm__container -fluid">
             <a
               href="/"
