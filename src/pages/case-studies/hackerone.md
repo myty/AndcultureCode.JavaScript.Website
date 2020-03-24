@@ -4,7 +4,7 @@ title: hacking for good
 partnerName: Hackerone
 date: 2016-01-04T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/h1-main.png
+featuredimage: /img/case-studies/hackerone/h165_bag.png
 homeimage: /img/case-studies/home/h1-main.png
 texture: img/h1-shape.png
 color: '#F953A9'
