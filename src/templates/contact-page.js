@@ -17,8 +17,6 @@ import sliderImage6 from '../../static/img/contact/slider/Contact_5.jpg';
 import sliderImage7 from '../../static/img/contact/slider/Contact_6.jpg';
 import '../assets/scss/app.scss';
 
-import logoImg from '../../static/img/ac_Logo.svg';
-
 export const ContactPageTemplate = ({
   title,
   secondaryTitle,

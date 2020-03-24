@@ -7,8 +7,6 @@ import HomePageAnimation              from '../components/organisms/HomeAnimatio
 import EasterEgg                      from '../components/atoms/EasterEgg';
 import '../assets/scss/app.scss'
 
-import logoImg from '../../static/img/ac_Logo.svg';
-
 import { gsap } from 'gsap';
 import { TimelineMax, Power1 } from 'gsap';
 import Hero from '../components/molecules/Hero';
