@@ -2,6 +2,7 @@
     position: relative;
 
     &__container {
+        position: relative;
         margin-bottom: 120px;
     }
 
@@ -148,5 +149,86 @@
                 fill: get-color("primary", "fresh");
             }
         }
+    }
+}
+
+.pull-icon {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: get-color("secondary", "pink");
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    color: get-color("primary", "white");
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    line-height: 90px;
+    z-index: 9;
+    pointer-events: none;
+    animation-name: pull-indicator;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    span {
+        position: relative;
+        display: block;
+        top: -36px;
+        width: 30px;
+        height: 2px;
+        margin: 10px auto;
+        background: #fff;
+    }
+
+    span::before,
+    span::after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        width: 10px;
+        height: 2px;
+        background: #fff;
+    }
+
+    span::before {
+        transform: rotate(-45deg);
+        top: -4px;
+    }
+
+    span::after {
+        transform: rotate(45deg);
+        bottom: -4px;
+    }
+
+    &.-paused{
+        // -webkit-animation-play-state:paused;
+        // -moz-animation-play-state:paused;
+        // -o-animation-play-state:paused;
+        // animation-play-state:paused;
+        -webkit-animation: none;
+        -moz-animation: none;
+        -o-animation: none;
+        animation: none;
+    }
+}
+
+@keyframes pull-indicator {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      right: 30px;
+      opacity: 1;
+    }
+    100% {
+      right: 150px;
+      opacity: 0;
     }
 }

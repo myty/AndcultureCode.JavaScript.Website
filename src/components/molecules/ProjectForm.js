@@ -169,7 +169,7 @@ const ProjectForm = class extends React.Component {
                         <Input
                             className          = { this.state.activeQuestion === 5 ? '-active': '' }
                             type               = "text"
-                            name               = "job_title"
+                            name               = "job title"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
                             value              = { this.state.formData.job_title } />

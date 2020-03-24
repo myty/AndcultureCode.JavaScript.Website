@@ -125,7 +125,7 @@ a {
             @include font-size(16px);
             font-family: $font-primary;
 
-            @include breakpoints("desktop") {
+            @include breakpoints("tablet") {
                 @include font-size(20px);
             }
         }
