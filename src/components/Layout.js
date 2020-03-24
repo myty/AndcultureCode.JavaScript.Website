@@ -5,14 +5,14 @@ import Footer from './molecules/Footer';
 import useSiteMetadata from './SiteMetadata';
 import { withPrefix } from 'gatsby';
 
-import logoImg from '../../static/img/ac_Logo.svg';
-
 const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop }) => {
-  let { title, description, socialDescription } = useSiteMetadata();
+  let { title, description, socialDescription, socialImg } = useSiteMetadata();
   if (data) {
     title = data.metaTitle;
     description = data.metaDescription;
     socialDescription = data.metaDescription
+    socialImg = data.socialImg
+
   }
   return (
     <div>
@@ -52,7 +52,7 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content="/img/apple-touch-icon.png"
+          content= { socialImg }
         />
       </Helmet>
       <Header

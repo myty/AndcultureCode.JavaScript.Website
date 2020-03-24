@@ -15,4 +15,5 @@ directions: >
 metaTitle: contact | andculture
 metaDescription: Contact us, we are ready to get enthusiastic about your engineering, design, strategy, and UX/human centered design needs.
 socialDescription: Need a strategic partner? Get in touch with andculture, a Harrisburg, PA-based design agency.
+socialImg: img/apple-touch-icon.png
 ---
