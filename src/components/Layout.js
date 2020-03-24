@@ -10,7 +10,8 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
   if (data) {
     title = data.metaTitle;
     description = data.metaDescription;
-    socialDescription = data.metaDescription;
+    description = data.metaDescription;
+    socialDescription = data.socialDescription;
     socialImg = data.socialImg;
   }
   return (
