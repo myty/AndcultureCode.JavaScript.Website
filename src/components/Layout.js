@@ -50,7 +50,7 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
         <meta property="og:title" content={ title } />
         <meta property="og:description" content={ socialDescription } />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content = { socialImg }/>
+        <meta property="og:image" content="/img/og-image.png" />
       </Helmet>
       <Header
         pageTitle      = { pageTitle }
