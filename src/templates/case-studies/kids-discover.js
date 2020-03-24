@@ -32,7 +32,7 @@ const KidsDiscover = class extends React.Component {
             <div>
                 <div className = "m-case-study-page-content__image-container">
                     <div className = "m-case-study-page-content__image">
-                        <img src = { teacherClassRoom } />
+                        <img src = { teacherClassRoom } alt = "Teacher in a classroom" />
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
@@ -50,7 +50,7 @@ const KidsDiscover = class extends React.Component {
                     <div className = "m-case-study-page-content__image-container">
                         <div className = "m-case-study-page-content__image">
                             <div className = "kd-image -magazines">
-                                <img src = { magazines } />
+                                <img src = { magazines } alt = "Teacher in a classroom" />
                             </div>
                         </div>
                     </div>
@@ -71,21 +71,21 @@ const KidsDiscover = class extends React.Component {
                 <div className = "m-case-study-page-content__section -desktop-only">
                     <div className = "o-rhythm__row -flex-wrap__no-wrap">
                         <div className = "kd-image -phone">
-                            <img src = { phone } />
+                            <img src = { phone } alt = "Phone" />
                         </div>
                         <div className = "kd-image -teachers-students">
-                            <img src = { teacherStudents } />
+                            <img src = { teacherStudents } alt = "Teacher and students" />
                         </div>
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__image-container -mobile-only ">
                     <div className = "m-case-study-page-content__image">
-                        <img className = "phone" src = { phone} />
+                        <img className = "phone" src = { phone} alt = "Phone" />
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__image-container -mobile-only ">
                     <div className = "m-case-study-page-content__image">
-                        <img src = { teacherStudents } />
+                        <img src = { teacherStudents } alt = "Teacher in a classroom" />
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
@@ -104,10 +104,10 @@ const KidsDiscover = class extends React.Component {
                     <div className = "o-rhythm__row -flex-wrap__no-wrap">
                         <div className = "o-rhythm__col -justify-center">
                             <div className = "kd-image -home-page-feed">
-                                <img src = { homePageFeed } />
+                                <img src = { homePageFeed } alt = "Homepage feed" />
                             </div>
                             <div className = "kd-image -apple-pencil">
-                                <img src = { applePencil } />
+                                <img src = { applePencil } alt = "Tablet and pencil" />
                             </div>
                         </div>
                     </div>
@@ -115,12 +115,12 @@ const KidsDiscover = class extends React.Component {
                 <div className = "-kd-mobile-only">
                     <div className = "m-case-study-page-content__image-container">
                         <div className = "m-case-study-page-content__image -apple-pencil">
-                            <img src = { applePencil } />
+                            <img src = { applePencil } alt = "Tablet and pencil" />
                         </div>
                     </div>
                     <div className = "m-case-study-page-content__image-container">
                         <div className = "m-case-study-page-content__image -border__bottom">
-                            <img src = { homePageFeed } />
+                            <img src = { homePageFeed } alt = "Homepage feed" />
                         </div>
                     </div>
                 </div>
@@ -139,14 +139,14 @@ const KidsDiscover = class extends React.Component {
                 <div className = "m-case-study-page-content__mosaic -kd">
                     <div className = "mobile-group">
                         <div className = "grouped">
-                            <img src = { collageMaps } className = "-collage-maps" />
+                            <img src = { collageMaps } className = "-collage-maps" alt = "Collage of maps" />
                             <div className = "-blue-banner"></div>
                         </div>
-                        <img src = { whiteBoardSketches } className = "-white-board-sketches" />
+                        <img src = { whiteBoardSketches } className = "-white-board-sketches" alt = "Whiteboard sketches" />
                     </div>
                     <div className = "desktop-group">
-                        <img src = { collageMaps } className = "-collage-maps" />
-                        <img src = { whiteBoardSketches } className = "-white-board-sketches" />
+                        <img src = { collageMaps } className = "-collage-maps" alt = "Collage of maps" />
+                        <img src = { whiteBoardSketches } className = "-white-board-sketches" alt = "Whiteboard sketches" />
                         <div className = "-blue-banner"></div>
                     </div>
                 </div>
@@ -165,13 +165,13 @@ const KidsDiscover = class extends React.Component {
                 <div className = "m-case-study-page-content__section">
                     <div className = "o-rhythm__row">
                         <div className = "kd-image -dot-grid -desktop-only">
-                            <img src = { dotGrid } />
+                            <img src = { dotGrid } alt = "Dot grid" />
                         </div>
                         <div className = "kd-image -student-homework">
-                            <img src = { studentHomework } />
+                            <img src = { studentHomework } alt = "Student doing homework" />
                         </div>
                         <div className = "kd-image -feed-lockup">
-                            <img src = { feedLockup } />
+                            <img src = { feedLockup } alt = "Multiple feeds" />
                         </div>
                     </div>
                 </div>
@@ -180,7 +180,7 @@ const KidsDiscover = class extends React.Component {
                         <div className = "o-rhythm__row -mobile-flex-direction__column-reverse">
                             <div className = "o-rhythm__col -image">
                                 <div className = "kd-image">
-                                    <img src = { discoverMap } />
+                                    <img src = { discoverMap } alt = "Discover map" />
                                 </div>
                             </div>
                             <div className = "o-rhythm__col -y-align-center -content">
@@ -210,7 +210,7 @@ const KidsDiscover = class extends React.Component {
                             </div>
                             <div className = "o-rhythm__col">
                                 <div className = "kd-image -cube-doodle">
-                                    <img src = { cubeDoodle } />
+                                    <img src = { cubeDoodle } alt = "Cube doodle" />
                                 </div>
                             </div>
                         </div>
@@ -218,11 +218,11 @@ const KidsDiscover = class extends React.Component {
                             <div className = "o-rhythm__row">
                                 <div className = "o-rhythm__col">
                                     <div className = "kd-image -triangle-doodle">
-                                        <img src = { triangleDoodle } />
+                                        <img src = { triangleDoodle } alt = "Triangle doodle" />
                                     </div>
                                 </div>
                                 <div className = "kd-image -editor-screens">
-                                    <img src = { editorScreens } />
+                                    <img src = { editorScreens } alt = "Editor screens" />
                                 </div>
                             </div>
                         </div>
@@ -239,7 +239,7 @@ const KidsDiscover = class extends React.Component {
                             </div>
                             <div className = "o-rhythm__col -kd-color-block__last-image">
                                 <div className = "kd-image -site-home-page">
-                                    <img src = { siteHomePage } />
+                                    <img src = { siteHomePage } alt = "Homepage" />
                                 </div>
                             </div>
                         </div>
