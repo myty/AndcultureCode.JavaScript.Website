@@ -52,7 +52,7 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={logoImg}
+          content="img/apple-touch-icon.png"
         />
       </Helmet>
       <Header
