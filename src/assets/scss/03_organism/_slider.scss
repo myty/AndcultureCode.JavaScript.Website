@@ -168,6 +168,7 @@
     text-align: center;
     line-height: 90px;
     z-index: 9;
+    pointer-events: none;
     animation-name: pull-indicator;
     animation-delay: 2s;
     animation-duration: 2s;

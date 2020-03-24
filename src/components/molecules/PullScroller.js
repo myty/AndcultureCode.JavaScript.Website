@@ -41,6 +41,9 @@ const PullScroller = class extends React.Component {
       slider.scrollLeft = scrollLeft - walk;
       pullIcon.remove();
     });
+    slider.addEventListener('touchmove', () => {
+      pullIcon.remove();
+    })
   }
 
   render() {
