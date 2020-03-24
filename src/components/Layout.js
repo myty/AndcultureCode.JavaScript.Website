@@ -1,9 +1,11 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Header from './molecules/Header'
-import Footer from './molecules/Footer'
-import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import Header from './molecules/Header';
+import Footer from './molecules/Footer';
+import useSiteMetadata from './SiteMetadata';
+import { withPrefix } from 'gatsby';
+
+import logoImg from '../../static/img/ac_Logo.svg';
 
 const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop }) => {
   let { title, description, socialDescription } = useSiteMetadata();
@@ -46,11 +48,11 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={ title } />
-        <meta property="og:description" content={ title } />
+        <meta property="og:description" content={ socialDescription } />
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={`${withPrefix('/')}img/og-image.jpg`}
+          content={logoImg}
         />
       </Helmet>
       <Header
