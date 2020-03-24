@@ -262,7 +262,7 @@ const KidsDiscover = class extends React.Component {
                     <div className = "-content">
                         <h5>Hackerone</h5>
                         <p>hacking for good</p>
-                        <a href = "/case-studies/hackerone" className = "a-button">See How</a>
+                        <a href = "/case-studies/hackerone/" className = "a-button">See Next Case Study</a>
                     </div>
                 </div>
             </div>

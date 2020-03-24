@@ -163,7 +163,7 @@ const CCA = class extends React.Component {
                     <div className = "-content">
                         <h5>Pulse</h5>
                         <p>rearchitecting nurse workflows</p>
-                        <a href = "/case-studies/pulse" className = "a-button">See How</a>
+                        <a href = "/case-studies/pulse/" className = "a-button">See Next Case Study</a>
                     </div>
                 </div>
             </div>

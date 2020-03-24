@@ -77,7 +77,7 @@ export default function Header(props) {
             className="m-header__navigation"
             role="navigation"
             aria-label="main-navigation">
-            <a href="/contact"><span></span>contact</a>
+            <a href="/contact/"><span></span>contact</a>
           </nav>
         }
       </div>

@@ -162,7 +162,7 @@ const Pulse = class extends React.Component {
                     <div className = "-content">
                         <h5>Kids Discover</h5>
                         <p>changing the face of education</p>
-                        <a href = "/case-studies/kids-discover" className = "a-button">See How</a>
+                        <a href = "/case-studies/kids-discover/" className = "a-button">See Next Case Study</a>
                     </div>
                 </div>
             </div>
