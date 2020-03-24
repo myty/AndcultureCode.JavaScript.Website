@@ -15,4 +15,5 @@ tags:
 metaTitle: PinnacleHealth Pulse case study | andculture
 metaDescription: A case study for andculture and PinnacleHealth's nurse scheduling platform
 socialDescription: An effective hospital needs the right number of nurses at the right time. andculture and PinnacleHealth (UPMC) developed a solution that's just what the doctor ordered.
+socialImg: /img/pulse_book_Pen.png
 ---
