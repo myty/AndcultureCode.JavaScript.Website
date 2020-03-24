@@ -10,10 +10,10 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
   if (data) {
     title = data.metaTitle;
     description = data.metaDescription;
-    socialDescription = data.metaDescription
-    socialImg = data.socialImg
-
+    socialDescription = data.metaDescription;
+    socialImg = data.socialImg;
   }
+  console.log(data);
   return (
     <div>
       <Helmet>
@@ -50,10 +50,7 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
         <meta property="og:title" content={ title } />
         <meta property="og:description" content={ socialDescription } />
         <meta property="og:url" content="/" />
-        <meta
-          property="og:image"
-          content= { socialImg }
-        />
+        <meta property="og:image" content = { socialImg }/>
       </Helmet>
       <Header
         pageTitle      = { pageTitle }

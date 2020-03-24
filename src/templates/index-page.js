@@ -75,6 +75,7 @@ export const pageQuery = graphql`
         metaTitle
         metaDescription
         socialDescription
+        socialImg
       }
     }
   }
