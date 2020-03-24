@@ -11,7 +11,7 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
     // title = data.metaTitle;
     description = data.metaDescription;
     socialDescription = data.metaDescription;
-    // image = data.socialImg;
+    image = data.socialImg;
   }
 
   console.log(image);
@@ -51,7 +51,7 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
         <meta property="og:title" content={ title } />
         <meta property="og:description" content={ socialDescription } />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content = { image }/>
+        <meta property="og:image" content = {`${withPrefix('/')}img/apple-touch-icon.png`}/>
       </Helmet>
       <Header
         pageTitle      = { pageTitle }
