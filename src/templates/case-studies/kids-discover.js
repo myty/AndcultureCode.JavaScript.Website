@@ -10,7 +10,7 @@ import studentHomework from '../../../static/img/case-studies/kids-discover/stud
 import feedLockup from '../../../static/img/case-studies/kids-discover/feed-lockup.png';
 import discoverMap from '../../../static/img/case-studies/kids-discover/discovermap.png';
 import cubeDoodle from '../../../static/img/case-studies/kids-discover/cube-doodle.png';
-import editorScreens from '../../../static/img/case-studies/kids-discover/editor-screens.png';
+import editorScreens from '../../../static/img/case-studies/kids-discover/editor_screens.png';
 import siteHomePage from '../../../static/img/case-studies/kids-discover/site-home-page.png';
 import triangleDoodle from '../../../static/img/case-studies/kids-discover/triangle_doodle.png';
 import nextImg from '../../../static/img/case-studies/hackerone/billboard.jpg';
@@ -63,7 +63,7 @@ const KidsDiscover = class extends React.Component {
                             <h6 className = "content__header -desktop-only">Research</h6>
                             <div className = "content__copy">
                                 <p>To dig into the education space, we held two teacher roundtable discussions, attended industry-related conferences, interviewed educational consultants and surveyed teachers across the country. We focus this qualitative and quantitative research on current and future states of education, access to technology in the modern classroom and other educational trends.</p>
-                                <p>Once business needs were defined, we kicked off a second phase of research in 10 schools throuout the Northeastern U.S. Through observations and interviews, we learned how supplemental content is applied in the classroom and how students and teachers used and interacted with technology. With all of these findings, we were able to make informed product recommendations and start to write rules (e.g., “must make reading an active process”)</p>
+                                <p>Once business needs were defined, we kicked off a second phase of research in 10 schools throughout the Northeastern U.S. Through observations and interviews, we learned how supplemental content is applied in the classroom and how students and teachers used and interacted with technology. With all of these findings, we were able to make informed product recommendations and start to write rules (e.g., “must make reading an active process”).</p>
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,14 @@ const KidsDiscover = class extends React.Component {
                                     <header>checking back in</header>
                                     <div className = "o-rhythm__row">
                                         <div>
-                                            <p>As soon as the beta product was ready, we took it to classrooms to test. We collected feedback from students and teachers, which helped us make final product adjustments and enhancements before going to market.</p>
+                                            <p>Soon after launch, we began a new engagement with Kids Discover to improve the platform based on user feedback. Some items on the road map included:</p>
+                                            <ul>
+                                                <li>Creating a frictionless onboarding experience</li>
+                                                <li>Getting personal with notifications and targeted messages</li>
+                                                <li>Overhauling payment processing, reminders and renewals</li>
+                                                <li>Adding ability for teachers to create assessments and for students to take them</li>
+                                                <li>Updating the payment structure to align with user expectations</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>

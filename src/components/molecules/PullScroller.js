@@ -2,7 +2,7 @@ import React from 'react';
 import pullScrollImage1 from '../../../static/img/case-studies/hackerone/badge.png';
 import pullScrollImage2 from '../../../static/img/case-studies/hackerone/luke.png';
 import pullScrollImage3 from '../../../static/img/case-studies/hackerone/tshirt.png';
-import pullScrollImage4 from '../../../static/img/case-studies/hackerone/badge_2.png';
+import pullScrollImage4 from '../../../static/img/case-studies/hackerone/brians-patch.png';
 import pullScrollImage5 from '../../../static/img/case-studies/hackerone/h165_sticker.png';
 import pullScrollImage6 from '../../../static/img/case-studies/hackerone/A4_Paper.png';
 

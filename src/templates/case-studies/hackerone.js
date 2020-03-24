@@ -8,7 +8,7 @@ import stickerTwo from '../../../static/img/case-studies/hackerone/h1_was_here_s
 import hackerImg from '../../../static/img/case-studies/hackerone/rainbow_shirt.jpg';
 import skateboardImg from '../../../static/img/case-studies/hackerone/skateboard.png';
 import dotTexture from '../../../static/img/case-studies/hackerone/dot_grid_copy.png';
-import stickerImg from '../../../static/img/case-studies/hackerone/h1604_Sticker.png';
+import stickerImg from '../../../static/img/case-studies/hackerone/604_logo.png';
 import posterImg from '../../../static/img/case-studies/hackerone/h1604_poster.jpg';
 import bannerImg from '../../../static/img/case-studies/hackerone/h1604_banner.jpg';
 import sliderImage1 from '../../../static/img/case-studies/hackerone/Security1.jpg';

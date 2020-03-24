@@ -146,7 +146,7 @@ const Pulse = class extends React.Component {
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Iteration</h6>
                             <div className = "content__copy">
-                                <p>We had initial user feedback plus data, and now we could update the platform design. We tweaked how the info was presented and modified the navigation. Charts were added to make the experience more comprehensive; you really could get a sense of how the entire hospital operated.</p>
+                                <p>We had initial user feedback, plus data, and now we could update the platform design. We tweaked how the info was presented and modified the navigation. Charts were added to make the experience more comprehensive; you really could get a sense of how the entire hospital operated.</p>
                                 <p>We didn’t veer off our initial guiding principles. We just worked with our partner to evolve the system into an even more effective version to address their problem.</p>
                             </div>
                         </div>
