@@ -17,6 +17,8 @@ import sliderImage6 from '../../static/img/contact/slider/Contact_5.jpg';
 import sliderImage7 from '../../static/img/contact/slider/Contact_6.jpg';
 import '../assets/scss/app.scss';
 
+import logoImg from '../../static/img/ac_Logo.svg';
+
 export const ContactPageTemplate = ({
   title,
   secondaryTitle,
@@ -61,6 +63,7 @@ const ContactPage = ({ data }) => {
       data           = { frontmatter }
       scrollTop      = { scrollTop }>
       <div className = "p-interior-page">
+        <img src = { logoImg } className = "-hidden" />
         <ContactPageTemplate
           title          = { frontmatter.title }
           secondaryTitle = { frontmatter.secondaryTitle }

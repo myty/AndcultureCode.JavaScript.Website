@@ -15,5 +15,5 @@ tags:
   - strategy
 metaTitle: CCA case study | andculture
 metaDescription: A case study for andculture and CCA's cyber education website
-socialDescription: CCA's website needed to show how powerful the bond can be between a cyber school and its families. That's when andculture comes in with a little UX and developer magic.
+socialDescription: CCA's website needed to show how powerful the bond can be between a cyber school and its families. That's when andculture came in with a little UX and developer magic.
 ---
