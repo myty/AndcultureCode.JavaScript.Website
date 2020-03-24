@@ -110,9 +110,13 @@
                 padding-top: 150px;
             }
 
-            @include breakpoints("desktop") {
+            @include breakpoints("laptop") {
+                padding-top: 88px;
+            }
+
+            @include breakpoints("lg-laptop") {
                 @include push-col(1);
-                padding-top: 220px;
+                padding-top: 150px;
             }
 
             @include breakpoints("lg-desktop") {
