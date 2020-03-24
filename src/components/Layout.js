@@ -6,13 +6,15 @@ import useSiteMetadata from './SiteMetadata';
 import { withPrefix } from 'gatsby';
 
 const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop }) => {
-  let { title, description, socialDescription, socialImg } = useSiteMetadata();
+  let { title, description, image, socialDescription } = useSiteMetadata();
   if (data) {
-    title = data.metaTitle;
+    // title = data.metaTitle;
     description = data.metaDescription;
     socialDescription = data.metaDescription;
-    socialImg = data.socialImg;
+    // image = data.socialImg;
   }
+
+  console.log(image);
   return (
     <div>
       <Helmet>
@@ -49,7 +51,7 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
         <meta property="og:title" content={ title } />
         <meta property="og:description" content={ socialDescription } />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content = { socialImg }/>
+        <meta property="og:image" content = { image }/>
       </Helmet>
       <Header
         pageTitle      = { pageTitle }
