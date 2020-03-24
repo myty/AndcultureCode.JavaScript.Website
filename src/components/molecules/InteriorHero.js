@@ -25,7 +25,7 @@ const InteriorHero = class extends React.Component {
   render() {
 
     return (
-      <div className = "o-hero">
+      <div className = {`o-hero ${ this.props.modifier }` }>
         <img src = { this.props.backgroundImages[0] } className = "o-hero__background -circles-crosses" />
         <img src = { this.props.backgroundImages[1] } className = "o-hero__background -blue-paint" />
         <div className = "o-rhythm__container">

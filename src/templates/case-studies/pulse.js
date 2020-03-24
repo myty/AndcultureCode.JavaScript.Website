@@ -26,10 +26,10 @@ const Pulse = class extends React.Component {
             <div>
                 <div className = "m-case-study-page-content__image-container">
                     <div className = "m-case-study-page-content__image -half">
-                        <img src = { scheduleImg } />
+                        <img src = { scheduleImg } alt = "Schedule" />
                     </div>
                     <div className = "m-case-study-page-content__image -half">
-                        <img src = { peopleImg } />
+                        <img src = { peopleImg } alt = "People and Roles" />
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
@@ -42,7 +42,7 @@ const Pulse = class extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <img src = { nurseImg } />
+                    <img src = { nurseImg } alt = "Nurses" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
@@ -63,10 +63,10 @@ const Pulse = class extends React.Component {
                     <div className = "m-case-study-page-content__section -pulse__sketches-container">
                         <div className = "o-rhythm__row">
                             <div className = "sketch -one">
-                                <img src = { sketchImgOne } />
+                                <img src = { sketchImgOne } alt = "Notebook Sketch" />
                             </div>
                             <div className = "sketch -two">
-                                <img src = { sketchImgTwo } />
+                                <img src = { sketchImgTwo } alt = "Notebook Sketch" />
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ const Pulse = class extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <img src = { stationImg } />
+                    <img src = { stationImg } alt = "Nurse station" />
                 </div>
                 <div className = "m-case-study-page-content__color-block -pulse">
                     <div className = "o-rhythm__container">
@@ -98,10 +98,10 @@ const Pulse = class extends React.Component {
                                     <p>Undoubtedly, healthcare’s regulations and incredible pace made this a unique challenge. But that only made us want to take even more care to ensure each detail was covered. We wanted to deliver a great experience, not just a scheduling tool. Well-designed experiences get used, day in and day out, even when things get hectic. And what hospital isn’t hectic?</p>
                                 </div>
                                 <div className = "content__image -white-sketches">
-                                    <img src = { whiteSketches } />
+                                    <img src = { whiteSketches } alt = "Whiteboard Sketches" />
                                 </div>
                             </div>
-                            <img className = "-safari-img" src = { safariImg } />
+                            <img className = "-safari-img" src = { safariImg } alt = "Dashboard" />
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@ const Pulse = class extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <img src = { doodleImg } />
+                    <img src = { doodleImg } alt = "Doodle" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
@@ -137,7 +137,7 @@ const Pulse = class extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <img src = { dataImg } />
+                    <img src = { dataImg } alt = "Data" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
@@ -146,7 +146,7 @@ const Pulse = class extends React.Component {
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Iteration</h6>
                             <div className = "content__copy">
-                                <p>We had initial user feedback plus data, and now we could update the platform design. We tweaked how the info was presented and modified the navigation. Charts were added to make the experience more comprehensive; you really could get a sense of how the entire hospital operated.</p>
+                                <p>We had initial user feedback, plus data, and now we could update the platform design. We tweaked how the info was presented and modified the navigation. Charts were added to make the experience more comprehensive; you really could get a sense of how the entire hospital operated.</p>
                                 <p>We didn’t veer off our initial guiding principles. We just worked with our partner to evolve the system into an even more effective version to address their problem.</p>
                             </div>
                         </div>
@@ -162,7 +162,7 @@ const Pulse = class extends React.Component {
                     <div className = "-content">
                         <h5>Kids Discover</h5>
                         <p>changing the face of education</p>
-                        <a href = "/case-studies/kids-discover" className = "a-button">See How</a>
+                        <a href = "/case-studies/kids-discover/" className = "a-button">See Next Case Study</a>
                     </div>
                 </div>
             </div>

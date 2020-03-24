@@ -72,7 +72,8 @@ const Select = class extends React.Component {
                     { this.props.name }
                 </label>
                 <div className = { selectClassName }>
-                    <select { ...selectProps } onChange = { this._updateInputValue } onBlur = { this._disableField } onFocus = { this._activateField }>
+                    <select { ...selectProps } onChange = { this._updateInputValue } onBlur = { this._disableField } onFocus = { this._activateField } defaultValue="default">
+                        <option value="default" disabled>Select an option</option>
                         <option value="existing">I have a startup I’d like to talk to you about</option>
                         <option value="story">I have an entrepreneurship story to share</option>
                         <option value="event">I have an event for your community calendar</option>

@@ -71,4 +71,40 @@
             }
         }
     }
+
+    &.-four-o-four {
+        .-four-o-four__copy {
+            @include push-col(0);
+            @include span-col(10);
+            margin-left: 0;
+
+            @include breakpoints("tablet") {
+                @include push-col(1);
+                padding-left: 12px;
+            }
+
+            @include breakpoints("lg-laptop") {
+                @include push-col(1);
+                padding-left: 0;
+            }
+
+            @include breakpoints("desktop") {
+                @include push-col(1);
+            }
+
+            @include breakpoints("lg-desktop") {
+                @include push-col(0);
+                padding-left: 0;
+            }
+
+            p {
+                @include breakpoints("desktop") {
+                    margin-left: -12px;
+                }
+                @include breakpoints("lg-desktop") {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
 }

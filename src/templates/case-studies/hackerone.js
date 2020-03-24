@@ -1,16 +1,16 @@
 import React from 'react';
 import CustomSlider from '../../components/molecules/CustomSlider';
 import PullScroller from '../../components/molecules/PullScroller';
-import billboardImg from '../../../static/img/case-studies/hackerone/billboard.png';
-import cardsImg from '../../../static/img/case-studies/hackerone/social_cards.png';
+import billboardImg from '../../../static/img/case-studies/hackerone/billboard.jpg';
+import cardsImg from '../../../static/img/case-studies/hackerone/social_cards.jpg';
 import stickerOne from '../../../static/img/case-studies/hackerone/H1-213_sticker.png';
 import stickerTwo from '../../../static/img/case-studies/hackerone/h1_was_here_sticker.png';
-import hackerImg from '../../../static/img/case-studies/hackerone/rainbow_shirt.png';
+import hackerImg from '../../../static/img/case-studies/hackerone/rainbow_shirt.jpg';
 import skateboardImg from '../../../static/img/case-studies/hackerone/skateboard.png';
 import dotTexture from '../../../static/img/case-studies/hackerone/dot_grid_copy.png';
-import stickerImg from '../../../static/img/case-studies/hackerone/h1604_Sticker.png';
-import posterImg from '../../../static/img/case-studies/hackerone/h1604_poster.png';
-import bannerImg from '../../../static/img/case-studies/hackerone/h1604_banner.png';
+import stickerImg from '../../../static/img/case-studies/hackerone/604_logo.png';
+import posterImg from '../../../static/img/case-studies/hackerone/h1604_poster.jpg';
+import bannerImg from '../../../static/img/case-studies/hackerone/h1604_banner.jpg';
 import sliderImage1 from '../../../static/img/case-studies/hackerone/Security1.jpg';
 import sliderImage2 from '../../../static/img/case-studies/hackerone/Security2.jpg';
 import sliderImage3 from '../../../static/img/case-studies/hackerone/Security3.jpg';
@@ -24,7 +24,7 @@ import sliderImage10 from '../../../static/img/case-studies/hackerone/Security12
 import sliderImage11 from '../../../static/img/case-studies/hackerone/Security16.jpg';
 import sliderImage12 from '../../../static/img/case-studies/hackerone/Security21.jpg';
 import sliderImage13 from '../../../static/img/case-studies/hackerone/Security25.jpg';
-import nextImg from '../../../static/img/case-studies/cca/kids_at_window_board.png';
+import nextImg from '../../../static/img/case-studies/cca/studying.jpg';
 
 const Hackerone = class extends React.Component {
     constructor(props) {
@@ -55,16 +55,16 @@ const Hackerone = class extends React.Component {
         return (
             <div>
                 <div>
-                    <img src = { billboardImg } />
+                    <img src = { billboardImg } alt = "Billboard" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section -body-intro">
-                        <header>what was the broken reality with h1?</header>
+                        <header>what was HackerOne's reality?</header>
                         <div className = "o-rhythm__row">
                             <div className = "content__copy">
                                 <p><span className = "easter-egg__right">Not surprisingly, HackerOne wants to work with the best hackers, wherever they are.</span> To that end, they put a lot of energy into being “the” community for hackers, in order to be the best platform for hiring hacker-powered security. Hackers live on the bleeding edge, fueled by different motivations, coming to HackerOne both for money and for the challenge. How does HackerOne stay fresh, continue to engage and keep the best coming back for more?</p>
                             </div>
-                            <div className = "content__easter-egg easter-egg">Turns out that’s a pretty broad geography—170 countries and counting.</div>
+                            <div className = "content__easter-egg easter-egg">Turns out that’s a pretty broad geography— 170 countries and counting.</div>
                         </div>
                     </div>
                 </div>
@@ -74,23 +74,23 @@ const Hackerone = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Research</h6>
-                        <header className = "-push-three">each event is unique.</header>
+                        <header className = "-push-three">how did we tackle it?</header>
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Research</h6>
                             <div className = "content__copy">
-                                <p>We take inspiration from the type of challenge, the geography and, well, bugs. Because really it’s all about finding critical vulnerabilities, which in hacker lingo are bugs. Capturing the intense energy, collaborative spirit and competitive nature of the events is part of the equation. It’s also no small task to try to stay as relevant and cool as hackers are. </p>
+                                <p>Each event is unique. We take inspiration from the type of challenge, the geography and, well, bugs. Because really it’s all about finding critical vulnerabilities, which in hacker lingo are bugs. Capturing the intense energy, collaborative spirit and competitive nature of the events is part of the equation. It’s also no small task to try to stay as relevant and cool as hackers are.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__mosaic -hackerone">
-                    <img src = { posterImg } className = "-poster -mobile-only" />
+                    <img src = { posterImg } className = "-poster -mobile-only" alt = "Poster" />
                     <div className = "o-rhythm__container">
-                        <img src = { posterImg } className = "-poster -desktop-only" />
+                        <img src = { posterImg } className = "-poster -desktop-only" alt = "Poster" />
                     </div>
-                    <img src = { stickerImg } className = "-sticker" />
-                    <img src = { bannerImg } className = "-banner" />
-                    <img src = { dotTexture } className = "-dots -left" />
+                    <img src = { stickerImg } className = "-sticker" alt = "Sticker" />
+                    <img src = { bannerImg } className = "-banner" alt = "Banner" />
+                    <img src = { dotTexture } className = "-dots -left" alt = "Dots" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
@@ -107,18 +107,18 @@ const Hackerone = class extends React.Component {
                 <CustomSlider images = { sliderImages } />
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section -mobile-padding__top-none">
-                        <h6 className = "content__header -mobile-only">Social Media</h6>
-                        <header className = "-push-three">analog and digital</header>
+                        <h6 className = "content__header -mobile-only">Design</h6>
+                        <header className = "-push-three">social media graphics</header>
                         <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">Social Media</h6>
+                            <h6 className = "content__header -desktop-only">Design</h6>
                             <div className = "content__copy">
-                                <p>Analog and digital, we’re designing for all aspects of h1’s live-hacking eventsWe help HackerOne promote all live hacking events, Security@ conference and their presence at many other trade shows, including InfoSecurity, GES, Black Hat, Money 20/20, Gartner Security &amp; Risk Management and DEFCON, on social media.</p>
+                                <p>We help HackerOne promote all live hacking events, Security@ conference and their presence at many other trade shows, including InfoSecurity, GES, Black Hat, Money 20/20, Gartner Security &amp; Risk Management and DEFCON, on social media.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__image">
-                    <img src = { cardsImg } />
+                    <img src = { cardsImg } alt = "Cards" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section -hackerone-gear-cred">
@@ -144,13 +144,13 @@ const Hackerone = class extends React.Component {
                 </div>
                 <div className = "m-case-study-page-content__mosaic -hackerone -beer-stickers">
                     <div className = "o-rhythm__container">
-                        <img src = { hackerImg } className = "-desktop-only" />
-                        <img src = { stickerTwo } className = "-sticker-two" />
+                        <img src = { hackerImg } className = "-desktop-only" alt = "Hacker Sticker" />
+                        <img src = { stickerTwo } className = "-sticker-two" alt = "Hacker Sticker" />
                     </div>
-                    <img src = { hackerImg } className = "-mobile-only" />
-                    <img src = { dotTexture } className = "-dots" />
-                    <img src = { stickerOne } className = "-sticker-one" />
-                    <img src = { skateboardImg } className = "-skateboard" />
+                    <img src = { hackerImg } className = "-mobile-only" alt = "Hacker Sticker" />
+                    <img src = { dotTexture } className = "-dots" alt = "Dots" />
+                    <img src = { stickerOne } className = "-sticker-one" alt = "Sticker One" />
+                    <img src = { skateboardImg } className = "-skateboard" alt = "Skateboard" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section -mobile-padding__top-none">
@@ -159,7 +159,7 @@ const Hackerone = class extends React.Component {
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Mission</h6>
                             <div className = "content__copy">
-                                <p>HackerOne believes everyone is a hacker — one who enjoys the intellectual challenge of creatively overcoming limitations. We love the modesty, but mostly we love the mission to &quot;empower the world to build a safer internet,&quot; keeping our software secure and our personal information, well, personal.</p>
+                                <p>HackerOne believes everyone is a hacker. We love the modesty, but mostly we love the mission to &quot;empower the world to build a safer internet,&quot; keeping our software secure and personal information, well, personal.</p>
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@ const Hackerone = class extends React.Component {
                     <div className = "-content">
                         <h5>CCA</h5>
                         <p>redefining what cyber education can do</p>
-                        <a href = "/case-studies/cca" className = "a-button">See How</a>
+                        <a href = "/case-studies/cca/" className = "a-button">See Next Case Study</a>
                     </div>
                 </div>
             </div>

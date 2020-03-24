@@ -48,6 +48,12 @@ const settings = {
     slidesToScroll: 1,
     prevArrow:      <PrevArrow />,
     nextArrow:      <NextArrow />,
+    onSwipe:        function() {
+        const pullIcon = document.querySelector('.pull-icon');
+        if (pullIcon) {
+            pullIcon.remove();
+        }
+    }
   };
 
 const CustomSlider = class extends React.Component {
@@ -69,6 +75,7 @@ const CustomSlider = class extends React.Component {
                         </Slider>
                     </div>
                 </div>
+                <div className = "pull-icon">Pull<span></span></div>
             </div>
         )
     }

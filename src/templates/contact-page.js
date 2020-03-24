@@ -21,12 +21,14 @@ export const ContactPageTemplate = ({
   title,
   secondaryTitle,
   subTitle,
+  modifier
 }) => (
   <InteriorHero
     backgroundImages = { [ContactHeroGraphic, HeroBluePaint] }
     title          = { title }
     secondaryTitle = { secondaryTitle }
-    subTitle       = { subTitle } />
+    subTitle       = { subTitle }
+    modifier       = { modifier } />
 )
 
 const ContactPage = ({ data }) => {
@@ -63,6 +65,7 @@ const ContactPage = ({ data }) => {
           title          = { frontmatter.title }
           secondaryTitle = { frontmatter.secondaryTitle }
           subTitle       = { frontmatter.subTitle }
+          modifier       = '-contact'
         />
         <ContactForm lightTheme = { true } />
         <CustomSlider images = { sliderImages } />
@@ -90,6 +93,7 @@ export const pageQuery = graphql`
         metaTitle
         metaDescription
         socialDescription
+        socialImg
       }
     }
   }

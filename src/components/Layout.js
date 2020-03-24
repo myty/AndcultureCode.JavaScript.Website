@@ -1,16 +1,18 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Header from './molecules/Header'
-import Footer from './molecules/Footer'
-import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import Header from './molecules/Header';
+import Footer from './molecules/Footer';
+import useSiteMetadata from './SiteMetadata';
+import { withPrefix } from 'gatsby';
 
 const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop }) => {
-  let { title, description, socialDescription } = useSiteMetadata();
+  let { title, description, socialDescription, socialImg } = useSiteMetadata();
   if (data) {
     title = data.metaTitle;
     description = data.metaDescription;
-    socialDescription = data.metaDescription
+    description = data.metaDescription;
+    socialDescription = data.socialDescription;
+    socialImg = data.socialImg;
   }
   return (
     <div>
@@ -46,12 +48,9 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={ title } />
-        <meta property="og:description" content={ title } />
+        <meta property="og:description" content={ socialDescription } />
         <meta property="og:url" content="/" />
-        <meta
-          property="og:image"
-          content={`${withPrefix('/')}img/og-image.jpg`}
-        />
+        <meta property="og:image" content="/img/og-image.png" />
       </Helmet>
       <Header
         pageTitle      = { pageTitle }

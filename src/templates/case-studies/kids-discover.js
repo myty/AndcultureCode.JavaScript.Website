@@ -10,10 +10,10 @@ import studentHomework from '../../../static/img/case-studies/kids-discover/stud
 import feedLockup from '../../../static/img/case-studies/kids-discover/feed-lockup.png';
 import discoverMap from '../../../static/img/case-studies/kids-discover/discovermap.png';
 import cubeDoodle from '../../../static/img/case-studies/kids-discover/cube-doodle.png';
-import editorScreens from '../../../static/img/case-studies/kids-discover/editor-screens.png';
+import editorScreens from '../../../static/img/case-studies/kids-discover/editor_screens.png';
 import siteHomePage from '../../../static/img/case-studies/kids-discover/site-home-page.png';
 import triangleDoodle from '../../../static/img/case-studies/kids-discover/triangle_doodle.png';
-import nextImg from '../../../static/img/case-studies/hackerone/billboard.png';
+import nextImg from '../../../static/img/case-studies/hackerone/billboard.jpg';
 import collageMaps from '../../../static/img/case-studies/kids-discover/collage-mags.png';
 import whiteBoardSketches from '../../../static/img/case-studies/kids-discover/sketches.png';
 
@@ -32,7 +32,7 @@ const KidsDiscover = class extends React.Component {
             <div>
                 <div className = "m-case-study-page-content__image-container">
                     <div className = "m-case-study-page-content__image">
-                        <img src = { teacherClassRoom } />
+                        <img src = { teacherClassRoom } alt = "Teacher in a classroom" />
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
@@ -50,7 +50,7 @@ const KidsDiscover = class extends React.Component {
                     <div className = "m-case-study-page-content__image-container">
                         <div className = "m-case-study-page-content__image">
                             <div className = "kd-image -magazines">
-                                <img src = { magazines } />
+                                <img src = { magazines } alt = "Teacher in a classroom" />
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ const KidsDiscover = class extends React.Component {
                             <h6 className = "content__header -desktop-only">Research</h6>
                             <div className = "content__copy">
                                 <p>To dig into the education space, we held two teacher roundtable discussions, attended industry-related conferences, interviewed educational consultants and surveyed teachers across the country. We focus this qualitative and quantitative research on current and future states of education, access to technology in the modern classroom and other educational trends.</p>
-                                <p>Once business needs were defined, we kicked off a second phase of research in 10 schools throuout the Northeastern U.S. Through observations and interviews, we learned how supplemental content is applied in the classroom and how students and teachers used and interacted with technology. With all of these findings, we were able to make informed product recommendations and start to write rules (e.g., “must make reading an active process”)</p>
+                                <p>Once business needs were defined, we kicked off a second phase of research in 10 schools throughout the Northeastern U.S. Through observations and interviews, we learned how supplemental content is applied in the classroom and how students and teachers used and interacted with technology. With all of these findings, we were able to make informed product recommendations and start to write rules (e.g., “must make reading an active process”).</p>
                             </div>
                         </div>
                     </div>
@@ -71,21 +71,21 @@ const KidsDiscover = class extends React.Component {
                 <div className = "m-case-study-page-content__section -desktop-only">
                     <div className = "o-rhythm__row -flex-wrap__no-wrap">
                         <div className = "kd-image -phone">
-                            <img src = { phone } />
+                            <img src = { phone } alt = "Phone" />
                         </div>
                         <div className = "kd-image -teachers-students">
-                            <img src = { teacherStudents } />
+                            <img src = { teacherStudents } alt = "Teacher and students" />
                         </div>
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__image-container -mobile-only ">
                     <div className = "m-case-study-page-content__image">
-                        <img className = "phone" src = { phone} />
+                        <img className = "phone" src = { phone} alt = "Phone" />
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__image-container -mobile-only ">
                     <div className = "m-case-study-page-content__image">
-                        <img src = { teacherStudents } />
+                        <img src = { teacherStudents } alt = "Teacher in a classroom" />
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
@@ -104,10 +104,10 @@ const KidsDiscover = class extends React.Component {
                     <div className = "o-rhythm__row -flex-wrap__no-wrap">
                         <div className = "o-rhythm__col -justify-center">
                             <div className = "kd-image -home-page-feed">
-                                <img src = { homePageFeed } />
+                                <img src = { homePageFeed } alt = "Homepage feed" />
                             </div>
                             <div className = "kd-image -apple-pencil">
-                                <img src = { applePencil } />
+                                <img src = { applePencil } alt = "Tablet and pencil" />
                             </div>
                         </div>
                     </div>
@@ -115,12 +115,12 @@ const KidsDiscover = class extends React.Component {
                 <div className = "-kd-mobile-only">
                     <div className = "m-case-study-page-content__image-container">
                         <div className = "m-case-study-page-content__image -apple-pencil">
-                            <img src = { applePencil } />
+                            <img src = { applePencil } alt = "Tablet and pencil" />
                         </div>
                     </div>
                     <div className = "m-case-study-page-content__image-container">
                         <div className = "m-case-study-page-content__image -border__bottom">
-                            <img src = { homePageFeed } />
+                            <img src = { homePageFeed } alt = "Homepage feed" />
                         </div>
                     </div>
                 </div>
@@ -139,14 +139,14 @@ const KidsDiscover = class extends React.Component {
                 <div className = "m-case-study-page-content__mosaic -kd">
                     <div className = "mobile-group">
                         <div className = "grouped">
-                            <img src = { collageMaps } className = "-collage-maps" />
+                            <img src = { collageMaps } className = "-collage-maps" alt = "Collage of maps" />
                             <div className = "-blue-banner"></div>
                         </div>
-                        <img src = { whiteBoardSketches } className = "-white-board-sketches" />
+                        <img src = { whiteBoardSketches } className = "-white-board-sketches" alt = "Whiteboard sketches" />
                     </div>
                     <div className = "desktop-group">
-                        <img src = { collageMaps } className = "-collage-maps" />
-                        <img src = { whiteBoardSketches } className = "-white-board-sketches" />
+                        <img src = { collageMaps } className = "-collage-maps" alt = "Collage of maps" />
+                        <img src = { whiteBoardSketches } className = "-white-board-sketches" alt = "Whiteboard sketches" />
                         <div className = "-blue-banner"></div>
                     </div>
                 </div>
@@ -165,13 +165,13 @@ const KidsDiscover = class extends React.Component {
                 <div className = "m-case-study-page-content__section">
                     <div className = "o-rhythm__row">
                         <div className = "kd-image -dot-grid -desktop-only">
-                            <img src = { dotGrid } />
+                            <img src = { dotGrid } alt = "Dot grid" />
                         </div>
                         <div className = "kd-image -student-homework">
-                            <img src = { studentHomework } />
+                            <img src = { studentHomework } alt = "Student doing homework" />
                         </div>
                         <div className = "kd-image -feed-lockup">
-                            <img src = { feedLockup } />
+                            <img src = { feedLockup } alt = "Multiple feeds" />
                         </div>
                     </div>
                 </div>
@@ -180,7 +180,7 @@ const KidsDiscover = class extends React.Component {
                         <div className = "o-rhythm__row -mobile-flex-direction__column-reverse">
                             <div className = "o-rhythm__col -image">
                                 <div className = "kd-image">
-                                    <img src = { discoverMap } />
+                                    <img src = { discoverMap } alt = "Discover map" />
                                 </div>
                             </div>
                             <div className = "o-rhythm__col -y-align-center -content">
@@ -210,7 +210,7 @@ const KidsDiscover = class extends React.Component {
                             </div>
                             <div className = "o-rhythm__col">
                                 <div className = "kd-image -cube-doodle">
-                                    <img src = { cubeDoodle } />
+                                    <img src = { cubeDoodle } alt = "Cube doodle" />
                                 </div>
                             </div>
                         </div>
@@ -218,11 +218,11 @@ const KidsDiscover = class extends React.Component {
                             <div className = "o-rhythm__row">
                                 <div className = "o-rhythm__col">
                                     <div className = "kd-image -triangle-doodle">
-                                        <img src = { triangleDoodle } />
+                                        <img src = { triangleDoodle } alt = "Triangle doodle" />
                                     </div>
                                 </div>
                                 <div className = "kd-image -editor-screens">
-                                    <img src = { editorScreens } />
+                                    <img src = { editorScreens } alt = "Editor screens" />
                                 </div>
                             </div>
                         </div>
@@ -232,14 +232,21 @@ const KidsDiscover = class extends React.Component {
                                     <header>checking back in</header>
                                     <div className = "o-rhythm__row">
                                         <div>
-                                            <p>As soon as the beta product was ready, we took it to classrooms to test. We collected feedback from students and teachers, which helped us make final product adjustments and enhancements before going to market.</p>
+                                            <p>Soon after launch, we began a new engagement with Kids Discover to improve the platform based on user feedback. Some items on the road map included:</p>
+                                            <ul>
+                                                <li>Creating a frictionless onboarding experience</li>
+                                                <li>Getting personal with notifications and targeted messages</li>
+                                                <li>Overhauling payment processing, reminders and renewals</li>
+                                                <li>Adding ability for teachers to create assessments and for students to take them</li>
+                                                <li>Updating the payment structure to align with user expectations</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className = "o-rhythm__col -kd-color-block__last-image">
                                 <div className = "kd-image -site-home-page">
-                                    <img src = { siteHomePage } />
+                                    <img src = { siteHomePage } alt = "Homepage" />
                                 </div>
                             </div>
                         </div>
@@ -255,7 +262,7 @@ const KidsDiscover = class extends React.Component {
                     <div className = "-content">
                         <h5>Hackerone</h5>
                         <p>hacking for good</p>
-                        <a href = "/case-studies/hackerone" className = "a-button">See How</a>
+                        <a href = "/case-studies/hackerone/" className = "a-button">See Next Case Study</a>
                     </div>
                 </div>
             </div>

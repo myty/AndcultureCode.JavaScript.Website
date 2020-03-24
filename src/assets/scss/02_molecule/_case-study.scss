@@ -25,6 +25,7 @@
         background: -moz-linear-gradient(90deg, rgba(223,235,238,0) 5%, rgba(223,235,238,1) 20%, rgba(223,235,238,1) 50%, rgba(223,235,238,1) 80%, rgba(223,235,238,0) 95%); /* FF3.6-15 */
         background: -webkit-linear-gradient(90deg, rgba(223,235,238,0) 5%, rgba(223,235,238,1) 20%, rgba(223,235,238,1) 50%, rgba(223,235,238,1) 80%, rgba(223,235,238,0) 95%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(90deg, rgba(223,235,238,0) 5%, rgba(223,235,238,1) 20%, rgba(223,235,238,1) 50%, rgba(223,235,238,1) 80%, rgba(223,235,238,0) 95%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        z-index: 9;
     }
 
     @include breakpoints("tablet") {
