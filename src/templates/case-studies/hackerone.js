@@ -24,7 +24,7 @@ import sliderImage10 from '../../../static/img/case-studies/hackerone/Security12
 import sliderImage11 from '../../../static/img/case-studies/hackerone/Security16.jpg';
 import sliderImage12 from '../../../static/img/case-studies/hackerone/Security21.jpg';
 import sliderImage13 from '../../../static/img/case-studies/hackerone/Security25.jpg';
-import nextImg from '../../../static/img/case-studies/cca/kids_at_window_board.png';
+import nextImg from '../../../static/img/case-studies/cca/studying.jpg';
 
 const Hackerone = class extends React.Component {
     constructor(props) {
