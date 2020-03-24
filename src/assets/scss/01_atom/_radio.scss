@@ -19,7 +19,11 @@ fieldset .a-radio {
             background: url('../../../static/img/arrow-front.svg') no-repeat center center / contain;
             width: 50px;
             height: 6px;
-            left: -50px;
+            left: -20px;
+
+            @include breakpoints("phone") {
+                left: -50px;
+            }
         }
 
         &:after {
@@ -61,7 +65,11 @@ fieldset .a-radio {
                 background: url('../../../static/img/arrow-front.svg') no-repeat center center / contain;
                 width: 50px;
                 height: 6px;
-                left: -50px;
+                left: -20px;
+
+                @include breakpoints("phone") {
+                    left: -50px;
+                }
             }
 
             &:after {
