@@ -2,26 +2,25 @@ import React, { useEffect, useState } from 'react';
 
 export default function Header(props) {
 
-  const getWidth = () => window.innerWidth
-  || document.documentElement.clientWidth
-  || document.body.clientWidth;
-
-  let [width, setWidth] = useState(getWidth());
+  let [width, setWidth] = useState();
 
   useEffect(() => {
-    const resizeListener = () => {
-      // change width from the state object
-      setWidth(getWidth())
-    };
-    // set resize listener
-    window.addEventListener('resize', resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener('resize', resizeListener);
-    }
-  }, []);
+    const getWidth = () => window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth;
+      setWidth(getWidth());
+      const resizeListener = () => {
+        // change width from the state object
+        setWidth(getWidth())
+      };
+      // set resize listener
+      window.addEventListener('resize', resizeListener);
+      // clean up function
+      return () => {
+        // remove resize listener
+        window.removeEventListener('resize', resizeListener);
+      }
+  }, [width]);
 
   let opacity = 0;
   let titleClass = "m-header__title";
