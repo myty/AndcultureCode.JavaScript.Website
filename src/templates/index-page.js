@@ -23,7 +23,6 @@ export const IndexPageTemplate = ({
 }) => (
     <div className="p-home">
       {/* <HomePageAnimation /> */}
-      <img src = { logoImg } className = "-hidden" />
       <Hero
         scrollTop      = { scrollTop }
         title          = { title }

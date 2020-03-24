@@ -63,7 +63,6 @@ const ContactPage = ({ data }) => {
       data           = { frontmatter }
       scrollTop      = { scrollTop }>
       <div className = "p-interior-page">
-        <img src = { logoImg } className = "-hidden" />
         <ContactPageTemplate
           title          = { frontmatter.title }
           secondaryTitle = { frontmatter.secondaryTitle }
