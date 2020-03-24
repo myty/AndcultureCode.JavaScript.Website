@@ -43,7 +43,7 @@ const CCA = class extends React.Component {
         return (
             <div>
                 <div>
-                    <img src = { studyImg } />
+                    <img src = { studyImg } alt = "Studying" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section -body-intro -cca">
@@ -54,7 +54,7 @@ const CCA = class extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <img className = "ipad-img" src = { ipadLargeImg } />
+                    <img className = "ipad-img" src = { ipadLargeImg } alt = "Ipad" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
@@ -86,13 +86,13 @@ const CCA = class extends React.Component {
                                 <p>We agreed to have a preliminary splash page at first, then a basic site with space for events and media, and then, for the coup de grâce, a fully functioning site with content management capabilities. </p>
                                 <p>Here’s what’s amazing: Because we listened to what families and staff needed and wanted, we could move forward with confidence as we prioritized and refined potential features. User flows (how you click through the site) were evaluated so we could be confident in the enrollment process. No charter school should lose a potential enrollment because your site hits a dead end or ends up being more trouble than it’s worth. This is where our partnership style shines through. We’re not just plugging things out and churning out the next step. We want to help you solve a problem.</p>
                             </div>
-                        <img src = { timelineImg } />
+                        <img src = { timelineImg } alt = "Timeline" />
                         </div>
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__mosaic">
                     <div className = "-with-border">
-                        <img src = { studentImg } />
+                        <img src = { studentImg } alt = "Student" />
                     </div>
                 </div>
                 <div className = "o-rhythm__container">
@@ -107,12 +107,9 @@ const CCA = class extends React.Component {
                         </div>
                     </div>
                 </div>
-
                 <div>
-                    <img src = { backgroundImg } />
+                    <img src = { backgroundImg } alt = "Background" />
                 </div>
-
-
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <header className = "-push-three">getting the word out</header>
@@ -123,21 +120,17 @@ const CCA = class extends React.Component {
                         </div>
                     </div>
                 </div>
-
-
-
-
                 <div className = "m-case-study-page-content__color-block -cca">
-                    <img src = { rainbow } className = "-background-texture -rainbow" />
-                    <img src = { dotsTwo } className = "-background-texture -dots-two" />
-                    <img src = { dotsSmall } className = "-background-texture -dots-small" />
+                    <img src = { rainbow } className = "-background-texture -rainbow" alt = "Rainbow" />
+                    <img src = { dotsTwo } className = "-background-texture -dots-two" alt = "Dots" />
+                    <img src = { dotsSmall } className = "-background-texture -dots-small" alt = "Small dots" />
                     <div className = "o-rhythm__container">
-                        <img src = { laptopImg } className = "-front" />
+                        <img src = { laptopImg } className = "-front" alt = "Laptop" />
                     </div>
                     <div className = "m-case-study-page-content__copy-section">
-                        <img src = { traingle } className = "-background-texture -triangle" />
-                        <img src = { dots } className = "-background-texture -dots" />
-                        <img src = { block } className = "-background-texture -block" />
+                        <img src = { traingle } className = "-background-texture -triangle" alt = "Triangle" />
+                        <img src = { dots } className = "-background-texture -dots" alt = "Dots" />
+                        <img src = { block } className = "-background-texture -block" alt = "Block" />
                         <div className = "o-rhythm__container">
                             <h6 className = "content__header -mobile-only">Deployment &amp; Testing</h6>
                             <header className = "-push-three">launch...and it doesn’t end there.</header>

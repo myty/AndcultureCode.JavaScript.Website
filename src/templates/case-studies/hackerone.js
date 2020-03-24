@@ -55,7 +55,7 @@ const Hackerone = class extends React.Component {
         return (
             <div>
                 <div>
-                    <img src = { billboardImg } />
+                    <img src = { billboardImg } alt = "Billboard" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section -body-intro">
@@ -84,13 +84,13 @@ const Hackerone = class extends React.Component {
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__mosaic -hackerone">
-                    <img src = { posterImg } className = "-poster -mobile-only" />
+                    <img src = { posterImg } className = "-poster -mobile-only" alt = "Poster" />
                     <div className = "o-rhythm__container">
-                        <img src = { posterImg } className = "-poster -desktop-only" />
+                        <img src = { posterImg } className = "-poster -desktop-only" alt = "Poster" />
                     </div>
-                    <img src = { stickerImg } className = "-sticker" />
-                    <img src = { bannerImg } className = "-banner" />
-                    <img src = { dotTexture } className = "-dots -left" />
+                    <img src = { stickerImg } className = "-sticker" alt = "Sticker" />
+                    <img src = { bannerImg } className = "-banner" alt = "Banner" />
+                    <img src = { dotTexture } className = "-dots -left" alt = "Dots" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
@@ -118,7 +118,7 @@ const Hackerone = class extends React.Component {
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__image">
-                    <img src = { cardsImg } />
+                    <img src = { cardsImg } alt = "Cards" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section -hackerone-gear-cred">
@@ -144,13 +144,13 @@ const Hackerone = class extends React.Component {
                 </div>
                 <div className = "m-case-study-page-content__mosaic -hackerone -beer-stickers">
                     <div className = "o-rhythm__container">
-                        <img src = { hackerImg } className = "-desktop-only" />
-                        <img src = { stickerTwo } className = "-sticker-two" />
+                        <img src = { hackerImg } className = "-desktop-only" alt = "Hacker Sticker" />
+                        <img src = { stickerTwo } className = "-sticker-two" alt = "Hacker Sticker" />
                     </div>
-                    <img src = { hackerImg } className = "-mobile-only" />
-                    <img src = { dotTexture } className = "-dots" />
-                    <img src = { stickerOne } className = "-sticker-one" />
-                    <img src = { skateboardImg } className = "-skateboard" />
+                    <img src = { hackerImg } className = "-mobile-only" alt = "Hacker Sticker" />
+                    <img src = { dotTexture } className = "-dots" alt = "Dots" />
+                    <img src = { stickerOne } className = "-sticker-one" alt = "Sticker One" />
+                    <img src = { skateboardImg } className = "-skateboard" alt = "Skateboard" />
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section -mobile-padding__top-none">
