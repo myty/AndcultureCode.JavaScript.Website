@@ -47,7 +47,7 @@ const Pulse = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Research</h6>
-                        <header className = "-push-three">There’s a data side and a human side to this problem.</header>
+                        <header className = "-push-three">there’s a data side and a human side to this problem.</header>
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Research</h6>
                             <div className = "content__copy">
@@ -74,7 +74,7 @@ const Pulse = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Synthesis</h6>
-                        <header className = "-push-three">What’s the common thread we’re seeing?</header>
+                        <header className = "-push-three">what’s the common thread we’re seeing?</header>
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Synthesis</h6>
                             <div className = "content__copy">
@@ -93,7 +93,7 @@ const Pulse = class extends React.Component {
                         <div className = "m-case-study-page-content__copy-section -with-image">
                             <div className = "o-rhythm__row">
                                 <div className = "content__copy -left">
-                                    <header>Sketches become thumbnails. Thumbnails become mockups.</header>
+                                    <header>sketches become thumbnails. thumbnails become mockups.</header>
                                     <p>What was once a loose concept from PinnacleHealth to give nurse managers a powerful scheduling tool was turning into a beautifully designed healthcare management experience.</p>
                                     <p>Undoubtedly, healthcare’s regulations and incredible pace made this a unique challenge. But that only made us want to take even more care to ensure each detail was covered. We wanted to deliver a great experience, not just a scheduling tool. Well-designed experiences get used, day in and day out, even when things get hectic. And what hospital isn’t hectic?</p>
                                 </div>
@@ -108,7 +108,7 @@ const Pulse = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">User Testing</h6>
-                        <header className = "-push-three">One of the biggest challenges in designing an experience isn’t making the idea into a reality...</header>
+                        <header className = "-push-three">one of the biggest challenges in designing an experience isn’t making the idea into a reality...</header>
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">User Testing</h6>
                             <div className = "content__copy">
@@ -125,7 +125,7 @@ const Pulse = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Next Steps</h6>
-                        <header className = "-push-three">Priorities and process moving forward</header>
+                        <header className = "-push-three">priorities and process moving forward</header>
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Next Steps</h6>
                             <div className = "content__copy">
@@ -142,7 +142,7 @@ const Pulse = class extends React.Component {
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Iteration</h6>
-                        <header className = "-push-three">Evolving the system to increase effectiveness</header>
+                        <header className = "-push-three">evolving the system to increase effectiveness</header>
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Iteration</h6>
                             <div className = "content__copy">
