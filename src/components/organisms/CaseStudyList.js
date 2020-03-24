@@ -54,6 +54,13 @@ export default () => (
                     }
                   }
                 }
+                homeimage {
+                  childImageSharp {
+                    fluid(maxWidth: 1920, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
