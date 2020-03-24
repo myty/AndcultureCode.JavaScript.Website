@@ -94,9 +94,9 @@ const CaseStudy = class extends React.Component {
                     <div className = "m-case-study__block -top"></div>
                     <div className = "o-rhythm__container">
                         <div className = "m-case-study__image-container">
-                            { this.props.post.frontmatter.featuredimage ? (
+                            { this.props.post.frontmatter.homeimage ? (
                             <div className = "m-case-study__image">
-                                <img src = { this.props.post.frontmatter.featuredimage.childImageSharp.fluid.src } />
+                                <img src = { this.props.post.frontmatter.homeimage.childImageSharp.fluid.src } />
                             </div>
                             ) : null }
                             <div className = "m-case-study__texture">
