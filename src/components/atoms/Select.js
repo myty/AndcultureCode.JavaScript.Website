@@ -15,6 +15,7 @@ const Select = class extends React.Component {
         this._updateInputValue = this._updateInputValue.bind(this);
         this._activateField    = this._activateField.bind(this);
         this._disableField     = this._disableField.bind(this);
+        this._handleKeyPress   = this._handleKeyPress.bind(this);
     }
 
     _activateField() {
@@ -49,6 +50,12 @@ const Select = class extends React.Component {
         this.setState({ inputValue: e.target.value }, () => this.props.inputValueCallback(this.props.name, this.state.inputValue));
     }
 
+    _handleKeyPress(e) {
+        if (e.key === 'Enter' && this.props.handleKeyPressCallback) {
+            this.props.handleKeyPressCallback(e);
+        }
+    }
+
     render() {
         let cssClassName = 'a-label -dropdown';
 
@@ -72,7 +79,7 @@ const Select = class extends React.Component {
                     { this.props.name }
                 </label>
                 <div className = { selectClassName }>
-                    <select { ...selectProps } onChange = { this._updateInputValue } onBlur = { this._disableField } onFocus = { this._activateField } defaultValue="default">
+                    <select { ...selectProps } onChange = { this._updateInputValue } onBlur = { this._disableField } onFocus = { this._activateField } onKeyPress = { this._handleKeyPress } defaultValue="default">
                         <option value="default" disabled>Select an option</option>
                         <option value="existing">I have a startup I’d like to talk to you about</option>
                         <option value="story">I have an entrepreneurship story to share</option>

@@ -26,7 +26,9 @@ const CatamaranForm = class extends React.Component {
         this._setInputValue     = this._setInputValue.bind(this);
     }
 
-    _onNextClick() {
+    _onNextClick(e) {
+        e.preventDefault();
+        e.stopPropagation();
         if (this.state.activeQuestion === this.state.totalQuestions) {
             this._caclulateProgress(1);
             return;
@@ -134,27 +136,30 @@ const CatamaranForm = class extends React.Component {
                     <div className = "o-contact-form__wrapper">
                         <header>talk start-ups (Catamaran)</header>
                         <Input
-                            className          = { this.state.activeQuestion === 1 ? '-active': '' }
-                            type               = "text"
-                            name               = "name"
-                            inputValueCallback = { this._setInputValue }
-                            isRequired         = { true }
-                            lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.name } />
+                            className               = { this.state.activeQuestion === 1 ? '-active': '' }
+                            type                    = "text"
+                            name                    = "name"
+                            inputValueCallback      = { this._setInputValue }
+                            handleKeyPressCallback  = { this._onNextClick }
+                            isRequired              = { true }
+                            lightTheme              = { this.props.lightTheme }
+                            value                   = { this.state.formData.name } />
                         <Input
-                            className          = { this.state.activeQuestion === 2 ? '-active': '' }
-                            type               = "email"
-                            name               = "email"
-                            inputValueCallback = { this._setInputValue }
-                            isRequired         = { true }
-                            lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.email } />
+                            className               = { this.state.activeQuestion === 2 ? '-active': '' }
+                            type                    = "email"
+                            name                    = "email"
+                            inputValueCallback      = { this._setInputValue }
+                            handleKeyPressCallback  = { this._onNextClick }
+                            isRequired              = { true }
+                            lightTheme              = { this.props.lightTheme }
+                            value                   = { this.state.formData.email } />
                         <Select
-                            className          = { this.state.activeQuestion === 3 ? '-active': '' }
-                            name               = "interest"
-                            inputValueCallback = { this._setInputValue }
-                            lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.interest } />
+                            className               = { this.state.activeQuestion === 3 ? '-active': '' }
+                            name                    = "interest"
+                            inputValueCallback      = { this._setInputValue }
+                            handleKeyPressCallback  = { this._onNextClick }
+                            lightTheme              = { this.props.lightTheme }
+                            value                   = { this.state.formData.interest } />
                         <Textarea
                             className          = { this.state.activeQuestion === 4 ? '-active': '' }
                             name               = "message"
