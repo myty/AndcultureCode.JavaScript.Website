@@ -68,6 +68,9 @@ const CaseStudy = class extends React.Component {
         if (this.props.post.frontmatter.secondaryLayout) {
             caseStudyClass += " -secondary";
         }
+        if (this.props.post.frontmatter.modifiedTexture) {
+            caseStudyClass += " -modified";
+        }
         let caseStudyStyle;
         let linkStyle;
         linkStyle = {

@@ -933,6 +933,31 @@
         padding: 0;
         display: block;
 
+        &.-career-link {
+            a.a-button {
+                color: #043544;
+                border-color: #043544;
+            }
+
+            div.-content {
+                background-color: #043544;
+
+                @include breakpoints("tablet") {
+                    background-color: rgba(245,245,245,1);
+                }
+            }
+
+            @include breakpoints("tablet") {
+
+                &:hover {
+
+                    div.-content {
+                        background-color: #043544;
+                    }
+                }
+            }
+        }
+
         &.-kd {
 
             a.a-button {

@@ -26,6 +26,7 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Secondary Layout", name: "secondaryLayout", widget: "boolean"}
+      - {label: "Modified Texture", name: "modifiedTexture", widget: "boolean", default: false}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Home Image", name: "homeimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}

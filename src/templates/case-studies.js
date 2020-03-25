@@ -6,6 +6,7 @@ import Pulse from '../../src/templates/case-studies/pulse';
 import KidsDiscover from '../../src/templates/case-studies/kids-discover';
 import CCA from '../../src/templates/case-studies/cca';
 import Hackerone from '../../src/templates/case-studies/hackerone';
+import PACareerLink from './case-studies/pa-career-link';
 
 export const CaseStudyTemplate = ({
   caseStudyContent,
@@ -34,6 +35,10 @@ export const CaseStudyTemplate = ({
       { // if
         caseStudyContent.partnerName === 'Hackerone' &&
         <Hackerone />
+      }
+      { // if
+        caseStudyContent.partnerName === 'PA CareerLink®' &&
+        <PACareerLink />
       }
     </div>
   )

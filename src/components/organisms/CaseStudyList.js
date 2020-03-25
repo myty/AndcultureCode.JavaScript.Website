@@ -44,6 +44,7 @@ export default () => (
                 secondaryLayout
                 texture
                 partnerName
+                modifiedTexture
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost

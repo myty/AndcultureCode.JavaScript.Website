@@ -8,8 +8,8 @@ import stationImg from '../../../static/img/case-studies/pulse/nurse_station.jpg
 import whiteSketches from '../../../static/img/case-studies/pulse/white_sketches.png';
 import safariImg from '../../../static/img/case-studies/pulse/unit-workload-safari.png';
 import doodleImg from '../../../static/img/case-studies/pulse/pulse_block_doodle.jpg';
-import dataImg from '../../../static/img/case-studies/pulse/data-leveling.jpg';
-import nextImg from '../../../static/img/case-studies/kids-discover/student-homework.png';
+import dataImg from '../../../static/img/case-studies/pulse/data-leveling.png';
+import nextImg from '../../../static/img/case-studies/career-link/woman_iPad.jpg';
 
 const Pulse = class extends React.Component {
     constructor(props) {
@@ -152,7 +152,7 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "m-case-study-page-content__next m-case-study -kd">
+                <div className = "m-case-study-page-content__next m-case-study -career-link">
                     <div className = "-background-image__container">
                         <div
                             style     = { nextImageBlockStyle }
@@ -160,9 +160,9 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                     <div className = "-content">
-                        <h5>Kids Discover</h5>
-                        <p>changing the face of education</p>
-                        <a href = "/case-studies/kids-discover/" className = "a-button">See Next Case Study</a>
+                        <h5>PA CareerLink®</h5>
+                        <p>vulnerability and optimism in uncertain times</p>
+                        <a href = "/case-studies/career-link/" className = "a-button">See Next Case Study</a>
                     </div>
                 </div>
             </div>

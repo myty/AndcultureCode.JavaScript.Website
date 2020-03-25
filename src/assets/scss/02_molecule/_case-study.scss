@@ -56,6 +56,12 @@
         }
     }
 
+    &.-modified {
+        .m-case-study__image {
+            max-width: 85%;
+        }
+    }
+
     &.-visible {
 
         .a-button,
