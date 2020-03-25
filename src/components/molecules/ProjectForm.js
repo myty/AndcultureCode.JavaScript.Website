@@ -193,12 +193,15 @@ const ProjectForm = class extends React.Component {
                                     Next
                                 </a>
                             }
-                            <button
-                                type      = "submit"
-                                onClick   = { this._onSubmitClick }
-                                className = { buttonClass }>
-                                Submit
-                            </button>
+                            {  // if
+                                this.state.activeQuestion === this.state.totalQuestions &&
+                                <button
+                                    type      = "submit"
+                                    onClick   = { this._onSubmitClick }
+                                    className = { buttonClass }>
+                                    Submit
+                                </button>
+                            }
                         </div>
                     </div>
                 </div>

@@ -18,6 +18,7 @@ const ContactForm = class extends React.Component {
         }
 
         this._onFormTypeChange  = this._onFormTypeChange.bind(this);
+        this._handleKeyPress    = this._handleKeyPress.bind(this);
         this._deactiveFormBack  = this._deactiveForm.bind(this);
         this._activateForm      = this._activateForm.bind(this);
         this._returnForm        = this._returnForm.bind(this);
@@ -27,6 +28,12 @@ const ContactForm = class extends React.Component {
 
     _onFormTypeChange(e) {
         this.setState({ activeForm: e.target.value });
+    }
+
+    _handleKeyPress(e) {
+        if (e.key === 'Enter') {
+            this._activateForm(e);
+        }
     }
 
     _deactiveForm(e) {
@@ -122,35 +129,38 @@ const ContactForm = class extends React.Component {
                                 <header className = {headerClass}>what can we help you with?</header>
                                 <fieldset className = "-space">
                                     <input
-                                        onChange  = { this._onFormTypeChange }
-                                        checked   = { this.state.activeForm === "project" }
-                                        className = { radioInputClass }
-                                        type      = "radio"
-                                        name      = "type"
-                                        value     = "project"
-                                        id        = "project"/>
+                                        onChange    = { this._onFormTypeChange }
+                                        onKeyPress  = { this._handleKeyPress }
+                                        checked     = { this.state.activeForm === "project" }
+                                        className   = { radioInputClass }
+                                        type        = "radio"
+                                        name        = "type"
+                                        value       = "project"
+                                        id          = "project"/>
                                     <label htmlFor="project">start a project together</label>
                                 </fieldset>
                                 <fieldset className = "-space">
                                     <input
-                                        onChange  = { this._onFormTypeChange }
-                                        checked   = { this.state.activeForm === "quick-info" }
-                                        className = { radioInputClass }
-                                        type      = "radio"
-                                        name      = "type"
-                                        value     = "quick-info"
-                                        id        = "quick-info"/>
+                                        onChange    = { this._onFormTypeChange }
+                                        onKeyPress  = { this._handleKeyPress }
+                                        checked     = { this.state.activeForm === "quick-info" }
+                                        className   = { radioInputClass }
+                                        type        = "radio"
+                                        name        = "type"
+                                        value       = "quick-info"
+                                        id          = "quick-info"/>
                                     <label htmlFor="quick-info">get quick info</label>
                                 </fieldset>
                                 <fieldset className = "-space">
                                     <input
-                                        onChange  = { this._onFormTypeChange }
-                                        checked   = { this.state.activeForm === "start-ups" }
-                                        className = { radioInputClass }
-                                        type      = "radio"
-                                        name      = "type"
-                                        value     = "start-ups"
-                                        id        = "start-ups"/>
+                                        onChange    = { this._onFormTypeChange }
+                                        onKeyPress  = { this._handleKeyPress }
+                                        checked     = { this.state.activeForm === "start-ups" }
+                                        className   = { radioInputClass }
+                                        type        = "radio"
+                                        name        = "type"
+                                        value       = "start-ups"
+                                        id          = "start-ups"/>
                                     <label htmlFor="start-ups">talk start-ups (catamaran)</label>
                                 </fieldset>
                                 <div className = "o-contact-form__buttons -space">
