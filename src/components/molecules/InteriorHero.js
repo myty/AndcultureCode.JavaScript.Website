@@ -1,5 +1,5 @@
 import React from 'react';
-import contactHero from './../../../static/img/contact_hero.png';
+import contactHero from './../../../static/img/contact_hero.jpg';
 
 const InteriorHero = class extends React.Component {
   constructor(props) {

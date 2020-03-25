@@ -1,10 +1,10 @@
 import React from 'react';
-import pullScrollImage1 from '../../../static/img/case-studies/hackerone/badge.png';
-import pullScrollImage2 from '../../../static/img/case-studies/hackerone/luke.png';
-import pullScrollImage3 from '../../../static/img/case-studies/hackerone/tshirt.png';
+import pullScrollImage1 from '../../../static/img/case-studies/hackerone/badge.jpg';
+import pullScrollImage2 from '../../../static/img/case-studies/hackerone/luke.jpg';
+import pullScrollImage3 from '../../../static/img/case-studies/hackerone/tshirt.jpg';
 import pullScrollImage4 from '../../../static/img/case-studies/hackerone/brians_patch.png';
-import pullScrollImage5 from '../../../static/img/case-studies/hackerone/h165_sticker.png';
-import pullScrollImage6 from '../../../static/img/case-studies/hackerone/A4_Paper.png';
+import pullScrollImage5 from '../../../static/img/case-studies/hackerone/h165_sticker.jpg';
+import pullScrollImage6 from '../../../static/img/case-studies/hackerone/A4_Paper.jpg';
 
 
 const PullScroller = class extends React.Component {

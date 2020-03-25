@@ -134,6 +134,7 @@
         color: get-color("primary", "fresh");
         font-family: $font-primary;
         position: relative;
+        font-weight: 500;
         transition: all .5s ease;
 
         @include breakpoints("tablet") {

@@ -204,26 +204,23 @@
     &__top {
         @include clearfix();
         margin-bottom: 84px;
+        height: 100vh;
 
         @include breakpoints("tablet") {
-            height: 100vh;
             margin-bottom: 280px;
         }
     }
 
     &__titles {
         max-width: 690px;
-        width: 100%;
-        top: calc(100vh - 450px);
-        padding-top: 200px;
+        top: calc(100vh - 250px);
+        position: absolute;
 
         @media (min-height: 1024px) {
             top: calc(100vh - 395px);
-            padding-top: 0;
         }
 
         @include breakpoints("tablet") {
-            position: absolute;
         }
 
         p {
@@ -254,35 +251,17 @@
         position: absolute;
         mix-blend-mode: multiply;
         opacity: 0;
-        width: 100%;
-        top: 0;
-        right: 0;
+        width: 150%;
+        top: 100px;
+        right: -25%;
+        max-width: 9999999px;
 
-        &.-blue-blob-two {
-            display: none;
-
-            @include breakpoints("lg-desktop") {
-                display: block;
-            }
+        @include breakpoints("tablet") {
+            width: 100%;
+            top: 0;
         }
 
-        &.-green-paint {
-            display: none;
-
-            @include breakpoints("lg-desktop") {
-                display: block;
-            }
-        }
-
-        &.-pink-elephant {
-            display: none;
-
-            @include breakpoints("lg-desktop") {
-                display: block;
-            }
-        }
-
-        &.-blue-blob {
+        &.-pink-blob {
             display: none;
 
             @include breakpoints("lg-desktop") {

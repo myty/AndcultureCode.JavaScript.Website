@@ -1,6 +1,6 @@
 import React from 'react';
 import CustomSlider from '../../components/molecules/CustomSlider';
-import timelineImg from '../../../static/img/case-studies/cca/timeline.png';
+import timelineImg from '../../../static/img/case-studies/cca/timeline.jpg';
 import studentImg from '../../../static/img/case-studies/cca/girl_laptop.png';
 import laptopImg from '../../../static/img/case-studies/cca/Macbook_CCA.png';
 import backgroundImg from '../../../static/img/case-studies/cca/background.jpg';
@@ -17,7 +17,7 @@ import sliderImage4 from '../../../static/img/case-studies/cca/gallery_look_feel
 import sliderImage5 from '../../../static/img/case-studies/cca/gallery_tele_teaching.jpg';
 import sliderImage6 from '../../../static/img/case-studies/cca/gallery_wireframe.jpg';
 import studyImg from '../../../static/img/case-studies/cca/studying.jpg';
-import ipadLargeImg from '../../../static/img/case-studies/cca/cca_ipad_large.png';
+import ipadLargeImg from '../../../static/img/case-studies/cca/cca_ipad_large.jpg';
 import nextImg from '../../../static/img/case-studies/pulse/nurse_hallway.png';
 
 

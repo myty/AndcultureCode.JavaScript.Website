@@ -1,14 +1,14 @@
 import React from 'react';
 import scheduleImg from '../../../static/img/case-studies/pulse/schedule.jpg';
 import peopleImg from '../../../static/img/case-studies/pulse/peopleroles.jpg';
-import nurseImg from '../../../static/img/case-studies/pulse/nurse_hallway.png';
+import nurseImg from '../../../static/img/case-studies/pulse/nurse_hallway.jpg';
 import sketchImgOne from '../../../static/img/case-studies/pulse/sketchbook1.png';
 import sketchImgTwo from '../../../static/img/case-studies/pulse/sketchbook2.png';
-import stationImg from '../../../static/img/case-studies/pulse/nurse_station.png';
+import stationImg from '../../../static/img/case-studies/pulse/nurse_station.jpg';
 import whiteSketches from '../../../static/img/case-studies/pulse/white_sketches.png';
 import safariImg from '../../../static/img/case-studies/pulse/unit-workload-safari.png';
 import doodleImg from '../../../static/img/case-studies/pulse/pulse_block_doodle.jpg';
-import dataImg from '../../../static/img/case-studies/pulse/data-leveling.png';
+import dataImg from '../../../static/img/case-studies/pulse/data-leveling.jpg';
 import nextImg from '../../../static/img/case-studies/kids-discover/student-homework.png';
 
 const Pulse = class extends React.Component {
