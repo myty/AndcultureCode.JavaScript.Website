@@ -1,18 +1,13 @@
 import React from 'react';
-import CustomSlider from '../../components/molecules/CustomSlider';
-import timelineImg from '../../../static/img/case-studies/cca/timeline.png';
-import studentImg from '../../../static/img/case-studies/cca/girl_laptop.png';
-import laptopImg from '../../../static/img/case-studies/cca/Macbook_CCA.png';
-import backgroundImg from '../../../static/img/case-studies/cca/background.jpg';
-import rainbow from '../../../static/img/case-studies/cca/rainbow_doodle.png';
-import traingle from '../../../static/img/case-studies/cca/doodle_triangle.png';
-import dots from '../../../static/img/case-studies/cca/yellow_dots.png';
-import block from '../../../static/img/case-studies/cca/doodle_block.png';
-import dotsTwo from '../../../static/img/case-studies/cca/yellow_dots.png';
-import dotsSmall from '../../../static/img/case-studies/cca/dotted_area.png';
-import studyImg from '../../../static/img/case-studies/cca/studying.jpg';
-import ipadLargeImg from '../../../static/img/case-studies/cca/cca_ipad_large.png';
-import nextImg from '../../../static/img/case-studies/pulse/nurse_hallway.png';
+import CaseStudyContentSection from '../../components/molecules/CaseStudyContentSection';
+import imgJobSearch from '../../../static/img/case-studies/career-link/jobsearch.jpg';
+import imgPACapitol from '../../../static/img/case-studies/career-link/pa_capitol.jpg';
+import imgResourceCenter from '../../../static/img/case-studies/career-link/resource_center.jpg';
+import imgPennsylvania from '../../../static/img/case-studies/career-link/pennsylvania.png';
+import imgWhiteboard from '../../../static/img/case-studies/career-link/whiteboard.png';
+import imgWomaniPad from '../../../static/img/case-studies/career-link/woman_iPad.jpg';
+import imgDotGrid from '../../../static/img/case-studies/career-link/dot_grid.png';
+import nextImg from '../../../static/img/case-studies/kids-discover/student-homework.png';
 
 
 const PACareerLink = class extends React.Component {
@@ -22,124 +17,90 @@ const PACareerLink = class extends React.Component {
 
     render() {
 
-        // const nextImageBlockStyle = {
-        //     background: "url('" + nextImg + "') no-repeat center center / cover"
-        // }
+        const nextImageBlockStyle = {
+            background: "url('" + nextImg + "') no-repeat center center / cover"
+        }
 
         return (
             <div>
                 <div>
-                    <img src = { studyImg } alt = "Studying" />
+                    <img src = { imgJobSearch } alt = "Job Search" />
                 </div>
-                {/* <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section -body-intro -cca">
-                        <div className = "o-rhythm__row">
-                            <div className = "content__copy">
-                                <header>what was CCA’s reality?</header>
-                                <p>Their website didn’t improve their chances to enroll students or strengthen the bond with current families. How do we get prospective families to know and trust us, and current families to better partner with us? </p>
-                            </div>
-                        </div>
-                    </div>
-                    <img className = "ipad-img" src = { ipadLargeImg } alt = "Ipad" />
+                <CaseStudyContentSection
+                    header = { ["The current", <br />, "situation"] }
+                    title  = "what is the current reality?">
+                        <p>It's a probable (and broken) reality that the near future holds a 15-30% unemployment rate. Current systems, state governments and processes are unequipped for an influx of job seekers and consumers who need support during uncertain times. </p>
+                        <p>This reality isn't new to us. It brings us back to an engagement with Pennsylvania (PA) CareerLink&reg;, the Commonwealth's workforce development system.</p>
+                </CaseStudyContentSection>
+                <div className = "o-rhythm__container m-case-study-collage">
+                    <p>
+                        <img src = { imgResourceCenter } alt = "Resource Center" />
+                    </p>
+                    <p>
+                        PA CareerLink&reg; center locations in Pennsylvania
+                    </p>
+                    <p>
+                        <img src = { imgPennsylvania } alt = "Pennsylvania" />
+                    </p>
                 </div>
-                <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
-                        <h6 className = "content__header -mobile-only">Research</h6>
-                        <header className = "-push-three">we don’t work solo.</header>
-                        <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">Research</h6>
-                            <div className = "content__copy">
-                                <p><span className = "easter-egg__right">We did this thing together.</span>  CCA staff joined us for a group breakdown of their website. What worked, but could use improvements? What likely caused more than one family to say, “Uh, no thanks.” How smooth was the enrollment process, and what messages were being sent, both literally and figuratively, to people clicking through? It’s not rocket science, but there is a science to it, and we know how to ask the right questions to get to the right solutions. andculture & CCA took the time necessary to understand the shortcomings of their website, opportunities to improve and what goals we had.</p>
-                            </div>
-                        </div>
-                        <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">Takeaway</h6>
-                            <div className = "content__copy">
-                                <p>andculture &amp; CCA took the time necessary to understand the shortcomings of their website, opportunities to improve and what goals we had.</p>
-                                <div className = "easter-egg">We could say “brought in various stakeholders to evaluate the end-user experience” but that makes puppies cry.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <CustomSlider images = { sliderImages } />
-                <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section -image-right">
-                        <h6 className = "content__header -mobile-only">Synthesis</h6>
-                        <header className = "-push-three">we pulled all of that sweet research together and made a plan.</header>
-                        <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">Synthesis</h6>
-                            <div className = "content__copy">
-                                <p>We agreed to have a preliminary splash page at first, then a basic site with space for events and media, and then, for the coup de grâce, a fully functioning site with content management capabilities. </p>
-                                <p>Here’s what’s amazing: Because we listened to what families and staff needed and wanted, we could move forward with confidence as we prioritized and refined potential features. User flows (how you click through the site) were evaluated so we could be confident in the enrollment process. No charter school should lose a potential enrollment because your site hits a dead end or ends up being more trouble than it’s worth. This is where our partnership style shines through. We’re not just plugging things out and churning out the next step. We want to help you solve a problem.</p>
-                            </div>
-                        <img src = { timelineImg } alt = "Timeline" />
-                        </div>
-                    </div>
-                </div>
-                <div className = "m-case-study-page-content__mosaic">
-                    <div className = "-with-border">
-                        <img src = { studentImg } alt = "Student" />
-                    </div>
-                </div>
-                <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
-                        <h6 className = "content__header -mobile-only">Design &amp; Development</h6>
-                        <header className = "-push-three">our client partner loves the design phase because they can start seeing the whole picture.</header>
-                        <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">Design &amp; Development</h6>
-                            <div className = "content__copy">
-                                <p>We wireframe (sketch out a rough draft) the main site based on everything we’ve agreed on, and create a design kit with CCA’s newly approved brand, like an emperor with new clothes. VIP pages were custom designed after getting CCA’s approval (noticing a pattern here? Nothing happens with us in a vacuum. You’re right here with us.) </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <CaseStudyContentSection
+                    header              = "The reality"
+                    sectionClassName    = "-no-top-padding"
+                    title               = "what was our partner's reality?">
+                        <p>PA CareerLink&reg; centers provide a wealth of job support services. In addition to the government-funded 
+                            services offered as programs, there is a softer side of support that comes from the center staff and 
+                            the empathy they have for their clients. PA CareerLink&reg; services are provided with the job seeker’s 
+                            best interests in mind. Individually each service may be excellent, but challenges arise at the points 
+                            of transition and coordination.</p>
+                </CaseStudyContentSection>
                 <div>
-                    <img src = { backgroundImg } alt = "Background" />
+                    <img src = { imgPACapitol } alt = "PA Capitol" />
                 </div>
+                <CaseStudyContentSection
+                    header = "The problem"
+                    title  = "so what's the problem?">
+                        <p>The job search is not only professional, but personal. We went into the project knowing that as an agency, but more importantly as people. We knew that ethnographic and personal research could help us understand the human experience behind the broken reality of job seeking.</p>
+
+                        <p>In the Capitol region PA CareerLink&reg; office, we explored the services by assuming the role of a job seeker new to the area, who had lost his job in the move and was interested in exploring training opportunities. As a job seeker, we hoped to speak with someone about our particular interests, available training, and any alternatives that might be a good fit. Our expectations were not met.</p>
+
+                        <p>We found that an absence of program awareness, transportation difficulties, a lack of empowered leadership, spatial challenges that lead to privacy concerns, and other barriers led to a less than ideal experience for all involved. Consumers loved the programs, information, and assistance that PA CareerLink&reg; provided them, but found confusion with the experiences along the way.</p>
+
+                        <p>These are likely universal problems that seem like they need coordination from many different entities to become efficient. PA CareerLink&reg; itself can't adjust public transportation schedules or create new stops closer to its physical building.</p>
+
+                        <p>Instead we need to ask ourselves how we can make these services more accessible to users without needing to jump through hoops. And how we can innovate and implement now.</p>
+                </CaseStudyContentSection>
                 <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
-                        <header className = "-push-three">getting the word out</header>
-                        <div className = "o-rhythm__row">
-                            <div className = "content__copy">
-                                <p>In the meantime, we launched a preliminary website to help Commonwealth Charter Academy shout from the rooftops that they’ve got a new name but the same incredible mission of innovative education for students throughout the state. Even as a preliminary site, we still made sure to include the basic info, media information and upcoming events to make this media friendly (gotta get that buzz going in the news).</p>
-                            </div>
-                        </div>
-                    </div>
+                    <img src = { imgWhiteboard } alt = "Whiteboard" />
                 </div>
-                <div className = "m-case-study-page-content__color-block -cca">
-                    <img src = { rainbow } className = "-background-texture -rainbow" alt = "Rainbow" />
-                    <img src = { dotsTwo } className = "-background-texture -dots-two" alt = "Dots" />
-                    <img src = { dotsSmall } className = "-background-texture -dots-small" alt = "Small dots" />
-                    <div className = "o-rhythm__container">
-                        <img src = { laptopImg } className = "-front" alt = "Laptop" />
-                    </div>
-                    <div className = "m-case-study-page-content__copy-section">
-                        <img src = { traingle } className = "-background-texture -triangle" alt = "Triangle" />
-                        <img src = { dots } className = "-background-texture -dots" alt = "Dots" />
-                        <img src = { block } className = "-background-texture -block" alt = "Block" />
-                        <div className = "o-rhythm__container">
-                            <h6 className = "content__header -mobile-only">Deployment &amp; Testing</h6>
-                            <header className = "-push-three">launch...and it doesn’t end there.</header>
-                            <div className = "o-rhythm__row">
-                                <h6 className = "content__header -desktop-only">Deployment &amp; Testing</h6>
-                                <div className = "content__copy">
-                                    <p>Together with our partner, we launched CCA’s full website in May 2016. This included an integrated development platform so CCA can manage content and build new pieces—the keys to the coupe. We decked the platform out with customized features and integrations because that’s what CCA needs to stay current.</p>
-                                    <p>What else?</p>
-                                    <ul>
-                                        <li>Mobile-responsive</li>
-                                        <li>Interactive course catalog</li>
-                                        <li>Success stories</li>
-                                        <li>Stats from parent surveys</li>
-                                        <li>Upcoming events</li>
-                                        <li>Digitized enrollment process, from the initial info request through actual enrollment</li>
-                                    </ul>
-                                    <p>Everything they need to thrive…because we listened to what our partners needed to solve their problem, and offered an experience to address it. That’s the beauty of design.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <CaseStudyContentSection
+                    header = "The strategy"
+                    title  = "what needed to happen?">
+                        <p>Before stepping into a PA CareerLink&reg; center, we asked ourselves key questions like, “How can a brick and mortar uniquely 
+                            serve job seekers?”, “What are the internal relationships within PA CareerLink&reg;?”, and “What is the overall experience 
+                            for job seeker?” Guided by these questions, we identified five opportunities for innovation, which we call the “5 ways 
+                            forward.” They address areas vital to the PA CareerLink&reg; process that can be improved through comprehensive actionable steps.</p>
+                        <ol>
+                            <li>Cultivate employee cohesiveness and morale </li>
+                            <li>Improve ways of protecting and sharing information</li>
+                            <li>Provide support for overcoming personal barriers</li>
+                            <li>Develop tools for managing client expectations </li>
+                            <li>Expand community outreach</li>
+                        </ol>
+                </CaseStudyContentSection>
+                <div className="m-case-study-image-swatch">
+                    <img src = { imgDotGrid } alt = "Dot Grid" />
+                    <img src = { imgWomaniPad } alt = "Woman with iPad" />
                 </div>
-                <div className = "m-case-study-page-content__next m-case-study -pulse">
+                <div className="full-width-background -career-link">
+                    <CaseStudyContentSection
+                        header = "The future"
+                        title  = "what now?">
+                            <p>While these ways forward are still where changes need to occur, timeliness is even more important. Now more than ever we need innovators to stand in the gap and provide a speedy reinvention of these processes and programs run by government agencies that are facing changing circumstances in the coming 18 months. These changes are fundamental and dive deep into existing structures.</p>
+                            <p>We believe we are a part of that team of innovators. We've got the background knowledge, the human touch, and the passion for solving realities that just aren't working anymore.</p>
+                            <p>Another value we have at andculture is optimism. And while the present outlook is trending negative, we're optimistic that, together, we can build a future that's better. Better prepared. Better crafted. Better for all. </p>
+                    </CaseStudyContentSection>
+                </div>
+                <div className = "m-case-study-page-content__next m-case-study -kd">
                     <div className = "-background-image__container">
                         <div
                             style     = { nextImageBlockStyle }
@@ -147,11 +108,11 @@ const PACareerLink = class extends React.Component {
                         </div>
                     </div>
                     <div className = "-content">
-                        <h5>Pulse</h5>
-                        <p>rearchitecting nurse workflows</p>
-                        <a href = "/case-studies/pulse/" className = "a-button">See Next Case Study</a>
+                        <h5>Kids Discover</h5>
+                        <p>changing the face of education</p>
+                        <a href = "/case-studies/kids-discover" className = "a-button">See How</a>
                     </div>
-                </div> */}
+                </div>
             </div>
         )
     }

@@ -8,6 +8,12 @@
             @include breakpoints("desktop") {
                 padding-top: 80px;
             }
+
+            &.-spaced {
+                @include breakpoints("desktop") {
+                    padding-top: 180px;
+                }
+            }
         }
 
         @include breakpoints("desktop") {

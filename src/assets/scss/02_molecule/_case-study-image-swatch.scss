@@ -1,0 +1,23 @@
+.m-case-study-image-swatch {
+    position: relative;
+    text-align: right;
+
+    img:first-child {
+        height: 915px;
+        width: 915px;
+        position: absolute;
+        left: -15%;
+        top: -293px;
+        z-index: 0;
+    }
+
+    img:last-child {
+        position: relative;
+        z-index: 1;
+    }
+
+    + .full-width-background {
+        margin-top: -75px;
+        padding-top: 100px;
+    }
+}

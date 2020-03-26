@@ -524,6 +524,16 @@
             @include push-col(0);
         }
 
+        ol {
+            margin-top: 48px;
+            @include font-size(24px);
+            @include line-height(48px);
+        }
+
+        &.-no-top-padding {
+            padding-top: 0;
+        }
+
         &.-body-intro {
             @include breakpoints("desktop") {
                 @include push-col(1);

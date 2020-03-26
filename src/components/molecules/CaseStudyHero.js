@@ -10,8 +10,14 @@ const CaseStudyHero = class extends React.Component {
       background: this.props.color,
     }
 
+    let caseStudyClassName = ""
+
+    if (this.props.partnerName === 'PA CareerLink®') {
+      caseStudyClassName = "-spaced";
+    }
+
     return (
-      <div className = "o-hero -case-study">
+      <div className = { `o-hero -case-study ${caseStudyClassName}`}>
         <div className = "o-rhythm__container">
           <div className = "o-rhythm__row">
             <div className = "o-hero__title">

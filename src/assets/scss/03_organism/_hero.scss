@@ -23,7 +23,7 @@
             @include font-size(16px);
             @include line-height(24px);
             letter-spacing: .35px;
-            font-weight: 300;
+            font-weight: 100;
 
             @include breakpoints("sm-tablet") {
                 @include span-col(10);
@@ -98,6 +98,18 @@
 
             @include breakpoints("tablet") {
                 @include span-col(6);
+            }
+        }
+
+        &.-spaced {
+            .o-hero__title {
+                @include breakpoints("desktop") {
+                    padding-top: 50px;
+                }
+            }
+
+            .o-hero__meta {
+                padding-bottom: 240px;
             }
         }
 
