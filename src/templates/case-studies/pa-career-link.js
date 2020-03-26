@@ -27,7 +27,7 @@ const PACareerLink = class extends React.Component {
                     <img src = { imgJobSearch } alt = "Job Search" />
                 </div>
                 <CaseStudyContentSection
-                    header = { ["The current", <br />, "situation"] }
+                    header = { ["The current ", <br className="-desktop-only" />, "situation"] }
                     title  = "what is the current reality?">
                         <p>It's a probable (and broken) reality that the near future holds a 15-30% unemployment rate. Current systems, state governments and processes are unequipped for an influx of job seekers and consumers who need support during uncertain times. </p>
                         <p>This reality isn't new to us. It brings us back to an engagement with Pennsylvania (PA) CareerLink&reg;, the Commonwealth's workforce development system.</p>

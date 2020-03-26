@@ -796,6 +796,7 @@
             &__header {
                 @include span-col(12);
                 color: get-color("neutral", "medium-gray");
+                height: 20px;
                 margin-bottom: 20px;
                 margin-left: 0;
                 font-weight: 600;
