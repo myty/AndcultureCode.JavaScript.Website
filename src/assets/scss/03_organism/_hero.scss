@@ -103,9 +103,7 @@
 
         &.-spaced {
             .o-hero__title {
-                @include breakpoints("desktop") {
-                    padding-top: 50px;
-                }
+                padding-top: 125px;
             }
 
             .o-hero__meta {
