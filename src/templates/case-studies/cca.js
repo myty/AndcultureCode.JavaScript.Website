@@ -42,7 +42,7 @@ const CCA = class extends React.Component {
 
         return (
             <div>
-                <div>
+                <div className="m-case-study-page-content__image">
                     <img src = { studyImg } alt = "Studying" />
                 </div>
                 <div className = "o-rhythm__container">
@@ -107,7 +107,7 @@ const CCA = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="m-case-study-page-content__image">
                     <img src = { backgroundImg } alt = "Background" />
                 </div>
                 <div className = "o-rhythm__container">

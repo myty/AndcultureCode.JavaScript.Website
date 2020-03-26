@@ -41,7 +41,7 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="m-case-study-page-content__image">
                     <img src = { nurseImg } alt = "Nurses" />
                 </div>
                 <div className = "o-rhythm__container">
@@ -85,7 +85,7 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="m-case-study-page-content__image">
                     <img src = { stationImg } alt = "Nurse station" />
                 </div>
                 <div className = "m-case-study-page-content__color-block -pulse">
@@ -119,7 +119,7 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="m-case-study-page-content__image">
                     <img src = { doodleImg } alt = "Doodle" />
                 </div>
                 <div className = "o-rhythm__container">
@@ -136,7 +136,7 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="m-case-study-page-content__image">
                     <img src = { dataImg } alt = "Data" />
                 </div>
                 <div className = "o-rhythm__container">

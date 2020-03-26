@@ -23,7 +23,7 @@ const PACareerLink = class extends React.Component {
 
         return (
             <div>
-                <div>
+                <div className="m-case-study-page-content__image">
                     <img src = { imgJobSearch } alt = "Job Search" />
                 </div>
                 <CaseStudyContentSection
@@ -53,7 +53,7 @@ const PACareerLink = class extends React.Component {
                             best interests in mind. Individually each service may be excellent, but challenges arise at the points 
                             of transition and coordination.</p>
                 </CaseStudyContentSection>
-                <div>
+                <div className="m-case-study-page-content__image">
                     <img src = { imgPACapitol } alt = "PA Capitol" />
                 </div>
                 <CaseStudyContentSection
