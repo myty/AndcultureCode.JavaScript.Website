@@ -123,6 +123,7 @@
 
             @include breakpoints("lg-desktop") {
                 padding-left: 0;
+                padding-right: 100px;
             }
         }
 
