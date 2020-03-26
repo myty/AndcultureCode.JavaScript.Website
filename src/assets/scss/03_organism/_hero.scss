@@ -115,10 +115,16 @@
                     padding-bottom: 130px;
                 }
             }
+
+            .o-hero__image {
+                @include breakpoints("tablet") {
+                    margin-top: 80px;
+                }
+            }
         }
 
         .o-hero__title {
-            padding-top: 32px;
+            padding-top: 72px;
 
             @include breakpoints("tablet") {
                 @include span-col(5);
