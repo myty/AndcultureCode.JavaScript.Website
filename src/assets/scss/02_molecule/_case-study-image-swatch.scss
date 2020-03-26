@@ -6,9 +6,17 @@
         height: 915px;
         width: 915px;
         position: absolute;
-        left: -15%;
+        left: -915px;
         top: -293px;
         z-index: 0;
+
+        @include breakpoints("tablet") {
+            left: -700px;
+        }
+
+        @include breakpoints("desktop") {
+            left: -600px;
+        }
     }
 
     img:last-child {

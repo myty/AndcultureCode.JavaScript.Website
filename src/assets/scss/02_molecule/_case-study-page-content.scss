@@ -526,8 +526,13 @@
 
         ol {
             margin-top: 48px;
-            @include font-size(24px);
-            @include line-height(48px);
+            @include font-size(20px);
+            @include line-height(40px);
+
+            @include breakpoints("tablet") {
+                @include font-size(24px);
+                @include line-height(48px);
+            }
         }
 
         &.-no-top-padding {
@@ -726,14 +731,6 @@
                 @include span-col(12);
                 @include push-col(0);
             }
-        }
-
-        p {
-            margin-bottom: 32px;
-
-            // &:last-of-type {
-            //     margin-bottom: 0;
-            // }
         }
 
         ul {

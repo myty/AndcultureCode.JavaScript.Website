@@ -109,7 +109,11 @@
             }
 
             .o-hero__meta {
-                padding-bottom: 240px;
+                padding-bottom: 60px;
+
+                @include breakpoints("tablet") {
+                    padding-bottom: 240px;
+                }
             }
         }
 

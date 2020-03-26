@@ -1,17 +1,46 @@
 .m-case-study-collage {
+    padding-bottom: 48px;
+    text-align: center;
+
+    img {
+        max-width: 80%;
+    }
+
+    @include breakpoints("laptop") {
+        margin-bottom: 0;
+        text-align: inherit;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
     p:first-child {
-        padding-left: 15%;
+        padding-left: 0;
+
+        @include breakpoints("laptop") {
+            padding-left: 15%;
+        }
     }
 
     p:nth-child(2) {
-        padding-left: 25%;
-        width: 275px;
+        @include font-size(16px);
+        @include line-height(20px);
+        padding-top: 20px;
         color: get-color-primary("fresh");
+
+        @include breakpoints("laptop") {
+            padding-left: 25%;
+            width: 275px;
+        }
     }
 
     p:last-child {
-        padding-left: 50%;
         position: relative;
-        top: -200px;
+
+        @include breakpoints("laptop") {
+            padding-left: 50%;
+            top: -200px;
+        }
     }
 }
