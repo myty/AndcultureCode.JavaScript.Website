@@ -103,7 +103,12 @@
 
         &.-spaced {
             .o-hero__title {
-                padding-top: 125px;
+                padding-top: 60px;
+
+                @include breakpoints("sm-tablet") {
+                    padding-bottom: 125px;
+                    padding-top: 100px;
+                }
             }
 
             .o-hero__meta {

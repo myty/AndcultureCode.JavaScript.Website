@@ -10,7 +10,7 @@
             }
 
             &.-spaced {
-                @include breakpoints("desktop") {
+                @include breakpoints("tablet") {
                     padding-top: 100px;
                 }
             }
