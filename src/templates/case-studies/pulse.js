@@ -1,4 +1,6 @@
 import React from 'react';
+import CaseStudyContentSection from '../../components/molecules/CaseStudyContentSection';
+import CaseStudyFullBleedImage from '../../components/molecules/CaseStudyFullBleedImage';
 import scheduleImg from '../../../static/img/case-studies/pulse/schedule.jpg';
 import peopleImg from '../../../static/img/case-studies/pulse/peopleroles.jpg';
 import nurseImg from '../../../static/img/case-studies/pulse/nurse_hallway.jpg';
@@ -32,33 +34,23 @@ const Pulse = class extends React.Component {
                         <img src = { peopleImg } alt = "People and Roles" />
                     </div>
                 </div>
-                <div className = "o-rhythm__container">
-                    <div className = "o-rhythm__col">
-                        <div className = "m-case-study-page-content__copy-section -body-intro">
-                            <header>so what was broken?</header>
-                            <p>PinnacleHealth (now UPMC Pinnacle) needed a partner to turn static reports into a platform that could easily give nurse managers data to make scheduling their team second nature.</p>
-                            <p>Nobody wants to walk into a hospital and realize they don’t have enough nurses. Having too many nurses around isn’t great for the bottom line, either. Without the 10,000-foot view of how adequate staffing has been in recent days and months, how could a nurse manager realistically fill up a schedule with any confidence? PinnacleHealth needed to be focused on providing excellent patient care, not scheduling staff. The right platform can do help you schedule staff more effectively so you can provide excellent patient care.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="m-case-study-page-content__image">
-                    <img src = { nurseImg } alt = "Nurses" />
-                </div>
-                <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
-                        <h6 className = "content__header -mobile-only">Research</h6>
-                        <header className = "-push-three">there’s a data side and a human side to this problem.</header>
-                        <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">Research</h6>
-                            <div className = "content__copy">
-                                <p>For data, we know a problem is easier to tackle if you can see it. We took what our partner provided and turned it into sketched concepts; we also input data into our visualization tools. Voila, now we could start to see shortcomings where before it was spreadsheets and hunches. </p>
-                                <p>The human side led to interviewing each nurse manager. How do they schedule? What tools do they use to do that? <span className = "easter-egg__right">What about their job drives them up a wall?</span></p>
-                                <p>That’s not enough, though. So we met with people from other parts of the hospital system so we could get the full picture.</p>
-                                <div className = "easter-egg">”Is your job just like on ‘Grey’s Anatomy’?” likely is one.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <CaseStudyContentSection
+                    header = ""
+                    title  = "so what was broken?">
+                        <p>PinnacleHealth (now UPMC Pinnacle) needed a partner to turn static reports into a platform that could easily give nurse managers data to make scheduling their team second nature.</p>
+                        <p>Nobody wants to walk into a hospital and realize they don’t have enough nurses. Having too many nurses around isn’t great for the bottom line, either. Without the 10,000-foot view of how adequate staffing has been in recent days and months, how could a nurse manager realistically fill up a schedule with any confidence? PinnacleHealth needed to be focused on providing excellent patient care, not scheduling staff. The right platform can do help you schedule staff more effectively so you can provide excellent patient care.</p>
+                </CaseStudyContentSection>
+                <CaseStudyFullBleedImage
+                    altText = "Nurses"
+                    image   = { nurseImg } />
+                <CaseStudyContentSection
+                    header = "Research"
+                    title  = "there’s a data side and a human side to this problem.">
+                        <p>For data, we know a problem is easier to tackle if you can see it. We took what our partner provided and turned it into sketched concepts; we also input data into our visualization tools. Voila, now we could start to see shortcomings where before it was spreadsheets and hunches. </p>
+                        <p>The human side led to interviewing each nurse manager. How do they schedule? What tools do they use to do that? <span className = "easter-egg__right">What about their job drives them up a wall?</span></p>
+                        <p>That’s not enough, though. So we met with people from other parts of the hospital system so we could get the full picture.</p>
+                        <div className = "easter-egg">”Is your job just like on ‘Grey’s Anatomy’?” likely is one.</div>
+                </CaseStudyContentSection>
                 <div className = "o-rhythm__container -fluid">
                     <div className = "m-case-study-page-content__section -pulse__sketches-container">
                         <div className = "o-rhythm__row">
@@ -71,23 +63,16 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
-                        <h6 className = "content__header -mobile-only">Synthesis</h6>
-                        <header className = "-push-three">what’s the common thread we’re seeing?</header>
-                        <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">Synthesis</h6>
-                            <div className = "content__copy">
-                                <p>What kind of issues do all of these nurse managers have? The Synthesis stage makes it clear what’s a shared pain and what’s an isolated incident.</p>
-                                <p>We pinned interview profiles on a wall and highlighted answers that point to those shared pain points. At the same time, we mapped out PinnacleHealth’s processes, too, so it was a tangible system and not just a set of technical paragraphs in a dusty binder.</p>
-                                <p>With all of that together, we went over our research and sketches to come up with guiding principles and design constraints—here’s what’s important, and here’s what we have to work with. Having a partnership approach helps immensely here to make sure there aren’t unrealistic expectations or missed goals.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="m-case-study-page-content__image">
-                    <img src = { stationImg } alt = "Nurse station" />
-                </div>
+                <CaseStudyContentSection
+                    header = "Synthesis"
+                    title  = "what’s the common thread we’re seeing?">
+                        <p>What kind of issues do all of these nurse managers have? The Synthesis stage makes it clear what’s a shared pain and what’s an isolated incident.</p>
+                        <p>We pinned interview profiles on a wall and highlighted answers that point to those shared pain points. At the same time, we mapped out PinnacleHealth’s processes, too, so it was a tangible system and not just a set of technical paragraphs in a dusty binder.</p>
+                        <p>With all of that together, we went over our research and sketches to come up with guiding principles and design constraints—here’s what’s important, and here’s what we have to work with. Having a partnership approach helps immensely here to make sure there aren’t unrealistic expectations or missed goals.</p>
+                </CaseStudyContentSection>
+                <CaseStudyFullBleedImage
+                    altText = "Nurse Station"
+                    image   = { stationImg } />
                 <div className = "m-case-study-page-content__color-block -pulse">
                     <div className = "o-rhythm__container">
                         <div className = "m-case-study-page-content__copy-section -with-image">
@@ -105,23 +90,16 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
-                        <h6 className = "content__header -mobile-only">User Testing</h6>
-                        <header className = "-push-three">one of the biggest challenges in designing an experience isn’t making the idea into a reality...</header>
-                        <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">User Testing</h6>
-                            <div className = "content__copy">
-                                <p>It’s getting people to use it! That’s why we gathered a small group of (brave?) initial users to try this new platform, something way out of the box compared to the static reports they had grown accustomed to. We needed to watch them use it, and they needed to see how we turned a bunch of spreadsheets into an accessible, chart-filled, problem-solving dashboard.</p>
-                                <p>We observed. We interviewed. We met with nurse managers and administrators to discuss how they used the platform, and more importantly, what shortcomings it may have at this early stage. Was something confusing? Was a task more challenging to complete than we expected? </p>
-                                <p>A tip: Work with companies that don’t assume the first version of what they produced is perfect. It should be about testing and evolving.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="m-case-study-page-content__image">
-                    <img src = { doodleImg } alt = "Doodle" />
-                </div>
+                <CaseStudyContentSection
+                    header = "User Testing"
+                    title  = "one of the biggest challenges in designing an experience isn’t making the idea into a reality...">
+                        <p>It’s getting people to use it! That’s why we gathered a small group of (brave?) initial users to try this new platform, something way out of the box compared to the static reports they had grown accustomed to. We needed to watch them use it, and they needed to see how we turned a bunch of spreadsheets into an accessible, chart-filled, problem-solving dashboard.</p>
+                        <p>We observed. We interviewed. We met with nurse managers and administrators to discuss how they used the platform, and more importantly, what shortcomings it may have at this early stage. Was something confusing? Was a task more challenging to complete than we expected? </p>
+                        <p>A tip: Work with companies that don’t assume the first version of what they produced is perfect. It should be about testing and evolving.</p>
+                </CaseStudyContentSection>
+                <CaseStudyFullBleedImage
+                    altText = "Doodle"
+                    image   = { doodleImg } />
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
                         <h6 className = "content__header -mobile-only">Next Steps</h6>
@@ -136,22 +114,15 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="m-case-study-page-content__image">
-                    <img src = { dataImg } alt = "Data" />
-                </div>
-                <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
-                        <h6 className = "content__header -mobile-only">Iteration</h6>
-                        <header className = "-push-three">evolving the system to increase effectiveness</header>
-                        <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">Iteration</h6>
-                            <div className = "content__copy">
-                                <p>We had initial user feedback, plus data, and now we could update the platform design. We tweaked how the info was presented and modified the navigation. Charts were added to make the experience more comprehensive; you really could get a sense of how the entire hospital operated.</p>
-                                <p>We didn’t veer off our initial guiding principles. We just worked with our partner to evolve the system into an even more effective version to address their problem.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <CaseStudyFullBleedImage
+                    altText = "Data"
+                    image   = { dataImg } />
+                <CaseStudyContentSection
+                    header = "Iteration"
+                    title  = "evolving the system to increase effectiveness">
+                    <p>We had initial user feedback, plus data, and now we could update the platform design. We tweaked how the info was presented and modified the navigation. Charts were added to make the experience more comprehensive; you really could get a sense of how the entire hospital operated.</p>
+                    <p>We didn’t veer off our initial guiding principles. We just worked with our partner to evolve the system into an even more effective version to address their problem.</p>
+                </CaseStudyContentSection>
                 <div className = "m-case-study-page-content__next m-case-study -career-link">
                     <div className = "-background-image__container">
                         <div

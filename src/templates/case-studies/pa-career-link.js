@@ -1,4 +1,5 @@
 import React from 'react';
+import CaseStudyFullBleedImage from '../../components/molecules/CaseStudyFullBleedImage';
 import CaseStudyContentSection from '../../components/molecules/CaseStudyContentSection';
 import imgJobSearch from '../../../static/img/case-studies/career-link/jobsearch.jpg';
 import imgPACapitol from '../../../static/img/case-studies/career-link/pa_capitol.jpg';
@@ -23,9 +24,9 @@ const PACareerLink = class extends React.Component {
 
         return (
             <div>
-                <div className="m-case-study-page-content__image">
-                    <img src = { imgJobSearch } alt = "Job Search" />
-                </div>
+                <CaseStudyFullBleedImage
+                    altText = "Job Search"
+                    image   = { imgJobSearch } />
                 <CaseStudyContentSection
                     header = { ["The current ", <br className="-desktop-only" />, "situation"] }
                     title  = "what is the current reality?">
@@ -53,9 +54,9 @@ const PACareerLink = class extends React.Component {
                             best interests in mind. Individually each service may be excellent, but challenges arise at the points 
                             of transition and coordination.</p>
                 </CaseStudyContentSection>
-                <div className="m-case-study-page-content__image">
-                    <img src = { imgPACapitol } alt = "PA Capitol" />
-                </div>
+                <CaseStudyFullBleedImage
+                    altText = "PA Capitol"
+                    image   = { imgPACapitol } />
                 <CaseStudyContentSection
                     header = "The problem"
                     title  = "so what's the problem?">
