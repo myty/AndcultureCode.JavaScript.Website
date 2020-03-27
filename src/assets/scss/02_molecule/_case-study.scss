@@ -37,6 +37,10 @@
         transition: all 0.6s ease;
         display: none;
 
+        &.-bottom {
+            height: 120px;
+        }
+
         @include breakpoints("tablet") {
             display: block;
         }
@@ -70,6 +74,16 @@
         .m-case-study__count {
             color: get-color("primary", "white") !important;
             border-color: get-color("primary", "white") !important;
+        }
+    }
+
+    &.-list {
+        h5 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 60px;
         }
     }
 

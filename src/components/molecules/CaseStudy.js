@@ -58,7 +58,7 @@ const CaseStudy = class extends React.Component {
     }
 
     render() {
-        let caseStudyClass = "m-case-study";
+        let caseStudyClass = "m-case-study -list";
         if (this.state.isHovered) {
             caseStudyClass += " -hovered"
         }
