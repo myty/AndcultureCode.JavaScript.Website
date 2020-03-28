@@ -346,6 +346,11 @@
             &.-dots-small {
                 right: -100px;
                 bottom: 180px;
+                display: none;
+
+                @include breakpoints("tablet") {
+                    display: block;
+                }
             }
         }
 
