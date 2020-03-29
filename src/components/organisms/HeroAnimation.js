@@ -42,63 +42,63 @@ const HeroAnimation = () => {
         tl.to(groupOneImgOne, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 1)
+        }, 0)
         tl.to(groupOneImgTwo, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 3)
+        }, 2)
         tl.to(groupOneImgThree, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 5)
+        }, 4)
         tl.to(groupOneImgOne, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 7)
+        }, 6)
         tl.to(groupTwoImgOne, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 7)
+        }, 6)
         tl.to(groupOneImgTwo, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 9)
+        }, 8)
         tl.to(groupTwoImgTwo, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 9)
+        }, 8)
         tl.to(groupOneImgThree, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 11)
+        }, 10)
         tl.to(groupTwoImgThree, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 11)
+        }, 10)
         tl.to(groupTwoImgOne, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 13)
+        }, 12)
         tl.to(groupThreeImgOne, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 13)
+        }, 12)
         tl.to(groupTwoImgTwo, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 15)
+        }, 14)
         tl.to(groupThreeImgTwo, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 15)
+        }, 14)
         tl.to(groupTwoImgThree, 1.5, {
             opacity:    0,
             ease:       Power1.easeOut
-        }, 17)
+        }, 16)
         tl.to(groupThreeImgThree, 1.5, {
             opacity:    1,
             ease:       Power1.easeIn
-        }, 17)
+        }, 16)
     }, []);
 
     return (

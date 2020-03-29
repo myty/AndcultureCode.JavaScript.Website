@@ -348,7 +348,7 @@
                 bottom: 180px;
                 display: none;
 
-                @include breakpoints("tablet") {
+                @include breakpoints("laptop") {
                     display: block;
                 }
             }
@@ -498,10 +498,16 @@
             }
 
             img {
-
                 &.-front {
+                    left: -32px;
                     position: relative;
                     z-index: 1;
+                    max-width: 160%;
+
+                    @include breakpoints("tablet") {
+                        left: auto;
+                        max-width: 100%;
+                    }
                 }
             }
         }
