@@ -7,8 +7,10 @@ const Footer = class extends React.Component {
   }
 
   render() {
+    let footerClassName = this.props.showDividerLine ? "-divider" : "";
+
     return (
-      <div className = "m-footer">
+      <div className = {`m-footer ${footerClassName}`}>
         <div className = "o-rhythm__container">
           <div className = "o-rhythm__row">
             <div className = "m-footer__left o-rhythm__col -span-six">

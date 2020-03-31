@@ -7,13 +7,31 @@
     }
 
     &__image {
-        @include span-col(7);
+        @include span-col(12);
         height: 550px; // TODO: Remove when we have the real image. This is to take up space.
+
+        @include breakpoints("laptop") {
+            @include span-col(6);
+        }
+
+        @include breakpoints("sm-desktop") {
+            @include span-col(7);
+        }
     }
 
     &__details {
-        @include span-col(5);
-        margin-top: 350px;
+        @include span-col(12);
+        margin-bottom: 60px;
+
+        @include breakpoints("laptop") {
+            @include span-col(6);
+            margin-top: 175px;
+        }
+
+        @include breakpoints("sm-desktop") {
+            @include span-col(5);
+            margin-top: 350px;
+        }
 
         h5 {
             @include font-size("base");

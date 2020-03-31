@@ -5,7 +5,15 @@ import Footer from './molecules/Footer';
 import useSiteMetadata from './SiteMetadata';
 import { withPrefix } from 'gatsby';
 
-const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop, pageClassName }) => {
+const TemplateWrapper = ({
+  children,
+  pageTitle,
+  data,
+  hideNavigation,
+  scrollTop,
+  pageClassName,
+  showFooterDividerLine
+}) => {
   let { title, description, socialDescription, socialImg } = useSiteMetadata();
   if (data) {
     title = data.metaTitle;
@@ -61,7 +69,7 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop,
           hideNavigation = { hideNavigation }
           scrollTop      = { scrollTop } />
         {children}
-        <Footer />
+        <Footer showDividerLine={showFooterDividerLine} />
       </div>
     </div>
   )

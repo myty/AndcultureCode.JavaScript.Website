@@ -34,10 +34,11 @@ export const BlogPageTemplate = ({
 
     return (
       <Layout
-        data          = { frontmatter }
-        pageClassName = "p-blog"
-        pageTitle     = "blog"
-        scrollTop     = { scrollTop }>
+        data                  = { frontmatter }
+        pageClassName         = "p-blog"
+        pageTitle             = "blog"
+        scrollTop             = { scrollTop }
+        showFooterDividerLine = { true }>
         <BlogPageTemplate
           scrollTop      = { scrollTop }
           title          = { frontmatter.title }

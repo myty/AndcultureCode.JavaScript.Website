@@ -1,9 +1,39 @@
 .o-blog-list {
+    position: relative;
+
     .m-blog-post {
-        margin-top: 180px;
+        margin-top: 60px;
+
+        @include breakpoints("tablet") {
+            margin-top: 180px;
+        }
 
         &:last-child {
-            margin-bottom: 180px;
+            margin-bottom: 60px;
+
+            @include breakpoints("tablet") {
+                margin-bottom: 180px;
+            }
+        }
+    }
+
+    &__streamlines {
+        position: absolute;
+        right: -70px;
+        top: 635px;
+        z-index: -1;
+    }
+
+    &__scroll {
+        @include font-size("base");
+        margin-top: 60px;
+        color: get-color-primary("fresh");
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        @include breakpoints("tablet") {
+            margin-top: 206px;
         }
     }
 }
