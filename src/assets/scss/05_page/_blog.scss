@@ -1,0 +1,9 @@
+.p-blog {
+    .m-header__logo svg path {
+        fill: get-color-primary("white");
+    }
+
+    .m-header__page-title {
+        color: get-color-primary("white");
+    }
+}

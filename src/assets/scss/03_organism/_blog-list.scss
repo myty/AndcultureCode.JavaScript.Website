@@ -1,0 +1,9 @@
+.o-blog-list {
+    .m-blog-post {
+        margin-top: 180px;
+
+        &:last-child {
+            margin-bottom: 180px;
+        }
+    }
+}

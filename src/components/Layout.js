@@ -5,7 +5,7 @@ import Footer from './molecules/Footer';
 import useSiteMetadata from './SiteMetadata';
 import { withPrefix } from 'gatsby';
 
-const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop }) => {
+const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop, pageClassName }) => {
   let { title, description, socialDescription, socialImg } = useSiteMetadata();
   if (data) {
     title = data.metaTitle;
@@ -14,6 +14,9 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
     socialDescription = data.socialDescription;
     socialImg = data.socialImg;
   }
+
+  let containerClassName = pageClassName ? pageClassName : "";
+
   return (
     <div>
       <Helmet>
@@ -52,12 +55,14 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.png" />
       </Helmet>
-      <Header
-        pageTitle      = { pageTitle }
-        hideNavigation = { hideNavigation }
-        scrollTop      = { scrollTop } />
-      {children}
-      <Footer />
+      <div className={containerClassName}>
+        <Header
+          pageTitle      = { pageTitle }
+          hideNavigation = { hideNavigation }
+          scrollTop      = { scrollTop } />
+        {children}
+        <Footer />
+      </div>
     </div>
   )
 }
