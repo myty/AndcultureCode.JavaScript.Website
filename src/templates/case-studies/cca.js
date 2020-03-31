@@ -63,7 +63,11 @@ const CCA = class extends React.Component {
                         <div className = "o-rhythm__row">
                             <h6 className = "content__header -desktop-only">Research</h6>
                             <div className = "content__copy">
-                                <p><span className = "easter-egg__right">We did this thing together.</span>  CCA staff joined us for a group breakdown of their website. What worked, but could use improvements? What likely caused more than one family to say, “Uh, no thanks.” How smooth was the enrollment process, and what messages were being sent, both literally and figuratively, to people clicking through? It’s not rocket science, but there is a science to it, and we know how to ask the right questions to get to the right solutions. andculture & CCA took the time necessary to understand the shortcomings of their website, opportunities to improve and what goals we had.</p>
+                                <p><span className = "easter-egg__right">We did this thing together.</span>  CCA staff joined us for a group breakdown 
+                                of their website. What worked, but could use improvements? What likely caused more than one family to say, 
+                                “Uh, no thanks.” How smooth was the enrollment process, and what messages were being sent, both literally and 
+                                figuratively, to people clicking through? It’s not rocket science, but there is a science to it, and we know 
+                                how to ask the right questions to get to the right solutions.</p>
                             </div>
                         </div>
                         <div className = "o-rhythm__row">
