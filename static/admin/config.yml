@@ -13,7 +13,8 @@ public_folder: /img
 
 collections:
   - name: "case-studies"
-    label: "Case Study"
+    label: "Case Studies"
+    label_singular: "Case Study"
     folder: "src/pages/case-studies"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -34,8 +35,69 @@ collections:
       - {label: Meta Title, name: metaTitle, widget: string}
       - {label: Meta Description, name: metaDescription, widget: string}
 
+  - name: "blog-posts"
+    label: "Blog"
+    label_singular: "Blog Post"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-posts"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Headline", name: "headline", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured", name: "featured", widget: "boolean"}
+      - label: "Featured Image"
+        name: "featuredimage"
+        widget: "object"
+        fields:
+         - {label: "Image", name: "image", widget: "image"}
+         - {label: "Description", name: "description", widget: "string"}
+      - label: "Tile Image"
+        name: "tileimage"
+        widget: "object"
+        fields:
+         - {label: "Image", name: "image", widget: "image"}
+         - {label: "Description", name: "description", widget: "string"}
+      - label: "Post Image"
+        name: "postimage"
+        widget: "object"
+        fields:
+         - {label: "Image", name: "image", widget: "image"}
+         - {label: "Description", name: "description", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        fields:
+         - {label: Meta Title, name: metaTitle, widget: string}
+         - {label: Meta Description, name: metaDescription, widget: string}
+
+  - name: "authors"
+    label: "Authors"
+    label_singular: "Author"
+    folder: "data/authors"
+    create: true
+    identifier_field: "name"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "authors"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Position", name: "position", widget: "string"}
+      - label: "Social Links"
+        label_singular: "Link"
+        name: "social-links"
+        widget: "list"
+        fields:
+        - label: "Platform"
+          name: "platform"
+          widget: "select"
+          options: ["Dribbble", "Facebook", "GitHub", "Instragram", "LinkedIn", "Twitter"]
+        - {label: "URL", name: "url", widget: "string"}
+
   - name: "careers"
     label: "Careers"
+    label_singular: "Career"
     folder: "src/pages/careers"
     create: true
     fields:
@@ -44,7 +106,6 @@ collections:
       - {label: "Link", name: "position", widget: "string"}
       - {label: Meta Title, name: metaTitle, widget: string}
       - {label: Meta Description, name: metaDescription, widget: string}
-
 
   - name: "pages"
     label: "Pages"
