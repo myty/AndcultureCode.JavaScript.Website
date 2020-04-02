@@ -1,4 +1,5 @@
 ---
+createPage: true
 templateKey: case-studies
 title: rearchitecting nurse workflows
 partnerName: Pulse

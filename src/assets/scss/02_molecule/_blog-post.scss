@@ -1,14 +1,19 @@
 .m-blog-post {
+    width: 100%;
+
     &.-right {
         .m-blog-post__details__wrapper {
             padding-left: 0;
-            padding-right: 72px;
+            padding-right: 0;
+
+            @include breakpoints("laptop") {
+                padding-right: 72px;
+            }
         }
     }
 
     &__image {
         @include span-col(12);
-        height: 550px; // TODO: Remove when we have the real image. This is to take up space.
 
         @include breakpoints("laptop") {
             @include span-col(6);
@@ -21,16 +26,14 @@
 
     &__details {
         @include span-col(12);
-        margin-bottom: 60px;
+        position: relative;;
 
         @include breakpoints("laptop") {
             @include span-col(6);
-            margin-top: 175px;
         }
 
         @include breakpoints("sm-desktop") {
             @include span-col(5);
-            margin-top: 350px;
         }
 
         h5 {
@@ -43,15 +46,29 @@
         }
 
         p {
-            @include font-size("medium-large");
-            @include line-height("large");
+            @include font-size("medium");
+            @include line-height(32px);
             color: get-color-primary("after-hours");
             margin-block-end: 0;
             margin-block-start: 0;
+
+            @include breakpoints("laptop") {
+                @include font-size("medium-large");
+                @include line-height("large");
+            }
         }
 
         &__wrapper {
-            padding-left: 72px;
+            margin-bottom: 32px;
+            padding-left: 0;
+            position: relative;
+
+            @include breakpoints("laptop") {
+                margin-bottom: 0;
+                padding-left: 72px;
+                position: absolute;
+                bottom: 60px;
+            }
         }
     }
 }

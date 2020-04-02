@@ -1,4 +1,5 @@
 ---
+createPage: true
 templateKey: index-page
 title: designing the world around us
 secondaryTitle: one experience at a time

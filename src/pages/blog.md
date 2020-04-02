@@ -1,4 +1,5 @@
 ---
+createPage: true
 templateKey: blog-page
 secondaryTitle: hi, we're andculture,
 title: a design company making the world better one experience at a time.

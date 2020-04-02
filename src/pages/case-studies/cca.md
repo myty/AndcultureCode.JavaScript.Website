@@ -1,4 +1,5 @@
 ---
+createPage: true
 templateKey: case-studies
 title: redefining what cyber education can do
 partnerName: CCA

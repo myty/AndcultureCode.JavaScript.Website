@@ -8,7 +8,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(filter: {frontmatter: {createPage: {eq: true}}}, limit: 1000) {
         edges {
           node {
             id

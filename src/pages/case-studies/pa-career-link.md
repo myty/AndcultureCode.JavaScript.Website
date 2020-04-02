@@ -1,4 +1,5 @@
 ---
+createPage: true
 templateKey: case-studies
 title: vulnerability + optimism in uncertain times
 partnerName: PA CareerLink®

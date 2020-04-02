@@ -1,4 +1,5 @@
 ---
+createPage: true
 templateKey: case-studies
 title: hacking for good
 partnerName: Hackerone

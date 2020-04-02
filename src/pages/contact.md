@@ -1,4 +1,5 @@
 ---
+createPage: true
 templateKey: contact-page
 title: let's connect
 secondaryTitle: ahoy hoy/bonjour/anyoung

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 
 // Primary Component
@@ -11,19 +11,38 @@ const BlogPost = (props) => {
         className = "-right";
     }
 
+    const post = props.post;
+
     return (
         <article className={`o-rhythm__row m-blog-post ${className}`}>
             {props.imageOnLeft &&
-                <BlogPostImage />
+                <Fragment>
+                    <div className="m-blog-post__details -mobile-only">
+                        <div className="m-blog-post__details__wrapper">
+                            <h5>{ post.category }</h5>
+                            <p>{ post.title }</p>
+                        </div>
+                    </div>
+                    <BlogPostImage post = { post } />
+                    <div className="m-blog-post__details -desktop-only">
+                        <div className="m-blog-post__details__wrapper">
+                            <h5>{ post.category }</h5>
+                            <p>{ post.title }</p>
+                        </div>
+                    </div>
+                </Fragment>
             }
-            <div className="m-blog-post__details">
-                <div className="m-blog-post__details__wrapper">
-                    <h5>{ props.tag }</h5>
-                    <p>{ props.title }</p>
-                </div>
-            </div>
+
             {!props.imageOnLeft &&
-                <BlogPostImage />
+                <Fragment>
+                    <div className="m-blog-post__details">
+                        <div className="m-blog-post__details__wrapper">
+                            <h5>{ post.category }</h5>
+                            <p>{ post.title }</p>
+                        </div>
+                    </div>
+                    <BlogPostImage post = { post } />
+                </Fragment>
             }
         </article>
     );
@@ -35,7 +54,9 @@ const BlogPost = (props) => {
 
 const BlogPostImage = (props) => (
     <div className="m-blog-post__image">
-        <img src="https://via.placeholder.com/685x547/2AB2C1/ffffff" alt="Placeholder Image" />
+        <img 
+            src = { props.post.tileImage.image.childImageSharp.fluid.src } 
+            alt = { props.post.tileImage.description } />
     </div>
 );
 

@@ -1,4 +1,5 @@
 ---
+createPage: true
 templateKey: 'case-studies'
 title: 'changing the face of education'
 partnerName: Kids Discover

@@ -17,9 +17,10 @@ collections:
     label_singular: "Case Study"
     folder: "src/pages/case-studies"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "case-studies"}
+      - {label: "Create Page", name: "createPage", widget: "hidden", default: true}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Partner Name", name: "partnerName", widget: "string"}
       - {label: "Texture", name: "texture", widget: "string"}
@@ -40,13 +41,35 @@ collections:
     label_singular: "Blog Post"
     folder: "src/pages/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-posts"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Create Page", name: "createPage", widget: "hidden", default: true}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Headline", name: "headline", widget: "string"}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "employees"
+        searchFields: ["name", "position"]
+        valueField: "name"
+        displayField: "name"
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured", name: "featured", widget: "boolean"}
+      - label: "Featured Color"
+        name: "featuredColor"
+        widget: "select"
+        options:
+         - { label: "Fresh", value: "-fresh" }
+         - { label: "After Hours", value: "-after-hours" }
+         - { label: "Violet Blue", value: "-violet-blue" }
+         - { label: "Throwback Pink", value: "-throwback-pink" }
+         - { label: "Siracha", value: "-siracha" }
+         - { label: "Tea", value: "-tea" }
+         - { label: "Eraser", value: "-eraser" }
+         - { label: "Sticky Blue", value: "-sticky-blue" }
+         - { label: "Center Lane", value: "-center-lane" }
+        default: { label: "Fresh", value: "-fresh" }
       - label: "Featured Image"
         name: "featuredimage"
         widget: "object"
@@ -66,7 +89,11 @@ collections:
          - {label: "Image", name: "image", widget: "image"}
          - {label: "Description", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Agency", "Agile", "Behind the Scenes", "Brands", "Case Study", "Catamaran", "Design", "Software Development and Engineering", "Strategy", "User Experience"]
+        default: "Agency"
       - label: "SEO"
         name: "seo"
         widget: "object"
@@ -74,16 +101,23 @@ collections:
          - {label: Meta Title, name: metaTitle, widget: string}
          - {label: Meta Description, name: metaDescription, widget: string}
 
-  - name: "authors"
-    label: "Authors"
-    label_singular: "Author"
-    folder: "data/authors"
+  - name: "employees"
+    label: "Employees"
+    label_singular: "Employee"
+    folder: "src/data/employees"
     create: true
     identifier_field: "name"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "authors"}
+      - {label: "Create Page", name: "createPage", widget: "hidden", default: false}
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Position", name: "position", widget: "string"}
+      - {label: "Job Title", name: "position", widget: "string"}
+      - {label: "Easter Egg", name: "easterEgg", widget: "string"}
+      - label: "Photo"
+        name: "photo"
+        widget: "object"
+        fields:
+         - {label: "Image", name: "image", widget: "image"}
+         - {label: "Description", name: "description", widget: "string"}
       - label: "Social Links"
         label_singular: "Link"
         name: "social-links"
@@ -102,6 +136,7 @@ collections:
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careers"}
+      - {label: "Create Page", name: "createPage", widget: "hidden", default: true}
       - {label: "Position", name: "position", widget: "string"}
       - {label: "Link", name: "position", widget: "string"}
       - {label: Meta Title, name: metaTitle, widget: string}
@@ -115,6 +150,7 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: "Create Page", name: "createPage", widget: "hidden", default: true}
           - {label: Title, name: title, widget: string}
           - {label: Secondary, name: secondaryTitle, widget: string}
           - {label: Subtitle, name: subTitle, widget: string}
@@ -126,6 +162,7 @@ collections:
         name: "contact"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+          - {label: "Create Page", name: "createPage", widget: "hidden", default: true}
           - {label: Title, name: title, widget: string}
           - {label: Secondary, name: secondaryTitle, widget: string}
           - {label: Subtitle, name: subTitle, widget: string}
@@ -141,6 +178,7 @@ collections:
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Create Page", name: "createPage", widget: "hidden", default: true}
           - {label: Title, name: title, widget: string}
           - {label: Secondary, name: secondaryTitle, widget: string}
           - {label: Subtitle, name: subTitle, widget: string}
