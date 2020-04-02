@@ -5,21 +5,16 @@ import BlogFeatured                   from '../components/molecules/BlogFeatured
 import BlogList                       from '../components/organisms/BlogList';
 
 export const BlogPostTemplate = ({
-    title,
-    secondaryTitle,
-    subTitle,
-    scrollTop,
   }) => (
       <div>
-        <BlogFeatured />
         <div className="o-rhythm__container">
-          <BlogList />
+          
         </div>
       </div>
     )
 
   const BlogPost = ({ data }) => {
-    const { frontmatter } = data.markdownRemark;
+    //const { frontmatter } = data.markdownRemark;
 
     const [scrollTop, setScrollTop] = useState(0);
 
@@ -34,15 +29,15 @@ export const BlogPostTemplate = ({
 
     return (
       <Layout
-        data                  = { frontmatter }
+        data                  = { null }
         pageTitle             = "blog post"
         scrollTop             = { scrollTop }
         showFooterDividerLine = { true }>
         <BlogPostTemplate
           scrollTop      = { scrollTop }
-          title          = { frontmatter.title }
-          secondaryTitle = { frontmatter.secondaryTitle }
-          subTitle       = { frontmatter.subTitle } />
+          title          = { "" }
+          secondaryTitle = { "" }
+          subTitle       = { "" } />
       </Layout>
     )
   }
