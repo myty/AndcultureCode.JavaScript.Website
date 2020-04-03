@@ -51,7 +51,8 @@ export default () => (
       query={graphql`
         query BlogListQuery {
             allMarkdownRemark(
-                filter: {frontmatter: {templateKey: {eq: "blog-post"}, featured: {eq: false}}}
+                filter: {frontmatter: {templateKey: {eq: "blog-post"}, featured: {eq: false}}},
+                sort: {order: DESC, fields: frontmatter___date}
             ) {
                 edges {
                   node {

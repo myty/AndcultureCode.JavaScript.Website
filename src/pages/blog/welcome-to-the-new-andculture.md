@@ -5,7 +5,7 @@ title: welcome to the new andculture
 headline: oh, hello! welcome to andculture — please make yourself at home.
 author: Madeline Pellman
 date: 2020-04-01
-featured: false
+featured: true
 featuredColor: -fresh
 featuredImage:
   image: /img/blog/blog_featured_image.jpg

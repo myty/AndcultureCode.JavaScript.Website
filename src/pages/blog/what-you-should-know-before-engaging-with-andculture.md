@@ -1,7 +1,7 @@
 ---
 createPage: true
 templateKey: blog-post
-title: what you should know before engaging with andculture (or any design company)
+title: what you should know before engaging with andculture
 headline: oh, hello! welcome to andculture — please make yourself at home.
 author: Anne Parmer
 date: 2020-03-31

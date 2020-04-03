@@ -7,6 +7,7 @@ import React from 'react';
 const BlogFeatured = (props) => {
     return (
         <div className="m-blog-featured">
+            <img src="/img/blog/blog_featured_image.jpg" alt="welcome to the new andculture" />
             <div className="o-rhythm__container">
                 <div className="o-rhythm__row">
                     <div className="m-blog-featured__title">
