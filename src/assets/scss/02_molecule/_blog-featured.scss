@@ -1,27 +1,46 @@
 .m-blog-featured {
-    height: 638px;
-    margin-top: 165px;
+    @include clearfix();
+    margin-top: 80px;
     width: 100%;
     position: relative;
     background-color: get-color-primary("fresh");
 
     @include breakpoints("laptop") {
-        height: 652px;
+        margin-top: 160px;
     }
 
-    img {
-        left: 0;
-        position: absolute;
-        top: 0;
+    &__image {
+        float: none;
+        width: 100%;
+
+        @include breakpoints("sm-tablet") {
+            float: left;
+            width: 40%;
+        }
+
+        img {
+            max-width: auto;
+        }
     }
 
     &__title {
-        @include span-col(6);
-        @include push-col(6);
-        padding-top: 200px;
+        float: none;
+        width: 100%;
+        padding: 60px 30px;
         color: get-color-primary("white");
 
-        @include breakpoints("sm-desktop") {
+        @include breakpoints("sm-tablet") {
+            float: left;
+            padding: 60px 60px 0 60px;
+            width: 60%;
+        }
+
+        @include breakpoints("tablet") {
+            padding-top: 100px;
+        }
+
+        @include breakpoints("lg-desktop") {
+            padding-top: 165px;
         }
 
         h1 {

@@ -14,9 +14,6 @@ const BlogList = (props) => {
 
     return (
         <div className={`o-rhythm__row o-blog-list`}>
-            {postCount >= 2 &&
-                <img src={ imgStreamlines } alt="Streamlines Artifact" className="o-blog-list__streamlines" />
-            }
             {posts &&
                 posts.map(({ node: post }, index) => {
                     const blogPost = post.frontmatter;
@@ -25,22 +22,18 @@ const BlogList = (props) => {
                         <BlogPost
                             imageOnLeft = { (index + 1) % 2 === 0 }
                             key         = { `blog-post-${index}` }
-                            post        = { blogPost } />
+                            post        = { blogPost }
+                            url         = { post.fields.slug }
+                            zIndex      = { postCount - index } />
                     );
                 })
             }
-            {postCount > 4 &&
+            {/* {postCount > 4 &&
                 <div className="o-blog-list__scroll">Scroll to load more posts</div>
-            }
+            } */}
         </div>
     );
 };
-
-
-// Secondary Components
-// ------------------------------------
-
-
 
 
 // Exports
@@ -101,6 +94,9 @@ export default () => (
                       featuredColor
                       body
                       author
+                    }
+                    fields {
+                        slug
                     }
                   }
                 }

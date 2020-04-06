@@ -1,39 +1,70 @@
 .m-blog-post {
     width: 100%;
+    position: relative;
 
     &.-right {
-        .m-blog-post__details__wrapper {
-            padding-left: 0;
-            padding-right: 0;
+        .m-blog-post__details {
+            @include push-col(0);
 
-            @include breakpoints("laptop") {
-                padding-right: 72px;
+            &__wrapper {
+                text-align: right;
             }
+        }
+
+        .m-blog-post__squiggle {
+            left: 0;
+        }
+    }
+
+    &__squiggle {
+        display: none;
+
+        @include breakpoints("laptop") {
+            display: block;
+            height: 450px;
+            position: absolute;
+            right: 0;
+            top: -275px;
+            z-index: -1;
+        }
+
+        @include breakpoints("sm-desktop") {
+            height: auto;
+            top: -350px;
         }
     }
 
     &__image {
         @include span-col(12);
+        position: relative;
+        z-index: 1;
+
+        @include breakpoints("sm-tablet") {
+            @include span-col(5);
+            @include push-col(1);
+        }
 
         @include breakpoints("laptop") {
             @include span-col(6);
-        }
-
-        @include breakpoints("sm-desktop") {
-            @include span-col(7);
+            @include push-col(1);
         }
     }
 
     &__details {
         @include span-col(12);
-        position: relative;;
+        position: relative;
+        margin-top: 65px;
 
-        @include breakpoints("laptop") {
-            @include span-col(6);
+        @include breakpoints("sm-tablet") {
+            @include span-col(5);
+            @include push-col(1);
+            margin-top: 60px;
         }
 
-        @include breakpoints("sm-desktop") {
-            @include span-col(5);
+        @include breakpoints("laptop") {
+            @include span-col(4);
+            @include push-col(1);
+            margin-top: 0;
         }
 
         h5 {
@@ -58,14 +89,26 @@
             }
         }
 
+        a {
+            @include font-size("base");
+            border-bottom: 2px solid get-color-primary("fresh");
+            display: inline-block;
+            margin-top: 25px;
+            padding-bottom: 5px;
+            color: get-color-primary("fresh");
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
         &__wrapper {
             margin-bottom: 32px;
             padding-left: 0;
             position: relative;
+            text-align: left;
 
             @include breakpoints("laptop") {
                 margin-bottom: 0;
-                padding-left: 72px;
                 position: absolute;
                 bottom: 60px;
             }

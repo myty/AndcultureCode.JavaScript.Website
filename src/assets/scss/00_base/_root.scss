@@ -7,6 +7,10 @@ img {
     vertical-align: bottom;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .-push-one {
 @include span-col(12);
 
@@ -23,11 +27,27 @@ img {
     }
   }
 
+.-phone-only {
+    display: block;
+
+    @include breakpoints("sm-tablet") {
+        display: none !important;
+    }
+}
+
 .-mobile-only {
     display: block;
 
     @include breakpoints("tablet") {
         display: none !important;
+    }
+}
+
+.-tablet-and-desktop-only {
+    display: none;
+
+    @include breakpoints("sm-tablet") {
+        display: block;
     }
 }
 

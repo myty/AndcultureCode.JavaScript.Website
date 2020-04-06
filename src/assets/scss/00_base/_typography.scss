@@ -24,6 +24,16 @@ h1 {
         @include font-size(85px);
         @include line-height(100px);
     }
+
+    @include breakpoints("laptop") {
+        @include font-size(70px);
+        @include line-height(80px);
+    }
+
+    @include breakpoints("desktop") {
+        @include font-size(85px);
+        @include line-height(100px);
+    }
 }
 
 h2 {

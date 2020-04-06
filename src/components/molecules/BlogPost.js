@@ -14,20 +14,18 @@ const BlogPost = (props) => {
     const post = props.post;
 
     return (
-        <article className={`o-rhythm__row m-blog-post ${className}`}>
+        <article 
+            className = {`o-rhythm__row m-blog-post ${className}`}
+            style     = {{zIndex: props.zIndex}}>
             {props.imageOnLeft &&
                 <Fragment>
-                    <div className="m-blog-post__details -mobile-only">
-                        <div className="m-blog-post__details__wrapper">
-                            <h5>{ post.category }</h5>
-                            <p>{ post.title }</p>
-                        </div>
-                    </div>
+                    <img src="/img/blog/grey_lines_right.png" alt="Grey Squiggle Lines" className="m-blog-post__squiggle" />
                     <BlogPostImage post = { post } />
-                    <div className="m-blog-post__details -desktop-only">
+                    <div className="m-blog-post__details">
                         <div className="m-blog-post__details__wrapper">
                             <h5>{ post.category }</h5>
                             <p>{ post.title }</p>
+                            <a href={ props.url }>Read More</a>
                         </div>
                     </div>
                 </Fragment>
@@ -35,13 +33,22 @@ const BlogPost = (props) => {
 
             {!props.imageOnLeft &&
                 <Fragment>
-                    <div className="m-blog-post__details">
+                    <img src="/img/blog/grey_lines_left.png" alt="Grey Squiggle Lines" className="m-blog-post__squiggle" />
+                    <div className="m-blog-post__details -tablet-and-desktop-only">
                         <div className="m-blog-post__details__wrapper">
                             <h5>{ post.category }</h5>
                             <p>{ post.title }</p>
+                            <a href={ props.url }>Read More</a>
                         </div>
                     </div>
                     <BlogPostImage post = { post } />
+                    <div className="m-blog-post__details -phone-only">
+                        <div className="m-blog-post__details__wrapper">
+                            <h5>{ post.category }</h5>
+                            <p>{ post.title }</p>
+                            <a href={ props.url }>Read More</a>
+                        </div>
+                    </div>
                 </Fragment>
             }
         </article>
