@@ -26,7 +26,9 @@ const BlogFeatured = (props) => {
             </div>
             <div className="m-blog-featured__title">
                 <h1>{ featuredPost.title }</h1>
-                <a href={ featuredPostUrl }>Read More</a>
+                <a
+                    aria-label = {`Read more about ${featuredPost.title}`}
+                    href       = { featuredPostUrl }>Read More</a>
             </div>
         </div>
     );

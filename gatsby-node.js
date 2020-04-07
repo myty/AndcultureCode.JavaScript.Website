@@ -1,7 +1,16 @@
-const _ = require('lodash')
-const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
+const _                      = require('lodash')
+const path                   = require('path')
+const { createFilePath }     = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+
+// This is required to allow for absolute imports
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, "src"), "node_modules"],
+    },
+  })
+}
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions

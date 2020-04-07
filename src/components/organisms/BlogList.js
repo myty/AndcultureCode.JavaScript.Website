@@ -1,6 +1,5 @@
 import React                    from 'react';
-import BlogPost                 from "../molecules/BlogPost"
-import imgStreamlines           from '../../../static/img/blog/streamlines.png';
+import BlogPost                 from "components/molecules/BlogPost"
 import { graphql, StaticQuery } from 'gatsby'
 
 
@@ -28,9 +27,6 @@ const BlogList = (props) => {
                     );
                 })
             }
-            {/* {postCount > 4 &&
-                <div className="o-blog-list__scroll">Scroll to load more posts</div>
-            } */}
         </div>
     );
 };
@@ -53,7 +49,6 @@ export default () => (
                     frontmatter {
                       templateKey
                       title
-                      headline
                       date
                       featured
                       featuredImage {
@@ -86,13 +81,8 @@ export default () => (
                           }
                         }
                       }
-                      seo {
-                        metaDescription
-                        metaTitle
-                      }
                       category
                       featuredColor
-                      body
                       author
                     }
                     fields {

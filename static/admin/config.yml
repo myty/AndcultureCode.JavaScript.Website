@@ -92,7 +92,7 @@ collections:
       - label: "Category"
         name: "category"
         widget: "select"
-        options: ["Agency", "Agile", "Behind the Scenes", "Brands", "Case Study", "Catamaran", "Design", "Software Development and Engineering", "Strategy", "User Experience"]
+        options: ["Agency", "Catamaran", "Design/UX", "Engineering", "Partners", "Strategy"]
         default: "Agency"
       - label: "SEO"
         name: "seo"
