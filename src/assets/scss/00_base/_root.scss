@@ -38,7 +38,7 @@ img {
 .-mobile-only {
     display: block;
 
-    @include breakpoints("tablet") {
+    @include breakpoints("sm-tablet") {
         display: none !important;
     }
 }

@@ -112,15 +112,15 @@ collections:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Job Title", name: "position", widget: "string"}
       - {label: "Easter Egg", name: "easterEgg", widget: "string"}
-      - label: "Photo"
-        name: "photo"
+      - label: "Author Photo"
+        name: "authorPhoto"
         widget: "object"
         fields:
          - {label: "Image", name: "image", widget: "image"}
          - {label: "Description", name: "description", widget: "string"}
       - label: "Social Links"
         label_singular: "Link"
-        name: "social-links"
+        name: "socialLinks"
         widget: "list"
         fields:
         - label: "Platform"

@@ -3,15 +3,29 @@
         color: get-color-primary("after-hours");
     }
 
+    .o-rhythm__container {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        @include breakpoints("sm-tablet") {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+
     // Blog Post Page
     // ----------------------------------------
 
     &__background {
-        margin-top: 160px;
+        margin-top: 80px;
         position: relative;
 
+        @include breakpoints("tablet") {
+            margin-top: 160px;
+        }
+
         &__gradient {
-            height: 1300px;
+            height: 500px;
             width: 100%;
             position: absolute;
             left: 0;
@@ -19,35 +33,75 @@
             z-index: 0;
             background: rgb(255,255,255);
             background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 70%);
+
+            @include breakpoints("tablet") {
+                height: 1300px;
+            }
         }
 
         &__wrapper {
-            padding-top: 200px;
+            padding-top: 150px;
             position: relative;
             z-index: 1;
+
+            @include breakpoints("sm-tablet") {
+                padding-top: 200px;
+            }
         }
     }
 
     header {
-        padding-top: 100px;
+        padding-top: 20px;
         background-color: get-color-primary("white");
+        padding-left: 8px;
+        padding-right: 8px;
+
+        @include breakpoints("sm-tablet") {
+            padding-top: 100px;
+        }
 
         section {
-            @include span-col(8);
-            @include push-col(1);
+            @include span-col(12);
+
+            @include breakpoints("sm-tablet") {
+                @include span-col(6);
+                @include push-col(1);
+            }
 
             h1 {
                 text-transform: lowercase;
             }
 
+            time {
+                @include font-size("medium-large");
+                display: block;
+                margin-top: 10px;
+                color: get-color-neutral("light-gray");
+            }
+
             h2 {
-               margin-top: 80px;
-               color: get-color-neutral("light-gray");
+                margin-top: 40px;
+                color: get-color-neutral("light-gray");
+
+                @include breakpoints("sm-tablet") {
+                    margin-top: 80px;
+                }
             }
         }
 
         aside {
-            @include span-col(3);
+            @include span-col(12);
+            display: none;
+
+            @include breakpoints("sm-tablet") {
+                @include span-col(5);
+                display: block;
+            }
+
+            @include breakpoints("laptop") {
+                @include span-col(3);
+                @include push-col(1);
+            }
         }
     }
 
@@ -55,13 +109,26 @@
         background-color: get-color-primary("white");
 
         section {
-            @include span-col(10);
-            @include push-col(1);
-            margin-top: 80px;
+            @include span-col(12);
+            margin-top: 32px;
+
+            @include breakpoints("sm-tablet") {
+                @include span-col(10);
+                @include push-col(1);
+            }
+
+            @include breakpoints("tablet") {
+                margin-top: 80px;
+            }
 
             p {
-                @include font-size(24px);
-                @include line-height(39px);
+                @include font-size("small");
+                @include line-height(32px);
+
+                @include breakpoints("sm-tablet") {
+                    @include font-size(24px);
+                    @include line-height(39px);
+                }
 
                 + p {
                     margin-top: 30px;
@@ -69,35 +136,62 @@
             }
 
             blockquote {
-                @include span-col(9);
-                @include pull-col(1);
-                margin-bottom: 100px;
-                margin-top: 100px;
+                border-left: 4px solid get-color-primary("fresh");
+                margin-bottom: 60px;
+                margin-top: 60px;
+                margin-inline-start: 0;
+                margin-inline-end: 0;
+                padding-left: 26px;
+
+                @include breakpoints("tablet") {
+                    @include span-col(9);
+                    @include push-col(1);
+                    margin-bottom: 100px;
+                    margin-top: 100px;
+                }
 
                 p {
-                    @include font-size(42px);
-                    @include line-height(54px);
+                    @include font-size(24px);
+                    @include line-height(36px);
                     color: get-color-neutral("light-gray");
+
+                    @include breakpoints("sm-tablet") {
+                        @include font-size(42px);
+                        @include line-height(54px);
+                    }
                 }
             }
         }
     }
 
     footer {
-        margin-top: 100px;
+        margin-top: 60px;
+
+        @include breakpoints("tablet") {
+            margin-top: 100px;
+        }
 
         section {
-            @include span-col(7);
+            @include span-col(11);
             @include push-col(1);
 
+            @include breakpoints("tablet") {
+                @include span-col(7);
+                @include push-col(1);
+            }
+
             .blog-artifact {
-                display: inline-block;
+                display: none;
                 height: 2px;
                 margin-right: 27px;
                 width: 43px;
                 position: relative;
                 top: -5px;
                 background-color: get-color-primary("fresh");
+
+                @include breakpoints("sm-tablet") {
+                    display: inline-block;
+                }
             }
 
             a {
@@ -113,28 +207,43 @@
 
                 &:hover {
                     svg {
-                        fill: get-color("neutral", "gray");
+                        fill: get-color-primary("fresh");
                     }
                 }
             }
         }
 
         nav {
-            @include span-col(3);
+            @include span-col(11);
+            @include push-col(1);
+            margin-top: 32px;
+
+            @include breakpoints("tablet") {
+                @include span-col(3);
+                margin-top: 0;
+            }
 
             a {
                 @include font-size("small");
-                display: inline-block;
+                display: block;
                 color: get-color-neutral("light-gray");
                 font-weight: 200;
                 text-transform: lowercase;
 
+                @include breakpoints("sm-tablet") {
+                    display: inline-block;
+                }
+
                 &:first-child {
-                    margin-right: 40px;
+                    margin-bottom: 16px;
+                    margin-right: 0;
+
+                    @include breakpoints("sm-tablet") {
+                        margin-bottom: 0;
+                        margin-right: 40px;
+                    }
                 }
             }
         }
     }
-
-    
 }
