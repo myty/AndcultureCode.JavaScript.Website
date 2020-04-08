@@ -1,9 +1,10 @@
-import React              from 'react';
-import IconSocialTwitter  from 'components/atoms/IconSocialTwitter';
-import IconSocialLinkedIn from 'components/atoms/IconSocialLinkedIn';
-import IconSocialFacebook from 'components/atoms/IconSocialFacebook';
-import IconSocialDribbble from 'components/atoms/IconSocialDribbble';
-import IconSocialGithub   from 'components/atoms/IconSocialGithub';
+import React                 from 'react';
+import IconSocialTwitter     from 'components/atoms/IconSocialTwitter';
+import IconSocialLinkedIn    from 'components/atoms/IconSocialLinkedIn';
+import IconSocialFacebook    from 'components/atoms/IconSocialFacebook';
+import IconSocialDribbble    from 'components/atoms/IconSocialDribbble';
+import IconSocialGithub      from 'components/atoms/IconSocialGithub';
+import IconSocialInstagram   from 'components/atoms/IconSocialInstagram';
 
 
 // Primary Component
