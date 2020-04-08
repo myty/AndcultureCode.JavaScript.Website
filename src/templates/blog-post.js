@@ -144,6 +144,8 @@ const _getNextPostUrl = (posts, blogPostId) => {
   if (currentPost) {
     nextPostUrl = currentPost.next ? currentPost.next.fields.slug : posts.edges[0].node.fields.slug;
   }
+
+  return nextPostUrl;
 };
 
 
