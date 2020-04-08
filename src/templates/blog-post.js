@@ -8,12 +8,12 @@ import IconSocialMail                 from 'components/atoms/IconSocialMail';
 import IconSocialLink                 from 'components/atoms/IconSocialLink';
 import BlogAuthor                     from 'components/organisms/BlogAuthor';
 
-export const BlogPostTemplate = ({ author, html, nextPostUrl, properties }) => {
+export const BlogPostTemplate = ({ author, html, nextPostUrl, properties, url }) => {
   const postBackgroundStyle = {
       background: "url('" + properties.postImage.image.childImageSharp.fluid.src + "') no-repeat left top / 100%"
   };
 
-  const encodedUrl = encodeURI(window.location.href);
+  const encodedUrl = `https://www.andculture.com/${encodeURI(url)}`;
 
   return (
     <article
@@ -115,7 +115,8 @@ const BlogPost = ({ data }) => {
         author      = { _getAuthor(data.authors, postProperties.author) }
         html        = { postHtml }
         nextPostUrl = { _getNextPostUrl(data.posts, data.post.id) }
-        properties  = { postProperties } />
+        properties  = { postProperties }
+        url         = { data.post.fields.slug } />
     </Layout>
   )
 }
@@ -223,6 +224,9 @@ export const pageQuery = graphql`
           metaDescription
           metaTitle
         }
+      }
+      fields {
+        slug
       }
     }
     authors: allMarkdownRemark (
