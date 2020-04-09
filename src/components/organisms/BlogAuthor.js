@@ -66,7 +66,11 @@ const _getSocialIconLink = (link) => {
     }
 
     return (
-        <a href={link.url} target="_blank" rel="noopener">{ icon }</a>
+        <a
+            aria-label = { `Share on ${link.platform}` }
+            href       = { link.url }
+            target     = "_blank"
+            rel        = "noopener">{ icon }</a>
     );
 };
 
