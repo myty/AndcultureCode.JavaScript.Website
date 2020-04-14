@@ -68,6 +68,11 @@
                 @include push-col(1);
             }
 
+            @include breakpoints("sm-tablet") {
+                @include span-col(8);
+                @include push-col(1);
+            }
+
             h1 {
                 text-transform: lowercase;
             }
@@ -100,7 +105,6 @@
 
             @include breakpoints("laptop") {
                 @include span-col(3);
-                @include push-col(1);
             }
         }
     }
@@ -121,6 +125,24 @@
                 margin-top: 80px;
             }
 
+            h3 {
+                @include font-size(26px);
+                @include line-height(36px);
+                margin-top: 60px;
+                color: get-color-primary("fresh");
+
+                @include breakpoints("sm-tablet") {
+                    @include font-size(30px);
+                    @include line-height(40px);
+                }
+
+                @include breakpoints("tablet") {
+                    @include font-size(40px);
+                    @include line-height(50px);
+                    margin-top: 100px;
+                }
+            }
+
             p {
                 @include font-size("small");
                 @include line-height(32px);
@@ -132,6 +154,53 @@
 
                 + p {
                     margin-top: 30px;
+                }
+
+                a {
+                    @include font-size("small");
+                    color: get-color-primary("fresh");
+                    font-family: $font-primary;
+
+                    @include breakpoints("sm-tablet") {
+                        @include font-size(24px);
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .gatsby-resp-image-wrapper {
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+                }
+            }
+
+            ul {
+                margin-left: 20px;
+
+                li {
+                    @include font-size("small");
+                    @include line-height(32px);
+
+                    @include breakpoints("sm-tablet") {
+                        @include font-size(24px);
+                        @include line-height(39px);
+                    }
+                }
+
+                a {
+                    @include font-size("small");
+                    color: get-color-primary("fresh");
+                    font-family: $font-primary;
+
+                    @include breakpoints("sm-tablet") {
+                        @include font-size(24px);
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
 

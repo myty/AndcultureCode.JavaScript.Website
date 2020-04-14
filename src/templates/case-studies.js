@@ -93,9 +93,11 @@ export const pageQuery = graphql`
         color
         tags
         heroIntroCopy
-        metaTitle
-        metaDescription
-        socialDescription
+        seo {
+          metaTitle
+          metaDescription
+          socialShareCopy
+        }
         socialImg
       }
     }

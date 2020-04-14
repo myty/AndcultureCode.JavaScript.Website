@@ -69,9 +69,11 @@ export const pageQuery = graphql`
         title
         secondaryTitle
         subTitle
-        metaTitle
-        metaDescription
-        socialDescription
+        seo {
+          metaTitle
+          metaDescription
+          socialShareCopy
+        }
         socialImg
       }
     }

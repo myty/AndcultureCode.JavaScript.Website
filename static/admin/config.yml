@@ -33,8 +33,13 @@ collections:
       - {label: "Home Image", name: "homeimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-      - {label: Meta Title, name: metaTitle, widget: string}
-      - {label: Meta Description, name: metaDescription, widget: string}
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        fields:
+         - {label: "Meta Title", name: "metaTitle", widget: "string"}
+         - {label: "Meta Description", name: "metaDescription", widget: "string"}
+         - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}
 
   - name: "blog-posts"
     label: "Blog"
@@ -88,7 +93,7 @@ collections:
         fields:
          - {label: "Image", name: "image", widget: "image"}
          - {label: "Description", name: "description", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "code", "link", "heading-three", "quote", "bulleted-list", "numbered-list"]}
       - label: "Category"
         name: "category"
         widget: "select"
@@ -98,8 +103,9 @@ collections:
         name: "seo"
         widget: "object"
         fields:
-         - {label: Meta Title, name: metaTitle, widget: string}
-         - {label: Meta Description, name: metaDescription, widget: string}
+         - {label: "Meta Title", name: "metaTitle", widget: "string"}
+         - {label: "Meta Description", name: "metaDescription", widget: "string"}
+         - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}
 
   - name: "employees"
     label: "Employees"
@@ -139,8 +145,13 @@ collections:
       - {label: "Create Page", name: "createPage", widget: "hidden", default: true}
       - {label: "Position", name: "position", widget: "string"}
       - {label: "Link", name: "position", widget: "string"}
-      - {label: Meta Title, name: metaTitle, widget: string}
-      - {label: Meta Description, name: metaDescription, widget: string}
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        fields:
+         - {label: "Meta Title", name: "metaTitle", widget: "string"}
+         - {label: "Meta Description", name: "metaDescription", widget: "string"}
+         - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}
 
   - name: "pages"
     label: "Pages"
@@ -154,8 +165,13 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Secondary, name: secondaryTitle, widget: string}
           - {label: Subtitle, name: subTitle, widget: string}
-          - {label: Meta Title, name: metaTitle, widget: string}
-          - {label: Meta Description, name: metaDescription, widget: string}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+             - {label: "Meta Title", name: "metaTitle", widget: "string"}
+             - {label: "Meta Description", name: "metaDescription", widget: "string"}
+             - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}
 
       - file: "src/pages/contact.md"
         label: "Contact Page"
@@ -171,8 +187,13 @@ collections:
           - {label: Map Link, name: mapLink, widget: string}
           - {label: Phone Number, name: phoneNumber, widget: string}
           - {label: Directions, name: directions, widget: string}
-          - {label: Meta Title, name: metaTitle, widget: string}
-          - {label: Meta Description, name: metaDescription, widget: string}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+             - {label: "Meta Title", name: "metaTitle", widget: "string"}
+             - {label: "Meta Description", name: "metaDescription", widget: "string"}
+             - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}
       - file: "src/pages/about.md"
         label: "About Page"
         name: "about"
@@ -182,8 +203,13 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Secondary, name: secondaryTitle, widget: string}
           - {label: Subtitle, name: subTitle, widget: string}
-          - {label: Meta Title, name: metaTitle, widget: string}
-          - {label: Meta Description, name: metaDescription, widget: string}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+             - {label: "Meta Title", name: "metaTitle", widget: "string"}
+             - {label: "Meta Description", name: "metaDescription", widget: "string"}
+             - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}
       - file: "src/pages/blog.md"
         label: "Blog Page"
         name: "blog"
@@ -193,5 +219,10 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Secondary, name: secondaryTitle, widget: string}
           - {label: Subtitle, name: subTitle, widget: string}
-          - {label: Meta Title, name: metaTitle, widget: string}
-          - {label: Meta Description, name: metaDescription, widget: string}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+             - {label: "Meta Title", name: "metaTitle", widget: "string"}
+             - {label: "Meta Description", name: "metaDescription", widget: "string"}
+             - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}

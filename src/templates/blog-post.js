@@ -28,7 +28,9 @@ export const BlogPostTemplate = ({ author, html, nextPostUrl, properties, url })
               <BlogAuthor
                 author     = { author }
                 mobileOnly = { true } />
-              <h2>{ properties.headline }</h2>
+              {properties.headline &&
+                <h2>{ properties.headline }</h2>
+              }
             </section>
             <aside>
               <BlogAuthor author={ author } />
@@ -173,8 +175,8 @@ export const pageQuery = graphql`
               description
               image {
                 childImageSharp {
-                  fluid {
-                    src
+                  fluid(maxWidth: 1920, quality: 100) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -184,6 +186,7 @@ export const pageQuery = graphql`
             seo {
               metaDescription
               metaTitle
+              socialShareCopy
             }
           }
           fields {
@@ -214,8 +217,8 @@ export const pageQuery = graphql`
           description
           image {
             childImageSharp {
-              fluid {
-                src
+              fluid(maxWidth: 1920, quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -225,6 +228,7 @@ export const pageQuery = graphql`
         seo {
           metaDescription
           metaTitle
+          socialShareCopy
         }
       }
       fields {
@@ -249,8 +253,8 @@ export const pageQuery = graphql`
               description
               image {
                 childImageSharp {
-                  fluid {
-                    src
+                  fluid(maxWidth: 1920, quality: 100) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }

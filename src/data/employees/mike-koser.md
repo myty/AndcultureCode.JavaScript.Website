@@ -1,10 +1,10 @@
 ---
 createPage: false
 name: Mike Koser
-position: Directory of Engineering
-easterEgg: test
+position: Director of Engineering
+easterEgg: brews beer for the masses
 authorPhoto:
-  image: /img/authors/author-madeline-pellman.jpg
+  image: /img/authors/author-scribble.jpg
   description: Mike Koser
 socialLinks:
   - platform: LinkedIn

@@ -2,36 +2,45 @@
 createPage: true
 templateKey: blog-post
 title: brewing culture
-headline: oh, hello! welcome to andculture — please make yourself at home.
 author: Mike Koser
-date: 2020-03-30
+date: 2020-04-15
 featured: false
 featuredColor: -violet-blue
 featuredImage:
   image: /img/blog/blog_featured_image.jpg
-  description: "welcome to andculture"
+  description: "brewing culture"
 tileImage:
-  image: /img/blog/blog_thumbnail.jpg
-  description: "welcome to andculture"
+  image: /img/blog/blog_brewing_post.jpg
+  description: "brewing culture"
 postImage:
-  image: /img/blog/blog_post_background.jpg
-  description: "welcome to andculture"
+  image: /img/blog/blog_brewing_culture_header.jpg
+  description: "breawing culture"
 seo:
-  metaTitle: brewing culture
-  metaDescription: How andculture turned one employee's passion for brewing into a company exercise in teamwork, branding, and iterative improvement.
+  metaTitle: brewing culture, one pitch at a time | andculture
+  metaDescription: How andculture turned one employee's passion for brewing into a company exercise in teamwork, branding and iterative improvement.
+  socialShareCopy: How andculture turned one employee's passion for brewing into a company exercise in teamwork, branding, and iterative improvement.
 category: "Agency"
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in  its wild form, and traditionally was grown commercially under other trees  that provided shade. The forest-like structure of shade coffee farms  provides habitat for a great number of migratory and resident species.
+Hi there! I’m Mike Koser, the director of software engineering at andculture. I’ve spent my entire career in software, but have always had a passion for things totally not-software — things like brewing beer.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic  origin. Sometimes, this is a single farm or a specific collection of  beans from a single country. The name of the coffee is then usually the  place it was grown to whatever degree available.
+I’ve been brewing beer for over 14 years for family and friends, but I never thought my love of libation creation would ever bleed into my work. Boy, was I wrong! Within my first few weeks of joining andculture, my boss, Shane, approached me about the prospect of brewing beer for the company.
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an  understanding of ecosystem services, the study of relationships between  organisms and their environment. What grows where and how it is grown are  a matter of choice and careful consideration for nature and communities.
+At first, I was a little overwhelmed. I had just met everyone, and now I am going to ask them to trust me not to make them sick with the beer I would be brewing for them. I am not a professional brewer whatsoever, so I was obviously self conscious about how the beer would be received. So I did what anyone else would do… involve more people to take some of the pressure off of me.
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters.  Advocates of direct trade practices promote direct communication and  price negotiation between buyer and farmer, along with systems that  encourage and incentivize quality.
+Okay, that’s not entirely true, but I did want to find ways to work with my co-workers to make something really special that everyone could feel a part of. This is where things started really getting interesting. We decided to bring in the design team to design labels for the beer, and one of our committees, team social, to help organize an unveiling of the beer to the employees.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to  you. That’s why we reinvest 20% of our profits into farms, local  businesses and schools everywhere our coffee is grown. You can see the  communities grow and learn more about coffee farming on our blog.
+The first beer I decided to make was an oaked bourbon stout. I talked to one of our designers, Kate, about what ingredients I was planning on using. She went off and ran with a design concept. While Kate was designing, I got to creating a recipe.
+
+Let me take a minute here to share my approach to brewing beer. The idea of copying someone else’s recipe or brewing the same beer multiple times would bore the heck out of me. I’ve never done it and I never intend to. I always want to create something that’s never been done before. I find delight in discovering how new flavors come together. This is exactly how we do things at andculture when we work with our partners on software. We’re not interested in doing what everyone else does. We want to help our partners shape their own path.
+
+Okay, back to the beer!
+
+At around the same time the beer was ready to be bottled Kate and I got together to review her progress of the label itself. We printed the label on our own roll printer and used heat sealed plastic wrap to attach the labels to the bottle. The result was pretty darn good for a first attempt. Kate chose the name Warm ‘n Fuzzy to describe how a person would feel after consuming one.
+
+We released the beer to the masses one afternoon and the whole company got to blow off some steam at the end of the day.
+
+Since that first release we’ve iterated over our process by involving different label designers for each new beer, getting better quality vinyl labels, and coordinating beer releases with a company event like our annual summer picnic or gingerbread-making competition. We even added [andculture Brewing Company to Untappd](https://untappd.com/AndCultureBrewingCo) to allow people to rate the beer.
+
+Iterative improvement is at the heart of what we do at andculture. We live it every day not only with the work we do with our partners, but in all of our internal initiatives as well. I’m excited to see where brewing at andculture goes, and as long as everyone gets to participate, I know we’ll all embrace the journey.
+
+Cheers!

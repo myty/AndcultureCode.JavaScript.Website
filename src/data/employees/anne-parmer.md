@@ -2,9 +2,9 @@
 createPage: false
 name: Anne Parmer
 position: Director of Engagement
-easterEgg: test
+easterEgg: connector
 authorPhoto:
-  image: /img/authors/author-madeline-pellman.jpg
+  image: /img/authors/author-anne-parmer.png
   description: Anne Parmer
 socialLinks:
   - platform: LinkedIn

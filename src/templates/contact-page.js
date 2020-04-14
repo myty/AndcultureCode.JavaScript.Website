@@ -90,9 +90,11 @@ export const pageQuery = graphql`
         mapLink
         phoneNumber
         directions
-        metaTitle
-        metaDescription
-        socialDescription
+        seo {
+          metaTitle
+          metaDescription
+          socialShareCopy
+        }
         socialImg
       }
     }
