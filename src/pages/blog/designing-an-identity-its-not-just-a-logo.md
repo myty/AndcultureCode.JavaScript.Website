@@ -1,7 +1,7 @@
 ---
 createPage: true
 templateKey: blog-post
-title: "designing an identity: it's not ""just"" a logo"
+title: "designing an identity: it's not \"just\" a logo"
 author: Madeline Pellman
 date: 2014-09-18
 featured: false
@@ -16,7 +16,7 @@ postImage:
   image: /img/header_default_light_4.jpg
   description: "blog header"
 seo:
-  metaTitle: "designing an identity: it's not ""just"" a logo | andculture"
+  metaTitle: "designing an identity: it's not \"just\" a logo | andculture"
   metaDescription: A company's brand identity doesn't just happen. It is a complex and intense process that demands both designer and client commit to open communication.
   socialShareCopy: A company's brand identity doesn't just happen. It is a complex and intense process that demands both designer and client commit to open communication.
 category: "Design/UX"
