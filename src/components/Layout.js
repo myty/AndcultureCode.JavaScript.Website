@@ -15,7 +15,7 @@ const TemplateWrapper = ({
   showFooterDividerLine
 }) => {
   let { title, description, socialDescription } = useSiteMetadata();
-  if (data) {
+  if (data && data.seo) {
     title             = data.seo.metaTitle;
     description       = data.seo.metaDescription;
     description       = data.seo.metaDescription;
