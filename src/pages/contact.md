@@ -13,8 +13,8 @@ directions: >
 
 
     Once you’ve turned into our parking lot, stay to the left and enter the top parking deck. There, you will find several “Visitor” parking spaces. Enter through the doors on the top parking deck and go straight ahead. You’ll turn a slight left around the railing and then turn right to enter through the glass doors leading to our office.
-metaTitle: contact | andculture
-metaDescription: Contact us, we are ready to get enthusiastic about your engineering, design, strategy, and UX/human centered design needs.
-socialDescription: Need a strategic partner? Get in touch with andculture, a Harrisburg, PA-based design agency.
-socialImg: img/apple-touch-icon.png
+seo:
+  metaTitle: contact | andculture
+  metaDescription: Contact us, we are ready to get enthusiastic about your engineering, design, strategy, and UX/human centered design needs.
+  socialShareCopy: Need a strategic partner? Get in touch with andculture, a Harrisburg, PA-based design agency.
 ---

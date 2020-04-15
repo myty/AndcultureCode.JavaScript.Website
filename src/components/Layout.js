@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import Header from './molecules/Header';
-import Footer from './molecules/Footer';
+import React           from 'react';
+import { Helmet }      from 'react-helmet';
+import Header          from './molecules/Header';
+import Footer          from './molecules/Footer';
 import useSiteMetadata from './SiteMetadata';
-import { withPrefix } from 'gatsby';
+import { withPrefix }  from 'gatsby';
 
 const TemplateWrapper = ({
   children,
@@ -14,13 +14,12 @@ const TemplateWrapper = ({
   pageClassName,
   showFooterDividerLine
 }) => {
-  let { title, description, socialDescription, socialImg } = useSiteMetadata();
+  let { title, description, socialDescription } = useSiteMetadata();
   if (data) {
-    title = data.metaTitle;
-    description = data.metaDescription;
-    description = data.metaDescription;
-    socialDescription = data.socialDescription;
-    socialImg = data.socialImg;
+    title             = data.seo.metaTitle;
+    description       = data.seo.metaDescription;
+    description       = data.seo.metaDescription;
+    socialDescription = data.seo.socialShareCopy;
   }
 
   let containerClassName = pageClassName ? pageClassName : "";

@@ -14,7 +14,8 @@ tags:
   - event marketing
   - identity design
   - illustration
-metaTitle: HackerOne case study | andculture
-metaDescription: A case study for andculture and HackerOne's event marketing
-socialDescription: Using event marketing to help HackerOne bring hackers together for better security outcomes.
+seo:
+  metaTitle: HackerOne case study | andculture
+  metaDescription: A case study for andculture and HackerOne's event marketing
+  socialShareCopy: Using event marketing to help HackerOne bring hackers together for better security outcomes.
 ---

@@ -19,6 +19,7 @@ postImage:
 seo:
   metaTitle: this is the so meta title
   metaDescription: this is the seo description
+  socialShareCopy: this is the seo description
 category: "Agency"
 ---
 andculture is home to more than 80 talented, special and unique humans coming together, with the sole purpose of designing and making an impact in the world around us. Our humble beginnings started 20 years ago with a tight-knit group of recent and determined college grads. Even though we are somewhat larger now, we never lost that tenacity or our fondness for the next, "What if?"

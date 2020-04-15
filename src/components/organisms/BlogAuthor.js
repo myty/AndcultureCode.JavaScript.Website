@@ -31,11 +31,13 @@ const BlogAuthor = (props) => {
                 <div className="m-blog-author__position">
                     { props.author.position }
                 </div>
-                <div className="m-blog-author__links">
-                    {props.author.socialLinks.map(link => (
-                        _getSocialIconLink(link)
-                    ))}
-                </div>
+                {props.author.socialLinks &&
+                    <div className="m-blog-author__links">
+                        {props.author.socialLinks.map(link => (
+                            _getSocialIconLink(link)
+                        ))}
+                    </div>
+                }
             </div>
         </div>
     );

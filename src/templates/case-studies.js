@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import CaseStudyHero from '../components/molecules/CaseStudyHero';
-import Pulse from '../../src/templates/case-studies/pulse';
-import KidsDiscover from '../../src/templates/case-studies/kids-discover';
-import CCA from '../../src/templates/case-studies/cca';
-import Hackerone from '../../src/templates/case-studies/hackerone';
-import PACareerLink from './case-studies/pa-career-link';
+import { graphql }                    from 'gatsby';
+import Layout                         from '../components/Layout';
+import CaseStudyHero                  from '../components/molecules/CaseStudyHero';
+import Pulse                          from '../../src/templates/case-studies/pulse';
+import KidsDiscover                   from '../../src/templates/case-studies/kids-discover';
+import CCA                            from '../../src/templates/case-studies/cca';
+import Hackerone                      from '../../src/templates/case-studies/hackerone';
+import PACareerLink                   from '../../src/templates/case-studies/pa-career-link';
 
 export const CaseStudyTemplate = ({
   caseStudyContent,
@@ -98,7 +98,6 @@ export const pageQuery = graphql`
           metaDescription
           socialShareCopy
         }
-        socialImg
       }
     }
   }
