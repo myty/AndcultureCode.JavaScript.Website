@@ -5,6 +5,16 @@
     position: relative;
     display: table;
     background-color: get-color-primary("fresh");
+    font-family: $font-primary;
+    letter-spacing: normal;
+
+    &:not(.-inline):hover {
+        opacity: 1;
+
+        img {
+            transform: scale(1.2);
+        }
+    }
 
     @include breakpoints("tablet") {
         display: block;
@@ -14,14 +24,16 @@
     &__image {
         display: block;
         width: 100%;
+        overflow: hidden;
 
         @include breakpoints("sm-tablet") {
             display: table-cell;
-            width: 40%;
+            width: 50%;
         }
 
         img {
             max-width: auto;
+            transition: all 0.6s ease !important;
         }
     }
 
@@ -33,22 +45,29 @@
 
         @include breakpoints("sm-tablet") {
             display: table-cell;
-            padding: 0 60px 0 60px;
+            padding: 0 45px;
             vertical-align: middle;
-            width: 60%;
+            width: 50%;
         }
 
         h1 {
-            margin-bottom: 50px;
-            max-width: 75%;
+            margin-bottom: 25px;
+            max-width: 100%;
 
             @include breakpoints("sm-tablet") {
-                margin-bottom: 25px;
+                @include font-size(32px);
+                @include line-height(40px);
                 max-width: 100%;
             }
 
             @include breakpoints("tablet") {
-                margin-bottom: 50px;
+                @include font-size(40px);
+                @include line-height(50px);
+            }
+
+            @include breakpoints("desktop") {
+                @include font-size(55px);
+                @include line-height(65px);
             }
 
             @include breakpoints(1680px) {
@@ -56,14 +75,8 @@
             }
         }
 
-        > a {
-            @include font-size("base");
-            border-bottom: 2px solid get-color-primary("white");
-            display: inline-block;
-            padding-bottom: 5px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        &__author {
+            @include font-size(20px);
         }
     }
 }

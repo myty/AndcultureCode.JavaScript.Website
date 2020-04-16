@@ -18,7 +18,10 @@ const BlogFeatured = (props) => {
     }
 
     return (
-        <div className="m-blog-featured">
+        <a
+            aria-label = { `Go to article ${featuredPost.title}` }
+            className  = "m-blog-featured"
+            href       = { featuredPostUrl }>
             <div className="m-blog-featured__image">
                 <img
                     src = { featuredPost.featuredImage.image.childImageSharp.fluid.src }
@@ -26,11 +29,11 @@ const BlogFeatured = (props) => {
             </div>
             <div className="m-blog-featured__title">
                 <h1>{ featuredPost.title }</h1>
-                <a
-                    aria-label = {`Read more about ${featuredPost.title}`}
-                    href       = { featuredPostUrl }>Read More</a>
+                <div className="m-blog-featured__title__author">
+                    by { featuredPost.author }
+                </div>
             </div>
-        </div>
+        </a>
     );
 };
 
@@ -51,6 +54,7 @@ export default () => (
                     node {
                         id
                         frontmatter {
+                            author
                             featuredImage {
                                 description
                                 image {

@@ -54,6 +54,7 @@ export const pageQuery = graphql`
   query BlogPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "blog-page" } }) {
       frontmatter {
+        author
         title
         secondaryTitle
         subTitle

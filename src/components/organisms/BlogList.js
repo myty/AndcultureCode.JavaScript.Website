@@ -47,6 +47,7 @@ export default () => (
                   node {
                     id
                     frontmatter {
+                      author
                       templateKey
                       title
                       date
