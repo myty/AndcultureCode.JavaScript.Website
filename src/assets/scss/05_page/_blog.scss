@@ -10,7 +10,19 @@
         }
 
         @include breakpoints("sm-desktop") {
-            margin-top: 714px;
+            margin-top: 614px;
+        }
+
+        @include breakpoints("desktop") {
+            margin-top: 680px;
+        }
+
+        @include breakpoints("xl-desktop") {
+            margin-top: 814px;
+        }
+
+        @include breakpoints(2600px) {
+            margin-top: 1014px;
         }
     }
 
