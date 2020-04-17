@@ -35,7 +35,7 @@ const BlogList = (props) => {
 // Exports
 // ------------------------------------
 
-export default () => (
+export default (props) => (
     <StaticQuery
       query={graphql`
         query BlogListQuery {
@@ -95,7 +95,10 @@ export default () => (
           }
       `}
       render = {
-        (data, count) => <BlogList data = { data } count = { count } />
+        (data, count) =>
+          <BlogList
+            data      = { data }
+            count     = { count } />
       }
     />
   )

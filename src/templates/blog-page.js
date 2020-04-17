@@ -11,9 +11,11 @@ export const BlogPageTemplate = ({
     scrollTop,
   }) => (
       <div>
-        <BlogFeatured />
-        <div className="o-rhythm__container">
-          <BlogList />
+        <BlogFeatured scrollTop = { scrollTop } />
+        <div className="p-blog__list">
+          <div className="o-rhythm__container">
+            <BlogList />
+          </div>
         </div>
       </div>
     )

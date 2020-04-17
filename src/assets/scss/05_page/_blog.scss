@@ -1,4 +1,19 @@
 .p-blog {
+    &__list {
+        position: relative;
+        margin-top: 0;
+        z-index: 1;
+        background-color: get-color-primary("white");
+
+        @include breakpoints("laptop") {
+            margin-top: 514px;
+        }
+
+        @include breakpoints("sm-desktop") {
+            margin-top: 714px;
+        }
+    }
+
     .m-header__page-title {
         color: get-color-primary("after-hours");
     }

@@ -11,17 +11,24 @@ const BlogFeatured = (props) => {
     const postCount        = posts.length;
     let featuredPost       =  {};
     let featuredPostUrl    = "";
+    let className          = "m-blog-featured";
 
     if (postCount === 1) {
         featuredPost    = posts[0].node.frontmatter;
         featuredPostUrl = posts[0].node.fields.slug;
     }
 
+    if (props.scrollTop > 160) {
+      className += " -fade";
+    }
+
+
     return (
         <a
             aria-label = { `Go to article ${featuredPost.title}` }
-            className  = "m-blog-featured"
+            className  = { className }
             href       = { featuredPostUrl }>
+            <div className="m-blog-featured__overlay"></div>
             <div className="m-blog-featured__image">
                 <img
                     src = { featuredPost.featuredImage.image.childImageSharp.fluid.src }
@@ -41,7 +48,7 @@ const BlogFeatured = (props) => {
 // Exports
 // ------------------------------------
 
-export default () => (
+export default (props) => (
     <StaticQuery
       query={graphql`
         query BlogFeaturedQuery {
@@ -76,7 +83,11 @@ export default () => (
         }
       `}
       render = {
-        (data, count) => <BlogFeatured data = { data } count = { count } />
+        (data, count) =>
+            <BlogFeatured
+                data      = { data }
+                count     = { count }
+                scrollTop = { props.scrollTop } />
       }
     />
   )

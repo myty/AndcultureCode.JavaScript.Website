@@ -1,13 +1,12 @@
 .o-blog-list {
     @include clearfix();
-    position: relative;
 
     .m-blog-post {
         margin-top: 80px;
 
         &:first-child {
-            .m-blog-post__squiggle {
-                display: none;
+            @include breakpoints("laptop") {
+                margin-top: 100px;
             }
         }
 
@@ -20,6 +19,8 @@
         }
 
         &:last-child {
+            margin-bottom: 80px;
+
             @include breakpoints("tablet") {
                 margin-bottom: 180px;
             }

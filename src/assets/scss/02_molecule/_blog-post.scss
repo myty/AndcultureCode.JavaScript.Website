@@ -23,6 +23,7 @@
         @include span-col(12);
         position: relative;
         z-index: 1;
+        overflow: hidden;
 
         @include breakpoints("sm-tablet") {
             @include span-col(6);
