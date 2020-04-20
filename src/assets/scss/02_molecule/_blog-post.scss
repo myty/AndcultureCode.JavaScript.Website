@@ -43,7 +43,7 @@
     &__details {
         @include span-col(12);
         position: relative;
-        margin-top: 65px;
+        margin-top: 25px;
         align-self: center;
 
         @include breakpoints("sm-tablet") {
@@ -62,8 +62,8 @@
         }
 
         p:first-of-type {
-            @include font-size("medium");
-            @include line-height(32px);
+            @include font-size(30px);
+            @include line-height(36px);
             color: get-color-primary("fresh");
             margin-block-end: 0;
             margin-block-start: 0;

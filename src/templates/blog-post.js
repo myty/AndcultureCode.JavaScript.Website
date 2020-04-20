@@ -5,7 +5,6 @@ import IconSocialTwitter                                       from 'components/
 import IconSocialLinkedIn                                      from 'components/atoms/IconSocialLinkedIn';
 import IconSocialFacebook                                      from 'components/atoms/IconSocialFacebook';
 import IconSocialMail                                          from 'components/atoms/IconSocialMail';
-import IconSocialLink                                          from 'components/atoms/IconSocialLink';
 import BlogAuthor                                              from 'components/organisms/BlogAuthor';
 import useWindowDimensions                                     from 'utils/windowDimensionsHook';
 
@@ -17,7 +16,9 @@ export const BlogPostTemplate = (props) => {
   const [headerDimensions, setHeaderDimensions]         = useState({ width:0, height: 0 });
   const [backgroundDimensions, setBackgroundDimensions] = useState({ width:0, height: 0 });
   const windowDimensions                                = useWindowDimensions();
-  const encodedUrl                                      = `https://www.andculture.com/${encodeURI(props.url)}`;
+  const encodedUrl                                      = `https://www.andculture.com${encodeURI(props.url)}`;
+  const encodedSubject                                  = encodeURI(`Check out the blog post ${properties.title} by andculture`);
+  const encodedBody                                     = encodeURI(`Hello! I just read ${properties.title} by andculture and thought you’d love it! You can read it at ${encodedUrl}. I hope you enjoy it!`);
 
   // Set the background image for the blog post background
   const postBackgroundStyle = {
@@ -103,19 +104,12 @@ export const BlogPostTemplate = (props) => {
             <section>
               <span className="blog-artifact" aria-hidden="true"></span>
               <a
-                href       = {`mailto:?to=&body=${encodedUrl}&subject=andculture%20blog%20post`}
+                href       = {`mailto:?to=&body=${encodedBody}&subject=${encodedSubject}`}
                 target     = "_blank"
                 aria-label = "Share via Email"
                 rel        = "noopener">
                 <IconSocialMail />
               </a>
-              {/* <a
-                href       = {`https://twitter.com/intent/tweet?text=${encodedUrl}&via=andculture`}
-                target     = "_blank"
-                aria-label = "Share on Twitter"
-                rel        = "noopener">
-                <IconSocialLink />
-              </a> */}
               <a
                 href       = {`https://twitter.com/intent/tweet?text=${encodedUrl}&via=andculture`}
                 target     = "_blank"

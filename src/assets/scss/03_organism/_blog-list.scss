@@ -2,16 +2,12 @@
     @include clearfix();
 
     .m-blog-post {
-        margin-top: 80px;
+        margin-top: 100px;
 
         &:first-child {
             @include breakpoints("laptop") {
                 margin-top: 100px;
             }
-        }
-
-        @include breakpoints("sm-tablet") {
-            margin-top: 100px;
         }
 
         @include breakpoints("tablet") {
