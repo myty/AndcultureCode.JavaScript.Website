@@ -6,17 +6,14 @@ import IconSocialLinkedIn                                      from 'components/
 import IconSocialFacebook                                      from 'components/atoms/IconSocialFacebook';
 import IconSocialMail                                          from 'components/atoms/IconSocialMail';
 import BlogAuthor                                              from 'components/organisms/BlogAuthor';
-import useWindowDimensions                                     from 'utils/windowDimensionsHook';
 
 export const BlogPostTemplate = (props) => {
   const properties                                      = props.properties;
   const contentRef                                      = useRef();
   const headerRef                                       = useRef();
   const backgroundRef                                   = useRef();
-  const [headerDimensions, setHeaderDimensions]         = useState({ width:0, height: 0 });
-  const [backgroundDimensions, setBackgroundDimensions] = useState({ width:0, height: 0 });
-  const windowDimensions                                = useWindowDimensions();
   const encodedUrl                                      = `https://www.andculture.com${encodeURI(props.url)}`;
+  const encodedSummary                                  = encodeURI(properties.seo.socialShareCopy);
   const encodedSubject                                  = encodeURI(`Check out the blog post ${properties.title} by andculture`);
   const encodedBody                                     = encodeURI(`Hello! I just read ${properties.title} by andculture and thought you’d love it! You can read it at ${encodedUrl}. I hope you enjoy it!`);
 
@@ -24,23 +21,6 @@ export const BlogPostTemplate = (props) => {
   const postBackgroundStyle = {
       background: "url('" + properties.postImage.image.childImageSharp.fluid.src + "') no-repeat left top"
   };
-
-  // Get the dimensions of the header section of the content component
-  useLayoutEffect(() => {
-    if (headerRef.current) {
-      setHeaderDimensions({
-        width: headerRef.current.offsetWidth,
-        height: headerRef.current.offsetHeight
-      });
-    }
-
-    if (backgroundRef.current) {
-      setBackgroundDimensions({
-        width: backgroundRef.current.offsetWidth,
-        height: backgroundRef.current.offsetHeight
-      });
-    }
-  }, []);
 
   // Manipulating the page based on the current scroll position
   // in order to create smooth transitions.
@@ -51,8 +31,6 @@ export const BlogPostTemplate = (props) => {
   }
 
   if (headerRef && headerRef.current) {
-    //const contentPosition = windowDimensions.height - headerRef.current.offsetHeight;
-
     if (props.scrollTop >= contentRef.current.offsetTop) {
       postBackgroundStyle.position = "absolute";
       postBackgroundStyle.top      = contentRef.current.offsetTop;
@@ -111,14 +89,14 @@ export const BlogPostTemplate = (props) => {
                 <IconSocialMail />
               </a>
               <a
-                href       = {`https://twitter.com/intent/tweet?text=${encodedUrl}&via=andculture`}
+                href       = {`https://twitter.com/intent/tweet?text=${encodedSummary}%20${encodedUrl}&via=andculture`}
                 target     = "_blank"
                 aria-label = "Share on Twitter"
                 rel        = "noopener">
                 <IconSocialTwitter />
               </a>
               <a
-                href       = {`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&source=andculture.com`} 
+                href       = {`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`} 
                 target     = "_blank"
                 aria-label = "Share on LinkedIn"
                 rel        = "noopener">
