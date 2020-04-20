@@ -3,7 +3,7 @@ createPage: true
 templateKey: blog-post
 title: .net core development with docker
 author: Winton DeShong
-date: 2017-11-27
+date: 2017-11-21
 featured: false
 featuredColor: -violet-blue
 featuredImage:
@@ -48,7 +48,7 @@ Experienced in this topic and tired of my rambling? Check out the [GitHub reposi
 ### Where do we begin?
 Docker can be a bit overwhelming to learn. While there is extensive documentation, there are so many aspects to the docker ecosystem it can be difficult to know where to start and what all you’ll need. Below is a list of resources, concepts and docker commands I used to build the following [dotnet development environment](https://github.com/AndcultureCode/docker-dotnet-example) project. I recommend diving deeper into each concept, but my hope is this can serve as a roadmap for your learning.
 
-### Docker Images and Container
+### Docker Images and Containers
 Ultimately we are going to break up our application into a series of docker images that can run standalone. These images include all the code, dotnet runtime, configuration and other settings. Each image has its own “Dockerfile” that describes what docker needs to layer together.
 
 In our sample application, we will have two different types of services. A dotnet web service that houses our backend and frontend application files and a database service running an official Microsoft MSSQL server docker image.
@@ -110,13 +110,13 @@ Below are commands I used in creating the example repository. Of course, refer t
   * Removes an image. May need to add on the ‘--force’ flag to force removal if it is in use (provided you know what you are doing).
 * *docker run*
   * Runs a command in a new container. Learning the various flags for the run command will be extremely useful. The flags I’ve been using heavily are as follows:
-    * *--rm* - Removes the container after you end the process
-    * *-it* - Removes the container after you end the process
-    * *--entrypoint* - Removes the container after you end the process
-    * *-v* - Removes the container after you end the process
-    * *-p* - Removes the container after you end the process
-    * *--name* - Removes the container after you end the process
-    * *--no-cache* - Removes the container after you end the process
+      * *--rm* - Removes the container after you end the process
+      * *-it* - Removes the container after you end the process
+      * *--entrypoint* - Removes the container after you end the process
+      * *-v* - Removes the container after you end the process
+      * *-p* - Removes the container after you end the process
+      * *--name* - Removes the container after you end the process
+      * *--no-cache* - Removes the container after you end the process
 * *docker version*
   * Outputs both the client vs. server versions of docker being run. This isn’t the same as ‘-v’.
 * *docker volume ls*
@@ -124,7 +124,7 @@ Below are commands I used in creating the example repository. Of course, refer t
 
 ### Docker Compose
 
-*Database Docker Service*
+**Database Docker Service**
 
 While we could go forward running a similar docker run command as I showed in my web service example, this becomes tedious. It just so happens docker provides a tool called “Compose” that is just for that reason. It comes pre-installed with docker and provides a declarative approach, via YAML files, to defining your project’s images.
 
@@ -138,7 +138,7 @@ Keeping the specific dockerfiles in parallel to your services source code is hel
 
 When you call *docker-compose up*, compose will attempt to load docker-compose.yml and optionally a file called docker-compose.override.yml that it will merge together. As with the Dockerfile naming, I found it is easier to understand when following the debug and release approach.
 
-*Environment Variables*
+**Environment Variables**
 
 You’ll notice for our database service we configure our environment variables explicitly, but in our web service we defer to the .env file. This is entirely preference, but the idea is that the .env file is something each machine/developer will change while these docker compose files should be mostly static and changed only when new infrastructure are manipulated. Thus the .env file itself is not checked into source control and a select few example files are provided (i.e., .env.development.sample).
 

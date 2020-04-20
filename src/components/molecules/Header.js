@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 export default function Header(props) {
-
+  let headerClassName = "m-header";
   let [width, setWidth] = useState();
 
   useEffect(() => {
@@ -46,9 +46,13 @@ export default function Header(props) {
     opacity: opacity,
   }
 
+  if (opacity > 0) {
+    headerClassName += " -fade";
+  }
+
   return (
     <div>
-    <div className="m-header">
+    <div className={headerClassName}>
       <div className = "m-header__background"  style = { headerBackgroundStyle }></div>
       <div className="o-rhythm__container -fluid">
         <a

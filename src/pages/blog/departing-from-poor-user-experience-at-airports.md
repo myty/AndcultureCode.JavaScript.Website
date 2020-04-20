@@ -3,17 +3,17 @@ createPage: true
 templateKey: blog-post
 title: departing from poor user experience at airports
 author: Heather Heigel
-date: 2016-07-13
+date: 2014-10-20
 featured: false
 featuredColor: -violet-blue
 featuredImage:
   image: /img/blog/blog_featured_image.jpg
   description: "blog header"
 tileImage:
-  image: /img/post_default_light_3.jpg
+  image: /img/post_airport.png
   description: "blog header"
 postImage:
-  image: /img/header_default_light_3.jpg
+  image: /img/header_airport.jpg
   description: "blog header"
 seo:
   metaTitle: departing from poor user experience at airports | andculture

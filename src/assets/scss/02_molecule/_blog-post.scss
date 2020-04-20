@@ -67,6 +67,7 @@
             color: get-color-primary("fresh");
             margin-block-end: 0;
             margin-block-start: 0;
+            text-transform: lowercase;
 
             @include breakpoints("laptop") {
                 @include font-size("medium-large");
@@ -77,6 +78,7 @@
         p:last-of-type {
             @include font-size("base");
             color: get-color-primary("after-hours");
+            text-transform: lowercase;
         }
 
         a {

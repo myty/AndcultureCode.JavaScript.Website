@@ -10,10 +10,10 @@ featuredImage:
   image: /img/blog/blog_featured_image.jpg
   description: "blog header"
 tileImage:
-  image: /img/post_default_dark_5.jpg
+  image: /img/post_experience.png
   description: "blog header"
 postImage:
-  image: /img/header_default_dark_5.jpg
+  image: /img/header_experience.jpg
   description: "blog header"
 seo:
   metaTitle: craftsmanship in experience design | andculture

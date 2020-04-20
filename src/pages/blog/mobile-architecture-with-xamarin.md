@@ -99,6 +99,10 @@ Includes:
 
 *Mobile.Services.Http*
 
+Contains web service implementations (e.g. REST APIs)
+
+*Mobile.Services.Realm*
+
 Implementation of local Realm database access.
 
 Includes:

@@ -9,6 +9,6 @@ authorPhoto:
 socialLinks:
   - platform: LinkedIn
     url: http://linkedin.com/in/wintondeshong
-  - platform: Twitter
+  - platform: Github
     url: https://github.com/wintondeshong
 ---

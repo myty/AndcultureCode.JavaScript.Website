@@ -9,4 +9,6 @@ authorPhoto:
 socialLinks:
   - platform: LinkedIn
     url: https://www.linkedin.com/in/annelparmer/
+  - platform: Twitter
+    url: https://twitter.com/annelparmer
 ---

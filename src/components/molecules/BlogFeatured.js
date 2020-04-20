@@ -28,7 +28,6 @@ const BlogFeatured = (props) => {
             aria-label = { `Go to article ${featuredPost.title}` }
             className  = { className }
             href       = { featuredPostUrl }>
-            <div className="m-blog-featured__overlay"></div>
             <div className="m-blog-featured__image">
                 <img
                     src = { featuredPost.featuredImage.image.childImageSharp.fluid.src }

@@ -1,4 +1,4 @@
-import React                 from 'react';
+import React, { Fragment }   from 'react';
 import IconSocialTwitter     from 'components/atoms/IconSocialTwitter';
 import IconSocialLinkedIn    from 'components/atoms/IconSocialLinkedIn';
 import IconSocialFacebook    from 'components/atoms/IconSocialFacebook';
@@ -25,25 +25,35 @@ const BlogAuthor = (props) => {
                     src         = { props.author.authorPhoto.image.childImageSharp.fluid.src } />
             </div>
             <div className="m-blog-author__details">
-                <div className="m-blog-author__name">
-                    { props.author.name }
+                <div className="m-blog-author__date">
+                    { props.postDate }
                 </div>
-                <div className="m-blog-author__position">
-                    { props.author.position }
+                <div className="m-blog-author__divider">|</div>
+                <div className="m-blog-author__name-position">
+                    <div className="m-blog-author__name">
+                        { props.author.name }
+                    </div>
+                    <div className="m-blog-author__divider">|</div>
+                    <div className="m-blog-author__position">
+                        { props.author.position }
+                    </div>
                 </div>
                 {props.author.socialLinks &&
-                    <div className="m-blog-author__links">
-                        {props.author.socialLinks.map(link => (
-                            _getSocialIconLink(link)
-                        ))}
-                    </div>
+                    <Fragment>
+                        <div className="m-blog-author__divider">|</div>
+                        <div className="m-blog-author__links">
+                            {props.author.socialLinks.map((link, index) => (
+                                _getSocialIconLink(link, index)
+                            ))}
+                        </div>
+                    </Fragment>
                 }
             </div>
         </div>
     );
 };
 
-const _getSocialIconLink = (link) => {
+const _getSocialIconLink = (link, index) => {
     let icon = null;
 
     switch (link.platform.toLowerCase()) {
@@ -71,6 +81,7 @@ const _getSocialIconLink = (link) => {
         <a
             aria-label = { `Share on ${link.platform}` }
             href       = { link.url }
+            key        = { `social-link-${index}` }
             target     = "_blank"
             rel        = "noopener">{ icon }</a>
     );

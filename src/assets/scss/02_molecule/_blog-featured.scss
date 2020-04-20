@@ -18,7 +18,7 @@
     }
 
     &.-fade {
-        .m-blog-featured__overlay {
+        &:after {
             opacity: 0.5;
         }
     }
@@ -91,12 +91,15 @@
         }
     }
 
-    &__overlay {
+    &:after {
+        content: "";
         display: none;
         height: 100%;
         width: 100%;
         opacity: 0;
         position: absolute;
+        left: 0;
+        top: 0;
         background-color: #000;
         transition: all 1s ease;
 

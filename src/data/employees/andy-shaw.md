@@ -1,7 +1,7 @@
 ---
 createPage: false
 name: Andy Shaw
-position: Directory of Strategy
+position: Director of Strategy
 easterEgg: dad blogger. it's a thing.
 authorPhoto:
   image: /img/authors/author-andy-shaw.png

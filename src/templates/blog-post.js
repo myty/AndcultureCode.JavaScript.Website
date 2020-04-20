@@ -1,45 +1,101 @@
-import React, { useEffect, useState } from 'react';
-import { graphql, Link }              from 'gatsby';
-import Layout                         from 'components/Layout';
-import IconSocialTwitter              from 'components/atoms/IconSocialTwitter';
-import IconSocialLinkedIn             from 'components/atoms/IconSocialLinkedIn';
-import IconSocialFacebook             from 'components/atoms/IconSocialFacebook';
-import IconSocialMail                 from 'components/atoms/IconSocialMail';
-import IconSocialLink                 from 'components/atoms/IconSocialLink';
-import BlogAuthor                     from 'components/organisms/BlogAuthor';
+import React, { useEffect, useState, useRef, useLayoutEffect } from 'react';
+import { graphql, Link }                                       from 'gatsby';
+import Layout                                                  from 'components/Layout';
+import IconSocialTwitter                                       from 'components/atoms/IconSocialTwitter';
+import IconSocialLinkedIn                                      from 'components/atoms/IconSocialLinkedIn';
+import IconSocialFacebook                                      from 'components/atoms/IconSocialFacebook';
+import IconSocialMail                                          from 'components/atoms/IconSocialMail';
+import IconSocialLink                                          from 'components/atoms/IconSocialLink';
+import BlogAuthor                                              from 'components/organisms/BlogAuthor';
+import useWindowDimensions                                     from 'utils/windowDimensionsHook';
 
-export const BlogPostTemplate = ({ author, html, nextPostUrl, properties, url }) => {
+export const BlogPostTemplate = (props) => {
+  const properties                                      = props.properties;
+  const contentRef                                      = useRef();
+  const headerRef                                       = useRef();
+  const backgroundRef                                   = useRef();
+  const [headerDimensions, setHeaderDimensions]         = useState({ width:0, height: 0 });
+  const [backgroundDimensions, setBackgroundDimensions] = useState({ width:0, height: 0 });
+  const windowDimensions                                = useWindowDimensions();
+  const encodedUrl                                      = `https://www.andculture.com/${encodeURI(props.url)}`;
+
+  // Set the background image for the blog post background
   const postBackgroundStyle = {
-      background: "url('" + properties.postImage.image.childImageSharp.fluid.src + "') no-repeat left top / 100%"
+      background: "url('" + properties.postImage.image.childImageSharp.fluid.src + "') no-repeat left top"
   };
 
-  const encodedUrl = `https://www.andculture.com/${encodeURI(url)}`;
+  // Get the dimensions of the header section of the content component
+  useLayoutEffect(() => {
+    if (headerRef.current) {
+      setHeaderDimensions({
+        width: headerRef.current.offsetWidth,
+        height: headerRef.current.offsetHeight
+      });
+    }
+
+    if (backgroundRef.current) {
+      setBackgroundDimensions({
+        width: backgroundRef.current.offsetWidth,
+        height: backgroundRef.current.offsetHeight
+      });
+    }
+  }, []);
+
+  // Manipulating the page based on the current scroll position
+  // in order to create smooth transitions.
+  let contentClassName = "";
+
+  if (props.scrollTop >= 1) {
+    contentClassName = "-opaque";
+  }
+
+  if (headerRef && headerRef.current) {
+    //const contentPosition = windowDimensions.height - headerRef.current.offsetHeight;
+
+    if (props.scrollTop >= contentRef.current.offsetTop) {
+      postBackgroundStyle.position = "absolute";
+      postBackgroundStyle.top      = contentRef.current.offsetTop;
+    } else {
+      postBackgroundStyle.position = "fixed";
+      postBackgroundStyle.top      = 0;
+    }
+  }
+
+  if (backgroundRef && backgroundRef.current) {
+    if (props.scrollTop >= contentRef.current.offsetTop + backgroundRef.current.offsetHeight) {
+      props.onInvertChange(true);
+    } else {
+      props.onInvertChange(false);
+    }
+  }
 
   return (
-    <article
-      className = "p-blog__background"
-      style     = { postBackgroundStyle }>
-        <div className="p-blog__background__gradient" aria-hidden="true"></div>
-        <div className="p-blog__background__wrapper o-rhythm__container">
-          <header className="o-rhythm__row">
+    <article className="p-blog__background">
+        <div
+          className   = "p-blog__background__gradient"
+          aria-hidden = "true"
+          ref         = { backgroundRef }
+          style       = { postBackgroundStyle }>
+          <div className="p-blog__background__gradient__top"></div>
+          <div className="p-blog__background__gradient__bottom"></div>
+        </div>
+        <div ref={contentRef} className={`p-blog__background__wrapper ${contentClassName} o-rhythm__container`}>
+          <header ref={headerRef} className="o-rhythm__row">
             <section>
+              <p>{ properties.category }</p>
               <h1>{ properties.title }</h1>
-              <time>{ properties.date }</time>
               <BlogAuthor
-                author     = { author }
-                mobileOnly = { true } />
+                author   = { props.author }
+                postDate = { properties.date } />
               {properties.headline &&
                 <h2>{ properties.headline }</h2>
               }
             </section>
-            <aside>
-              <BlogAuthor author={ author } />
-            </aside>
           </header>
           <main className="o-rhythm__row">
             <section
               dangerouslySetInnerHTML={{
-                __html: html
+                __html: props.html
               }}>
             </section>
           </main>
@@ -49,17 +105,17 @@ export const BlogPostTemplate = ({ author, html, nextPostUrl, properties, url })
               <a
                 href       = {`mailto:?to=&body=${encodedUrl}&subject=andculture%20blog%20post`}
                 target     = "_blank"
-                aria-label = "Share on Twitter"
+                aria-label = "Share via Email"
                 rel        = "noopener">
                 <IconSocialMail />
               </a>
-              <a
+              {/* <a
                 href       = {`https://twitter.com/intent/tweet?text=${encodedUrl}&via=andculture`}
                 target     = "_blank"
                 aria-label = "Share on Twitter"
                 rel        = "noopener">
                 <IconSocialLink />
-              </a>
+              </a> */}
               <a
                 href       = {`https://twitter.com/intent/tweet?text=${encodedUrl}&via=andculture`}
                 target     = "_blank"
@@ -84,7 +140,7 @@ export const BlogPostTemplate = ({ author, html, nextPostUrl, properties, url })
             </section>
             <nav>
               <Link to="/blog/">Back to blog</Link>
-              <Link to={ nextPostUrl }>next article</Link>
+              <Link to={ props.nextPostUrl }>next article</Link>
             </nav>
           </footer>
         </div>
@@ -96,6 +152,7 @@ const BlogPost = ({ data }) => {
   const postHtml                  = data.post.html;
   const postProperties            = data.post.frontmatter;
   const [scrollTop, setScrollTop] = useState(0);
+  const [pageClass, setPageClass] = useState("");
 
   useEffect(() => {
     const onScroll = e => {
@@ -106,19 +163,28 @@ const BlogPost = ({ data }) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
 
+  // Update the inverted class for the header colors outside
+  // of the background image's positioning so it is not white
+  // on white.
+  const onInvertChange = (invert) => {
+    setPageClass(`${invert ? "-inverted" : ""}`)
+  };
+
   return (
     <Layout
       data                  = { postProperties }
-      pageClassName         = "p-blog"
-      pageTitle             = "blog"
+      pageClassName         = { `p-blog -post ${pageClass}` }
+      pageTitle             = ""
       scrollTop             = { scrollTop }
       showFooterDividerLine = { true }>
       <BlogPostTemplate
-        author      = { _getAuthor(data.authors, postProperties.author) }
-        html        = { postHtml }
-        nextPostUrl = { _getNextPostUrl(data.posts, data.post.id) }
-        properties  = { postProperties }
-        url         = { data.post.fields.slug } />
+        author         = { _getAuthor(data.authors, postProperties.author) }
+        html           = { postHtml }
+        nextPostUrl    = { _getNextPostUrl(data.posts, data.post.id) }
+        onInvertChange = { onInvertChange }
+        properties     = { postProperties }
+        scrollTop      = { scrollTop }
+        url            = { data.post.fields.slug } />
     </Layout>
   )
 }
@@ -223,7 +289,7 @@ export const pageQuery = graphql`
             }
           }
         }
-        date(formatString: "MM.DD.YY")
+        date(formatString: "M.DD.YY")
         featuredColor
         seo {
           metaDescription

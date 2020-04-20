@@ -1,4 +1,49 @@
 .p-blog {
+    &.-post {
+        .m-header__logo svg path {
+            fill: get-color-primary("white");
+            transition: all ease 1s;
+        }
+
+        .m-header__navigation a {
+            color: get-color-primary("white");
+            transition: all ease 1s;
+        }
+
+        .m-header__navigation a span {
+            background-color: get-color-primary("white");
+            transition: all ease 1s;
+        }
+
+        .m-header.-fade {
+            .m-header__logo svg path {
+                fill: get-color-primary("fresh");
+            }
+
+            .m-header__navigation a {
+                color: get-color-primary("fresh");
+            }
+
+            .m-header__navigation a span {
+                background-color: get-color-primary("fresh");
+            }
+        }
+
+        &.-inverted {
+            .m-header__logo svg path {
+                fill: get-color-primary("fresh");
+            }
+
+            .m-header__navigation a {
+                color: get-color-primary("fresh");
+            }
+
+            .m-header__navigation a span {
+                background-color: get-color-primary("fresh");
+            }
+        }
+    }
+
     &__list {
         position: relative;
         margin-top: 0;
@@ -44,63 +89,85 @@
     // ----------------------------------------
 
     &__background {
-        margin-top: 80px;
         position: relative;
+        padding-bottom: 150px;
 
-        @include breakpoints("tablet") {
-            margin-top: 160px;
+        @include breakpoints("sm-tablet") {
+            padding-bottom: 200px;
+        }
+
+        @include breakpoints("laptop") {
+            padding-bottom: 516px;
         }
 
         &__gradient {
-            height: 500px;
+            height: 69vw;
             width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
+            position: fixed;
             z-index: 0;
-            background: rgb(255,255,255);
-            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 70%);
+            background-size: cover;
 
-            @include breakpoints("tablet") {
-                height: 1300px;
+            &__top {
+                width: 100%;
+                position: absolute;
+                background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+                height: 25%;
+            }
+
+            &__bottom {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
             }
         }
 
         &__wrapper {
-            padding-top: 150px;
             position: relative;
+            top: 150px;
             z-index: 1;
 
             @include breakpoints("sm-tablet") {
-                padding-top: 200px;
+                top: 200px;
+            }
+
+            @include breakpoints("laptop") {
+                top: 516px;
+            }
+
+            &.-opaque {
+                header, main {
+                    background-color: rgba(get-color-primary("white"), 1);
+                }
             }
         }
     }
 
     header {
-        padding-top: 20px;
-        background-color: get-color-primary("white");
-        padding-left: 8px;
-        padding-right: 8px;
-
-        @include breakpoints("sm-tablet") {
-            padding-top: 100px;
-        }
+        padding: 40px 8px 0 8px;
+        background-color: rgba(get-color-primary("white"), 0.7);
+        transition: all ease 2s;
 
         section {
             @include span-col(12);
 
             @include breakpoints("sm-tablet") {
-                @include span-col(6);
+                @include span-col(10);
                 @include push-col(1);
             }
 
-            @include breakpoints("sm-tablet") {
-                @include span-col(8);
-                @include push-col(1);
+            p {
+                @include font-size("base");
+                font-weight: 600;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: get-color-primary("after-hours");
+                margin-block-end: 0;
             }
 
             h1 {
+                @include font-size(64px);
+                @include line-height(74px);
                 text-transform: lowercase;
             }
 
@@ -121,23 +188,14 @@
             }
         }
 
-        aside {
-            @include span-col(12);
-            display: none;
-
-            @include breakpoints("sm-tablet") {
-                @include span-col(5);
-                display: block;
-            }
-
-            @include breakpoints("laptop") {
-                @include span-col(3);
-            }
+        .m-blog-author {
+            margin-top: 20px;
         }
     }
 
     main {
-        background-color: get-color-primary("white");
+        background-color: rgba(get-color-primary("white"), 0.7);
+        transition: all ease 2s;
 
         section {
             @include span-col(12);
@@ -262,7 +320,7 @@
     }
 
     footer {
-        margin-top: 60px;
+        margin: 60px 0;
 
         @include breakpoints("tablet") {
             margin-top: 100px;

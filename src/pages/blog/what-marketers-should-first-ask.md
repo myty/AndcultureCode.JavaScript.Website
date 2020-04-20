@@ -1,7 +1,7 @@
 ---
 createPage: true
 templateKey: blog-post
-title: "Marketers, first ask: “Why do we want to do this?”"
+title: "marketers, first ask: “why do we want to do this?”"
 headline: Please put down that case study.
 author: Andy Shaw
 date: 2020-04-15

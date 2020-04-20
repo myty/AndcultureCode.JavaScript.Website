@@ -4,7 +4,7 @@ name: Mike Koser
 position: Director of Engineering
 easterEgg: brews beer for the masses
 authorPhoto:
-  image: /img/authors/author-scribble.jpg
+  image: /img/authors/author-mike-koser.png
   description: Mike Koser
 socialLinks:
   - platform: LinkedIn

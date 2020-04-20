@@ -1,11 +1,11 @@
 import React               from 'react';
 import logo                from '../../../static/img/ac_footer_wordmark.svg';
-import IconSocialTwitter   from '../atoms/IconSocialTwitter';
-import IconSocialLinkedIn  from '../atoms/IconSocialLinkedIn';
-import IconSocialFacebook  from '../atoms/IconSocialFacebook';
-import IconSocialInstagram from '../atoms/IconSocialInstagram';
-import IconSocialGithub    from '../atoms/IconSocialGithub';
-import IconSocialDribbble  from '../atoms/IconSocialDribbble';
+import IconSocialTwitter   from 'components/atoms/IconSocialTwitter';
+import IconSocialLinkedIn  from 'components/atoms/IconSocialLinkedIn';
+import IconSocialFacebook  from 'components/atoms/IconSocialFacebook';
+import IconSocialInstagram from 'components/atoms/IconSocialInstagram';
+import IconSocialGithub    from 'components/atoms/IconSocialGithub';
+import IconSocialDribbble  from 'components/atoms/IconSocialDribbble';
 
 const Footer = class extends React.Component {
   constructor(props) {
