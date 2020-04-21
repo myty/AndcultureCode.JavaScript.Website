@@ -20,9 +20,15 @@ const BlogAuthor = (props) => {
     return (
         <div className={`m-blog-author ${className}`}>
             <div className="m-blog-author__image">
-                <img
-                    description = { props.author.authorPhoto.description }
-                    src         = { props.author.authorPhoto.image.childImageSharp.fluid.src } />
+                {props.author.authorPhoto ?
+                    <img
+                        alt = { props.author.authorPhoto.description }
+                        src = { props.author.authorPhoto.image.childImageSharp.fluid.src } />
+                    :
+                    <img
+                        alt = "Scribble Image as Placeholder"
+                        src = "/img/authors/author-scribble.png" />
+                }
             </div>
             <div className="m-blog-author__details">
                 <div className="m-blog-author__date">
@@ -35,7 +41,10 @@ const BlogAuthor = (props) => {
                     </div>
                     <div className="m-blog-author__divider">|</div>
                     <div className="m-blog-author__position">
-                        { props.author.position }
+                        {props.author.position 
+                            ? props.author.position
+                            : "alumni"
+                        }
                     </div>
                 </div>
                 {props.author.socialLinks &&
