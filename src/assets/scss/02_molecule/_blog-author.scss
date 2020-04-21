@@ -24,7 +24,7 @@
         float: left;
         margin-top: 10px;
         padding-left: 16px;
-        color: get-color-neutral("dark-blue");
+        color: get-color-neutral("light-gray");
         text-align: left;
         text-transform: lowercase;
 
@@ -67,7 +67,11 @@
         display: block;
 
         .m-blog-author__divider {
-            display: inline-block;
+            display: none;
+
+            @include breakpoints("sm-tablet") {
+                display: inline-block;
+            }
         }
 
         @include breakpoints("sm-desktop") {
@@ -76,11 +80,21 @@
     }
 
     &__name {
-        display: inline-block;
+        display: block;
+        margin-bottom: 6px;
+
+        @include breakpoints("sm-tablet") {
+            display: inline-block;
+            margin-bottom: 0;
+        }
     }
 
     &__position {
-        display: inline-block;
+        display: block;
+
+        @include breakpoints("sm-tablet") {
+            display: inline-block;
+        }
     }
 
     &__links {
@@ -101,7 +115,7 @@
             }
 
             svg {
-                fill: get-color-primary("after-hours");
+                fill: get-color-neutral("light-gray");
                 transition: all 400ms ease;
             }
 

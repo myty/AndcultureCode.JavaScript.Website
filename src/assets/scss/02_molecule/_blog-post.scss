@@ -10,6 +10,10 @@
         img {
             transform: scale(1.2);
         }
+
+        .m-blog-post__details p:first-of-type {
+            text-decoration: underline;
+        }
     }
 
     &.-right {
@@ -55,19 +59,26 @@
         h5 {
             @include font-size("base");
             margin-bottom: 20px;
+            margin-top: 10px;
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: get-color-neutral("light-blue");
+
+            @include breakpoints("sm-tablet") {
+                margin-top: 0;
+            }
         }
 
         p:first-of-type {
             @include font-size(30px);
             @include line-height(36px);
+            display: inline-block;
             color: get-color-primary("fresh");
             margin-block-end: 0;
             margin-block-start: 0;
             text-transform: lowercase;
+            transition: all ease 0.5s;
 
             @include breakpoints("laptop") {
                 @include font-size("medium-large");

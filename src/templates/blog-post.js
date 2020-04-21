@@ -19,7 +19,7 @@ export const BlogPostTemplate = (props) => {
 
   // Set the background image for the blog post background
   const postBackgroundStyle = {
-      background: "url('" + properties.postImage.image.childImageSharp.fluid.src + "') no-repeat left top"
+      background: "url('" + properties.postImage.image.childImageSharp.fluid.src + "') no-repeat left top / cover"
   };
 
   // Manipulating the page based on the current scroll position

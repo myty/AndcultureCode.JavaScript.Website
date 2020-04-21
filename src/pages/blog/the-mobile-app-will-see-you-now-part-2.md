@@ -1,7 +1,7 @@
 ---
 createPage: true
 templateKey: blog-post
-title: the mobile app will see you now - part II
+title: the mobile app will see you now - part 2
 author: Lauren McAteer
 date: 2017-01-11
 featured: false

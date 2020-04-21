@@ -1,18 +1,20 @@
 .p-blog {
     &.-post {
-        .m-header__logo svg path {
+        .m-header__logo svg path,
+        .m-header__title svg path,
+        .m-header__title svg rect {
             fill: get-color-primary("white");
-            transition: all ease 1s;
+            transition: all ease 0.7s;
         }
 
         .m-header__navigation a {
             color: get-color-primary("white");
-            transition: all ease 1s;
+            transition: all ease 0.7s;
         }
 
         .m-header__navigation a span {
             background-color: get-color-primary("white");
-            transition: all ease 1s;
+            transition: all ease 0.7s;
         }
 
         .m-header.-fade {
@@ -27,10 +29,19 @@
             .m-header__navigation a span {
                 background-color: get-color-primary("fresh");
             }
+
+            + .m-header__title {
+                svg path,
+                svg rect {
+                    fill: get-color-primary("fresh");
+                }
+            }
         }
 
         &.-inverted {
-            .m-header__logo svg path {
+            .m-header__logo svg path,
+            .m-header__title svg path,
+            .m-header__title svg rect {
                 fill: get-color-primary("fresh");
             }
 
@@ -69,6 +80,18 @@
         @include breakpoints(2600px) {
             margin-top: 1014px;
         }
+
+        @include breakpoints(2800px) {
+            margin-top: 1114px;
+        }
+
+        @include breakpoints(3000px) {
+            margin-top: 1214px;
+        }
+
+        @include breakpoints(3200px) {
+            margin-top: 1314px;
+        }
     }
 
     .m-header__page-title {
@@ -87,6 +110,10 @@
 
     // Blog Post Page
     // ----------------------------------------
+
+    .m-footer {
+        background-color: get-color-primary("white");
+    }
 
     &__background {
         position: relative;
@@ -166,16 +193,14 @@
             }
 
             h1 {
-                @include font-size(64px);
-                @include line-height(74px);
+                @include font-size(40px);
+                @include line-height(50px);
                 text-transform: lowercase;
-            }
 
-            time {
-                @include font-size("medium-large");
-                display: block;
-                margin-top: 10px;
-                color: get-color-neutral("light-gray");
+                @include breakpoints("sm-tablet") {
+                    @include font-size(64px);
+                    @include line-height(74px);
+                }
             }
 
             h2 {
@@ -238,7 +263,7 @@
                 }
 
                 + p {
-                    margin-top: 30px;
+                    margin-top: 39px;
                 }
 
                 a {
@@ -268,6 +293,7 @@
                 li {
                     @include font-size("small");
                     @include line-height(32px);
+                    margin-bottom: 20px;
 
                     @include breakpoints("sm-tablet") {
                         @include font-size(24px);
@@ -320,7 +346,7 @@
     }
 
     footer {
-        margin: 60px 0;
+        margin: 60px 0 85px 0;
 
         @include breakpoints("tablet") {
             margin-top: 100px;
@@ -375,13 +401,14 @@
 
             @include breakpoints("tablet") {
                 @include span-col(3);
-                margin-top: 0;
+                margin-top: 16px;
             }
 
             a {
                 @include font-size("small");
                 display: block;
                 color: get-color-neutral("light-gray");
+                font-family: $font-primary;
                 font-weight: 200;
                 text-transform: lowercase;
 
