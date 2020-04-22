@@ -17,7 +17,7 @@
             transition: all ease 0.7s;
         }
 
-        .m-header.-fade {
+        .m-header {
             .m-header__logo svg path {
                 fill: get-color-primary("fresh");
             }
@@ -34,6 +34,27 @@
                 svg path,
                 svg rect {
                     fill: get-color-primary("fresh");
+                }
+            }
+
+            @include breakpoints("tablet") {
+                .m-header__logo svg path {
+                    fill: get-color-primary("white");
+                }
+
+                .m-header__navigation a {
+                    color: get-color-primary("white");
+                }
+
+                .m-header__navigation a span {
+                    background-color: get-color-primary("white");
+                }
+
+                + .m-header__title {
+                    svg path,
+                    svg rect {
+                        fill: get-color-primary("white");
+                    }
                 }
             }
         }
@@ -60,38 +81,6 @@
         margin-top: 0;
         z-index: 1;
         background-color: get-color-primary("white");
-
-        @include breakpoints("laptop") {
-            margin-top: 514px;
-        }
-
-        @include breakpoints("sm-desktop") {
-            margin-top: 614px;
-        }
-
-        @include breakpoints("desktop") {
-            margin-top: 680px;
-        }
-
-        @include breakpoints("xl-desktop") {
-            margin-top: 814px;
-        }
-
-        @include breakpoints(2600px) {
-            margin-top: 1014px;
-        }
-
-        @include breakpoints(2800px) {
-            margin-top: 1114px;
-        }
-
-        @include breakpoints(3000px) {
-            margin-top: 1214px;
-        }
-
-        @include breakpoints(3200px) {
-            margin-top: 1314px;
-        }
     }
 
     .m-header__page-title {
@@ -156,10 +145,6 @@
 
             @include breakpoints("sm-tablet") {
                 top: 200px;
-            }
-
-            @include breakpoints("laptop") {
-                top: 516px;
             }
 
             &.-opaque {
@@ -361,20 +346,6 @@
                 @include push-col(1);
             }
 
-            .blog-artifact {
-                display: none;
-                height: 2px;
-                margin-right: 27px;
-                width: 43px;
-                position: relative;
-                top: -5px;
-                background-color: get-color-primary("fresh");
-
-                @include breakpoints("sm-tablet") {
-                    display: inline-block;
-                }
-            }
-
             a {
                 display: inline-block;
                 width: 20px;
@@ -409,7 +380,6 @@
                 display: block;
                 color: get-color-neutral("light-gray");
                 font-family: $font-primary;
-                font-weight: 200;
                 text-transform: lowercase;
 
                 @include breakpoints("sm-tablet") {

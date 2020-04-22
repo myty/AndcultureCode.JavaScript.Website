@@ -1,11 +1,14 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from 'react';
-import { graphql, Link }                                       from 'gatsby';
-import Layout                                                  from 'components/Layout';
-import IconSocialTwitter                                       from 'components/atoms/IconSocialTwitter';
-import IconSocialLinkedIn                                      from 'components/atoms/IconSocialLinkedIn';
-import IconSocialFacebook                                      from 'components/atoms/IconSocialFacebook';
-import IconSocialMail                                          from 'components/atoms/IconSocialMail';
-import BlogAuthor                                              from 'components/organisms/BlogAuthor';
+import React, { useEffect, useState, useRef } from 'react';
+import { graphql, Link }                      from 'gatsby';
+import Layout                                 from 'components/Layout';
+import IconSocialTwitter                      from 'components/atoms/IconSocialTwitter';
+import IconSocialLinkedIn                     from 'components/atoms/IconSocialLinkedIn';
+import IconSocialFacebook                     from 'components/atoms/IconSocialFacebook';
+import IconSocialMail                         from 'components/atoms/IconSocialMail';
+import BlogAuthor                             from 'components/organisms/BlogAuthor';
+import useWindowDimensions                    from 'utils/windowDimensionsHook';
+import useComponentSize                       from '@rehooks/component-size'
+import 'resize-observer-polyfill';
 
 export const BlogPostTemplate = (props) => {
   const properties                                      = props.properties;
@@ -16,6 +19,9 @@ export const BlogPostTemplate = (props) => {
   const encodedSummary                                  = encodeURI(properties.seo.socialShareCopy);
   const encodedSubject                                  = encodeURI(`Check out the blog post ${properties.title} by andculture`);
   const encodedBody                                     = encodeURI(`Hello! I just read ${properties.title} by andculture and thought you’d love it! You can read it at ${encodedUrl}. I hope you enjoy it!`);
+  const windowDimensions                                = useWindowDimensions();
+  const contentStyle                                    = {};
+  let headerSize                                        = useComponentSize(headerRef);
 
   // Set the background image for the blog post background
   const postBackgroundStyle = {
@@ -30,10 +36,18 @@ export const BlogPostTemplate = (props) => {
     contentClassName = "-opaque";
   }
 
-  if (headerRef && headerRef.current) {
+  let contentPosition = 0;
+
+  if (headerRef && headerRef.current && contentRef && contentRef.current) {
+    contentPosition  = windowDimensions.height - headerSize.height;
+
+    if (windowDimensions.width > 768) {
+      contentStyle.top = `${contentPosition}px`;
+    }
+
     if (props.scrollTop >= contentRef.current.offsetTop) {
       postBackgroundStyle.position = "absolute";
-      postBackgroundStyle.top      = contentRef.current.offsetTop;
+      postBackgroundStyle.top      = windowDimensions.width > 768 ? contentPosition : contentRef.current.offsetTop;
     } else {
       postBackgroundStyle.position = "fixed";
       postBackgroundStyle.top      = 0;
@@ -58,7 +72,10 @@ export const BlogPostTemplate = (props) => {
           <div className="p-blog__background__gradient__top"></div>
           <div className="p-blog__background__gradient__bottom"></div>
         </div>
-        <div ref={contentRef} className={`p-blog__background__wrapper ${contentClassName} o-rhythm__container`}>
+        <div
+          className = {`p-blog__background__wrapper ${contentClassName} o-rhythm__container`} 
+          ref       = {contentRef}
+          style     = { contentStyle } >
           <header ref={headerRef} className="o-rhythm__row">
             <section>
               <p>{ properties.category }</p>
@@ -80,7 +97,6 @@ export const BlogPostTemplate = (props) => {
           </main>
           <footer className="o-rhythm__row">
             <section>
-              <span className="blog-artifact" aria-hidden="true"></span>
               <a
                 href       = {`mailto:?to=&body=${encodedBody}&subject=${encodedSubject}`}
                 target     = "_blank"

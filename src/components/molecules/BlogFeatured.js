@@ -5,7 +5,7 @@ import { graphql, StaticQuery } from 'gatsby'
 // Primary Component
 // ------------------------------------
 
-const BlogFeatured = (props) => {
+const BlogFeatured = React.forwardRef((props, ref) => {
     const { data }         = props;
     const { edges: posts } = data.allMarkdownRemark;
     const postCount        = posts.length;
@@ -27,7 +27,8 @@ const BlogFeatured = (props) => {
         <a
             aria-label = { `Go to article ${featuredPost.title}` }
             className  = { className }
-            href       = { featuredPostUrl }>
+            href       = { featuredPostUrl }
+            ref        = { ref }>
             <div className="m-blog-featured__image">
                 <img
                     src = { featuredPost.featuredImage.image.childImageSharp.fluid.src }
@@ -41,13 +42,13 @@ const BlogFeatured = (props) => {
             </div>
         </a>
     );
-};
+});
 
 
 // Exports
 // ------------------------------------
 
-export default (props) => (
+export default React.forwardRef((props, ref) => (
     <StaticQuery
       query={graphql`
         query BlogFeaturedQuery {
@@ -82,11 +83,11 @@ export default (props) => (
         }
       `}
       render = {
-        (data, count) =>
+          data =>
             <BlogFeatured
                 data      = { data }
-                count     = { count }
+                ref       = { ref }
                 scrollTop = { props.scrollTop } />
       }
     />
-  )
+  ));

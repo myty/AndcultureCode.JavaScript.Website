@@ -2,58 +2,36 @@ import React, { useEffect, useState } from 'react';
 
 export default function Header(props) {
   let headerClassName = "m-header";
-  let [width, setWidth] = useState();
+  // let [width, setWidth] = useState();
 
-  useEffect(() => {
-    const getWidth = () => window.innerWidth
-      || document.documentElement.clientWidth
-      || document.body.clientWidth;
-      setWidth(getWidth());
-      const resizeListener = () => {
-        // change width from the state object
-        setWidth(getWidth())
-      };
-      // set resize listener
-      window.addEventListener('resize', resizeListener);
-      // clean up function
-      return () => {
-        // remove resize listener
-        window.removeEventListener('resize', resizeListener);
-      }
-  }, [width]);
+  // useEffect(() => {
+  //   const getWidth = () => window.innerWidth
+  //     || document.documentElement.clientWidth
+  //     || document.body.clientWidth;
+  //     setWidth(getWidth());
+  //     const resizeListener = () => {
+  //       // change width from the state object
+  //       setWidth(getWidth())
+  //     };
+  //     // set resize listener
+  //     window.addEventListener('resize', resizeListener);
+  //     // clean up function
+  //     return () => {
+  //       // remove resize listener
+  //       window.removeEventListener('resize', resizeListener);
+  //     }
+  // }, [width]);
 
-  let opacity = 0;
   let titleClass = "m-header__title";
-
-  if (width < 769) {
-    const fadeBegin = 0;
-    const fadeFinish = 300;
-
-    const offset = props.scrollTop
-    opacity = 1;
-    if (offset <= fadeBegin) {
-      opacity = 0;
-    } else if (offset <= fadeFinish) {
-      opacity = 0 + offset / fadeFinish;
-    }
-  }
 
   if (props.pageTitle === "home") {
     titleClass += " -home";
   }
 
-  const headerBackgroundStyle = {
-    opacity: opacity,
-  }
-
-  if (opacity > 0) {
-    headerClassName += " -fade";
-  }
-
   return (
     <div>
     <div className={headerClassName}>
-      <div className = "m-header__background"  style = { headerBackgroundStyle }></div>
+      <div className = "m-header__background"></div>
       <div className="o-rhythm__container -fluid">
         <a
           href="/"

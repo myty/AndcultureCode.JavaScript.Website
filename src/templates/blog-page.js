@@ -1,24 +1,41 @@
-import React, { useEffect, useState } from 'react';
-import { graphql }                    from 'gatsby';
-import Layout                         from '../components/Layout';
-import BlogFeatured                   from '../components/molecules/BlogFeatured';
-import BlogList                       from '../components/organisms/BlogList';
+import React, { useEffect, useState, useRef } from 'react';
+import { graphql }                            from 'gatsby';
+import Layout                                 from 'components/Layout';
+import BlogFeatured                           from 'components/molecules/BlogFeatured';
+import BlogList                               from 'components/organisms/BlogList';
+import useWindowDimensions                    from 'utils/windowDimensionsHook';
+import useComponentSize                       from '@rehooks/component-size'
+import 'resize-observer-polyfill';
 
 export const BlogPageTemplate = ({
     title,
     secondaryTitle,
     subTitle,
     scrollTop,
-  }) => (
+  }) => {
+    let featuredRef        = useRef(null);
+    let featuredSize       = useComponentSize(featuredRef);
+    const windowDimensions = useWindowDimensions();
+    const blogListStyle    = {};
+    const tabletWidth      = 768;
+
+    if (windowDimensions.width >= tabletWidth) {
+      blogListStyle.marginTop = `${featuredSize.height + 180}px`;
+    }
+
+    return (
       <div>
-        <BlogFeatured scrollTop = { scrollTop } />
-        <div className="p-blog__list">
+        <BlogFeatured 
+          ref       = { featuredRef }
+          scrollTop = { scrollTop } />
+        <div className="p-blog__list" style={blogListStyle}>
           <div className="o-rhythm__container">
             <BlogList />
           </div>
         </div>
       </div>
-    )
+    );
+  }
 
   const BlogPage = ({ data }) => {
     const { frontmatter } = data.markdownRemark;

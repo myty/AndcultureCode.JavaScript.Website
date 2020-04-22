@@ -25,7 +25,8 @@
         width: 100%;
         top: 0;
         bottom: 0;
-        background: get-color("primary", "white");
+        background: get-color-primary("white");
+        box-shadow: 0 5px 10px 0 rgba(get-color-primary("black"), .2);
 
         @include breakpoints("tablet") {
             display: none;
