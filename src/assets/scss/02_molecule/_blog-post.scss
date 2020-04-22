@@ -11,8 +11,8 @@
             transform: scale(1.2);
         }
 
-        .m-blog-post__details p:first-of-type {
-            box-shadow: 
+        .m-blog-post__details h3 {
+            box-shadow:
                 inset 0 -0.15em get-color-primary("white"),
                 inset 0 -0.2em get-color-primary("fresh");
         }
@@ -58,9 +58,8 @@
             margin-top: 0;
         }
 
-        h5 {
+        h2 {
             @include font-size("base");
-            margin-bottom: 20px;
             margin-top: 10px;
             font-weight: 600;
             letter-spacing: 2px;
@@ -72,7 +71,7 @@
             }
         }
 
-        p:first-of-type {
+        h3 {
             @include font-size(30px);
             @include line-height(36px);
             display: inline;
@@ -89,6 +88,11 @@
                 0 5px get-color-primary("white"),
                 -5px 0 get-color-primary("white"),
                 0 -5px get-color-primary("white");
+
+            @include breakpoints("sm-tablet") {
+                @include font-size(24px);
+                @include line-height(30px);
+            }
 
             @include breakpoints("laptop") {
                 @include font-size("medium-large");

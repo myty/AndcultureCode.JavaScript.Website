@@ -25,7 +25,7 @@ export const BlogPageTemplate = ({
 
     return (
       <div>
-        <BlogFeatured 
+        <BlogFeatured
           ref       = { featuredRef }
           scrollTop = { scrollTop } />
         <div className="p-blog__list" style={blogListStyle}>

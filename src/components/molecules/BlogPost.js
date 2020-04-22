@@ -22,8 +22,8 @@ const BlogPost = (props) => {
                 <Fragment>
                     <BlogPostImage post = { post } />
                     <div className="m-blog-post__details">
-                        <h5>{ post.category }</h5>
-                        <p>{ post.title }</p>
+                        <h2>{ post.category }</h2>
+                        <h3>{ post.title }</h3>
                         <p>by { post.author }</p>
                     </div>
                 </Fragment>
@@ -32,14 +32,14 @@ const BlogPost = (props) => {
             {!props.imageOnLeft &&
                 <Fragment>
                     <div className="m-blog-post__details -tablet-and-desktop-only">
-                        <h5>{ post.category }</h5>
-                        <p>{ post.title }</p>
+                        <h2>{ post.category }</h2>
+                        <h3>{ post.title }</h3>
                         <p>by { post.author }</p>
                     </div>
                     <BlogPostImage post = { post } />
                     <div className="m-blog-post__details -phone-only">
-                        <h5>{ post.category }</h5>
-                        <p>{ post.title }</p>
+                        <h2>{ post.category }</h2>
+                        <h3>{ post.title }</h3>
                         <p>by { post.author }</p>
                     </div>
                 </Fragment>
