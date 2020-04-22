@@ -6,7 +6,7 @@ function getWindowDimensions() {
     width:  0
   };
 
-  if (window) {
+  if (typeof window !== `undefined`) {
     dimensions.height = window.innerHeight;
     dimensions.width  = window.innerWidth;
   }
@@ -22,7 +22,7 @@ export default function useWindowDimensions() {
       setWindowDimensions(getWindowDimensions());
     }
 
-    if (window) {
+    if (typeof window !== `undefined`) {
       window.addEventListener('resize', handleResize);
       return () => window.removeEventListener('resize', handleResize);
     }
