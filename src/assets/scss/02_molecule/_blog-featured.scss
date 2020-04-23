@@ -9,6 +9,42 @@
     font-family: $font-primary;
     letter-spacing: normal;
 
+    &.-fresh {
+        background-color: get-color-primary("fresh");
+    }
+
+    &.-after-hours {
+        background-color: get-color-primary("after-hours");
+    }
+
+    &.-violet-blue {
+        background-color: get-color-secondary("violet");
+    }
+
+    &.-throwback-pink {
+        background-color: get-color-secondary("pink");
+    }
+
+    &.-siracha {
+        background-color: get-color-secondary("siracha");
+    }
+
+    &.-tea {
+        background-color: get-color-tertiary("tea");
+    }
+
+    &.-eraser {
+        background-color: get-color-tertiary("eraser");
+    }
+
+    &.-sticky-blue {
+        background-color: get-color-tertiary("sticky-blue");
+    }
+
+    &.-center-lane {
+        background-color: get-color-secondary("center-lane");
+    }
+
     &:not(.-inline):hover {
         opacity: 1;
 
@@ -95,10 +131,10 @@
                     inset 0 -0.15em get-color-primary("fresh"),
                     inset 0 -0.2em get-color-primary("fresh");
                 text-shadow:
-                    5px 0 get-color-primary("fresh"),
-                    0 5px get-color-primary("fresh"),
-                    -5px 0 get-color-primary("fresh"),
-                    0 -5px get-color-primary("fresh");
+                    .1em 0 get-color-primary("fresh"),
+                    0 .1em get-color-primary("fresh"),
+                    -.1em 0 get-color-primary("fresh"),
+                    0 -.1em get-color-primary("fresh");
                 transition: box-shadow .25s ease;
             }
         }

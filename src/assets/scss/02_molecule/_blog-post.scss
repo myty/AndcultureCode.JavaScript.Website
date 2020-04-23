@@ -94,10 +94,10 @@
                     inset 0 -0.15em get-color-primary("white"),
                     inset 0 -0.2em get-color-primary("white");
                 text-shadow:
-                    5px 0 get-color-primary("white"),
-                    0 5px get-color-primary("white"),
-                    -5px 0 get-color-primary("white"),
-                    0 -5px get-color-primary("white");
+                    .1em 0 get-color-primary("white"),
+                    0 .1em get-color-primary("white"),
+                    -.1em 0 get-color-primary("white"),
+                    0 -.1em get-color-primary("white");
                 transition: box-shadow .25s ease;
             }
         }

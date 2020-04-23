@@ -150,6 +150,10 @@
                 max-width: 1000px;
             }
 
+            @include breakpoints(1480px) {
+                max-width: 1200px;
+            }
+
             &.-opaque {
                 header, main {
                     background-color: rgba(get-color-primary("white"), 1);

@@ -4,17 +4,17 @@ templateKey: blog-post
 title: "grub for scrubs: win-win for local restaurants and healthcare workers"
 author: Anne Parmer
 date: 2020-04-23
-featured: false
-featuredColor: -after-hours
+featured: true
+featuredColor: -fresh
 featuredImage:
-  image: /img/blog/blog_featured_image.jpg
-  description: "what you should know before engaging with andculture"
+  image: /img/featured_grub_for_scrubs.jpg
+  description: "grub for scrumbs featured image"
 tileImage:
   image: /img/post_grub_for_scrubs.jpg
-  description: "what you should know before engaging with andculture"
+  description: "grub for scrumbs post image"
 postImage:
   image: /img/header_grub_for_scrubs.jpg
-  description: "what you should know before engaging with andculture"
+  description: "grub for scrumbs header image"
 seo:
   metaTitle: Grub for Scrubs - Supporting Harrisburg during a pandemic | andculture
   metaDescription: Amidst fear and uncertainty, we found a way to make a difference for both small, local restaurants and the brave healthcare professionals at UPMC Pinnacle.

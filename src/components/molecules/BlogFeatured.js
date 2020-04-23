@@ -11,11 +11,12 @@ const BlogFeatured = React.forwardRef((props, ref) => {
     const postCount        = posts.length;
     let featuredPost       =  {};
     let featuredPostUrl    = "";
-    let className          = "m-blog-featured";
+    let className          = "m-blog-featured ";
 
     if (postCount === 1) {
-        featuredPost    = posts[0].node.frontmatter;
-        featuredPostUrl = posts[0].node.fields.slug;
+        featuredPost    =  posts[0].node.frontmatter;
+        featuredPostUrl =  posts[0].node.fields.slug;
+        className       += featuredPost.featuredColor;
     }
 
     if (props.scrollTop > 160) {
@@ -72,6 +73,7 @@ export default React.forwardRef((props, ref) => (
                                     }
                                 }
                             }
+                            featuredColor
                             title
                         }
                         fields {
