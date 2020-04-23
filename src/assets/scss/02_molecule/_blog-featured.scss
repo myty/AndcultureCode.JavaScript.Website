@@ -119,7 +119,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background-color: #000;
+        background-color: get-color-primary("black");
         transition: all 1s ease;
 
         @include breakpoints("tablet") {
