@@ -23,14 +23,13 @@ category: "Engineering"
 ---
 We use the [ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528) project architecture to help order CSS in the most effective and least wasteful way. The breaking apart of structure and files for ITCSS really helps to organize and simplify redundant CSS.
 
-![ITCSS Folder Structure Example](/img/itcss-folder-structure.png)
-
 ### Folder Structure Example
-
-![ITCSS Folder Structure Example](/img/itcss-code-5.png)
+![ITCSS Folder Structure Example](/img/itcss-folder-structure.png)
 
 ### File Separation
 SCSS has the ability to leverage partial files that do not generate separate CSS files but are included into a larger file. While you can create a significant amount of files by doing this, it makes finding selectors and components much easier in a large application. An example of these partials is below.
+
+![ITCSS Folder Structure Example](/img/itcss-code-5.png)
 
 ### Attribute Order
 Not all front-end developers choose to order their CSS attributes in a particular order. However, if you poll the community you will find that there are different orders which developers do use in order to maintain some consistency across the same and multiple projects. We have been using the following order of attributes:

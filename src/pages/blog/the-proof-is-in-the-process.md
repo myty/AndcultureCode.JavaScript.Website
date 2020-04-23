@@ -10,11 +10,11 @@ featuredImage:
   image: /img/blog/blog_featured_image.jpg
   description: "blog header"
 tileImage:
-  image: /img/post_default_light_5.jpg
-  description: "blog header"
+  image: /img/post_proof_in_process.jpg
+  description: "the proof is in the process post image"
 postImage:
-  image: /img/header_default_light_5.jpg
-  description: "blog header"
+  image: /img/header_proof_in_process.jpg
+  description: "the proof is in the process header image"
 seo:
   metaTitle: "the proof is in the process: the research phase | andculture"
   metaDescription: "Every project at andculture begins with a research phase that asks: is this idea worth creating, building, or changing? Sometimes, the answer can disappoint."

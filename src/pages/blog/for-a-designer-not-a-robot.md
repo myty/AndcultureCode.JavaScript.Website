@@ -27,7 +27,7 @@ I love to study the different illustration styles that my colleagues use, explor
 
 Micron pens, Waacom tablets and graph paper aside, more often than not, when I see ‘tools of the trade’ posters, I am left feeling like something is missing.
 
-A professor once bluntly told me that anyone can learn to use a software program, but it’s the person behind the design that really matters. That was early on in my design education, and I worried that I wasn’t picking up on the necessary software as quickly as the other students. Her advice motivated me in multiples ways.
+A professor once bluntly told me that anyone can learn to use a software program, but it’s the person behind the design that really matters. That was early on in my design education, and I worried that I wasn’t picking up on the necessary software as quickly as the other students. Her advice motivated me in multiple ways.
 
 1. She stated that “anyone” could learn how to use this software, which gave me no excuse but to figure it out.
 2. She helped me finally see the bigger picture—that how a person renders their ideas is just a part of the process, but not the process. What really matters is the designer—their knowledge, their passion and, most importantly, their gut instinct.

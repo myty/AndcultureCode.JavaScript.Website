@@ -106,7 +106,7 @@
 
     &__background {
         position: relative;
-        padding-bottom: 150px;
+        padding-bottom: 230px;
 
         @include breakpoints("sm-tablet") {
             padding-bottom: 200px;
@@ -140,11 +140,23 @@
 
         &__wrapper {
             position: relative;
-            top: 150px;
+            top: 230px;
             z-index: 1;
 
-            @include breakpoints("sm-tablet") {
-                top: 200px;
+            @include breakpoints("tablet") {
+                max-width: 640px;
+            }
+
+            @include breakpoints("laptop") {
+                max-width: 768px;
+            }
+
+            @include breakpoints("sm-desktop") {
+                max-width: 900px;
+            }
+
+            @include breakpoints(1200px) {
+                max-width: 1000px;
             }
 
             &.-opaque {
@@ -178,7 +190,7 @@
             }
 
             h1 {
-                @include font-size(40px);
+                @include font-size(42px);
                 @include line-height(50px);
                 text-transform: lowercase;
 
@@ -342,7 +354,7 @@
             @include push-col(1);
 
             @include breakpoints("tablet") {
-                @include span-col(7);
+                @include span-col(5);
                 @include push-col(1);
             }
 
@@ -371,8 +383,9 @@
             margin-top: 32px;
 
             @include breakpoints("tablet") {
-                @include span-col(3);
+                @include span-col(5);
                 margin-top: 16px;
+                text-align: right;
             }
 
             a {

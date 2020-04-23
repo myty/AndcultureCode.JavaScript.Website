@@ -10,11 +10,11 @@ featuredImage:
   image: /img/blog/blog_featured_image.jpg
   description: "blog header"
 tileImage:
-  image: /img/post_default_dark_7.jpg
-  description: "blog header"
+  image: /img/post_mobile_app_part2.jpg
+  description: "the mobile app will see you now part 2 post image"
 postImage:
-  image: /img/header_default_dark_7.jpg
-  description: "blog header"
+  image: /img/header_mobile_app_part2.jpg
+  description: "the mobile app will see you now part 2 header image"
 seo:
   metaTitle: the mobile app will see you now, part 2 | andculture
   metaDescription: Dr. Aanand Naik discusses patient engagement outcomes, the role of technology in achieving these goals, and what providers should do to support them.

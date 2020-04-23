@@ -35,7 +35,7 @@ const BlogFeatured = React.forwardRef((props, ref) => {
                     alt = { featuredPost.featuredImage.description } />
             </div>
             <div className="m-blog-featured__title">
-                <h1>{ featuredPost.title }</h1>
+                <h1><span>{ featuredPost.title }</span></h1>
                 <div className="m-blog-featured__title__author">
                     by { featuredPost.author }
                 </div>

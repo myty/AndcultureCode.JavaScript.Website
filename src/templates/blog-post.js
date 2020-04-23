@@ -21,6 +21,8 @@ export const BlogPostTemplate = (props) => {
   const encodedBody                                     = encodeURI(`Hello! I just read ${properties.title} by andculture and thought you’d love it! You can read it at ${encodedUrl}. I hope you enjoy it!`);
   const windowDimensions                                = useWindowDimensions();
   const contentStyle                                    = {};
+  const mobileBackgroundOffset                          = 80;
+  const tabletWidth                                     = 768;
   let headerSize                                        = useComponentSize(headerRef);
 
   // Set the background image for the blog post background
@@ -41,16 +43,18 @@ export const BlogPostTemplate = (props) => {
   if (headerRef && headerRef.current && contentRef && contentRef.current) {
     contentPosition  = windowDimensions.height - headerSize.height;
 
-    if (windowDimensions.width > 768) {
+    if (windowDimensions.width > tabletWidth) {
       contentStyle.top = `${contentPosition}px`;
     }
 
+    // Calculate the positioning of the background section. The 80 value
+    // for the mobile background offset is the initial top value on mobile devices.
     if (props.scrollTop >= contentRef.current.offsetTop) {
       postBackgroundStyle.position = "absolute";
-      postBackgroundStyle.top      = windowDimensions.width > 768 ? contentPosition : contentRef.current.offsetTop;
+      postBackgroundStyle.top      = windowDimensions.width > tabletWidth ? contentPosition : contentRef.current.offsetTop + mobileBackgroundOffset;
     } else {
       postBackgroundStyle.position = "fixed";
-      postBackgroundStyle.top      = 0;
+      postBackgroundStyle.top      = windowDimensions.width <= tabletWidth ? mobileBackgroundOffset : 0;
     }
   }
 

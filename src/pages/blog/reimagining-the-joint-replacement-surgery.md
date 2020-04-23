@@ -10,11 +10,11 @@ featuredImage:
   image: /img/blog/blog_featured_image.jpg
   description: "blog header"
 tileImage:
-  image: /img/post_default_light_2.jpg
-  description: "blog header"
+  image: /img/post_joint_replacement.jpg
+  description: "reimagining the joint replacement surgery experience post image"
 postImage:
-  image: /img/header_default_light_2.jpg
-  description: "blog header"
+  image: /img/header_joint_replacement.jpg
+  description: "reimagining the joint replacement surgery experience header image"
 seo:
   metaTitle: reimagining the joint replacement surgery experience | andculture
   metaDescription: Total joint replacement surgery is among the most commonly performed inpatient procedures in the US. So why are patients so often dissatisfied after surgery?

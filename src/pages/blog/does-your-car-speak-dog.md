@@ -10,11 +10,11 @@ featuredImage:
   image: /img/blog/blog_featured_image.jpg
   description: "welcome to andculture"
 tileImage:
-  image: /img/post_default_dark_1.jpg
-  description: "welcome to andculture"
+  image: /img/post_car_speak_dog.jpg
+  description: "does your car speak dog tile image"
 postImage:
-  image: /img/header_default_dark_1.jpg
-  description: "welcome to andculture"
+  image: /img/header_car_speak_dog.jpg
+  description: "does your car speak dog header image"
 seo:
   metaTitle: does your car speak dog? | andculture
   metaDescription: How smart are our devices, really? Are we taking full advantage of the opportunity to bring them together with a common language?

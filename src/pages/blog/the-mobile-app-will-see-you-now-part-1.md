@@ -10,11 +10,11 @@ featuredImage:
   image: /img/blog/blog_featured_image.jpg
   description: "blog header"
 tileImage:
-  image: /img/post_default_light_1.jpg
-  description: "blog header"
+  image: /img/post_mobile_app_part1.jpg
+  description: "the mobile app will see you now part 1 post image"
 postImage:
-  image: /img/header_default_light_1.jpg
-  description: "blog header"
+  image: /img/header_mobile_app_part1.jpg
+  description: "the mobile app will see you now part 1 header image"
 seo:
   metaTitle: the mobile app will see you now, part 1 | andculture
   metaDescription: Dr. Aanand Naik and Dr. James Sulibruk discuss the critical importance of patient engagement to healthcare outcomes.
