@@ -106,15 +106,6 @@
 
     &__background {
         position: relative;
-        padding-bottom: 230px;
-
-        @include breakpoints("sm-tablet") {
-            padding-bottom: 200px;
-        }
-
-        @include breakpoints("laptop") {
-            padding-bottom: 516px;
-        }
 
         &__gradient {
             height: 69vw;

@@ -23,6 +23,7 @@ export const BlogPostTemplate = (props) => {
   const contentStyle                                    = {};
   const mobileBackgroundOffset                          = 80;
   const tabletWidth                                     = 768;
+  const articlePaddingStyle                             = {};
   let headerSize                                        = useComponentSize(headerRef);
 
   // Set the background image for the blog post background
@@ -50,11 +51,17 @@ export const BlogPostTemplate = (props) => {
     // Calculate the positioning of the background section. The 80 value
     // for the mobile background offset is the initial top value on mobile devices.
     if (props.scrollTop >= contentRef.current.offsetTop) {
-      postBackgroundStyle.position = "absolute";
-      postBackgroundStyle.top      = windowDimensions.width > tabletWidth ? contentPosition : contentRef.current.offsetTop + mobileBackgroundOffset;
+      const topPosition = windowDimensions.width > tabletWidth ? contentPosition : contentRef.current.offsetTop + mobileBackgroundOffset;
+
+      postBackgroundStyle.position      = "absolute";
+      postBackgroundStyle.top           = topPosition;
+      articlePaddingStyle.paddingBottom = topPosition;
     } else {
-      postBackgroundStyle.position = "fixed";
-      postBackgroundStyle.top      = windowDimensions.width <= tabletWidth ? mobileBackgroundOffset : 0;
+      const topPosition = windowDimensions.width <= tabletWidth ? mobileBackgroundOffset : 0;
+
+      postBackgroundStyle.position      = "fixed";
+      postBackgroundStyle.top           = topPosition;
+      articlePaddingStyle.paddingBottom = topPosition;
     }
   }
 
@@ -67,7 +74,7 @@ export const BlogPostTemplate = (props) => {
   }
 
   return (
-    <article className="p-blog__background">
+    <article className="p-blog__background" style={articlePaddingStyle}>
         <div
           className   = "p-blog__background__gradient"
           aria-hidden = "true"
