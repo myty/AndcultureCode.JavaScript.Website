@@ -1,9 +1,10 @@
-import React           from 'react';
-import { Helmet }      from 'react-helmet';
-import Header          from './molecules/Header';
-import Footer          from './molecules/Footer';
-import useSiteMetadata from './SiteMetadata';
-import { withPrefix }  from 'gatsby';
+import React, { useState } from 'react';
+import { Helmet }          from 'react-helmet';
+import Header              from './molecules/Header';
+import Footer              from './molecules/Footer';
+import useSiteMetadata     from './SiteMetadata';
+import Menu                from './organisms/Menu';
+import { withPrefix }      from 'gatsby';
 
 const TemplateWrapper = ({
   children,
@@ -15,6 +16,9 @@ const TemplateWrapper = ({
   showFooterDividerLine
 }) => {
   let { title, description, socialDescription } = useSiteMetadata();
+  const [menuOpen, setMenuOpen]                 = useState(false);
+
+  // Set all of the SEO information needed for the page.
   if (data && data.seo) {
     title             = data.seo.metaTitle;
     description       = data.seo.metaDescription;
@@ -22,7 +26,13 @@ const TemplateWrapper = ({
     socialDescription = data.seo.socialShareCopy;
   }
 
-  let containerClassName = pageClassName ? pageClassName : "";
+  const onMenuClose = () => {
+    setMenuOpen(false);
+  };
+
+  const onMenuOpen = () => {
+    setMenuOpen(true);
+  };
 
   return (
     <div>
@@ -62,14 +72,18 @@ const TemplateWrapper = ({
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.png" />
       </Helmet>
-      <div className={containerClassName}>
+      <div className={pageClassName ? pageClassName : ""}>
         <Header
+          onMenuOpen     = { onMenuOpen }
           pageTitle      = { pageTitle }
           hideNavigation = { hideNavigation }
           scrollTop      = { scrollTop } />
         {children}
         <Footer showDividerLine={showFooterDividerLine} />
       </div>
+      <Menu
+        onClose = { onMenuClose }
+        open    = { menuOpen } />
     </div>
   )
 }

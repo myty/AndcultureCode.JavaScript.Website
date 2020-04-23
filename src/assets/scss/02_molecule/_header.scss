@@ -114,6 +114,11 @@
         @include breakpoints("tablet") {
             margin-top: 20px;
         }
+
+        svg rect {
+            @include font-size(32px);
+            fill: get-color-primary("fresh");
+        }
     }
 
     &__page-title {

@@ -1,27 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import IconMenu                       from 'components/atoms/IconMenu';
 
 export default function Header(props) {
-  let headerClassName = "m-header";
-  // let [width, setWidth] = useState();
-
-  // useEffect(() => {
-  //   const getWidth = () => window.innerWidth
-  //     || document.documentElement.clientWidth
-  //     || document.body.clientWidth;
-  //     setWidth(getWidth());
-  //     const resizeListener = () => {
-  //       // change width from the state object
-  //       setWidth(getWidth())
-  //     };
-  //     // set resize listener
-  //     window.addEventListener('resize', resizeListener);
-  //     // clean up function
-  //     return () => {
-  //       // remove resize listener
-  //       window.removeEventListener('resize', resizeListener);
-  //     }
-  // }, [width]);
-
   let titleClass = "m-header__title";
 
   if (props.pageTitle === "home") {
@@ -30,7 +10,7 @@ export default function Header(props) {
 
   return (
     <div>
-    <div className={headerClassName}>
+    <div className="m-header">
       <div className = "m-header__background"></div>
       <div className="o-rhythm__container -fluid">
         <a
@@ -59,7 +39,9 @@ export default function Header(props) {
             className="m-header__navigation"
             role="navigation"
             aria-label="main-navigation">
-            <a href="/contact/"><span></span>contact</a>
+            <a href="#" onClick={props.onMenuOpen}>
+              <IconMenu />
+            </a>
           </nav>
         }
       </div>
