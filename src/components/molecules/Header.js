@@ -25,9 +25,9 @@ export default function Header(props) {
               className="m-header__navigation"
               role="navigation"
               aria-label="main-navigation">
-              <a href="#" onClick={props.onMenuOpen}>
+              <button onClick={props.onMenuOpen}>
                 <IconMenu />
-              </a>
+              </button>
             </nav>
           }
         </div>

@@ -109,9 +109,17 @@
         float: right;
         margin-top: 20px;
 
-        svg rect {
-            @include font-size(32px);
-            fill: get-color-primary("fresh");
+        button {
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            -webkit-appearance: none;
+            cursor: pointer;
+
+            svg rect {
+                @include font-size(32px);
+                fill: get-color-primary("fresh");
+            }
         }
     }
 
