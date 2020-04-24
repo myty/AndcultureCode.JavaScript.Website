@@ -1,0 +1,123 @@
+.m-blog-post {
+    width: 100%;
+    position: relative;
+    font-family: $font-primary;
+    letter-spacing: normal;
+
+    &:not(.-inline):hover {
+        opacity: 1;
+
+        img {
+            transform: scale(1.2);
+        }
+
+        .m-blog-post__details h3 span {
+            box-shadow:
+                inset 0 -0.15em get-color-primary("white"),
+                inset 0 -0.2em get-color-primary("fresh");
+        }
+    }
+
+    &.-right {
+        .m-blog-post__details {
+            @include push-col(0);
+            text-align: right;
+        }
+    }
+
+    &__image {
+        @include span-col(12);
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        @include breakpoints("sm-tablet") {
+            @include span-col(6);
+            @include push-col(1);
+        }
+
+        img {
+            width: 100%;
+            transition: all 0.6s ease !important;
+
+            @include breakpoints("sm-tablet") {
+                width: auto;
+            }
+        }
+    }
+
+    &__details {
+        @include span-col(12);
+        position: relative;
+        margin-top: 25px;
+        align-self: center;
+
+        @include breakpoints("sm-tablet") {
+            @include span-col(4);
+            @include push-col(1);
+            margin-top: 0;
+        }
+
+        h2 {
+            @include font-size("base");
+            margin-top: 10px;
+            color: get-color-neutral("light-blue");
+            font-family: $font-secondary;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            @include breakpoints("sm-tablet") {
+                margin-top: 0;
+            }
+        }
+
+        h3 {
+            @include font-size(30px);
+            @include line-height(36px);
+            color: get-color-primary("fresh");
+            margin-block-end: 0;
+            margin-block-start: 0;
+
+            @include breakpoints("sm-tablet") {
+                @include font-size(24px);
+                @include line-height(30px);
+            }
+
+            @include breakpoints("laptop") {
+                @include font-size("medium-large");
+                @include line-height("large");
+            }
+
+            span {
+                box-shadow:
+                    inset 0 -0.15em get-color-primary("white"),
+                    inset 0 -0.2em get-color-primary("white");
+                text-shadow:
+                    .1em 0 get-color-primary("white"),
+                    0 .1em get-color-primary("white"),
+                    -.1em 0 get-color-primary("white"),
+                    0 -.1em get-color-primary("white");
+                transition: box-shadow .25s ease;
+            }
+        }
+
+        p:last-of-type {
+            @include font-size("base");
+            color: get-color-primary("after-hours");
+            text-transform: lowercase;
+        }
+
+        a {
+            @include font-size("base");
+            border-bottom: 2px solid get-color-primary("fresh");
+            display: inline-block;
+            margin-top: 25px;
+            padding-bottom: 5px;
+            color: get-color-primary("fresh");
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    }
+}

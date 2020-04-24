@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: 'andculture - a design company in harrisburg, PA',
@@ -5,6 +7,13 @@ module.exports = {
       'We are a design company in harrisburg PA that fixes broken realities through cutting edge design, strategy, and engineering solutions.',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        components: path.join(__dirname, "src/components"),
+        utils: path.join(__dirname, "src/utils")
+      }
+    },
     'gatsby-plugin-transition-link',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
@@ -71,12 +80,26 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "noopener"
+            }
+          },
         ],
       },
     },
     'gatsby-plugin-transition-link',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

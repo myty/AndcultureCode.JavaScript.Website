@@ -1,0 +1,165 @@
+.m-blog-featured {
+    @include clearfix();
+    width: 100%;
+    display: block;
+    position: static;
+    margin-top: 76px;
+    z-index: 0;
+    background-color: get-color-primary("fresh");
+    font-family: $font-primary;
+    letter-spacing: normal;
+
+    &.-fresh {
+        background-color: get-color-primary("fresh");
+    }
+
+    &.-after-hours {
+        background-color: get-color-primary("after-hours");
+    }
+
+    &.-violet-blue {
+        background-color: get-color-secondary("violet");
+    }
+
+    &.-throwback-pink {
+        background-color: get-color-secondary("pink");
+    }
+
+    &.-siracha {
+        background-color: get-color-secondary("siracha");
+    }
+
+    &.-tea {
+        background-color: get-color-tertiary("tea");
+    }
+
+    &.-eraser {
+        background-color: get-color-tertiary("eraser");
+    }
+
+    &.-sticky-blue {
+        background-color: get-color-tertiary("sticky-blue");
+    }
+
+    &.-center-lane {
+        background-color: get-color-secondary("center-lane");
+    }
+
+    &:not(.-inline):hover {
+        opacity: 1;
+
+        img {
+            transform: scale(1.2);
+        }
+
+        h1 span {
+            box-shadow:
+                inset 0 -0.15em get-color-primary("fresh"),
+                inset 0 -0.2em white;
+        }
+    }
+
+    &.-fade {
+        &:after {
+            opacity: 0.5;
+        }
+    }
+
+    @include breakpoints("sm-tablet") {
+        display: table;
+    }
+
+    @include breakpoints("tablet") {
+        position: fixed;
+        top: 80px;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+
+        @include breakpoints("sm-tablet") {
+            display: table-cell;
+            width: 50%;
+        }
+
+        img {
+            width: 100%;
+            transition: all 0.6s ease !important;
+        }
+    }
+
+    &__title {
+        float: none;
+        width: 100%;
+        padding: 60px 30px;
+        color: get-color-primary("white");
+
+        @include breakpoints("sm-tablet") {
+            display: table-cell;
+            padding: 0 45px;
+            vertical-align: middle;
+            width: 50%;
+        }
+
+        h1 {
+            max-width: 100%;
+
+            @include breakpoints("sm-tablet") {
+                @include font-size(32px);
+                @include line-height(36px);
+                max-width: 100%;
+            }
+
+            @include breakpoints("tablet") {
+                @include font-size(40px);
+                @include line-height(50px);
+            }
+
+            @include breakpoints("desktop") {
+                @include font-size(55px);
+                @include line-height(65px);
+            }
+
+            @include breakpoints(1680px) {
+                max-width: 800px;
+            }
+
+            span {
+                box-shadow:
+                    inset 0 -0.15em get-color-primary("fresh"),
+                    inset 0 -0.2em get-color-primary("fresh");
+                text-shadow:
+                    .1em 0 get-color-primary("fresh"),
+                    0 .1em get-color-primary("fresh"),
+                    -.1em 0 get-color-primary("fresh"),
+                    0 -.1em get-color-primary("fresh");
+                transition: box-shadow .25s ease;
+            }
+        }
+
+        &__author {
+            @include font-size(20px);
+            margin-top: 25px;
+            text-transform: lowercase;
+        }
+    }
+
+    &:after {
+        content: "";
+        display: none;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: get-color-primary("black");
+        transition: all 1s ease;
+
+        @include breakpoints("tablet") {
+            display: block;
+        }
+    }
+}

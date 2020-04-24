@@ -1,6 +1,6 @@
-const _ = require('lodash')
-const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
+const _                      = require('lodash')
+const path                   = require('path')
+const { createFilePath }     = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
 exports.createPages = ({ actions, graphql }) => {
@@ -8,7 +8,11 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        filter: {frontmatter: {createPage: {eq: true}}},
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
         edges {
           node {
             id
@@ -31,7 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach(edge => {
-      const id = edge.node.id
+      const id    = edge.node.id
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(

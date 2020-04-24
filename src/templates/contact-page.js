@@ -57,7 +57,6 @@ const ContactPage = ({ data }) => {
   return (
     <Layout
       pageTitle      = "contact"
-      hideNavigation = { true }
       data           = { frontmatter }
       scrollTop      = { scrollTop }>
       <div className = "p-interior-page">
@@ -90,10 +89,11 @@ export const pageQuery = graphql`
         mapLink
         phoneNumber
         directions
-        metaTitle
-        metaDescription
-        socialDescription
-        socialImg
+        seo {
+          metaTitle
+          metaDescription
+          socialShareCopy
+        }
       }
     }
   }

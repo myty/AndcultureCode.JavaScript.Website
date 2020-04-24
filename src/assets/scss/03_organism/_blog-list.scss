@@ -1,0 +1,36 @@
+.o-blog-list {
+    @include clearfix();
+
+    .m-blog-post {
+        margin-top: 100px;
+
+        &:first-child {
+            margin-top: 100px;
+        }
+
+        @include breakpoints("tablet") {
+            margin-top: 180px;
+        }
+
+        &:last-child {
+            margin-bottom: 80px;
+
+            @include breakpoints("tablet") {
+                margin-bottom: 180px;
+            }
+        }
+    }
+
+    &__scroll {
+        @include font-size("base");
+        margin-top: 60px;
+        color: get-color-primary("fresh");
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        @include breakpoints("tablet") {
+            margin-top: 206px;
+        }
+    }
+}

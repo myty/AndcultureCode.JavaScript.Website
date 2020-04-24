@@ -1,10 +1,19 @@
 body {
     margin: 0;
+    background-color: get-color-primary("white");
+}
+
+html.-menu-open {
+    overflow: hidden;
 }
 
 img {
     max-width: 100%;
     vertical-align: bottom;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .-push-one {
@@ -23,11 +32,27 @@ img {
     }
   }
 
+.-phone-only {
+    display: block;
+
+    @include breakpoints("sm-tablet") {
+        display: none !important;
+    }
+}
+
 .-mobile-only {
     display: block;
 
-    @include breakpoints("tablet") {
+    @include breakpoints("sm-tablet") {
         display: none !important;
+    }
+}
+
+.-tablet-and-desktop-only {
+    display: none;
+
+    @include breakpoints("sm-tablet") {
+        display: block;
     }
 }
 

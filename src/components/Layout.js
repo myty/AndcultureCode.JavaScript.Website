@@ -1,23 +1,43 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import Header from './molecules/Header';
-import Footer from './molecules/Footer';
-import useSiteMetadata from './SiteMetadata';
-import { withPrefix } from 'gatsby';
+import React, { useState } from 'react';
+import { Helmet }          from 'react-helmet';
+import Header              from './molecules/Header';
+import Footer              from './molecules/Footer';
+import useSiteMetadata     from './SiteMetadata';
+import Menu                from './organisms/Menu';
+import { withPrefix }      from 'gatsby';
 
-const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop }) => {
-  let { title, description, socialDescription, socialImg } = useSiteMetadata();
-  if (data) {
-    title = data.metaTitle;
-    description = data.metaDescription;
-    description = data.metaDescription;
-    socialDescription = data.socialDescription;
-    socialImg = data.socialImg;
+const TemplateWrapper = ({
+  children,
+  pageTitle,
+  data,
+  hideNavigation,
+  scrollTop,
+  pageClassName,
+  showFooterDividerLine
+}) => {
+  let { title, description, socialDescription } = useSiteMetadata();
+  const [menuOpen, setMenuOpen]                 = useState(false);
+
+  // Set all of the SEO information needed for the page.
+  if (data && data.seo) {
+    title             = data.seo.metaTitle;
+    description       = data.seo.metaDescription;
+    description       = data.seo.metaDescription;
+    socialDescription = data.seo.socialShareCopy;
   }
+
+  const onMenuClose = () => {
+    setMenuOpen(false);
+  };
+
+  const onMenuOpen = () => {
+    setMenuOpen(true);
+  };
+
   return (
     <div>
       <Helmet>
-        <html lang="en" />
+        <html lang="en" className={menuOpen ? "-menu-open" : ""} />
         <title>{ title }</title>
         <meta name = "description" content = { description } />
 
@@ -52,12 +72,18 @@ const TemplateWrapper = ({ children, pageTitle, data, hideNavigation, scrollTop 
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.png" />
       </Helmet>
-      <Header
-        pageTitle      = { pageTitle }
-        hideNavigation = { hideNavigation }
-        scrollTop      = { scrollTop } />
-      {children}
-      <Footer />
+      <div className={pageClassName ? pageClassName : ""}>
+        <Header
+          onMenuOpen     = { onMenuOpen }
+          pageTitle      = { pageTitle }
+          hideNavigation = { hideNavigation }
+          scrollTop      = { scrollTop } />
+        {children}
+        <Footer showDividerLine={showFooterDividerLine} />
+      </div>
+      <Menu
+        onClose = { onMenuClose }
+        open    = { menuOpen } />
     </div>
   )
 }

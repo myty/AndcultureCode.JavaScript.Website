@@ -8,11 +8,12 @@ $colors: (
         "fog": #DFEBEE,
         "white": #FFFFFF,
         "after-hours": #043544,
+        "black": #000000,
     ),
     "secondary": (
         "violet": #3D5CC2,
         "pink": #F953A9,
-        "sriracha": #FB5C54,
+        "siracha": #FB5C54,
         "center-lane": #FCB43D,
     ),
     "tertiary": (
@@ -21,9 +22,11 @@ $colors: (
         "sticky-blue": #2AB2C1,
     ),
     "neutral": (
+        "dark-blue": #123D4B,
         "gray": #13171C,
         "medium-gray": #3E4E53,
         "light-gray": #6E848C,
         "lighter-gray": #DFEBEE,
+        "light-blue": #AFC3C8,
     ),
 );

@@ -1,0 +1,129 @@
+.m-blog-author {
+    @include clearfix();
+    margin-top: 55px;
+    padding-right: 0;
+
+    @include breakpoints("sm-tablet") {
+        margin-top: 5px;
+        padding-right: 60px;
+    }
+
+    &__image {
+        float: left;
+        padding-top: 20px;
+        width: 80px;
+        text-align: left;
+
+        @include breakpoints("sm-desktop") {
+            padding-top: 0;
+        }
+    }
+
+    &__details {
+        @include font-size("base");
+        float: left;
+        margin-top: 10px;
+        padding-left: 16px;
+        color: get-color-neutral("light-gray");
+        text-align: left;
+        text-transform: lowercase;
+
+        @include breakpoints("sm-tablet") {
+            @include font-size("small");
+        }
+
+        @include breakpoints("sm-desktop") {
+            @include font-size(24px);
+        }
+    }
+
+    &__divider {
+        display: none;
+        margin-left: 7px;
+        margin-right: 7px;
+
+        @include breakpoints("sm-tablet") {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        @include breakpoints("sm-desktop") {
+            display: inline-block;
+        }
+    }
+
+    &__date {
+        display: block;
+        margin-bottom: 6px;
+        position: relative;
+
+        @include breakpoints("sm-desktop") {
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+
+    &__name-position {
+        display: block;
+
+        .m-blog-author__divider {
+            display: none;
+
+            @include breakpoints("sm-tablet") {
+                display: inline-block;
+            }
+        }
+
+        @include breakpoints("sm-desktop") {
+            display: inline-block;
+        }
+    }
+
+    &__name {
+        display: block;
+        margin-bottom: 6px;
+
+        @include breakpoints("sm-tablet") {
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+
+    &__position {
+        display: block;
+
+        @include breakpoints("sm-tablet") {
+            display: inline-block;
+        }
+    }
+
+    &__links {
+        display: block;
+
+        @include breakpoints("sm-desktop") {
+            display: inline-block;
+        }
+
+        a {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            svg {
+                fill: get-color-neutral("light-gray");
+                transition: all 400ms ease;
+            }
+
+            &:hover {
+                svg {
+                    fill: get-color-primary("fresh");
+                }
+            }
+        }
+    }
+}

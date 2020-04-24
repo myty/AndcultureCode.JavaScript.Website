@@ -27,9 +27,11 @@ export const pageQuery = graphql`
         title
         link
         position
-        metaTitle
-        metaDescription
-        socialDescription
+        seo {
+          metaTitle
+          metaDescription
+          socialShareCopy
+        }
       }
     }
   }

@@ -14,6 +14,10 @@
         overflow: hidden;
     }
 
+    .o-rhythm__container.-fluid {
+        padding: 0;
+    }
+
     &__background {
         position: absolute;
         left: 0;
@@ -21,7 +25,8 @@
         width: 100%;
         top: 0;
         bottom: 0;
-        background: get-color("primary", "white");
+        background: get-color-primary("white");
+        box-shadow: 0 5px 10px 0 rgba(get-color-primary("black"), .2);
 
         @include breakpoints("tablet") {
             display: none;
@@ -56,14 +61,12 @@
         z-index: 10;
 
         &.-home {
-
             .m-header__page-title {
                 display: none;
             }
         }
 
         &:not(.-home) {
-
             svg {
                 display: block;
 
@@ -104,10 +107,19 @@
 
     &__navigation {
         float: right;
-        margin-top: 14px;
+        margin-top: 20px;
 
-        @include breakpoints("tablet") {
-            margin-top: 20px;
+        button {
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            -webkit-appearance: none;
+            cursor: pointer;
+
+            svg rect {
+                @include font-size(32px);
+                fill: get-color-primary("fresh");
+            }
         }
     }
 
@@ -123,7 +135,7 @@
         text-transform: uppercase;
 
         @include breakpoints("tablet") {
-            @include font-size(24px);
+            @include font-size(20px);
             margin-left: auto;
             margin-top: 6px;
         }

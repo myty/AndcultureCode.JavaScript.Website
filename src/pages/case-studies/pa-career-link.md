@@ -1,4 +1,5 @@
 ---
+createPage: true
 templateKey: case-studies
 title: vulnerability + optimism in uncertain times
 partnerName: PA CareerLink®
@@ -14,7 +15,8 @@ tags:
   - research
   - strategy
   - user experience
-metaTitle: PA CareerLink® case study | andculture
-metaDescription: Learn how andculture helped PA CareerLink® create a more accessible experience to improve government funded career support services.
-socialDescription: andculture provided human-centered recommendations to improve government-funded career support services through PA CareerLink.
+seo:
+  metaTitle: PA CareerLink® case study | andculture
+  metaDescription: Learn how andculture helped PA CareerLink® create a more accessible experience to improve government funded career support services.
+  socialShareCopy: andculture provided human-centered recommendations to improve government-funded career support services through PA CareerLink.
 ---

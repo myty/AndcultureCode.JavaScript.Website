@@ -1,0 +1,374 @@
+.p-blog {
+    &.-post {
+        .m-header__logo svg path,
+        .m-header__title svg path,
+        .m-header__title svg rect,
+        .m-header__navigation svg rect {
+            fill: get-color-primary("white");
+            transition: all ease 0.7s;
+        }
+
+        .m-header {
+            .m-header__logo svg path,
+            .m-header__navigation svg rect {
+                fill: get-color-primary("fresh");
+            }
+
+            + .m-header__title {
+                svg path,
+                svg rect {
+                    fill: get-color-primary("fresh");
+                }
+            }
+
+            @include breakpoints("tablet") {
+                .m-header__logo svg path,
+                .m-header__navigation svg rect {
+                    fill: get-color-primary("white");
+                }
+
+                + .m-header__title {
+                    svg path,
+                    svg rect {
+                        fill: get-color-primary("white");
+                    }
+                }
+            }
+        }
+
+        &.-inverted {
+            .m-header__logo svg path,
+            .m-header__title svg path,
+            .m-header__title svg rect ,
+            .m-header__navigation svg rect{
+                fill: get-color-primary("fresh");
+            }
+        }
+    }
+
+    &__list {
+        position: relative;
+        margin-top: 0;
+        z-index: 1;
+        background-color: get-color-primary("white");
+    }
+
+    .o-rhythm__container {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        @include breakpoints("sm-tablet") {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+
+    // Blog Post Page
+    // ----------------------------------------
+
+    .m-footer {
+        background-color: get-color-primary("white");
+    }
+
+    &__background {
+        position: relative;
+
+        &__gradient {
+            height: 69vw;
+            width: 100%;
+            position: fixed;
+            z-index: 0;
+            background-size: cover;
+
+            &__top {
+                width: 100%;
+                position: absolute;
+                background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+                height: 25%;
+            }
+
+            &__bottom {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
+            }
+        }
+
+        &__wrapper {
+            position: relative;
+            top: 230px;
+            z-index: 1;
+
+            @include breakpoints("tablet") {
+                max-width: 640px;
+            }
+
+            @include breakpoints("laptop") {
+                max-width: 768px;
+            }
+
+            @include breakpoints("sm-desktop") {
+                max-width: 900px;
+            }
+
+            @include breakpoints(1200px) {
+                max-width: 1000px;
+            }
+
+            @include breakpoints(1480px) {
+                max-width: 1200px;
+            }
+
+            &.-opaque {
+                header, main {
+                    background-color: rgba(get-color-primary("white"), 1);
+                }
+            }
+        }
+    }
+
+    header {
+        padding: 40px 8px 0 8px;
+        background-color: rgba(get-color-primary("white"), 0.7);
+        transition: all ease 2s;
+
+        section {
+            @include span-col(12);
+
+            @include breakpoints("sm-tablet") {
+                @include span-col(10);
+                @include push-col(1);
+            }
+
+            p {
+                @include font-size("base");
+                font-weight: 600;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: get-color-primary("after-hours");
+                margin-block-end: 0;
+            }
+
+            h1 {
+                @include font-size(42px);
+                @include line-height(50px);
+
+                @include breakpoints("sm-tablet") {
+                    @include font-size(64px);
+                    @include line-height(74px);
+                }
+            }
+
+            h2 {
+                margin-top: 40px;
+                color: get-color-neutral("light-gray");
+
+                @include breakpoints("sm-tablet") {
+                    margin-top: 80px;
+                }
+            }
+        }
+
+        .m-blog-author {
+            margin-top: 20px;
+        }
+    }
+
+    main {
+        background-color: rgba(get-color-primary("white"), 0.7);
+        transition: all ease 2s;
+
+        section {
+            @include span-col(12);
+            margin-top: 32px;
+
+            @include breakpoints("sm-tablet") {
+                @include span-col(10);
+                @include push-col(1);
+            }
+
+            @include breakpoints("tablet") {
+                margin-top: 80px;
+            }
+
+            h3 {
+                @include font-size(26px);
+                @include line-height(36px);
+                margin-top: 60px;
+                color: get-color-primary("fresh");
+
+                @include breakpoints("sm-tablet") {
+                    @include font-size(30px);
+                    @include line-height(40px);
+                }
+
+                @include breakpoints("tablet") {
+                    @include font-size(40px);
+                    @include line-height(50px);
+                    margin-top: 100px;
+                }
+            }
+
+            p {
+                @include font-size("small");
+                @include line-height(32px);
+
+                @include breakpoints("sm-tablet") {
+                    @include font-size(24px);
+                    @include line-height(39px);
+                }
+
+                + p {
+                    margin-top: 39px;
+                }
+
+                a {
+                    @include font-size("small");
+                    color: get-color-primary("fresh");
+                    font-family: $font-primary;
+
+                    @include breakpoints("sm-tablet") {
+                        @include font-size(24px);
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .gatsby-resp-image-wrapper {
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+                }
+            }
+
+            ul,
+            ol {
+                margin-left: 20px;
+
+                li {
+                    @include font-size("small");
+                    @include line-height(32px);
+                    margin-bottom: 20px;
+
+                    @include breakpoints("sm-tablet") {
+                        @include font-size(24px);
+                        @include line-height(39px);
+                    }
+                }
+
+                a {
+                    @include font-size("small");
+                    color: get-color-primary("fresh");
+                    font-family: $font-primary;
+
+                    @include breakpoints("sm-tablet") {
+                        @include font-size(24px);
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            blockquote {
+                border-left: 4px solid get-color-primary("fresh");
+                margin-bottom: 60px;
+                margin-top: 60px;
+                margin-inline-start: 0;
+                margin-inline-end: 0;
+                padding-left: 26px;
+
+                @include breakpoints("tablet") {
+                    @include span-col(9);
+                    @include push-col(1);
+                    margin-bottom: 100px;
+                    margin-top: 100px;
+                }
+
+                p {
+                    @include font-size(24px);
+                    @include line-height(36px);
+                    color: get-color-neutral("light-gray");
+
+                    @include breakpoints("sm-tablet") {
+                        @include font-size(42px);
+                        @include line-height(54px);
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        margin: 60px 0 85px 0;
+
+        @include breakpoints("tablet") {
+            margin-top: 100px;
+        }
+
+        section {
+            @include span-col(11);
+            @include push-col(1);
+
+            @include breakpoints("tablet") {
+                @include span-col(5);
+                @include push-col(1);
+            }
+
+            a {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 25px;
+
+                svg {
+                    fill: get-color("neutral", "light-gray");
+                    transition: all 400ms ease;
+                }
+
+                &:hover {
+                    svg {
+                        fill: get-color-primary("fresh");
+                    }
+                }
+            }
+        }
+
+        nav {
+            @include span-col(11);
+            @include push-col(1);
+            margin-top: 32px;
+
+            @include breakpoints("tablet") {
+                @include span-col(5);
+                margin-top: 16px;
+                text-align: right;
+            }
+
+            a {
+                @include font-size("small");
+                display: block;
+                color: get-color-neutral("light-gray");
+                font-family: $font-primary;
+                text-transform: lowercase;
+
+                @include breakpoints("sm-tablet") {
+                    display: inline-block;
+                }
+
+                &:first-child {
+                    margin-bottom: 16px;
+                    margin-right: 0;
+
+                    @include breakpoints("sm-tablet") {
+                        margin-bottom: 0;
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

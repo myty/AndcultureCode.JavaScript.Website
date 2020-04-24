@@ -1,6 +1,29 @@
 .m-footer {
     padding: 60px 0;
 
+    &.-divider {
+        padding: 0;
+
+        .o-rhythm__container {
+            border-top: 2px solid #CCD3D6;
+            margin-left: 16px;
+            margin-right: 16px;
+            width: calc(100% - 32px);
+            padding: 60px 0;
+
+            @include breakpoints("sm-tablet") {
+                margin-left: 32px;
+                margin-right: 32px;
+                width: calc(100% - 64px);
+            }
+
+            @include breakpoints("laptop") {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
     a {
         @include font-size("base");
         color: get-color("neutral", "light-gray");
@@ -19,7 +42,6 @@
     }
 
     &__right {
-
         @include breakpoints("tablet") {
             text-align: right;
         }
