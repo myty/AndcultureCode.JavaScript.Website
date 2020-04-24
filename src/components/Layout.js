@@ -37,7 +37,7 @@ const TemplateWrapper = ({
   return (
     <div>
       <Helmet>
-        <html lang="en" />
+        <html lang="en" className={menuOpen ? "-menu-open" : ""} />
         <title>{ title }</title>
         <meta name = "description" content = { description } />
 

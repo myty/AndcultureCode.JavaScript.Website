@@ -25,27 +25,27 @@ Hi there! I’m Mike Koser, the director of software engineering at andculture. 
 
 I’ve been brewing beer for over 14 years for family and friends, but I never thought my love of libation creation would ever bleed into my work. Boy, was I wrong! Within my first few weeks of joining andculture, my boss, Shane, approached me about the prospect of brewing beer for the company.
 
-### Getting Started
+### Getting started
 At first, I was a little overwhelmed. I had just met everyone, and now I am going to ask them to trust me not to make them sick with the beer I would be brewing for them. I am not a professional brewer whatsoever, so I was obviously self conscious about how the beer would be received. So I did what anyone else would do… involve more people to take some of the pressure off of me.
 
 Okay, that’s not entirely true, but I did want to find ways to work with my co-workers to make something really special that everyone could feel a part of. This is where things started really getting interesting. We decided to bring in the design team to design labels for the beer, and one of our committees, team social, to help organize an unveiling of the beer to the employees.
 
 
-### Our Inaugural Beer
+### Our inaugural beer
 The first beer I decided to make was an oaked bourbon stout. I talked to one of our designers, Kate, about what ingredients I was planning on using. She went off and ran with a design concept. While Kate was designing, I got to creating a recipe.
 
 Let me take a minute here to share my approach to brewing beer. The idea of copying someone else’s recipe or brewing the same beer multiple times would bore the heck out of me. I’ve never done it and I never intend to. I always want to create something that’s never been done before. I find delight in discovering how new flavors come together. This is exactly how we do things at andculture when we work with our partners on software. We’re not interested in doing what everyone else does. We want to help our partners shape their own path.
 
 Okay, back to the beer!
 
-At around the same time the beer was ready to be bottled Kate and I got together to review her progress of the label itself. We printed the label on our own roll printer and used heat sealed plastic wrap to attach the labels to the bottle. The result was pretty darn good for a first attempt. Kate chose the name Warm ‘n Fuzzy to describe how a person would feel after consuming one.
+At around the same time the beer was ready to be bottled, Kate and I got together to review her progress of the label itself. We printed the label on our own roll printer and used heat-sealed plastic wrap to attach the labels to the bottle. The result was pretty darn good for a first attempt. Kate chose the name Warm ‘n Fuzzy to describe how a person would feel after consuming one.
 
 ![Warm 'n Fuzzy Beer](/img/beer-warmfuzzy-full.jpg)
 
 We released the beer to the masses one afternoon and the whole company got to blow off some steam at the end of the day.
 
-### Beer, Like Software, Is Iterative
-Since that first release we’ve iterated over our process by involving different label designers for each new beer, getting better quality vinyl labels, and coordinating beer releases with a company event like our annual summer picnic or gingerbread-making competition. We even added [andculture Brewing Company to Untappd](https://untappd.com/AndCultureBrewingCo) to allow people to rate the beer.
+### Beer, like software, is iterative
+Since that first release, we’ve iterated over our process by involving different label designers for each new beer, getting better quality vinyl labels, and coordinating beer releases with a company event like our annual summer picnic or gingerbread-making competition. We even added [andculture Brewing Company to Untappd](https://untappd.com/AndCultureBrewingCo) to allow people to rate the beer.
 
 ![andculture beer bottles with labels](/img/beer-bottles.jpg)
 

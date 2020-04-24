@@ -23,9 +23,9 @@ category: "Design/uX"
 ---
 Tools of the trade posters are a trend of the past few years that still never fails to intrigue me.
 
-I love to study the different illustration styles that my colleagues use, explore the little details, and more importantly, see what tools the designer included. **But, the fact of the matter is that we do so much more than simply render images or layout a page.**
+I love to study the different illustration styles that my colleagues use, explore the little details, and more importantly, see what tools the designer included. **But, the fact of the matter is that we do so much more than simply render images or lay out a page.**
 
-Micron pens, Waacom tablets and graph paper aside, more often than not, when I see ‘tools of the trade’ posters, I am left feeling like something is missing.
+Micron pens, Wacom tablets and graph paper aside, more often than not, when I see ‘tools of the trade’ posters, I am left feeling like something is missing.
 
 A professor once bluntly told me that anyone can learn to use a software program, but it’s the person behind the design that really matters. That was early on in my design education, and I worried that I wasn’t picking up on the necessary software as quickly as the other students. Her advice motivated me in multiple ways.
 

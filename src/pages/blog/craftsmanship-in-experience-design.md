@@ -25,9 +25,9 @@ I worked as a bicycle mechanic for years. I studied engineering. I’ve built, i
 
 My struggle is translating those principles of craftsmanship to the less tangible world of user experience design.
 
-I consider craftsmanship the effort to make a thing as nice as it can be. In the UX world, there’s no clear material sets to choose from, there’s no joints to square, so there’s nothing tangible to qualify craftsmanship. However, there are items that can be seen like wireframes and sitemaps and user flows. We can certainly look at those artifacts and discuss their craftsmanship, but making a sitemap pixel perfect doesn’t correlate to a perfect user experience.
+I consider craftsmanship the effort to make a thing as nice as it can be. In the UX world, there are no clear material sets to choose from and there are no joints to square, so there’s nothing tangible to qualify craftsmanship. However, there are items that can be seen like wireframes and sitemaps and user flows. We can certainly look at those artifacts and discuss their craftsmanship, but making a sitemap pixel perfect doesn’t correlate to a perfect user experience.
 
-There is also some subjectivity to qualifying craftsmanship. While the “thing” should be as nice as it can be; who defines what “nice” is? The craftsman! They are not necessarily trying to create an artifact as close to its platonic equivalent as possible, but rather to create something that best represents what they envision. If that means joints aren’t square and there are blemishes, then so be it. This is best embodied in the resurgence of interest in handmade and locally produced goods.
+There is also some subjectivity to qualifying craftsmanship. While the “thing” should be as nice as it can be, who defines what “nice” is? The craftsman! They are not necessarily trying to create an artifact as close to its platonic equivalent as possible, but rather to create something that best represents what they envision. If that means joints aren’t square and there are blemishes, then so be it. This is best embodied in the resurgence of interest in handmade and locally produced goods.
 
 What this subjectiveness means is that it is even more difficult to qualify good craftsmanship in the user experience context.
 

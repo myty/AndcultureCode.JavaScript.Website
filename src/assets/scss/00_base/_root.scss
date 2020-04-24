@@ -3,6 +3,10 @@ body {
     background-color: get-color-primary("white");
 }
 
+html.-menu-open {
+    overflow: hidden;
+}
+
 img {
     max-width: 100%;
     vertical-align: bottom;
