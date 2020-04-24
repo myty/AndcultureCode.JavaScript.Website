@@ -1,7 +1,7 @@
 ---
 createPage: false
 name: Madeline Pellman
-position: Design Director
+position: director of design
 easterEgg: mother of humans & plants
 authorPhoto:
   image: /img/authors/author-madeline-pellman.png

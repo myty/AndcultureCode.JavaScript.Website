@@ -19,8 +19,8 @@ export const BlogPageTemplate = ({
     const blogListStyle    = {};
     const tabletWidth      = 768;
 
-    if (windowDimensions.width >= tabletWidth) {
-      blogListStyle.marginTop = `${featuredSize.height + 180}px`;
+    if (windowDimensions.width > tabletWidth) {
+      blogListStyle.marginTop = `${featuredSize.height + 184}px`;
     }
 
     return (

@@ -61,14 +61,12 @@
         z-index: 10;
 
         &.-home {
-
             .m-header__page-title {
                 display: none;
             }
         }
 
         &:not(.-home) {
-
             svg {
                 display: block;
 
@@ -109,11 +107,7 @@
 
     &__navigation {
         float: right;
-        margin-top: 14px;
-
-        @include breakpoints("tablet") {
-            margin-top: 20px;
-        }
+        margin-top: 20px;
 
         svg rect {
             @include font-size(32px);
@@ -133,7 +127,7 @@
         text-transform: uppercase;
 
         @include breakpoints("tablet") {
-            @include font-size(24px);
+            @include font-size(20px);
             margin-left: auto;
             margin-top: 6px;
         }

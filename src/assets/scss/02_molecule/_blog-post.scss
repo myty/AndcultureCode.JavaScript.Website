@@ -61,10 +61,11 @@
         h2 {
             @include font-size("base");
             margin-top: 10px;
+            color: get-color-neutral("light-blue");
+            font-family: $font-secondary;
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: get-color-neutral("light-blue");
 
             @include breakpoints("sm-tablet") {
                 margin-top: 0;

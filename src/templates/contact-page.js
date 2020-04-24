@@ -57,7 +57,6 @@ const ContactPage = ({ data }) => {
   return (
     <Layout
       pageTitle      = "contact"
-      hideNavigation = { true }
       data           = { frontmatter }
       scrollTop      = { scrollTop }>
       <div className = "p-interior-page">
