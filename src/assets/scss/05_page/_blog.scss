@@ -2,32 +2,16 @@
     &.-post {
         .m-header__logo svg path,
         .m-header__title svg path,
-        .m-header__title svg rect {
+        .m-header__title svg rect,
+        .m-header__navigation svg rect {
             fill: get-color-primary("white");
             transition: all ease 0.7s;
         }
 
-        .m-header__navigation a {
-            color: get-color-primary("white");
-            transition: all ease 0.7s;
-        }
-
-        .m-header__navigation a span {
-            background-color: get-color-primary("white");
-            transition: all ease 0.7s;
-        }
-
         .m-header {
-            .m-header__logo svg path {
+            .m-header__logo svg path,
+            .m-header__navigation svg rect {
                 fill: get-color-primary("fresh");
-            }
-
-            .m-header__navigation a {
-                color: get-color-primary("fresh");
-            }
-
-            .m-header__navigation a span {
-                background-color: get-color-primary("fresh");
             }
 
             + .m-header__title {
@@ -38,16 +22,9 @@
             }
 
             @include breakpoints("tablet") {
-                .m-header__logo svg path {
+                .m-header__logo svg path,
+                .m-header__navigation svg rect {
                     fill: get-color-primary("white");
-                }
-
-                .m-header__navigation a {
-                    color: get-color-primary("white");
-                }
-
-                .m-header__navigation a span {
-                    background-color: get-color-primary("white");
                 }
 
                 + .m-header__title {
@@ -62,16 +39,9 @@
         &.-inverted {
             .m-header__logo svg path,
             .m-header__title svg path,
-            .m-header__title svg rect {
+            .m-header__title svg rect ,
+            .m-header__navigation svg rect{
                 fill: get-color-primary("fresh");
-            }
-
-            .m-header__navigation a {
-                color: get-color-primary("fresh");
-            }
-
-            .m-header__navigation a span {
-                background-color: get-color-primary("fresh");
             }
         }
     }
