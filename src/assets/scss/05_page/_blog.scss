@@ -153,7 +153,6 @@
             h1 {
                 @include font-size(42px);
                 @include line-height(50px);
-                text-transform: lowercase;
 
                 @include breakpoints("sm-tablet") {
                     @include font-size(64px);

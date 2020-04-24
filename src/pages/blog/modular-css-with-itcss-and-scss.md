@@ -1,7 +1,7 @@
 ---
 createPage: true
 templateKey: blog-post
-title: modular css with itcss and scss
+title: modular CSS with ITCSS and SCSS
 author: Shane Shearer
 date: 2018-05-01
 featured: false

@@ -1,7 +1,7 @@
 ---
 createPage: true
 templateKey: blog-post
-title: .net core development with docker
+title: .NET Core development with Docker
 author: Winton DeShong
 date: 2017-11-21
 featured: false
