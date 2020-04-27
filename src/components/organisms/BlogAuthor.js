@@ -43,7 +43,7 @@ const BlogAuthor = (props) => {
                     <div className="m-blog-author__position">
                         {props.author.position 
                             ? props.author.position
-                            : "alumni"
+                            : "alum"
                         }
                     </div>
                 </div>
