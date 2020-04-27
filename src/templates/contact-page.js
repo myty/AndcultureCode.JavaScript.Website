@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import ContactForm from '../components/organisms/ContactForm';
-import ContactInfo from '../components/molecules/ContactInfo';
-import CustomSlider from '../components/molecules/CustomSlider';
-// import CareersList from '../components/organisms/CareersList';
-import ContactHeroGraphic from '../../static/img/contact/contact_hero_graphic.png';
-import HeroBluePaint from '../../static/img/contact/blue_paint.png';
-import InteriorHero from '../components/molecules/InteriorHero';
-import sliderImage1 from '../../static/img/contact/slider/river_room.png';
-import sliderImage2 from '../../static/img/contact/slider/Contact_1.jpg';
-import sliderImage3 from '../../static/img/contact/slider/Contact_2.jpg';
-import sliderImage4 from '../../static/img/contact/slider/Contact_3.jpg';
-import sliderImage5 from '../../static/img/contact/slider/Contact_4.jpg';
-import sliderImage6 from '../../static/img/contact/slider/Contact_5.jpg';
-import sliderImage7 from '../../static/img/contact/slider/Contact_6.jpg';
+import { graphql }                    from 'gatsby';
+import Layout                         from 'components/Layout';
+import ContactForm                    from 'components/organisms/ContactForm';
+import ContactInfo                    from 'components/molecules/ContactInfo';
+import CustomSlider                   from 'components/molecules/CustomSlider';
+import ContactHeroGraphic             from 'static/img/contact/contact_hero_graphic.png';
+import HeroBluePaint                  from 'static/img/contact/blue_paint.png';
+import InteriorHero                   from 'components/molecules/InteriorHero';
+import sliderImage1                   from 'static/img/contact/slider/river_room.png';
+import sliderImage2                   from 'static/img/contact/slider/Contact_1.jpg';
+import sliderImage3                   from 'static/img/contact/slider/Contact_2.jpg';
+import sliderImage4                   from 'static/img/contact/slider/Contact_3.jpg';
+import sliderImage5                   from 'static/img/contact/slider/Contact_4.jpg';
+import sliderImage6                   from 'static/img/contact/slider/Contact_5.jpg';
+import sliderImage7                   from 'static/img/contact/slider/Contact_6.jpg';
 import '../assets/scss/app.scss';
 
 export const ContactPageTemplate = ({
@@ -24,23 +23,23 @@ export const ContactPageTemplate = ({
   modifier
 }) => (
   <InteriorHero
-    backgroundImages = { [ContactHeroGraphic, HeroBluePaint] }
-    title          = { title }
-    secondaryTitle = { secondaryTitle }
-    subTitle       = { subTitle }
-    modifier       = { modifier } />
+    backgroundImages = { [{ image: ContactHeroGraphic, alt: "Creative swirls and artifacts" }, { image: HeroBluePaint , alt: "Hand stroked blue paint"}] }
+    title            = { title }
+    secondaryTitle   = { secondaryTitle }
+    subTitle         = { subTitle }
+    modifier         = { modifier } />
 )
 
 const ContactPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
   const sliderImages = [
-    sliderImage1,
-    sliderImage2,
-    sliderImage3,
-    sliderImage4,
-    sliderImage5,
-    sliderImage6,
-    sliderImage7,
+    { image: sliderImage1, alt: "Working in the River Room" },
+    { image: sliderImage2, alt: "Collaboration in the River Room" },
+    { image: sliderImage3, alt: "Design and Strategy session in the River Room"  },
+    { image: sliderImage4, alt: "Preparing for a team meeting in the River Room"  },
+    { image: sliderImage5, alt: "Preparation and feedback session in the River Room"  },
+    { image: sliderImage6, alt: "Sharing and demoing with the team in the River Room"  },
+    { image: sliderImage7, alt: "A view of the River Room at andculture"  },
   ];
 
   const [scrollTop, setScrollTop] = useState(0);

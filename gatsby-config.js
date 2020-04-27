@@ -10,8 +10,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
+        assets    : path.join(__dirname, "src/assets"),
         components: path.join(__dirname, "src/components"),
-        utils: path.join(__dirname, "src/utils")
+        static    : path.join(__dirname, "static/"),
+        templates : path.join(__dirname, "src/templates"),
+        utils     : path.join(__dirname, "src/utils")
       }
     },
     'gatsby-plugin-transition-link',

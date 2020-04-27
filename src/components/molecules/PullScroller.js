@@ -1,10 +1,10 @@
 import React from 'react';
-import pullScrollImage1 from '../../../static/img/case-studies/hackerone/badge.jpg';
-import pullScrollImage2 from '../../../static/img/case-studies/hackerone/luke.jpg';
-import pullScrollImage3 from '../../../static/img/case-studies/hackerone/tshirt.jpg';
-import pullScrollImage4 from '../../../static/img/case-studies/hackerone/brians_patch.png';
-import pullScrollImage5 from '../../../static/img/case-studies/hackerone/h165_sticker.jpg';
-import pullScrollImage6 from '../../../static/img/case-studies/hackerone/A4_Paper.jpg';
+import pullScrollImage1 from 'static/img/case-studies/hackerone/badge.jpg';
+import pullScrollImage2 from 'static/img/case-studies/hackerone/luke.jpg';
+import pullScrollImage3 from 'static/img/case-studies/hackerone/tshirt.jpg';
+import pullScrollImage4 from 'static/img/case-studies/hackerone/brians_patch.png';
+import pullScrollImage5 from 'static/img/case-studies/hackerone/h165_sticker.jpg';
+import pullScrollImage6 from 'static/img/case-studies/hackerone/A4_Paper.jpg';
 
 
 const PullScroller = class extends React.Component {
@@ -51,12 +51,12 @@ const PullScroller = class extends React.Component {
     return (
       <div>
         <div className = "pull-scroll">
-          <img src = { pullScrollImage6 } />
-          <img src = { pullScrollImage1 } />
-          <img src = { pullScrollImage2 } />
-          <img src = { pullScrollImage3 } />
-          <img src = { pullScrollImage4 } />
-          <img src = { pullScrollImage5 } />
+          <img src = { pullScrollImage6 } alt = "Hackerone branded A4 paper"  />
+          <img src = { pullScrollImage1 } alt = "Hackerone branded badges" />
+          <img src = { pullScrollImage2 } alt = "Hackerone's Luke Tucker speaking in front an audience" />
+          <img src = { pullScrollImage3 } alt = "Hackerone branded t-shirt" />
+          <img src = { pullScrollImage4 } alt = "Hackerone branded stitched patch" />
+          <img src = { pullScrollImage5 } alt = "Hackerone H165 branded stickers" />
         </div>
         <div className = "pull-icon">Pull<span></span></div>
       </div>

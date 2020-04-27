@@ -165,7 +165,7 @@ const KidsDiscover = class extends React.Component {
                 <div className = "m-case-study-page-content__section">
                     <div className = "o-rhythm__row">
                         <div className = "kd-image -dot-grid -desktop-only">
-                            <img src = { dotGrid } alt = "Dot grid" />
+                            <img src = { dotGrid } alt = "Dot grid" aria-hidden = "true" />
                         </div>
                         <div className = "kd-image -student-homework">
                             <img src = { studentHomework } alt = "Student doing homework" />

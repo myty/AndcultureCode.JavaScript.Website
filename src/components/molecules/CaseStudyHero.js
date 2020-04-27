@@ -26,7 +26,7 @@ const CaseStudyHero = class extends React.Component {
             </div>
             <div className = "o-hero__image">
               { this.props.featuredimage ? (
-                <img src = { this.props.featuredimage.childImageSharp.fluid.src } />
+                <img src = { this.props.featuredimage.childImageSharp.fluid.src } alt = { this.props.title } />
               ) : null }
             </div>
           </div>

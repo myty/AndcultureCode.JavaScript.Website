@@ -1,14 +1,14 @@
-import React from 'react';
-import CaseStudyFullBleedImage from '../../components/molecules/CaseStudyFullBleedImage';
-import CaseStudyContentSection from '../../components/molecules/CaseStudyContentSection';
-import imgJobSearch from '../../../static/img/case-studies/career-link/jobsearch.jpg';
-import imgPACapitol from '../../../static/img/case-studies/career-link/pa_capitol.jpg';
-import imgResourceCenter from '../../../static/img/case-studies/career-link/resource_center.jpg';
-import imgPennsylvania from '../../../static/img/case-studies/career-link/pennsylvania.png';
-import imgWhiteboard from '../../../static/img/case-studies/career-link/whiteboard.png';
-import imgWomaniPad from '../../../static/img/case-studies/career-link/woman_iPad.jpg';
-import imgDotGrid from '../../../static/img/case-studies/career-link/dot_grid.png';
-import nextImg from '../../../static/img/case-studies/kids-discover/student-homework.png';
+import React                   from 'react';
+import CaseStudyFullBleedImage from 'components/molecules/CaseStudyFullBleedImage';
+import CaseStudyContentSection from 'components/molecules/CaseStudyContentSection';
+import imgJobSearch            from 'static/img/case-studies/career-link/jobsearch.jpg';
+import imgPACapitol            from 'static/img/case-studies/career-link/pa_capitol.jpg';
+import imgResourceCenter       from 'static/img/case-studies/career-link/resource_center.jpg';
+import imgPennsylvania         from 'static/img/case-studies/career-link/pennsylvania.png';
+import imgWhiteboard           from 'static/img/case-studies/career-link/whiteboard.png';
+import imgWomaniPad            from 'static/img/case-studies/career-link/woman_iPad.jpg';
+import imgDotGrid              from 'static/img/case-studies/career-link/dot_grid.png';
+import nextImg                 from 'static/img/case-studies/kids-discover/student-homework.png';
 
 
 const PACareerLink = class extends React.Component {
@@ -89,7 +89,7 @@ const PACareerLink = class extends React.Component {
                         </ol>
                 </CaseStudyContentSection>
                 <div className="m-case-study-image-swatch">
-                    <img src = { imgDotGrid } alt = "Dot Grid" />
+                    <img src = { imgDotGrid } alt = "Dot Grid" aria-hidden="true" />
                     <img src = { imgWomaniPad } alt = "Woman with iPad" />
                 </div>
                 <div className="full-width-background -career-link">

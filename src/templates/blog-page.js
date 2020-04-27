@@ -6,6 +6,7 @@ import BlogList                               from 'components/organisms/BlogLis
 import useWindowDimensions                    from 'utils/windowDimensionsHook';
 import useComponentSize                       from '@rehooks/component-size'
 import 'resize-observer-polyfill';
+import '../assets/scss/app.scss'
 
 export const BlogPageTemplate = ({
     title,

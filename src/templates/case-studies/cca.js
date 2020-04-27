@@ -1,24 +1,24 @@
-import React from 'react';
-import CustomSlider from '../../components/molecules/CustomSlider';
-import timelineImg from '../../../static/img/case-studies/cca/timeline.jpg';
-import studentImg from '../../../static/img/case-studies/cca/girl_laptop.png';
-import laptopImg from '../../../static/img/case-studies/cca/Macbook_CCA.png';
-import backgroundImg from '../../../static/img/case-studies/cca/background.jpg';
-import rainbow from '../../../static/img/case-studies/cca/rainbow_doodle.png';
-import traingle from '../../../static/img/case-studies/cca/doodle_triangle.png';
-import dots from '../../../static/img/case-studies/cca/yellow_dots.png';
-import block from '../../../static/img/case-studies/cca/doodle_block.png';
-import dotsTwo from '../../../static/img/case-studies/cca/yellow_dots.png';
-import dotsSmall from '../../../static/img/case-studies/cca/dotted_area.png';
-import sliderImage1 from '../../../static/img/case-studies/cca/gallery_CCA_mtg.jpg';
-import sliderImage2 from '../../../static/img/case-studies/cca/gallery_exercise.jpg';
-import sliderImage3 from '../../../static/img/case-studies/cca/gallery_homeschool.jpg';
-import sliderImage4 from '../../../static/img/case-studies/cca/gallery_look_feel_cards.jpg';
-import sliderImage5 from '../../../static/img/case-studies/cca/gallery_tele_teaching.jpg';
-import sliderImage6 from '../../../static/img/case-studies/cca/gallery_wireframe.jpg';
-import studyImg from '../../../static/img/case-studies/cca/studying.jpg';
-import ipadLargeImg from '../../../static/img/case-studies/cca/cca_ipad_large.jpg';
-import nextImg from '../../../static/img/case-studies/pulse/nurse_hallway.png';
+import React         from 'react';
+import CustomSlider  from 'components/molecules/CustomSlider';
+import timelineImg   from 'static/img/case-studies/cca/timeline.jpg';
+import studentImg    from 'static/img/case-studies/cca/girl_laptop.png';
+import laptopImg     from 'static/img/case-studies/cca/Macbook_CCA.png';
+import backgroundImg from 'static/img/case-studies/cca/background.jpg';
+import rainbow       from 'static/img/case-studies/cca/rainbow_doodle.png';
+import traingle      from 'static/img/case-studies/cca/doodle_triangle.png';
+import dots          from 'static/img/case-studies/cca/yellow_dots.png';
+import block         from 'static/img/case-studies/cca/doodle_block.png';
+import dotsTwo       from 'static/img/case-studies/cca/yellow_dots.png';
+import dotsSmall     from 'static/img/case-studies/cca/dotted_area.png';
+import sliderImage1  from 'static/img/case-studies/cca/gallery_CCA_mtg.jpg';
+import sliderImage2  from 'static/img/case-studies/cca/gallery_exercise.jpg';
+import sliderImage3  from 'static/img/case-studies/cca/gallery_homeschool.jpg';
+import sliderImage4  from 'static/img/case-studies/cca/gallery_look_feel_cards.jpg';
+import sliderImage5  from 'static/img/case-studies/cca/gallery_tele_teaching.jpg';
+import sliderImage6  from 'static/img/case-studies/cca/gallery_wireframe.jpg';
+import studyImg      from 'static/img/case-studies/cca/studying.jpg';
+import ipadLargeImg  from 'static/img/case-studies/cca/cca_ipad_large.jpg';
+import nextImg       from 'static/img/case-studies/pulse/nurse_hallway.png';
 
 
 const CCA = class extends React.Component {
@@ -28,12 +28,12 @@ const CCA = class extends React.Component {
 
     render() {
         const sliderImages = [
-            sliderImage1,
-            sliderImage2,
-            sliderImage3,
-            sliderImage4,
-            sliderImage5,
-            sliderImage6,
+            { image: sliderImage1, alt: "Strategy session on look and feel cards that describe the website" },
+            { image: sliderImage2, alt: "Identifying areas of interest to help perscribe the website direction" },
+            { image: sliderImage3, alt: "Mother and child working on school work at home" },
+            { image: sliderImage4, alt: "Identified look and feel cards from the collaboration session" },
+            { image: sliderImage5, alt: "Virtual instruction delivered by a CCA staff member" },
+            { image: sliderImage6, alt: "Wireframes created from all of the research and ideation sessions" },
         ];
 
         const nextImageBlockStyle = {
@@ -90,7 +90,7 @@ const CCA = class extends React.Component {
                                 <p>We agreed to have a preliminary splash page at first, then a basic site with space for events and media, and then, for the coup de grâce, a fully functioning site with content management capabilities. </p>
                                 <p>Here’s what’s amazing: Because we listened to what families and staff needed and wanted, we could move forward with confidence as we prioritized and refined potential features. User flows (how you click through the site) were evaluated so we could be confident in the enrollment process. No charter school should lose a potential enrollment because your site hits a dead end or ends up being more trouble than it’s worth. This is where our partnership style shines through. We’re not just plugging things out and churning out the next step. We want to help you solve a problem.</p>
                             </div>
-                        <img src = { timelineImg } alt = "Timeline" />
+                            <img src = { timelineImg } alt = "Timeline" />
                         </div>
                     </div>
                 </div>
@@ -125,16 +125,16 @@ const CCA = class extends React.Component {
                     </div>
                 </div>
                 <div className = "m-case-study-page-content__color-block -cca">
-                    <img src = { rainbow } className = "-background-texture -rainbow" alt = "Rainbow" />
-                    <img src = { dotsTwo } className = "-background-texture -dots-two" alt = "Dots" />
-                    <img src = { dotsSmall } className = "-background-texture -dots-small" alt = "Small dots" />
+                    <img src = { rainbow } className = "-background-texture -rainbow" alt = "Rainbow" aria-hidden="true" />
+                    <img src = { dotsTwo } className = "-background-texture -dots-two" alt = "Dots" aria-hidden="true" />
+                    <img src = { dotsSmall } className = "-background-texture -dots-small" alt = "Small dots" aria-hidden="true" />
                     <div className = "o-rhythm__container">
                         <img src = { laptopImg } className = "-front" alt = "Laptop" />
                     </div>
                     <div className = "m-case-study-page-content__copy-section">
-                        <img src = { traingle } className = "-background-texture -triangle" alt = "Triangle" />
-                        <img src = { dots } className = "-background-texture -dots" alt = "Dots" />
-                        <img src = { block } className = "-background-texture -block" alt = "Block" />
+                        <img src = { traingle } className = "-background-texture -triangle" alt = "Triangle" aria-hidden="true" />
+                        <img src = { dots } className = "-background-texture -dots" alt = "Dots" aria-hidden="true" />
+                        <img src = { block } className = "-background-texture -block" alt = "Block" aria-hidden="true" />
                         <div className = "o-rhythm__container">
                             <h6 className = "content__header -mobile-only">Deployment &amp; Testing</h6>
                             <header className = "-push-three">launch...and it doesn’t end there.</header>

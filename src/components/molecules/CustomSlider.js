@@ -62,8 +62,8 @@ const CustomSlider = class extends React.Component {
     }
 
     render() {
-        const sliderItems = this.props.images.map((image, index) =>
-            <img key = { index } src = { image } />
+        const sliderItems = this.props.images.map((imageObject, index) =>
+            <img key = { index } src = { imageObject.image } alt = { imageObject.alt } />
         );
 
         return (

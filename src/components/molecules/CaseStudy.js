@@ -99,11 +99,16 @@ const CaseStudy = class extends React.Component {
                         <div className = "m-case-study__image-container">
                             { this.props.post.frontmatter.homeimage ? (
                             <div className = "m-case-study__image">
-                                <img src = { this.props.post.frontmatter.homeimage.childImageSharp.fluid.src } />
+                                <img
+                                    alt = { this.props.post.frontmatter.title }
+                                    src = { this.props.post.frontmatter.homeimage.childImageSharp.fluid.src } />
                             </div>
                             ) : null }
                             <div className = "m-case-study__texture">
-                                <img src = { this.props.post.frontmatter.texture } />
+                                <img
+                                    alt         = { `${this.props.post.frontmatter.partnerName} texture background` }
+                                    aria-hidden = "true"
+                                    src         = { this.props.post.frontmatter.texture } />
                             </div>
                         </div>
                         <div className = "m-case-study__content">

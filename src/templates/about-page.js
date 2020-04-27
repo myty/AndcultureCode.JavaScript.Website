@@ -1,10 +1,10 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
+import React              from 'react';
+import { graphql }        from 'gatsby';
+import Layout             from '../components/Layout';
 import '../assets/scss/app.scss';
 import ContactHeroGraphic from '../../static/img/contact/contact_hero_graphic.png';
-import HeroBluePaint from '../../static/img/contact/blue_paint.png';
-import InteriorHero from '../components/molecules/InteriorHero';
+import HeroBluePaint      from '../../static/img/contact/blue_paint.png';
+import InteriorHero       from '../components/molecules/InteriorHero';
 
 export const AboutPageTemplate = ({
   title,
@@ -12,10 +12,10 @@ export const AboutPageTemplate = ({
   subTitle,
 }) => (
   <InteriorHero
-      backgroundImages = { [ContactHeroGraphic, HeroBluePaint] }
-      title          = { title }
-      secondaryTitle = { secondaryTitle }
-      subTitle       = { subTitle } />
+    backgroundImages = { [{ image: ContactHeroGraphic, alt: "Creative swirls and artifacts" }, { image: HeroBluePaint , alt: "Hand stroked blue paint"}] }
+    title            = { title }
+    secondaryTitle   = { secondaryTitle }
+    subTitle         = { subTitle } />
 )
 
 const AboutPage = ({ data }) => {

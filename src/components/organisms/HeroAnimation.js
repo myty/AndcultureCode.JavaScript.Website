@@ -104,19 +104,19 @@ const HeroAnimation = () => {
     return (
         <div>
             <div className = "o-hero__background-group group-one">
-                <img className = "o-hero__background -pink-blob" src = { pinkBlob } />
-                <img className = "o-hero__background -blue-blob-two" src = { blueBlobTwo } />
-                <img className = "o-hero__background -rainbow" src = { rainbow } />
+                <img className = "o-hero__background -pink-blob" src = { pinkBlob } aria-hidden = "true" alt = "Pink blob" />
+                <img className = "o-hero__background -blue-blob-two" src = { blueBlobTwo } aria-hidden = "true" alt = "Blue blob expansion" />
+                <img className = "o-hero__background -rainbow" src = { rainbow } aria-hidden = "true" alt = "Rainbow" />
             </div>
             <div className = "o-hero__background-group group-two">
-                <img className = "o-hero__background -green-paint" src = { greenPaint } />
-                <img className = "o-hero__background -eye" src = { eye } />
-                <img className = "o-hero__background -matrix" src = { matrix } />
+                <img className = "o-hero__background -green-paint" src = { greenPaint } aria-hidden = "true" alt = "Green Paint" />
+                <img className = "o-hero__background -eye" src = { eye } aria-hidden = "true" alt = "Eye" />
+                <img className = "o-hero__background -matrix" src = { matrix } aria-hidden = "true" alt = "Matrix" />
             </div>
             <div className = "o-hero__background-group group-three">
-                <img className = "o-hero__background -orangsicle" src = { orangSicle } />
-                <img className = "o-hero__background -pink-elephant" src = { pinkElephant } />
-                <img className = "o-hero__background -blue-blob" src = { blueBlob } />
+                <img className = "o-hero__background -orangsicle" src = { orangSicle } aria-hidden = "true" alt = "Orange Sicle" />
+                <img className = "o-hero__background -pink-elephant" src = { pinkElephant } aria-hidden = "true" alt = "Pink Elephant" />
+                <img className = "o-hero__background -blue-blob" src = { blueBlob } aria-hidden = "true" alt = "Blue blob" />
             </div>
         </div>
     )

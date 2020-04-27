@@ -1,32 +1,32 @@
-import React from 'react';
-import CustomSlider from '../../components/molecules/CustomSlider';
-import PullScroller from '../../components/molecules/PullScroller';
-import CaseStudyBodyIntro from '../../components/molecules/CaseStudyBodyIntro';
-import CaseStudyContentSection from '../../components/molecules/CaseStudyContentSection';
-import billboardImg from '../../../static/img/case-studies/hackerone/billboard.jpg';
-import cardsImg from '../../../static/img/case-studies/hackerone/social_cards.jpg';
-import stickerOne from '../../../static/img/case-studies/hackerone/H1-213_sticker.png';
-import stickerTwo from '../../../static/img/case-studies/hackerone/h1_was_here_sticker.png';
-import hackerImg from '../../../static/img/case-studies/hackerone/rainbow_shirt.jpg';
-import skateboardImg from '../../../static/img/case-studies/hackerone/skateboard.png';
-import dotTexture from '../../../static/img/case-studies/hackerone/dot_grid_copy.png';
-import stickerImg from '../../../static/img/case-studies/hackerone/604_logo.png';
-import posterImg from '../../../static/img/case-studies/hackerone/h1604_poster.jpg';
-import bannerImg from '../../../static/img/case-studies/hackerone/h1604_banner.jpg';
-import sliderImage1 from '../../../static/img/case-studies/hackerone/Security1.jpg';
-import sliderImage2 from '../../../static/img/case-studies/hackerone/Security2.jpg';
-import sliderImage3 from '../../../static/img/case-studies/hackerone/Security3.jpg';
-import sliderImage4 from '../../../static/img/case-studies/hackerone/Security4.jpg';
-import sliderImage5 from '../../../static/img/case-studies/hackerone/Security5.jpg';
-import sliderImage6 from '../../../static/img/case-studies/hackerone/Security6.jpg';
-import sliderImage7 from '../../../static/img/case-studies/hackerone/Security7.jpg';
-import sliderImage8 from '../../../static/img/case-studies/hackerone/Security8.jpg';
-import sliderImage9 from '../../../static/img/case-studies/hackerone/Security11.jpg';
-import sliderImage10 from '../../../static/img/case-studies/hackerone/Security12.jpg';
-import sliderImage11 from '../../../static/img/case-studies/hackerone/Security16.jpg';
-import sliderImage12 from '../../../static/img/case-studies/hackerone/Security21.jpg';
-import sliderImage13 from '../../../static/img/case-studies/hackerone/Security25.jpg';
-import nextImg from '../../../static/img/case-studies/cca/studying.jpg';
+import React                   from 'react';
+import CustomSlider            from 'components/molecules/CustomSlider';
+import PullScroller            from 'components/molecules/PullScroller';
+import CaseStudyBodyIntro      from 'components/molecules/CaseStudyBodyIntro';
+import CaseStudyContentSection from 'components/molecules/CaseStudyContentSection';
+import billboardImg            from 'static/img/case-studies/hackerone/billboard.jpg';
+import cardsImg                from 'static/img/case-studies/hackerone/social_cards.jpg';
+import stickerOne              from 'static/img/case-studies/hackerone/H1-213_sticker.png';
+import stickerTwo              from 'static/img/case-studies/hackerone/h1_was_here_sticker.png';
+import hackerImg               from 'static/img/case-studies/hackerone/rainbow_shirt.jpg';
+import skateboardImg           from 'static/img/case-studies/hackerone/skateboard.png';
+import dotTexture              from 'static/img/case-studies/hackerone/dot_grid_copy.png';
+import stickerImg              from 'static/img/case-studies/hackerone/604_logo.png';
+import posterImg               from 'static/img/case-studies/hackerone/h1604_poster.jpg';
+import bannerImg               from 'static/img/case-studies/hackerone/h1604_banner.jpg';
+import sliderImage1            from 'static/img/case-studies/hackerone/Security1.jpg';
+import sliderImage2            from 'static/img/case-studies/hackerone/Security2.jpg';
+import sliderImage3            from 'static/img/case-studies/hackerone/Security3.jpg';
+import sliderImage4            from 'static/img/case-studies/hackerone/Security4.jpg';
+import sliderImage5            from 'static/img/case-studies/hackerone/Security5.jpg';
+import sliderImage6            from 'static/img/case-studies/hackerone/Security6.jpg';
+import sliderImage7            from 'static/img/case-studies/hackerone/Security7.jpg';
+import sliderImage8            from 'static/img/case-studies/hackerone/Security8.jpg';
+import sliderImage9            from 'static/img/case-studies/hackerone/Security11.jpg';
+import sliderImage10           from 'static/img/case-studies/hackerone/Security12.jpg';
+import sliderImage11           from 'static/img/case-studies/hackerone/Security16.jpg';
+import sliderImage12           from 'static/img/case-studies/hackerone/Security21.jpg';
+import sliderImage13           from 'static/img/case-studies/hackerone/Security25.jpg';
+import nextImg                 from 'static/img/case-studies/cca/studying.jpg';
 
 const Hackerone = class extends React.Component {
     constructor(props) {
@@ -35,19 +35,19 @@ const Hackerone = class extends React.Component {
 
     render() {
         const sliderImages = [
-            sliderImage1,
-            sliderImage2,
-            sliderImage3,
-            sliderImage4,
-            sliderImage5,
-            sliderImage6,
-            sliderImage7,
-            sliderImage8,
-            sliderImage9,
-            sliderImage10,
-            sliderImage11,
-            sliderImage12,
-            sliderImage13,
+            { image: sliderImage1, alt: "Presentation at Security@" },
+            { image: sliderImage2, alt: "HackerOne branding at the Security@ conference" },
+            { image: sliderImage3, alt: "View of the branding and setup for HackerOne at the Security@ conference" },
+            { image: sliderImage4, alt: "Socializing at the Security@ conference" },
+            { image: sliderImage5, alt: "Panel of speakers at the Security@ conference" },
+            { image: sliderImage6, alt: "Name and titles of the panel of speakers at the Security@ conference" },
+            { image: sliderImage7, alt: "Showing the setup and branding of the Security@ sign at the Security@ conference" },
+            { image: sliderImage8, alt: "Socialization and collaboration at the Security@ conference" },
+            { image: sliderImage9, alt: "Key speaker at the Security@ conference" },
+            { image: sliderImage10, alt: "Taking pictures at the Security@ conference" },
+            { image: sliderImage11, alt: "More socialization at the Security@ conference" },
+            { image: sliderImage12, alt: "Branded sign displayed at the Security@ conference" },
+            { image: sliderImage13, alt: "Large branded sign at the Security@ conference" },
         ];
 
         const nextImageBlockStyle = {
@@ -64,17 +64,6 @@ const Hackerone = class extends React.Component {
                     copyEasterEgg   = "Not surprisingly, HackerOne wants to work with the best hackers, wherever they are."
                     easterEgg       = "Turns out that’s a pretty broad geography— 170 countries and counting."
                     title           = "what was HackerOne's reality?" />
-                {/* <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section -body-intro">
-                        <header>what was HackerOne's reality?</header>
-                        <div className = "o-rhythm__row">
-                            <div className = "content__copy">
-                                <p><span className = "easter-egg__right"></span> </p>
-                            </div>
-                            <div className = "content__easter-egg easter-egg"></div>
-                        </div>
-                    </div>
-                </div> */}
                 <div className = "m-case-study-page-content__pull-scroll">
                     <PullScroller />
                 </div>
