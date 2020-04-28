@@ -134,7 +134,8 @@ const JobForm = class extends React.Component {
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.name } />
+                            value              = { this.state.formData.name }
+                            id                 = "job-name" />
                         <Input
                             className          = { this.state.activeQuestion === 2 ? '-active': '' }
                             type               = "email"
@@ -142,7 +143,8 @@ const JobForm = class extends React.Component {
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.email } />
+                            value              = { this.state.formData.email }
+                            id                 = "job-email" />
                         <Input
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
                             type               = "text"
@@ -150,20 +152,23 @@ const JobForm = class extends React.Component {
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.phone } />
+                            value              = { this.state.formData.phone }
+                            id                 = "job-phone" />
                         <Input
                             className          = { this.state.activeQuestion === 4 ? '-active': '' }
                             type               = "text"
                             name               = "linkedin_profile"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.linkedin_profile } />
+                            value              = { this.state.formData.linkedin_profile }
+                            id                 = "job-linkedin-profile" />
                         <Textarea
                             className          = { this.state.activeQuestion === 5 ? '-active': '' }
                             name               = "message"
                             inputValueCallback = { this._setInputValue }
                             value              = { this.state.formData.message }
-                            lightTheme         = { this.props.lightTheme } />
+                            lightTheme         = { this.props.lightTheme }
+                            id                 = "job-message" />
                         <fieldset className = { this.state.activeQuestion === 6 ? '-active': '' }>
                             <input
                                 className = "a-checkbox"

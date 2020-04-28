@@ -140,7 +140,8 @@ const CatamaranForm = class extends React.Component {
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.name } />
+                            value              = { this.state.formData.name }
+                            id                 = "catamaran-name" />
                         <Input
                             className          = { this.state.activeQuestion === 2 ? '-active': '' }
                             type               = "email"
@@ -148,19 +149,22 @@ const CatamaranForm = class extends React.Component {
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.email } />
+                            value              = { this.state.formData.email }
+                            id                 = "catamaran-email" />
                         <Select
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
                             name               = "interest"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.interest } />
+                            value              = { this.state.formData.interest }
+                            id                 = "catamaran-interest" />
                         <Textarea
                             className          = { this.state.activeQuestion === 4 ? '-active': '' }
                             name               = "message"
                             inputValueCallback = { this._setInputValue }
                             value              = { this.state.formData.message }
-                            lightTheme         = { this.props.lightTheme } />
+                            lightTheme         = { this.props.lightTheme }
+                            id                 = "catamaran-message" />
                         <div className = "o-contact-form__buttons">
                             <a
                                 onClick   = { this._onBackClick }

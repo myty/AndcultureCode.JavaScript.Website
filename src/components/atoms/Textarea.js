@@ -57,7 +57,7 @@ const Textarea = class extends React.Component {
                     className   = { textAreaClass }
                     name        = { this.props.name }
                     placeholder = { this.state.placeholderValue }
-                    id          = { this.props.name } />
+                    id          = { this.props.id } />
             </fieldset>
         )
     }

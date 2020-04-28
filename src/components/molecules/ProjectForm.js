@@ -141,7 +141,8 @@ const ProjectForm = class extends React.Component {
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.name } />
+                            value              = { this.state.formData.name }
+                            id                 = "project-name" />
                         <Input
                             className          = { this.state.activeQuestion === 2 ? '-active': '' }
                             type               = "email"
@@ -149,7 +150,8 @@ const ProjectForm = class extends React.Component {
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.email } />
+                            value              = { this.state.formData.email }
+                            id                 = "project-email" />
                         <Input
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
                             type               = "text"
@@ -158,27 +160,31 @@ const ProjectForm = class extends React.Component {
                             isRequiredCallback = { this._setIsRequired }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.phone } />
+                            value              = { this.state.formData.phone }
+                            id                 = "project-phone" />
                         <Input
                             className          = { this.state.activeQuestion === 4 ? '-active': '' }
                             type               = "text"
                             name               = "industry"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.industry } />
+                            value              = { this.state.formData.industry }
+                            id                 = "project-industry" />
                         <Input
                             className          = { this.state.activeQuestion === 5 ? '-active': '' }
                             type               = "text"
                             name               = "job title"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.job_title } />
+                            value              = { this.state.formData.job_title }
+                            id                 = "project-job-title" />
                         <Textarea
                             className          = { this.state.activeQuestion === 6 ? '-active': '' }
                             name               = "message"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.message } />
+                            value              = { this.state.formData.message }
+                            id                 = "project-message" />
                         <div className = "o-contact-form__buttons">
                             <a
                                 onClick   = { this._onBackClick }

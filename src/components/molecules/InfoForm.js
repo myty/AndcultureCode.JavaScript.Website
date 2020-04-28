@@ -137,7 +137,8 @@ const InfoForm = class extends React.Component {
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.name } />
+                            value              = { this.state.formData.name }
+                            id                 = "info-name" />
                         <Input
                             className          = { this.state.activeQuestion === 2 ? '-active': '' }
                             type               = "email"
@@ -145,13 +146,15 @@ const InfoForm = class extends React.Component {
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.email } />
+                            value              = { this.state.formData.email }
+                            id                 = "info-email" />
                         <Textarea
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
                             name               = "message"
                             inputValueCallback = { this._setInputValue }
                             value              = { this.state.formData.message }
-                            lightTheme         = { this.props.lightTheme } />
+                            lightTheme         = { this.props.lightTheme }
+                            id                 = "info-message" />
                         <div className = "o-contact-form__buttons">
                             <a
                                 onClick   = { this._onBackClick }
