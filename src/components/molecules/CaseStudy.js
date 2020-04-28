@@ -118,10 +118,11 @@ const CaseStudy = class extends React.Component {
                                     { this.props.post.frontmatter.title }
                                 </p>
                                 <CoverTransitionLink
+                                    aria-label   = { `Check out the case study for ${this.props.post.frontmatter.partnerName}` }
                                     onMouseEnter = { this._handleHover }
-                                    className = "a-button"
-                                    to        = { this.props.post.fields.slug }
-                                    style     = { linkStyle }>
+                                    className    = "a-button"
+                                    to           = { this.props.post.fields.slug }
+                                    style        = { linkStyle }>
                                     See How
                                 </CoverTransitionLink>
                             </div>

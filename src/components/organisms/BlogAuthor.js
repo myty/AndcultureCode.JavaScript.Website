@@ -52,7 +52,7 @@ const BlogAuthor = (props) => {
                         <div className="m-blog-author__divider">|</div>
                         <div className="m-blog-author__links">
                             {props.author.socialLinks.map((link, index) => (
-                                _getSocialIconLink(link, index)
+                                _getSocialIconLink(link, props.author.name, index)
                             ))}
                         </div>
                     </Fragment>
@@ -62,7 +62,7 @@ const BlogAuthor = (props) => {
     );
 };
 
-const _getSocialIconLink = (link, index) => {
+const _getSocialIconLink = (link, name, index) => {
     let icon = null;
 
     switch (link.platform.toLowerCase()) {
@@ -88,7 +88,7 @@ const _getSocialIconLink = (link, index) => {
 
     return (
         <a
-            aria-label = { `Share on ${link.platform}` }
+            aria-label = { `${link.platform} account for ${name}` }
             href       = { link.url }
             key        = { `social-link-${index}` }
             target     = "_blank"

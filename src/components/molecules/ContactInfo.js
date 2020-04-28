@@ -19,7 +19,7 @@ const ContactInfo = class extends React.Component {
                             </a>
                         </div>
                         <div>
-                            <a href={`tel:${this.props.phoneNumber}`} className = "-inline">{ this.props.phoneNumber }</a>
+                            <a href={`tel:${this.props.phoneNumber.replace(/\./g, '')}`} className = "-inline">{ this.props.phoneNumber }</a>
                         </div>
                     </div>
                     <div className = "m-contact-info__social">
@@ -46,7 +46,7 @@ const ContactInfo = class extends React.Component {
                 </div>
             </div>
             <div className = "m-contact-info__map">
-                <iframe src="https://snazzymaps.com/embed/222814/" width="87%" height="537px" frameBorder="0"></iframe>
+                <iframe src="https://snazzymaps.com/embed/222814/" width="87%" height="537px" frameBorder="0" title="Map location for andculture"></iframe>
             </div>
             <div className = "o-rhythm__container">
                 <div className = "m-contact-info__directions">
