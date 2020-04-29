@@ -58,7 +58,7 @@ const ContactPage = ({ data }) => {
       pageTitle      = "contact"
       data           = { frontmatter }
       scrollTop      = { scrollTop }>
-      <div className = "p-interior-page">
+      <main className = "p-interior-page" aria-label="Main content">
         <ContactPageTemplate
           title          = { frontmatter.title }
           secondaryTitle = { frontmatter.secondaryTitle }
@@ -69,7 +69,7 @@ const ContactPage = ({ data }) => {
         <CustomSlider images = { sliderImages } />
         <ContactInfo streetAddressLineOne = { frontmatter.streetAddressLineOne } streetAddressLineTwo = { frontmatter.streetAddressLineTwo } phoneNumber = { frontmatter.phoneNumber } directions = { frontmatter.directions } mapLink = { frontmatter.mapLink } />
         {/* <CareersList /> */}
-      </div>
+      </main>
     </Layout>
   )
 }

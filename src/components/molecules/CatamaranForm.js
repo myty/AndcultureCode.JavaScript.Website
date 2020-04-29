@@ -132,7 +132,7 @@ const CatamaranForm = class extends React.Component {
             <form className = { formClass } name = "contact-catamaran" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <div className = "o-contact-form__wrapper">
-                        <header>talk start-ups (Catamaran)</header>
+                        <header aria-label="Catamaran form header">talk start-ups (Catamaran)</header>
                         <Input
                             className          = { this.state.activeQuestion === 1 ? '-active': '' }
                             description        = "Enter your name for the catamaran form submission"

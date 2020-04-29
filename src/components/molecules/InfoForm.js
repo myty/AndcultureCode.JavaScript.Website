@@ -127,7 +127,7 @@ const InfoForm = class extends React.Component {
             <form className = { formClass } name="contact-info" method="POST" data-netlify="true">
                 <div className = "o-rhythm__container">
                     <div className = "o-contact-form__wrapper">
-                        <header>get quick info</header>
+                        <header aria-label="Info form header">get quick info</header>
                         <input type = "hidden" data-netlify="true" />
                         <input type="hidden" name="form-name" value="contact-info" />
                         <Input

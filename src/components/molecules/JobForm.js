@@ -126,7 +126,7 @@ const JobForm = class extends React.Component {
             <form className = { formClass } name = "contact-job" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <div className = "o-contact-form__wrapper">
-                        <header>join the team</header>
+                        <header aria-label="Job form header">join the team</header>
                         <Input
                             className          = { this.state.activeQuestion === 1 ? '-active': '' }
                             description        = "Enter your name for the job form submission"

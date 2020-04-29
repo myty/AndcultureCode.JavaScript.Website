@@ -10,7 +10,7 @@ export default function Header(props) {
   }
 
   return (
-    <Fragment>
+    <header aria-label="Site header">
       <div className="m-header">
         <div className = "m-header__background"></div>
         <div className="o-rhythm__container -fluid">
@@ -21,8 +21,8 @@ export default function Header(props) {
           </a>
           { // if
             !props.hideNavigation &&
-            <nav className="m-header__navigation">
-              <button onClick={props.onMenuOpen} aria-label="Main Menu">
+            <nav className="m-header__navigation" aria-label="Main menu">
+              <button onClick={props.onMenuOpen}>
                 <IconMenu />
               </button>
             </nav>
@@ -44,7 +44,7 @@ export default function Header(props) {
           <path d="M275.14,407.85V383.28h-5.21v10.33l-.21-.3c-.15-.24-1.63-2.3-5.2-2.3-4.6,0-7.81,3.53-7.81,8.59s3.21,8.62,7.81,8.62a6.51,6.51,0,0,0,5.41-2.5l0,0,.29-.1,0,2.26ZM266.08,404c-2.39,0-4.06-1.83-4.06-4.46s1.67-4.46,4.06-4.46,4,1.79,4,4.46S268.48,404,266.08,404Z" transform="translate(-216.17 -383.28)"/>
         </svg>
       </div>
-    </Fragment>
+    </header>
   );
 }
 

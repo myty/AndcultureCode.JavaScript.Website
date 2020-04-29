@@ -131,7 +131,7 @@ const ProjectForm = class extends React.Component {
             <form className = { formClass }  name="contact-project" method="POST" data-netlify="true">
                 <div className = "o-rhythm__container">
                     <div className = "o-contact-form__wrapper">
-                        <header>start a project together</header>
+                        <header aria-label="Project form header">start a project together</header>
                         <input type = "hidden" data-netlify="true" />
                         <input type="hidden" name="form-name" value="contact-project" />
                         <Input
