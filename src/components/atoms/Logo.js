@@ -2,7 +2,8 @@ import React from 'react';
 
 const Logo = () => (
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-        viewBox="0 0 47 51" xmlSpace="preserve">
+        viewBox="0 0 47 51" xmlSpace="preserve" role="img" aria-labelledby="svgLogo">
+        <title id="svgLogo">andculture logo mark</title>
         <g>
             <path className="st0" d="M16.98,29.21c-0.38,4.55,3.01,8.57,7.56,8.95c0.24,0.02,0.47,0.03,0.71,0.03c1.95,0,3.82-0.68,5.33-1.96
                 c0.77-0.65,1.4-1.41,1.88-2.26c1.05,0.85,1.77,1.43,1.89,1.53l2.35-2.89c-4.48-3.64-13.04-10.58-13.32-10.81

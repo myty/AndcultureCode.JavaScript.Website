@@ -21,11 +21,8 @@ export default function Header(props) {
           </a>
           { // if
             !props.hideNavigation &&
-            <nav
-              className="m-header__navigation"
-              role="navigation"
-              aria-label="main-navigation">
-              <button onClick={props.onMenuOpen}>
+            <nav className="m-header__navigation">
+              <button onClick={props.onMenuOpen} aria-label="Main Menu">
                 <IconMenu />
               </button>
             </nav>

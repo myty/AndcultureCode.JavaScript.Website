@@ -82,14 +82,6 @@
         max-width: 786px;
         width: calc(100% - 80px);
 
-        // @include breakpoints("tablet") {
-        //     @include span-col(12);
-        // }
-
-        // @include breakpoints("sm-desktop") {
-        //     @include span-col(8);
-        // }
-
         p {
             @include line-height(32px);
             color: get-color("primary", "white");
