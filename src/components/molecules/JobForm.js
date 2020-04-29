@@ -129,6 +129,7 @@ const JobForm = class extends React.Component {
                         <header>join the team</header>
                         <Input
                             className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                            description        = "Enter your name for the job form submission"
                             type               = "text"
                             name               = "name"
                             inputValueCallback = { this._setInputValue }
@@ -138,6 +139,7 @@ const JobForm = class extends React.Component {
                             id                 = "job-name" />
                         <Input
                             className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                            description        = "Enter your email for the job form submission"
                             type               = "email"
                             name               = "email"
                             inputValueCallback = { this._setInputValue }
@@ -147,6 +149,7 @@ const JobForm = class extends React.Component {
                             id                 = "job-email" />
                         <Input
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                            description        = "Enter your phone number for the job form submission"
                             type               = "text"
                             name               = "phone"
                             inputValueCallback = { this._setInputValue }
@@ -156,6 +159,7 @@ const JobForm = class extends React.Component {
                             id                 = "job-phone" />
                         <Input
                             className          = { this.state.activeQuestion === 4 ? '-active': '' }
+                            description        = "Enter your LinkedIn profile for the job form submission"
                             type               = "text"
                             name               = "linkedin_profile"
                             inputValueCallback = { this._setInputValue }
@@ -164,6 +168,7 @@ const JobForm = class extends React.Component {
                             id                 = "job-linkedin-profile" />
                         <Textarea
                             className          = { this.state.activeQuestion === 5 ? '-active': '' }
+                            description        = "Enter the message that you would like sent to andculture for the job form submission"
                             name               = "message"
                             inputValueCallback = { this._setInputValue }
                             value              = { this.state.formData.message }
@@ -171,11 +176,12 @@ const JobForm = class extends React.Component {
                             id                 = "job-message" />
                         <fieldset className = { this.state.activeQuestion === 6 ? '-active': '' }>
                             <input
-                                className = "a-checkbox"
-                                type      = "checkbox"
-                                name      = "acknowledge"
-                                value     = "acknowledge"
-                                id        = "acknowledge"/>
+                                className  = "a-checkbox"
+                                aria-label = "Acknowledgement that this position is located in Harrisburg, PA"
+                                type       = "checkbox"
+                                name       = "acknowledge"
+                                value      = "acknowledge"
+                                id         = "acknowledge"/>
                             <label
                                 className = "a-label"
                                 htmlFor   = "acknowledge">

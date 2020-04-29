@@ -135,6 +135,7 @@ const CatamaranForm = class extends React.Component {
                         <header>talk start-ups (Catamaran)</header>
                         <Input
                             className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                            description        = "Enter your name for the catamaran form submission"
                             type               = "text"
                             name               = "name"
                             inputValueCallback = { this._setInputValue }
@@ -144,6 +145,7 @@ const CatamaranForm = class extends React.Component {
                             id                 = "catamaran-name" />
                         <Input
                             className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                            description        = "Enter your email for the catamaran form submission"
                             type               = "email"
                             name               = "email"
                             inputValueCallback = { this._setInputValue }
@@ -153,6 +155,7 @@ const CatamaranForm = class extends React.Component {
                             id                 = "catamaran-email" />
                         <Select
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                            description        = "Select an interest that most aligns to you for the catamaran form submission"
                             name               = "interest"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
@@ -160,6 +163,7 @@ const CatamaranForm = class extends React.Component {
                             id                 = "catamaran-interest" />
                         <Textarea
                             className          = { this.state.activeQuestion === 4 ? '-active': '' }
+                            description        = "Enter the message that you would like sent to Catamaran"
                             name               = "message"
                             inputValueCallback = { this._setInputValue }
                             value              = { this.state.formData.message }

@@ -131,6 +131,7 @@ const InfoForm = class extends React.Component {
                         <input type = "hidden" data-netlify="true" />
                         <input type="hidden" name="form-name" value="contact-info" />
                         <Input
+                            description        = "Enter your name for the info form submission"
                             type               = "text"
                             className          = { this.state.activeQuestion === 1 ? '-active': '' }
                             name               = "name"
@@ -141,6 +142,7 @@ const InfoForm = class extends React.Component {
                             id                 = "info-name" />
                         <Input
                             className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                            description        = "Enter your email for the info form submission"
                             type               = "email"
                             name               = "email"
                             inputValueCallback = { this._setInputValue }
@@ -150,6 +152,7 @@ const InfoForm = class extends React.Component {
                             id                 = "info-email" />
                         <Textarea
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                            description        = "Enter the message that you would like sent to andculture for the info form submission"
                             name               = "message"
                             inputValueCallback = { this._setInputValue }
                             value              = { this.state.formData.message }

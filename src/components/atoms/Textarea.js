@@ -46,10 +46,11 @@ const Textarea = class extends React.Component {
             <fieldset className = { this.props.className }>
                 <label
                     className = { labelClassName }
-                    htmlFor   = { this.props.name }>
+                    htmlFor   = { this.props.id }>
                     { this.props.name }
                 </label>
                 <textarea
+                    aria-label  = { this.props.description }
                     value       = { this.props.value }
                     onFocus     = { this._activateField }
                     onBlur      = { this._disableField }

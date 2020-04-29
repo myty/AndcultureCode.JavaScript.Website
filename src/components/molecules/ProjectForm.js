@@ -136,6 +136,7 @@ const ProjectForm = class extends React.Component {
                         <input type="hidden" name="form-name" value="contact-project" />
                         <Input
                             className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                            description        = "Enter your name for the project form submission"
                             type               = "text"
                             name               = "name"
                             inputValueCallback = { this._setInputValue }
@@ -145,6 +146,7 @@ const ProjectForm = class extends React.Component {
                             id                 = "project-name" />
                         <Input
                             className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                            description        = "Enter your email for the project form submission"
                             type               = "email"
                             name               = "email"
                             inputValueCallback = { this._setInputValue }
@@ -154,6 +156,7 @@ const ProjectForm = class extends React.Component {
                             id                 = "project-email" />
                         <Input
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                            description        = "Enter your phone number for the project form submission"
                             type               = "text"
                             name               = "phone"
                             inputValueCallback = { this._setInputValue }
@@ -164,6 +167,7 @@ const ProjectForm = class extends React.Component {
                             id                 = "project-phone" />
                         <Input
                             className          = { this.state.activeQuestion === 4 ? '-active': '' }
+                            description        = "Enter your industry for the project form submission"
                             type               = "text"
                             name               = "industry"
                             inputValueCallback = { this._setInputValue }
@@ -172,6 +176,7 @@ const ProjectForm = class extends React.Component {
                             id                 = "project-industry" />
                         <Input
                             className          = { this.state.activeQuestion === 5 ? '-active': '' }
+                            description        = "Enter your job title for the project form submission"
                             type               = "text"
                             name               = "job title"
                             inputValueCallback = { this._setInputValue }
@@ -180,6 +185,7 @@ const ProjectForm = class extends React.Component {
                             id                 = "project-job-title" />
                         <Textarea
                             className          = { this.state.activeQuestion === 6 ? '-active': '' }
+                            description        = "Enter the message that you would like sent to andculture for the project form submission"
                             name               = "message"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
