@@ -45,17 +45,22 @@
             margin: 0 2px;
 
             button {
-
                 &:before {
                     color: get-color("neutral", "light-gray");
                     opacity: 1;
                 }
+
+                &:focus {
+                    outline: 1px solid get-color-primary("fresh");
+
+                    &:before {
+                        color: get-color-primary("fresh");
+                    }
+                }
             }
 
             &.slick-active {
-
                 button {
-
                     &:before {
                         color: get-color("neutral", "light-gray");
                         content: "\2218";
@@ -75,7 +80,6 @@
     }
 
     .slick-list {
-
         @include breakpoints("tablet") {
             overflow: visible;
 
