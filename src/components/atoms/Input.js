@@ -77,11 +77,12 @@ const Input = class extends React.Component {
             <fieldset className = { this.props.className }>
                 <label
                     className = { cssClassName }
-                    htmlFor   = { this.props.name }>
+                    htmlFor   = { this.props.id }>
                     { this.props.name }
                 </label>
                 <input
                     { ...inputProps }
+                    aria-label  = { this.props.description }
                     value       = { this.props.value }
                     onFocus     = { this._activateField }
                     onBlur      = { this._disableField }
@@ -90,7 +91,7 @@ const Input = class extends React.Component {
                     type        = { this.props.type }
                     name        = { this.props.name }
                     placeholder = { this.state.placeholderValue }
-                    id          = { this.props.name } />
+                    id          = { this.props.id } />
                 { // if
                     this.state.error &&
                     <span className = "a-label__error">please enter your { this.props.name }</span>

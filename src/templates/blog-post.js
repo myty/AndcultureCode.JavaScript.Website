@@ -176,14 +176,16 @@ const BlogPost = ({ data }) => {
       pageTitle             = ""
       scrollTop             = { scrollTop }
       showFooterDividerLine = { true }>
-      <BlogPostTemplate
-        author         = { _getAuthor(data.authors, postProperties.author) }
-        html           = { postHtml }
-        nextPostUrl    = { _getNextPostUrl(data.posts, data.post.id) }
-        onInvertChange = { onInvertChange }
-        properties     = { postProperties }
-        scrollTop      = { scrollTop }
-        url            = { data.post.fields.slug } />
+      <main aria-label="Main content">
+        <BlogPostTemplate
+          author         = { _getAuthor(data.authors, postProperties.author) }
+          html           = { postHtml }
+          nextPostUrl    = { _getNextPostUrl(data.posts, data.post.id) }
+          onInvertChange = { onInvertChange }
+          properties     = { postProperties }
+          scrollTop      = { scrollTop }
+          url            = { data.post.fields.slug } />
+      </main>
     </Layout>
   )
 }

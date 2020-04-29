@@ -132,35 +132,43 @@ const CatamaranForm = class extends React.Component {
             <form className = { formClass } name = "contact-catamaran" method = "POST" data-netlify = "true">
                 <div className = "o-rhythm__container">
                     <div className = "o-contact-form__wrapper">
-                        <header>talk start-ups (Catamaran)</header>
+                        <header aria-label="Catamaran form header">talk start-ups (Catamaran)</header>
                         <Input
                             className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                            description        = "Enter your name for the catamaran form submission"
                             type               = "text"
                             name               = "name"
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.name } />
+                            value              = { this.state.formData.name }
+                            id                 = "catamaran-name" />
                         <Input
                             className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                            description        = "Enter your email for the catamaran form submission"
                             type               = "email"
                             name               = "email"
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.email } />
+                            value              = { this.state.formData.email }
+                            id                 = "catamaran-email" />
                         <Select
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                            description        = "Select an interest that most aligns to you for the catamaran form submission"
                             name               = "interest"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.interest } />
+                            value              = { this.state.formData.interest }
+                            id                 = "catamaran-interest" />
                         <Textarea
                             className          = { this.state.activeQuestion === 4 ? '-active': '' }
+                            description        = "Enter the message that you would like sent to Catamaran"
                             name               = "message"
                             inputValueCallback = { this._setInputValue }
                             value              = { this.state.formData.message }
-                            lightTheme         = { this.props.lightTheme } />
+                            lightTheme         = { this.props.lightTheme }
+                            id                 = "catamaran-message" />
                         <div className = "o-contact-form__buttons">
                             <a
                                 onClick   = { this._onBackClick }

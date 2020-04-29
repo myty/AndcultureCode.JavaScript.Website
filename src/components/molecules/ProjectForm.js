@@ -131,54 +131,66 @@ const ProjectForm = class extends React.Component {
             <form className = { formClass }  name="contact-project" method="POST" data-netlify="true">
                 <div className = "o-rhythm__container">
                     <div className = "o-contact-form__wrapper">
-                        <header>start a project together</header>
+                        <header aria-label="Project form header">start a project together</header>
                         <input type = "hidden" data-netlify="true" />
                         <input type="hidden" name="form-name" value="contact-project" />
                         <Input
                             className          = { this.state.activeQuestion === 1 ? '-active': '' }
+                            description        = "Enter your name for the project form submission"
                             type               = "text"
                             name               = "name"
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.name } />
+                            value              = { this.state.formData.name }
+                            id                 = "project-name" />
                         <Input
                             className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                            description        = "Enter your email for the project form submission"
                             type               = "email"
                             name               = "email"
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.email } />
+                            value              = { this.state.formData.email }
+                            id                 = "project-email" />
                         <Input
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                            description        = "Enter your phone number for the project form submission"
                             type               = "text"
                             name               = "phone"
                             inputValueCallback = { this._setInputValue }
                             isRequiredCallback = { this._setIsRequired }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.phone } />
+                            value              = { this.state.formData.phone }
+                            id                 = "project-phone" />
                         <Input
                             className          = { this.state.activeQuestion === 4 ? '-active': '' }
+                            description        = "Enter your industry for the project form submission"
                             type               = "text"
                             name               = "industry"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.industry } />
+                            value              = { this.state.formData.industry }
+                            id                 = "project-industry" />
                         <Input
                             className          = { this.state.activeQuestion === 5 ? '-active': '' }
+                            description        = "Enter your job title for the project form submission"
                             type               = "text"
                             name               = "job title"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.job_title } />
+                            value              = { this.state.formData.job_title }
+                            id                 = "project-job-title" />
                         <Textarea
                             className          = { this.state.activeQuestion === 6 ? '-active': '' }
+                            description        = "Enter the message that you would like sent to andculture for the project form submission"
                             name               = "message"
                             inputValueCallback = { this._setInputValue }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.message } />
+                            value              = { this.state.formData.message }
+                            id                 = "project-message" />
                         <div className = "o-contact-form__buttons">
                             <a
                                 onClick   = { this._onBackClick }

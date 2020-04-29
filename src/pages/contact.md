@@ -5,7 +5,7 @@ title: let's connect
 secondaryTitle: ahoy hoy/bonjour/anyoung
 subTitle: Whether it's for a potential project or to get more information about what we do, we'd be glad to talk with you.
 streetAddressLineOne: 614 N. Front Street
-streetAddressLineTwo: Harrisburg, PA 17102
+streetAddressLineTwo: Harrisburg, PA 17101
 mapLink: https://www.google.com/maps/place/614+N+Front+St,+Harrisburg,+PA+17101/@40.2635209,-76.8896603,19.5z/data=!4m5!3m4!1s0x89c8c1122c1856d1:0xd99ac746de9d10e4!8m2!3d40.263578!4d-76.889796
 phoneNumber: '717.233.2881'
 directions: >

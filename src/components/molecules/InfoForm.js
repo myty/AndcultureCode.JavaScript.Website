@@ -127,31 +127,37 @@ const InfoForm = class extends React.Component {
             <form className = { formClass } name="contact-info" method="POST" data-netlify="true">
                 <div className = "o-rhythm__container">
                     <div className = "o-contact-form__wrapper">
-                        <header>get quick info</header>
+                        <header aria-label="Info form header">get quick info</header>
                         <input type = "hidden" data-netlify="true" />
                         <input type="hidden" name="form-name" value="contact-info" />
                         <Input
+                            description        = "Enter your name for the info form submission"
                             type               = "text"
                             className          = { this.state.activeQuestion === 1 ? '-active': '' }
                             name               = "name"
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.name } />
+                            value              = { this.state.formData.name }
+                            id                 = "info-name" />
                         <Input
                             className          = { this.state.activeQuestion === 2 ? '-active': '' }
+                            description        = "Enter your email for the info form submission"
                             type               = "email"
                             name               = "email"
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.email } />
+                            value              = { this.state.formData.email }
+                            id                 = "info-email" />
                         <Textarea
                             className          = { this.state.activeQuestion === 3 ? '-active': '' }
+                            description        = "Enter the message that you would like sent to andculture for the info form submission"
                             name               = "message"
                             inputValueCallback = { this._setInputValue }
                             value              = { this.state.formData.message }
-                            lightTheme         = { this.props.lightTheme } />
+                            lightTheme         = { this.props.lightTheme }
+                            id                 = "info-message" />
                         <div className = "o-contact-form__buttons">
                             <a
                                 onClick   = { this._onBackClick }

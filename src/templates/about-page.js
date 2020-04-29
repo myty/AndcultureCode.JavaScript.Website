@@ -23,13 +23,13 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout pageTitle = "about" hideNavigation = { true }>
-      <div className = "p-interior-page">
+      <main className = "p-interior-page" aria-label="Main content">
         <AboutPageTemplate
           title          = { frontmatter.title }
           secondaryTitle = { frontmatter.secondaryTitle }
           subTitle       = { frontmatter.subTitle }
         />
-      </div>
+      </main>
     </Layout>
   )
 }

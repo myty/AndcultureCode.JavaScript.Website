@@ -12,7 +12,7 @@ export const CaseStudyTemplate = ({
   caseStudyContent,
 }) => {
   return (
-    <div>
+    <main aria-label="Main content">
       <CaseStudyHero
           partnerName   = { caseStudyContent.partnerName }
           color         = { caseStudyContent.color }
@@ -40,7 +40,7 @@ export const CaseStudyTemplate = ({
         caseStudyContent.partnerName === 'PA CareerLink®' &&
         <PACareerLink />
       }
-    </div>
+    </main>
   )
 }
 

@@ -11,7 +11,7 @@ const Menu = (props) => (
                 </div>
             </div>
         </div>
-        <nav>
+        <nav aria-label="Main menu links">
             <button onClick={props.onClose}><IconClose /></button>
             <a href="/">home</a>
             <a href="/blog">blog</a>
