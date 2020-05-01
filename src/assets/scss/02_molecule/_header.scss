@@ -87,7 +87,7 @@
         @include breakpoints("tablet") {
             position: absolute;
             display: block;
-            left: calc(3% + 70px);
+            left: calc(3% + 90px);
             top: 66px;
         }
 
@@ -126,10 +126,10 @@
 
     &__page-title {
         @include font-size(16px);
-        color: get-color("neutral", "light-gray");
+        color: get-color-primary("after-hours");
         float: left;
         letter-spacing: 0.2em;
-        font-weight: 500;
+        font-weight: 600;
         font-family: $font-secondary;
         margin-top: 2px;
         margin-left: 8px;

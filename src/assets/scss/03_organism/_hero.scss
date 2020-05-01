@@ -23,7 +23,7 @@
             @include font-size(16px);
             @include line-height(36px);
             letter-spacing: .35px;
-            font-weight: 100;
+            font-weight: 300;
 
             @include breakpoints("sm-tablet") {
                 @include span-col(10);
@@ -58,7 +58,7 @@
                 @include font-size(16px);
                 @include line-height(24px);
                 margin-bottom: 1em;
-                font-weight: 300;
+                font-weight: 600;
                 letter-spacing: .04em;
             }
 
@@ -201,8 +201,19 @@
                 padding: 0;;
             }
 
-            h6 {
-                color: get-color("primary", "white");
+            &__title {
+                @include font-size(19px);
+                @include line-height("base");
+                color: get-color-primary("white");
+                font-family: $font-secondary;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: .24em;
+
+                @include breakpoints("tablet") {
+                    @include font-size("base");
+                    @include line-height("smaller");
+                }
             }
 
             @include breakpoints("tablet") {
@@ -318,13 +329,21 @@
         }
     }
 
-    h3 {
+    h2 {
+        @include font-size("small");
+        @include line-height(32px);
         margin: 40px 0 80px 0;
+        color: get-color("neutral", "light-gray");
+
+        @include breakpoints("tablet") {
+            @include font-size("medium-large");
+            @include line-height("larger");
+        }
     }
 
     h6.-vert {
         @include font-size(14px);
-        color: get-color("neutral", "light-gray");
+        color: get-color-primary("after-hours");
         position: fixed;
         writing-mode: tb-rl;
         transform: rotate(-180deg);

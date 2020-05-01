@@ -74,7 +74,6 @@ const CaseStudy = class extends React.Component {
         let caseStudyStyle;
         let linkStyle;
         linkStyle = {
-            color:       this.props.post.frontmatter.color,
             borderColor: this.props.post.frontmatter.color,
         }
 

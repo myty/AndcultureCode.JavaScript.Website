@@ -87,7 +87,7 @@ export const BlogPostTemplate = (props) => {
           className = {`p-blog__background__wrapper ${contentClassName} o-rhythm__container`} 
           ref       = {contentRef}
           style     = { contentStyle } >
-          <header ref={headerRef} className="o-rhythm__row">
+          <header ref={headerRef} className="o-rhythm__row" aria-label="Blog post header">
             <section>
               <p>{ properties.category }</p>
               <h1>{ properties.title }</h1>
@@ -106,7 +106,7 @@ export const BlogPostTemplate = (props) => {
               }}>
             </section>
           </main>
-          <footer className="o-rhythm__row">
+          <footer className="o-rhythm__row" aria-label="Blog post footer">
             <section>
               <a
                 href       = {`mailto:?to=&body=${encodedBody}&subject=${encodedSubject}`}
@@ -137,7 +137,7 @@ export const BlogPostTemplate = (props) => {
                 <IconSocialFacebook />
               </a>
             </section>
-            <nav>
+            <nav aria-label="Blog post navigation">
               <Link to="/blog/">Back to blog</Link>
               <Link to={ props.nextPostUrl }>next article</Link>
             </nav>

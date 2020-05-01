@@ -110,7 +110,7 @@ const ContactForm = class extends React.Component {
                 <div className = "o-contact-form__progress" style = { progressBarWidth }></div>
                 <div className = "o-rhythm__container">
                     <div className = "o-contact-form__wrapper">
-                        <h6>Get In Touch</h6>
+                        <div className="o-contact-form__wrapper__heading">Get In Touch</div>
                     </div>
                 </div>
                 <div className = "o-contact-form -initial">

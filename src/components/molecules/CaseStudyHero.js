@@ -39,7 +39,7 @@ const CaseStudyHero = class extends React.Component {
               </div>
               {this.props.tags && this.props.tags.length ? (
                 <div className = "o-hero__list-container">
-                  <h6>Services</h6>
+                  <div className="o-hero__meta__title">Services</div>
                   <ul className = "o-hero__list">
                     {this.props.tags.map(tag => (
                       <li key={tag + `tag`}>{tag}</li>

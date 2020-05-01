@@ -100,10 +100,19 @@
         }
     }
 
-    h6 {
+    &__heading {
+        @include font-size("smallest");
+        @include line-height("base");
         margin-bottom: 32px;
+        color: get-color-primary("white");
+        font-family: $font-secondary;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: .24em;
 
         @include breakpoints("tablet") {
+            @include font-size("base");
+            @include line-height("smaller");
             margin-bottom: 60px;
         }
     }

@@ -27,7 +27,7 @@
 
     a {
         @include font-size("base");
-        color: get-color("neutral", "light-gray");
+        color: get-color-primary("after-hours-light");
         font-family: $font-primary;
 
         @include breakpoints("tablet") {
@@ -87,14 +87,13 @@
             margin-right: 20px;
 
             svg {
-                fill: get-color("neutral", "light-gray");
+                fill: get-color-primary("after-hours-light");
                 transition: all 400ms ease;
             }
 
             &:hover {
-
                 svg {
-                    fill: get-color("neutral", "gray");
+                    fill: get-color-primary("after-hours");
                 }
             }
         }

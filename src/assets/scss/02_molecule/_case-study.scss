@@ -235,13 +235,12 @@
 
     .a-button {
         @include font-size("smaller");
-        color: get-color("secondary", "center-lane");
-        border-color: get-color("secondary", "center-lane");
-        letter-spacing: .15em;
-        padding-bottom: 2px;
+        border-bottom-width: .2em;
+        color: get-color-primary("after-hours");
+        border-color: get-color-primary("after-hours");
 
         @include breakpoints("tablet") {
-            @include font-size("smallest");
+            @include font-size("base");
         }
     }
 

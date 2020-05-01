@@ -94,7 +94,7 @@ h6 {
     }
 
     &.-secondary {
-        color: get-color("primary", "fresh");
+        color: get-color-primary("white");
     }
 }
 
@@ -125,11 +125,11 @@ a {
     }
 
     &.-inline {
-        border-bottom: 2px dotted get-color("primary", "fresh");
+        border-bottom: 1px solid get-color-primary("fresh");
+        transition: color 0.3s ease;
 
         &:hover {
-            color: get-color("primary", "white");
-            background-color: get-color("primary", "fresh");
+            color: get-color-primary("fresh");
         }
 
         &.-content {

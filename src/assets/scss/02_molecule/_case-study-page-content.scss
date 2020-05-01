@@ -777,7 +777,7 @@
         }
 
         .easter-egg {
-            color: get-color("neutral", "light-gray");
+            color: get-color-primary("after-hours");
             margin-left: 18px;
             margin-top: 32px;
             position: relative;
@@ -834,21 +834,21 @@
 
             &__header {
                 @include span-col(12);
+                @include font-size(14px);
                 color: get-color("neutral", "medium-gray");
                 height: 20px;
                 margin-bottom: 20px;
                 margin-left: 0;
                 font-weight: 600;
+                letter-spacing: 0.2em;
 
                 @include breakpoints("tablet") {
                     @include span-col(2);
-                    @include font-size(12px);
                     margin-bottom: 0;
                 }
 
                 @include breakpoints("desktop") {
                     @include push-col(1);
-                    @include font-size(12px);
                     margin-bottom: 0;
                 }
             }

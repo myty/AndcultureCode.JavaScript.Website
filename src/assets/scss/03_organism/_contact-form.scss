@@ -34,15 +34,23 @@
             background: get-color("primary", "white");
 
             header {
-                color: get-color("primary", "after-hours");
+                color: get-color-primary("after-hours");
+            }
+
+            .o-contact-form__wrapper__heading {
+                color: get-color-primary("after-hours");
             }
         }
 
-        h6 {
-            color: get-color("primary", "fresh");
+        .o-contact-form__wrapper__heading {
+            @include font-size("smallest");
+            @include line-height("base");
+            color: get-color-primary("white");
             margin: 64px 0 8px;
-            letter-spacing: 2px;
             font-weight: 600;
+            font-family: $font-secondary;
+            letter-spacing: .2em;
+            text-transform: uppercase;
 
             @include breakpoints("tablet") {
                 margin: 0 0 80px;
@@ -51,7 +59,6 @@
 
 
         &.-active {
-
             .-initial {
                 display: none;
             }

@@ -43,7 +43,7 @@ const InteriorHero = class extends React.Component {
               <div className = "o-hero__left">
                 <div className = "o-hero__titles">
                   <h1>{ this.props.title }</h1>
-                  <h3>{ this.props.subTitle }</h3>
+                  <h2>{ this.props.subTitle }</h2>
                 </div>
               </div>
               <div className = "o-hero__right">

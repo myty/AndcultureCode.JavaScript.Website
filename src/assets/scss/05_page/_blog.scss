@@ -179,7 +179,7 @@
         background-color: rgba(get-color-primary("white"), 0.7);
         transition: all ease 2s;
 
-        section {
+        > section {
             @include span-col(12);
             margin-top: 32px;
 
@@ -225,15 +225,19 @@
 
                 a {
                     @include font-size("small");
-                    color: get-color-primary("fresh");
+                    color: get-color-primary("after-hours");
                     font-family: $font-primary;
+                    text-decoration: underline;
+                    text-decoration-color: get-color-primary("fresh");
+                    transition: color 0.3s ease;
 
                     @include breakpoints("sm-tablet") {
                         @include font-size(24px);
                     }
 
                     &:hover {
-                        text-decoration: underline;
+                        color: get-color-primary("fresh");
+                        opacity: 1;
                     }
                 }
 
@@ -349,11 +353,15 @@
             }
 
             a {
-                @include font-size("small");
+                @include font-size("base");
                 display: block;
-                color: get-color-neutral("light-gray");
-                font-family: $font-primary;
-                text-transform: lowercase;
+                border-bottom: 1px solid get-color-primary("fresh");
+                padding-bottom: 0.2em;
+                color: get-color-primary("after-hours");
+                font-family: $font-secondary;
+                font-weight: 600;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
 
                 @include breakpoints("sm-tablet") {
                     display: inline-block;

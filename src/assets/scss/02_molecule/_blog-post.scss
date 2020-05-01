@@ -59,12 +59,12 @@
         }
 
         h2 {
-            @include font-size("base");
+            @include font-size("smallest");
             margin-top: 10px;
-            color: get-color-neutral("light-blue");
+            color: get-color-primary("after-hours");
             font-family: $font-secondary;
             font-weight: 600;
-            letter-spacing: 2px;
+            letter-spacing: .2em;
             text-transform: uppercase;
 
             @include breakpoints("sm-tablet") {
