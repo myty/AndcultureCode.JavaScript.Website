@@ -25,7 +25,7 @@ export const BlogPageTemplate = ({
     }
 
     return (
-      <main aria-label="Main content">
+      <main id="main-content" aria-label="Main content">
         <BlogFeatured
           ref       = { featuredRef }
           scrollTop = { scrollTop } />

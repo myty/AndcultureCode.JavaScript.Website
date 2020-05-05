@@ -109,7 +109,7 @@ const PACareerLink = class extends React.Component {
                         </div>
                     </div>
                     <div className = "-content">
-                        <h5>Kids Discover</h5>
+                        <div className="m-case-study__header">Kids Discover</div>
                         <p>changing the face of education</p>
                         <a href = "/case-studies/kids-discover/" className = "a-button">See How</a>
                     </div>

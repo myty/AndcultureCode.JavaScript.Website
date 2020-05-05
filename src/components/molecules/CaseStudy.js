@@ -112,7 +112,7 @@ const CaseStudy = class extends React.Component {
                         </div>
                         <div className = "m-case-study__content">
                             <div className = "m-case-study__content-inner">
-                                <h5>{ this.props.post.frontmatter.partnerName }</h5>
+                                <div className="m-case-study__header">{ this.props.post.frontmatter.partnerName }</div>
                                 <p>
                                     { this.props.post.frontmatter.title }
                                 </p>

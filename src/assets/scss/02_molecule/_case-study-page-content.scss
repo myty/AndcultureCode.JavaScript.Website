@@ -256,7 +256,7 @@
     &__color-block {
         position: relative;
 
-        h6.content__header,
+        .content__header,
         p,
         ul,
         header {
@@ -839,10 +839,14 @@
                 height: 20px;
                 margin-bottom: 20px;
                 margin-left: 0;
+                font-family: $font-secondary;
+                text-transform: uppercase;
                 font-weight: 600;
                 letter-spacing: 0.2em;
 
                 @include breakpoints("tablet") {
+                    @include font-size("smallest");
+                    @include line-height("smaller");
                     @include span-col(2);
                     margin-bottom: 0;
                 }
@@ -1131,7 +1135,7 @@
                 .-content {
 
                     p,
-                    h5,
+                    .m-case-study__header,
                     .a-button {
                         color: get-color("primary", "white");
                         border-color: get-color("primary", "white");
@@ -1187,7 +1191,7 @@
 
             @media (max-width: 767px) {
 
-                h5,
+                .m-case-study__header,
                 p,
                 a.a-button {
                     color: get-color("primary", "white");
@@ -1195,7 +1199,7 @@
                 }
             }
 
-            h5,
+            .m-case-study__header,
             p,
             .a-button {
                 color: get-color("primary", "white");
@@ -1208,7 +1212,7 @@
             }
         }
 
-        h5 {
+        .m-case-study__header {
             margin-bottom: 20px;
         }
 

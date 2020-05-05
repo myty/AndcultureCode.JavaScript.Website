@@ -69,7 +69,7 @@
     &.-visible {
 
         .a-button,
-        h5,
+        .m-case-study__header,
         p,
         .m-case-study__count {
             color: get-color("primary", "white") !important;
@@ -78,7 +78,7 @@
     }
 
     &.-list {
-        h5 {
+        .m-case-study__header {
             margin-bottom: 20px;
         }
 
@@ -111,7 +111,7 @@
 
 
             .a-button,
-            h5,
+            .m-case-study__header,
             p,
             .m-case-study__count {
                 color: get-color("primary", "white");
@@ -244,7 +244,7 @@
         }
     }
 
-    h5 {
+    &__header {
         @include font-size(19px);
         @include line-height("medium-large");
         color: get-color("primary", "after-hours");
@@ -255,6 +255,7 @@
 
         @include breakpoints("tablet") {
             @include font-size("medium-small");
+            @include line-height("small");
         }
     }
 

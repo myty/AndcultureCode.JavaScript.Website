@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
+import { navigate }        from '@reach/router';
 import IconMenu            from 'components/atoms/IconMenu';
 import Logo                from 'components/atoms/Logo';
+import { AnchorLink }      from 'gatsby-plugin-anchor-links';
 
 export default function Header(props) {
   let titleClass = "m-header__title";
@@ -18,6 +20,13 @@ export default function Header(props) {
             href="/"
             className="m-header__logo">
             <Logo />
+          </a>
+          <a
+            className = "m-header__skip"
+            onClick   = { () => navigate("#main-content") }
+            tabIndex  = "1"
+            href      = "#main-content">
+            Skip<span> to Main Content</span>
           </a>
           { // if
             !props.hideNavigation &&

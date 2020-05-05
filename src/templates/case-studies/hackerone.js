@@ -136,7 +136,7 @@ const Hackerone = class extends React.Component {
                         </div>
                     </div>
                     <div className = "-content">
-                        <h5>CCA</h5>
+                        <div className="m-case-study__header">CCA</div>
                         <p>redefining what cyber education can do</p>
                         <a href = "/case-studies/cca/" className = "a-button">See Next Case Study</a>
                     </div>

@@ -85,9 +85,10 @@ export const BlogPostTemplate = (props) => {
         </div>
         <div
           className = {`p-blog__background__wrapper ${contentClassName} o-rhythm__container`} 
+          id        = "main-content"
           ref       = {contentRef}
           style     = { contentStyle } >
-          <header ref={headerRef} className="o-rhythm__row" aria-label="Blog post header">
+          <header ref={headerRef} className="o-rhythm__row p-blog__header" aria-label="Blog post header">
             <section>
               <p>{ properties.category }</p>
               <h1>{ properties.title }</h1>

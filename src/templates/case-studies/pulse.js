@@ -100,20 +100,13 @@ const Pulse = class extends React.Component {
                 <CaseStudyFullBleedImage
                     altText = "Doodle"
                     image   = { doodleImg } />
-                <div className = "o-rhythm__container">
-                    <div className = "m-case-study-page-content__copy-section">
-                        <h6 className = "content__header -mobile-only">Next Steps</h6>
-                        <header className = "-push-three">priorities and process moving forward</header>
-                        <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">Next Steps</h6>
-                            <div className = "content__copy">
-                                <p>Can we be candid? It was pretty f’ing cool to see the positive reaction of hard-working nurse managers knowing their job was made easier. But we weren’t done yet. Beyond the initial feedback, we needed to understand what was a functional priority for continued effectiveness, and what was simply additional value.</p>
-                                <p>We didn’t want to lose a single valuable suggestion—all of those interviews matter—as these help us explore future feature expansions. It’s an ongoing process.</p>
-                                <p>We’re not just dropping something we created in your lap and saying “best of luck!” That’s not a partnership. That’s a mother-in-law.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <CaseStudyContentSection
+                    header = "Next Steps"
+                    title  = "priorities and process moving forward the system to increase effectiveness">
+                    <p>Can we be candid? It was pretty f’ing cool to see the positive reaction of hard-working nurse managers knowing their job was made easier. But we weren’t done yet. Beyond the initial feedback, we needed to understand what was a functional priority for continued effectiveness, and what was simply additional value.</p>
+                    <p>We didn’t want to lose a single valuable suggestion—all of those interviews matter—as these help us explore future feature expansions. It’s an ongoing process.</p>
+                    <p>We’re not just dropping something we created in your lap and saying “best of luck!” That’s not a partnership. That’s a mother-in-law.</p>
+                </CaseStudyContentSection>
                 <CaseStudyFullBleedImage
                     altText = "Data"
                     image   = { dataImg } />
@@ -131,7 +124,7 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                     <div className = "-content">
-                        <h5>PA CareerLink®</h5>
+                        <div className="m-case-study__header">PA CareerLink®</div>
                         <p>vulnerability and optimism in uncertain times</p>
                         <a href = "/case-studies/pa-career-link/" className = "a-button">See Next Case Study</a>
                     </div>

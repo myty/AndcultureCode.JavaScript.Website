@@ -21,10 +21,20 @@
                 }
             }
 
+            .m-header__skip {
+                color: get-color-primary("fresh");
+                border-color: get-color-primary("fresh");
+            }
+
             @include breakpoints("tablet") {
                 .m-header__logo svg path,
                 .m-header__navigation svg rect {
                     fill: get-color-primary("white");
+                }
+
+                .m-header__skip {
+                    color: get-color-primary("white");
+                    border-color: get-color-primary("white");
                 }
 
                 + .m-header__title {
@@ -42,6 +52,19 @@
             .m-header__title svg rect ,
             .m-header__navigation svg rect{
                 fill: get-color-primary("fresh");
+            }
+
+            .m-header__skip {
+                color: get-color-primary("fresh");
+                border-color: get-color-primary("fresh");
+            }
+        }
+
+        footer {
+            margin-top: 60px;
+
+            @include breakpoints("tablet") {
+                margin-top: 100px;
             }
         }
     }
@@ -128,7 +151,7 @@
         }
     }
 
-    header {
+    header.p-blog__header {
         padding: 40px 8px 0 8px;
         background-color: rgba(get-color-primary("white"), 0.7);
         transition: all ease 2s;
@@ -307,12 +330,6 @@
     }
 
     footer {
-        margin: 60px 0 85px 0;
-
-        @include breakpoints("tablet") {
-            margin-top: 100px;
-        }
-
         section {
             @include span-col(11);
             @include push-col(1);

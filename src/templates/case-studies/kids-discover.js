@@ -260,7 +260,7 @@ const KidsDiscover = class extends React.Component {
                         </div>
                     </div>
                     <div className = "-content">
-                        <h5>Hackerone</h5>
+                        <div className="m-case-study__header">Hackerone</div>
                         <p>hacking for good</p>
                         <a href = "/case-studies/hackerone/" className = "a-button">See Next Case Study</a>
                     </div>

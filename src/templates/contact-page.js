@@ -58,18 +58,19 @@ const ContactPage = ({ data }) => {
       pageTitle      = "contact"
       data           = { frontmatter }
       scrollTop      = { scrollTop }>
-      <main className = "p-interior-page" aria-label="Main content">
+      <div className = "p-interior-page">
         <ContactPageTemplate
           title          = { frontmatter.title }
           secondaryTitle = { frontmatter.secondaryTitle }
           subTitle       = { frontmatter.subTitle }
           modifier       = '-contact'
         />
-        <ContactForm lightTheme = { true } />
-        <CustomSlider images = { sliderImages } />
-        <ContactInfo streetAddressLineOne = { frontmatter.streetAddressLineOne } streetAddressLineTwo = { frontmatter.streetAddressLineTwo } phoneNumber = { frontmatter.phoneNumber } directions = { frontmatter.directions } mapLink = { frontmatter.mapLink } />
-        {/* <CareersList /> */}
-      </main>
+        <main id="main-content" aria-label="Main content">
+          <ContactForm lightTheme = { true } />
+          <CustomSlider images = { sliderImages } />
+          <ContactInfo streetAddressLineOne = { frontmatter.streetAddressLineOne } streetAddressLineTwo = { frontmatter.streetAddressLineTwo } phoneNumber = { frontmatter.phoneNumber } directions = { frontmatter.directions } mapLink = { frontmatter.mapLink } />
+        </main>
+      </div>
     </Layout>
   )
 }

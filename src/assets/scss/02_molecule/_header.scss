@@ -3,7 +3,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    top: 0;
     padding: 10px 0;
     z-index: 8;
 
@@ -41,6 +40,34 @@
         transition: opacity .4s cubic-bezier(.165,.84,.44,1);
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
+
+        @include font-size(20px);
+        color: get-color("primary", "fresh");
+        font-family: $font-primary;
+        position: relative;
+        font-weight: 500;
+        transition: all .5s ease;
+
+        @include breakpoints("tablet") {
+            @include font-size(24px);
+
+            &:hover {
+                color: #19a87c;
+
+                span:before,
+                span:after {
+                    opacity: 1;
+                }
+                span:before {
+                    top: -5px;
+                    transform: rotate(45deg);
+                }
+                span:after {
+                    bottom: -5px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
 
         @include breakpoints("tablet") {
             width: 60px;
@@ -142,35 +169,41 @@
         }
     }
 
-    a {
-        @include font-size(20px);
-        color: get-color("primary", "fresh");
-        font-family: $font-primary;
-        position: relative;
-        font-weight: 500;
-        transition: all .5s ease;
+    &__skip {
+        @include font-size("base");
+        border-bottom: 2px solid get-color-primary("fresh");
+        display: inline-block;
+        margin: 0 auto;
+        opacity: 0;
+        padding-bottom: 0.2em;
+        position: absolute;
+        left: calc(80% - 89px);
+        top: 25px;
+        color: get-color-primary("fresh");
+        font-family: $font-secondary;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        transition: opacity 0.3s ease;
 
-        @include breakpoints("tablet") {
-            @include font-size(24px);
-
-            &:hover {
-                color: #19a87c;
-
-                span:before,
-                span:after {
-                    opacity: 1;
-                }
-                span:before {
-                    top: -5px;
-                    transform: rotate(45deg);
-                }
-                span:after {
-                    bottom: -5px;
-                    transform: rotate(-45deg);
-                }
-            }
+        &:focus {
+            opacity: 1;
         }
 
+        span {
+            display: none;
+        }
+
+        @include breakpoints("sm-tablet") {
+            left: calc(50% - 89px);
+
+            span {
+                display: inline;
+            }
+        }
+    }
+
+    a:not(.m-header__skip) {
         span,
         span:before,
         span:after {
