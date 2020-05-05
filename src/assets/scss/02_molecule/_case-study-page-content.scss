@@ -260,7 +260,7 @@
         p,
         ul,
         header {
-            color: get-color("primary", "white");
+            color: get-color("primary", "white") !important;
         }
 
         .-background-texture {

@@ -57,10 +57,10 @@ const KidsDiscover = class extends React.Component {
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
-                        <h6 className = "content__header -mobile-only">Research</h6>
+                        <div className = "content__header -mobile-only">Research</div>
                         <header className = "">okay, so how did andculture tackle the problem?</header>
                         <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">Research</h6>
+                            <div className = "content__header -desktop-only">Research</div>
                             <div className = "content__copy">
                                 <p>To dig into the education space, we held two teacher roundtable discussions, attended industry-related conferences, interviewed educational consultants and surveyed teachers across the country. We focus this qualitative and quantitative research on current and future states of education, access to technology in the modern classroom and other educational trends.</p>
                                 <p>Once business needs were defined, we kicked off a second phase of research in 10 schools throughout the Northeastern U.S. Through observations and interviews, we learned how supplemental content is applied in the classroom and how students and teachers used and interacted with technology. With all of these findings, we were able to make informed product recommendations and start to write rules (e.g., “must make reading an active process”).</p>
@@ -90,10 +90,10 @@ const KidsDiscover = class extends React.Component {
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
-                        <h6 className = "content__header -mobile-only">Takeaway</h6>
+                        <div className = "content__header -mobile-only">Takeaway</div>
                         <header className = "">students needed to be at the center.</header>
                         <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">Takeaway</h6>
+                            <div className = "content__header -desktop-only">Takeaway</div>
                             <div className = "content__copy">
                                 <p>We found that student research is a pillar in the modern classroom, and teachers were the gatekeepers in terms of accessing the K-12 market. The way teachers secured technology resources — both devices and software — varied greatly by school, but, clearly, teachers were the drivers. We needed to figure out how to target teachers individually and support them in sourcing and paying for our product, in order to drive adoption. Additionally, we needed to support a growing homeschooling population. We had to confirm that a student-centric version made sense to address both teachers and homeschoolers, in terms of user acquisition, value proposition and pricing.</p>
                             </div>
@@ -126,10 +126,10 @@ const KidsDiscover = class extends React.Component {
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section -kd_data">
-                        <h6 className = "content__header -mobile-only">Synthesis</h6>
+                        <div className = "content__header -mobile-only">Synthesis</div>
                         <header className = "">turning data into a plan</header>
                         <div className = "o-rhythm__row">
-                        <h6 className = "content__header -desktop-only">Synthesis</h6>
+                        <div className = "content__header -desktop-only">Synthesis</div>
                         <div className = "content__copy">
                             <p>We collected and visualized all of our research findings (also known as “the fun part”). Drawing on this consolidated data, we wireframed VIP screens of the platform and worked out user flows for each audience.</p>
                         </div>
@@ -152,10 +152,10 @@ const KidsDiscover = class extends React.Component {
                 </div>
                 <div className = "o-rhythm__container">
                     <div className = "m-case-study-page-content__copy-section">
-                        <h6 className = "content__header -mobile-only">design &amp; development</h6>
+                        <div className = "content__header -mobile-only">design &amp; development</div>
                         <header className = "">bringing magazines — and learning — to life</header>
                         <div className = "o-rhythm__row">
-                            <h6 className = "content__header -desktop-only">design &amp; development</h6>
+                            <div className = "content__header -desktop-only">design &amp; development</div>
                             <div className = "content__copy">
                                 <p>At last, we were ready to design and develop the Kids Discover Online product from the ground up. In order to design a product that stayed true to Kids Discover print experience, we converted each magazine into a “unit” and each magazine spread into a “topic.” Using a custom (and super intuitive, of course) content management system, Kids Discover is able to create pages using its print content and assets. The back-end is configured to allow for three Lexile® levels for each content block, in an effort to meet kids where they are.</p>
                             </div>
@@ -198,10 +198,10 @@ const KidsDiscover = class extends React.Component {
                         <div className = "o-rhythm__row -space-between">
                             <div className = "o-rhythm__col -kd-color-block__first">
                                 <div className = "m-case-study-page-content__copy-section">
-                                    <h6 className = "content__header -mobile-only">deployment &amp; testing</h6>
+                                    <div className = "content__header -mobile-only">deployment &amp; testing</div>
                                     <header className = "">time for final exams</header>
                                     <div className = "o-rhythm__row">
-                                        <h6 className = "content__header -desktop-only">deployment &amp; testing</h6>
+                                        <div className = "content__header -desktop-only">deployment &amp; testing</div>
                                         <div className = "content__copy">
                                             <p>As soon as the beta product was ready, we took it to classrooms to test. We collected feedback from students and teachers, which helped us make final product adjustments and enhancements before going to market.</p>
                                         </div>
