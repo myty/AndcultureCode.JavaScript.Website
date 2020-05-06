@@ -67,7 +67,7 @@ const CustomSlider = class extends React.Component {
         );
 
         return (
-            <div className = "o-slider__container">
+            <div className = "o-slider__container" aria-hidden = "true">
                 <div className = "o-rhythm__container -full-width__mobile">
                     <div className = "o-slider">
                         <Slider {...settings}>

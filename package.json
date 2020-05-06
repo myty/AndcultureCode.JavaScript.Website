@@ -8,6 +8,7 @@
     "@mdx-js/react": "^1.5.7",
     "@rehooks/component-size": "^1.0.3",
     "bulma": "^0.8.0",
+    "focus-trap-react": "^6.0.0",
     "gatsby": "^2.13.31",
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-anchor-links": "^1.1.1",
@@ -46,6 +47,7 @@
     "react-visibility-sensor": "^5.1.1",
     "resize-observer-polyfill": "^1.5.1",
     "slick-carousel": "^1.8.1",
+    "use-state-with-callback": "^1.0.18",
     "uuid": "^3.2.1",
     "yup": "^0.28.3"
   },

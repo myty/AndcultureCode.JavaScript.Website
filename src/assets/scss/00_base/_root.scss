@@ -16,6 +16,10 @@ img {
     box-sizing: border-box;
 }
 
+address {
+    font-style: normal;
+}
+
 .-push-one {
 @include span-col(12);
 

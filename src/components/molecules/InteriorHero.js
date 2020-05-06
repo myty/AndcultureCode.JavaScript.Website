@@ -47,7 +47,10 @@ const InteriorHero = class extends React.Component {
                 </div>
               </div>
               <div className = "o-hero__right">
-                <img src = { contactHero } alt = { this.props.title } />
+                <img
+                  alt         = { this.props.title }
+                  aria-hidden = "true"
+                  src         = { contactHero } />
               </div>
             </div>
           </div>

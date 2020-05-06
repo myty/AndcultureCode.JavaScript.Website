@@ -31,13 +31,21 @@ const BlogAuthor = (props) => {
                 }
             </div>
             <div className="m-blog-author__details">
-                <div className="m-blog-author__date">
-                    { props.postDate }
+                <div
+                    aria-label = { `Posted on ${props.postLongDate}` }
+                    className  = "m-blog-author__date">
+                    <div arial-hidden="true">
+                        { props.postDate }
+                    </div>
                 </div>
                 <div className="m-blog-author__divider">|</div>
                 <div className="m-blog-author__name-position">
-                    <div className="m-blog-author__name">
-                        { props.author.name }
+                    <div
+                        className  = "m-blog-author__name"
+                        aria-label = { `Written by ${props.author.name}, ${props.author.position}`}>
+                        <div arial-hidden="true">
+                            { props.author.name }
+                        </div>
                     </div>
                     <div className="m-blog-author__divider">|</div>
                     <div className="m-blog-author__position">

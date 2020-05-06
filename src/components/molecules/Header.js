@@ -17,8 +17,9 @@ export default function Header(props) {
         <div className = "m-header__background"></div>
         <div className="o-rhythm__container -fluid">
           <a
-            href="/"
-            className="m-header__logo">
+            aria-label = "Go to home page"
+            className  = "m-header__logo"
+            href       = "/">
             <Logo />
           </a>
           <a
@@ -31,7 +32,7 @@ export default function Header(props) {
           { // if
             !props.hideNavigation &&
             <nav className="m-header__navigation" aria-label="Main menu">
-              <button onClick={props.onMenuOpen}>
+              <button onClick={props.onMenuOpen} ref={props.menuButtonRef}>
                 <IconMenu />
               </button>
             </nav>

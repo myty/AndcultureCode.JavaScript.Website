@@ -20,13 +20,17 @@ const Footer = class extends React.Component {
         <div className = "o-rhythm__container">
           <div className = "o-rhythm__row">
             <div className = "m-footer__left o-rhythm__col -span-six">
-              <a href="/">
-                <img src = { logo } alt = "andculture" />
+              <a
+                aria-label = "Go to home page"
+                href       = "/">
+                <img src = { logo } alt = "" />
               </a>
             </div>
             <div className = "m-footer__right o-rhythm__col -span-six">
               <div className = "m-footer__contact">
-                <a href="tel:7172332881">717.233.2881</a>
+                <a
+                  aria-label = "7 1 7. 2 3 3. 2 8 8 1."
+                  href       = "tel:7172332881">717.233.2881</a>
               </div>
               <div className = "m-footer__social">
                 <a href="https://www.instagram.com/andculture/" target="_blank" aria-label="Instagram account for andculture">

@@ -90,11 +90,14 @@ export const BlogPostTemplate = (props) => {
           style     = { contentStyle } >
           <header ref={headerRef} className="o-rhythm__row p-blog__header" aria-label="Blog post header">
             <section>
-              <p>{ properties.category }</p>
+              <p aria-label = { `Blog post under the category of ${properties.category}` }>
+                <span aria-hidden="true">{ properties.category }</span>
+              </p>
               <h1>{ properties.title }</h1>
               <BlogAuthor
-                author   = { props.author }
-                postDate = { properties.date } />
+                author       = { props.author }
+                postDate     = { properties.date }
+                postLongDate = { properties.longDate } />
               {properties.headline &&
                 <h2>{ properties.headline }</h2>
               }
@@ -292,6 +295,7 @@ export const pageQuery = graphql`
           }
         }
         date(formatString: "M.DD.YY")
+        longDate: date(formatString: "MMMM Do, YYYY")
         featuredColor
         seo {
           metaDescription

@@ -144,7 +144,7 @@
             }
 
             &.-opaque {
-                header, main {
+                header.p-blog__header, main {
                     background-color: rgba(get-color-primary("white"), 1);
                 }
             }
@@ -379,9 +379,15 @@
                 font-weight: 600;
                 letter-spacing: 0.2em;
                 text-transform: uppercase;
+                transition: color 0.3s ease;
 
                 @include breakpoints("sm-tablet") {
                     display: inline-block;
+                }
+
+                &:hover {
+                    opacity: 1;
+                    color: get-color-primary("fresh");
                 }
 
                 &:first-child {

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { Helmet }          from 'react-helmet';
-import Header              from './molecules/Header';
-import Footer              from './molecules/Footer';
-import useSiteMetadata     from './SiteMetadata';
-import Menu                from './organisms/Menu';
-import { withPrefix }      from 'gatsby';
+import React, { useState }  from 'react';
+import { Helmet }           from 'react-helmet';
+import useStateWithCallback from 'use-state-with-callback';
+import Header               from './molecules/Header';
+import Footer               from './molecules/Footer';
+import useSiteMetadata      from './SiteMetadata';
+import Menu                 from './organisms/Menu';
+import { withPrefix }       from 'gatsby';
 
 const TemplateWrapper = ({
   children,
@@ -16,7 +17,14 @@ const TemplateWrapper = ({
   showFooterDividerLine
 }) => {
   let { title, description, socialDescription } = useSiteMetadata();
-  const [menuOpen, setMenuOpen]                 = useState(false);
+  const [menuToggled, setMenuToggled]           = useState(false);
+  const [menuOpen, setMenuOpen]                 = useStateWithCallback(false, menuOpen => {
+    if (menuToggled && !menuOpen && modalMenuButton) {
+      modalMenuButton.focus();
+    }
+  });
+
+  let modalMenuButton                           = null;
 
   // Set all of the SEO information needed for the page.
   if (data && data.seo) {
@@ -32,6 +40,7 @@ const TemplateWrapper = ({
 
   const onMenuOpen = () => {
     setMenuOpen(true);
+    setMenuToggled(true);
   };
 
   return (
@@ -76,6 +85,7 @@ const TemplateWrapper = ({
         <Header
           onMenuOpen     = { onMenuOpen }
           pageTitle      = { pageTitle }
+          menuButtonRef  = { n => modalMenuButton = n }
           hideNavigation = { hideNavigation }
           scrollTop      = { scrollTop } />
         {children}

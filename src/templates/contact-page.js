@@ -68,7 +68,13 @@ const ContactPage = ({ data }) => {
         <main id="main-content" aria-label="Main content">
           <ContactForm lightTheme = { true } />
           <CustomSlider images = { sliderImages } />
-          <ContactInfo streetAddressLineOne = { frontmatter.streetAddressLineOne } streetAddressLineTwo = { frontmatter.streetAddressLineTwo } phoneNumber = { frontmatter.phoneNumber } directions = { frontmatter.directions } mapLink = { frontmatter.mapLink } />
+          <ContactInfo
+            streetAddressLineOne     = { frontmatter.streetAddressLineOne }
+            streetAddressLineTwo     = { frontmatter.streetAddressLineTwo }
+            phoneNumber              = { frontmatter.phoneNumber }
+            phoneNumberAccessibility = { frontmatter.phoneNumberAccessibility }
+            directions               = { frontmatter.directions }
+            mapLink                  = { frontmatter.mapLink } />
         </main>
       </div>
     </Layout>
@@ -88,6 +94,7 @@ export const pageQuery = graphql`
         streetAddressLineTwo
         mapLink
         phoneNumber
+        phoneNumberAccessibility
         directions
         seo {
           metaTitle
