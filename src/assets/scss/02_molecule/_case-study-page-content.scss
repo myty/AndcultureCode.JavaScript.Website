@@ -472,7 +472,7 @@
         }
 
         &.-pulse {
-            background: #76c1b9;
+            background: #49A296;
 
             header {
                 @include breakpoints("sm-desktop") {
@@ -1018,12 +1018,12 @@
         &.-kd {
 
             a.a-button {
-                color: #2AB2C1;
-                border-color: #2AB2C1;
+                color: #27A2B0;
+                border-color: #27A2B0;
             }
 
             div.-content {
-                background-color: #2AB2C1;
+                background-color: #27A2B0;
 
                 @include breakpoints("tablet") {
                     background-color: rgba(245,245,245,1);
@@ -1035,7 +1035,7 @@
                 &:hover {
 
                     div.-content {
-                        background-color: #2AB2C1;
+                        background-color: #27A2B0;
                     }
                 }
             }
@@ -1044,12 +1044,12 @@
         &.-pulse {
 
             a.a-button {
-                color: #76c1b9;
-                border-color: #76c1b9;
+                color: #49A296;
+                border-color: #49A296;
             }
 
             div.-content {
-                background-color: #76c1b9;
+                background-color: #49A296;
 
                 @include breakpoints("tablet") {
                     background-color: rgba(245,245,245,1);
@@ -1061,7 +1061,7 @@
                 &:hover {
 
                     div.-content {
-                        background-color: #76c1b9;
+                        background-color: #49A296;
                     }
                 }
             }
