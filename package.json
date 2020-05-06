@@ -47,7 +47,6 @@
     "react-visibility-sensor": "^5.1.1",
     "resize-observer-polyfill": "^1.5.1",
     "slick-carousel": "^1.8.1",
-    "use-state-with-callback": "^1.0.18",
     "uuid": "^3.2.1",
     "yup": "^0.28.3"
   },

@@ -1,11 +1,10 @@
-import React, { useState }  from 'react';
-import { Helmet }           from 'react-helmet';
-import useStateWithCallback from 'use-state-with-callback';
-import Header               from './molecules/Header';
-import Footer               from './molecules/Footer';
-import useSiteMetadata      from './SiteMetadata';
-import Menu                 from './organisms/Menu';
-import { withPrefix }       from 'gatsby';
+import React, { useState, useEffect }  from 'react';
+import { Helmet }                      from 'react-helmet';
+import Header                          from './molecules/Header';
+import Footer                          from './molecules/Footer';
+import useSiteMetadata                 from './SiteMetadata';
+import Menu                            from './organisms/Menu';
+import { withPrefix }                  from 'gatsby';
 
 const TemplateWrapper = ({
   children,
@@ -18,12 +17,7 @@ const TemplateWrapper = ({
 }) => {
   let { title, description, socialDescription } = useSiteMetadata();
   const [menuToggled, setMenuToggled]           = useState(false);
-  const [menuOpen, setMenuOpen]                 = useStateWithCallback(false, menuOpen => {
-    if (menuToggled && !menuOpen && modalMenuButton) {
-      modalMenuButton.focus();
-    }
-  });
-
+  const [menuOpen, setMenuOpen]                 = useState(false);
   let modalMenuButton                           = null;
 
   // Set all of the SEO information needed for the page.
@@ -34,6 +28,16 @@ const TemplateWrapper = ({
     socialDescription = data.seo.socialShareCopy;
   }
 
+  // After the menu has been toggled and closed, we need
+  // to set the focus back on the menu toggle button (hamburger)
+  // for accessibility.
+  useEffect(() => {
+    if (menuToggled && !menuOpen && modalMenuButton) {
+      modalMenuButton.focus();
+    }
+  }, [menuOpen, menuToggled])
+
+  // Open and close events for the menu
   const onMenuClose = () => {
     setMenuOpen(false);
   };
