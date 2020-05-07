@@ -19,7 +19,7 @@ const NotFoundPage = () => (
       <div className = "o-rhythm__container">
         <div className = "o-rhythm__row">
           <div className = "-four-o-four__copy">
-            <p>Sorry you’re more lost than a DoorDash driver trying to find our office. You can try returning to the <a href="/" className="-inline -content">homepage</a>, or <a href="/contact" className="-inline -content">contact us</a> with a specific question.</p>
+            <p>Sorry, you’re more lost than a DoorDash driver trying to find our office. You can try returning to the <a href="/" className="-inline -content">homepage</a>, or <a href="/contact" className="-inline -content">contact us</a> with a specific question.</p>
           </div>
         </div>
       </div>
