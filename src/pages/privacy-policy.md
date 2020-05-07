@@ -44,7 +44,7 @@ We collect several different types of information for various purposes to provid
 
 ### Types of Data Collected
 
-**Personal Data**
+#### Personal Data
 
 While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (“Personal Data”). Personally identifiable information may include, but is not limited to:
 
@@ -55,11 +55,11 @@ While using our Service, we may ask you to provide us with certain personally id
 
 We may use your Personal Data to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or the instructions provided in any email we send.
 
-**Usage Data**
+#### Usage Data
 
 We may also collect information on how the Service is accessed and used (“Usage Data”). This Usage Data may include information such as your computer’s Internet Protocol address (i.e., IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
 
-**Tracking Cookies Data**
+#### Tracking Cookies Data
 
 We use cookies and similar tracking technologies to track the activity on our Service and we hold certain information.
 
@@ -116,15 +116,15 @@ andculture will take all the steps reasonably necessary to ensure that your data
 
 ### Disclosure of Data
 
-**Business Transaction**
+#### Business Transaction
 
 If andculture is involved in a merger, acquisition or asset sale, your Personal Data may be transferred. We will provide notice before your Personal Data is transferred and becomes subject to a different Privacy Policy.
 
-**Disclosure for Law Enforcement**
+#### Disclosure for Law Enforcement
 
 Under certain circumstances, andculture may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g., a court or a government agency).
 
-**Legal Requirements**
+#### Legal Requirements
 
 andculture may disclose your Personal Data in the good faith belief that such action is necessary to:
 
@@ -156,14 +156,14 @@ Please note that we may ask you to verify your identity before responding to suc
 You have the right to complain to a Data Protection Authority about our collection and use of your Personal Data. For more information, please contact your local data protection authority in the European Economic Area (EEA).
 
 ## Service Providers
-We may employ third-party companies and individuals to facilitate our Service (“Service Providers”), provide the Service on our behalf, perform Service-related services or assist us in analyzing how our Service is used.
+We may employ third-party companies and individuals ("Service Providers") to facilitate our Service (“Service Providers”), provide the Service on our behalf, perform Service-related services or assist us in analyzing how our Service is used.
 
 These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.
 
 ### Analytics
 We may use third-party Service Providers to monitor and analyze the use of our Service.
 
-**Google Analytics**
+#### Google Analytics
 
 Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.
 
@@ -171,11 +171,11 @@ You can opt-out of having made your activity on the Service available to Google 
 
 For more information on the privacy practices of Google, please visit the Google Privacy Terms web page: [Google Privacy Policy](https://policies.google.com/privacy?hl=en)
 
-**Behavioral Remarketing**
+#### Behavioral Remarketing
 
 andculture uses remarketing services to advertise on third-party websites to you after you visited our Service. We and our third-party vendors use cookies to inform, optimize and serve ads based on your past visits to our Service.
 
-**Google Ads (AdWords)**
+#### Google Ads (AdWords)
 
 Google Ads (AdWords) remarketing service is provided by Google Inc.
 

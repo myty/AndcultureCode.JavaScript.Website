@@ -148,12 +148,14 @@
         }
 
         h2 {
+            margin-bottom: 30px;
             margin-top: 60px;
         }
 
         h3 {
             @include font-size(26px);
             @include line-height(36px);
+            margin-bottom: 30px;
             margin-top: 60px;
             color: get-color-primary("fresh");
 
@@ -168,9 +170,23 @@
             }
         }
 
+        h4 {
+            @include font-size("small");
+            @include line-height(32px);
+            margin-bottom: 10px;
+            color: get-color-primary("after-hours");
+            font-weight: 600;
+
+            @include breakpoints("sm-tablet") {
+                @include font-size(24px);
+                @include line-height(39px);
+            }
+        }
+
         p {
             @include font-size("small");
             @include line-height(32px);
+            margin-block-start: 0;
 
             @include breakpoints("sm-tablet") {
                 @include font-size(24px);
@@ -178,7 +194,7 @@
             }
 
             + p {
-                margin-top: 39px;
+                margin-top: 30px;
             }
 
             a {
@@ -211,7 +227,7 @@
             li {
                 @include font-size("small");
                 @include line-height(32px);
-                margin-bottom: 20px;
+                margin-bottom: 0;
 
                 @include breakpoints("sm-tablet") {
                     @include font-size(24px);
