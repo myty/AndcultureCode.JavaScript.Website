@@ -36,44 +36,91 @@
     }
 
     &__left {
+        @include span-col(12);
+        margin-bottom: 30px;
+
+        @include breakpoints("laptop") {
+            @include span-col(3);
+            margin-bottom: 0;
+        }
 
         img {
             width: 120px;
         }
     }
 
-    &__right {
-        @include breakpoints("tablet") {
-            text-align: right;
+    &__center {
+        @include span-col(12);
+        margin-bottom: 30px;
+        text-align: left;
+
+        @include breakpoints("laptop") {
+            @include span-col(5);
+            margin-bottom: 0;
+            text-align: center;
         }
-    }
 
-    &__contact,
-    &__social {
-        display: block;
-
-        @include breakpoints("tablet") {
+        > a {
+            @include font-size("base");
+            position: relative;
             display: inline-block;
-        }
-    }
-
-    &__contact {
-        position: relative;
-        margin: 40px 0;
-
-        @include breakpoints("tablet") {
-            margin: 0 40px 0 0;
+            padding: 0 15px;
 
             &:after {
                 content: '';
                 width: 2px;
-                height: 100%;
+                height: 80%;
                 display: block;
                 position: absolute;
-                top: 0;
-                right: -20px;
-                background: get-color("primary", "fresh");
+                top: 10%;
+                right: 0;
+                background: get-color-primary("fresh");
             }
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:nth-child(2) {
+                &:after {
+                    display: none;
+
+                    @include breakpoints("sm-tablet") {
+                        display: block;
+                    }
+                }
+            }
+
+            &:last-child {
+                display: block;
+                margin-top: 15px;
+                padding-left: 0;
+                padding-right: 0;
+
+                @include breakpoints("sm-tablet") {
+                    display: inline-block;
+                    margin-top: 0;
+                    padding-left: 15px;
+                }
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__right {
+        @include span-col(12);
+        margin-bottom: 30px;
+
+        @include breakpoints("tablet") {
+            margin-bottom: 0;
+        }
+
+        @include breakpoints("laptop") {
+            @include span-col(4);
+            text-align: right;
         }
     }
 

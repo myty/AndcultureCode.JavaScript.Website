@@ -19,19 +19,21 @@ const Footer = class extends React.Component {
       <footer className = {`m-footer ${footerClassName}`} aria-label="Site footer">
         <div className = "o-rhythm__container">
           <div className = "o-rhythm__row">
-            <div className = "m-footer__left o-rhythm__col -span-six">
+            <div className = "m-footer__left">
               <a
                 aria-label = "Go to home page"
                 href       = "/">
                 <img src = { logo } alt = "" />
               </a>
             </div>
-            <div className = "m-footer__right o-rhythm__col -span-six">
-              <div className = "m-footer__contact">
-                <a
-                  aria-label = "Phone 7 1 7. 2 3 3. 2 8 8 1."
-                  href       = "tel:7172332881">717.233.2881</a>
-              </div>
+            <div className = "m-footer__center">
+              <a href="/contact">contact us</a>
+              <a
+                aria-label = "Phone 7 1 7. 2 3 3. 2 8 8 1."
+                href       = "tel:7172332881">717.233.2881</a>
+              <a href="/privacy-policy">privacy policy</a>
+            </div>
+            <div className = "m-footer__right">
               <div className = "m-footer__social">
                 <a href="https://www.instagram.com/andculture/" target="_blank" aria-label="Instagram account for andculture">
                   <IconSocialInstagram />
