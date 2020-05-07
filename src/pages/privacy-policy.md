@@ -1,12 +1,10 @@
 ---
 createPage: true
 templateKey: privacy-page
-title: let's connect
-subTitle: Whether it's for a potential project or to get more information about what we do, we'd be glad to talk with you.
 seo:
   metaTitle: privacy policy | andculture
-  metaDescription: Contact us, we are ready to get enthusiastic about your engineering, design, strategy, and UX/human centered design needs.
-  socialShareCopy: Need a strategic partner? Get in touch with andculture, a Harrisburg, PA-based design agency.
+  metaDescription: ""
+  socialShareCopy: ""
 ---
 andculture (“us,” “we,” or “our”) operates the www.andculture.com website (hereinafter referred to as the “Service”). The effective date of this policy (the “Privacy Policy”) is May 1, 2020.
 
