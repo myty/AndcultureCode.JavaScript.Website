@@ -34,7 +34,7 @@ const BlogAuthor = (props) => {
                 <div
                     aria-label = { `Posted on ${props.postLongDate}` }
                     className  = "m-blog-author__date">
-                    <div arial-hidden="true">
+                    <div aria-hidden="true">
                         { props.postDate }
                     </div>
                 </div>
@@ -43,7 +43,7 @@ const BlogAuthor = (props) => {
                     <div
                         className  = "m-blog-author__name"
                         aria-label = { `Written by ${props.author.name}, ${props.author.position}`}>
-                        <div arial-hidden="true">
+                        <div aria-hidden="true">
                             { props.author.name }
                         </div>
                     </div>
