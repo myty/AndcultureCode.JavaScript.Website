@@ -26,7 +26,7 @@ const ContactInfo = class extends React.Component {
                         </address>
                         <div>
                             <a
-                                aria-label = { this.props.phoneNumberAccessibility }
+                                aria-label = { `Phone ${this.props.phoneNumberAccessibility}` }
                                 className  = "-inline"
                                 href       = {`tel:${this.props.phoneNumber.replace(/\./g, '')}`}>{ this.props.phoneNumber }</a>
                         </div>

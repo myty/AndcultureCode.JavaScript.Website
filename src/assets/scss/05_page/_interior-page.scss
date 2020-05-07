@@ -147,9 +147,33 @@
             @include span-col(10);
         }
 
+        h1 {
+            @include font-size(44px);
+            @include line-height(48px);
+            margin-bottom: 40px;
+            text-transform: lowercase;
+
+            @include breakpoints("phone") {
+                @include font-size(55px);
+                @include line-height(61px);
+            }
+
+            @include breakpoints("lg-desktop") {
+                @include font-size(70px);
+                @include line-height(80px);
+            }
+        }
+
         h2 {
+            @include font-size("medium-large");
+            @include line-height(46px);
             margin-bottom: 30px;
             margin-top: 60px;
+
+            @include breakpoints("tablet") {
+                @include font-size("largish");
+                @include line-height("larger");
+            }
         }
 
         h3 {

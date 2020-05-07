@@ -6,7 +6,7 @@ seo:
   metaDescription: ""
   socialShareCopy: ""
 ---
-andculture (“us,” “we,” or “our”) operates the www.andculture.com website (hereinafter referred to as the “Service”). The effective date of this policy (the “Privacy Policy”) is May 1, 2020.
+andculture (“us,” “we,” or “our”) operates the [www.andculture.com](https://www.andculture.com) website (hereinafter referred to as the “Service”). The effective date of this policy (the “Privacy Policy”) is May 1, 2020.
 
 This page informs you of our policies regarding the collection, use and disclosure of personal data when you use our Service and the choices you have associated with that data. This Privacy Policy applies to information we collect through the Service or in any email, text and other electronic messages between you and the Service.
 
@@ -156,7 +156,7 @@ Please note that we may ask you to verify your identity before responding to suc
 You have the right to complain to a Data Protection Authority about our collection and use of your Personal Data. For more information, please contact your local data protection authority in the European Economic Area (EEA).
 
 ## Service Providers
-We may employ third-party companies and individuals ("Service Providers") to facilitate our Service (“Service Providers”), provide the Service on our behalf, perform Service-related services or assist us in analyzing how our Service is used.
+We may employ third-party companies and individuals ("Service Providers") to facilitate our Service, provide the Service on our behalf, perform Service-related services or assist us in analyzing how our Service is used.
 
 These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.
 

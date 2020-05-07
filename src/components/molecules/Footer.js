@@ -29,7 +29,7 @@ const Footer = class extends React.Component {
             <div className = "m-footer__right o-rhythm__col -span-six">
               <div className = "m-footer__contact">
                 <a
-                  aria-label = "7 1 7. 2 3 3. 2 8 8 1."
+                  aria-label = "Phone 7 1 7. 2 3 3. 2 8 8 1."
                   href       = "tel:7172332881">717.233.2881</a>
               </div>
               <div className = "m-footer__social">

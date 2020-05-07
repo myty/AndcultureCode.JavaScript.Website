@@ -29,10 +29,12 @@ const PrivacyPage = ({ data }) => {
           <article>
               <div className="p-interior-page__wrapper o-rhythm__container">
                 <div className="o-rhythm__row">
-                  <div className="p-interior-page__content"
-                    dangerouslySetInnerHTML={{
+                  <div className="p-interior-page__content">
+                    <h1>Privacy Policy</h1>
+                    <div dangerouslySetInnerHTML={{
                       __html: html
                     }}>
+                    </div>
                   </div>
                 </div>
               </div>
