@@ -87,7 +87,7 @@ andculture uses the collected data for various purposes:
 * To detect, prevent and address technical issues
 * To provide you with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless you have opted not to receive such information
 
-Nevada residents who wish to exercise their sale opt-out rights under Nevada Revised Statutes Chapter 603A may submit a request by calling us at 717-233-2881. However, please know we do not currently sell data triggering that statute’s opt-out requirements.
+Nevada residents who wish to exercise their sale opt-out rights under Nevada Revised Statutes Chapter 603A may submit a request by calling us at [717-233-2881](tel:7172332881). However, please know we do not currently sell data triggering that statute’s opt-out requirements.
 
 ### Legal Basis for Processing Personal Data under the General Data Protection Regulation (GDPR)
 
