@@ -226,3 +226,20 @@ collections:
              - {label: "Meta Title", name: "metaTitle", widget: "string"}
              - {label: "Meta Description", name: "metaDescription", widget: "string"}
              - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}
+      - file: "src/pages/privacy-policy.md"
+        label: "Privacy Page"
+        name: "privacy"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "privacy-page"}
+          - {label: "Create Page", name: "createPage", widget: "hidden", default: true}
+          - {label: Title, name: title, widget: string}
+          - {label: Secondary, name: secondaryTitle, widget: string}
+          - {label: Subtitle, name: subTitle, widget: string}
+          - {label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "code", "link", "heading-three", "quote", "bulleted-list", "numbered-list"]}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+             - {label: "Meta Title", name: "metaTitle", widget: "string"}
+             - {label: "Meta Description", name: "metaDescription", widget: "string"}
+             - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}
