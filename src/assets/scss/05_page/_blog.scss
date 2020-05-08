@@ -144,7 +144,7 @@
             }
 
             &.-opaque {
-                header.p-blog__header, main {
+                header.p-blog__header, .p-blog__main {
                     background-color: rgba(get-color-primary("white"), 1);
                 }
             }
@@ -198,11 +198,11 @@
         }
     }
 
-    main {
+    &__main {
         background-color: rgba(get-color-primary("white"), 0.7);
         transition: all ease 2s;
 
-        > section {
+        > div {
             @include span-col(12);
             margin-top: 32px;
 

@@ -103,13 +103,13 @@ export const BlogPostTemplate = (props) => {
               }
             </section>
           </header>
-          <main className="o-rhythm__row">
-            <section
+          <section className="o-rhythm__row p-blog__main" aria-label="Blog post article content">
+            <div
               dangerouslySetInnerHTML={{
                 __html: props.html
               }}>
-            </section>
-          </main>
+            </div>
+          </section>
           <footer className="o-rhythm__row" aria-label="Blog post footer">
             <section>
               <a

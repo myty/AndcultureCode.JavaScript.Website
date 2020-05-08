@@ -92,7 +92,7 @@ const CaseStudy = class extends React.Component {
 
         return (
             <VisibilitySensor onChange = { this._onChange }>
-                <article className = { caseStudyClass } style = { caseStudyStyle } key = { this.props.post.id } onMouseLeave = { this._handleUnhover }>
+                <div className = { caseStudyClass } style = { caseStudyStyle } key = { this.props.post.id } onMouseLeave = { this._handleUnhover }>
                     <div className = "m-case-study__block -top"></div>
                     <div className = "o-rhythm__container">
                         <div className = "m-case-study__image-container">
@@ -128,7 +128,7 @@ const CaseStudy = class extends React.Component {
                         </div>
                     </div>
                     <div className = "m-case-study__block -bottom"></div>
-                </article>
+                </div>
             </VisibilitySensor>
         )
     }
