@@ -9,7 +9,7 @@ const Careers = ({ data }) => {
       <Layout
         pageTitle = { post.frontmatter.partnerName }
         data      = { post.frontmatter }>
-        <main className = "p-interior-page" aria-label="Main content">
+        <main className = "p-interior-page">
         </main>
       </Layout>
   )

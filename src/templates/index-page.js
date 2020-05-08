@@ -26,7 +26,7 @@ export const IndexPageTemplate = ({
         title          = { title }
         secondaryTitle = { secondaryTitle }
         subTitle       = { subTitle } />
-      <section id="main-content" aria-label="Main content">
+      <section id="main-content">
         <CaseStudyList />
         <ContactForm />
         <EasterEgg />

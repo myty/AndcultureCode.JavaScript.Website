@@ -23,7 +23,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout pageTitle = "about" hideNavigation = { true }>
-      <main className = "p-interior-page" aria-label="Main content">
+      <main className = "p-interior-page">
         <AboutPageTemplate
           title          = { frontmatter.title }
           secondaryTitle = { frontmatter.secondaryTitle }

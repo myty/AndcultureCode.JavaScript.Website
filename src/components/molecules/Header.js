@@ -12,7 +12,7 @@ export default function Header(props) {
   }
 
   return (
-    <header>
+    <header aria-label="Page header">
       <div className="m-header">
         <div className = "m-header__background"></div>
         <div className="o-rhythm__container -fluid">

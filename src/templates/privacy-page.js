@@ -25,7 +25,7 @@ const PrivacyPage = ({ data }) => {
       scrollTop             = { scrollTop }
       showFooterDividerLine = { true }>
       <div className = "p-interior-page">
-        <main id="main-content" aria-label="Main content">
+        <main id="main-content">
           <article>
               <div className="p-interior-page__wrapper o-rhythm__container">
                 <div className="o-rhythm__row">

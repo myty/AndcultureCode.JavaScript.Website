@@ -65,7 +65,7 @@ const ContactPage = ({ data }) => {
           subTitle       = { frontmatter.subTitle }
           modifier       = '-contact'
         />
-        <section id="main-content" aria-label="Main content">
+        <section id="main-content">
           <ContactForm lightTheme = { true } />
           <CustomSlider images = { sliderImages } />
           <ContactInfo

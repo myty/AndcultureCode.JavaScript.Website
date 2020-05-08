@@ -16,7 +16,7 @@ const Footer = class extends React.Component {
     let footerClassName = this.props.showDividerLine ? "-divider" : "";
 
     return (
-      <footer className = {`m-footer ${footerClassName}`} aria-label="Site footer">
+      <footer className = {`m-footer ${footerClassName}`} aria-label="Page footer">
         <div className = "o-rhythm__container">
           <div className = "o-rhythm__row">
             <div className = "m-footer__left">
