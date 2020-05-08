@@ -27,7 +27,7 @@ Actually, there are likely some very good reasons. For instance, maybe they’re
 
 **Renaming and creating a new identity for a company isn’t easy for the designer or the client—and it shouldn’t be.** Often there is a lot riding on a new identity, so it’s really important to get it right. However, if a company is seeking to create a new identity for the right reasons, the process will go much more smoothly and it will make it easier for them to make the tough decisions that will inevitably affect the future of their business.
 
-### Aligning for success
+## Aligning for success
 If you’re considering rebranding, here are some questions to ponder:
 
 * Who are you?
@@ -42,10 +42,10 @@ Most importantly, you need to make sure that your expectations are realistic. Is
 
 **Remember, an identity can’t say everything, nor can a new mark or name solve all of your problems.** It should simply visually allude to what your company does or a unique characteristic therein. You still need your marketing department to sell. Slapping your new logo on a few things might improve the visual quality of collateral, but your brand should be a living and breathing representation of your organization. After all, it’s how you talk about the company, present yourselves and go about your business day-to-day.
 
-### Everyone wants a swoosh
+## Everyone wants a swoosh
 A good example of this is Nike, whose logo is a very simple swoosh. Everybody wants to look like or have a logo like Nike. You can paint an elaborate explanation of what the swoosh stands for—speed, simplicity, etc.—but when you think of Nike, you also associate that simple swoosh with good products, attractive apparel and the company’s stance as a forward thinker within the athletic products industry. These latter associations are not built upon the swoosh, rather they’re what the swoosh has come to represent. It is a simple, solid mark that has become iconic through the years because of the products and branding associated with it.
 
-### The objective perspective
+## The objective perspective
 As designers and account managers, we must be careful to remember that a rebrand or identity project is quite possibly the most emotional change an organization can make. In addition, there is always some leftover nostalgia for a past mark and its associated history.
 
 Stakeholders must put on their new customer/client goggles as they review presented concepts, but this is easier said than done. This is why a lot of identity projects happen on the heels of a new hire who has the authority to initiate these changes but lacks the emotional attachment to the existing brand.
@@ -54,7 +54,7 @@ Emotional ties and history with a brand make it difficult for clients to be obje
 
 It’s easy to say you like or dislike something, as a designer. And while it’s perfectly okay to have personal opinions and preferences, it’s important to remember that you are sharing your views with a client, not having a consultation regarding your latest tattoo or hairstyle. It’s hard to step back and see it for what it is.
 
-### The proof is in the process
+## The proof is in the process
 As a designer, I love the artistic process of creating a logo and overcoming all of these questions, concerns and hurdles. I love the intricacy of customizing and creating custom typefaces and glyphs. It takes time and you often have to immerse yourself and exhaust your thought process, often relying on that happy accident.
 
 At the conclusion of the project, if all goes as planned, both designer and client should be happy and excited about the new mark. The project also ends with a great relationship between client and agency because of all the conversations and rapport established throughout the project.

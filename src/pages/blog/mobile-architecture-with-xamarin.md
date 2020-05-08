@@ -23,13 +23,13 @@ category: "Engineering"
 ---
 At andculture, we constantly strive to improve our development workflow. As we continued to develop more mobile applications for clients, we wanted to make sure we architected our solutions in a way to make them scalable, testable and maintainable. We iterated over a couple of different approaches with each new project and have cultivated an architecture we’re pleased with.
 
-### Our mobile architecture goals
+## Our mobile architecture goals
 * Develop a mobile application across iOS and Android platforms with maximum code reusability
 * Minimize development time from platform to platform without sacrificing UX and performance
 * Make it testable
 * Loose coupling/high cohesion
 
-### The nobile development landscape
+## The nobile development landscape
 
 **Hybrid Apps**
 
@@ -73,11 +73,11 @@ Cons:
 * Some restrictions on third-party libraries
 * Potentially larger app sizes
 
-### Our decision
+## Our decision
 
 We decided to structure our mobile architecture around Xamarin. The majority of our developers have the bulk of their experience working in the Microsoft .NET stack, so it made the most sense. We could write in a language we’re familiar with without sacrificing performance and user experience.
 
-### Architecture
+## Architecture
 
 Code separation and loose coupling are key in order to allow the different areas within an app to be testable and maintainable. It also happens to play very well in Xamarin since we want to maximize the code reusability between platforms. If we lumped all the code within each native project, it would prohibit us from being able to share common code between the various mobile environments. In order to maintain this separation, we make extensive use of the [Onion Architecture](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/).
 
@@ -150,5 +150,5 @@ An Android test runner application that executes the tests created in Mobile.Vie
 
 Includes all ViewModel test implementations. It is referenced by the platform-specific test runner projects.
 
-### Conclusion
+## Conclusion
 As we continue to build out solutions, we evolve our architecture in an effort to continually improve our code reusability and testing strategy. We’re not saying that our architecture will work for everyone, but it meets our needs. If you want to use our architecture for your own mobile solution, you can download/clone it [here](https://github.com/AndcultureCode/Xamarin-Architecture). If you have any feedback or suggestions, please feel free to log an issue. We appreciate your time and support!

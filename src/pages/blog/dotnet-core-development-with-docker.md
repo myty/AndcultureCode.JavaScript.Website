@@ -31,7 +31,7 @@ With the advent of .NET Core and Docker, we have new and improved ways to consol
 
 Experienced in this topic and tired of my rambling? Check out the [GitHub repository](https://github.com/AndcultureCode/docker-dotnet-example).
 
-### Hopes
+## Hopes
 * All contributors run the full application locally
 * Ramp up requires minimal involvement from another team member or following a tedious setup process
 * Eliminate hybrid workflows involving virtual machines and/or sharing centralized remote resources (i.e., databases) &mdash; what if designers could have their own Microsoft SQL Server instance running on their Mac?
@@ -45,10 +45,10 @@ Experienced in this topic and tired of my rambling? Check out the [GitHub reposi
 
 *While Docker has been around for a while, the use case for having it fully power your dotnet development environment has not. As I’ll touch on later, the performance in development is lacking.*
 
-### Where do we begin?
+## Where do we begin?
 Docker can be a bit overwhelming to learn. While there is extensive documentation, there are so many aspects to the docker ecosystem it can be difficult to know where to start and what all you’ll need. Below is a list of resources, concepts and docker commands I used to build the following [dotnet development environment](https://github.com/AndcultureCode/docker-dotnet-example) project. I recommend diving deeper into each concept, but my hope is this can serve as a roadmap for your learning.
 
-### Docker images and containers
+## Docker images and containers
 Ultimately we are going to break up our application into a series of docker images that can run standalone. These images include all the code, dotnet runtime, configuration and other settings. Each image has its own “Dockerfile” that describes what docker needs to layer together.
 
 In our sample application, we will have two different types of services: a dotnet web service that houses our backend and frontend application files and a database service running an official Microsoft MSSQL server docker image.
@@ -85,7 +85,7 @@ Creating a separate startup file helps in two major ways. Firstly, it saves you 
 
 Secondly, the separation has helped overcome a mental hurdle, as I found it difficult to keep debug and release-related steps in the same file. I also continually found myself getting burned between the “build” versus “runtime” aspects of a dockerfile.
 
-### Docker commands
+## Docker commands
 Below are commands I used in creating the example repository. Of course, refer to the docker documentation for more details and a more exhaustive list of flags.
 
 * *docker build -t.*
@@ -122,7 +122,7 @@ Below are commands I used in creating the example repository. Of course, refer t
 * *docker volume ls*
   * While there are variants on volumes, so far I mostly use the ‘ls’ command to list current volumes for troubleshooting. I’m sure there will more to come with using volumes.
 
-### Docker Compose
+## Docker Compose
 
 **Database docker service**
 
@@ -148,7 +148,7 @@ You’ll notice for our database service we configure our environment variables 
 
 Do your best to ensure the variables in the samples are defaults that will work for the most team members &mdash; in my case, designers and developers on Windows and Mac OS X environments. Take the DATABASE_PORT, for example.. While not a problem for designers, many of our developers will have a full installation of MSSQL server running on the default port of 1433. The default for docker’s port should change so it has the best chance of avoiding collision out of the box.
 
-### Command-line interface (CLI)
+## Command-line interface (CLI)
 As I mentioned previously, I found it necessary to create a centralized command-line interface to simplify the increasingly tedious docker commands. Naturally though, now we have a place to create simplified versions of other commands. For instance, anyone tired of having to change directory to run entity framework migrations (or tried to type out a command to not have to change directories)? *Why not have a `./sdk create-migration ’ command?*
 
 If you run ./sdk, you’ll see the usage list below:
@@ -157,7 +157,7 @@ If you run ./sdk, you’ll see the usage list below:
 
 Using this as the entry to our projects has huge benefits. Now new project team members can use `./sdk run` to have the entire project’s dependencies installed on their machine and project up and running for development. The first run will take a few minutes to download MSSQL, dotnet tools, restore npm and NuGet and all the way through to running webpack, but from there it is cached and reused, taking seconds.
 
-### Summary
+## Summary
 For now, I’m using docker for production deployments, consolidating our continuous integration environment, running full development environments for designers and frontend developers and using it to distribute project infrastructure across all team members in a better way.
 
 As you can see, most of my initial goals have been met! Unfortunately, I don’t feel using docker for .NET development is quite there yet. The primary issue is file I/O performance between the host file system and the container. Using [docker-sync.io](http://docker-sync.io/), I was able to get the performance on Mac OS X to be very close to native with minimal friction, but unfortunately it is not an option in its present state for Windows. What this means, at least for our team, is that developers on Windows machines can get a database, cache and other pieces of the infrastructure through docker, but they run a second shell session for .NET compilation and debugging (*./sdk run-web*). As far as compromises go, I’d say that is pretty good!

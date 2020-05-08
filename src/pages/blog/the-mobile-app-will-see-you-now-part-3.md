@@ -23,7 +23,7 @@ category: "Strategy"
 ---
 Part 3 in our series with Synced Care founder [Dr. James Suliburk](https://www.bcm.edu/people/view/james-suliburk-m-d-facs/b264d8d6-ffed-11e2-be68-080027880ca6), assistant professor of surgery at Baylor College of Medicine, focuses on his work on an educational model designed to build patient engagement around surgical episodes of care and how technology might accelerate this approach.
 
-### How do you believe providers can support patient engagement efforts?
+## How do you believe providers can support patient engagement efforts?
 What we’ve developed is an educational model of ‘unconscious incompetence’ all the way up to ‘unconscious competence.’ If we look at these different stages of learning, we know that when the patient first starts this journey, they don’t even know what they don’t know. They are unconsciously incompetent. Eventually, they’ll get to unconscious competence. The steps are as follows:
 
 **Step 1:** Consciously incompetent, they won't understand what they don’t know
@@ -38,7 +38,7 @@ What we’ve developed is an educational model of ‘unconscious incompetence’
 
 Once we’ve reached Step 5, that’s where we know that we’ve succeeded with our educational tools.
 
-### In your work, what are the guiding principles for sustained patient engagement?
+## In your work, what are the guiding principles for sustained patient engagement?
 The guiding principles for assisting, operationalizing or empowering patients are understandable content that is useful for the patient and will allow the patient to be an empowered and dignified member of the healthcare team. The days where the patient is a passive component, and that’s who everybody is ‘working on’ from a healthcare team, is an outdated model.
 
 What we need to do is to look at the patient as the person who not only are we treating, but the person who has to do their part as a member of the healthcare team. The steps to doing that — in the framework we’re currently working on that I outlined — are, at a very fundamental level, education of the patient as to why they have this disease process that we’re working on and education of how we plan to treat that disease process. And once that is complete, what role the patient is going to play in the management of their recovery or their pre-op optimization, whatever it is.
@@ -49,7 +49,7 @@ It can be something as innocuous as making sure they take their beta blocker on 
 
 And all this can be done without a wearable device. Simple things like the patient taking their temperature with a home thermometer or the patient looking at their incision and noticing that it is redder, or it hurts more, and then alerting the clinical team appropriately, is all able to be done without any increased cost of care, such as investments in exorbitant hardware or wearables, those kind of things.
 
-### What, if any role, might technology play in supporting patient engagement outcomes?
+## What, if any role, might technology play in supporting patient engagement outcomes?
 The thing about this is, while technology is certainly a benefit and we definitely want to leverage technology that has become ubiquitous in everyday life, we also don’t want it to be a barrier towards implementing these pathways.
 
 There’s a fine balance between adding cost to the system in the form of deploying 100 different mobile wearable devices versus getting patients to use their own means and augmenting those own means to where they are useful to care. We can’t just keep throwing money at it; we have to figure out how to make whatever value is currently present and how to optimize that value. No healthcare system is going to go out and spend exorbitant amounts of money for what they’re already spending on their electronic medical records on mobile stuff at this time.
@@ -58,14 +58,14 @@ The margins of the average hospital remain at only 2-3%. When you’re running t
 
 Thus the key becomes utilizing the patient daily life and devices that the patients are using day in and day out as a way to improve their quality of care. Now a little $5 Bluetooth device certainly isn’t going to break the bank, but when you talk about deploying $500 and $1000 smartphones and the associated upkeep and overhead, data charges and everything else, it starts to become quite expensive at a hospital level in a system that already has a strapped for cash IT budget. That’s why the work that I’m doing is focused on patient deployed apps that we can deploy to the patient in a low-cost low-resource start-up.
 
-### What metrics are important to you in measuring patient engagement success in this space?
+## What metrics are important to you in measuring patient engagement success in this space?
 We’re looking at improved patient satisfaction, improved subjective feelings of safety and security, less anxiety and improved what we call ‘communication touch metrics.’
 
 Improved communication touch metrics represent not only whether patients feel that communication to the clinical team is improved, but also that the clinical team is not tied up with excess time on the phone unnecessarily. What do I mean by that? Well, there’s a fine line between empowering the patient toward self-care and having the patient be hyperaware and hypervigilant to call the hotline for every single thing that’s going on, because then that ends up wasting resources.
 
 In terms of producing normal clinical outcomes, such as readmission, reduced surgical site infection (because the results are already so good clinically those types of trials require thousands or patients to show clinical significance), it’s important that we look at things other than just clinical performance. Part of that is also what pay-for-performance mandates, we are being evaluated, not just on clinical performance but on the patient’s perception of their care and on the patient experience. [CAHPS](https://www.cms.gov/Research-Statistics-Data-and-Systems/Research/CAHPS/), [HCAHPS](https://www.cms.gov/Medicare/Quality-Initiatives-Patient-Assessment-instruments/HospitalQualityInits/HospitalHCAHPS.html) scores are now wrapped into bonus payments by [Centers for Medicaid & Medicare Services](https://www.cms.gov) (CMS), and that’s where we think the primary endpoints of communication, safety, security, lessened anxiety are probably the better way to go about doing things. We expect that improved clinical outcomes will be associated with those but probably not the primary endpoint to look at off the bat.
 
-### How does this go from someone like you, who’s deep into it, very passionate about it, to becoming common practice for all physicians?
+## How does this go from someone like you, who’s deep into it, very passionate about it, to becoming common practice for all physicians?
 Docs want to be docs. People got into medicine because they are compassionate, they like taking care of patients, they like whatever profession or specialty they go in. They like to make people better.
 
 The pain point is all this regulatory stuff they have to do every day, day in and day out. If we inject an additional pain point in, that's never going to fly because people are already fed up. It’s widely known that electronic medical records are probably the #1 driver of patient dissatisfaction in healthcare today.

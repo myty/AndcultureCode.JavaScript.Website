@@ -27,7 +27,7 @@ Patient engagement. Why is it so crucial to healthcare transformation? andcultur
 
 *Patient engagement is the buzz word and panacea for all the health system woes. If only patients were more ‘engaged,’ those in the healthcare industry often lament. But what does patient engagement really mean? More importantly, what are the ingredients for the secret sauce to move the needle in this area?*
 
-### Tell us, how did you begin your work in patient engagement?
+## Tell us, how did you begin your work in patient engagement?
 
 **Dr. Naik**
 
@@ -45,7 +45,7 @@ The reason is that now more than half of post-surgical complications occur when 
 
 My work involves studying what techniques can be used to engage patients. As well as from the educational research perspective, what are the ways we can empower and educate patients using technology?
 
-### There’s so much conversation right now about patient engagement, and it sounds like the secret sauce in a lot of ways &mdash; if only we could engage patients, costs would decrease, quality would go up and everyone would just be more satisfied. It seems like the ‘engagement’ word has become passé or just completely lost its meaning. How do you define this space?
+## There’s so much conversation right now about patient engagement, and it sounds like the secret sauce in a lot of ways &mdash; if only we could engage patients, costs would decrease, quality would go up and everyone would just be more satisfied. It seems like the ‘engagement’ word has become passé or just completely lost its meaning. How do you define this space?
 
 **Dr. Naik**
 
@@ -61,7 +61,7 @@ Patient engagement is very much that exact same way. It is extremely challenging
 
 How we actually define that and how we actually get it to happen is definitely the holy grail. There’s a lot of lip service and talk about engagement. But it is something that is really challenging to quantify at the end of the day.
 
-### Backing up a bit &mdash; what’s your diagnosis of why patient engagement now?
+## Backing up a bit &mdash; what’s your diagnosis of why patient engagement now?
 
 **Dr. Naik**
 
@@ -87,7 +87,7 @@ Now hospitals are not getting paid for those readmissions; in fact, they’re ge
 
 As we get closer and closer to the deadlines to 2017, pay-for-performance is going to mandate that we come up with solutions to this. It’s just simply not acceptable to discharge a patient who doesn’t understand how they’re going to take care of themselves and then have that person bounce back to the emergency room 48 hours later. That’s not an appropriate care paradigm in the modern era.
 
-### Share with us your vision of the future for patient engagement and technology in healthcare.
+## Share with us your vision of the future for patient engagement and technology in healthcare.
 
 **Dr. Naik**
 

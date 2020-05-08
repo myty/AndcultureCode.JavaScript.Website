@@ -32,7 +32,7 @@ You’re about to commit your brand to a digital marketing campaign *just becaus
 
 We all do it. We get entranced by a cool new marketing idea — augmented reality! Snapchat filters! Google+, for like five minutes! — and we’re worried we’ll look foolish if we wait. What if our competitor does it? We need to get more leads, and what we’re doing right now is *fine*, but this other approach could be *amazing*. Let’s try it!
 
-### Why following others goes nowhere
+## Why following others goes nowhere
 Nobody wants to be the brand that falls behind, and it can seem impossible to test everything, especially if you don’t have a big marketing team.
 
 **One of the benefits of working with a team of digital strategists, rather than straight-forward digital marketers, is that we’re going to constantly ask the “Why?”** We love CTR and impressions just as much as you, but we’re also here to keep you honest because that’s how you get value for your budget. And we want to make sure you’re asking your team this question when someone has one of those “Hey, have we thought about this?” ideas:
@@ -41,7 +41,7 @@ Nobody wants to be the brand that falls behind, and it can seem impossible to te
 
 It’s not a “No.” It’s not a “Should we…” It’s putting the onus on your team (and, if you’re working with a team like us, the onus is with us, too) to think through an idea. I always like having an improv mindset to ideas; I moonlight in improv comedy, and the basic tenet there is to accept an idea and build on it, rather than reject it flat out. You explore it and see if it works.
 
-### How to have the conversation
+## How to have the conversation
 Let’s say your colleague wants to add a series of branded, illustrated videos to your Instagram feed to tout the benefits of your core product. Sounds fun! Your feed does OK on engagement, so this could be helpful. This time, you remember the wise words of some blogger you read on andculture’s website.
 
 **“Why do we want to do this?"**
