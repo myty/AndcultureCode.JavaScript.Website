@@ -19,7 +19,7 @@ const Menu = (props) => {
 
     return (
         <FocusTrap active={props.open}>
-            <div className={`c-menu ${props.open ? "-open" : ""}`} aria-modal="true">
+            <div className={`c-menu ${props.open ? "-open" : ""}`} aria-modal="true" aria-hidden={!props.open}>
                 <div className="c-menu__overlay">
                     <div className="o-rhythm__container -fluid">
                         <div className="c-menu__overlay__logo">

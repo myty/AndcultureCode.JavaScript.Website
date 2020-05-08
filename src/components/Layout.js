@@ -85,7 +85,14 @@ const TemplateWrapper = ({
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.png" />
       </Helmet>
-      <div className={pageClassName ? pageClassName : ""}>
+      <div className={pageClassName ? pageClassName : ""} aria-hidden={menuOpen}>
+        <a
+          className = "a-skip-link"
+          onClick   = { () => navigate("#main-content") }
+          tabIndex  = "1"
+          href      = "#main-content">
+          Skip<span> to Main Content</span>
+        </a>
         <Header
           onMenuOpen     = { onMenuOpen }
           pageTitle      = { pageTitle }

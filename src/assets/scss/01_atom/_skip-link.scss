@@ -1,0 +1,38 @@
+.a-skip-link {
+    @include font-size("base");
+    border-bottom: 2px solid get-color-primary("fresh");
+    display: inline-block;
+    margin: 0 auto;
+    opacity: 0;
+    padding-bottom: 0.2em;
+    position: absolute;
+    left: calc(80% - 89px);
+    top: 25px;
+    z-index: 10;
+    color: get-color-primary("fresh");
+    font-family: $font-secondary;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+
+    &:focus {
+        opacity: 1;
+    }
+
+    span {
+        display: none;
+    }
+
+    @include breakpoints("sm-tablet") {
+        left: calc(50% - 89px);
+
+        span {
+            display: inline;
+        }
+    }
+
+    @include breakpoints("tablet") {
+        top: 65px;
+    }
+}

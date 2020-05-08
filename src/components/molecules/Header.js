@@ -12,7 +12,7 @@ export default function Header(props) {
   }
 
   return (
-    <header aria-label="Site header">
+    <header>
       <div className="m-header">
         <div className = "m-header__background"></div>
         <div className="o-rhythm__container -fluid">
@@ -21,13 +21,6 @@ export default function Header(props) {
             className  = "m-header__logo"
             href       = "/">
             <Logo />
-          </a>
-          <a
-            className = "m-header__skip"
-            onClick   = { () => navigate("#main-content") }
-            tabIndex  = "1"
-            href      = "#main-content">
-            Skip<span> to Main Content</span>
           </a>
           { // if
             !props.hideNavigation &&
