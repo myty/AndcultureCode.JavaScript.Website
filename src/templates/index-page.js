@@ -19,19 +19,19 @@ export const IndexPageTemplate = ({
   subTitle,
   scrollTop,
 }) => (
-    <div className="p-home">
+    <main className="p-home">
       {/* <HomePageAnimation /> */}
       <Hero
         scrollTop      = { scrollTop }
         title          = { title }
         secondaryTitle = { secondaryTitle }
         subTitle       = { subTitle } />
-      <main id="main-content" aria-label="Main content">
+      <section id="main-content" aria-label="Main content">
         <CaseStudyList />
         <ContactForm />
         <EasterEgg />
-      </main>
-    </div>
+      </section>
+    </main>
   )
 
 const IndexPage = ({ data }) => {

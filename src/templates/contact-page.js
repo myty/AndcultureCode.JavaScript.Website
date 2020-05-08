@@ -58,14 +58,14 @@ const ContactPage = ({ data }) => {
       pageTitle      = "contact"
       data           = { frontmatter }
       scrollTop      = { scrollTop }>
-      <div className = "p-interior-page">
+      <main className = "p-interior-page">
         <ContactPageTemplate
           title          = { frontmatter.title }
           secondaryTitle = { frontmatter.secondaryTitle }
           subTitle       = { frontmatter.subTitle }
           modifier       = '-contact'
         />
-        <main id="main-content" aria-label="Main content">
+        <section id="main-content" aria-label="Main content">
           <ContactForm lightTheme = { true } />
           <CustomSlider images = { sliderImages } />
           <ContactInfo
@@ -75,8 +75,8 @@ const ContactPage = ({ data }) => {
             phoneNumberAccessibility = { frontmatter.phoneNumberAccessibility }
             directions               = { frontmatter.directions }
             mapLink                  = { frontmatter.mapLink } />
-        </main>
-      </div>
+        </section>
+      </main>
     </Layout>
   )
 }
