@@ -48,8 +48,8 @@ const BlogAuthor = (props) => {
                         </div>
                     </div>
                     <div className="m-blog-author__divider">|</div>
-                    <div className="m-blog-author__position">
-                        {props.author.position 
+                    <div className="m-blog-author__position" aria-hidden="true">
+                        {props.author.position
                             ? props.author.position
                             : "alum"
                         }
