@@ -1,6 +1,9 @@
-import React       from 'react';
-import { graphql } from 'gatsby';
-import Layout      from '../components/Layout';
+import React              from 'react';
+import { graphql }        from 'gatsby';
+import Layout             from '../components/Layout';
+import ContactHeroGraphic from 'static/img/contact/contact_hero_graphic.png';
+import HeroBluePaint      from 'static/img/contact/blue_paint.png';
+import InteriorHero       from 'components/molecules/InteriorHero';
 
 export const CareersPageTemplate = ({
   title,
@@ -24,6 +27,12 @@ const CareersPage = ({ data }) => {
         pageTitle = { post.frontmatter.partnerName }
         data      = { post.frontmatter }>
         <main className = "p-interior-page">
+          <CareersPageTemplate
+            title          = { post.frontmatter.title }
+            secondaryTitle = { post.frontmatter.secondaryTitle }
+            subTitle       = { post.frontmatter.subTitle }
+            modifier       = '-contact'
+          />
         </main>
       </Layout>
   )
