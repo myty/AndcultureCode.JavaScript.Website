@@ -8,7 +8,7 @@ featuredpost: false
 featuredimage: /img/pulse_book_Pen.png
 homeimage: /img/case-studies/pulse/home/pulse_book_Pen.png
 texture: img/pulse_doodle.png
-color: '#49A296'
+color: '#008568'
 heroIntroCopy: Hospital staffing is a headache. Patients appear whether you are properly staffed or not. How could PinnacleHealth nurse managers make real-time, data-driven decisions on how many nurses to have on hand, rather than best guesses using limited data locked in spreadsheets?
 tags:
   - ux design

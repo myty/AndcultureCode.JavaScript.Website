@@ -33,6 +33,10 @@
     @return get-color("accents", $color);
 }
 
+@function get-color-casestudies($color: "kidsdiscover") {
+    @return get-color("casestudies", $color);
+}
+
 // Font Functions
 // ------------------------------------
 

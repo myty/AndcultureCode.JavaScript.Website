@@ -263,6 +263,11 @@
             color: get-color("primary", "white") !important;
         }
 
+        p, ul {
+            @include font-size(24px);
+            @include line-height(40px);
+        }
+
         .-background-texture {
             position: absolute;
             bottom: 0;
@@ -355,7 +360,7 @@
         }
 
         &.-kd {
-            background: #27A2B0;
+            background: get-color-casestudies("kidsdiscover");
 
             .kd-image {
                 position: relative;
@@ -472,7 +477,7 @@
         }
 
         &.-pulse {
-            background: #49A296;
+            background: get-color-casestudies("pulse");
 
             header {
                 @include breakpoints("sm-desktop") {
@@ -845,8 +850,8 @@
                 letter-spacing: 0.2em;
 
                 @include breakpoints("tablet") {
-                    @include font-size("smallest");
-                    @include line-height("smaller");
+                    @include font-size("small");
+                    @include line-height(30px);
                     @include span-col(2);
                     margin-bottom: 0;
                 }
@@ -992,12 +997,12 @@
 
         &.-career-link {
             a.a-button {
-                color: #043544;
-                border-color: #043544;
+                color: get-color-casestudies("careerlink");
+                border-color: get-color-casestudies("careerlink");
             }
 
             div.-content {
-                background-color: #043544;
+                background-color: get-color-casestudies("careerlink");
 
                 @include breakpoints("tablet") {
                     background-color: rgba(245,245,245,1);
@@ -1009,7 +1014,7 @@
                 &:hover {
 
                     div.-content {
-                        background-color: #043544;
+                        background-color: get-color-casestudies("careerlink");
                     }
                 }
             }
@@ -1018,12 +1023,12 @@
         &.-kd {
 
             a.a-button {
-                color: #27A2B0;
-                border-color: #27A2B0;
+                color: get-color-casestudies("kidsdiscover");
+                border-color: get-color-casestudies("kidsdiscover");
             }
 
             div.-content {
-                background-color: #27A2B0;
+                background-color: get-color-casestudies("kidsdiscover");
 
                 @include breakpoints("tablet") {
                     background-color: rgba(245,245,245,1);
@@ -1035,7 +1040,7 @@
                 &:hover {
 
                     div.-content {
-                        background-color: #27A2B0;
+                        background-color: get-color-casestudies("kidsdiscover");
                     }
                 }
             }
@@ -1044,12 +1049,12 @@
         &.-pulse {
 
             a.a-button {
-                color: #49A296;
-                border-color: #49A296;
+                color: get-color-casestudies("pulse");
+                border-color: get-color-casestudies("pulse");
             }
 
             div.-content {
-                background-color: #49A296;
+                background-color: get-color-casestudies("pulse");
 
                 @include breakpoints("tablet") {
                     background-color: rgba(245,245,245,1);
@@ -1061,7 +1066,7 @@
                 &:hover {
 
                     div.-content {
-                        background-color: #49A296;
+                        background-color: get-color-casestudies("pulse");
                     }
                 }
             }
@@ -1070,12 +1075,12 @@
         &.-cca {
 
             a.a-button {
-                color: #3D5CC2;
-                border-color: #3D5CC2;
+                color: get-color-casestudies("cca");
+                border-color: get-color-casestudies("cca");
             }
 
             div.-content {
-                background-color: #3D5CC2;
+                background-color: get-color-casestudies("cca");
 
                 @include breakpoints("tablet") {
                     background-color: rgba(245,245,245,1);
@@ -1087,7 +1092,7 @@
                 &:hover {
 
                     div.-content {
-                        background-color: #3D5CC2;
+                        background-color: get-color-casestudies("cca");
                     }
                 }
             }
@@ -1096,12 +1101,12 @@
         &.-h1 {
 
             a.a-button {
-                color: #F953A9;
-                border-color: #F953A9;
+                color: get-color-casestudies("hackerone");
+                border-color: get-color-casestudies("hackerone");
             }
 
             div.-content {
-                background-color: #F953A9;
+                background-color: get-color-casestudies("hackerone");
 
                 @include breakpoints("tablet") {
                     background-color: rgba(245,245,245,1);
@@ -1113,7 +1118,7 @@
                 &:hover {
 
                     div.-content {
-                        background-color: #F953A9;
+                        background-color: get-color-casestudies("hackerone");
                     }
                 }
             }
