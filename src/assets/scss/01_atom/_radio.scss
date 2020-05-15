@@ -42,7 +42,7 @@ fieldset .a-radio {
         position: relative;
         padding: 0 16px;
         background: get-color("primary", "after-hours");
-        color: get-color("neutral", "light-gray");
+        color: get-color-primary("after-hours");
         z-index: 1;
 
         @include breakpoints("tablet") {

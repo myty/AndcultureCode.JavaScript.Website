@@ -2,7 +2,7 @@
     width: 100%;
 
     &.-career-link {
-        background-color: #043544;
+        background-color: get-color-casestudies("careerlink");
 
         .m-case-study-page-content__copy-section {
             color: get-color-primary("white");

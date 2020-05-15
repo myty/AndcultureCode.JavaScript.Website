@@ -24,7 +24,7 @@
         float: left;
         margin-top: 10px;
         padding-left: 16px;
-        color: get-color-neutral("light-gray");
+        color: get-color-primary("after-hours");
         text-align: left;
         text-transform: lowercase;
 
@@ -115,7 +115,7 @@
             }
 
             svg {
-                fill: get-color-neutral("light-gray");
+                fill: get-color-primary("after-hours");
                 transition: all 400ms ease;
             }
 

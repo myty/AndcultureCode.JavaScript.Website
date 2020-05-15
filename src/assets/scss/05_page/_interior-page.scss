@@ -201,7 +201,7 @@
             @include line-height(36px);
             margin-bottom: 30px;
             margin-top: 60px;
-            color: get-color-primary("fresh");
+            color: get-color-primary("fresh-dark");
 
             @include breakpoints("sm-tablet") {
                 @include font-size(30px);

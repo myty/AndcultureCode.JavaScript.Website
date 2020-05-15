@@ -185,7 +185,7 @@
 
             h2 {
                 margin-top: 40px;
-                color: get-color-neutral("light-gray");
+                color: get-color-primary("fresh-dark");
 
                 @include breakpoints("sm-tablet") {
                     margin-top: 80px;
@@ -219,7 +219,7 @@
                 @include font-size(26px);
                 @include line-height(36px);
                 margin-top: 60px;
-                color: get-color-primary("fresh");
+                color: get-color-primary("fresh-dark");
 
                 @include breakpoints("sm-tablet") {
                     @include font-size(30px);
@@ -287,15 +287,19 @@
 
                 a {
                     @include font-size("small");
-                    color: get-color-primary("fresh");
+                    color: get-color-primary("after-hours");
                     font-family: $font-primary;
+                    text-decoration: underline;
+                    text-decoration-color: get-color-primary("fresh");
+                    transition: color 0.3s ease;
 
                     @include breakpoints("sm-tablet") {
                         @include font-size(24px);
                     }
 
                     &:hover {
-                        text-decoration: underline;
+                        color: get-color-primary("fresh");
+                        opacity: 1;
                     }
                 }
             }

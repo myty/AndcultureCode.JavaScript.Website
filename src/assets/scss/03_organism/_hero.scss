@@ -55,7 +55,7 @@
             padding: 0;
 
             li {
-                @include font-size(16px);
+                @include font-size("small");
                 @include line-height(24px);
                 margin-bottom: 1em;
                 font-weight: 600;
@@ -78,14 +78,9 @@
                 }
 
                 @include breakpoints("laptop") {
-                    @include span-col(1);
-                    @include push-col(2);
-                    margin-top: 0;
-                }
-
-                @include breakpoints("xl-desktop") {
                     @include span-col(2);
                     @include push-col(2);
+                    margin-top: 0;
                 }
 
                 h6 {
@@ -211,7 +206,7 @@
                 letter-spacing: .24em;
 
                 @include breakpoints("tablet") {
-                    @include font-size("base");
+                    @include font-size("small");
                     @include line-height("smaller");
                 }
             }
@@ -376,7 +371,7 @@
         @include font-size("small");
         @include line-height(32px);
         margin: 40px 0 80px 0;
-        color: get-color("neutral", "light-gray");
+        color: get-color-primary("after-hours");
 
         @include breakpoints("tablet") {
             @include font-size("medium-large");

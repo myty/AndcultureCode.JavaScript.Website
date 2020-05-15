@@ -5,45 +5,9 @@
     position: static;
     margin-top: 76px;
     z-index: 0;
-    background-color: get-color-primary("fresh");
+    background-color: get-color-primary("fog");
     font-family: $font-primary;
     letter-spacing: normal;
-
-    &.-fresh {
-        background-color: get-color-primary("fresh");
-    }
-
-    &.-after-hours {
-        background-color: get-color-primary("after-hours");
-    }
-
-    &.-violet-blue {
-        background-color: get-color-secondary("violet");
-    }
-
-    &.-throwback-pink {
-        background-color: get-color-secondary("pink");
-    }
-
-    &.-siracha {
-        background-color: get-color-secondary("siracha");
-    }
-
-    &.-tea {
-        background-color: get-color-tertiary("tea");
-    }
-
-    &.-eraser {
-        background-color: get-color-tertiary("eraser");
-    }
-
-    &.-sticky-blue {
-        background-color: get-color-tertiary("sticky-blue");
-    }
-
-    &.-center-lane {
-        background-color: get-color-secondary("center-lane");
-    }
 
     &:not(.-inline):hover {
         opacity: 1;
@@ -52,10 +16,8 @@
             transform: scale(1.2);
         }
 
-        h1 span {
-            box-shadow:
-                inset 0 -0.15em get-color-primary("fresh"),
-                inset 0 -0.2em white;
+        h1 {
+            color: get-color-primary("fresh");
         }
     }
 
@@ -94,7 +56,7 @@
         float: none;
         width: 100%;
         padding: 60px 30px;
-        color: get-color-primary("white");
+        color: get-color-primary("after-hours");
 
         @include breakpoints("sm-tablet") {
             display: table-cell;
@@ -105,6 +67,7 @@
 
         h1 {
             max-width: 100%;
+            transition: color 0.3s ease;
 
             @include breakpoints("sm-tablet") {
                 @include font-size(32px);
@@ -128,13 +91,13 @@
 
             span {
                 box-shadow:
-                    inset 0 -0.15em get-color-primary("fresh"),
+                    inset 0 -0.15em get-color-primary("fog"),
                     inset 0 -0.2em get-color-primary("fresh");
                 text-shadow:
-                    .1em 0 get-color-primary("fresh"),
-                    0 .1em get-color-primary("fresh"),
-                    -.1em 0 get-color-primary("fresh"),
-                    0 -.1em get-color-primary("fresh");
+                    .1em 0 get-color-primary("fog"),
+                    0 .1em get-color-primary("fog"),
+                    -.1em 0 get-color-primary("fog"),
+                    0 -.1em get-color-primary("fog");
                 transition: box-shadow .25s ease;
             }
         }
