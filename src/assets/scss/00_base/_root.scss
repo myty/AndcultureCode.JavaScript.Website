@@ -126,6 +126,7 @@ address {
 
         .o-hero__top,
         .o-hero__subtitles,
+        .m-interior-hero,
         .m-contact-info__directions,
         .m-careers {
             margin-left: 80px;
@@ -152,7 +153,8 @@ address {
         .o-contact-form__wrapper,
         .o-slider,
         .m-contact-info__directions,
-        .m-careers {
+        .m-careers,
+        .m-interior-hero {
             margin-left: 0;
         }
     }

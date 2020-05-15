@@ -4,8 +4,7 @@ import Layout                         from 'components/Layout';
 import ContactForm                    from 'components/organisms/ContactForm';
 import ContactInfo                    from 'components/molecules/ContactInfo';
 import CustomSlider                   from 'components/molecules/CustomSlider';
-import ContactHeroGraphic             from 'static/img/contact/contact_hero_graphic.png';
-import HeroBluePaint                  from 'static/img/contact/blue_paint.png';
+import ContactHero                    from 'static/img/contact_hero.jpg';
 import InteriorHero                   from 'components/molecules/InteriorHero';
 import sliderImage1                   from 'static/img/contact/slider/river_room.png';
 import sliderImage2                   from 'static/img/contact/slider/Contact_1.jpg';
@@ -23,7 +22,7 @@ export const ContactPageTemplate = ({
   modifier
 }) => (
   <InteriorHero
-    backgroundImages = { [{ image: ContactHeroGraphic, alt: "Creative swirls and artifacts" }, { image: HeroBluePaint , alt: "Hand stroked blue paint"}] }
+    image            = { ContactHero }
     title            = { title }
     secondaryTitle   = { secondaryTitle }
     subTitle         = { subTitle }
@@ -63,7 +62,7 @@ const ContactPage = ({ data }) => {
           title          = { frontmatter.title }
           secondaryTitle = { frontmatter.secondaryTitle }
           subTitle       = { frontmatter.subTitle }
-          modifier       = '-contact'
+          modifier       = '-contact -interior'
         />
         <section id="main-content">
           <ContactForm lightTheme = { true } />

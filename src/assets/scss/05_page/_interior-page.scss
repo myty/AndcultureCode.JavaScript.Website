@@ -16,6 +16,26 @@
             }
         }
 
+        &.-careers {
+            .o-hero__left {
+                @include breakpoints("tablet") {
+                    @include span-col(7);
+                }
+            }
+
+            .o-hero__right {
+                @include breakpoints("tablet") {
+                    @include span-col(5);
+                }
+
+                text-align: center;
+
+                img {
+                    margin-top: 142px;
+                }
+            }
+        }
+
         @include breakpoints("desktop") {
             padding-top: 0;
         }

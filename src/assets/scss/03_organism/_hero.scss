@@ -226,9 +226,29 @@
         }
     }
 
-    &.-contact {
+    &.-interior {
         .o-hero__titles {
             padding-top: 0;
+        }
+
+        h2 {
+            @include font-size(24px);
+            @include line-height(34px);
+            margin-bottom: 30px;
+        }
+
+        a {
+            @include font-size(24px);
+            @include line-height(34px);
+            font-family: $font-primary;
+            text-decoration: underline;
+            text-decoration-color: get-color-primary("fresh");
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: get-color-primary("fresh");
+                opacity: 1;
+            }
         }
     }
 

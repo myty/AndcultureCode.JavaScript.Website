@@ -1,38 +1,48 @@
 import React              from 'react';
 import { graphql }        from 'gatsby';
-import Layout             from '../components/Layout';
-import ContactHeroGraphic from 'static/img/contact/contact_hero_graphic.png';
-import HeroBluePaint      from 'static/img/contact/blue_paint.png';
+import Layout             from 'components/Layout';
 import InteriorHero       from 'components/molecules/InteriorHero';
-
-export const CareersPageTemplate = ({
-  title,
-  secondaryTitle,
-  subTitle,
-  modifier
-}) => (
-  <InteriorHero
-    backgroundImages = { [{ image: ContactHeroGraphic, alt: "Creative swirls and artifacts" }, { image: HeroBluePaint , alt: "Hand stroked blue paint"}] }
-    title            = { title }
-    secondaryTitle   = { secondaryTitle }
-    subTitle         = { subTitle }
-    modifier         = { modifier } />
-)
+import Collage            from 'static/img/careers/collage.jpg';
+import InteriorHeroImage  from 'static/img/careers/grey_x_bg.png';
+import GreyDots           from 'static/img/careers/grey_dots.png';
 
 const CareersPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const pageData = data.markdownRemark.frontmatter;
 
   return (
       <Layout
-        pageTitle = { post.frontmatter.partnerName }
-        data      = { post.frontmatter }>
+        pageTitle             = "Careers"
+        data                  = { pageData }
+        pageClassName         = "p-careers"
+        showFooterDividerLine = { true }>
         <main className = "p-interior-page">
-          <CareersPageTemplate
-            title          = { post.frontmatter.title }
-            secondaryTitle = { post.frontmatter.secondaryTitle }
-            subTitle       = { post.frontmatter.subTitle }
-            modifier       = '-contact'
-          />
+          <InteriorHero
+            image            = { InteriorHeroImage }
+            title            = { pageData.title }
+            secondaryTitle   = { pageData.secondaryTitle }
+            subTitle         = { pageData.subTitle }
+            modifier         = { "-careers -interior" }>
+            <a href="#">view current job positions</a>
+          </InteriorHero>
+          <section className = "p-careers__collage o-rhythm__container">
+            <img src={ GreyDots } alt="" aria-hidden="true" />
+            <img src={ Collage } alt="" aria-hidden="true" />
+          </section>
+          <section className = "o-rhythm__container">
+            <div className="p-careers__values">
+              <div className="p-careers__heading">Our Values</div>
+              <h3>what drives us</h3>
+              <p>
+                We’re passionate about designing and engineering unique 
+                experiences. When we do, we’re problem-solving for people, 
+                and that makes a real difference for the world as well as 
+                for our partners. And when you do all of this at andculture, 
+                you’re not just another person to help fill a role. You’re a 
+                member of a team — and we value your unique experience, too, 
+                from work-life balance to career growth.
+              </p>
+            </div>
+          </section>
         </main>
       </Layout>
   )
@@ -41,7 +51,7 @@ const CareersPage = ({ data }) => {
 export default CareersPage;
 
 export const pageQuery = graphql`
-  query CareersPageTemplate {
+  query CareersPage {
     markdownRemark(frontmatter: { templateKey: { eq: "careers-page" } }) {
       frontmatter {
         title

@@ -1,0 +1,27 @@
+.p-careers {
+    &__collage {
+        position: relative;
+        margin-top: 32px;
+
+        img:first-child {
+            position: absolute;
+            left: -351px;
+            top: 52px;
+        }
+    }
+
+    &__values {
+        @include span-col(7);
+        padding: 89px 0 61px 0;
+
+        h3 {
+            margin-bottom: 28px;
+            color: get-color-primary("after-hours");
+        }
+    }
+
+    &__heading {
+        color: get-color-primary("fresh-dark");
+        text-transform: uppercase;
+    }
+}
