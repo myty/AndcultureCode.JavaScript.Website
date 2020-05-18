@@ -56,7 +56,7 @@ const CareerDetail = ({ data }) => {
 // Exports
 // --------------------------------------------------------
 
-export default BlogPost;
+export default CareerDetail;
 
 export const pageQuery = graphql`
   query CareerDetailQuery($id: String) {
