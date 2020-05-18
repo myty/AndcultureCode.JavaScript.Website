@@ -1,0 +1,21 @@
+.m-core-value {
+    img {
+        height: 100%;
+    }
+
+    span {
+        @include font-size("small");
+        display: block;
+        font-weight: 600;
+        text-transform: lowercase;
+    }
+
+    &__image {
+        height: 150px;
+        margin-bottom: 34px;
+
+        &.-space {
+            padding-left: 30px;
+        }
+    }
+}

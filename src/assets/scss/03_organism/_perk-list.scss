@@ -1,0 +1,29 @@
+.o-perk-list {
+    margin: 73px 0 25px;
+
+    .m-perk {
+        @include span-col(12);
+        margin-bottom: 57px;
+
+        @include breakpoints("sm-tablet") {
+            @include span-col(6);
+        }
+
+        @include breakpoints("tablet") {
+            @include span-col(4);
+        }
+
+        h4 {
+            @include font-size(16px);
+            @include line-height(20px);
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-block-start: 0;
+            max-width: 80%;
+        }
+    }
+}

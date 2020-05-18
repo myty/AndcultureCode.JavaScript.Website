@@ -87,7 +87,7 @@ export default (props) => (
                       author
                     }
                     fields {
-                        slug
+                      slug
                     }
                   }
                 }

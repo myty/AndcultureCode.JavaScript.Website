@@ -1,0 +1,30 @@
+.m-career {
+    &__title {
+        @include font-size(28px);
+        text-transform: lowercase;
+    }
+
+    p {
+        &:first-of-type {
+            max-width: 80%;
+        }
+
+        a {
+            @include font-size(20px);
+            display: inline-block;
+            font-family: $font-primary;
+            text-decoration: underline;
+            text-decoration-color: get-color-primary("fresh");
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: get-color-primary("fresh");
+                opacity: 1;
+            }
+
+            + a {
+                margin-left: 29px;
+            }
+        }
+    }
+}

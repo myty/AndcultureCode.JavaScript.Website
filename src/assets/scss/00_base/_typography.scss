@@ -49,7 +49,7 @@ h2 {
 h3 {
     @include font-size("small");
     @include line-height(32px);
-    color: get-color("neutral", "light-gray");
+    color: get-color-primary("after-hours");
 
     @include breakpoints("tablet") {
         @include font-size("medium-large");

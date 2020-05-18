@@ -11,17 +11,75 @@
     }
 
     &__values {
-        @include span-col(7);
-        padding: 89px 0 61px 0;
+        @include span-col(12);
+        padding: 89px 0 80px 0;
+
+        @include breakpoints("sm-tablet") {
+            @include span-col(10);
+        }
+
+        @include breakpoints("tablet") {
+            @include span-col(7);
+        }
 
         h3 {
+            @include font-size(40px);
             margin-bottom: 28px;
             color: get-color-primary("after-hours");
         }
     }
 
     &__heading {
+        @include font-size("base");
+        margin-bottom: 16px;
         color: get-color-primary("fresh-dark");
+        font-family: $font-secondary;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
+    }
+
+    &__full-bleed {
+        margin: 10px 0 77px;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__positions {
+        position: relative;
+
+        h3 {
+            @include span-col(12);
+        }
+
+        > img {
+            height: 325px;
+            position: absolute;
+            right: 175px;
+            top: -125px;
+            z-index: -1;
+        }
+    }
+
+    &__amazing {
+
+        p {
+            @include span-col(12);
+            @include font-size(60px);
+            @include line-height(80px);
+            margin-block-start: 0;
+        }
+    }
+
+    .o-hero {
+        &__right {
+            display: none;
+
+            @include breakpoints("tablet") {
+                display: block;
+            }
+        }
     }
 }

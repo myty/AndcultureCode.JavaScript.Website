@@ -140,11 +140,20 @@ collections:
     label_singular: "Career"
     folder: "src/pages/careers"
     create: true
+    slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careers"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careers-detail-page"}
       - {label: "Create Page", name: "createPage", widget: "hidden", default: true}
-      - {label: "Position", name: "position", widget: "string"}
-      - {label: "Link", name: "position", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - label: "Function"
+        name: "function"
+        widget: "select"
+        options: ["Design", "Engagement", "Engineering", "Partnerships", "Strategy", "UX/HCD"]
+        default: "Design"
+      - {label: "Short Description", name: "description", widget: "string"}
+      - {label: "Application URL", name: "applicationUrl", widget: "string"}
+      - {label: "Active", name: "active", widget: "boolean"}
+      - {label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "code", "link", "bulleted-list", "numbered-list"]}
       - label: "SEO"
         name: "seo"
         widget: "object"
@@ -152,6 +161,39 @@ collections:
          - {label: "Meta Title", name: "metaTitle", widget: "string"}
          - {label: "Meta Description", name: "metaDescription", widget: "string"}
          - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}
+
+  - name: "values"
+    label: "Core Values"
+    label_singular: "Core Value"
+    folder: "src/data/values"
+    create: true
+    identifier_field: "name"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "core-value"}
+      - {label: "Create Page", name: "createPage", widget: "hidden", default: false}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Priority", name: "priority", widget: "number", valueType: "int"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Image"
+        name: "image"
+        widget: "object"
+        fields:
+         - {label: "Source", name: "src", widget: "image"}
+         - {label: "Description", name: "description", widget: "string"}
+         - {label: "Include Space", name: "space", widget: "boolean"}
+
+  - name: "perks"
+    label: "Perks"
+    label_singular: "Perk"
+    folder: "src/data/perks"
+    create: true
+    identifier_field: "name"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "perk"}
+      - {label: "Create Page", name: "createPage", widget: "hidden", default: false}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Priority", name: "priority", widget: "number", valueType: "int"}
+      - {label: "Description", name: "description", widget: "text"}
 
   - name: "pages"
     label: "Pages"
@@ -243,3 +285,23 @@ collections:
              - {label: "Meta Title", name: "metaTitle", widget: "string"}
              - {label: "Meta Description", name: "metaDescription", widget: "string"}
              - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}
+      - file: "src/pages/careers.md"
+        label: "Careers"
+        name: "careers"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careers-page"}
+          - {label: "Create Page", name: "createPage", widget: "hidden", default: true}
+          - {label: Title, name: title, widget: string}
+          - {label: Secondary, name: secondaryTitle, widget: string}
+          - {label: Subtitle, name: subTitle, widget: string}
+          - {label: "Values Heading", name: "valuesTitle", widget: "string"}
+          - {label: "Values Text", name: "valuesText", widget: "text"}
+          - {label: "Position Empty Text", name: "positionEmptyText", widget: "text"}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+             - {label: "Meta Title", name: "metaTitle", widget: "string"}
+             - {label: "Meta Description", name: "metaDescription", widget: "string"}
+             - {label: "Social Sharing Copy", name: "socialShareCopy", widget: "string"}
+

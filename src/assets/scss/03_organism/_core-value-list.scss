@@ -1,0 +1,18 @@
+.o-core-value-list {
+    .m-core-value {
+        @include span-col(12);
+        margin-bottom: 87px;
+
+        @include breakpoints("sm-tablet") {
+            @include span-col(6);
+        }
+
+        @include breakpoints("tablet") {
+            @include span-col(4);
+        }
+
+        p {
+            max-width: 80%;
+        }
+    }
+}

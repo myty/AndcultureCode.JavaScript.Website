@@ -1,0 +1,20 @@
+.o-career-list {
+    margin: 50px 0 125px;
+
+    &__empty {
+        @include span-col(12);
+        margin-block-start: 0;
+
+        @include breakpoints("tablet") {
+            @include span-col(6);
+        }
+    }
+
+    .m-career {
+        @include span-col(12);
+
+        @include breakpoints("tablet") {
+            @include span-col(6);
+        }
+    }
+}
