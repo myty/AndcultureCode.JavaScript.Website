@@ -73,10 +73,7 @@ address {
 }
 
 .p-home {
-
     @include breakpoints("tablet") {
-        // border: 10px solid red;
-
         .o-hero__top,
         .o-hero__subtitles {
             padding-left: 80px;
@@ -96,7 +93,6 @@ address {
     }
 
     @include breakpoints("lg-desktop") {
-
         .o-contact-form__wrapper {
             margin-left: 0;
         }
@@ -106,14 +102,9 @@ address {
             padding-left: 0;
         }
     }
-
-    // @include breakpoints("sm-desktop") {
-    //     border: 1px solid green;
-    // }
 }
 
 .p-interior-page {
-
     .o-hero__top {
         padding-top: 100px;
     }
@@ -123,12 +114,17 @@ address {
     }
 
     @include breakpoints("tablet") {
-
         .o-hero__top,
         .o-hero__subtitles,
         .m-interior-hero,
         .m-contact-info__directions,
-        .m-careers {
+        .m-careers,
+        .p-careers__content > .o-rhythm__row,
+        .o-core-value-list,
+        .p-careers__values,
+        .p-careers__positions > .o-rhythm__row,
+        .p-careers__perks > .o-rhythm__row,
+        .p-careers__amazing > .o-rhythm__row {
             margin-left: 80px;
 
             p {
@@ -147,14 +143,18 @@ address {
     }
 
     @include breakpoints("lg-desktop") {
-
         .o-hero__top,
         .o-hero__subtitles,
         .o-contact-form__wrapper,
         .o-slider,
         .m-contact-info__directions,
         .m-careers,
-        .m-interior-hero {
+        .p-careers__content > .o-rhythm__row,
+        .o-core-value-list,
+        .p-careers__values,
+        .p-careers__positions > .o-rhythm__row,
+        .p-careers__perks > .o-rhythm__row,
+        .p-careers__amazing > .o-rhythm__row {
             margin-left: 0;
         }
     }

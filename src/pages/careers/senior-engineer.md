@@ -18,9 +18,11 @@ You are optimistic, creative, and curious. You demonstrate a hunger for intimacy
 You are well aware that digital experiences and technology are not just a service at Andculture, but our way to help organizations express themselves in the world and deliver their promise seamlessly and elegantly. You ask ‘why’ more often than you say ‘no’. You embrace the power of ‘maybe’ and you thrive when wondering ‘what if’. You are a thought leader and a voracious learner; the first to spot a new trend, consumer behavior, or an emerging technology trend. Yes, it sounds a bit geeky, and that’s a good thing! You know each challenge and problem requires a path of understanding that might not exist (just yet).
 
 **Manifesto: Design function**
+
 Fearlessly design to change the world and culture around us, one experience at a time.
 
 **Strategy:**
+
 Place the human at the center of every experience we create, every brand we deliver, every recommendation we make. Inspire and encourage others to challenge conventions and assumptions, relentlessly looking for the why’s within the why’s until the real questions are found. Answer with roadmaps and strategies that allow elements and solutions to make sense and connect.
 Like all of us at andculture, we really hope you like to do lots of fun, crazy, and exciting things in your life!
 

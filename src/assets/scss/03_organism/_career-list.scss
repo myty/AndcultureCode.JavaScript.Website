@@ -1,5 +1,9 @@
 .o-career-list {
-    margin: 50px 0 125px;
+    margin: 50px 0 15px;
+
+    @include breakpoints("tablet") {
+        margin-bottom: 65px;
+    }
 
     &__empty {
         @include span-col(12);
@@ -12,8 +16,9 @@
 
     .m-career {
         @include span-col(12);
+        margin-bottom: 60px;
 
-        @include breakpoints("tablet") {
+        @include breakpoints("sm-tablet") {
             @include span-col(6);
         }
     }

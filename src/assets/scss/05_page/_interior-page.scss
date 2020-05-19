@@ -16,6 +16,38 @@
         &.-careers {
             margin-bottom: 60px;
 
+            &.-detail {
+                margin-bottom: 0;
+
+                .o-hero__left {
+                    h1 {
+                        text-transform: lowercase;
+                    }
+
+                    h2 {
+                        @include font-size(24px);
+                        @include line-height(38px);
+
+                        @include breakpoints("tablet") {
+                            @include font-size(36px);
+                            @include line-height(50px);
+                        }
+                    }
+                }
+
+                .o-hero__right {
+                    position: relative;
+
+                    img {
+                        margin-top: 0;
+                        width: 70%;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+
             .o-hero__left {
                 @include breakpoints("tablet") {
                     @include span-col(7);

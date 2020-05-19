@@ -51,7 +51,7 @@ const CareersPage = ({ data }) => {
           <section className = "p-careers__full-bleed">
             <img src={ ImageCollaboration } alt="Cross functional collaboration in the River Room" />
           </section>
-          <section className = "o-rhythm__container">
+          <section className = "p-careers__perks o-rhythm__container">
             <div className="o-rhythm__row">
               <h3>andperks</h3>
             </div>

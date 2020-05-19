@@ -30,7 +30,7 @@
     }
 
     &__heading {
-        @include font-size("base");
+        @include font-size(20px);
         margin-bottom: 16px;
         color: get-color-primary("fresh-dark");
         font-family: $font-secondary;
@@ -65,12 +65,55 @@
     }
 
     &__amazing {
-
         p {
             @include span-col(12);
-            @include font-size(60px);
-            @include line-height(80px);
+            @include font-size(30px);
+            @include line-height(40px);
             margin-block-start: 0;
+
+            @include breakpoints("sm-tablet") {
+                @include font-size(40px);
+                @include line-height(60px);
+            }
+
+            @include breakpoints("tablet") {
+                @include font-size(60px);
+                @include line-height(80px);
+            }
+        }
+    }
+
+    &__content {
+        padding-bottom: 75px;
+
+        &__details,
+        &__link {
+            @include span-col(12);
+
+            @include breakpoints("tablet") {
+                @include span-col(10);
+            }
+        }
+
+        &__link {
+            margin-top: 25px;
+
+            a {
+                @include font-size("base");
+                border-bottom: 1px solid get-color-primary("fresh");
+                padding-bottom: 0.2em;
+                color: get-color-primary("after-hours");
+                font-family: $font-secondary;
+                font-weight: 600;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    opacity: 1;
+                    color: get-color-primary("fresh");
+                }
+            }
         }
     }
 
