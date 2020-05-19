@@ -1,4 +1,5 @@
 import React, { useState, useEffect }  from 'react';
+import scrollTo                        from 'gatsby-plugin-smoothscroll';
 import { Helmet }                      from 'react-helmet';
 import Header                          from './molecules/Header';
 import Footer                          from './molecules/Footer';
@@ -47,6 +48,11 @@ const TemplateWrapper = ({
     setMenuToggled(true);
   };
 
+  const scrollToMainContent = (e) => {
+    e.preventDefault();
+    scrollTo("#main-content");
+  };
+
   return (
     <div>
       <Helmet>
@@ -87,7 +93,7 @@ const TemplateWrapper = ({
       <div className={pageClassName ? pageClassName : ""} aria-hidden={menuOpen}>
         <a
           className = "a-skip-link"
-          onClick   = { () => navigate("#main-content") }
+          onClick   = { (e) => scrollToMainContent(e) }
           tabIndex  = "1"
           href      = "#main-content">
           Skip<span> to Main Content</span>

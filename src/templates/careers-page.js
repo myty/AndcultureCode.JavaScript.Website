@@ -1,5 +1,6 @@
 import React              from 'react';
 import { graphql }        from 'gatsby';
+import scrollTo           from 'gatsby-plugin-smoothscroll';
 import Layout             from 'components/Layout';
 import InteriorHero       from 'components/molecules/InteriorHero';
 import CareerList         from 'components/organisms/CareerList';
@@ -10,6 +11,11 @@ import ImageCollage       from 'static/img/careers/collage.jpg';
 import ImageDevelopment   from 'static/img/careers/development.jpg';
 import ImageHero          from 'static/img/careers/grey_x_bg.png';
 import ImageGreyDots      from 'static/img/careers/grey_dots.png';
+
+const scrollToPositions = (e) => {
+  e.preventDefault();
+  scrollTo("#available-positions");
+};
 
 const CareersPage = ({ data }) => {
   const pageData = data.markdownRemark.frontmatter;
@@ -26,13 +32,13 @@ const CareersPage = ({ data }) => {
             title            = { pageData.title }
             subTitle         = { pageData.subTitle }
             modifier         = { "-careers -interior" }>
-            <a href="#">view current job positions</a>
+            <a href="#available-positions" onClick = { (e) => scrollToPositions(e) }>view current job positions</a>
           </InteriorHero>
           <section className = "p-careers__collage o-rhythm__container">
             <img src={ ImageGreyDots } alt="" aria-hidden="true" />
             <img src={ ImageCollage } alt="" aria-hidden="true" />
           </section>
-          <section className = "o-rhythm__container">
+          <section id="main-content" className = "o-rhythm__container">
             <div className="p-careers__values">
               <div className="p-careers__heading">Our Values</div>
               <h3>{ pageData.valuesTitle }</h3>
@@ -54,7 +60,7 @@ const CareersPage = ({ data }) => {
           <section className = "p-careers__full-bleed">
             <img src={ ImageDevelopment } alt="Cross functional pairing between design and engineering" />
           </section>
-          <section className = "p-careers__positions o-rhythm__container">
+          <section id="available-positions" className = "p-careers__positions o-rhythm__container">
             <img src={ ImageGreyDots } alt="" aria-hidden="true" />
             <div className="o-rhythm__row">
               <h3>available positions</h3>

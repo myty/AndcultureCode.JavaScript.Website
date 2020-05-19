@@ -20,6 +20,7 @@ module.exports = {
     'gatsby-plugin-anchor-links',
     'gatsby-plugin-transition-link',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-smoothscroll',
     'gatsby-plugin-sass',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support

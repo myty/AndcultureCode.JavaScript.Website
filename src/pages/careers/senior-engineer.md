@@ -4,8 +4,8 @@ templateKey: careers-detail-page
 title: Senior Engineer
 description: "We’re looking for the dreamers, the endlessly curious, the people who simply don’t believe in the impossible."
 function: Engineering
-active: false
-applicationUrl: "http://www.google.com"
+active: true
+applicationUrl: "https://recruiting.paylocity.com/recruiting/jobs/Apply/281741/andculture-Inc/Senior-Software-Engineer"
 seo:
   metaTitle: careers | andculture
   metaDescription: "Work at andculture, a design company based in Harrisburg, PA"

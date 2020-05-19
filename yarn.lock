@@ -6269,6 +6269,13 @@ gatsby-plugin-sharp@^2.2.9:
     svgo "1.3.2"
     uuid "^3.3.3"
 
+gatsby-plugin-smoothscroll@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-smoothscroll/-/gatsby-plugin-smoothscroll-1.1.0.tgz#c98364e49125dcc87146406db0bc707a413653c7"
+  integrity sha512-htYkMLlTSU4mxGhiXqkDx3M6PBsEjGCEz0GbcsEQ1q6yxMxeyKyr1quLZQdJFGzosIoMe4IS4yLP0L4UsAFdGg==
+  dependencies:
+    smoothscroll-polyfill "^0.4.4"
+
 gatsby-plugin-transition-link@^1.17.7:
   version "1.17.7"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-transition-link/-/gatsby-plugin-transition-link-1.17.7.tgz#59262ba241331f6aed79031849340de725498614"
@@ -13687,6 +13694,11 @@ slugify@^1.3.6:
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.3.6.tgz#ba5fd6159b570fe4811d02ea9b1f4906677638c3"
   integrity sha512-wA9XS475ZmGNlEnYYLPReSfuz/c3VQsEMoU43mi6OnKMCdbnFXd4/Yg7J0lBv8jkPolacMpOrWEaoYxuE1+hoQ==
+
+smoothscroll-polyfill@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/smoothscroll-polyfill/-/smoothscroll-polyfill-0.4.4.tgz#3a259131dc6930e6ca80003e1cb03b603b69abf8"
+  integrity sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg==
 
 snake-case@^2.1.0:
   version "2.1.0"

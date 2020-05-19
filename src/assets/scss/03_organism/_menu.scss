@@ -121,6 +121,10 @@
                 transition-delay: 0.75s, 0.75s;
             }
 
+            &:nth-of-type(4) {
+                transition-delay: 1s, 1s;
+            }
+
             &:hover {
                 opacity: 0.6;
             }
