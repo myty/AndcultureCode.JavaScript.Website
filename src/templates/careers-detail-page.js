@@ -44,7 +44,7 @@ const CareerDetail = ({ data }) => {
             <div className="p-careers__content__link">
               <a
                 href   = { postData.applicationUrl }
-                target = "_blank">> apply for this position</a>
+                target = "_blank">&lt; apply for this position</a>
             </div>
           </div>
         </section>

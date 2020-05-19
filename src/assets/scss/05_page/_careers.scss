@@ -48,6 +48,12 @@
         }
     }
 
+    &__perks {
+        h3 {
+            @include span-col(12);
+        }
+    }
+
     &__positions {
         position: relative;
 
