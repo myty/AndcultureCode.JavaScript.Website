@@ -10,9 +10,5 @@
         @include breakpoints("tablet") {
             @include span-col(4);
         }
-
-        p {
-            max-width: 80%;
-        }
     }
 }

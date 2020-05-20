@@ -1,8 +1,4 @@
 .m-core-value {
-    img {
-        height: 100%;
-    }
-
     span {
         @include font-size("small");
         display: block;
@@ -13,9 +9,30 @@
     &__image {
         height: 150px;
         margin-bottom: 34px;
+        text-align: center;
+
+        @include breakpoints("sm-tablet") {
+            text-align: left;
+        }
 
         &.-space {
-            padding-left: 30px;
+            padding-left: 0;
+
+            @include breakpoints("sm-tablet") {
+                padding-left: 30px;
+            }
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    p {
+        max-width: 100%;
+
+        @include breakpoints("sm-tablet") {
+            max-width: 80%;
         }
     }
 }

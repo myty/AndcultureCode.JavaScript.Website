@@ -50,6 +50,7 @@
 
     &__perks {
         h3 {
+            @include font-size(36px);
             @include span-col(12);
         }
     }
@@ -58,6 +59,7 @@
         position: relative;
 
         h3 {
+            @include font-size(36px);
             @include span-col(12);
         }
 
