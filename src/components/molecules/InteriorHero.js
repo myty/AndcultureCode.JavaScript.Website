@@ -13,10 +13,12 @@ const InteriorHero = (props) => (
             </div>
           </div>
           <div className = "o-hero__right">
-            <img
-              alt         = { props.title }
-              aria-hidden = "true"
-              src         = { props.image } />
+            {props.image &&
+              <img
+                alt         = { props.title }
+                aria-hidden = "true"
+                src         = { props.image } />
+            }
           </div>
         </div>
       </div>
