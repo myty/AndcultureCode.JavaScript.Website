@@ -120,6 +120,7 @@ collections:
       - {label: "Easter Egg", name: "easterEgg", widget: "string"}
       - label: "Author Photo"
         name: "authorPhoto"
+        required: "false"
         widget: "object"
         fields:
          - {label: "Image", name: "image", widget: "image"}
@@ -127,6 +128,7 @@ collections:
       - label: "Social Links"
         label_singular: "Link"
         name: "socialLinks"
+        required: "false"
         widget: "list"
         fields:
         - label: "Platform"
