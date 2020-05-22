@@ -61,6 +61,18 @@
         h3 {
             @include font-size(36px);
             @include span-col(12);
+            margin-bottom: 30px;
+        }
+
+        &__join {
+            p {
+                @include span-col(12);
+                margin-block-start: 0;
+
+                @include breakpoints("tablet") {
+                    @include span-col(6);
+                }
+            }
         }
 
         > img {

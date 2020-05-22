@@ -9,11 +9,7 @@ const CareerList = (props) => {
 
     return (
         <div className="o-career-list o-rhythm__row">
-          {list.length === 0 ?
-            <p className="o-career-list__empty">
-              { props.emptyText }
-            </p>
-            :
+          {
             list.map(({ node: careerItem }, index) => {
               const career = careerItem.frontmatter;
               const slug   = careerItem.fields.slug;

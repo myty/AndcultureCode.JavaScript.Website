@@ -62,15 +62,18 @@ const CareersPage = ({ data }) => {
           </section>
           <section id="available-positions" className = "p-careers__positions o-rhythm__container">
             <img src={ ImageGreyDots } alt="" aria-hidden="true" />
-            <div className="o-rhythm__row">
-              <h3>available positions</h3>
+            <div className="p-careers__positions__join o-rhythm__row">
+              <h3>join us</h3>
+              <p>
+                { pageData.joinUsText }
+              </p>
             </div>
             <CareerList emptyText={ pageData.positionEmptyText } />
           </section>
           <section className = "p-careers__amazing o-rhythm__container">
             <div className="o-rhythm__row">
               <p>
-                let's work together<br />to make something amazing.
+                { pageData.footerTaglineText }
               </p>
             </div>
           </section>
@@ -90,7 +93,8 @@ export const pageQuery = graphql`
         subTitle
         valuesTitle
         valuesText
-        positionEmptyText
+        joinUsText
+        footerTaglineText
         seo {
           metaTitle
           metaDescription
