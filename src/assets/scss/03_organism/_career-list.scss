@@ -5,15 +5,6 @@
         margin-bottom: 65px;
     }
 
-    &__empty {
-        @include span-col(12);
-        margin-block-start: 0;
-
-        @include breakpoints("tablet") {
-            @include span-col(6);
-        }
-    }
-
     .m-career {
         @include span-col(12);
         margin-bottom: 60px;
