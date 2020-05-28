@@ -1,0 +1,110 @@
+.m-work-item {
+    width: 100%;
+    position: relative;
+    font-family: $font-primary;
+    letter-spacing: normal;
+
+    &:not(.-inline):hover {
+        opacity: 1;
+
+        .m-work-item__details h3 {
+            color: get-color-primary("fresh");
+        }
+
+        .m-work-item__image {
+            img.frame {
+                filter: grayscale(0%);
+            }
+        }
+    }
+
+    &.-right {
+        .m-work-item__details {
+            @include push-col(0);
+            text-align: right;
+        }
+
+        .m-work-item__image {
+            text-align: right;
+        }
+    }
+
+    &__image {
+        @include span-col(12);
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        text-align: left;
+
+        @include breakpoints("sm-tablet") {
+            @include span-col(8);
+        }
+
+        img {
+            width: 100%;
+            transition: all 1s ease !important;
+
+            &.client {
+                position: absolute;
+                bottom: 0;
+                z-index: 1;
+            }
+
+            &.frame {
+                filter: grayscale(100%);
+            }
+        }
+    }
+
+    &__details {
+        @include span-col(12);
+        position: relative;
+        margin-top: 25px;
+        text-align: left;
+        align-self: center;
+
+        @include breakpoints("sm-tablet") {
+            @include span-col(4);
+            margin-top: 0;
+        }
+
+        h2 {
+            @include font-size("smallest");
+            margin-top: 10px;
+            color: get-color-primary("after-hours");
+            font-family: $font-secondary;
+            font-weight: 600;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+
+            @include breakpoints("sm-tablet") {
+                margin-top: 0;
+            }
+        }
+
+        h3 {
+            @include font-size(30px);
+            @include line-height(36px);
+            color: get-color-primary("after-hours");
+            margin-block-end: 0;
+            margin-block-start: 0;
+            transition: color 0.3s ease;
+
+            @include breakpoints("sm-tablet") {
+                @include font-size(24px);
+                @include line-height(30px);
+            }
+
+            @include breakpoints("laptop") {
+                @include font-size("medium-large");
+                @include line-height("large");
+            }
+
+            span {
+                box-shadow:
+                    inset 0 -0.15em get-color-primary("white"),
+                    inset 0 -0.2em get-color-primary("fresh");
+            }
+        }
+    }
+}

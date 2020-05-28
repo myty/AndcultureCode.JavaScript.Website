@@ -1,6 +1,6 @@
 import React                    from 'react'
 import { graphql, StaticQuery } from 'gatsby'
-import Work                     from 'components/molecules/Work'
+import WorkItem                 from 'components/molecules/WorkItem'
 
 class WorkList extends React.Component {
   render() {
@@ -12,11 +12,13 @@ class WorkList extends React.Component {
       <div className = "o-work-list">
         {posts &&
           posts.map(({ node: post }, index) => (
-            <Work
-              key   = { index }
-              post  = { post }
-              count = { index + 1 }
-              total = { numberOfPosts } />
+            <WorkItem
+              count       = { index + 1 }
+              imageOnLeft = { (index + 1) % 2 === 0 }
+              key         = { index }
+              post        = { post }
+              total       = { numberOfPosts }
+              url         = { post.fields.slug } />
           ))}
       </div>
     )
@@ -28,7 +30,7 @@ export default () => (
     query={graphql`
       query WorkListQuery {
         allMarkdownRemark(
-          sort: { order: ASC, fields: [frontmatter___date] }
+          sort: { order: ASC, fields: [frontmatter___listOrder] }
           filter: { frontmatter: { templateKey: { eq: "case-studies" } } }
         ) {
           edges {
@@ -62,6 +64,13 @@ export default () => (
                     }
                   }
                 }
+                listImageArtwork {
+                  publicURL
+                }
+                listImageFrame {
+                  publicURL
+                }
+                listOrder
               }
             }
           }

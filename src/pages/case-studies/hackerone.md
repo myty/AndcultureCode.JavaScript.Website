@@ -8,6 +8,9 @@ featuredpost: false
 featuredimage: /img/case-studies/hackerone/home/h1-main.png
 homeimage: /img/case-studies/hackerone/home/h1-main.png
 texture: img/h1-shape.png
+listImageArtwork: /img/work-h1-artwork.png
+listImageFrame: /img/work-h1-frame.gif
+listOrder: 1
 color: '#CA2573'
 heroIntroCopy: Every day seems to bring another headline about a data breach, malware or other security issue affecting companies who build software, people who use software and pretty much anyone on the internet. HackerOne’s clients stay a step ahead of cybercriminals by hiring and paying hackers to find security vulnerabilities before the bad guys do. Three cheers for the good guys!
 tags:

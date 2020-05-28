@@ -2,6 +2,7 @@ import React              from 'react';
 import { graphql }        from 'gatsby';
 import Layout             from 'components/Layout';
 import InteriorHero       from 'components/molecules/InteriorHero';
+import WorkList           from 'components/organisms/WorkList';
 
 const WorkPage = ({ data }) => {
   const pageData = data.markdownRemark.frontmatter;
@@ -17,6 +18,9 @@ const WorkPage = ({ data }) => {
             title            = { pageData.title }
             subTitle         = { pageData.subTitle }
             modifier         = { "-work -interior" } />
+          <div className="o-rhythm__container">
+            <WorkList />
+          </div>
         </main>
       </Layout>
   )

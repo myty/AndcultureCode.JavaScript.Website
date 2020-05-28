@@ -34,6 +34,9 @@ collections:
       - {label: "Home Image", name: "homeimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "List Image Artwork", name: "listImageArtwork", widget: image}
+      - {label: "List Image Frame", name: "listImageFrame", widget: image}
+      - {label: "List Order", name: "listOrder", widget: "number"}
       - label: "SEO"
         name: "seo"
         widget: "object"
