@@ -1,28 +1,33 @@
-import React              from 'react';
-import { graphql }        from 'gatsby';
-import Layout             from 'components/Layout';
-import InteriorHero       from 'components/molecules/InteriorHero';
-import WorkList           from 'components/organisms/WorkList';
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from 'components/Layout';
+import InteriorHero from 'components/molecules/InteriorHero';
+import WorkList from 'components/organisms/WorkList';
+import ClientList from 'components/organisms/ClientList';
 
 const WorkPage = ({ data }) => {
   const pageData = data.markdownRemark.frontmatter;
 
   return (
-      <Layout
-        pageTitle             = "Work"
-        data                  = { pageData }
-        pageClassName         = "p-work"
-        showFooterDividerLine = { true }>
-        <main className = "p-interior-page">
-          <InteriorHero
-            title            = { pageData.title }
-            subTitle         = { pageData.subTitle }
-            modifier         = { "-work -interior" } />
-          <div className="o-rhythm__container">
-            <WorkList />
+    <Layout
+      pageTitle="Work"
+      data={pageData}
+      pageClassName="p-work"
+      showFooterDividerLine={true}>
+      <main className="p-interior-page">
+        <InteriorHero
+          title={pageData.title}
+          subTitle={pageData.subTitle}
+          modifier={"-work -interior"} />
+        <div className="o-rhythm__container">
+          <WorkList />
+          <div className="o-client-list o-rhythm__row">
+            <h2>some of our other friends</h2>
           </div>
-        </main>
-      </Layout>
+          <ClientList />
+        </div>
+      </main>
+    </Layout>
   )
 }
 
