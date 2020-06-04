@@ -7,7 +7,7 @@ date: 2014-01-04T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/kd-main.png
 homeimage: /img/case-studies/kids-discover/home/kd-main.png
-texture: img/kd-shape.png
+texture: /img/kd-shape.png
 listImageArtwork: /img/work-kd-artwork.png
 listImageFrame: /img/work-kd-frame.gif
 listOrder: 5

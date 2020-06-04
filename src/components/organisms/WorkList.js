@@ -1,24 +1,24 @@
-import React                    from 'react'
+import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
-import WorkItem                 from 'components/molecules/WorkItem'
+import WorkItem from 'components/molecules/WorkItem'
 
 class WorkList extends React.Component {
   render() {
-    const { data }         = this.props
+    const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    const numberOfPosts    = posts.length;
+    const numberOfPosts = posts.length;
 
     return (
-      <div className = "o-work-list">
+      <div className="o-work-list">
         {posts &&
           posts.map(({ node: post }, index) => (
             <WorkItem
-              count       = { index + 1 }
-              imageOnLeft = { (index + 1) % 2 === 0 }
-              key         = { index }
-              post        = { post }
-              total       = { numberOfPosts }
-              url         = { post.fields.slug } />
+              count={index + 1}
+              imageOnLeft={(index + 1) % 2 === 0}
+              key={index}
+              post={post}
+              total={numberOfPosts}
+              url={post.fields.slug} />
           ))}
       </div>
     )
@@ -44,9 +44,7 @@ export default () => (
                 title
                 color
                 secondaryLayout
-                texture
                 partnerName
-                modifiedTexture
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
@@ -77,11 +75,11 @@ export default () => (
         }
       }
     `}
-    render = {
+    render={
       (data, count) =>
         <WorkList
-          data  = { data }
-          count = { count } />
+          data={data}
+          count={count} />
     }
   />
 )

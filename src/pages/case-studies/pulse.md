@@ -7,7 +7,7 @@ date: 2020-02-21T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/pulse_book_Pen.png
 homeimage: /img/case-studies/pulse/home/pulse_book_Pen.png
-texture: img/pulse_doodle.png
+texture: /img/pulse_doodle.png
 listImageArtwork: /img/work-pulse-artwork.png
 listImageFrame: /img/work-pulse-frame.gif
 listOrder: 3

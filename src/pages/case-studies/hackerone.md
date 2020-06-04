@@ -7,7 +7,7 @@ date: 2016-01-04T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/case-studies/hackerone/home/h1-main.png
 homeimage: /img/case-studies/hackerone/home/h1-main.png
-texture: img/h1-shape.png
+texture: /img/h1-shape.png
 listImageArtwork: /img/work-h1-artwork.png
 listImageFrame: /img/work-h1-frame.gif
 listOrder: 1

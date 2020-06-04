@@ -1,7 +1,19 @@
 .o-client-list {
-  margin: 32px 0;
+  margin: 32px 0 64px 0;
 
   &__column {
-    @include span-col(2);
+    @include span-col(6);
+
+    @include breakpoints("tablet") {
+      @include span-col(4);
+    }
+
+    @include breakpoints("desktop") {
+      @include span-col(2);
+    }
+
+    img {
+      width: 190px;
+    }
   }
 }

@@ -7,7 +7,7 @@ date: 2017-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/case-studies/CCA_hero_phone.png
 homeimage: /img/case-studies/cca/home/CCA_hero_phone.png
-texture: img/cca-shape-triangle.png
+texture: /img/cca-shape-triangle.png
 listImageArtwork: /img/work-cca-artwork.png
 listImageFrame: /img/work-cca-frame.gif
 listOrder: 2
