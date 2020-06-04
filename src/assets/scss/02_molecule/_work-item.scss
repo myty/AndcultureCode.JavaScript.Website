@@ -12,8 +12,8 @@
         }
 
         .m-work-item__image {
-            img.frame {
-                filter: grayscale(0%);
+            img.client {
+                transform: scale(1.05);
             }
         }
     }
@@ -48,10 +48,8 @@
                 position: absolute;
                 bottom: 0;
                 z-index: 1;
-            }
-
-            &.frame {
-                filter: grayscale(100%);
+                transition: all .5s ease;
+                transform: scale(1);
             }
         }
     }
