@@ -23,8 +23,14 @@ const WorkPage = ({ data }) => {
           modifier={"-work -interior"} />
         <div className="o-rhythm__container">
           <WorkList />
-          <div className="o-client-list o-rhythm__row">
-            <h2>some of our other friends</h2>
+          <div className="p-work__friends o-rhythm__row">
+            <div className="p-work__friends__section">
+              <h2>some of our other friends</h2>
+              <p>
+                Below are a few of our many multi-year client partnerships aligned around
+                driving performance through design — far and wide in both geography and impact.
+              </p>
+            </div>
           </div>
           <ClientList />
         </div>

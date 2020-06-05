@@ -1,3 +1,11 @@
 .p-work {
+  &__friends {
+    &__section {
+      @include span-col(12);
 
+      @include breakpoints("tablet") {
+        @include span-col(8);
+      }
+    }
+  }
 }
