@@ -67,6 +67,32 @@
             }
         }
 
+        &.-work {
+            margin-bottom: 60px;
+
+            .o-hero__left {
+                @include breakpoints("tablet") {
+                    @include span-col(8);
+                }
+
+                .o-hero__titles {
+                    max-width: 100%;
+                }
+            }
+
+            .o-hero__right {
+                @include breakpoints("tablet") {
+                    @include span-col(4);
+                }
+
+                text-align: center;
+
+                img {
+                    margin-top: 142px;
+                }
+            }
+        }
+
         &__titles {
             position: static;
             margin-top: 40px;
