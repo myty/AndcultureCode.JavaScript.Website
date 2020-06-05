@@ -2,7 +2,7 @@
 createPage: true
 templateKey: work-page
 title: one experience at a time
-subTitle: "Building brands, developing new products, removing the barriers to better experiences: all things we do on a daily basis at andculture."
+subTitle: "We solve problems with candid conversations, strategic thinking, and plenty of collaboration. We’re always willing to explore new approaches or re-examine an existing one to uncover new angles. Developers and designers work side by side, dedicated client advisors keep your goals front and center, and UX strategists ensure data-driven decision-making, all with a human-centered design focus. That's how we — alongside our amazing client partners — design the world around us, one experience at a time."
 seo:
   metaTitle: work | andculture
   metaDescription: ""

@@ -1,7 +1,7 @@
 ---
 createPage: true
 templateKey: case-studies
-title: vulnerability + optimism in uncertain times
+title: vulnerability & optimism in uncertain times
 partnerName: PA CareerLink®
 date: 2013-01-03T15:04:10.000Z
 featuredpost: false
