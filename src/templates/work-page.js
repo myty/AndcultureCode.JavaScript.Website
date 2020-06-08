@@ -4,7 +4,7 @@ import Layout from 'components/Layout';
 import InteriorHero from 'components/molecules/InteriorHero';
 import WorkList from 'components/organisms/WorkList';
 import ClientList from 'components/organisms/ClientList';
-import ImageHero from 'static/img/careers/grey_x_bg.png';
+import ImageHero from 'static/img/careers/work_header_image.png';
 
 const WorkPage = ({ data }) => {
   const pageData = data.markdownRemark.frontmatter;
