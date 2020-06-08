@@ -41,6 +41,7 @@
 
     &__image {
         @include span-col(12);
+        margin-bottom: 16px;
         margin-left: 0;
         position: relative;
         z-index: 1;
@@ -49,6 +50,7 @@
 
         @include breakpoints("sm-tablet") {
             @include span-col(8);
+            margin-bottom: 0;
         }
 
         img {
@@ -79,6 +81,7 @@
 
         h2 {
             @include font-size("smallest");
+            @include line-height(14px);
             margin-top: 10px;
             color: get-color-primary("after-hours");
             font-family: $font-secondary;
@@ -87,6 +90,7 @@
             text-transform: uppercase;
 
             @include breakpoints("sm-tablet") {
+                @include line-height(46px);
                 margin-top: 0;
             }
         }
