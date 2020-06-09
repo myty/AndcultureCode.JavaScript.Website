@@ -4,6 +4,11 @@
       @include font-size(65px);
       @include line-height(80px);
     }
+
+    @include breakpoints("lg-desktop") {
+      @include font-size(85px);
+      @include line-height(100px);
+    }
   }
 
   &__friends {
