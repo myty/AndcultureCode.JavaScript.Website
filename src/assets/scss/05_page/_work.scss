@@ -1,4 +1,11 @@
 .p-work {
+  h1 {
+    @include breakpoints("desktop") {
+      @include font-size(65px);
+      @include line-height(80px);
+    }
+  }
+
   &__friends {
     &__section {
       @include span-col(12);
