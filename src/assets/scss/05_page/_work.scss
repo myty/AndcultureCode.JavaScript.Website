@@ -13,6 +13,12 @@
       @include breakpoints("tablet") {
         @include span-col(8);
       }
+
+      h2 {
+        @include breakpoints("lg-desktop") {
+          @include font-size(64px);
+        }
+      }
     }
   }
 

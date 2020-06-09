@@ -93,10 +93,6 @@
                 @include line-height(46px);
                 margin-top: 0;
             }
-
-            @include breakpoints("lg-desktop") {
-                @include font-size(64px);
-            }
         }
 
         h3 {
