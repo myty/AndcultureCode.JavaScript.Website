@@ -52,7 +52,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Create Page", name: "createPage", widget: "hidden", default: true}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Headline", name: "headline", widget: "string", required: "false"}
+      - {label: "Headline", name: "headline", widget: "string", required: false}
       - label: "Author"
         name: "author"
         widget: "relation"
@@ -61,11 +61,11 @@ collections:
         valueField: "name"
         displayField: "name"
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured", name: "featured", widget: "boolean", required: "false"}
+      - {label: "Featured", name: "featured", widget: "boolean", required: false}
       - label: "Featured Color"
         name: "featuredColor"
         widget: "select"
-        required: "false"
+        required: false
         options:
          - { label: "Fresh", value: "-fresh" }
          - { label: "After Hours", value: "-after-hours" }
@@ -80,7 +80,7 @@ collections:
       - label: "Featured Image"
         name: "featuredimage"
         widget: "object"
-        required: "false"
+        required: false
         fields:
          - {label: "Image", name: "image", widget: "image"}
          - {label: "Description", name: "description", widget: "string"}
@@ -123,7 +123,7 @@ collections:
       - {label: "Easter Egg", name: "easterEgg", widget: "string"}
       - label: "Author Photo"
         name: "authorPhoto"
-        required: "false"
+        required: false
         widget: "object"
         fields:
          - {label: "Image", name: "image", widget: "image"}
@@ -131,9 +131,8 @@ collections:
       - label: "Social Links"
         label_singular: "Link"
         name: "socialLinks"
-        required: "false"
+        required: false
         widget: "list"
-        required: "false"
         fields:
         - label: "Platform"
           name: "platform"
@@ -158,7 +157,7 @@ collections:
         default: "Design"
       - {label: "Short Description", name: "description", widget: "string"}
       - {label: "Application URL", name: "applicationUrl", widget: "string"}
-      - {label: "Active", name: "active", widget: "boolean", required: "false"}
+      - {label: "Active", name: "active", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "code", "link", "bulleted-list", "numbered-list"]}
       - label: "SEO"
         name: "seo"
