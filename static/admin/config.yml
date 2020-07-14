@@ -55,11 +55,21 @@ collections:
       - {label: "Headline", name: "headline", widget: "string", required: false}
       - label: "Author"
         name: "author"
-        widget: "relation"
-        collection: "employees"
-        searchFields: ["name", "position"]
-        valueField: "name"
-        displayField: "name"
+        widget: "select"
+        required: true
+        options:
+         - { label: "Andy Shaw", value: "Andy Shaw" }
+         - { label: "Anne Parmer", value: "Anne Parmer" }
+         - { label: "Dominic Prestifilippo", value: "Dominic Prestifilippo" }
+         - { label: "Evan Keller", value: "Evan Keller" }
+         - { label: "Heather Heigel", value: "Heather Heigel" }
+         - { label: "Laura Moyer", value: "Laura Moyer" }
+         - { label: "Lauren McAteer", value: "Lauren McAteer" }
+         - { label: "Madeline Pellman", value: "Madeline Pellman" }
+         - { label: "Mike Koser", value: "Mike Koser" }
+         - { label: "Ryan Eagan", value: "Ryan Eagan" }
+         - { label: "Shane Shearer", value: "Shane Shearer" }
+         - { label: "Winton DeShong", value: "Winton DeShong" }
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured", name: "featured", widget: "boolean", required: false}
       - label: "Featured Color"
@@ -82,8 +92,8 @@ collections:
         widget: "object"
         required: false
         fields:
-         - {label: "Image", name: "image", widget: "image"}
-         - {label: "Description", name: "description", widget: "string"}
+         - {label: "Image", name: "image", widget: "image", required: false}
+         - {label: "Description", name: "description", widget: "string", required: false}
       - label: "Tile Image"
         name: "tileimage"
         widget: "object"
