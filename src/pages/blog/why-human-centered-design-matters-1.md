@@ -7,8 +7,8 @@ date: 2020-05-19T19:03:43.342Z
 featured: false
 featuredColor: '-fresh'
 featuredimage:
-  description: Featured image for why human centered design matters
-  image: /img/post_default_light_6.jpg
+  description: ''
+  image: ''
 tileimage:
   description: Tile image for why human centered design matters
   image: /img/post_default_light_6.jpg
