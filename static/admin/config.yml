@@ -88,25 +88,25 @@ collections:
          - { label: "Center Lane", value: "-center-lane" }
         default: { label: "Fresh", value: "-fresh" }
       - label: "Featured Image"
-        name: "featuredimage"
+        name: "featuredImage"
         widget: "object"
         required: false
         fields:
          - {label: "Image", name: "image", widget: "image", required: false}
          - {label: "Description", name: "description", widget: "string", required: false}
       - label: "Tile Image"
-        name: "tileimage"
+        name: "tileImage"
         widget: "object"
         fields:
          - {label: "Image", name: "image", widget: "image"}
          - {label: "Description", name: "description", widget: "string"}
       - label: "Post Image"
-        name: "postimage"
+        name: "postImage"
         widget: "object"
         fields:
          - {label: "Image", name: "image", widget: "image"}
          - {label: "Description", name: "description", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "code", "link", "heading-three", "quote", "bulleted-list", "numbered-list"]}
+      - {label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "code", "link", "heading-two", "quote", "bulleted-list", "numbered-list"]}
       - label: "Category"
         name: "category"
         widget: "select"
