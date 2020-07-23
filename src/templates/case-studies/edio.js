@@ -88,7 +88,7 @@ const Edio = class extends React.Component {
                 <CustomSlider images={sliderImages} />
                 <CaseStudyContentSection
                     header="mission"
-                    title="we’ve built a platform from the ground up that is built around the needs of the student">
+                    title="we’ve crafted a platform from the ground up that is designed around the needs of the student">
                     <p>Our number one priority was to deliver an experience with the flexibility to customize each student’s curriculum to maximize learning. Understanding that each student learns differently was crucial in developing a learning platform that would allow teachers to accommodate unique learning styles on a case-by-case basis.</p>
                     <p>We found that key relationships between teachers, parents, and administrators are important to a student’s success and we wanted to make sure that was a big part of it. edio’s platform ensures that the student’s support system is accompanying them through the learning journey.</p>
                 </CaseStudyContentSection>
