@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { graphql }                    from 'gatsby';
-import Layout                         from '../components/Layout';
-import CaseStudyHero                  from '../components/molecules/CaseStudyHero';
-import Pulse                          from '../../src/templates/case-studies/pulse';
-import KidsDiscover                   from '../../src/templates/case-studies/kids-discover';
-import CCA                            from '../../src/templates/case-studies/cca';
-import Hackerone                      from '../../src/templates/case-studies/hackerone';
-import PACareerLink                   from '../../src/templates/case-studies/pa-career-link';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import CaseStudyHero from '../components/molecules/CaseStudyHero';
+import Pulse from '../../src/templates/case-studies/pulse';
+import KidsDiscover from '../../src/templates/case-studies/kids-discover';
+import CCA from '../../src/templates/case-studies/cca';
+import Edio from '../../src/templates/case-studies/edio';
+import Hackerone from '../../src/templates/case-studies/hackerone';
+import PACareerLink from '../../src/templates/case-studies/pa-career-link';
 
 export const CaseStudyTemplate = ({
   caseStudyContent,
@@ -14,12 +15,12 @@ export const CaseStudyTemplate = ({
   return (
     <main id="main-content">
       <CaseStudyHero
-          partnerName   = { caseStudyContent.partnerName }
-          color         = { caseStudyContent.color }
-          title         = { caseStudyContent.title }
-          featuredimage = { caseStudyContent.featuredimage }
-          heroIntroCopy = { caseStudyContent.heroIntroCopy }
-          tags          = { caseStudyContent.tags }/>
+        partnerName={caseStudyContent.partnerName}
+        color={caseStudyContent.color}
+        title={caseStudyContent.title}
+        featuredimage={caseStudyContent.featuredimage}
+        heroIntroCopy={caseStudyContent.heroIntroCopy}
+        tags={caseStudyContent.tags} />
       { // if
         caseStudyContent.partnerName === 'Pulse' &&
         <Pulse />
@@ -40,6 +41,10 @@ export const CaseStudyTemplate = ({
         caseStudyContent.partnerName === 'PA CareerLink®' &&
         <PACareerLink />
       }
+      { // if
+        caseStudyContent.partnerName === 'edio' &&
+        <Edio />
+      }
     </main>
   )
 }
@@ -59,16 +64,16 @@ const CaseStudy = ({ data }) => {
   }, [scrollTop]);
 
   return (
-      <Layout
-        pageTitle = { post.frontmatter.partnerName }
-        data      = { post.frontmatter }
-        scrollTop = { scrollTop }>
-        <div className = "p-interior-page">
-          <CaseStudyTemplate
-            html = { post.html }
-            caseStudyContent = { post.frontmatter }/>
-        </div>
-      </Layout>
+    <Layout
+      pageTitle={post.frontmatter.partnerName}
+      data={post.frontmatter}
+      scrollTop={scrollTop}>
+      <div className="p-interior-page">
+        <CaseStudyTemplate
+          html={post.html}
+          caseStudyContent={post.frontmatter} />
+      </div>
+    </Layout>
   )
 }
 
