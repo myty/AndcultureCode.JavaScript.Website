@@ -486,7 +486,8 @@
             };
         }
 
-        &.-cca {
+        &.-cca,
+        &.-edio {
             background: get-color("secondary", "violet");
             padding: 80px 0;
 
@@ -513,6 +514,62 @@
                         left: auto;
                         max-width: 100%;
                     }
+                }
+            }
+        }
+
+        &.-edio {
+            @include breakpoints("tablet") {
+                padding: 0;
+            }
+
+            @include breakpoints("lg-laptop") {
+                padding: 60px 0;
+            }
+
+            .-background-texture {
+                &.-triangle {
+                    right: 54px;
+                    top: -18px;
+                    display: none;
+                    transform: rotate(10deg);
+
+                    @include breakpoints("laptop") {
+                        display: block;
+                    }
+                }
+
+                &.-dots-small {
+                    right: 54px;
+                    bottom: -132px;
+                    display: none;
+
+                    @include breakpoints("laptop") {
+                        display: block;
+                    }
+                }
+
+                &.-plant {
+                    display: none;
+                    top: 64px;
+                    max-width: 25%;
+
+                    @include breakpoints("laptop") {
+                        display: block;
+                    }
+                }
+            }
+
+            .m-case-study-page-content__copy-section {
+                padding-top: 0;
+
+                @include breakpoints("sm-tablet") {
+                    @include span-col(10);
+                    @include push-col(1);
+                }
+
+                @include breakpoints("tablet") {
+                    padding: 60px 0 120px 0;
                 }
             }
         }
@@ -864,6 +921,26 @@
                     @include push-col(1);
                     margin-bottom: 0;
                 }
+
+                &.-edio {
+                    ul {
+                        display: none;
+                        list-style-type: none;
+                        margin: 100px 0 0 0;
+                        padding: 0;
+
+                        @include breakpoints("desktop") {
+                            display: block;
+                        }
+
+                        li {
+                            @include font-size(36px);
+                            @include line-height(60px);
+                            color: #FDDF58;
+                            text-align: right;
+                        }
+                    }
+                }
             }
 
             &__image {
@@ -915,6 +992,36 @@
 
                 p:first-of-type {
                     margin-top: 0;
+                }
+
+                ul.-no-bullets {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        font-weight: bold;
+                        margin-bottom: 24px;
+                        padding-left: 0;
+                        padding-top: 0;
+
+                        @include breakpoints("desktop") {
+                            @include line-height(60px);
+                            margin-bottom: 0;
+                            padding-left: 16px;
+                            padding-top: 1px;
+                        }
+
+                        .edio-numbers {
+                            @include font-size(36px);
+                            display: block;
+                            color: #FDDF58;
+
+                            @include breakpoints("desktop") {
+                                display: none;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1076,7 +1183,8 @@
             }
         }
 
-        &.-cca {
+        &.-cca,
+        &.-edio {
 
             a.a-button {
                 color: get-color-casestudies("cca");

@@ -11,7 +11,7 @@ import whiteSketches from '../../../static/img/case-studies/pulse/white_sketches
 import safariImg from '../../../static/img/case-studies/pulse/unit-workload-safari.png';
 import doodleImg from '../../../static/img/case-studies/pulse/pulse_block_doodle.jpg';
 import dataImg from '../../../static/img/case-studies/pulse/data-leveling.png';
-import nextImg from '../../../static/img/case-studies/career-link/woman_iPad.jpg';
+import nextImg from '../../../static/img/case-studies/edio/edio-hero.png';
 
 const Pulse = class extends React.Component {
     constructor(props) {
@@ -116,7 +116,7 @@ const Pulse = class extends React.Component {
                     <p>We had initial user feedback, plus data, and now we could update the platform design. We tweaked how the info was presented and modified the navigation. Charts were added to make the experience more comprehensive; you really could get a sense of how the entire hospital operated.</p>
                     <p>We didn’t veer off our initial guiding principles. We just worked with our partner to evolve the system into an even more effective version to address their problem.</p>
                 </CaseStudyContentSection>
-                <div className="m-case-study-page-content__next m-case-study -career-link">
+                <div className="m-case-study-page-content__next m-case-study -edio">
                     <div className="-background-image__container">
                         <div
                             style={nextImageBlockStyle}
@@ -124,9 +124,9 @@ const Pulse = class extends React.Component {
                         </div>
                     </div>
                     <div className="-content">
-                        <div className="m-case-study__header">PA CareerLink®</div>
-                        <p>vulnerability and optimism in uncertain times</p>
-                        <a href="/case-studies/pa-career-link/" className="a-button">See Next Case Study</a>
+                        <div className="m-case-study__header">edio</div>
+                        <p>education that fits the student, not the system</p>
+                        <a href="/case-studies/edio/" className="a-button">See Next Case Study</a>
                     </div>
                 </div>
             </div>
