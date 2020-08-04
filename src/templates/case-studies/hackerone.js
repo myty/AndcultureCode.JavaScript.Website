@@ -62,7 +62,7 @@ const Hackerone = class extends React.Component {
                 <CaseStudyBodyIntro
                     copy            = "To that end, they put a lot of energy into being “the” community for hackers, in order to be the best platform for hiring hacker-powered security. Hackers live on the bleeding edge, fueled by different motivations, coming to HackerOne both for money and for the challenge. How does HackerOne stay fresh, continue to engage and keep the best coming back for more?"
                     copyEasterEgg   = "Not surprisingly, HackerOne wants to work with the best hackers, wherever they are."
-                    easterEgg       = "Turns out that’s a pretty broad geography— 170 countries and counting."
+                    easterEgg       = "Turns out that’s a pretty broad geography — 170 countries and counting."
                     title           = "what was HackerOne's reality?" />
                 <div className = "m-case-study-page-content__pull-scroll">
                     <PullScroller />
