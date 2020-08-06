@@ -68,7 +68,7 @@ const Pulse = class extends React.Component {
                     title="what’s the common thread we’re seeing?">
                     <p>What kind of issues do all of these nurse managers have? The Synthesis stage makes it clear what’s a shared pain and what’s an isolated incident.</p>
                     <p>We pinned interview profiles on a wall and highlighted answers that point to those shared pain points. At the same time, we mapped out PinnacleHealth’s processes, too, so it was a tangible system and not just a set of technical paragraphs in a dusty binder.</p>
-                    <p>With all of that together, we went over our research and sketches to come up with guiding principles and design constraints—here’s what’s important, and here’s what we have to work with. Having a partnership approach helps immensely here to make sure there aren’t unrealistic expectations or missed goals.</p>
+                    <p>With all of that together, we went over our research and sketches to come up with guiding principles and design constraints — here’s what’s important, and here’s what we have to work with. Having a partnership approach helps immensely here to make sure there aren’t unrealistic expectations or missed goals.</p>
                 </CaseStudyContentSection>
                 <CaseStudyFullBleedImage
                     altText="Nurse Station"
@@ -104,7 +104,7 @@ const Pulse = class extends React.Component {
                     header="Next Steps"
                     title="priorities and process moving forward the system to increase effectiveness">
                     <p>Can we be candid? It was pretty f’ing cool to see the positive reaction of hard-working nurse managers knowing their job was made easier. But we weren’t done yet. Beyond the initial feedback, we needed to understand what was a functional priority for continued effectiveness, and what was simply additional value.</p>
-                    <p>We didn’t want to lose a single valuable suggestion—all of those interviews matter—as these help us explore future feature expansions. It’s an ongoing process.</p>
+                    <p>We didn’t want to lose a single valuable suggestion — all of those interviews matter — as these help us explore future feature expansions. It’s an ongoing process.</p>
                     <p>We’re not just dropping something we created in your lap and saying “best of luck!” That’s not a partnership. That’s a mother-in-law.</p>
                 </CaseStudyContentSection>
                 <CaseStudyFullBleedImage

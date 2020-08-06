@@ -141,7 +141,7 @@ const CCA = class extends React.Component {
                             <div className = "o-rhythm__row">
                                 <div className = "content__header -desktop-only">Deployment &amp; Testing</div>
                                 <div className = "content__copy">
-                                    <p>Together with our partner, we launched CCA’s full website in May 2016. This included an integrated development platform so CCA can manage content and build new pieces—the keys to the coupe. We decked the platform out with customized features and integrations because that’s what CCA needs to stay current.</p>
+                                    <p>Together with our partner, we launched CCA’s full website in May 2016. This included an integrated development platform so CCA can manage content and build new pieces — the keys to the coupe. We decked the platform out with customized features and integrations because that’s what CCA needs to stay current.</p>
                                     <p>What else?</p>
                                     <ul>
                                         <li>Mobile-responsive</li>
