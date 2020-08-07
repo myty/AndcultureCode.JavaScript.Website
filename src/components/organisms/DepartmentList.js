@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-// import Perk from "components/molecules/Perk";
+import Department from "components/molecules/Department";
 
 const DepartmentList = (props) => {
   const { data } = props;
@@ -13,11 +13,12 @@ const DepartmentList = (props) => {
           const department = departmentItem.frontmatter;
 
           return (
-          <>
-            <p>{department.name}</p>
-            <p>{department.description}</p>
-            <p>{department.rolesList}</p>
-          </>
+          <Department
+            name = { department.name }
+            description = { department.description }
+            rolesList = { department.rolesList }
+            image = { department.deptImg }
+          />
           );
         })}
     </div>
@@ -42,6 +43,7 @@ export default (props) => (
                 name
                 description
                 rolesList
+                deptImg
               }
             }
           }
