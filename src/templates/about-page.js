@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import AboutHero from 'components/molecules/AboutHero';
+import DepartmentList from 'components/organisms/DepartmentList';
 
 import '../assets/scss/app.scss';
 
@@ -19,6 +20,7 @@ const AboutPage = ({ data }) => {
           title={pageData.title}
           subTitle={pageData.secondaryTitle}
           modifier={""} />
+        <DepartmentList />
       </main>
     </Layout>
   )
