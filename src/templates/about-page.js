@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
-import InteriorHero from 'components/molecules/InteriorHero';
+import AboutHero from 'components/molecules/AboutHero';
+import DepartmentList from 'components/organisms/DepartmentList';
 
 import '../assets/scss/app.scss';
 
@@ -14,11 +15,12 @@ const AboutPage = ({ data }) => {
       data={pageData}
       pageClassName="p-careers"
       showFooterDividerLine={false}>
-      <main className="p-interior-page">
-        <InteriorHero
+      <main className="p-interior-page p-about">
+        <AboutHero
           title={pageData.title}
-          subTitle={pageData.subTitle}
-          modifier={"-interior"} />
+          subTitle={pageData.secondaryTitle}
+          modifier={""} />
+        <DepartmentList />
       </main>
     </Layout>
   )
@@ -32,7 +34,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         secondaryTitle
-        subTitle
+        introTextOne
+        introTextTwo
         seo {
           metaTitle
           metaDescription

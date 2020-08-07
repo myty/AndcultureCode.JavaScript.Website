@@ -1,0 +1,14 @@
+.p-about {
+
+  #greeting {
+    color: get-color("primary", "fresh");
+    margin-bottom: 40px;
+    @include font-size("medium-large");
+    @include line-height(46px);
+
+    @include breakpoints("tablet") {
+        @include font-size("larger");
+        @include line-height("larger");
+    }
+  }
+}
