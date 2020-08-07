@@ -16,6 +16,7 @@ const DepartmentList = (props) => {
           <>
             <p>{department.name}</p>
             <p>{department.description}</p>
+            <p>{department.rolesList}</p>
           </>
           );
         })}
@@ -40,6 +41,7 @@ export default (props) => (
               frontmatter {
                 name
                 description
+                rolesList
               }
             }
           }
