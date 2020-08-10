@@ -5,16 +5,25 @@ import Department from "components/molecules/Department";
 const DepartmentList = (props) => {
   const { data } = props;
   const { edges: list } = data.allMarkdownRemark;
+  let imgOnLeft = false;
+  let modifier = "";
 
   return (
     <div className="">
       {list &&
         list.map(({ node: departmentItem }, index) => {
+          imgOnLeft = !imgOnLeft;
+          if (imgOnLeft) {
+            modifier = " img-on-left"
+          } else {
+            modifier = ""
+          }
           const department = departmentItem.frontmatter;
 
           return (
             <Department
               department = {department}
+              modifier = {modifier}
             />
           );
         })}
