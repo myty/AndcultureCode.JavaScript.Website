@@ -1,17 +1,11 @@
-.m-blog-homepage {
+.o-from-our-blog__container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
     a {
         color: get-color-primary("after-hours");
         font-family: $font-primary;
         text-decoration: underline;
         text-decoration-color: get-color-primary("fresh");
-    }
-
-    p.blog-author {
-        text-transform: lowercase;
-    }
-
-    h3.blog-category {
-        color: get-color-neutral("light-gray");
-        text-transform: uppercase;
     }
 }

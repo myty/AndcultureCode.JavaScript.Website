@@ -3,6 +3,8 @@
     flex-direction: column;
     background-color: get-color-primary("fog");
     color: get-color-primary("after-hours-light");
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
     a {
         color: get-color-primary("after-hours");

@@ -1,12 +1,13 @@
 import React from "react";
 
-const HomeRedesignFuture = (props) => (
-    <div className="o-rhythm__container">
-        <div className="o-learn-about-us__container ">
+const RedesignFuture = (props) => (
+    <div className="o-redesign-future__container">
+        <div className="o-rhythm__container">
             <h2>
                 andculture has been using human-centered design to align people, processes and technology to reinvent
                 realities for 20+ years.
             </h2>
+            <br />
             <h2>
                 <strong>We want to redesign the future with you.</strong>
             </h2>
@@ -14,4 +15,4 @@ const HomeRedesignFuture = (props) => (
     </div>
 );
 
-export default HomeRedesignFuture;
+export default RedesignFuture;

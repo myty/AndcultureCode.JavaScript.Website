@@ -3,7 +3,7 @@ import React from "react";
 import postImgTemp from "../../../static/img/blog/blog_brewing_post.jpg";
 
 const BlogHomepagePost = (props) => (
-    <div className="p-blog-homepage">
+    <div className="m-blog-homepage">
         {/* <PreviewCompatibleImage imageInfo={("todo alt text", "", "../../../static/img/blog/blog_brewing_post.jpg")} /> */}
         <img
             alt={props.blogItem.frontmatter.title}
