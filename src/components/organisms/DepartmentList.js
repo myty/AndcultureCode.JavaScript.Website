@@ -13,12 +13,9 @@ const DepartmentList = (props) => {
           const department = departmentItem.frontmatter;
 
           return (
-          <Department
-            name = { department.name }
-            description = { department.description }
-            rolesList = { department.rolesList }
-            image = { department.deptImg }
-          />
+            <Department
+              department = {department}
+            />
           );
         })}
     </div>
@@ -43,7 +40,15 @@ export default (props) => (
                 name
                 description
                 rolesList
-                deptImg
+                deptImg {
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 1920, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
               }
             }
           }

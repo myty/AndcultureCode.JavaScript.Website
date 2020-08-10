@@ -3,9 +3,9 @@ import React from "react";
 const Department = (props) => {
   let className = "";
 
-  if (props.image === undefined) {
-    className = "-no-image";
-  }
+  // if (props.department.deptImg === undefined) {
+  //   className = "-no-image";
+  // }
 
   return (
     <div className={`${props.modifier} ${className}`}>
@@ -14,19 +14,23 @@ const Department = (props) => {
           <div className="o-rhythm__row">
             <div className="o-hero__left">
               <div className="o-hero__titles">
-                <h2>{props.name}</h2>
-                <p>{props.description}</p>
+                <h2>{props.department.name}</h2>
+                <p>{props.department.description}</p>
                 <ul>
-                  {props.rolesList &&
-                    props.rolesList.map((role) => {
+                  {props.department.rolesList &&
+                    props.department.rolesList.map((role) => {
                       return <li>{role}</li>;
                     })}
                 </ul>
               </div>
             </div>
-            {props.image && (
+            {props.department.deptImg && (
               <div className="o-hero__right">
-                <img alt={props.name + " illustration"} aria-hidden="true" src={props.image} />
+                <img
+                  alt={props.department.name + " illustration"}
+                  aria-hidden="true"
+                  src={props.department.deptImg.childImageSharp.fluid.src}
+                />
               </div>
             )}
           </div>

@@ -223,7 +223,7 @@ collections:
       - {label: "Priority", name: "priority", widget: "number", valueType: "int"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Roles", name: "rolesList", widget: "list"}
-      - {label: "Department Illustration", name: "deptImg", widget: string}
+      - {label: "Department Illustration", name: "deptImg", widget: image}
 
 
   - name: "pages"
