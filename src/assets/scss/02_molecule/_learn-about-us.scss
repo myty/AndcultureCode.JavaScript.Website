@@ -1,0 +1,13 @@
+.o-learn-about-us__container {
+    display: flex;
+    flex-direction: column;
+    background-color: get-color-primary("fog");
+    color: get-color-primary("after-hours-light");
+
+    a {
+        color: get-color-primary("after-hours");
+        font-family: $font-primary;
+        text-decoration: underline;
+        text-decoration-color: get-color-primary("fresh");
+    }
+}

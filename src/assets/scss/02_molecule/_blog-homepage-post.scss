@@ -1,0 +1,16 @@
+.p-blog-homepage {
+    a {
+        color: get-color-primary("after-hours");
+        font-family: $font-primary;
+        text-decoration: underline;
+        text-decoration-color: get-color-primary("fresh");
+    }
+
+    p.blog-author {
+        text-transform: lowercase;
+    }
+
+    h3.blog-category {
+        text-transform: uppercase;
+    }
+}
