@@ -41,11 +41,9 @@ export default (props) => (
                 description
                 rolesList
                 deptImg {
-                  image {
-                    childImageSharp {
-                      fluid(maxWidth: 1920, quality: 100) {
-                        ...GatsbyImageSharpFluid
-                      }
+                  childImageSharp {
+                    fluid(maxWidth: 1920, quality: 100) {
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }
