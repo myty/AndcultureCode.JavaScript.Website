@@ -11,4 +11,30 @@
         @include line-height("larger");
     }
   }
+
+  .no-dot {
+    padding-left: 0;
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+  .p-about__illustration {
+    display: flex;
+
+    img {
+      align-self: center;
+      max-width: 84%;
+    }
+  }
+
+  .img-on-left {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .extra-padding-w-img-on-left {
+      padding-left: 22px;
+    }
+  }
 }

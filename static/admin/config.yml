@@ -222,12 +222,9 @@ collections:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Priority", name: "priority", widget: "number", valueType: "int"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Roles", name: "roles", widget: "list"}
-      - label: "Image"
-        name: "image"
-        widget: "object"
-        fields:
-        - {label: "Source", name: "src", widget: "image"}
+      - {label: "Roles", name: "rolesList", widget: "list"}
+      - {label: "Department Illustration", name: "deptImg", widget: image}
+
 
   - name: "pages"
     label: "Pages"

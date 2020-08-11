@@ -1,22 +1,30 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-// import Perk from "components/molecules/Perk";
+import Department from "components/molecules/Department";
 
 const DepartmentList = (props) => {
   const { data } = props;
   const { edges: list } = data.allMarkdownRemark;
+  let imgOnLeft = false;
+  let modifier = "";
 
   return (
     <div className="">
       {list &&
         list.map(({ node: departmentItem }, index) => {
+          imgOnLeft = !imgOnLeft;
+          if (imgOnLeft) {
+            modifier = " img-on-left"
+          } else {
+            modifier = ""
+          }
           const department = departmentItem.frontmatter;
 
           return (
-          <>
-            <p>{department.name}</p>
-            <p>{department.description}</p>
-          </>
+            <Department
+              department = {department}
+              modifier = {modifier}
+            />
           );
         })}
     </div>
@@ -40,6 +48,14 @@ export default (props) => (
               frontmatter {
                 name
                 description
+                rolesList
+                deptImg {
+                  childImageSharp {
+                    fluid(maxWidth: 1920, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
