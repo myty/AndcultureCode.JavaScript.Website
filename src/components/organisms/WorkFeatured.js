@@ -4,33 +4,30 @@ import { graphql, StaticQuery } from "gatsby";
 const WorkFeatured = React.forwardRef((props, ref) => {
     const { data } = props;
     const { edges: list } = data.allMarkdownRemark;
-    return (
-        <>
-            {list &&
-                list.map(({ node: caseStudyItem }, index) => {
-                    const caseStudy = caseStudyItem.frontmatter;
-                    const slug = caseStudyItem.fields.slug;
+    const featuredWorkCount = list.length;
+    let featuredWork = {};
+    let featuredWorkUrl = "";
 
-                    return (
-                        <div className="o-work-featured__container">
-                            <div className="o-rhythm__container">
-                                <div className = "o-work-featured__image-container">
-                                    <img
-                                        src={caseStudy.featuredimage.childImageSharp.fluid.src}
-                                        alt=""
-                                    />
-                                </div>
-                                <div className = "o-work-featured__content">
-                                    <h2 className="featured-work-title">FEATURED WORK: {caseStudy.partnerName}</h2>
-                                    <p>{caseStudy.title}</p>
-                                    <a href={slug}>VIEW CASE STUDY</a>
-                                    <a href="/work/">SEE ALL WORK</a>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
-        </>
+    if (featuredWorkCount === 1) {
+        featuredWork = list[0].node.frontmatter;
+        featuredWorkUrl = list[0].node.fields.slug;
+    }
+
+    return (
+        <div 
+        className="o-work-featured__container">
+            <div className="o-rhythm__container">
+                <div className="o-work-featured__image-container">
+                    <img src={featuredWork.featuredimage.childImageSharp.fluid.src} alt="" />
+                </div>
+                <div className="o-work-featured__content">
+                    <h2 className="featured-work-title">FEATURED WORK: {featuredWork.partnerName}</h2>
+                    <p>{featuredWork.title}</p>
+                    <a href={featuredWorkUrl}>VIEW CASE STUDY</a>
+                    <a href="/work/">SEE ALL WORK</a>
+                </div>
+            </div>
+        </div>
     );
 });
 
@@ -52,15 +49,12 @@ export default React.forwardRef((props, ref) => (
                             frontmatter {
                                 author
                                 featuredimage {
-                                    #image {
-                                        childImageSharp {
-                                            fluid(maxWidth: 1920, quality: 100) {
-                                              ...GatsbyImageSharpFluid
-                                            }
+                                    childImageSharp {
+                                        fluid(maxWidth: 1920, quality: 100) {
+                                            ...GatsbyImageSharpFluid
                                         }
-                                    #}
+                                    }
                                 }
-                                # featuredColor
                                 partnerName
                                 title
                             }
