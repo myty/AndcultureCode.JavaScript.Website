@@ -13,11 +13,11 @@ const AboutPage = ({ data }) => {
     <Layout
       pageTitle="About"
       data={pageData}
-      pageClassName="p-careers"
+      pageClassName="p-about"
       showFooterDividerLine={false}>
       <main className="p-interior-page p-about">
         <AboutHero
-          title={pageData.title}
+          title={pageData.title} // TODO ADD CARET BACKGROUND
           subTitle={pageData.secondaryTitle}
           modifier={""} />
         <DepartmentList />

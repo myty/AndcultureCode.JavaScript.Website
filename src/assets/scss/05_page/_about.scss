@@ -1,5 +1,42 @@
 .p-about {
 
+  .department-list {
+    padding-bottom: 0px;
+  }
+  .o-hero__top {
+    padding-top: 50px;
+  }
+
+  @include breakpoints ("tablet"){
+    .department-list {
+      padding-bottom: 100px;
+    }
+    .o-hero__top {
+      padding-top: 100px;
+    }
+    .o-hero__titles {
+      margin-left: 30px;
+      margin-right: 0px;
+    }
+    .img-on-right {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .o-hero__titles {
+        margin-right: 30px;
+        margin-left: 0px;
+      }
+    }
+    .dept-description {
+      margin-right: 0px !important;
+    }
+  }
+
+  .o-hero__left {
+    align-items: center;
+    display: flex;
+  }
+
   #greeting {
     color: get-color("primary", "fresh");
     margin-bottom: 40px;
@@ -23,19 +60,14 @@
 
   .p-about__illustration {
     display: flex;
+    justify-content: center;
 
     img {
       align-self: center;
-      max-width: 84%;
-    }
-  }
-
-  .img-on-left {
-    display: flex;
-    flex-direction: row-reverse;
-
-    .extra-padding-w-img-on-left {
-      padding-left: 22px;
+      max-width: 75%;
+      @include breakpoints("tablet") {
+        max-width: 100%;
+      }
     }
   }
 }

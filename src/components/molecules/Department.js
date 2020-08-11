@@ -12,18 +12,6 @@ const Department = (props) => {
       <div className="o-rhythm__container">
         <div className="o-hero__top">
           <div className={`o-rhythm__row ${props.modifier}`}>
-            <div className={`o-hero__left extra-padding-w-img-on-left`}>
-              <div className="o-hero__titles">
-                <h2>{props.department.name}</h2>
-                <p>{props.department.description}</p>
-                <ul className="no-dot">
-                  {props.department.rolesList &&
-                    props.department.rolesList.map((role) => {
-                      return <li>{role}</li>;
-                    })}
-                </ul>
-              </div>
-            </div>
             {props.department.deptImg && (
               <div className="o-hero__right p-about__illustration">
                 <img
@@ -33,6 +21,20 @@ const Department = (props) => {
                 />
               </div>
             )}
+            <div className={`o-hero__left ${props.modifier}`}>
+              <div className="o-hero__titles">
+                <h2>{props.department.name}</h2>
+                <p className="dept-description">
+                  {props.department.description}
+                </p>
+                <ul className="no-dot">
+                  {props.department.rolesList &&
+                    props.department.rolesList.map((role) => {
+                      return <li>{role}</li>;
+                    })}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
