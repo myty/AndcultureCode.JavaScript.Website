@@ -13,7 +13,7 @@ const Department = (props) => {
         <div className="o-hero__top">
           <div className={`o-rhythm__row ${props.modifier}`}>
             {props.department.deptImg && (
-              <div className="o-hero__right p-about__illustration">
+              <div className="o-hero__side-two p-about__illustration">
                 <img
                   alt={props.department.name + " illustration"}
                   aria-hidden="true"
@@ -21,7 +21,7 @@ const Department = (props) => {
                 />
               </div>
             )}
-            <div className={`o-hero__left ${props.modifier}`}>
+            <div className={`o-hero__side-one ${props.modifier}`}>
               <div className="o-hero__titles">
                 <h2>{props.department.name}</h2>
                 <p className="dept-description">
