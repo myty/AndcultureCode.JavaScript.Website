@@ -17,6 +17,7 @@ const FromOurBlog = React.forwardRef((props, ref) => {
 
                         return (
                             <BlogHomepagePost
+                                key={`blog-homepage-post-${index}`}
                                 url={slug}
                                 linkText={blog.title}
                                 author={blog.author}
