@@ -1,0 +1,63 @@
+.o-work-featured {
+    &__container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background-color: get-color-secondary("violet");
+        color: get-color-primary("white");
+
+        a {
+            color: get-color-primary("white");
+            font-family: $font-primary;
+            text-decoration: underline;
+            text-decoration-color: get-color-primary("fresh");
+        }
+
+        .featured-work-title{
+            color: get-color-neutral("lighter-gray");
+            text-transform: uppercase;
+        }
+    }
+
+    &__image-container {
+        width: 100%;
+        float: none;
+        position: relative;
+        margin-bottom: 40px;
+
+        @include breakpoints("tablet") {
+            width: calc(50% - 62px);
+            float: left;
+            margin-right: 64px;
+            margin-bottom: 0;
+        }
+
+        @include breakpoints("sm-desktop") {
+            margin-bottom: 0;
+            width: 50%;
+            float: left;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        float: none;
+
+        &-inner {
+
+            @include breakpoints("tablet") {
+                //padding-left: 80px;
+                //padding-right: 50px;
+            }
+
+            @include breakpoints("lg-desktop") {
+                //padding-left: 0;
+                //padding-right: 100px;
+            }
+        }
+
+        @include breakpoints("tablet") {
+            width: 50%;
+            float: right;
+        }
+    }
+}

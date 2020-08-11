@@ -12,6 +12,7 @@ import Hero from '../components/molecules/Hero';
 import FromOurBlog from '../components/organisms/FromOurBlog';
 import LearnAboutUs from '../components/molecules/LearnAboutUs';
 import RedesignFuture from '../components/molecules/RedesignFuture';
+import WorkFeatured from '../components/organisms/WorkFeatured';
 gsap.registerPlugin(TimelineMax);
 gsap.registerPlugin(Power1);
 
@@ -21,6 +22,7 @@ export const IndexPageTemplate = ({ title, secondaryTitle, subTitle, scrollTop }
                <Hero scrollTop={scrollTop} title={title} secondaryTitle={secondaryTitle} subTitle={subTitle} />
                <section id="main-content">
                    <RedesignFuture />
+                   <WorkFeatured />
                    <FromOurBlog />
                    <LearnAboutUs />
                    <ContactForm />

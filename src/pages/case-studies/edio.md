@@ -4,7 +4,7 @@ templateKey: case-studies
 title: education that fits the student, not the system
 partnerName: edio
 date: 2013-01-02T15:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/case-studies/edio/edio-hero.png
 homeimage: /img/case-studies/edio/edio-hero-revised.png
 texture: img/cca-shape-triangle.png

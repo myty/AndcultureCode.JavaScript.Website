@@ -3,32 +3,31 @@ import { graphql, StaticQuery } from "gatsby";
 import BlogHomepagePost from "../molecules/BlogHomepagePost";
 
 const FromOurBlog = React.forwardRef((props, ref) => {
-      const { data } = props;
-  const { edges: list } = data.allMarkdownRemark;
+    const { data } = props;
+    const { edges: list } = data.allMarkdownRemark;
     return (
         <div className="o-from-our-blog__container">
-                    <div className="o-rhythm__container">
-            <h2>from our blog</h2>
-            <a href="/blog">VIEW ALL POSTS</a>
-            {list &&
-                list.map(({ node: blogItem }, index) => {
-                    const blog = blogItem.frontmatter;
-                    const slug = blogItem.fields.slug;
+            <div className="o-rhythm__container">
+                <h2>from our blog</h2>
+                <a href="/blog/">VIEW ALL POSTS</a>
+                {list &&
+                    list.map(({ node: blogItem }, index) => {
+                        const blog = blogItem.frontmatter;
+                        const slug = blogItem.fields.slug;
 
-                    return (
-                        <BlogHomepagePost
-                            url={slug}
-                            linkText={blog.title}
-                            author={blog.author}
-                            category={blog.category}
-                            blogItem={blogItem}
-                        />
-                    );
-                })}
-                </div>
+                        return (
+                            <BlogHomepagePost
+                                url={slug}
+                                linkText={blog.title}
+                                author={blog.author}
+                                category={blog.category}
+                                blogItem={blogItem}
+                            />
+                        );
+                    })}
+            </div>
         </div>
     );
-
 });
 
 // Exports
