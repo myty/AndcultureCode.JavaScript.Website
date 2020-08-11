@@ -1,8 +1,15 @@
-.o-redesign-future__container {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    display: flex;
-    flex-direction: column;
-    background-color: get-color-primary("after-hours");
-    color: get-color-primary("white");
+.o-redesign-future{ 
+    &__container {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: get-color-primary("after-hours");
+
+        h2 {
+            color: get-color-primary("white");
+            @include font-size("medium-large");
+            @include line-height("medium-large");
+        }
+    }
 }

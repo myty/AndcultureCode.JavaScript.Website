@@ -11,5 +11,13 @@
         font-family: $font-primary;
         text-decoration: underline;
         text-decoration-color: get-color-primary("fresh");
+        @include font-size("small");
+        font-weight: 500;
+    }
+
+    p {
+        color: get-color-neutral("light-gray");
+        font-size: 36px; // todo font-size include
+        @include line-height("medium-large");
     }
 }
