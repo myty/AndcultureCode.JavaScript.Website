@@ -9,7 +9,7 @@ const BlogHomepagePost = (props) => (
             alt={props.blogItem.frontmatter.tileImage.description}
             src={props.blogItem.frontmatter.tileImage.image.childImageSharp.fluid.src}
         />
-        <h3 className="blog-category">{props.category}</h3>
+        <p className="blog-category">{props.category}</p>
         <a href={props.url}>{props.linkText}</a>
         <p className="blog-author">by {props.author}</p>
     </div>

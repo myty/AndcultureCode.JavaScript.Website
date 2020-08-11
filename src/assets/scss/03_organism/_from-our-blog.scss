@@ -8,4 +8,24 @@
         text-decoration: underline;
         text-decoration-color: get-color-primary("fresh");
     }
+
+    .o-rhythm__container {
+        display: flex;
+        flex-direction: column;
+        a.view-all-posts {
+            @include font-size("small");
+            line-height: 28px;
+        }
+
+        .from-our-blog {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .blog-list-homepage {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 }

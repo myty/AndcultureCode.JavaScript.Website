@@ -1,4 +1,6 @@
 .m-blog-homepage {
+    width: 30%;
+
     a {
         color: get-color-primary("after-hours");
         font-family: $font-primary;
@@ -10,8 +12,10 @@
         text-transform: lowercase;
     }
 
-    h3.blog-category {
+    p.blog-category {
         color: get-color-neutral("light-gray");
         text-transform: uppercase;
+        @include font-size("smallest");
+        letter-spacing: 2px;    // TODO invision says this should be 200px. Ask about this.
     }
 }
