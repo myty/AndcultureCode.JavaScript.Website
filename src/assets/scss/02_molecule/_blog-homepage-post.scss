@@ -1,5 +1,7 @@
 .m-blog-homepage {
-    width: 30%;
+    @include breakpoints("tablet") {
+        width: 30%;
+    }
 
     a {
         color: get-color-primary("after-hours");
@@ -16,6 +18,6 @@
         color: get-color-neutral("light-gray");
         text-transform: uppercase;
         @include font-size("smallest");
-        letter-spacing: 2px;    // TODO invision says this should be 200px. Ask about this.
+        letter-spacing: .2em;
     }
 }

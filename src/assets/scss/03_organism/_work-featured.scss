@@ -20,6 +20,10 @@
 
         .o-rhythm__container {
             display: flex;
+            flex-direction: column;
+            @include breakpoints("tablet") {
+                flex-direction: row;
+            }
         }
     }
 
@@ -41,6 +45,10 @@
             width: 50%;
             float: left;
         }
+        
+        // img {
+        //     width: 50%;
+        // }
     }
 
     &__content {
@@ -73,10 +81,22 @@
 
             color: get-color-primary("white");
             font-family: $font-primary;
-            text-decoration: underline;
-            text-decoration-color: get-color-primary("fresh");
-            margin-right: 64px;
-            //text-underline-offset: 15px;    // TODO not supported on chrome
+            margin-right: 32px;
+            letter-spacing: .2em;
+            border-bottom-width: .2em;
+            border-color: get-color-primary("fresh");
+            text-decoration: none;
+            border-bottom-style: solid;
+        }
+
+        h2 {
+            letter-spacing: .2em;
+        }
+
+        .featured-work-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
     }
 }

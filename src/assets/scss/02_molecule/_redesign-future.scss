@@ -9,7 +9,13 @@
         h2 {
             color: get-color-primary("white");
             @include font-size("medium-large");
-            @include line-height("medium-large");
+            font-size: 36px;
+            // @include line-height("medium-large");
+            line-height: 48px;
+            font-weight: 200;
+            :nth-child(1){
+                font-weight: 500;
+            }
         }
     }
 }

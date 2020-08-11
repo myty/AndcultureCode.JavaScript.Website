@@ -23,8 +23,10 @@ const WorkFeatured = React.forwardRef((props, ref) => {
                 <div className="o-work-featured__content">
                     <h2 className="featured-work-partner-name">FEATURED WORK: {featuredWork.partnerName}</h2>
                     <p className="featured-work-title">{featuredWork.title}</p>
-                    <a href={featuredWorkUrl}>VIEW CASE STUDY</a>
-                    <a href="/work/">SEE ALL WORK</a>
+                    <div className="featured-work-links">
+                        <a href={featuredWorkUrl}>VIEW CASE STUDY</a>
+                        <a href="/work/">SEE ALL WORK</a>
+                    </div>
                 </div>
             </div>
         </div>
