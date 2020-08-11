@@ -5,16 +5,21 @@
         background-color: get-color-secondary("violet");
         color: get-color-primary("white");
 
-        a {
-            color: get-color-primary("white");
-            font-family: $font-primary;
-            text-decoration: underline;
-            text-decoration-color: get-color-primary("fresh");
-        }
-
-        .featured-work-title{
+        .featured-work-partner-name {
             color: get-color-neutral("lighter-gray");
             text-transform: uppercase;
+            @include font-size("small");
+            @include line-height("smallest");
+        }
+
+        .featured-work-title {
+            color: get-color-primary("white");
+            @include font-size("largish");
+            @include line-height("largish");
+        }
+
+        .o-rhythm__container {
+            display: flex;
         }
     }
 
@@ -39,8 +44,10 @@
     }
 
     &__content {
+        align-self: center;
         width: 100%;
         float: none;
+        padding-bottom: 60px;
 
         &-inner {
 
@@ -58,6 +65,18 @@
         @include breakpoints("tablet") {
             width: 50%;
             float: right;
+        }
+
+        a {
+            line-height: 27px;
+            @include font-size("small");
+
+            color: get-color-primary("white");
+            font-family: $font-primary;
+            text-decoration: underline;
+            text-decoration-color: get-color-primary("fresh");
+            margin-right: 64px;
+            //text-underline-offset: 15px;    // TODO not supported on chrome
         }
     }
 }

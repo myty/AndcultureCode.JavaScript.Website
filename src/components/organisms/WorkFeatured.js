@@ -21,8 +21,8 @@ const WorkFeatured = React.forwardRef((props, ref) => {
                     <img src={featuredWork.featuredimage.childImageSharp.fluid.src} alt="" />
                 </div>
                 <div className="o-work-featured__content">
-                    <h2 className="featured-work-title">FEATURED WORK: {featuredWork.partnerName}</h2>
-                    <p>{featuredWork.title}</p>
+                    <h2 className="featured-work-partner-name">FEATURED WORK: {featuredWork.partnerName}</h2>
+                    <p className="featured-work-title">{featuredWork.title}</p>
                     <a href={featuredWorkUrl}>VIEW CASE STUDY</a>
                     <a href="/work/">SEE ALL WORK</a>
                 </div>
