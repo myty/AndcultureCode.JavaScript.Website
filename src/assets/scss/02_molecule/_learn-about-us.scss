@@ -9,7 +9,7 @@
 
         a {
             font-family: $font-primary;
-            @include font-size("small");
+            font-size: 20px; //@include font-size("small");
             font-weight: 500;
             letter-spacing: .2em;
             color: get-color-primary("after-hours");
@@ -21,8 +21,8 @@
 
         p {
             color: get-color-neutral("light-gray");
-            font-size: 36px; // todo font-size include
-            @include line-height("medium-large");
+            font-size: 36px;
+            line-height: 48px;
         }
 
         .o-rhythm__container {

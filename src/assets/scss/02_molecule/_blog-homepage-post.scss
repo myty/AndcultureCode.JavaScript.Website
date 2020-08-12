@@ -1,6 +1,12 @@
 .m-blog-homepage {
+    margin-bottom: 3rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     @include breakpoints("tablet") {
         width: 30%;
+        margin-bottom: 0;
     }
 
     a {
@@ -8,6 +14,13 @@
         font-family: $font-primary;
         text-decoration: underline;
         text-decoration-color: get-color-primary("fresh");
+    }
+
+    img {
+        width: 75%;
+        @include breakpoints("tablet") {
+            width: 100%;
+        }
     }
 
     p.blog-author {
