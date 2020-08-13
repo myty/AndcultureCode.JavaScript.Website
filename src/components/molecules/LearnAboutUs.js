@@ -12,7 +12,8 @@ const LearnAboutUs = (props) => (
                 <a href="/about/">LEARN ABOUT US</a>
             </div>
             <div className="o-learn-about-us__image-container">
-                <img src={ampersandImage} alt="" />
+                <img src={ampersandImage}
+                alt="" />
             </div>
         </div>
     </div>

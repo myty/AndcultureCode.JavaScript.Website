@@ -12,9 +12,13 @@
     a {
         color: get-color-primary("after-hours");
         font-family: $font-primary;
-        font-size: 20px;
+        font-size: 24px;
         text-decoration: underline;
         text-decoration-color: get-color-primary("fresh");
+        letter-spacing: initial;
+        // @include breakpoints("sm-tablet") {
+        //     font-size: 24px;
+        // }
         @include breakpoints("tablet") {
             font-size: 32px;
             line-height: 39px;
@@ -30,12 +34,20 @@
 
     p.blog-author {
         text-transform: lowercase;
+        font-size: 24px;
     }
 
     p.blog-category {
         color: get-color-neutral("light-gray");
         text-transform: uppercase;
-        @include font-size("smallest");
+        font-size: 14px; //@include font-size("smallest");
+        font-family: $font-secondary;
         letter-spacing: .2em;
+        margin-top: 1.8em;
+        font-weight: 600;
+
+        @include breakpoints("sm-desktop") {
+            font-size: 16px;
+        }
     }
 }

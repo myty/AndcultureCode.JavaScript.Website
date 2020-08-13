@@ -1,7 +1,11 @@
 .o-redesign-future{ 
     &__container {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        @include breakpoints("tablet") {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
         display: flex;
         flex-direction: column;
         background-color: get-color-primary("after-hours");
