@@ -83,7 +83,7 @@
 
         a {
             line-height: 27px;
-            font-size: 20px; //@include font-size("small");
+            font-size: 16px; //@include font-size("small");
             font-weight: 500;
             color: get-color-primary("white");
             font-family: $font-secondary;
@@ -93,6 +93,9 @@
             border-color: get-color-primary("fresh");
             text-decoration: none;
             border-bottom-style: solid;
+            @include breakpoints("sm-desktop") {
+                font-size: 20px;
+            }
         }
 
         h2 {
