@@ -4,12 +4,15 @@
         padding-bottom: 3rem;
         color: get-color-primary("white");
         background-color: get-color-secondary("violet");
-        @include breakpoints("laptop") {
-            background-image: url("/img/home-feature-edio-triangle.png"), url("/img/home-feature-edio-dots.png"),
-                url("/img/home-feature-edio-swabs.png");
-            background-position: top left, top right, bottom right;
-            background-repeat: no-repeat;
-            // TODO image scale by half
+        background-image: url("/img/home-feature-edio-triangle.png"), url("/img/home-feature-edio-dots.png"),
+                        url("/img/home-feature-edio-swabs.png");
+        background-position: top left, top right, bottom right;
+        background-repeat: no-repeat;
+        background-size: 30%, 50%, 18%;
+
+        @include breakpoints("tablet") {
+
+            background-size: 15%, 20%, 10%;
         }
 
         .featured-work-partner-name {
