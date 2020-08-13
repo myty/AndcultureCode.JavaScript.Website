@@ -9,13 +9,17 @@
                 url("/img/home-feature-edio-swabs.png");
             background-position: top left, top right, bottom right;
             background-repeat: no-repeat;
+            // TODO image scale by half
         }
 
         .featured-work-partner-name {
             color: get-color-neutral("lighter-gray");
             text-transform: uppercase;
-            @include font-size("small");
-            @include line-height("smallest");
+            font-size: 20px; //@include font-size("smallest");
+            font-family: $font-secondary;
+            letter-spacing: .2em;
+            font-weight: 600;
+            line-height: 1em;
         }
 
         .featured-work-title {
@@ -80,11 +84,11 @@
         a {
             line-height: 27px;
             font-size: 20px; //@include font-size("small");
-
+            font-weight: 500;
             color: get-color-primary("white");
-            font-family: $font-primary;
+            font-family: $font-secondary;
             margin-right: 32px;
-            letter-spacing: 0.2em;
+            letter-spacing: .2em;
             border-bottom-width: 0.2em;
             border-color: get-color-primary("fresh");
             text-decoration: none;

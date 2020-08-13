@@ -20,12 +20,20 @@
 
         .from-our-blog {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             margin-bottom: 50px;
-            align-items: center;
 
             h2 {
                 margin-right: 30px;
+                @include breakpoints("tablet") {
+                    margin-bottom: 0;
+                }
+                margin-bottom: 0.5em; 
+            }
+
+            @include breakpoints("tablet") {
+                flex-direction: row;
+                align-items: center;
             }
         }
 
