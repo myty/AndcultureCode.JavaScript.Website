@@ -7,6 +7,12 @@
     padding-top: 50px;
   }
 
+  .hero-intro-text {
+    margin: 0 0 35px 0;
+    margin-right: 0 !important;
+    max-width: none;
+  }
+
   @include breakpoints ("tablet"){
     .department-list {
       padding-bottom: 100px;
@@ -37,14 +43,27 @@
     display: flex;
   }
 
+  h1 {
+    @include font-size("large");
+    @include line-height("larger");
+
+    @include breakpoints("sm-tablet") {
+    }
+
+    @include breakpoints("laptop") {
+      line-height: 72px;
+      @include font-size("larger");
+    }
+  }
+
   #greeting {
     color: get-color("primary", "fresh");
     margin-bottom: 40px;
-    @include font-size("medium-large");
+    @include font-size("medium");
     @include line-height(46px);
 
-    @include breakpoints("tablet") {
-        @include font-size("larger");
+    @include breakpoints("laptop") {
+        @include font-size("large");
         @include line-height("larger");
     }
   }
@@ -68,6 +87,19 @@
       @include breakpoints("tablet") {
         max-width: 100%;
       }
+    }
+  }
+
+  .hero-image {
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    @include breakpoints("tablet") {
+      display: flex;
+    }
+    img {
+      max-width: 75%;
     }
   }
 }
