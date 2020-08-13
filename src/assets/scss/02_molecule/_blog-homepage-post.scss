@@ -12,8 +12,13 @@
     a {
         color: get-color-primary("after-hours");
         font-family: $font-primary;
+        font-size: 20px;
         text-decoration: underline;
         text-decoration-color: get-color-primary("fresh");
+        @include breakpoints("tablet") {
+            font-size: 32px;
+            line-height: 39px;
+        }
     }
 
     img {

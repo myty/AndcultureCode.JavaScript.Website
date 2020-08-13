@@ -9,25 +9,48 @@
 
         a {
             font-family: $font-primary;
-            font-size: 20px; //@include font-size("small");
-            font-weight: 500;
+            font-size: 18px;
             letter-spacing: .2em;
             color: get-color-primary("after-hours");
             border-bottom-width: .2em;
             border-color: get-color-primary("fresh");
             text-decoration: none;
             border-bottom-style: solid;
+            @include breakpoints("tablet") {
+                font-size: 20px; //@include font-size("small");
+                font-weight: 500;
+            }
         }
 
-        p {
+        h2 {
             color: get-color-neutral("light-gray");
-            font-size: 36px;
-            line-height: 48px;
+            margin-bottom: 2rem;
+            font-size:20px;
+            font-size:1.25rem;
+            line-height:32px;
+            line-height:2rem;
+            @include breakpoints("tablet") {
+                font-size: 36px;
+                line-height: 48px;                
+            }
+
         }
 
         .o-rhythm__container {
             display:flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            @include breakpoints("tablet") {
+                flex-direction: initial;
+                flex-wrap: nowrap;
+            }
+
+            img {
+                width:25%;
+                @include breakpoints("tablet") {
+                    width: initial;
+                }
+            }
         }
     }
 }
