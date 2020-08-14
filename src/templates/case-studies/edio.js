@@ -92,7 +92,7 @@ const Edio = class extends React.Component {
                     <p>Our number one priority was to deliver an experience with the flexibility to customize each student’s curriculum to maximize learning. Understanding that each student learns differently was crucial in developing a learning platform that would allow teachers to accommodate unique learning styles on a case-by-case basis.</p>
                     <p>We found that key relationships between teachers, parents, and administrators are important to a student’s success and we wanted to make sure that was a big part of it. edio’s platform ensures that the student’s support system is accompanying them through the learning journey.</p>
                 </CaseStudyContentSection>
-                <div className="o-rhythm__container">
+                <div className="o-rhythm__container large-image-container">
                     <div className="o-rhythm__row">
                         <img src={imgDiagram} alt="edio full diagram" />
                     </div>

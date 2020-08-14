@@ -331,4 +331,13 @@
             }
         }
     }
+
+    .large-image-container {
+        .o-rhythm__row {
+            max-height: 244px;
+            @include breakpoints("phone") {
+                max-height: none;
+            }
+        }
+    }
 }
