@@ -333,4 +333,28 @@
             }
         }
     }
+
+    .large-image-container {
+        .o-rhythm__row {
+            max-height: 244px;
+            @media (min-width: 400px) {
+                max-height: 319px;
+            }
+            @media (min-width: 500px) {
+                max-height: 422px;
+            }
+            @include breakpoints("sm-tablet"){
+                max-height: 500px;
+            }
+            @include breakpoints("tablet"){
+                max-height: 658px;
+            }
+            @include breakpoints("laptop"){
+                max-height: 799px;
+            }
+            @include breakpoints("sm-desktop") {
+                max-height: none;
+            }
+        }
+    }
 }
