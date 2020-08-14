@@ -12,7 +12,7 @@ const AboutHero = (props) => {
       <div className="o-rhythm__container">
         <div className="o-hero__top">
           <div className="o-rhythm__row">
-            <div className="o-hero__left">
+            <div className="o-hero__left about-hero-text">
               <div className="o-hero__titles">
                 {props.subTitle && <h1 id="greeting">{props.subTitle}</h1>}
                 <h1>{props.title}</h1>

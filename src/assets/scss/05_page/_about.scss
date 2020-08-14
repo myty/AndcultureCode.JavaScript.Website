@@ -11,6 +11,7 @@
     margin: 0 0 35px 0;
     margin-right: 0 !important;
     max-width: none;
+    line-height: 30px;
   }
 
   @include breakpoints ("tablet"){
@@ -47,12 +48,9 @@
     @include font-size("large");
     @include line-height("larger");
 
-    @include breakpoints("sm-tablet") {
-    }
-
     @include breakpoints("laptop") {
       line-height: 72px;
-      @include font-size("larger");
+      font-size: 68px;
     }
   }
 
@@ -95,11 +93,21 @@
     align-items: center;
     display: none;
 
-    @include breakpoints("tablet") {
+    @include breakpoints("sm-desktop") {
       display: flex;
     }
     img {
       max-width: 75%;
+    }
+  }
+
+  .about-hero-text {
+    flex-basis: calc(100% - 16px);
+    max-width: calc(100% - 16px);
+
+    @include breakpoints("sm-desktop") {
+      flex-basis: calc(50% - 12px);
+      max-width: calc(50% - 12px);
     }
   }
 }
