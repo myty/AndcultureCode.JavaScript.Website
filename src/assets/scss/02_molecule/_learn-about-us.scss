@@ -57,19 +57,21 @@
             }
 
             img {
-                max-width: 200px;
                 @include breakpoints("phone") {
-                    width: 315px;
-                    max-width: 315px;
+                    width: 215px;
+                    height: 214px;
+                    max-width: 215px;
                 }
                 @include breakpoints("tablet") {
                     width: 315px;
                     max-width: 315px;
+                    height: 314px;
                 }
 
                 @include breakpoints("sm-desktop") {
                     width: 415px;
                     max-width: 415px;
+                    height: 414px;
                 }
             }
         }
