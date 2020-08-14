@@ -10,7 +10,7 @@ import dotsSmall from 'static/img/case-studies/cca/dotted_area.png';
 import artifactsPlant from 'static/img/case-studies/edio/edio-artifact-plant.png';
 import imgCalendar from 'static/img/case-studies/edio/edio-calendar.jpg';
 import imgCollage from 'static/img/case-studies/edio/edio-collage-1.jpg';
-import imgDiagram from 'static/img/case-studies/edio/edio-diagram.jpg';
+import imgDiagram from 'static/img/case-studies/edio/edio-diagram.png';
 import imgStudentTeacher from 'static/img/case-studies/edio/edio-student-teacher.jpg';
 
 import studyImg from 'static/img/case-studies/cca/studying.jpg';
