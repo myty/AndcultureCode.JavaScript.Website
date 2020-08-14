@@ -16,6 +16,7 @@
             border-color: get-color-primary("fresh");
             text-decoration: none;
             border-bottom-style: solid;
+            width: 175px;   // used to temporarily patch the bottom border length
         }
 
         .from-our-blog {
