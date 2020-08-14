@@ -11,8 +11,8 @@
         background-size: 30%, 50%, 18%;
 
         @include breakpoints("tablet") {
-
-            background-size: 15%, 20%, 10%;
+            background-size: 12%, 20%, 8%;
+            background-position: top 50px left, top right 100px, bottom 100px right;
         }
 
         .featured-work-partner-name {
