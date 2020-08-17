@@ -45,18 +45,26 @@
   }
 
   h1 {
-    @include font-size("large");
+    @include font-size(48px);
     @include line-height("larger");
 
     @include breakpoints("laptop") {
       line-height: 72px;
-      font-size: 68px;
+      @include font-size(60px);
+    }
+  }
+
+  h2 {
+    @include font-size("medium-large");
+
+    @include breakpoints ("laptop") {
+          @include font-size(48px);
     }
   }
 
   #greeting {
     color: get-color("primary", "fresh");
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     @include font-size("medium");
     @include line-height(46px);
 
@@ -110,4 +118,12 @@
       max-width: calc(50% - 12px);
     }
   }
+
+  .o-hero__titles {
+    margin-top: 60px;
+    @include breakpoints("phone"){
+      margin-top: 40px;
+    }
+  }
+
 }
