@@ -10,7 +10,7 @@ homeimage: /img/case-studies/kids-discover/home/kd-main.png
 texture: /img/kd-shape.png
 listImageArtwork: /img/work-kd-artwork.png
 listImageFrame: /img/work-kd-frame.gif
-listOrder: 5
+listOrder: 6
 color: '#0080A9'
 heroIntroCopy: In two decades, Kids Discover became well known for providing high-quality non-fiction content for children in grades 3-8. With more than 200 magazine titles, each with 20 pages, Kids Discover was a treasure trove of iconic photographs, original illustrations, timelines and kid-friendly facts on hundreds of science and social studies topics. That’s an incredible trove to work with.
 secondaryLayout: true
