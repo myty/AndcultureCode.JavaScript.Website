@@ -22,13 +22,20 @@
             font-family: $font-secondary;
             letter-spacing: .2em;
             font-weight: 600;
-            line-height: 1em;
+            line-height: 1.5em;
+            @include breakpoints("tablet") {
+                line-height: 1em;
+            }
         }
 
         .featured-work-title {
             color: get-color-primary("white");
-            @include font-size("largish");
+            @include font-size("medium-large");
             @include line-height("largish");
+
+            @include breakpoints("tablet") {
+                @include font-size("largish");
+            }
         }
 
         .o-rhythm__container {
@@ -66,22 +73,12 @@
         width: 100%;
         float: none;
         padding-bottom: 60px;
-
-        &-inner {
-            @include breakpoints("tablet") {
-                //padding-left: 80px;
-                //padding-right: 50px;
-            }
-
-            @include breakpoints("lg-desktop") {
-                //padding-left: 0;
-                //padding-right: 100px;
-            }
-        }
+        margin-bottom: 1em;
 
         @include breakpoints("tablet") {
             width: 50%;
             float: right;
+            margin-bottom: 0em;
         }
 
         a {
