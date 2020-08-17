@@ -56,24 +56,6 @@
                 flex-wrap: nowrap;
             }
 
-            img {
-                @include breakpoints("phone") {
-                    width: 215px;
-                    height: 214px;
-                    max-width: 215px;
-                }
-                @include breakpoints("tablet") {
-                    width: 315px;
-                    max-width: 315px;
-                    height: 314px;
-                }
-
-                @include breakpoints("sm-desktop") {
-                    width: 415px;
-                    max-width: 415px;
-                    height: 414px;
-                }
-            }
         }
     }
 
@@ -85,6 +67,22 @@
 
     &__image-container {
         display: flex;
-        justify-content: center;
+        justify-content: left;
+
+        @include breakpoints("tablet") {
+            justify-content: center;
+        }
+
+        img {
+            max-width: 400px;
+            width: 400px;
+            height: 399px;
+
+            @include breakpoints("tablet") {
+                width: 415px;
+                max-width: 415px;
+                height: 414px;
+            }
+        }
     }
 }
