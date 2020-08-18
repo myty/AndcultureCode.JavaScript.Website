@@ -3,9 +3,9 @@ import React from "react";
 const Department = (props) => {
   let className = "";
 
-  // if (props.department.deptImg === undefined) {
-  //   className = "-no-image";
-  // }
+  if (props.department.deptImg === undefined) {
+    className = "-no-image";
+  }
 
   return (
     <div className={`${className} `}>
