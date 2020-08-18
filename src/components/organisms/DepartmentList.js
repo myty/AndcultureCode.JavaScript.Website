@@ -24,6 +24,7 @@ const DepartmentList = (props) => {
             <Department
               department = {department}
               modifier = {modifier}
+              key = {`dept-` + index}
             />
           );
         })}

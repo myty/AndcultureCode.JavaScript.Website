@@ -29,8 +29,8 @@ const Department = (props) => {
                 </p>
                 <ul className="no-dot">
                   {props.department.rolesList &&
-                    props.department.rolesList.map((role) => {
-                      return <li>{role}</li>;
+                    props.department.rolesList.map((role, index) => {
+                      return <li key={index}>{role}</li>;
                     })}
                 </ul>
               </div>
