@@ -16,210 +16,343 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dfebee', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
     }
 
-    &.-case-study {
-
-        .o-hero__copy-container {
-            @include span-col(12);
-            @include font-size(16px);
-            @include line-height(36px);
-            letter-spacing: .35px;
-            font-weight: 300;
-
-            @include breakpoints("sm-tablet") {
-                @include span-col(10);
-                @include push-col(1);
-            }
-
-            @include breakpoints("tablet") {
-                @include span-col(6);
-                @include push-col(1);
-                @include font-size(24px);
-
-                position: relative;
-                top: -8px;
-            }
-
-            @include breakpoints("desktop") {
-                @include span-col(7);
-                @include push-col(1);
-                @include font-size(24px);
-            }
-
-            @include breakpoints("lg-desktop") {
-                @include push-col(0);
-            }
+    &__image-container { // TODO make all these break to be above the text at desktop breakpoint? - Peter
+        img {
+            position: absolute;
         }
 
-        .o-hero__list {
-            list-style-type: none;
-            padding: 0;
-
-            li {
-                @include font-size("small");
-                @include line-height(24px);
-                margin-bottom: 1em;
-                font-weight: 600;
-                letter-spacing: .04em;
-            }
-
-            &-container {
-                @include span-col(12);
-                margin-top: 40px;
-
-                @include breakpoints("sm-tablet") {
-                    @include span-col(10);
-                    @include push-col(1);
-                }
-
-                @include breakpoints("tablet") {
-                    @include span-col(3);
-                    @include push-col(2);
-                    margin-top: 0;
-                }
-
-                @include breakpoints("laptop") {
-                    @include span-col(2);
-                    @include push-col(2);
-                    margin-top: 0;
-                }
-
-                h6 {
-                    @include font-size(14px);
-                    font-weight: 600;
-                }
-            }
+        .-person {
+            bottom: 0; // -81px ?
+            right: 15%;
+            width: 407px;
+            z-index: 5;
         }
 
-        .o-hero__title,
-        .o-hero__image,
-        .o-hero__left,
-        .o-hero__right {
-            @include span-col(12);
-
-            @include breakpoints("tablet") {
-                @include span-col(6);
-            }
+        .-black-x {
+            right: 35%;
+            top: 20%;
+            width: 8%;
+            z-index: 1;
         }
 
-        &.-spaced {
-            .o-hero__title {
-                padding-top: 60px;
-
-                @include breakpoints("tablet") {
-                    padding-bottom: 125px;
-                    padding-top: 100px;
-                }
-            }
-
-            .o-hero__meta {
-                padding-bottom: 60px;
-
-                @include breakpoints("tablet") {
-                    padding-bottom: 130px;
-                }
-            }
-
-            .o-hero__image {
-                @include breakpoints("tablet") {
-                    margin-top: 40px;
-                }
-            }
+        .-blue-lines {
+            top: 65%;
+            right: 15%;
+            width: 5%;
+            z-index: 1;
         }
 
-        .o-hero__title {
-            padding-top: 72px;
-
-            @include breakpoints("tablet") {
-                @include span-col(5);
-                @include push-col(1);
-                padding-top: 150px;
-            }
-
-            @include breakpoints("desktop") {
-                @include push-col(1);
-                padding-top: 220px;
-            }
-
-            @include breakpoints("lg-desktop") {
-                @include push-col(0);
-            }
-
-            h1 {
-                @include font-size(44px);
-                @include line-height(48px);
-                margin-bottom: 32px;
-
-                @include breakpoints("phone") {
-                    @include font-size(55px);
-                    @include line-height(61px);
-                }
-
-                @include breakpoints("lg-desktop") {
-                    @include font-size(70px);
-                    @include line-height(80px);
-                }
-            }
+        .-blue-plant {
+            right: 26%;
+            top: 23%;
+            width: 6%;
+            z-index: 1;
         }
 
-        .o-hero__image {
-            margin: 0;
-
-            @include breakpoints("tablet") {
-                margin-top: 80px;
-            }
-
-            @include breakpoints("laptop") {
-                margin-top: 0;
-            }
-
-            @include breakpoints("desktop") {
-                @include push-col(1);
-                margin-left: 0;
-            }
-
-            img {
-                display: block;
-                max-width: 100%;
-
-                @include breakpoints("lg-desktop") {
-                    max-width: 125%;
-                }
-            }
+        .-fog-dots {
+            right: 8%;
+            top: 20%;
+            width: 25%;
+            z-index: 0;
         }
 
-        .o-hero__meta {
-            color: get-color("primary", "white");
-            padding: 80px 0;
-            margin-top: -42px;
+        .-fog-eyeball {
+            right: 41%;
+            top: 10%;
+            width: 7%;
+            z-index: 0;
+        }
 
-            @include breakpoints("tablet") {
-                padding: 0;;
-            }
+        .-fog-tag {
+            right: 44%;
+            top: 62%;
+            width: 4%;
+        }
 
-            &__title {
-                @include font-size(19px);
-                @include line-height("base");
-                color: get-color-primary("white");
-                font-family: $font-secondary;
-                font-weight: 500;
-                text-transform: uppercase;
-                letter-spacing: .24em;
+        .-green-go {
+            right: 20%;
+            top: 35%;
+            width: 8%;
+            z-index: 1;
+        }
 
-                @include breakpoints("tablet") {
-                    @include font-size("small");
-                    @include line-height("smaller");
-                }
-            }
+        .-green-plant {
+            bottom: 37%;
+            right: 40%;
+            width: 9%;
+        }
 
-            @include breakpoints("tablet") {
-                padding: 120px 0;
-            }
+        .-orange-blob {
+            right: 0%;
+            top: 40%;
+            width: 8%;
+        }
 
-            @include breakpoints("desktop") {
-                margin-top: -100px;
-            }
+        .-orange-cube {
+            right: 25%;
+            top: 8%;
+            width: 6%;
+        }
+
+        .-pink-asterisk {
+            right: 16%;
+            top: 76%;
+            width: 3%;
+        }
+
+        .-pink-drop {
+            top: 54%;
+            right: 22%;
+            width: 13%;
+        }
+
+        .-pink-raindrops {
+            right: 10%;
+            top: 1%;
+            width: 12%;
+        }
+
+        .-red-prism {
+            bottom: 11%;
+            right: 38%;
+            width: 12%;
+        }
+
+        .-red-teeth {
+            right: 13%;
+            top: 79%;
+            width: 1%;
+        }
+
+        .-salmon-blob {
+            right: 35%;
+            top: 14%;
+            width: 11%;
+        }
+
+        .-teal-asterisk {
+            top: 55%;
+            right: 18%;
+            width: 3%;
+        }
+
+        .-teal-rainbow {
+            bottom: 50%;
+            right: 42%;
+            width: 12%;
+        }
+
+        .-yellow-squiggle {
+            right: 5%;
+            top: 18%;
+            width: 12%;
         }
     }
+
+    // &.-case-study {
+
+    //     .o-hero__copy-container {
+    //         @include span-col(12);
+    //         @include font-size(16px);
+    //         @include line-height(36px);
+    //         letter-spacing: .35px;
+    //         font-weight: 300;
+
+    //         @include breakpoints("sm-tablet") {
+    //             @include span-col(10);
+    //             @include push-col(1);
+    //         }
+
+    //         @include breakpoints("tablet") {
+    //             @include span-col(6);
+    //             @include push-col(1);
+    //             @include font-size(24px);
+
+    //             position: relative;
+    //             top: -8px;
+    //         }
+
+    //         @include breakpoints("desktop") {
+    //             @include span-col(7);
+    //             @include push-col(1);
+    //             @include font-size(24px);
+    //         }
+
+    //         @include breakpoints("lg-desktop") {
+    //             @include push-col(0);
+    //         }
+    //     }
+
+    //     .o-hero__list {
+    //         list-style-type: none;
+    //         padding: 0;
+
+    //         li {
+    //             @include font-size("small");
+    //             @include line-height(24px);
+    //             margin-bottom: 1em;
+    //             font-weight: 600;
+    //             letter-spacing: .04em;
+    //         }
+
+    //         &-container {
+    //             @include span-col(12);
+    //             margin-top: 40px;
+
+    //             @include breakpoints("sm-tablet") {
+    //                 @include span-col(10);
+    //                 @include push-col(1);
+    //             }
+
+    //             @include breakpoints("tablet") {
+    //                 @include span-col(3);
+    //                 @include push-col(2);
+    //                 margin-top: 0;
+    //             }
+
+    //             @include breakpoints("laptop") {
+    //                 @include span-col(2);
+    //                 @include push-col(2);
+    //                 margin-top: 0;
+    //             }
+
+    //             h6 {
+    //                 @include font-size(14px);
+    //                 font-weight: 600;
+    //             }
+    //         }
+    //     }
+
+    //     .o-hero__title,
+    //     .o-hero__image,
+    //     .o-hero__left,
+    //     .o-hero__right {
+    //         @include span-col(12);
+
+    //         @include breakpoints("tablet") {
+    //             @include span-col(6);
+    //         }
+    //     }
+
+    //     &.-spaced {
+    //         .o-hero__title {
+    //             padding-top: 60px;
+
+    //             @include breakpoints("tablet") {
+    //                 padding-bottom: 125px;
+    //                 padding-top: 100px;
+    //             }
+    //         }
+
+    //         .o-hero__meta {
+    //             padding-bottom: 60px;
+
+    //             @include breakpoints("tablet") {
+    //                 padding-bottom: 130px;
+    //             }
+    //         }
+
+    //         .o-hero__image {
+    //             @include breakpoints("tablet") {
+    //                 margin-top: 40px;
+    //             }
+    //         }
+    //     }
+
+    //     .o-hero__title {
+    //         padding-top: 72px;
+
+    //         @include breakpoints("tablet") {
+    //             @include span-col(5);
+    //             @include push-col(1);
+    //             padding-top: 150px;
+    //         }
+
+    //         @include breakpoints("desktop") {
+    //             @include push-col(1);
+    //             padding-top: 220px;
+    //         }
+
+    //         @include breakpoints("lg-desktop") {
+    //             @include push-col(0);
+    //         }
+
+    //         h1 {
+    //             @include font-size(44px);
+    //             @include line-height(48px);
+    //             margin-bottom: 32px;
+
+    //             @include breakpoints("phone") {
+    //                 @include font-size(55px);
+    //                 @include line-height(61px);
+    //             }
+
+    //             @include breakpoints("lg-desktop") {
+    //                 @include font-size(70px);
+    //                 @include line-height(80px);
+    //             }
+    //         }
+    //     }
+
+    //     .o-hero__image {
+    //         margin: 0;
+
+    //         @include breakpoints("tablet") {
+    //             margin-top: 80px;
+    //         }
+
+    //         @include breakpoints("laptop") {
+    //             margin-top: 0;
+    //         }
+
+    //         @include breakpoints("desktop") {
+    //             @include push-col(1);
+    //             margin-left: 0;
+    //         }
+
+    //         img {
+    //             display: block;
+    //             max-width: 100%;
+
+    //             @include breakpoints("lg-desktop") {
+    //                 max-width: 125%;
+    //             }
+    //         }
+    //     }
+
+    //     .o-hero__meta {
+    //         color: get-color("primary", "white");
+    //         padding: 80px 0;
+    //         margin-top: -42px;
+
+    //         @include breakpoints("tablet") {
+    //             padding: 0;;
+    //         }
+
+    //         &__title {
+    //             @include font-size(19px);
+    //             @include line-height("base");
+    //             color: get-color-primary("white");
+    //             font-family: $font-secondary;
+    //             font-weight: 500;
+    //             text-transform: uppercase;
+    //             letter-spacing: .24em;
+
+    //             @include breakpoints("tablet") {
+    //                 @include font-size("small");
+    //                 @include line-height("smaller");
+    //             }
+    //         }
+
+    //         @include breakpoints("tablet") {
+    //             padding: 120px 0;
+    //         }
+
+    //         @include breakpoints("desktop") {
+    //             margin-top: -100px;
+    //         }
+    //     }
+    // }
 
     &.-interior {
         .o-hero__titles {
@@ -259,17 +392,18 @@
 
     &__top {
         @include clearfix();
-        margin-bottom: 84px;
+        //margin-bottom: 84px;
         height: 100vh;
 
         @include breakpoints("tablet") {
-            margin-bottom: 280px;
+            //margin-bottom: 280px;
         }
     }
 
     &__titles {
         max-width: 690px;
-        top: calc(100vh - 250px);
+        top: calc(100vh - 375px);
+        //top: calc(100vh - 250px);
         position: absolute;
 
         @media (min-height: 1024px) {
@@ -287,6 +421,10 @@
             animation: fadeInAnimation ease 6s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
+        }
+
+        .-homepage-title {
+            max-width: 488px;
         }
 
         .-scroll-fade {
@@ -350,6 +488,10 @@
     }
 
     h1 {
+
+        @include breakpoints("tablet") {
+            font-size: 70px;
+        }
 
         &.-after {
 

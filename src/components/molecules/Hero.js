@@ -51,7 +51,7 @@ const Hero = class extends React.Component {
         <div className="o-rhythm__container">
           <div className="o-hero__top">
             <div className="o-hero__titles">
-              <div className = "-fade">
+              <div className = "-fade -homepage-title">
                 <h1 className="-after">{this.props.title}</h1>
               </div>
               <VisibilitySensor onChange = { this._onEasterEggChange }>
