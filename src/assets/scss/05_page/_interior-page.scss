@@ -86,7 +86,9 @@
         }
 
         &__left,
-        &__right {
+        &__right,
+        &__side-one,
+        &__side-two {
             @include span-col(12);
 
             @include breakpoints("tablet") {
