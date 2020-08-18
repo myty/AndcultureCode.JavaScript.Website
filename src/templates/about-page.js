@@ -14,16 +14,21 @@ const AboutPage = ({ data }) => {
       pageTitle="About"
       data={pageData}
       pageClassName="p-about"
-      showFooterDividerLine={false}>
+      showFooterDividerLine={false}
+    >
       <main className="p-interior-page p-about">
         <AboutHero
-          title={pageData.title} // TODO ADD CARET BACKGROUND
+          title={pageData.title}
           subTitle={pageData.secondaryTitle}
-          modifier={""} />
+          introTextOne={pageData.introTextOne}
+          introTextTwo={pageData.introTextTwo}
+          image={pageData.heroImage.childImageSharp.fluid.src}
+          modifier={""}
+        />
         <DepartmentList />
       </main>
     </Layout>
-  )
+  );
 }
 
 export default AboutPage;
@@ -36,6 +41,13 @@ export const pageQuery = graphql`
         secondaryTitle
         introTextOne
         introTextTwo
+        heroImage {
+          childImageSharp {
+            fluid(maxWidth: 1920, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         seo {
           metaTitle
           metaDescription
