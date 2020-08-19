@@ -40,38 +40,28 @@ const Hero = class extends React.Component {
       opacity: opacity,
     }
 
-    let easterEggClass = "-scroll-fade";
-    if (this.state.easterEggVisible) {
-      easterEggClass += " -active";
-    }
-
     return (
-      <div className="o-hero">
-        <HeroAnimation/>
-        <div className="o-rhythm__container">
-          <div className="o-hero__top">
-            <div className="o-hero__titles">
-              <div className = "-fade -homepage-title">
-                <h1 className="-after">{this.props.title}</h1>
-              </div>
-              <VisibilitySensor onChange = { this._onEasterEggChange }>
-                <div className = { easterEggClass }>
-                  <p className="-before">{this.props.secondaryTitle}</p>
+        <div className="o-hero -homepage">
+            <div className="o-rhythm__container o-hero__text-container">
+                <div className="o-hero__top">
+                    <div className="o-hero__titles">
+                        <div className="-fade-homepage-title -homepage-title">
+                            <h1 className="-after">{this.props.title}</h1>
+                        </div>
+                        {/* <VisibilitySensor onChange={this._onEasterEggChange}> */}
+                            <div className="-fade-homepage-easter-egg">
+                                <p className="-before">{this.props.secondaryTitle}</p>
+                            </div>
+                        {/* </VisibilitySensor> */}
+                    </div>
                 </div>
-              </VisibilitySensor>
+                <div style={verticalTextStyle} className="o-hero__vertical">
+                    A Design Company
+                </div>
             </div>
-          </div>
-          <div className="o-hero__subtitles">
-            <h2>{this.props.subTitle}</h2>
-          </div>
-          <div
-            style     = { verticalTextStyle }
-            className = "o-hero__vertical">
-            A Design Company
-          </div>
+            <HeroAnimation />
         </div>
-      </div>
-    )
+    );
   }
 }
 

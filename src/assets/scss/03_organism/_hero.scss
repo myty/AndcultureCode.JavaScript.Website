@@ -17,342 +17,357 @@
     }
 
     &__image-container { // TODO make all these break to be above the text at desktop breakpoint? - Peter
+        height: 100%;
+        right: 0;
+        top: 0;
+        position: absolute;
+        width: 50%;
+
+        @include breakpoints("lg-laptop") {
+            // height: 975px;
+        }
+
         img {
             position: absolute;
         }
 
         .-person {
             bottom: 0; // -81px ?
-            right: 15%;
-            width: 407px;
+            right: 23%;
+            width: 66%;
             z-index: 5;
+
+            @include breakpoints("desktop") {
+                // width: 528px;
+            }
         }
 
         .-black-x {
-            right: 35%;
+            right: 70%;
             top: 20%;
-            width: 8%;
+            width: 16%;
             z-index: 1;
         }
 
         .-blue-lines {
             top: 65%;
-            right: 15%;
-            width: 5%;
+            right: 25%;
+            width: 10%;
             z-index: 1;
         }
 
         .-blue-plant {
-            right: 26%;
+            right: 52%;
             top: 23%;
-            width: 6%;
+            width: 12%;
             z-index: 1;
         }
 
         .-fog-dots {
-            right: 8%;
+            right: 16%;
             top: 20%;
-            width: 25%;
+            width: 50%;
             z-index: 0;
         }
 
         .-fog-eyeball {
-            right: 41%;
+            right: 82%;
             top: 10%;
-            width: 7%;
+            width: 14%;
             z-index: 0;
         }
 
         .-fog-tag {
-            right: 44%;
+            right: 88%;
             top: 62%;
-            width: 4%;
+            width: 8%;
         }
 
         .-green-go {
-            right: 20%;
+            right: 40%;
             top: 35%;
-            width: 8%;
+            width: 16%;
             z-index: 1;
         }
 
         .-green-plant {
             bottom: 37%;
-            right: 40%;
-            width: 9%;
+            right: 80%;
+            width: 18%;
         }
 
         .-orange-blob {
+            display: none;
             right: 0%;
             top: 40%;
-            width: 8%;
+            width: 16%;
         }
 
         .-orange-cube {
-            right: 25%;
+            right: 50%;
             top: 8%;
-            width: 6%;
+            width: 12%;
         }
 
         .-pink-asterisk {
-            right: 16%;
+            right: 29%;
             top: 76%;
-            width: 3%;
+            width: 6%;
         }
 
         .-pink-drop {
+            right: 44%;
             top: 54%;
-            right: 22%;
-            width: 13%;
+            width: 26%;
         }
 
         .-pink-raindrops {
-            right: 10%;
+            right: 20%;
             top: 1%;
-            width: 12%;
+            width: 24%;
         }
 
         .-red-prism {
             bottom: 11%;
-            right: 38%;
-            width: 12%;
+            right: 76%;
+            width: 24%;
         }
 
         .-red-teeth {
-            right: 13%;
+            right: 20%;
             top: 79%;
-            width: 1%;
+            width: 2%;
         }
 
         .-salmon-blob {
-            right: 35%;
+            right: 70%;
             top: 14%;
-            width: 11%;
+            width: 22%;
         }
 
         .-teal-asterisk {
             top: 55%;
-            right: 18%;
-            width: 3%;
+            right: 36%;
+            width: 6%;
         }
 
         .-teal-rainbow {
             bottom: 50%;
-            right: 42%;
-            width: 12%;
+            right: 84%;
+            width: 24%;
         }
 
         .-yellow-squiggle {
-            right: 5%;
+            right: 10%;
             top: 18%;
-            width: 12%;
+            width: 24%;
         }
     }
 
-    // &.-case-study {
+    &.-case-study {
 
-    //     .o-hero__copy-container {
-    //         @include span-col(12);
-    //         @include font-size(16px);
-    //         @include line-height(36px);
-    //         letter-spacing: .35px;
-    //         font-weight: 300;
+        .o-hero__copy-container {
+            @include span-col(12);
+            @include font-size(16px);
+            @include line-height(36px);
+            letter-spacing: .35px;
+            font-weight: 300;
 
-    //         @include breakpoints("sm-tablet") {
-    //             @include span-col(10);
-    //             @include push-col(1);
-    //         }
+            @include breakpoints("sm-tablet") {
+                @include span-col(10);
+                @include push-col(1);
+            }
 
-    //         @include breakpoints("tablet") {
-    //             @include span-col(6);
-    //             @include push-col(1);
-    //             @include font-size(24px);
+            @include breakpoints("tablet") {
+                @include span-col(6);
+                @include push-col(1);
+                @include font-size(24px);
 
-    //             position: relative;
-    //             top: -8px;
-    //         }
+                position: relative;
+                top: -8px;
+            }
 
-    //         @include breakpoints("desktop") {
-    //             @include span-col(7);
-    //             @include push-col(1);
-    //             @include font-size(24px);
-    //         }
+            @include breakpoints("desktop") {
+                @include span-col(7);
+                @include push-col(1);
+                @include font-size(24px);
+            }
 
-    //         @include breakpoints("lg-desktop") {
-    //             @include push-col(0);
-    //         }
-    //     }
+            @include breakpoints("lg-desktop") {
+                @include push-col(0);
+            }
+        }
 
-    //     .o-hero__list {
-    //         list-style-type: none;
-    //         padding: 0;
+        .o-hero__list {
+            list-style-type: none;
+            padding: 0;
 
-    //         li {
-    //             @include font-size("small");
-    //             @include line-height(24px);
-    //             margin-bottom: 1em;
-    //             font-weight: 600;
-    //             letter-spacing: .04em;
-    //         }
+            li {
+                @include font-size("small");
+                @include line-height(24px);
+                margin-bottom: 1em;
+                font-weight: 600;
+                letter-spacing: .04em;
+            }
 
-    //         &-container {
-    //             @include span-col(12);
-    //             margin-top: 40px;
+            &-container {
+                @include span-col(12);
+                margin-top: 40px;
 
-    //             @include breakpoints("sm-tablet") {
-    //                 @include span-col(10);
-    //                 @include push-col(1);
-    //             }
+                @include breakpoints("sm-tablet") {
+                    @include span-col(10);
+                    @include push-col(1);
+                }
 
-    //             @include breakpoints("tablet") {
-    //                 @include span-col(3);
-    //                 @include push-col(2);
-    //                 margin-top: 0;
-    //             }
+                @include breakpoints("tablet") {
+                    @include span-col(3);
+                    @include push-col(2);
+                    margin-top: 0;
+                }
 
-    //             @include breakpoints("laptop") {
-    //                 @include span-col(2);
-    //                 @include push-col(2);
-    //                 margin-top: 0;
-    //             }
+                @include breakpoints("laptop") {
+                    @include span-col(2);
+                    @include push-col(2);
+                    margin-top: 0;
+                }
 
-    //             h6 {
-    //                 @include font-size(14px);
-    //                 font-weight: 600;
-    //             }
-    //         }
-    //     }
+                h6 {
+                    @include font-size(14px);
+                    font-weight: 600;
+                }
+            }
+        }
 
-    //     .o-hero__title,
-    //     .o-hero__image,
-    //     .o-hero__left,
-    //     .o-hero__right {
-    //         @include span-col(12);
+        .o-hero__title,
+        .o-hero__image,
+        .o-hero__left,
+        .o-hero__right {
+            @include span-col(12);
 
-    //         @include breakpoints("tablet") {
-    //             @include span-col(6);
-    //         }
-    //     }
+            @include breakpoints("tablet") {
+                @include span-col(6);
+            }
+        }
 
-    //     &.-spaced {
-    //         .o-hero__title {
-    //             padding-top: 60px;
+        &.-spaced {
+            .o-hero__title {
+                padding-top: 60px;
 
-    //             @include breakpoints("tablet") {
-    //                 padding-bottom: 125px;
-    //                 padding-top: 100px;
-    //             }
-    //         }
+                @include breakpoints("tablet") {
+                    padding-bottom: 125px;
+                    padding-top: 100px;
+                }
+            }
 
-    //         .o-hero__meta {
-    //             padding-bottom: 60px;
+            .o-hero__meta {
+                padding-bottom: 60px;
 
-    //             @include breakpoints("tablet") {
-    //                 padding-bottom: 130px;
-    //             }
-    //         }
+                @include breakpoints("tablet") {
+                    padding-bottom: 130px;
+                }
+            }
 
-    //         .o-hero__image {
-    //             @include breakpoints("tablet") {
-    //                 margin-top: 40px;
-    //             }
-    //         }
-    //     }
+            .o-hero__image {
+                @include breakpoints("tablet") {
+                    margin-top: 40px;
+                }
+            }
+        }
 
-    //     .o-hero__title {
-    //         padding-top: 72px;
+        .o-hero__title {
+            padding-top: 72px;
 
-    //         @include breakpoints("tablet") {
-    //             @include span-col(5);
-    //             @include push-col(1);
-    //             padding-top: 150px;
-    //         }
+            @include breakpoints("tablet") {
+                @include span-col(5);
+                @include push-col(1);
+                padding-top: 150px;
+            }
 
-    //         @include breakpoints("desktop") {
-    //             @include push-col(1);
-    //             padding-top: 220px;
-    //         }
+            @include breakpoints("desktop") {
+                @include push-col(1);
+                padding-top: 220px;
+            }
 
-    //         @include breakpoints("lg-desktop") {
-    //             @include push-col(0);
-    //         }
+            @include breakpoints("lg-desktop") {
+                @include push-col(0);
+            }
 
-    //         h1 {
-    //             @include font-size(44px);
-    //             @include line-height(48px);
-    //             margin-bottom: 32px;
+            h1 {
+                @include font-size(44px);
+                @include line-height(48px);
+                margin-bottom: 32px;
 
-    //             @include breakpoints("phone") {
-    //                 @include font-size(55px);
-    //                 @include line-height(61px);
-    //             }
+                @include breakpoints("phone") {
+                    @include font-size(55px);
+                    @include line-height(61px);
+                }
 
-    //             @include breakpoints("lg-desktop") {
-    //                 @include font-size(70px);
-    //                 @include line-height(80px);
-    //             }
-    //         }
-    //     }
+                @include breakpoints("lg-desktop") {
+                    @include font-size(70px);
+                    @include line-height(80px);
+                }
+            }
+        }
 
-    //     .o-hero__image {
-    //         margin: 0;
+        .o-hero__image {
+            margin: 0;
 
-    //         @include breakpoints("tablet") {
-    //             margin-top: 80px;
-    //         }
+            @include breakpoints("tablet") {
+                margin-top: 80px;
+            }
 
-    //         @include breakpoints("laptop") {
-    //             margin-top: 0;
-    //         }
+            @include breakpoints("laptop") {
+                margin-top: 0;
+            }
 
-    //         @include breakpoints("desktop") {
-    //             @include push-col(1);
-    //             margin-left: 0;
-    //         }
+            @include breakpoints("desktop") {
+                @include push-col(1);
+                margin-left: 0;
+            }
 
-    //         img {
-    //             display: block;
-    //             max-width: 100%;
+            img {
+                display: block;
+                max-width: 100%;
 
-    //             @include breakpoints("lg-desktop") {
-    //                 max-width: 125%;
-    //             }
-    //         }
-    //     }
+                @include breakpoints("lg-desktop") {
+                    max-width: 125%;
+                }
+            }
+        }
 
-    //     .o-hero__meta {
-    //         color: get-color("primary", "white");
-    //         padding: 80px 0;
-    //         margin-top: -42px;
+        .o-hero__meta {
+            color: get-color("primary", "white");
+            padding: 80px 0;
+            margin-top: -42px;
 
-    //         @include breakpoints("tablet") {
-    //             padding: 0;;
-    //         }
+            @include breakpoints("tablet") {
+                padding: 0;;
+            }
 
-    //         &__title {
-    //             @include font-size(19px);
-    //             @include line-height("base");
-    //             color: get-color-primary("white");
-    //             font-family: $font-secondary;
-    //             font-weight: 500;
-    //             text-transform: uppercase;
-    //             letter-spacing: .24em;
+            &__title {
+                @include font-size(19px);
+                @include line-height("base");
+                color: get-color-primary("white");
+                font-family: $font-secondary;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: .24em;
 
-    //             @include breakpoints("tablet") {
-    //                 @include font-size("small");
-    //                 @include line-height("smaller");
-    //             }
-    //         }
+                @include breakpoints("tablet") {
+                    @include font-size("small");
+                    @include line-height("smaller");
+                }
+            }
 
-    //         @include breakpoints("tablet") {
-    //             padding: 120px 0;
-    //         }
+            @include breakpoints("tablet") {
+                padding: 120px 0;
+            }
 
-    //         @include breakpoints("desktop") {
-    //             margin-top: -100px;
-    //         }
-    //     }
-    // }
+            @include breakpoints("desktop") {
+                margin-top: -100px;
+            }
+        }
+    }
 
     &.-interior {
         .o-hero__titles {
@@ -394,10 +409,6 @@
         @include clearfix();
         //margin-bottom: 84px;
         height: 100vh;
-
-        @include breakpoints("tablet") {
-            //margin-bottom: 280px;
-        }
     }
 
     &__titles {
@@ -423,8 +434,28 @@
             animation-fill-mode: forwards;
         }
 
+        .-fade-homepage-easter-egg {
+            //opacity: 0;
+            // animation-delay: 6s;
+            // animation-duration: 4s;
+            // animation-name: fadeInAnimation;
+            // animation-iteration-count: 1;
+            // animation-fill-mode: forwards;
+            // animation-timing-function: ease;
+        }
+
+        .-fade-homepage-title {
+            //opacity: 0;
+            // animation-delay: 2s;
+            // animation-duration: 8s;
+            // animation-name: fadeInAnimation;
+            // animation-iteration-count: 1;
+            // animation-fill-mode: forwards;
+            // animation-timing-function: ease;
+        }
+
         .-homepage-title {
-            max-width: 488px;
+            // max-width: 488px;
         }
 
         .-scroll-fade {
@@ -577,4 +608,96 @@
         }
     }
 
+    &.-homepage {
+        display: flex;
+        padding-top: calc(975 / 1600 * 100%);
+        position: relative;
+        .o-hero__text-container {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            left: 0;
+            max-width: none;
+            position: absolute;
+            top: 0;
+            width: 50%;
+            margin-right: 0;
+
+            .o-hero__top {
+                align-items: center;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+
+                @include clearfix();
+                //margin-bottom: 84px;
+                // height: 600px;
+
+                @include breakpoints("lg-laptop") {
+                    // height: 975px;
+                }
+
+                .o-hero__titles {
+                    bottom: 12%;
+                    display: flex;
+                    flex-direction: column;
+                    // height: 100%;
+                    justify-content: center;
+                    top: auto;
+                    max-width: 61%;
+                    position: absolute;
+
+                    // @media (min-height: 1024px) {
+                    //     top: 494px;
+                // }
+
+                    h1 {
+                        @include font-size(44px);
+                        @include line-height(48px);
+                        margin-bottom: 32px;
+
+                        @include breakpoints("phone") {
+                            @include font-size(43px);
+                            @include line-height(52px);
+                        }
+
+                        @include breakpoints("tablet") {
+                            @include font-size(38px);
+                            @include line-height(44px);
+                        }
+
+                        @include breakpoints("laptop") {
+                            @include font-size(49px);
+                            @include line-height(59px);
+                        }
+
+                        @include breakpoints("desktop") {
+                            @include font-size(55px);
+                            @include line-height(61px);
+                        }
+
+                        @include breakpoints("lg-desktop") {
+                            @include font-size(70px);
+                            @include line-height(80px);
+                        }
+                    }
+
+                    p {
+                        margin-top: 15px;
+
+                        @include breakpoints("lg-desktop") {
+                            margin-top: 89px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        h2 {
+            margin: 0;
+        }
+
+    }
 }

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { TimelineMax, Power1 } from "gsap";
+import { TimelineMax, TweenMax, Power1, Linear } from "gsap";
 
 import blackX from "./../../../static/img/home/hero-animation/black-xxxxx.png";
 import blueLines from "./../../../static/img/home/hero-animation/blue-lines.png";
@@ -44,27 +44,65 @@ const HeroAnimation = () => {
         const tealRainbowImg = document.querySelector(".-teal-rainbow");
         const yellowSquiggleImg = document.querySelector(".-yellow-squiggle");
 
+        
+
+        var animatedImagesArray = Array.from(document.querySelectorAll(".-hero-animated-image"));
+        console.log(animatedImagesArray);
+        var shuffledAnimatedImages = shuffleArray(animatedImagesArray);
+        console.log(shuffledAnimatedImages);
+
+        // for (var i = 0; i < animatedImages.length; i++) {
+        //     TweenMax.from(animatedImages[i], randomNumber(1, 5), {
+        //         opacity: 0,
+        //         yoyo: true,
+        //         delay: randomNumber(0.5, 3.5),
+        //         repeat: -1,
+        //         ease: Linear.easeNone,
+        //     });
+        // }
+
+        // Choose items to set visible on load
+        // Select random invisible image and transition to visible
+        // select random visible image and transition to visible
+
+        for (var i = 0; i < shuffledAnimatedImages.length / 2; i++) {
+            // var z = document.querySelector(shuffledAnimatedImages[i].toString());
+            // console.log(z);
+        }
+
+        function randomNumber(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        
+        function shuffleArray(a) {
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [a[i], a[j]] = [a[j], a[i]];
+            }
+            return a;
+        }
+
         const tl = new TimelineMax();
 
-        tl.set(blackXImg, { opacity: 0 });
-        tl.set(blueLinesImg, { opacity: 0 });
-        tl.set(bluePlantImg, { opacity: 0 });
-        tl.set(fogDotsImg, { opacity: 0 });
-        tl.set(fogEyeballImg, { opacity: 0 });
-        tl.set(fogTagImg, { opacity: 0 });
-        tl.set(greenGoImg, { opacity: 0 });
-        tl.set(greenPlantImg, { opacity: 0 });
-        tl.set(orangeBlobImg, { opacity: 0 });
-        tl.set(orangeCubeImg, { opacity: 0 });
-        tl.set(pinkAsteriskImg, { opacity: 0 });
-        tl.set(pinkDropImg, { opacity: 0 });
-        tl.set(pinkRaindropsImg, { opacity: 0 });
-        tl.set(redPrismImg, { opacity: 0 });
-        tl.set(redTeethImg, { opacity: 0 });
-        tl.set(salmonBlobImg, { opacity: 0 });
-        tl.set(tealAsteriskImg, { opacity: 0 });
-        tl.set(tealRainbowImg, { opacity: 0 });
-        tl.set(yellowSquiggleImg, { opacity: 0 });
+        // tl.set(blackXImg, { opacity: 0 });
+        // tl.set(blueLinesImg, { opacity: 0 });
+        // tl.set(bluePlantImg, { opacity: 0 });
+        // tl.set(fogDotsImg, { opacity: 0 });
+        // tl.set(fogEyeballImg, { opacity: 0 });
+        // tl.set(fogTagImg, { opacity: 0 });
+        // tl.set(greenGoImg, { opacity: 0 });
+        // tl.set(greenPlantImg, { opacity: 0 });
+        // tl.set(orangeBlobImg, { opacity: 0 });
+        // tl.set(orangeCubeImg, { opacity: 0 });
+        // tl.set(pinkAsteriskImg, { opacity: 0 });
+        // tl.set(pinkDropImg, { opacity: 0 });
+        // tl.set(pinkRaindropsImg, { opacity: 0 });
+        // tl.set(redPrismImg, { opacity: 0 });
+        // tl.set(redTeethImg, { opacity: 0 });
+        // tl.set(salmonBlobImg, { opacity: 0 });
+        // tl.set(tealAsteriskImg, { opacity: 0 });
+        // tl.set(tealRainbowImg, { opacity: 0 });
+        // tl.set(yellowSquiggleImg, { opacity: 0 });
 
         tl.to(
             blackXImg,
@@ -242,25 +280,25 @@ const HeroAnimation = () => {
     return (
         <div className="o-hero__image-container">
             <img src={person} className="-person" aria-hidden="true" alt="" />
-            <img src={blackX} className="-black-x" aria-hidden="true" alt="" />
-            <img src={blueLines} className="-blue-lines" aria-hidden="true" alt="" />
-            <img src={bluePlant} className="-blue-plant" aria-hidden="true" alt="" />
-            <img src={fogDots} className="-fog-dots" aria-hidden="true" alt="" />
-            <img src={fogEyeball} className="-fog-eyeball" aria-hidden="true" alt="" />
-            <img src={fogTag} className="-fog-tag" aria-hidden="true" alt="" />
-            <img src={greenGo} className="-green-go" aria-hidden="true" alt="" />
-            <img src={greenPlant} className="-green-plant" aria-hidden="true" alt="" />
-            <img src={orangeBlob} className="-orange-blob" aria-hidden="true" alt="" />
-            <img src={orangeCube} className="-orange-cube" aria-hidden="true" alt="" />
-            <img src={pinkAsterisk} className="-pink-asterisk" aria-hidden="true" alt="" />
-            <img src={pinkDrop} className="-pink-drop" aria-hidden="true" alt="" />
-            <img src={pinkRaindrops} className="-pink-raindrops" aria-hidden="true" alt="" />
-            <img src={redPrism} className="-red-prism" aria-hidden="true" alt="" />
-            <img src={redTeeth} className="-red-teeth" aria-hidden="true" alt="" />
-            <img src={salmonBlob} className="-salmon-blob" aria-hidden="true" alt="" />
-            <img src={tealAsterisk} className="-teal-asterisk" aria-hidden="true" alt="" />
-            <img src={tealRainbow} className="-teal-rainbow" aria-hidden="true" alt="" />
-            <img src={yellowSquiggle} className="-yellow-squiggle" aria-hidden="true" alt="" />
+            <img src={blackX} className="-black-x -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={blueLines} className="-blue-lines -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={bluePlant} className="-blue-plant -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={fogDots} className="-fog-dots -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={fogEyeball} className="-fog-eyeball -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={fogTag} className="-fog-tag -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={greenGo} className="-green-go -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={greenPlant} className="-green-plant -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={orangeBlob} className="-orange-blob -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={orangeCube} className="-orange-cube -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={pinkAsterisk} className="-pink-asterisk -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={pinkDrop} className="-pink-drop -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={pinkRaindrops} className="-pink-raindrops -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={redPrism} className="-red-prism -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={redTeeth} className="-red-teeth -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={salmonBlob} className="-salmon-blob -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={tealAsterisk} className="-teal-asterisk -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={tealRainbow} className="-teal-rainbow -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={yellowSquiggle} className="-yellow-squiggle -hero-animated-image" aria-hidden="true" alt="" />
         </div>
     );
 };
