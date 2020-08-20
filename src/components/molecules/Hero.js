@@ -48,11 +48,9 @@ const Hero = class extends React.Component {
                         <div className="-fade-homepage-title -homepage-title">
                             <h1 className="-after">{this.props.title}</h1>
                         </div>
-                        {/* <VisibilitySensor onChange={this._onEasterEggChange}> */}
-                            <div className="-fade-homepage-easter-egg">
-                                <p className="-before">{this.props.secondaryTitle}</p>
-                            </div>
-                        {/* </VisibilitySensor> */}
+                        <div className="-fade-homepage-easter-egg">
+                            <p className="-before">{this.props.secondaryTitle}</p>
+                        </div>
                     </div>
                 </div>
                 <div style={verticalTextStyle} className="o-hero__vertical">
