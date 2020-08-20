@@ -612,6 +612,12 @@
         display: flex;
         padding-top: calc(975 / 1600 * 100%);
         position: relative;
+
+        @include breakpoints(1600px) {
+            margin: 0 auto;
+            padding-top: 975px;
+            width: 1600px;
+        }
         .o-hero__text-container {
             align-items: center;
             display: flex;
