@@ -366,6 +366,9 @@
         @include breakpoints("tablet") {
             @include font-size("base");
             @include line-height("smaller");
+        }
+
+        @include breakpoints("lg-desktop") {
             display: block;
         }
     }
@@ -462,9 +465,9 @@
 
     &.-homepage {
         display: flex;
-        padding-top: 765px;
+        padding-top: calc(975 / 800 * 100% + 299px);
         position: relative;
-        
+
         @include breakpoints("tablet"){
             padding-top: calc(975 / 1600 * 100%);
         }
@@ -478,9 +481,10 @@
             align-items: center;
             display: flex;
             justify-content: center;
-            height: 45%;
+            height: 225px;
             left: 0;
             max-width: none;
+            padding-right: 26px;
             position: absolute;
             top: 0;
             margin-right: 0;
@@ -489,6 +493,7 @@
 
             @include breakpoints("tablet"){
                 height: 100%;
+                padding-right: 0;
                 width: 50%;
             }
 
@@ -501,20 +506,25 @@
                 @include clearfix();
 
                 .o-hero__titles {
-                    bottom: 22%;
+                    bottom: auto;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    left: 5%;
-                    max-width: 299px;
+                    left: 32px;
+                    margin-top: 60px;
+                    max-width: 90%;
                     top: auto;
                     position: absolute;
 
                     @include breakpoints("tablet"){
                         bottom: 12%;
-                        left: auto;
+                        left: 0;
                         max-width: 61%;
                         width: 50%;
+                    }
+
+                    @include breakpoints("lg-desktop"){
+                        left: auto;
                     }
 
                     h1 {
@@ -553,7 +563,7 @@
                         max-width: 107px;
 
                         @include breakpoints("tablet") {
-                            margin-top: 15px;
+                            margin-top: 89px;
                             max-width: none;
                         }
                         @include breakpoints("lg-desktop") {
@@ -565,16 +575,18 @@
         }
 
         .o-hero__image-container {
-            margin-top: 266px;
+            margin-top: 300px;
             position: absolute;
             right: 0;
             top: 0;
             width: 93%;
-            height: 500px;
+            // height: 500px;
+            padding-top: calc(975 / 800 * 100%);
 
             @include breakpoints("tablet"){
                 height: 100%;
                 margin-top: 0;
+                padding-top: 0;
                 width: 50%;
             }
 
