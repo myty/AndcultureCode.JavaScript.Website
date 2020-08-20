@@ -16,154 +16,6 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dfebee', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
     }
 
-    &__image-container { // TODO make all these break to be above the text at desktop breakpoint? - Peter
-        height: 100%;
-        right: 0;
-        top: 0;
-        position: absolute;
-        width: 50%;
-
-        @include breakpoints("lg-laptop") {
-            // height: 975px;
-        }
-
-        img {
-            position: absolute;
-        }
-
-        .-person {
-            bottom: 0; // -81px ?
-            right: 23%;
-            width: 66%;
-            z-index: 5;
-
-            @include breakpoints("desktop") {
-                // width: 528px;
-            }
-        }
-
-        .-black-x {
-            right: 70%;
-            top: 20%;
-            width: 16%;
-            z-index: 1;
-        }
-
-        .-blue-lines {
-            top: 65%;
-            right: 25%;
-            width: 10%;
-            z-index: 1;
-        }
-
-        .-blue-plant {
-            right: 52%;
-            top: 23%;
-            width: 12%;
-            z-index: 1;
-        }
-
-        .-fog-dots {
-            right: 16%;
-            top: 20%;
-            width: 50%;
-            z-index: 0;
-        }
-
-        .-fog-eyeball {
-            right: 82%;
-            top: 10%;
-            width: 14%;
-            z-index: 0;
-        }
-
-        .-fog-tag {
-            right: 88%;
-            top: 62%;
-            width: 8%;
-        }
-
-        .-green-go {
-            right: 40%;
-            top: 35%;
-            width: 16%;
-            z-index: 1;
-        }
-
-        .-green-plant {
-            bottom: 37%;
-            right: 80%;
-            width: 18%;
-        }
-
-        .-orange-blob {
-            display: none;
-            right: 0%;
-            top: 40%;
-            width: 16%;
-        }
-
-        .-orange-cube {
-            right: 50%;
-            top: 8%;
-            width: 12%;
-        }
-
-        .-pink-asterisk {
-            right: 29%;
-            top: 76%;
-            width: 6%;
-        }
-
-        .-pink-drop {
-            right: 44%;
-            top: 54%;
-            width: 26%;
-        }
-
-        .-pink-raindrops {
-            right: 20%;
-            top: 1%;
-            width: 24%;
-        }
-
-        .-red-prism {
-            bottom: 11%;
-            right: 76%;
-            width: 24%;
-        }
-
-        .-red-teeth {
-            right: 20%;
-            top: 79%;
-            width: 2%;
-        }
-
-        .-salmon-blob {
-            right: 70%;
-            top: 14%;
-            width: 22%;
-        }
-
-        .-teal-asterisk {
-            top: 55%;
-            right: 36%;
-            width: 6%;
-        }
-
-        .-teal-rainbow {
-            bottom: 50%;
-            right: 84%;
-            width: 24%;
-        }
-
-        .-yellow-squiggle {
-            right: 10%;
-            top: 18%;
-            width: 24%;
-        }
-    }
-
     &.-case-study {
 
         .o-hero__copy-container {
@@ -610,8 +462,12 @@
 
     &.-homepage {
         display: flex;
-        padding-top: calc(975 / 1600 * 100%);
+        padding-top: 765px;
         position: relative;
+        
+        @include breakpoints("tablet"){
+            padding-top: calc(975 / 1600 * 100%);
+        }
 
         @include breakpoints(1600px) {
             margin: 0 auto;
@@ -622,13 +478,19 @@
             align-items: center;
             display: flex;
             justify-content: center;
-            height: 100%;
+            height: 45%;
             left: 0;
             max-width: none;
             position: absolute;
             top: 0;
-            width: 50%;
             margin-right: 0;
+            margin-top: 40px;
+            width: 100%;
+
+            @include breakpoints("tablet"){
+                height: 100%;
+                width: 50%;
+            }
 
             .o-hero__top {
                 align-items: center;
@@ -637,26 +499,23 @@
                 justify-content: center;
 
                 @include clearfix();
-                //margin-bottom: 84px;
-                // height: 600px;
-
-                @include breakpoints("lg-laptop") {
-                    // height: 975px;
-                }
 
                 .o-hero__titles {
-                    bottom: 12%;
+                    bottom: 22%;
                     display: flex;
                     flex-direction: column;
-                    // height: 100%;
                     justify-content: center;
+                    left: 5%;
+                    max-width: 299px;
                     top: auto;
-                    max-width: 61%;
                     position: absolute;
 
-                    // @media (min-height: 1024px) {
-                    //     top: 494px;
-                // }
+                    @include breakpoints("tablet"){
+                        bottom: 12%;
+                        left: auto;
+                        max-width: 61%;
+                        width: 50%;
+                    }
 
                     h1 {
                         @include font-size(44px);
@@ -690,8 +549,13 @@
                     }
 
                     p {
-                        margin-top: 15px;
+                        margin-top: 22px;
+                        max-width: 107px;
 
+                        @include breakpoints("tablet") {
+                            margin-top: 15px;
+                            max-width: none;
+                        }
                         @include breakpoints("lg-desktop") {
                             margin-top: 89px;
                         }
@@ -700,10 +564,160 @@
             }
         }
 
+        .o-hero__image-container {
+            margin-top: 266px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 93%;
+            height: 500px;
+
+            @include breakpoints("tablet"){
+                height: 100%;
+                margin-top: 0;
+                width: 50%;
+            }
+
+            img {
+                position: absolute;
+            }
+
+            .-person {
+                bottom: 0;
+                right: 23%;
+                width: 50%;
+                z-index: 5;
+
+                @include breakpoints("tablet"){
+                    width: 66%;
+                }
+            }
+
+            .-black-x {
+                right: 70%;
+                top: 20%;
+                width: 16%;
+                z-index: 1;
+            }
+
+            .-blue-lines {
+                top: 65%;
+                right: 25%;
+                width: 10%;
+                z-index: 1;
+            }
+
+            .-blue-plant {
+                right: 52%;
+                top: 23%;
+                width: 12%;
+                z-index: 1;
+            }
+
+            .-fog-dots {
+                right: 16%;
+                top: 20%;
+                width: 50%;
+                z-index: 0;
+            }
+
+            .-fog-eyeball {
+                right: 82%;
+                top: 10%;
+                width: 14%;
+                z-index: 0;
+            }
+
+            .-fog-tag {
+                right: 88%;
+                top: 62%;
+                width: 8%;
+            }
+
+            .-green-go {
+                right: 40%;
+                top: 35%;
+                width: 16%;
+                z-index: 1;
+            }
+
+            .-green-plant {
+                bottom: 37%;
+                right: 80%;
+                width: 18%;
+            }
+
+            .-orange-blob {
+                display: none;
+                right: 0%;
+                top: 40%;
+                width: 16%;
+            }
+
+            .-orange-cube {
+                right: 50%;
+                top: 8%;
+                width: 12%;
+            }
+
+            .-pink-asterisk {
+                right: 29%;
+                top: 76%;
+                width: 6%;
+            }
+
+            .-pink-drop {
+                right: 44%;
+                top: 54%;
+                width: 26%;
+            }
+
+            .-pink-raindrops {
+                right: 20%;
+                top: 1%;
+                width: 24%;
+            }
+
+            .-red-prism {
+                bottom: 11%;
+                right: 76%;
+                width: 24%;
+            }
+
+            .-red-teeth {
+                right: 20%;
+                top: 79%;
+                width: 2%;
+            }
+
+            .-salmon-blob {
+                right: 70%;
+                top: 14%;
+                width: 22%;
+            }
+
+            .-teal-asterisk {
+                top: 55%;
+                right: 36%;
+                width: 6%;
+            }
+
+            .-teal-rainbow {
+                bottom: 50%;
+                right: 84%;
+                width: 24%;
+            }
+
+            .-yellow-squiggle {
+                right: 10%;
+                top: 18%;
+                width: 24%;
+            }
+        }
+
 
         h2 {
             margin: 0;
         }
-
     }
 }
