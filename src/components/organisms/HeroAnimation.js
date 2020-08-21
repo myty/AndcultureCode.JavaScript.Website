@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { TimelineMax, TweenMax, Power1, Linear } from "gsap";
+import { gsap, Linear } from "gsap";
 
 import blackX from "./../../../static/img/home/hero-animation/black-xxxxx.png";
 import blueLines from "./../../../static/img/home/hero-animation/blue-lines.png";
@@ -56,7 +56,7 @@ const HeroAnimation = () => {
                             return a;
                         }
 
-                        const tl = new TimelineMax();
+                        const tl = new gsap.timeline();
 
                         var imgArray = [
                             blackXImg,
@@ -87,8 +87,9 @@ const HeroAnimation = () => {
                         }
 
                         for (var i = 0; i < imgArray.length; i++) {
-                            TweenMax.from(imgArray[i], randomNumber(2, 7), {
+                            gsap.from(imgArray[i], {
                                 opacity: 0,
+                                duration: randomNumber(2, 7),
                                 yoyo: true,
                                 delay: randomNumber(2, 8),
                                 repeat: -1,
