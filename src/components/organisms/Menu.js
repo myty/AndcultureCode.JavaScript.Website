@@ -30,6 +30,7 @@ const Menu = (props) => {
                 <nav aria-label="Main menu links">
                     <button onClick={props.onClose}><IconClose /></button>
                     <a href="/">home</a>
+                    <a href="/work/">work</a>
                     <a href="/blog/">blog</a>
                     <a href="/careers/">careers</a>
                     <a href="/contact/">contact</a>
