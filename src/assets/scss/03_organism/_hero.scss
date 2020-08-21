@@ -488,8 +488,12 @@
             position: absolute;
             top: 0;
             margin-right: 0;
-            margin-top: 40px;
+            margin-top: 50px;
             width: 100%;
+
+            @include breakpoints("phone"){
+                margin-top: 40px;
+            }
 
             @include breakpoints("tablet"){
                 height: 100%;
@@ -575,10 +579,20 @@
 
                         @include breakpoints("tablet") {
                             margin-top: 89px;
-                            max-width: none;
+                            max-width: 46%;
                         }
+
+                        @include breakpoints("laptop") {
+                            max-width: 41%;
+                        }
+
+                        @include breakpoints("sm-desktop") {
+                            max-width: 35%;
+                        }
+                        
                         @include breakpoints("lg-desktop") {
                             margin-top: 89px;
+                            max-width: 26%;
                         }
                     }
                 }
