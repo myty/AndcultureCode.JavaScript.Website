@@ -74,14 +74,18 @@
         }
 
         img {
-            max-width: 400px;
-            width: 400px;
-            height: 399px;
+            max-width: 260px;
+            height: 259px;
+
+            @include breakpoints("sm-tablet") {
+                max-width: 300px;
+                height: 299px;
+            }
 
             @include breakpoints("tablet") {
-                width: 415px;
-                max-width: 415px;
                 height: 414px;
+                max-width: 415px;
+                width: 415px;
             }
         }
     }
