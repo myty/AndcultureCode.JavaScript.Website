@@ -82,12 +82,13 @@ const HeroAnimation = () => {
 
         imgArray = shuffleArray(imgArray);
         for (var i = 0; i < imgArray.length / 2; i++) {
-            // Set half of the items to be hidden on page load
+            // Set half of the items to be randomly visible on page load
             tl.set(imgArray[i], { opacity: 1 });
         }
 
         for (var i = 0; i < imgArray.length; i++) {
             if (i < imgArray.length / 2) {
+                // Animate the initially visible elements
                 gsap.to(imgArray[i], {
                     opacity: 0,
                     duration: randomNumber(2, 7),
@@ -97,6 +98,7 @@ const HeroAnimation = () => {
                     ease: Linear.easeNone,
                 });
             } else {
+                // Animate the initially invisible elements
                 gsap.from(imgArray[i], {
                     opacity: 0,
                     duration: randomNumber(2, 7),
