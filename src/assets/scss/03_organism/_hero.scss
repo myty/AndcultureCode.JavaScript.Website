@@ -495,6 +495,7 @@
                 height: 100%;
                 padding-right: 0;
                 width: 50%;
+                justify-content: flex-end;
             }
 
             .o-hero__top {
@@ -505,6 +506,13 @@
 
                 @include clearfix();
 
+                @include breakpoints(1196px){
+                    justify-content: flex-end;
+                    max-width: 600px;
+                    position: relative;
+                    width: 100%;
+                }
+
                 .o-hero__titles {
                     bottom: auto;
                     display: flex;
@@ -512,19 +520,22 @@
                     justify-content: center;
                     left: 32px;
                     margin-top: 60px;
-                    max-width: 90%;
+                    max-width: 72%;
                     top: auto;
                     position: absolute;
 
-                    @include breakpoints("tablet"){
+                    @include breakpoints(1280px){
                         bottom: 12%;
-                        left: 0;
-                        max-width: 61%;
-                        width: 50%;
+                        left: 50%;
+                        margin-left: -300px;
+                        max-width: 72%;
                     }
 
                     @include breakpoints("lg-desktop"){
-                        left: auto;
+                        left: 50%;
+                        max-width: 90%;
+                        width: auto;
+
                     }
 
                     h1 {
