@@ -8,29 +8,31 @@ const FromOurBlog = React.forwardRef((props, ref) => {
     return (
         <div className="o-from-our-blog__container">
             <div className="o-rhythm__container">
-                <div className="from-our-blog">
-                    <h2>from our blog</h2>
-                    <a href="/blog/" className="view-all-posts">
-                        VIEW ALL POSTS
-                    </a>
-                </div>
-                <div className="blog-list-homepage">
-                    {list &&
-                        list.map(({ node: blogItem }, index) => {
-                            const blog = blogItem.frontmatter;
-                            const slug = blogItem.fields.slug;
+                <div className="o-from-our-blog__wrapper">
+                    <div className="from-our-blog">
+                        <h2>from our blog</h2>
+                        <a href="/blog/" className="view-all-posts">
+                            VIEW ALL POSTS
+                        </a>
+                    </div>
+                    <div className="blog-list-homepage">
+                        {list &&
+                            list.map(({ node: blogItem }, index) => {
+                                const blog = blogItem.frontmatter;
+                                const slug = blogItem.fields.slug;
 
-                            return (
-                                <BlogHomepagePost
-                                    key={`blog-homepage-post-${index}`}
-                                    url={slug}
-                                    linkText={blog.title}
-                                    author={blog.author}
-                                    category={blog.category}
-                                    blogItem={blogItem}
-                                />
-                            );
-                        })}
+                                return (
+                                    <BlogHomepagePost
+                                        key={`blog-homepage-post-${index}`}
+                                        url={slug}
+                                        linkText={blog.title}
+                                        author={blog.author}
+                                        category={blog.category}
+                                        blogItem={blogItem}
+                                    />
+                                );
+                            })}
+                    </div>
                 </div>
             </div>
         </div>

@@ -10,9 +10,9 @@
         a {
             font-family: $font-secondary;
             font-size: 18px;
-            letter-spacing: .2em;
+            letter-spacing: 0.2em;
             color: get-color-primary("after-hours");
-            border-bottom-width: .2em;
+            border-bottom-width: 0.2em;
             border-color: get-color-primary("fresh");
             text-decoration: none;
             border-bottom-style: solid;
@@ -28,10 +28,10 @@
             color: get-color-neutral("light-gray");
             margin-bottom: 2rem;
             margin-top: 2rem;
-            font-size:20px;
-            font-size:1.25rem;
-            line-height:32px;
-            line-height:2rem;
+            font-size: 20px;
+            font-size: 1.25rem;
+            line-height: 32px;
+            line-height: 2rem;
             @include breakpoints("tablet") {
                 font-size: 28px;
                 line-height: 48px;
@@ -44,18 +44,6 @@
                 margin-top: 0;
                 margin-right: 60px;
             }
-
-        }
-
-        .o-rhythm__container {
-            display:flex;
-            flex-wrap: wrap;
-            flex-direction: column-reverse;
-            @include breakpoints("tablet") {
-                flex-direction: initial;
-                flex-wrap: nowrap;
-            }
-
         }
     }
 
@@ -74,19 +62,33 @@
         }
 
         img {
-            max-width: 260px;
-            height: 259px;
+            max-width: 250px;
+            height: 249px;
 
-            @include breakpoints("sm-tablet") {
-                max-width: 300px;
-                height: 299px;
-            }
-
-            @include breakpoints("tablet") {
+            @include breakpoints("lg-desktop") {
                 height: 414px;
                 max-width: 415px;
                 width: 415px;
             }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        @include breakpoints("tablet") {
+            flex-direction: initial;
+            flex-wrap: nowrap;
+        }
+
+        // Compensate for the left and right navbar icons
+        @include breakpoints("tablet") {
+            margin-left: 72px;
+        }
+        
+        @include breakpoints("lg-desktop") {
+            margin-left: initial;
         }
     }
 }

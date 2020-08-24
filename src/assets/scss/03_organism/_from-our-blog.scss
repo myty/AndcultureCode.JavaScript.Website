@@ -1,52 +1,65 @@
-.o-from-our-blog__container {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+.o-from-our-blog {
+    &__container {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
 
-
-    .o-rhythm__container {
-        display: flex;
-        flex-direction: column;
-        a.view-all-posts {
-            @include font-size("small");
-            font-weight: 500;
-            line-height: 28px;
-            letter-spacing: 0.2em;
-            color: get-color-primary("after-hours");
-            border-bottom-width: .2em;
-            border-color: get-color-primary("fresh");
-            text-decoration: none;
-            border-bottom-style: solid;
-            width: 175px;   // used to temporarily patch the bottom border length
-        }
-
-        .from-our-blog {
+        .o-rhythm__container {
             display: flex;
             flex-direction: column;
-            margin-bottom: 50px;
+            a.view-all-posts {
+                @include font-size("small");
+                font-weight: 500;
+                line-height: 28px;
+                letter-spacing: 0.2em;
+                color: get-color-primary("after-hours");
+                border-bottom-width: 0.2em;
+                border-color: get-color-primary("fresh");
+                text-decoration: none;
+                border-bottom-style: solid;
+                width: 175px; // used to temporarily patch the bottom border length
+            }
 
-            h2 {
-                margin-right: 30px;
-                @include breakpoints("tablet") {
-                    margin-bottom: 0;
+            .from-our-blog {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+
+                h2 {
+                    margin-right: 30px;
+                    @include breakpoints("tablet") {
+                        margin-bottom: 0;
+                    }
+                    margin-bottom: 0.5em;
                 }
-                margin-bottom: 0.5em; 
+
+                @include breakpoints("tablet") {
+                    flex-direction: row;
+                    align-items: center;
+                }
             }
 
-            @include breakpoints("tablet") {
-                flex-direction: row;
-                align-items: center;
+            .blog-list-homepage {
+                display: flex;
+                flex-direction: column;
+                //justify-content: space-between;
+
+                @include breakpoints("tablet") {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
             }
         }
+    }
 
-        .blog-list-homepage {
-            display: flex;
-            flex-direction: column;
-            //justify-content: space-between;
-
-            @include breakpoints("tablet") {
-                flex-direction: row;
-                justify-content: space-between;
-            }
+    &__wrapper {
+        // Compensate for the left and right navbar icons
+        @include breakpoints("tablet") {
+            margin-left: 72px;
+            margin-right: 72px;
+        }
+        @include breakpoints("lg-desktop") {
+            margin-left: initial;
+            margin-right: initial;
         }
     }
 }
