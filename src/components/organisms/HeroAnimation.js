@@ -99,13 +99,14 @@ const HeroAnimation = () => {
                 });
             } else {
                 // Animate the initially invisible elements
-                gsap.from(imgArray[i], {
-                    opacity: 0,
+                gsap.to(imgArray[i], {
+                    opacity: 1,
                     duration: randomNumber(2, 7),
                     yoyo: true,
                     delay: randomNumber(2, 8),
                     repeat: -1,
                     ease: Linear.easeNone,
+                    startAt: 0,
                 });
             }
         }
