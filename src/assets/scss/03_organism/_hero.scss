@@ -465,7 +465,7 @@
 
     &.-homepage {
         display: flex;
-        padding-top: calc(975 / 800 * 100% + 299px);
+        padding-top: calc(975 / 800 * 100% + 330px);
         position: relative;
 
         @include breakpoints("tablet"){
@@ -523,12 +523,20 @@
                     flex-direction: column;
                     justify-content: center;
                     left: 32px;
-                    margin-top: 83px;
+                    margin-top: 107px;
                     max-width: 72%;
                     top: auto;
                     position: absolute;
 
+                    @include breakpoints(414px){
+                        margin-top: 83px;
+                    }
+
                     @include breakpoints("phone"){
+                        margin-top: 110px;
+                    }
+
+                    @include breakpoints("tablet"){
                         margin-top: 60px;
                     }
 
@@ -605,7 +613,7 @@
         }
 
         .o-hero__image-container {
-            margin-top: 300px;
+            margin-top: 331px;
             position: absolute;
             right: 0;
             top: 0;
