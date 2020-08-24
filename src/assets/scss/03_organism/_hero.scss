@@ -500,6 +500,11 @@
                 padding-right: 0;
                 width: 50%;
                 justify-content: flex-end;
+                margin-left: 72px;
+            }
+
+            @include breakpoints("lg-desktop") {
+                margin-left: initial;
             }
 
             .o-hero__top {
