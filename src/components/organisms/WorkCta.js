@@ -1,5 +1,5 @@
 import React from "react";
-import squiggleImage from "../../../static/img/yellow-squiggle.png";
+import squiggleImage from "../../../static/img/pink-squiggle.png";
 
 const WorkCta = (props) => (
     <div className="o-work-cta__container">
