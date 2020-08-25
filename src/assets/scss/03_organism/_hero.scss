@@ -16,6 +16,20 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dfebee', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
     }
 
+    &.-no-image {
+        .o-hero__left {
+            @include span-col(12);
+
+            @include breakpoints("tablet") {
+                @include span-col(9);
+            }
+
+            .o-hero__titles {
+                max-width: 100%;
+            }
+        }
+    }
+
     &.-case-study {
 
         .o-hero__copy-container {

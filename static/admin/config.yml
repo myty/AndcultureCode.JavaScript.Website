@@ -210,6 +210,22 @@ collections:
       - {label: "Priority", name: "priority", widget: "number", valueType: "int"}
       - {label: "Description", name: "description", widget: "text"}
 
+  - name: "departments"
+    label: "Departments"
+    label_singular: "Department"
+    folder: "src/data/departments"
+    create: true
+    identifier_field: "name"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "department"}
+      - {label: "Create Page", name: "createPage", widget: "hidden", default: false}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Priority", name: "priority", widget: "number", valueType: "int"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Roles", name: "rolesList", widget: "list"}
+      - {label: "Department Illustration", name: "deptImg", widget: image}
+
+
   - name: "pages"
     label: "Pages"
     files:
