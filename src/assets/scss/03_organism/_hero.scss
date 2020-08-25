@@ -552,7 +552,7 @@
                     }
 
                     @include breakpoints("phone"){
-                        margin-top: 110px;
+                        margin-top: 200px;
                     }
 
                     @include breakpoints("tablet"){
@@ -580,8 +580,8 @@
 
                         @include breakpoints("phone") {
                             margin-bottom: 32px;
-                            @include font-size(43px);
-                            @include line-height(52px);
+                            @include font-size(52px);
+                            @include line-height(60px);
                         }
 
                         @include breakpoints("tablet") {
