@@ -1,0 +1,39 @@
+.p-work {
+  h1 {
+    @include breakpoints("desktop") {
+      @include font-size(65px);
+      @include line-height(80px);
+    }
+
+    @include breakpoints("lg-desktop") {
+      @include font-size(85px);
+      @include line-height(100px);
+    }
+  }
+
+  &__friends {
+    &__section {
+      @include span-col(12);
+
+      @include breakpoints("tablet") {
+        @include span-col(8);
+      }
+
+      h2 {
+        @include breakpoints("lg-desktop") {
+          @include font-size(64px);
+        }
+      }
+    }
+  }
+
+  .o-hero {
+    &__right {
+      display: none;
+
+      @include breakpoints("tablet") {
+        display: block;
+      }
+    }
+  }
+}

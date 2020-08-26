@@ -14,14 +14,14 @@ const CaseStudy = class extends React.Component {
             windowWidth: null,
         };
 
-        this._handleHover            = this._handleHover.bind(this);
-        this._handleUnhover          = this._handleUnhover.bind(this);
-        this._onChange               = this._onChange.bind(this);
+        this._handleHover = this._handleHover.bind(this);
+        this._handleUnhover = this._handleUnhover.bind(this);
+        this._onChange = this._onChange.bind(this);
     }
 
     componentDidMount() {
         this.setState({
-          windowWidth: window.innerWidth,
+            windowWidth: window.innerWidth,
         }), () => this._setIsMobile
     }
 
@@ -85,49 +85,49 @@ const CaseStudy = class extends React.Component {
 
         if (this.state.isHovered) {
             linkStyle = {
-                color:       '#ffffff',
+                color: '#ffffff',
                 borderColor: '#ffffff',
             }
         }
 
         return (
-            <VisibilitySensor onChange = { this._onChange }>
-                <div className = { caseStudyClass } style = { caseStudyStyle } key = { this.props.post.id } onMouseLeave = { this._handleUnhover }>
-                    <div className = "m-case-study__block -top"></div>
-                    <div className = "o-rhythm__container">
-                        <div className = "m-case-study__image-container">
-                            { this.props.post.frontmatter.homeimage ? (
-                            <div className = "m-case-study__image">
+            <VisibilitySensor onChange={this._onChange}>
+                <div className={caseStudyClass} style={caseStudyStyle} key={this.props.post.id} onMouseLeave={this._handleUnhover}>
+                    <div className="m-case-study__block -top"></div>
+                    <div className="o-rhythm__container">
+                        <div className="m-case-study__image-container">
+                            {this.props.post.frontmatter.homeimage ? (
+                                <div className="m-case-study__image">
+                                    <img
+                                        alt={this.props.post.frontmatter.title}
+                                        src={this.props.post.frontmatter.homeimage.childImageSharp.fluid.src} />
+                                </div>
+                            ) : null}
+                            <div className="m-case-study__texture">
                                 <img
-                                    alt = { this.props.post.frontmatter.title }
-                                    src = { this.props.post.frontmatter.homeimage.childImageSharp.fluid.src } />
-                            </div>
-                            ) : null }
-                            <div className = "m-case-study__texture">
-                                <img
-                                    alt         = { `${this.props.post.frontmatter.partnerName} texture background` }
-                                    aria-hidden = "true"
-                                    src         = { this.props.post.frontmatter.texture } />
+                                    alt={`${this.props.post.frontmatter.partnerName} texture background`}
+                                    aria-hidden="true"
+                                    src={this.props.post.frontmatter.texture.childImageSharp.fluid.src} />
                             </div>
                         </div>
-                        <div className = "m-case-study__content">
-                            <div className = "m-case-study__content-inner">
-                                <div className="m-case-study__header">{ this.props.post.frontmatter.partnerName }</div>
+                        <div className="m-case-study__content">
+                            <div className="m-case-study__content-inner">
+                                <div className="m-case-study__header">{this.props.post.frontmatter.partnerName}</div>
                                 <p>
-                                    { this.props.post.frontmatter.title }
+                                    {this.props.post.frontmatter.title}
                                 </p>
                                 <CoverTransitionLink
-                                    aria-label   = { `Check out the case study for ${this.props.post.frontmatter.partnerName}` }
-                                    onMouseEnter = { this._handleHover }
-                                    className    = "a-button"
-                                    to           = { this.props.post.fields.slug }
-                                    style        = { linkStyle }>
+                                    aria-label={`Check out the case study for ${this.props.post.frontmatter.partnerName}`}
+                                    onMouseEnter={this._handleHover}
+                                    className="a-button"
+                                    to={this.props.post.fields.slug}
+                                    style={linkStyle}>
                                     See How
                                 </CoverTransitionLink>
                             </div>
                         </div>
                     </div>
-                    <div className = "m-case-study__block -bottom"></div>
+                    <div className="m-case-study__block -bottom"></div>
                 </div>
             </VisibilitySensor>
         )

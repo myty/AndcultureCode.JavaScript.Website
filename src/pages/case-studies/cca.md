@@ -7,7 +7,10 @@ date: 2017-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/case-studies/CCA_hero_phone.png
 homeimage: /img/case-studies/cca/home/CCA_hero_phone.png
-texture: img/cca-shape-triangle.png
+texture: /img/cca-shape-triangle.png
+listImageArtwork: /img/work-cca-artwork.png
+listImageFrame: /img/work-cca-frame.gif
+listOrder: 3
 color: '#3D5CC2'
 secondaryLayout: true
 heroIntroCopy: When we connected with Commonwealth Charter Academy (CCA), they had just dropped “Connections” from their name and shifted away from their parent company. Competition for students was fierce among cyber schools, not to mention school districts and private schools.
