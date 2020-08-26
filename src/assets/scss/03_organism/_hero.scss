@@ -506,7 +506,7 @@
             width: 100%;
 
             @include breakpoints("phone"){
-                margin-top: 40px;
+                margin-top: 0;
             }
 
             @include breakpoints("tablet"){
@@ -522,12 +522,15 @@
             }
 
             .o-hero__top {
-                align-items: center;
                 display: flex;
                 height: 100%;
                 justify-content: center;
 
                 @include clearfix();
+
+                @include breakpoints ("tablet") {
+                    align-items: center;
+                }
 
                 @include breakpoints(1196px){
                     justify-content: flex-end;
@@ -542,7 +545,7 @@
                     flex-direction: column;
                     justify-content: center;
                     left: 32px;
-                    margin-top: 107px;
+                    margin-top: 77px;
                     max-width: 72%;
                     top: auto;
                     position: absolute;
@@ -552,18 +555,22 @@
                     }
 
                     @include breakpoints("phone"){
-                        margin-top: 200px;
+                        margin-top: 156px;
                     }
 
                     @include breakpoints("tablet"){
                         margin-top: 60px;
+                        max-width: 63%;
+                    }
+
+                    @include breakpoints(888px){
+                        max-width: 72%;
                     }
 
                     @include breakpoints(1280px){
                         bottom: 12%;
                         left: 50%;
                         margin-left: -300px;
-                        max-width: 72%;
                     }
 
                     @include breakpoints("lg-desktop"){
@@ -589,7 +596,7 @@
                             @include line-height(44px);
                         }
 
-                        @include breakpoints("laptop") {
+                        @include breakpoints(994px) {
                             @include font-size(49px);
                             @include line-height(59px);
                         }
@@ -610,8 +617,12 @@
                         max-width: 107px;
 
                         @include breakpoints("tablet") {
-                            margin-top: 89px;
+                            margin-top: 10px;
                             max-width: 46%;
+                        }
+
+                        @include breakpoints(888px){
+                            margin-top: 89px;
                         }
 
                         @include breakpoints("laptop") {
@@ -623,7 +634,6 @@
                         }
 
                         @include breakpoints("lg-desktop") {
-                            margin-top: 89px;
                             max-width: 26%;
                         }
                     }
