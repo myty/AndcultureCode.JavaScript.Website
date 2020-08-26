@@ -31,6 +31,7 @@ const Menu = (props) => {
                     <button onClick={props.onClose}><IconClose /></button>
                     <a href="/">home</a>
                     <a href="/work/">work</a>
+                    <a href="/about/">about</a>
                     <a href="/blog/">blog</a>
                     <a href="/careers/">careers</a>
                     <a href="/contact/">contact</a>
