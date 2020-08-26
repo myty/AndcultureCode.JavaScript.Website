@@ -561,14 +561,14 @@
                     @include breakpoints("tablet"){
                         margin-top: 60px;
                         max-width: 63%;
+                        bottom: 12%;
                     }
 
-                    @include breakpoints(888px){
+                    @include breakpoints("laptop"){
                         max-width: 72%;
                     }
 
                     @include breakpoints(1280px){
-                        bottom: 12%;
                         left: 50%;
                         margin-left: -300px;
                     }
@@ -621,16 +621,22 @@
                             max-width: 46%;
                         }
 
-                        @include breakpoints(888px){
-                            margin-top: 89px;
-                        }
-
                         @include breakpoints("laptop") {
+                            margin-top: 27px;
                             max-width: 41%;
                         }
 
+                        @include breakpoints("lg-laptop") {
+                            margin-top: 53px;
+                        }
+
                         @include breakpoints("sm-desktop") {
+                            margin-top: 59px;
                             max-width: 35%;
+                        }
+
+                        @include breakpoints("desktop") {
+                            margin-top: 89px;
                         }
 
                         @include breakpoints("lg-desktop") {
