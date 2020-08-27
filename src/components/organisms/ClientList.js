@@ -16,18 +16,18 @@ const ClientList = (props) => {
   const columns = _chunkArray(list, 4);
 
   return (
-    <div className="o-client-list o-rhythm__row">
-      {columns.map((list, i) => (
-        <div className="o-client-list__column">
-          {list.map(({ node: clientItem }, index) => (
-            <Client
-              key={`Client-${index}`}
-              logo={clientItem.frontmatter.logo}
-              name={clientItem.frontmatter.name} />
+      <div className="o-client-list o-rhythm__row">
+          {columns.map((list, i) => (
+              <div key={`Column-${i}`} className="o-client-list__column">
+                  {list.map(({ node: clientItem }, index) => (
+                      <Client
+                          key={`Client-${i}${index}`}
+                          logo={clientItem.frontmatter.logo}
+                          name={clientItem.frontmatter.name} />
+                  ))}
+              </div>
           ))}
-        </div>
-      ))}
-    </div>
+      </div>
   );
 };
 
