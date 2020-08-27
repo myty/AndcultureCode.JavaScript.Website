@@ -44,10 +44,6 @@ const HeroAnimation = () => {
         const tealRainbowImg = document.querySelector(".-teal-rainbow");
         const yellowSquiggleImg = document.querySelector(".-yellow-squiggle");
 
-        function randomNumber(min, max) {
-            return Math.random() * (max - min) + min;
-        }
-
         function shuffleArray(a) {
             for (let i = a.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -88,25 +84,27 @@ const HeroAnimation = () => {
 
         for (var i = 0; i < imgArray.length; i++) {
             if (i < imgArray.length / 2) {
-                // Animate the initially visible elements
+                // Animate the initially visible elements              
                 gsap.to(imgArray[i], {
+                    delay: 2,
+                    duration: "random(6, 7)",
+                    ease: Linear.power4,
                     opacity: 0,
-                    duration: randomNumber(2, 7),
-                    yoyo: true,
-                    delay: randomNumber(2, 8),
                     repeat: -1,
-                    ease: Linear.easeNone,
+                    repeatDelay: 5,
+                    yoyo: true,
                 });
             } else {
                 // Animate the initially invisible elements
                 gsap.to(imgArray[i], {
+                    delay: 2,
+                    duration: "random(6, 7)",
+                    ease: Linear.power4,
                     opacity: 1,
-                    duration: randomNumber(2, 7),
-                    yoyo: true,
-                    delay: randomNumber(2, 8),
                     repeat: -1,
-                    ease: Linear.easeNone,
+                    repeatDelay: 5,
                     startAt: 0,
+                    yoyo: true,
                 });
             }
         }
