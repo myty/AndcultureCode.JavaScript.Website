@@ -320,10 +320,6 @@
             animation-timing-function: ease;
         }
 
-        .-homepage-title {
-            // max-width: 488px;
-        }
-
         .-scroll-fade {
             opacity: 0;
             transition: all .6s ease;
@@ -532,11 +528,15 @@
                     align-items: center;
                 }
 
-                @include breakpoints(1196px){
+                @include breakpoints(1197px) {
                     justify-content: flex-end;
-                    max-width: 600px;
+                    max-width: 572px;
                     position: relative;
                     width: 100%;
+                }
+
+                @include breakpoints(1255px) {
+                    max-width: 600px;
                 }
 
                 .o-hero__titles {
@@ -568,6 +568,14 @@
                         max-width: 72%;
                     }
 
+                    @include breakpoints (1197px){
+                        left: 0;
+                    }
+
+                    @include breakpoints(1255px){
+                        left: 32px;
+                    }
+
                     @include breakpoints(1280px){
                         left: 50%;
                         margin-left: -300px;
@@ -585,7 +593,7 @@
                         @include line-height(48px);
                         margin-bottom: 0;
 
-                        @include breakpoints("phone") {
+                        @include breakpoints(490px) {
                             margin-bottom: 32px;
                             @include font-size(52px);
                             @include line-height(60px);
