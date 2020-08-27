@@ -33,12 +33,16 @@ const Hero = class extends React.Component {
     let height = this.state.windowHeight;
     const scrollTop = this.props.scrollTop;
     height = height / 5;
-
+    let verticalTextStyle = {
+        opacity: 0.0,
+    };
     const opacity = (height - scrollTop) / height;
-
-    const verticalTextStyle = {
-      opacity: opacity,
+    if (opacity >= 0.0) {
+      verticalTextStyle = {
+        opacity: opacity ?? 0.0,
+      }
     }
+
 
     return (
         <div className="o-hero -homepage">
