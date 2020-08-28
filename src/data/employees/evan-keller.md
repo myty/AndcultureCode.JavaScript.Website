@@ -1,5 +1,6 @@
 ---
 createPage: false
+templateKey: "employee"
 name: Evan Keller
 position: Partner, Chief Experience Architect
 easterEgg: wanderlust & whisky

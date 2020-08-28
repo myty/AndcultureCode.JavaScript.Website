@@ -1,5 +1,6 @@
 ---
 createPage: false
+templateKey: "employee"
 name: Nic Easton
 position: director of organizational agility
 easterEgg: football. the international kind.

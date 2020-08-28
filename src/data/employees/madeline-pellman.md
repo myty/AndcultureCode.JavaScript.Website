@@ -1,5 +1,6 @@
 ---
 createPage: false
+templateKey: "employee"
 name: Madeline Pellman
 position: director of design
 easterEgg: mother of humans & plants
