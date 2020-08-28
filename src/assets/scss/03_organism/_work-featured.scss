@@ -82,17 +82,17 @@
         }
 
         a {
-            line-height: 27px;
-            font-size: 16px; //@include font-size("small");
-            font-weight: 500;
+            border-bottom: 1px solid get-color("primary", "fresh");
             color: get-color-primary("white");
+            line-height: 27px;
+            font-size: 16px;
+            font-weight: 500;
             font-family: $font-secondary;
             margin-right: 32px;
             letter-spacing: .2em;
-            border-bottom-width: 0.2em;
-            border-color: get-color-primary("fresh");
+            padding-bottom: 0.2em;
             text-decoration: none;
-            border-bottom-style: solid;
+
             @include breakpoints("sm-desktop") {
                 font-size: 20px;
             }
