@@ -7,14 +7,13 @@
         padding-bottom: 5rem;
 
         a {
+            border-bottom: 1px solid get-color("primary", "fresh");
             font-family: $font-secondary;
             font-size: 18px;
             letter-spacing: 0.2em;
             color: get-color-primary("white");
-            border-bottom-width: 0.2em;
-            border-color: get-color-primary("fresh");
+            padding-bottom: 0.2em;
             text-decoration: none;
-            border-bottom-style: solid;
             width: 105px;
             @include breakpoints("tablet") {
                 font-size: 20px; //@include font-size("small");
