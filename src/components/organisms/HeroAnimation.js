@@ -24,91 +24,90 @@ import yellowSquiggle from "./../../../static/img/home/hero-animation/yellow-squ
 
 const HeroAnimation = () => {
     useEffect(() => {
-        const blackXImg = document.querySelector(".-black-x");
-        const blueLinesImg = document.querySelector(".-blue-lines");
-        const bluePlantImg = document.querySelector(".-blue-plant");
-        const fogDotsImg = document.querySelector(".-fog-dots");
-        const fogEyeballImg = document.querySelector(".-fog-eyeball");
-        const fogTagImg = document.querySelector(".-fog-tag");
-        const greenGoImg = document.querySelector(".-green-go");
-        const greenPlantImg = document.querySelector(".-green-plant");
-        const orangeBlobImg = document.querySelector(".-orange-blob");
-        const orangeCubeImg = document.querySelector(".-orange-cube");
-        const pinkAsteriskImg = document.querySelector(".-pink-asterisk");
-        const pinkDropImg = document.querySelector(".-pink-drop");
-        const pinkRaindropsImg = document.querySelector(".-pink-raindrops");
-        const redPrismImg = document.querySelector(".-red-prism");
-        const redTeethImg = document.querySelector(".-red-teeth");
-        const salmonBlobImg = document.querySelector(".-salmon-blob");
-        const tealAsteriskImg = document.querySelector(".-teal-asterisk");
-        const tealRainbowImg = document.querySelector(".-teal-rainbow");
-        const yellowSquiggleImg = document.querySelector(".-yellow-squiggle");
+                        const blackXImg = document.querySelector(".-black-x");
+                        const blueLinesImg = document.querySelector(".-blue-lines");
+                        const bluePlantImg = document.querySelector(".-blue-plant");
+                        const fogDotsImg = document.querySelector(".-fog-dots");
+                        const fogEyeballImg = document.querySelector(".-fog-eyeball");
+                        const fogTagImg = document.querySelector(".-fog-tag");
+                        const greenGoImg = document.querySelector(".-green-go");
+                        const greenPlantImg = document.querySelector(".-green-plant");
+                        const orangeBlobImg = document.querySelector(".-orange-blob");
+                        const orangeCubeImg = document.querySelector(".-orange-cube");
+                        const pinkAsteriskImg = document.querySelector(".-pink-asterisk");
+                        const pinkDropImg = document.querySelector(".-pink-drop");
+                        const pinkRaindropsImg = document.querySelector(".-pink-raindrops");
+                        const redPrismImg = document.querySelector(".-red-prism");
+                        const redTeethImg = document.querySelector(".-red-teeth");
+                        const salmonBlobImg = document.querySelector(".-salmon-blob");
+                        const tealAsteriskImg = document.querySelector(".-teal-asterisk");
+                        const tealRainbowImg = document.querySelector(".-teal-rainbow");
+                        const yellowSquiggleImg = document.querySelector(".-yellow-squiggle");
 
-        function shuffleArray(a) {
-            for (let i = a.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [a[i], a[j]] = [a[j], a[i]];
-            }
-            return a;
-        }
+                        function shuffleArray(a) {
+                            for (let i = a.length - 1; i > 0; i--) {
+                                const j = Math.floor(Math.random() * (i + 1));
+                                [a[i], a[j]] = [a[j], a[i]];
+                            }
+                            return a;
+                        }
 
-        const tl = new gsap.timeline();
+                        const tl = new gsap.timeline();
 
-        var imgArray = [
-            blackXImg,
-            blueLinesImg,
-            bluePlantImg,
-            fogDotsImg,
-            fogEyeballImg,
-            fogTagImg,
-            greenGoImg,
-            greenPlantImg,
-            orangeBlobImg,
-            orangeCubeImg,
-            pinkAsteriskImg,
-            pinkDropImg,
-            pinkRaindropsImg,
-            redPrismImg,
-            redTeethImg,
-            salmonBlobImg,
-            tealAsteriskImg,
-            tealRainbowImg,
-            yellowSquiggleImg,
-        ];
+                        var imgArray = [
+                            blackXImg,
+                            blueLinesImg,
+                            bluePlantImg,
+                            fogDotsImg,
+                            fogEyeballImg,
+                            fogTagImg,
+                            greenGoImg,
+                            greenPlantImg,
+                            orangeBlobImg,
+                            orangeCubeImg,
+                            pinkAsteriskImg,
+                            pinkDropImg,
+                            pinkRaindropsImg,
+                            redPrismImg,
+                            redTeethImg,
+                            salmonBlobImg,
+                            tealAsteriskImg,
+                            tealRainbowImg,
+                            yellowSquiggleImg,
+                        ];
 
-        imgArray = shuffleArray(imgArray);
-        for (var i = 0; i < imgArray.length / 2; i++) {
-            // Set half of the items to be randomly visible on page load
-            tl.set(imgArray[i], { opacity: 1 });
-        }
+                        imgArray = shuffleArray(imgArray);
 
-        for (var i = 0; i < imgArray.length; i++) {
-            if (i < imgArray.length / 2) {
-                // Animate the initially visible elements              
-                gsap.to(imgArray[i], {
-                    delay: 2,
-                    duration: "random(4, 5)",
-                    ease: Linear.power4,
-                    opacity: 0,
-                    repeat: -1,
-                    repeatDelay: 2,
-                    yoyo: true,
-                });
-            } else {
-                // Animate the initially invisible elements
-                gsap.to(imgArray[i], {
-                    delay: 2,
-                    duration: "random(4, 5)",
-                    ease: Linear.power4,
-                    opacity: 1,
-                    repeat: -1,
-                    repeatDelay: 2,
-                    startAt: 0,
-                    yoyo: true,
-                });
-            }
-        }
-    }, []);
+                        // Set half of the items to be randomly visible on page load
+                        tl.set(imgArray.slice(0, imgArray.length / 2), { opacity: 1 });
+
+                        for (var i = 0; i < imgArray.length; i++) {
+                            if (i < imgArray.length / 2) {
+                                // Animate the initially visible elements
+                                gsap.to(imgArray[i], {
+                                    delay: 2,
+                                    duration: "random(4, 5)",
+                                    ease: Linear.power4,
+                                    opacity: 0,
+                                    repeat: -1,
+                                    repeatDelay: 2,
+                                    yoyo: true,
+                                });
+                            } else {
+                                // Animate the initially invisible elements
+                                gsap.to(imgArray[i], {
+                                    delay: 2,
+                                    duration: "random(4, 5)",
+                                    ease: Linear.power4,
+                                    opacity: 1,
+                                    repeat: -1,
+                                    repeatDelay: 2,
+                                    startAt: 0,
+                                    yoyo: true,
+                                });
+                            }
+                        }
+                    }, []);
 
     return (
         <div className="o-hero__image-container">
