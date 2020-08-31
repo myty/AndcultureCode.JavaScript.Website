@@ -6,7 +6,7 @@
         padding-bottom: 5rem;
 
         a {
-            border-bottom: 1px solid get-color("primary", "fresh");
+            border-bottom: 0.075em solid get-color("primary", "fresh");
             color: get-color-primary("after-hours");
             font-family: $font-secondary;
             font-size: 18px;
@@ -16,7 +16,7 @@
             width: 160px;
             @include breakpoints("tablet") {
                 font-size: 20px;
-                font-weight: 500;
+                font-weight: 600;
             }
         }
 

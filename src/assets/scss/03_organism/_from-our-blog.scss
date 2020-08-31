@@ -8,14 +8,18 @@
             flex-direction: column;
             a.view-all-posts {
                 @include font-size("small");
-                border-bottom: 1px solid get-color("primary", "fresh");
+                border-bottom: 0.075em solid get-color("primary", "fresh");
                 color: get-color-primary("after-hours");
-                font-weight: 500;
                 line-height: 28px;
                 letter-spacing: 0.2em;
                 padding-bottom: 0.2em;
                 text-decoration: none;
-                width: 175px; // used to temporarily patch the bottom border length
+                width: 171px; // used to temporarily patch the bottom border length
+
+                @include breakpoints ("tablet") {
+                    font-weight: 600;
+                    width: 179px; // used to temporarily patch the bottom border length
+                }
             }
 
             .from-our-blog {
