@@ -82,16 +82,19 @@
         }
 
         a {
-            border-bottom: 1px solid get-color("primary", "fresh");
+            border-bottom: 0.075em solid get-color("primary", "fresh");
             color: get-color-primary("white");
             line-height: 27px;
             font-size: 16px;
-            font-weight: 500;
             font-family: $font-secondary;
             margin-right: 32px;
             letter-spacing: .2em;
             padding-bottom: 0.2em;
             text-decoration: none;
+
+            @include breakpoints ("tablet") {
+                font-weight: 600;
+            }
 
             @include breakpoints("sm-desktop") {
                 font-size: 20px;
