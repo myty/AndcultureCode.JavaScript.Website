@@ -87,22 +87,22 @@ const HeroAnimation = () => {
                 // Animate the initially visible elements              
                 gsap.to(imgArray[i], {
                     delay: 2,
-                    duration: "random(6, 7)",
+                    duration: "random(4, 5)",
                     ease: Linear.power4,
                     opacity: 0,
                     repeat: -1,
-                    repeatDelay: 5,
+                    repeatDelay: 2,
                     yoyo: true,
                 });
             } else {
                 // Animate the initially invisible elements
                 gsap.to(imgArray[i], {
                     delay: 2,
-                    duration: "random(6, 7)",
+                    duration: "random(4, 5)",
                     ease: Linear.power4,
                     opacity: 1,
                     repeat: -1,
-                    repeatDelay: 5,
+                    repeatDelay: 2,
                     startAt: 0,
                     yoyo: true,
                 });
