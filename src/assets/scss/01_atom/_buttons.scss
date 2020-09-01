@@ -3,7 +3,7 @@
     color: get-color("primary", "white");
     font-family: $font-secondary;
     border: none;
-    border-bottom: 0.075em solid get-color("primary", "fresh");
+    border-bottom: 1px solid get-color("primary", "fresh");
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.2em;
