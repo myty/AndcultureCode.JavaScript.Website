@@ -10,15 +10,13 @@
             border-bottom: 0.075em solid get-color("primary", "fresh");
             font-family: $font-secondary;
             font-size: 18px;
+            font-weight: 600;
             letter-spacing: 0.2em;
             color: get-color-primary("white");
             padding-bottom: 0.2em;
             text-decoration: none;
-            width: 105px;
             @include breakpoints("tablet") {
-                font-size: 20px; //@include font-size("small");
-                font-weight: 600;
-                width: 121px;
+                font-size: 20px;
             }
         }
 

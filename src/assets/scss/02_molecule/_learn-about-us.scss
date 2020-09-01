@@ -10,12 +10,12 @@
             color: get-color-primary("after-hours");
             font-family: $font-secondary;
             font-size: 18px;
+            font-weight: 600;
             letter-spacing: 0.2em;
             padding-bottom: 0.2em;
             text-decoration: none;
             @include breakpoints("tablet") {
                 font-size: 20px;
-                font-weight: 600;
             }
         }
 
