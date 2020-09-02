@@ -33,45 +33,37 @@ const Hero = class extends React.Component {
     let height = this.state.windowHeight;
     const scrollTop = this.props.scrollTop;
     height = height / 5;
-
+    let verticalTextStyle = {
+        opacity: 0.0,
+    };
     const opacity = (height - scrollTop) / height;
-
-    const verticalTextStyle = {
-      opacity: opacity,
+    if (opacity >= 0.0) {
+      verticalTextStyle = {
+        opacity: opacity ?? 0.0,
+      }
     }
 
-    let easterEggClass = "-scroll-fade";
-    if (this.state.easterEggVisible) {
-      easterEggClass += " -active";
-    }
 
     return (
-      <div className="o-hero">
-        <HeroAnimation/>
-        <div className="o-rhythm__container">
-          <div className="o-hero__top">
-            <div className="o-hero__titles">
-              <div className = "-fade">
-                <h1 className="-after">{this.props.title}</h1>
-              </div>
-              <VisibilitySensor onChange = { this._onEasterEggChange }>
-                <div className = { easterEggClass }>
-                  <p className="-before">{this.props.secondaryTitle}</p>
+        <div className="o-hero -homepage">
+            <div className="o-rhythm__container o-hero__text-container">
+                <div className="o-hero__top">
+                    <div className="o-hero__titles">
+                        <div className="-fade-homepage-title -homepage-title">
+                            <h1 className="-after">{this.props.title}</h1>
+                        </div>
+                        <div className="-fade-homepage-easter-egg">
+                            <p className="-before">{this.props.secondaryTitle}</p>
+                        </div>
+                    </div>
                 </div>
-              </VisibilitySensor>
+                <div style={verticalTextStyle} className="o-hero__vertical">
+                    A Design Company
+                </div>
             </div>
-          </div>
-          <div className="o-hero__subtitles">
-            <h2>{this.props.subTitle}</h2>
-          </div>
-          <div
-            style     = { verticalTextStyle }
-            className = "o-hero__vertical">
-            A Design Company
-          </div>
+            <HeroAnimation />
         </div>
-      </div>
-    )
+    );
   }
 }
 

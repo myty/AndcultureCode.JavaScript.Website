@@ -18,6 +18,7 @@ module.exports = {
         utils     : path.join(__dirname, "src/utils")
       }
     },
+    'gatsby-plugin-scroll-reveal',
     'gatsby-plugin-anchor-links',
     'gatsby-plugin-transition-link',
     'gatsby-plugin-react-helmet',

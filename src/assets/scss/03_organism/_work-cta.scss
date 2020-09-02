@@ -1,0 +1,91 @@
+.o-work-cta {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        background-color: get-color-primary("after-hours");
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+
+        a {
+            border-bottom: 0.075em solid get-color("primary", "fresh");
+            font-family: $font-secondary;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            color: get-color-primary("white");
+            padding-bottom: 0.2em;
+            text-decoration: none;
+            @include breakpoints("tablet") {
+                font-size: 20px;
+            }
+        }
+
+        h2 {
+            color: get-color-primary("white");
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            font-size: 20px;
+            font-size: 1.25rem;
+            line-height: 32px;
+            line-height: 2rem;
+            @include breakpoints("tablet") {
+                font-size: 28px;
+                line-height: 48px;
+                margin-top: 0;
+                margin-right: 60px;
+            }
+            @include breakpoints("sm-desktop") {
+                font-size: 36px;
+                line-height: 48px;
+                margin-top: 0;
+                margin-right: 60px;
+            }
+        }
+    }
+
+    &__content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__image-container {
+        display: flex;
+        justify-content: left;
+
+        @include breakpoints("tablet") {
+            justify-content: center;
+        }
+
+        img {
+            max-width: 250px;
+            height: 249px;
+
+            @include breakpoints("lg-desktop") {
+                height: 414px;
+                max-width: 415px;
+                width: 415px;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        @include breakpoints("tablet") {
+            flex-direction: initial;
+            flex-wrap: nowrap;
+        }
+
+        // Compensate for the left navbar icon
+        @include breakpoints("tablet") {
+            margin-left: 72px;
+            margin-right: 72px;
+        }
+        @include breakpoints("lg-desktop") {
+            margin-left: initial;
+            margin-right: initial;
+        }
+    }
+}

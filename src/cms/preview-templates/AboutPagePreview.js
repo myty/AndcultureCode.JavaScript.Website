@@ -6,14 +6,7 @@ const AboutPagePreview = ({ entry }) => {
 
   if (data) {
     return (
-      <AboutPageTemplate
-        title       = { data.title }
-        heading     = { data.heading }
-        subheading  = { data.subheading }
-        description = { data.description }
-        intro       = { data.intro || { blurbs: [] } }
-        mainpitch   = { data.mainpitch || {} }
-      />
+      <div></div>
     )
   } else {
     return <div>Loading...</div>

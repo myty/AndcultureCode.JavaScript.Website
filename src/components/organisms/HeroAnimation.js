@@ -1,125 +1,138 @@
-import React, { useEffect } from 'react';
-import { TimelineMax, Power1 } from 'gsap';
+import React, { useEffect } from "react";
+import { gsap, Linear } from "gsap";
 
-import rainbow from './../../../static/img/homepage-hero-two/rainbow_assterisk_drops2.png';
-import pinkBlob from './../../../static/img/homepage-hero-two/pink_blob2.png';
-import blueBlobTwo from './../../../static/img/homepage-hero-two/blue_blob_two2.png';
-
-import matrix from './../../../static/img/homepage-hero-two/matrix2.png';
-import greenPaint from './../../../static/img/homepage-hero-two/paint_swash2.png';
-import eye from './../../../static/img/homepage-hero-two/eye2.png';
-
-import pinkElephant from './../../../static/img/homepage-hero-two/pink_elephant2.png';
-import orangSicle from './../../../static/img/homepage-hero-two/orangsicle2.png';
-import blueBlob from './../../../static/img/homepage-hero-two/blue_blob2.png';
+import blackX from "./../../../static/img/home/hero-animation/black-xxxxx.png";
+import blueLines from "./../../../static/img/home/hero-animation/blue-lines.png";
+import bluePlant from "./../../../static/img/home/hero-animation/blue-plant.png";
+import fogDots from "./../../../static/img/home/hero-animation/fog-dots.png";
+import fogEyeball from "./../../../static/img/home/hero-animation/fog-eyeball.png";
+import fogTag from "./../../../static/img/home/hero-animation/fog-tag.png";
+import greenGo from "./../../../static/img/home/hero-animation/green-go.png";
+import greenPlant from "./../../../static/img/home/hero-animation/green-plant.png";
+import orangeBlob from "./../../../static/img/home/hero-animation/orange-blob.png";
+import orangeCube from "./../../../static/img/home/hero-animation/orange-cube.png";
+import person from "./../../../static/img/home/hero-animation/phoebe.png";
+import pinkAsterisk from "./../../../static/img/home/hero-animation/pink-asterisk.png";
+import pinkDrop from "./../../../static/img/home/hero-animation/pink-drop.png";
+import pinkRaindrops from "./../../../static/img/home/hero-animation/pink-raindrops.png";
+import redPrism from "./../../../static/img/home/hero-animation/red-prism.png";
+import redTeeth from "./../../../static/img/home/hero-animation/red-teeth.png";
+import salmonBlob from "./../../../static/img/home/hero-animation/salmon-blob.png";
+import tealAsterisk from "./../../../static/img/home/hero-animation/teal-asterisk.png";
+import tealRainbow from "./../../../static/img/home/hero-animation/teal-rainbow.png";
+import yellowSquiggle from "./../../../static/img/home/hero-animation/yellow-squiggle.png";
 
 const HeroAnimation = () => {
     useEffect(() => {
-        const groupOne = document.querySelector('.group-one');
-        const groupOneImgOne = groupOne.querySelector('.-pink-blob');
-        const groupOneImgTwo = groupOne.querySelector('.-blue-blob-two');
-        const groupOneImgThree = groupOne.querySelector('.-rainbow');
-        const groupTwo = document.querySelector('.group-two');
-        const groupTwoImgOne = groupTwo.querySelector('.-green-paint');
-        const groupTwoImgTwo = groupTwo.querySelector('.-matrix');
-        const groupTwoImgThree = groupTwo.querySelector('.-eye');
-        const groupThree = document.querySelector('.group-three');
-        const groupThreeImgOne = groupThree.querySelector('.-orangsicle');
-        const groupThreeImgTwo = groupThree.querySelector('.-pink-elephant');
-        const groupThreeImgThree = groupThree.querySelector('.-blue-blob');
+                        const blackXImg = document.querySelector(".-black-x");
+                        const blueLinesImg = document.querySelector(".-blue-lines");
+                        const bluePlantImg = document.querySelector(".-blue-plant");
+                        const fogDotsImg = document.querySelector(".-fog-dots");
+                        const fogEyeballImg = document.querySelector(".-fog-eyeball");
+                        const fogTagImg = document.querySelector(".-fog-tag");
+                        const greenGoImg = document.querySelector(".-green-go");
+                        const greenPlantImg = document.querySelector(".-green-plant");
+                        const orangeBlobImg = document.querySelector(".-orange-blob");
+                        const orangeCubeImg = document.querySelector(".-orange-cube");
+                        const pinkAsteriskImg = document.querySelector(".-pink-asterisk");
+                        const pinkDropImg = document.querySelector(".-pink-drop");
+                        const pinkRaindropsImg = document.querySelector(".-pink-raindrops");
+                        const redPrismImg = document.querySelector(".-red-prism");
+                        const redTeethImg = document.querySelector(".-red-teeth");
+                        const salmonBlobImg = document.querySelector(".-salmon-blob");
+                        const tealAsteriskImg = document.querySelector(".-teal-asterisk");
+                        const tealRainbowImg = document.querySelector(".-teal-rainbow");
+                        const yellowSquiggleImg = document.querySelector(".-yellow-squiggle");
 
-        const tl = new TimelineMax();
+                        function shuffleArray(a) {
+                            for (let i = a.length - 1; i > 0; i--) {
+                                const j = Math.floor(Math.random() * (i + 1));
+                                [a[i], a[j]] = [a[j], a[i]];
+                            }
+                            return a;
+                        }
 
-        tl.set(groupOneImgOne, {opacity: 0})
-        tl.set(groupOneImgTwo, {opacity: 0})
-        tl.set(groupOneImgThree, {opacity: 0})
-        tl.set(groupTwoImgOne, {opacity: 0})
-        tl.set(groupTwoImgTwo, {opacity: 0})
-        tl.set(groupTwoImgThree, {opacity: 0})
-        tl.set(groupThreeImgOne, {opacity: 0})
-        tl.set(groupThreeImgTwo, {opacity: 0})
-        tl.set(groupThreeImgThree, {opacity: 0})
-        tl.to(groupOneImgOne, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 0)
-        tl.to(groupOneImgTwo, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 2)
-        tl.to(groupOneImgThree, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 4)
-        tl.to(groupOneImgOne, 1.5, {
-            opacity:    0,
-            ease:       Power1.easeOut
-        }, 6)
-        tl.to(groupTwoImgOne, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 6)
-        tl.to(groupOneImgTwo, 1.5, {
-            opacity:    0,
-            ease:       Power1.easeOut
-        }, 8)
-        tl.to(groupTwoImgTwo, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 8)
-        tl.to(groupOneImgThree, 1.5, {
-            opacity:    0,
-            ease:       Power1.easeOut
-        }, 10)
-        tl.to(groupTwoImgThree, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 10)
-        tl.to(groupTwoImgOne, 1.5, {
-            opacity:    0,
-            ease:       Power1.easeOut
-        }, 12)
-        tl.to(groupThreeImgOne, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 12)
-        tl.to(groupTwoImgTwo, 1.5, {
-            opacity:    0,
-            ease:       Power1.easeOut
-        }, 14)
-        tl.to(groupThreeImgTwo, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 14)
-        tl.to(groupTwoImgThree, 1.5, {
-            opacity:    0,
-            ease:       Power1.easeOut
-        }, 16)
-        tl.to(groupThreeImgThree, 1.5, {
-            opacity:    1,
-            ease:       Power1.easeIn
-        }, 16)
-    }, []);
+                        const tl = new gsap.timeline();
+
+                        var imgArray = [
+                            blackXImg,
+                            blueLinesImg,
+                            bluePlantImg,
+                            fogDotsImg,
+                            fogEyeballImg,
+                            fogTagImg,
+                            greenGoImg,
+                            greenPlantImg,
+                            orangeBlobImg,
+                            orangeCubeImg,
+                            pinkAsteriskImg,
+                            pinkDropImg,
+                            pinkRaindropsImg,
+                            redPrismImg,
+                            redTeethImg,
+                            salmonBlobImg,
+                            tealAsteriskImg,
+                            tealRainbowImg,
+                            yellowSquiggleImg,
+                        ];
+
+                        imgArray = shuffleArray(imgArray);
+
+                        // Set half of the items to be randomly visible on page load
+                        tl.set(imgArray.slice(0, imgArray.length / 2), { opacity: 1 });
+
+                        for (var i = 0; i < imgArray.length; i++) {
+                            if (i < imgArray.length / 2) {
+                                // Animate the initially visible elements
+                                gsap.to(imgArray[i], {
+                                    delay: 2,
+                                    duration: "random(4, 5)",
+                                    ease: Linear.power4,
+                                    opacity: 0,
+                                    repeat: -1,
+                                    repeatDelay: 2,
+                                    yoyo: true,
+                                });
+                            } else {
+                                // Animate the initially invisible elements
+                                gsap.to(imgArray[i], {
+                                    delay: 2,
+                                    duration: "random(4, 5)",
+                                    ease: Linear.power4,
+                                    opacity: 1,
+                                    repeat: -1,
+                                    repeatDelay: 2,
+                                    startAt: 0,
+                                    yoyo: true,
+                                });
+                            }
+                        }
+                    }, []);
 
     return (
-        <div>
-            <div className = "o-hero__background-group group-one">
-                <img className = "o-hero__background -pink-blob" src = { pinkBlob } aria-hidden = "true" alt = "Pink blob" />
-                <img className = "o-hero__background -blue-blob-two" src = { blueBlobTwo } aria-hidden = "true" alt = "Blue blob expansion" />
-                <img className = "o-hero__background -rainbow" src = { rainbow } aria-hidden = "true" alt = "Rainbow" />
-            </div>
-            <div className = "o-hero__background-group group-two">
-                <img className = "o-hero__background -green-paint" src = { greenPaint } aria-hidden = "true" alt = "Green Paint" />
-                <img className = "o-hero__background -eye" src = { eye } aria-hidden = "true" alt = "Eye" />
-                <img className = "o-hero__background -matrix" src = { matrix } aria-hidden = "true" alt = "Matrix" />
-            </div>
-            <div className = "o-hero__background-group group-three">
-                <img className = "o-hero__background -orangsicle" src = { orangSicle } aria-hidden = "true" alt = "Orange Sicle" />
-                <img className = "o-hero__background -pink-elephant" src = { pinkElephant } aria-hidden = "true" alt = "Pink Elephant" />
-                <img className = "o-hero__background -blue-blob" src = { blueBlob } aria-hidden = "true" alt = "Blue blob" />
-            </div>
+        <div className="o-hero__image-container">
+            <img src={person} className="-person" aria-hidden="true" alt="" />
+            <img src={blackX} className="-black-x -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={blueLines} className="-blue-lines -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={bluePlant} className="-blue-plant -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={fogDots} className="-fog-dots -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={fogEyeball} className="-fog-eyeball -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={fogTag} className="-fog-tag -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={greenGo} className="-green-go -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={greenPlant} className="-green-plant -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={orangeBlob} className="-orange-blob -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={orangeCube} className="-orange-cube -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={pinkAsterisk} className="-pink-asterisk -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={pinkDrop} className="-pink-drop -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={pinkRaindrops} className="-pink-raindrops -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={redPrism} className="-red-prism -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={redTeeth} className="-red-teeth -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={salmonBlob} className="-salmon-blob -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={tealAsterisk} className="-teal-asterisk -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={tealRainbow} className="-teal-rainbow -hero-animated-image" aria-hidden="true" alt="" />
+            <img src={yellowSquiggle} className="-yellow-squiggle -hero-animated-image" aria-hidden="true" alt="" />
         </div>
-    )
-}
+    );
+};
 
 export default HeroAnimation;

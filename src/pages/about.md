@@ -2,8 +2,11 @@
 createPage: true
 templateKey: about-page
 secondaryTitle: hi, we're andculture,
-title: a design company making the world better one experience at a time.
-subTitle: When you come to us, you've already had the, "There has to be a better way!" conversation. Internally, we call it a breaking reality; you can call it, "Why doesn't this work anymore?" Now you need the "A ha!" moment. That's what we excel at; helping you put a finger on what's wrong, and then designing a solution that might not even exist yet.
+title: redesigning the world around us is the work that sets our hearts and minds on fire.
+introTextOne: Our amazing, multifaceted team — organic and linear, analytical and intuitive, visionary and pragmatic — makes light work of reimagination by using an agile mindset and an intentional clash of perspectives.
+introTextTwo: We have no preset agenda or formulas, allowing for open, iterative collaboration that’s focused squarely on delivering value.
+heroImage: /img/about-carets.png
+
 seo:
   metaTitle: andculture - a design company in harrisburg, PA
   metaDescription: We are a design company in harrisburg PA that fixes broken realities through cutting edge design, strategy, and engineering solutions.

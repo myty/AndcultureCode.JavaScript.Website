@@ -16,6 +16,20 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dfebee', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
     }
 
+    &.-no-image {
+        .o-hero__left {
+            @include span-col(12);
+
+            @include breakpoints("tablet") {
+                @include span-col(9);
+            }
+
+            .o-hero__titles {
+                max-width: 100%;
+            }
+        }
+    }
+
     &.-case-study {
 
         .o-hero__copy-container {
@@ -259,17 +273,14 @@
 
     &__top {
         @include clearfix();
-        margin-bottom: 84px;
+        //margin-bottom: 84px;
         height: 100vh;
-
-        @include breakpoints("tablet") {
-            margin-bottom: 280px;
-        }
     }
 
     &__titles {
         max-width: 690px;
-        top: calc(100vh - 250px);
+        top: calc(100vh - 375px);
+        //top: calc(100vh - 250px);
         position: absolute;
 
         @media (min-height: 1024px) {
@@ -287,6 +298,26 @@
             animation: fadeInAnimation ease 6s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
+        }
+
+        .-fade-homepage-easter-egg {
+            opacity: 0;
+            animation-delay: 6s;
+            animation-duration: 4s;
+            animation-name: fadeInAnimation;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        .-fade-homepage-title {
+            opacity: 0;
+            animation-delay: 2s;
+            animation-duration: 8s;
+            animation-name: fadeInAnimation;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
         }
 
         .-scroll-fade {
@@ -345,11 +376,18 @@
         @include breakpoints("tablet") {
             @include font-size("base");
             @include line-height("smaller");
+        }
+
+        @include breakpoints("lg-desktop") {
             display: block;
         }
     }
 
     h1 {
+
+        @include breakpoints("tablet") {
+            font-size: 70px;
+        }
 
         &.-after {
 
@@ -435,4 +473,399 @@
         }
     }
 
+    &.-homepage {
+        display: flex;
+        padding-top: calc(975 / 800 * 100% + 330px);
+        position: relative;
+
+        @include breakpoints("tablet"){
+            padding-top: calc(975 / 1600 * 100%);
+        }
+
+        @include breakpoints(1600px) {
+            margin: 0 auto;
+            padding-top: 975px;
+            width: 1600px;
+        }
+        .o-hero__text-container {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 225px;
+            left: 0;
+            max-width: none;
+            padding-right: 26px;
+            position: absolute;
+            top: 0;
+            margin-right: 0;
+            margin-top: 50px;
+            width: 100%;
+
+            @include breakpoints("phone"){
+                margin-top: 0;
+            }
+
+            @include breakpoints("tablet"){
+                height: 100%;
+                padding-right: 0;
+                width: 50%;
+                justify-content: flex-end;
+                margin-left: 72px;
+            }
+
+            @include breakpoints("lg-desktop") {
+                margin-left: initial;
+            }
+
+            .o-hero__top {
+                display: flex;
+                height: 100%;
+                justify-content: center;
+
+                @include clearfix();
+
+                @include breakpoints ("tablet") {
+                    align-items: center;
+                }
+
+                @include breakpoints(1197px) {
+                    justify-content: flex-end;
+                    max-width: 572px;
+                    position: relative;
+                    width: 100%;
+                }
+
+                @include breakpoints(1255px) {
+                    max-width: 600px;
+                }
+
+                .o-hero__titles {
+                    bottom: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    left: 32px;
+                    margin-top: 77px;
+                    max-width: 72%;
+                    top: auto;
+                    position: absolute;
+
+                    @include breakpoints(414px){
+                        margin-top: 83px;
+                    }
+
+                    @include breakpoints("phone"){
+                        margin-top: 156px;
+                    }
+
+                    @include breakpoints("tablet"){
+                        margin-top: 60px;
+                        max-width: 63%;
+                        bottom: 12%;
+                    }
+
+                    @include breakpoints("laptop"){
+                        max-width: 72%;
+                    }
+
+                    @include breakpoints (1197px){
+                        left: 0;
+                    }
+
+                    @include breakpoints(1255px){
+                        left: 32px;
+                    }
+
+                    @include breakpoints(1280px){
+                        left: 50%;
+                        margin-left: -300px;
+                    }
+
+                    @include breakpoints("lg-desktop"){
+                        left: 50%;
+                        max-width: 90%;
+                        width: auto;
+
+                    }
+
+                    h1 {
+                        @include font-size(44px);
+                        @include line-height(48px);
+                        margin-bottom: 0;
+
+                        @include breakpoints(490px) {
+                            margin-bottom: 32px;
+                            @include font-size(52px);
+                            @include line-height(60px);
+                        }
+
+                        @include breakpoints("tablet") {
+                            @include font-size(38px);
+                            @include line-height(44px);
+                        }
+
+                        @include breakpoints(994px) {
+                            @include font-size(49px);
+                            @include line-height(59px);
+                        }
+
+                        @include breakpoints("desktop") {
+                            @include font-size(55px);
+                            @include line-height(61px);
+                        }
+
+                        @include breakpoints("lg-desktop") {
+                            @include font-size(70px);
+                            @include line-height(80px);
+                        }
+                    }
+
+                    p {
+                        margin-top: 22px;
+                        max-width: 107px;
+
+                        @include breakpoints("tablet") {
+                            margin-top: 10px;
+                            max-width: 46%;
+                        }
+
+                        @include breakpoints("laptop") {
+                            margin-top: 27px;
+                            max-width: 41%;
+                        }
+
+                        @include breakpoints("lg-laptop") {
+                            margin-top: 53px;
+                        }
+
+                        @include breakpoints("sm-desktop") {
+                            margin-top: 59px;
+                            max-width: 35%;
+                        }
+
+                        @include breakpoints("desktop") {
+                            margin-top: 89px;
+                        }
+
+                        @include breakpoints("lg-desktop") {
+                            max-width: 26%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .o-hero__image-container {
+            margin-top: 331px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 93%;
+            // height: 500px;
+            padding-top: calc(975 / 800 * 100%);
+
+            @include breakpoints("tablet"){
+                height: 100%;
+                margin-top: 0;
+                padding-top: 0;
+                width: 50%;
+            }
+
+            img {
+                position: absolute;
+            }
+
+            .-person {
+                bottom: 0;
+                right: 10px;
+                max-width: 480px;
+                width: 100%;
+                z-index: 5;
+
+                @include breakpoints("phone"){
+                    margin-right: -240px;
+                    right: 50%;
+                }
+
+                @include breakpoints("tablet"){
+                    margin-right: 0;
+                    right: 23%;
+                    width: 66%;
+                }
+            }
+
+            .-black-x {
+                right: 70%;
+                opacity: 0;
+                top: 20%;
+                width: 16%;
+                z-index: 1;
+            }
+
+            .-blue-lines {
+                top: 58%;
+                opacity: 0;
+                right: 14%;
+                width: 10%;
+                z-index: 1;
+
+                @include breakpoints("tablet"){
+                    top: 65%;
+                    right: 25%;
+                }
+            }
+
+            .-blue-plant {
+                right: 43%;
+                opacity: 0;
+                top: 23%;
+                width: 12%;
+                z-index: 1;
+
+                @include breakpoints("tablet"){
+                    right: 52%;
+                }
+            }
+
+            .-fog-dots {
+                right: 16%;
+                opacity: 0;
+                top: 20%;
+                width: 50%;
+                z-index: 0;
+            }
+
+            .-fog-eyeball {
+                right: 82%;
+                opacity: 0;
+                top: 10%;
+                width: 14%;
+                z-index: 0;
+            }
+
+            .-fog-tag {
+                right: 88%;
+                opacity: 0;
+                top: 62%;
+                width: 8%;
+            }
+
+            .-green-go {
+                right: 25%;
+                opacity: 0;
+                top: 37%;
+                width: 16%;
+                z-index: 1;
+
+                @include breakpoints("tablet"){
+                    right: 40%;
+                    top: 35%;
+                }
+            }
+
+            .-green-plant {
+                bottom: 37%;
+                opacity: 0;
+                right: 80%;
+                width: 18%;
+            }
+
+            .-orange-blob {
+                display: none;
+                right: 0%;
+                top: 40%;
+                width: 16%;
+            }
+
+            .-orange-cube {
+                opacity: 0;
+                right: 50%;
+                top: 8%;
+                width: 12%;
+            }
+
+            .-pink-asterisk {
+                opacity: 0;
+                right: 29%;
+                top: 76%;
+                width: 6%;
+            }
+
+            .-pink-drop {
+                opacity: 0;
+                right: 51%;
+                top: 32%;
+                width: 29%;
+
+                @include breakpoints("tablet"){
+                    right: 50%;
+                    top: 45%;
+                }
+            }
+
+            .-pink-raindrops {
+                opacity: 0;
+                right: 20%;
+                top: 1%;
+                width: 24%;
+            }
+
+            .-red-prism {
+                bottom: 16%;
+                opacity: 0;
+                right: 80%;
+                width: 24%;
+
+                @include breakpoints("tablet"){
+                    bottom: 11%;
+                    right: 76%;
+                }
+            }
+
+            .-red-teeth {
+                right: 15%;
+                opacity: 0;
+                top: 72%;
+                width: 2%;
+
+                @include breakpoints("tablet"){
+                    right: 20%;
+                    top: 79%;
+                }
+            }
+
+            .-salmon-blob {
+                opacity: 0;
+                right: 70%;
+                top: 14%;
+                width: 22%;
+            }
+
+            .-teal-asterisk {
+                opacity: 0;
+                top: 55%;
+                right: 36%;
+                width: 6%;
+            }
+
+            .-teal-rainbow {
+                bottom: 50%;
+                opacity: 0;
+                right: 84%;
+                width: 24%;
+            }
+
+            .-yellow-squiggle {
+                opacity: 0;
+                right: 10%;
+                top: 18%;
+                width: 24%;
+            }
+        }
+
+
+        h2 {
+            margin: 0;
+        }
+    }
 }

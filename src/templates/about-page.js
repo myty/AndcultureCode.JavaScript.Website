@@ -1,37 +1,34 @@
-import React              from 'react';
-import { graphql }        from 'gatsby';
-import Layout             from '../components/Layout';
-import '../assets/scss/app.scss';
-import ContactHeroGraphic from '../../static/img/contact/contact_hero_graphic.png';
-import HeroBluePaint      from '../../static/img/contact/blue_paint.png';
-import InteriorHero       from '../components/molecules/InteriorHero';
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from 'components/Layout';
+import AboutHero from 'components/molecules/AboutHero';
+import DepartmentList from 'components/organisms/DepartmentList';
 
-export const AboutPageTemplate = ({
-  title,
-  secondaryTitle,
-  subTitle,
-}) => (
-  <InteriorHero
-    backgroundImages = { [{ image: ContactHeroGraphic, alt: "Creative swirls and artifacts" }, { image: HeroBluePaint , alt: "Hand stroked blue paint"}] }
-    title            = { title }
-    secondaryTitle   = { secondaryTitle }
-    subTitle         = { subTitle } />
-)
+import '../assets/scss/app.scss';
 
 const AboutPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const pageData = data.markdownRemark.frontmatter;
 
   return (
-    <Layout pageTitle = "about" hideNavigation = { true }>
-      <main className = "p-interior-page">
-        <AboutPageTemplate
-          title          = { frontmatter.title }
-          secondaryTitle = { frontmatter.secondaryTitle }
-          subTitle       = { frontmatter.subTitle }
+    <Layout
+      pageTitle="About"
+      data={pageData}
+      pageClassName="p-about"
+      showFooterDividerLine={false}
+    >
+      <main className="p-interior-page p-about">
+        <AboutHero
+          title={pageData.title}
+          subTitle={pageData.secondaryTitle}
+          introTextOne={pageData.introTextOne}
+          introTextTwo={pageData.introTextTwo}
+          image={pageData.heroImage.childImageSharp.fluid.src}
+          modifier={""}
         />
+        <DepartmentList />
       </main>
     </Layout>
-  )
+  );
 }
 
 export default AboutPage;
@@ -42,7 +39,15 @@ export const pageQuery = graphql`
       frontmatter {
         title
         secondaryTitle
-        subTitle
+        introTextOne
+        introTextTwo
+        heroImage {
+          childImageSharp {
+            fluid(maxWidth: 1920, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         seo {
           metaTitle
           metaDescription

@@ -1,0 +1,114 @@
+.o-work-featured {
+    &__container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        color: get-color-primary("white");
+        background-color: get-color-secondary("violet");
+        background-image: url("/img/home-feature-edio-triangle.png"), url("/img/home-feature-edio-dots.png"),
+                        url("/img/home-feature-edio-swabs.png");
+        background-position: top left, top right, bottom right;
+        background-repeat: no-repeat;
+        background-size: 30%, 50%, 18%;
+
+        @include breakpoints("tablet") {
+            background-size: 12%, 20%, 8%;
+            background-position: top 50px left, top right 100px, bottom 100px right;
+        }
+
+        .featured-work-partner-name {
+            color: get-color-neutral("lighter-gray");
+            text-transform: uppercase;
+            font-size: 20px; //@include font-size("smallest");
+            font-family: $font-secondary;
+            letter-spacing: .2em;
+            font-weight: 600;
+            line-height: 1.5em;
+            @include breakpoints("tablet") {
+                line-height: 1em;
+            }
+        }
+
+        .featured-work-title {
+            color: get-color-primary("white");
+            @include font-size("medium-large");
+            @include line-height("largish");
+
+            @include breakpoints("tablet") {
+                @include font-size("largish");
+            }
+        }
+
+        .o-rhythm__container {
+            display: flex;
+            flex-direction: column;
+            @include breakpoints("tablet") {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__image-container {
+        width: 100%;
+        float: none;
+        position: relative;
+        margin-bottom: 40px;
+
+        @include breakpoints("tablet") {
+            width: calc(50% - 62px);
+            float: left;
+            margin-right: 64px;
+            margin-bottom: 0;
+        }
+
+        @include breakpoints("sm-desktop") {
+            margin-bottom: 0;
+            width: 50%;
+            float: left;
+        }
+
+    }
+
+    &__content {
+        align-self: center;
+        width: 100%;
+        float: none;
+        padding-bottom: 60px;
+        margin-bottom: 1em;
+
+        @include breakpoints("tablet") {
+            width: 50%;
+            float: right;
+            margin-bottom: 0em;
+        }
+
+        a {
+            border-bottom: 0.075em solid get-color("primary", "fresh");
+            color: get-color-primary("white");
+            line-height: 27px;
+            font-size: 16px;
+            font-family: $font-secondary;
+            margin-right: 32px;
+            letter-spacing: .2em;
+            padding-bottom: 0.2em;
+            text-decoration: none;
+
+            @include breakpoints ("tablet") {
+                font-weight: 600;
+            }
+
+            @include breakpoints("sm-desktop") {
+                font-size: 20px;
+            }
+        }
+
+        h2 {
+            letter-spacing: 0.2em;
+        }
+
+        .featured-work-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

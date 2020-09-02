@@ -1,0 +1,133 @@
+.p-about {
+
+  .department-list {
+    padding-bottom: 0px;
+  }
+  .o-hero__top {
+    padding-top: 50px;
+  }
+
+  .hero-intro-text {
+    margin: 0 0 35px 0;
+    margin-right: 0 !important;
+    max-width: none;
+    line-height: 30px;
+  }
+
+  .dept-description {
+    line-height: 30px;
+  }
+
+  @include breakpoints ("tablet"){
+    .department-list {
+      padding-bottom: 100px;
+    }
+    .o-hero__top {
+      padding-top: 100px;
+    }
+    .o-hero__titles {
+      margin-left: 30px;
+      margin-right: 0px;
+    }
+    .img-on-right {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .o-hero__titles {
+        margin-right: 30px;
+        margin-left: 0px;
+      }
+    }
+    .dept-description {
+      margin-right: 0px !important;
+    }
+  }
+
+  .o-hero__left, .o-hero__side-one {
+    align-items: center;
+    display: flex;
+  }
+
+  h1 {
+    @include font-size(48px);
+    @include line-height("larger");
+
+    @include breakpoints("laptop") {
+      line-height: 72px;
+      @include font-size(60px);
+    }
+  }
+
+  h2 {
+    @include font-size("medium-large");
+
+    @include breakpoints ("laptop") {
+          @include font-size(48px);
+    }
+  }
+
+  #greeting {
+    color: get-color("primary", "fresh");
+    margin-bottom: 20px;
+    @include font-size("medium");
+    @include line-height(46px);
+
+    @include breakpoints("laptop") {
+        @include font-size("large");
+        @include line-height("larger");
+    }
+  }
+
+  .no-dot {
+    padding-left: 0;
+
+    li {
+      font-weight: 500;
+      list-style-type: none;
+    }
+  }
+
+  .p-about__illustration {
+    display: flex;
+    justify-content: center;
+
+    img {
+      align-self: center;
+      max-width: 75%;
+      @include breakpoints("tablet") {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .hero-image {
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    @include breakpoints("sm-desktop") {
+      display: flex;
+    }
+    img {
+      max-width: 75%;
+    }
+  }
+
+  .about-hero-text {
+    flex-basis: calc(100% - 16px);
+    max-width: calc(100% - 16px);
+
+    @include breakpoints("sm-desktop") {
+      flex-basis: calc(50% - 12px);
+      max-width: calc(50% - 12px);
+    }
+  }
+
+  .o-hero__titles {
+    margin-top: 60px;
+    @include breakpoints("phone"){
+      margin-top: 40px;
+    }
+  }
+
+}

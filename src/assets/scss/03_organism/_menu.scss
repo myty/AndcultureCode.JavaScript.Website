@@ -57,7 +57,7 @@
     nav {
         height: 100%;
         padding-left: 50px;
-        padding-top: 150px;
+        padding-top: 38px;
         width: 350px;
         position: fixed;
         right: 0;;
@@ -71,7 +71,7 @@
 
         @include breakpoints("sm-tablet") {
             padding-left: 100px;
-            padding-top: 175px;
+            padding-top: 28px;
             width: 430px;
         }
 
@@ -88,6 +88,7 @@
             font-family: $font-primary;
             cursor: pointer;
             transition: transform .5s ease, opacity .5s ease;
+            z-index: 1;
 
             &:hover {
                 transform: rotate(90deg);
@@ -123,6 +124,14 @@
 
             &:nth-of-type(4) {
                 transition-delay: 1s, 1s;
+            }
+
+            &:nth-of-type(5) {
+                transition-delay: 1.25s, 1.25s;
+            }
+
+            &:nth-of-type(6) {
+                transition-delay: 1.5s, 1.5s;
             }
 
             &:hover {
