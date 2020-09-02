@@ -16,4 +16,14 @@
       width: 190px;
     }
   }
+
+    // Compensate for the left navbar icon
+    @include breakpoints("tablet") {
+      margin-left: 65px;
+      margin-right: 65px;
+    }
+    @include breakpoints("lg-desktop") {
+      margin-left: initial;
+      margin-right: initial;
+    }
 }
