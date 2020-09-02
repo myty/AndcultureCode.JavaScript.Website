@@ -11,9 +11,11 @@ const FromOurBlog = React.forwardRef((props, ref) => {
                 <div className="o-from-our-blog__wrapper">
                     <div className="from-our-blog">
                         <h2>from our blog</h2>
-                        <a href="/blog/" className="view-all-posts">
-                            VIEW ALL POSTS
-                        </a>
+                        <div>
+                            <a href="/blog/" className="view-all-posts">
+                                VIEW ALL POSTS
+                            </a>
+                        </div>
                     </div>
                     <div className="blog-list-homepage">
                         {list &&

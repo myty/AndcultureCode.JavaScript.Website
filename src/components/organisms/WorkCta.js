@@ -9,7 +9,7 @@ const WorkCta = (props) => (
                     <h2>
                         We’re looking for partners who want to reimagine the future and boldly disrupt the status quo.
                     </h2>
-                    <a href="/contact/">LET'S TALK</a>
+                    <div><a href="/contact/">LET'S TALK</a></div>
                 </div>
                 <div className="o-work-cta__image-container">
                     <img src={squiggleImage} alt="Abstract yellow squiggle" />
