@@ -1,0 +1,88 @@
+.o-learn-about-us {
+    &__container {
+        background-color: get-color-primary("fog");
+        color: get-color-primary("after-hours-light");
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+
+        a {
+            border-bottom: 0.075em solid get-color("primary", "fresh");
+            color: get-color-primary("after-hours");
+            font-family: $font-secondary;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            padding-bottom: 0.2em;
+            text-decoration: none;
+            @include breakpoints("tablet") {
+                font-size: 20px;
+            }
+        }
+
+        h2 {
+            color: get-color-neutral("light-gray");
+            font-size: 20px;
+            font-size: 1.25rem;
+            line-height: 32px;
+            line-height: 2rem;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            @include breakpoints("tablet") {
+                font-size: 28px;
+                line-height: 48px;
+                margin-top: 0;
+                margin-right: 60px;
+            }
+            @include breakpoints("sm-desktop") {
+                font-size: 36px;
+                line-height: 48px;
+                margin-top: 0;
+                margin-right: 60px;
+            }
+        }
+    }
+
+    &__content-container {
+        justify-content: center;
+    }
+
+    &__image-container {
+        display: flex;
+        justify-content: left;
+
+        @include breakpoints("tablet") {
+            justify-content: center;
+        }
+
+        img {
+            max-width: 250px;
+            height: 249px;
+
+            @include breakpoints("lg-desktop") {
+                height: 414px;
+                max-width: 415px;
+                width: 415px;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        @include breakpoints("tablet") {
+            align-items: center;
+            flex-direction: initial;
+            flex-wrap: nowrap;
+        }
+
+        // Compensate for the left and right navbar icons
+        @include breakpoints("tablet") {
+            margin-left: 72px;
+        }
+        
+        @include breakpoints("lg-desktop") {
+            margin-left: initial;
+        }
+    }
+}
