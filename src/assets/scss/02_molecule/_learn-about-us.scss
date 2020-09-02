@@ -72,6 +72,7 @@
         flex-wrap: wrap;
         flex-direction: column-reverse;
         @include breakpoints("tablet") {
+            align-items: center;
             flex-direction: initial;
             flex-wrap: nowrap;
         }
