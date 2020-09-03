@@ -105,8 +105,12 @@
         }
 
         .a-button {
-            margin-right: 60px;
+            margin-right: 30px;
             cursor: pointer;
+
+            @include breakpoints("phone") {
+                margin-right: 60px;
+            }
 
             &.-disabled {
                 cursor: default;

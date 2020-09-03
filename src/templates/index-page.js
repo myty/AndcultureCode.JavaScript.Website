@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { graphql }                    from 'gatsby';
 import Layout                         from '../components/Layout';
-import CaseStudyList                  from '../components/organisms/CaseStudyList';
 import ContactForm                    from '../components/organisms/ContactForm';
 import HomePageAnimation              from '../components/organisms/HomeAnimation';
 import EasterEgg                      from '../components/atoms/EasterEgg';
@@ -10,29 +9,27 @@ import '../assets/scss/app.scss'
 import { gsap } from 'gsap';
 import { TimelineMax, Power1 } from 'gsap';
 import Hero from '../components/molecules/Hero';
+import FromOurBlog from '../components/organisms/FromOurBlog';
+import LearnAboutUs from '../components/molecules/LearnAboutUs';
+import RedesignFuture from '../components/molecules/RedesignFuture';
+import WorkFeatured from '../components/organisms/WorkFeatured';
 gsap.registerPlugin(TimelineMax);
 gsap.registerPlugin(Power1);
 
-export const IndexPageTemplate = ({
-  title,
-  secondaryTitle,
-  subTitle,
-  scrollTop,
-}) => (
-    <main className="p-home">
-      {/* <HomePageAnimation /> */}
-      <Hero
-        scrollTop      = { scrollTop }
-        title          = { title }
-        secondaryTitle = { secondaryTitle }
-        subTitle       = { subTitle } />
-      <section id="main-content">
-        <CaseStudyList />
-        <ContactForm />
-        <EasterEgg />
-      </section>
-    </main>
-  )
+export const IndexPageTemplate = ({ title, secondaryTitle, subTitle, scrollTop }) => (
+           <main className="p-home">
+               {/* <HomePageAnimation /> */}
+               <Hero scrollTop={scrollTop} title={title} secondaryTitle={secondaryTitle} subTitle={subTitle} />
+               <section id="main-content">
+                   <RedesignFuture />
+                   <WorkFeatured />
+                   <FromOurBlog />
+                   <LearnAboutUs />
+                   <ContactForm />
+                   <EasterEgg />
+               </section>
+           </main>
+       );
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;

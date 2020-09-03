@@ -9,14 +9,14 @@ class CaseStudyList extends React.Component {
     const numberOfPosts = posts.length;
 
     return (
-      <div className = "o-case-study-list">
+      <div className="o-case-study-list">
         {posts &&
           posts.map(({ node: post }, index) => (
             <CaseStudy
-              key   = { index }
-              post  = { post }
-              count = { index + 1 }
-              total = { numberOfPosts } />
+              key={index}
+              post={post}
+              count={index + 1}
+              total={numberOfPosts} />
           ))}
       </div>
     )
@@ -42,7 +42,13 @@ export default () => (
                 title
                 color
                 secondaryLayout
-                texture
+                texture {
+                  childImageSharp {
+                    fluid(maxWidth: 1920, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
                 partnerName
                 modifiedTexture
                 templateKey
@@ -68,8 +74,8 @@ export default () => (
         }
       }
     `}
-    render = {
-      (data, count) => <CaseStudyList data = { data } count = { count } />
+    render={
+      (data, count) => <CaseStudyList data={data} count={count} />
     }
   />
 )

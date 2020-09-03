@@ -1,0 +1,13 @@
+.o-work-list {
+  margin: 32px 0 64px;
+
+  // Compensate for the left and right navbar icons
+  @include breakpoints("tablet") {
+      margin-left: 72px;
+      margin-right: 72px;
+  }
+  @include breakpoints("lg-desktop") {
+      margin-left: initial;
+      margin-right: initial;
+  }
+}
