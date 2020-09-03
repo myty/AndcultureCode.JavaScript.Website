@@ -1,5 +1,6 @@
 ---
 createPage: false
+templateKey: "employee"
 name: Mike Koser
 position: Director of Engineering
 easterEgg: brews beer for the masses

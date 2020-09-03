@@ -1,5 +1,6 @@
 ---
 createPage: false
+templateKey: "employee"
 name: Shane Shearer
 position: chief operating officer
 easterEgg: car & sports enthusiast
