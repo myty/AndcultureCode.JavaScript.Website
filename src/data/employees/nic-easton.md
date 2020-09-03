@@ -1,7 +1,7 @@
 ---
 createPage: false
 name: Nic Easton
-position: organizational agility director
+position: director of organizational agility
 easterEgg: football. the international kind.
 authorPhoto:
   image: /img/authors/author-scribble.png
