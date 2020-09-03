@@ -4,4 +4,10 @@ templateKey: "employee"
 name: alex getty
 position: catamaran
 easterEgg: paper, pixels, code, & caffeine
+teamGridPhoto:
+  image: /img/team/grid-photos/Getty_Alex-2X.jpg
+  description: Alex Getty
+teamExpandedPhoto:
+  image: /img/team/expanded-photos/Getty_Alex-2XL.jpg
+  description: Alex Getty
 ---

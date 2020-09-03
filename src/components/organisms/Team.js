@@ -15,7 +15,7 @@ const Team = (props) => {
                 employees.map(({ node: teamMemberItem }, index) => {
                     const employee = teamMemberItem.frontmatter;
 
-                    return <TeamMember employee={employee} image={null} key={`team-member-${index}`} />;
+                    return <TeamMember employee={employee} key={`team-member-${index}`} />;
                 })}
         </div>
     );
@@ -28,9 +28,7 @@ export default (props) => (
     <StaticQuery
         query={graphql`
             query EmployeeListQuery {
-                allMarkdownRemark(
-                    filter: { frontmatter: { templateKey: { eq: "employee" } } }
-                ) {
+                allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "employee" }, position: { ne: null } } }) {
                     edges {
                         node {
                             id
@@ -42,6 +40,16 @@ export default (props) => (
                                     platform
                                     url
                                 }
+                                teamGridPhoto {
+                                    image {
+                                        childImageSharp {
+                                            fluid(maxWidth: 1920, quality: 100) {
+                                                ...GatsbyImageSharpFluid
+                                            }
+                                        }
+                                    }
+                                    description
+                                }
                             }
                         }
                     }
@@ -52,13 +60,19 @@ export default (props) => (
     />
 );
 
-// teamPhoto {
-//     description
-//     image {
-//         childImageSharp {
-//             fluid(maxWidth: 1920, quality: 100) {
-//                 ...GatsbyImageSharpFluid
-//             }
+// image {
+//     childImageSharp {
+//         fluid(maxWidth: 1920, quality: 100) {
+//             ...GatsbyImageSharpFluid
 //         }
 //     }
 // }
+
+
+// heroImage {
+//           childImageSharp {
+//             fluid(maxWidth: 1920, quality: 100) {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }

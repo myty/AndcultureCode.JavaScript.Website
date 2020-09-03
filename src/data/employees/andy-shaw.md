@@ -12,4 +12,10 @@ socialLinks:
     url: https://www.linkedin.com/in/andyrshaw/
   - platform: Twitter
     url: https://twitter.com/instafatherandy
+teamGridPhoto:
+  image: /img/team/grid-photos/Shaw_Andy-2X.jpg
+  description: Andy Shaw
+teamExpandedPhoto:
+  image: /img/team/expanded-photos/Shaw_Andy-2XL.jpg
+  description: Andy Shaw
 ---

@@ -4,4 +4,10 @@ templateKey: "employee"
 name: jim stevenson
 position: sr. software engineer
 easterEgg: christ, family, board games
+teamGridPhoto:
+  image: /img/team/grid-photos/Stevenson_Jim-2X.jpg
+  description: Jim Stevenson
+teamExpandedPhoto:
+  image: /img/team/expanded-photos/Stevenson_Jim-2XL.jpg
+  description: Jim Stevenson
 ---
