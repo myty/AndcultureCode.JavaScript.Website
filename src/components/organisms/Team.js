@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-import TeamMember from "components/molecules/TeamMember";
+import TeamGridMember from "components/molecules/TeamGridMember";
 
 // Primary Component
 // ------------------------------------
@@ -12,10 +12,10 @@ const Team = (props) => {
     return (
         <div className={`o-rhythm__row o-team`}>
             {employees &&
-                employees.map(({ node: teamMemberItem }, index) => {
-                    const employee = teamMemberItem.frontmatter;
+                employees.map(({ node: teamMemberGridItem }, index) => {
+                    const employee = teamMemberGridItem.frontmatter;
 
-                    return <TeamMember employee={employee} key={`team-member-${index}`} />;
+                    return <TeamGridMember employee={employee} key={`team-grid-member-${index}`} />;
                 })}
         </div>
     );
