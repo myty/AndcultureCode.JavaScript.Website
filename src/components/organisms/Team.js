@@ -59,20 +59,3 @@ export default (props) => (
         render={(data, count) => <Team data={data} count={count} />}
     />
 );
-
-// image {
-//     childImageSharp {
-//         fluid(maxWidth: 1920, quality: 100) {
-//             ...GatsbyImageSharpFluid
-//         }
-//     }
-// }
-
-
-// heroImage {
-//           childImageSharp {
-//             fluid(maxWidth: 1920, quality: 100) {
-//               ...GatsbyImageSharpFluid
-//             }
-//           }
-//         }
