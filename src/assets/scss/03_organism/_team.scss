@@ -1,11 +1,11 @@
 .o-team {
     display: flex;
+    position: relative;
 
-    div {
-      width: 20%;
+    div.team-grid-member {
 
-      img {
-          width: 100%;
+      .expanded-team-member {
+        //
       }
     }
 

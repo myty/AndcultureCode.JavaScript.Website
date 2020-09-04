@@ -42,7 +42,7 @@ const TeamSlider = class extends React.Component {
             return <TeamGridMember employee={employee} key={`team-grid-member-${index}`} />;
         })
         return (
-            <div className = "o-slider__container" aria-hidden = "true">
+            <div className = "o-slider__container o-team" aria-hidden = "true">
                 <div className = "o-rhythm__container -full-width__mobile">
                     <div className = "o-slider">
                         <Slider {...settings}>
@@ -76,6 +76,16 @@ export default (props) => (
                                     url
                                 }
                                 teamGridPhoto {
+                                    image {
+                                        childImageSharp {
+                                            fluid(maxWidth: 1920, quality: 100) {
+                                                ...GatsbyImageSharpFluid
+                                            }
+                                        }
+                                    }
+                                    description
+                                }
+                                teamExpandedPhoto {
                                     image {
                                         childImageSharp {
                                             fluid(maxWidth: 1920, quality: 100) {

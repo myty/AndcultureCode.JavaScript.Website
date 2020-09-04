@@ -1,24 +1,22 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
+import ExpandedTeamMember from "components/molecules/ExpandedTeamMember"
 
 // Primary Component
 // ------------------------------------
 
 const TeamGridMember = (props) => {
-    let className = "";
 
     const employee = props.employee;
-
-    var expandPicture = () => {
-        // console.log(employee.name);
-        alert(employee.name + "*, " + employee.easterEgg);
-    }
+    const [expanded, setExpanded] = useState(false);
+    const onClick = () => setExpanded(!expanded);
 
     return (
-        <div onClick={expandPicture} className="">
+        <div onClick={onClick} className="team-grid-member">
             <img
-                src={props.employee.teamGridPhoto.image.childImageSharp.fluid.src}
-                alt={props.employee.teamGridPhoto.description}
+                src={employee.teamGridPhoto.image.childImageSharp.fluid.src}
+                alt={employee.teamGridPhoto.description}
             />
+            {expanded ? <ExpandedTeamMember employee={employee} /> : null}
         </div>
     );
 };
