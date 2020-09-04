@@ -8,8 +8,13 @@ const TeamGridMember = (props) => {
 
     const employee = props.employee;
 
+    var expandPicture = () => {
+        // console.log(employee.name);
+        alert(employee.name + "*, " + employee.easterEgg);
+    }
+
     return (
-        <div className="">
+        <div onClick={expandPicture} className="">
             <img
                 src={props.employee.teamGridPhoto.image.childImageSharp.fluid.src}
                 alt={props.employee.teamGridPhoto.description}

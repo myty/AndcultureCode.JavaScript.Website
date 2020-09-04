@@ -20,7 +20,7 @@ const settings = {
             pullIcon.remove();
         }
     }
-  };
+};
 
 const CustomSlider = class extends React.Component {
     constructor(props) {

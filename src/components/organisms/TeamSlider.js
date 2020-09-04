@@ -17,7 +17,7 @@ const settings = {
     speed:          500,
     rows:           3,
     slidesToShow:   7,
-    slidesToScroll: 1,
+    slidesToScroll: 7,
     prevArrow:      <PrevArrow />,
     nextArrow:      <NextArrow />,
     onSwipe:        function() {
