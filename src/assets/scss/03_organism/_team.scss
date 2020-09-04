@@ -1,11 +1,21 @@
 .o-team {
     display: flex;
-    position: relative;
-
+    
     div.team-grid-member {
+      position: relative;
 
       .expanded-team-member {
-        //
+        background: rgba(get-color-primary("fresh"), .6);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10000px;
+        height: 300%;
+        z-index: 1;
+
+        div {
+          opacity: 1;
+        }
       }
     }
 
