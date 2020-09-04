@@ -4,4 +4,10 @@ templateKey: "employee"
 name: dave hickethier
 position: founder / ceo
 easterEgg: eternally curious
+teamGridPhoto:
+  image: /img/team/grid-photos/Hickethier_Dave-2X.jpg
+  description: Dave Hickethier
+teamExpandedPhoto:
+  image: /img/team/expanded-photos/Hickethier_Dave-2XL.jpg
+  description: Dave Hickethier
 ---

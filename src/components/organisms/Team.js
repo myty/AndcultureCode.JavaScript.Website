@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-import TeamMember from "components/molecules/TeamMember";
+import TeamGridMember from "components/molecules/TeamGridMember";
 
 // Primary Component
 // ------------------------------------
@@ -12,10 +12,10 @@ const Team = (props) => {
     return (
         <div className={`o-rhythm__row o-team`}>
             {employees &&
-                employees.map(({ node: teamMemberItem }, index) => {
-                    const employee = teamMemberItem.frontmatter;
+                employees.map(({ node: teamMemberGridItem }, index) => {
+                    const employee = teamMemberGridItem.frontmatter;
 
-                    return <TeamMember employee={employee} image={null} key={`team-member-${index}`} />;
+                    return <TeamGridMember employee={employee} key={`team-grid-member-${index}`} />;
                 })}
         </div>
     );
@@ -28,9 +28,7 @@ export default (props) => (
     <StaticQuery
         query={graphql`
             query EmployeeListQuery {
-                allMarkdownRemark(
-                    filter: { frontmatter: { templateKey: { eq: "employee" } } }
-                ) {
+                allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "employee" }, position: { ne: null } } }) {
                     edges {
                         node {
                             id
@@ -42,6 +40,16 @@ export default (props) => (
                                     platform
                                     url
                                 }
+                                teamGridPhoto {
+                                    image {
+                                        childImageSharp {
+                                            fluid(maxWidth: 1920, quality: 100) {
+                                                ...GatsbyImageSharpFluid
+                                            }
+                                        }
+                                    }
+                                    description
+                                }
                             }
                         }
                     }
@@ -51,14 +59,3 @@ export default (props) => (
         render={(data, count) => <Team data={data} count={count} />}
     />
 );
-
-// teamPhoto {
-//     description
-//     image {
-//         childImageSharp {
-//             fluid(maxWidth: 1920, quality: 100) {
-//                 ...GatsbyImageSharpFluid
-//             }
-//         }
-//     }
-// }

@@ -4,4 +4,10 @@ templateKey: "employee"
 name: kevin busch
 position: technical lead
 easterEgg: love of god, family, & hiking
+teamGridPhoto:
+  image: /img/team/grid-photos/Busch_Kevin-2X.jpg
+  description: Kevin Busch
+teamExpandedPhoto:
+  image: /img/team/expanded-photos/Busch_Kevin-2XL.jpg
+  description: Kevin Busch
 ---

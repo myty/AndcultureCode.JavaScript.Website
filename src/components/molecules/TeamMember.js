@@ -10,6 +10,10 @@ const TeamMember = (props) => {
 
     return (
         <div className="">
+            <img
+                src={ props.employee.teamGridPhoto.image.childImageSharp.fluid.src }
+                alt={ props.employee.teamGridPhoto.description }
+            />
             <p>{employee.name}*</p>
             <p>{employee.position}</p>
             <p>{employee.easterEgg}</p>
@@ -20,11 +24,11 @@ const TeamMember = (props) => {
 // Secondary Components
 // ------------------------------------
 
-const TeamMemberImage = (props) => (
-    <div className="m-team-member__image">
-        <img src={props.post.teamImage.image.childImageSharp.fluid.src} alt={props.post.teamImage.description} />
-    </div>
-);
+// const TeamMemberImage = (props) => (
+//     <div className="m-team-member__image">
+//         <img src={props.post.teamImage.image.childImageSharp.fluid.src} alt={props.post.teamImage.description} />
+//     </div>
+// );
 
 // Exports
 // ------------------------------------

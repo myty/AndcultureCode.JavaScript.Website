@@ -4,4 +4,10 @@ templateKey: "employee"
 name: dylan justice
 position: technical lead
 easterEgg: aquatic thrill seeker
+teamGridPhoto:
+  image: /img/team/grid-photos/Justice_Dylan-2X.jpg
+  description: Dylan Justice
+teamExpandedPhoto:
+  image: /img/team/expanded-photos/Justice_Dylan-2XL.jpg
+  description: Dylan Justice
 ---
