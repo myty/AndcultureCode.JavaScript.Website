@@ -8,7 +8,7 @@ import React from "react";
 const ExpandedTeamMember = (props) => {
 
   return (
-    <div className="expanded-team-member">
+    <div className="expanded-team-member" onClick={props.handleHideExpanded}>
       <div className="expanded-team-member-text">
           <p>{ props.employee.name }*</p>
           <p>{ props.employee.position }</p>
