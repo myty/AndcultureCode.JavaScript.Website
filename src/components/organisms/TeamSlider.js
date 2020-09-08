@@ -15,7 +15,7 @@ const settings = {
     draggable:      true,
     infinite:       true,
     speed:          500,
-    rows:           3,
+    rows:           4,
     slidesToShow:   7,
     slidesToScroll: 7,
     prevArrow:      <PrevArrow />,
