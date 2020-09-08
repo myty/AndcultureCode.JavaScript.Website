@@ -13,7 +13,7 @@ const TeamSliderContainer = (props) => {
 
   function isLargeViewport() {
     if (typeof window !== `undefined`) {
-      return window.matchMedia("(min-width: 768px)").matches
+      return window.matchMedia("(min-width: 769px)").matches
     }
     return false
   }
