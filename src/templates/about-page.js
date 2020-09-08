@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import AboutHero from 'components/molecules/AboutHero';
 import DepartmentList from 'components/organisms/DepartmentList';
-import TeamSlider from 'components/organisms/TeamSlider';
+import TeamSliderContainer from 'components/organisms/TeamSliderContainer';
 
 import '../assets/scss/app.scss';
 
@@ -27,7 +27,7 @@ const AboutPage = ({ data }) => {
           modifier={""}
         />
         <DepartmentList />
-        <TeamSlider />
+        <TeamSliderContainer />
       </main>
     </Layout>
   );

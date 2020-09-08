@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { graphql, StaticQuery } from "gatsby";
 import TeamGridMember from "components/molecules/TeamGridMember";
 import PrevArrow from "components/atoms/PrevArrow";
 import NextArrow from "components/atoms/NextArrow";
@@ -11,27 +10,11 @@ import ExpandedTeamMember from "components/molecules/ExpandedTeamMember";
 // Primary Component
 // ------------------------------------
 
-const settings = {
-    dots:           true,
-    draggable:      true,
-    infinite:       true,
-    speed:          500,
-    rows:           4,
-    slidesToShow:   7,
-    slidesToScroll: 7,
-    prevArrow:      <PrevArrow />,
-    nextArrow:      <NextArrow />,
-    onSwipe:        function() {
-        const pullIcon = document.querySelector('.pull-icon');
-        if (pullIcon) {
-            pullIcon.remove();
-        }
-    }
-};
 
 const TeamSlider = (props) => {
 
     const { data } = props;
+    const settings = props.settings;
     const { edges: employees } = data.allMarkdownRemark;
     const [expanded, setExpanded] = useState(false);
     const [employeeToShow, setEmployeeToShow] = useState(null);
@@ -61,51 +44,4 @@ const TeamSlider = (props) => {
     );
 };
 
-// Exports
-// ------------------------------------
-
-export default (props) => (
-    <StaticQuery
-        query={graphql`
-            query EmployeeListQuery {
-                allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "employee" }, position: { ne: null } } }) {
-                    edges {
-                        node {
-                            id
-                            frontmatter {
-                                position
-                                name
-                                easterEgg
-                                socialLinks {
-                                    platform
-                                    url
-                                }
-                                teamGridPhoto {
-                                    image {
-                                        childImageSharp {
-                                            fluid(maxWidth: 1920, quality: 100) {
-                                                ...GatsbyImageSharpFluid
-                                            }
-                                        }
-                                    }
-                                    description
-                                }
-                                teamExpandedPhoto {
-                                    image {
-                                        childImageSharp {
-                                            fluid(maxWidth: 1920, quality: 100) {
-                                                ...GatsbyImageSharpFluid
-                                            }
-                                        }
-                                    }
-                                    description
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        `}
-        render={(data, count) => <TeamSlider data={data} count={count} />}
-    />
-);
+export default TeamSlider;
