@@ -46,7 +46,7 @@ const TeamSliderContainer = (props) => {
     speed: 500,
     rows: 4,
     slidesToShow: slidesPerPage,
-    slidesToScroll: 7,
+    slidesToScroll: slidesPerPage,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     onSwipe: function() {

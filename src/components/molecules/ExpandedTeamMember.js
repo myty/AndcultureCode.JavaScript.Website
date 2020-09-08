@@ -10,7 +10,7 @@ const ExpandedTeamMember = (props) => {
   return (
     <div className="expanded-team-member" onClick={props.handleHideExpanded}>
       <div className="expanded-team-member-text">
-        <p className="expanded-team-member-text-name">{props.employee.name}*</p>
+        <p className="expanded-team-member-text-name">{props.employee.name} *</p>
         <p className="expanded-team-member-text-position">{props.employee.position}</p>
         <p className="expanded-team-member-text-egg">* {props.employee.easterEgg}</p>
       </div>
