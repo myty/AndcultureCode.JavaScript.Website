@@ -64,6 +64,14 @@
         top: 16%;
       }
 
+      @include breakpoints("lg-desktop") {
+        left: 46%;
+      }
+
+      @include breakpoints("xl-desktop") {
+        left: 41%;
+      }
+
       img {
         width: 67%;
 
