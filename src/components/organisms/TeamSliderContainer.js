@@ -9,16 +9,16 @@ import TeamSlider from "components/organisms/TeamSlider";
 
 const TeamSliderContainer = (props) => {
 
-  let initialSlidesPerPage = 3
+  let initialSlidesPerPage = 3;
 
   function isLargeViewport() {
     if (typeof window !== `undefined`) {
-      return window.matchMedia("(min-width: 769px)").matches
+      return window.matchMedia("(min-width: 769px)").matches;
     }
-    return false
+    return false;
   }
   if (isLargeViewport()) {
-    initialSlidesPerPage = 7
+    initialSlidesPerPage = 7;
   }
 
   const [slidesPerPage, setSlidesPerPage] = React.useState(initialSlidesPerPage);
@@ -37,7 +37,7 @@ const TeamSliderContainer = (props) => {
         window.removeEventListener("resize", handleResize);
       };
     }
-  });
+  }, []);
 
   let settings = {
     dots: true,

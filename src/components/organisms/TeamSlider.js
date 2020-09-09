@@ -37,7 +37,7 @@ const TeamSlider = (props) => {
                     <Slider {...settings}>
                         { sliderItems }
                     </Slider>
-                    {expanded ? <ExpandedTeamMember employee={employeeToShow} handleHideExpanded={handleHideExpanded} /> : null}
+                    {expanded && <ExpandedTeamMember employee={employeeToShow} handleHideExpanded={handleHideExpanded} />}
                 </div>
             </div>
         </div>
