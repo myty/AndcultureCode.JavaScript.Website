@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: lauren berkoski
+name: Lauren Berkoski
 position: client advisor
 easterEgg: sunsets & sushi
 teamGridPhoto:

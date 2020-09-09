@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: mark hess
+name: Mark Hess
 position: quality assurance lead
 easterEgg: sports enthusiast
 teamGridPhoto:

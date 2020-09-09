@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: jake ray
+name: Jake Ray
 position: strategic business development
 easterEgg: seven questions
 teamGridPhoto:

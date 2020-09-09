@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: erin mcmonagle
+name: Erin McMonagle
 position: associate UX researcher
 easterEgg: random artist. canoe captain.
 teamGridPhoto:

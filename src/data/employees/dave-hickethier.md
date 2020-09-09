@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: dave hickethier
+name: Dave Hickethier
 position: founder / ceo
 easterEgg: eternally curious
 teamGridPhoto:

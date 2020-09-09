@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: jon hollinger
+name: Jon Hollinger
 position: sr. software engineer
 easterEgg: coder, learner, traveler
 teamGridPhoto:

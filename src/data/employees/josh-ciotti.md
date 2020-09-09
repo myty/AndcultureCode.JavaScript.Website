@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: josh ciotti
+name: Josh Ciotti
 position: strategist - data analytics
 easterEgg: honestly? it depends.
 teamGridPhoto:

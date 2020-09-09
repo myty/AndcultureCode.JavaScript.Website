@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: shannah donley
+name: Shannah Donley
 position: people experience lead
 easterEgg: spontaneous traveler
 teamGridPhoto:

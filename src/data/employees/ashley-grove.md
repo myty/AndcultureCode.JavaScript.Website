@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: ashley grove
+name: Ashley Grove
 position: project management lead
 easterEgg: cappuccino enthusiast
 teamGridPhoto:

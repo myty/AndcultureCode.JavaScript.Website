@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: brooke snyder
+name: Brooke Snyder
 position: proposal & marketing specialist
 easterEgg: tiny food connoisseur
 teamGridPhoto:

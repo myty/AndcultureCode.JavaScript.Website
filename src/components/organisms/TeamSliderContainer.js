@@ -63,7 +63,10 @@ export default (props) => (
     <StaticQuery
         query={graphql`
             query EmployeeListQuery {
-                allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "employee" }, position: { ne: null } } }) {
+                allMarkdownRemark(
+                    filter: { frontmatter: { templateKey: { eq: "employee" }, position: { ne: null } } }
+                    sort: { fields: [frontmatter___name], order: ASC }
+                ) {
                     edges {
                         node {
                             id

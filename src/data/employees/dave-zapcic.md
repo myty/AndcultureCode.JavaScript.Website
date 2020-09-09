@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: dave zapcic
+name: Dave Zapcic
 position: data engineer
 easterEgg: lego loving tattooed sith lord
 teamGridPhoto:

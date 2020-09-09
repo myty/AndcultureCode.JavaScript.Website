@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: greg cooper
+name: Greg Cooper
 position: sr. designer
 easterEgg: actual unicorn
 teamGridPhoto:

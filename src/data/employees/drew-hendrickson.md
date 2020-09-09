@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: drew hendrickson
+name: Drew Hendrickson
 position: sr. research designer
 easterEgg: things-with-wheels enthusiast
 teamGridPhoto:

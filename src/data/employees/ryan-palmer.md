@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: ryan palmer
+name: Ryan Palmer
 position: associate designer
 easterEgg: does it have dark mode?
 teamGridPhoto:

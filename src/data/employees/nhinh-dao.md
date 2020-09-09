@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: nhinh dao
+name: Nhinh Dao
 position: software engineer
 easterEgg: learning, traveling & playing
 teamGridPhoto:

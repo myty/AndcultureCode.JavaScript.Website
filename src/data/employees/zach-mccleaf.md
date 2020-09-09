@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: zach mccleaf
+name: Zach McCleaf
 position: technical lead
 easterEgg: craftsman & outdoor adventurer
 teamGridPhoto:

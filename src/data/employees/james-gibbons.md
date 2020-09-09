@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: james gibbons
+name: James Gibbons
 position: associate designer
 easterEgg: friendly neighborhood hooligan
 teamGridPhoto:

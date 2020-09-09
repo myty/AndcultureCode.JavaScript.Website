@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: josh hughes
+name: Josh Hughes
 position: software engineer
 easterEgg: sarcasm & seltzer
 teamGridPhoto:
