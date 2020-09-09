@@ -1,12 +1,84 @@
 .o-team {
+  display: flex;
+  position: relative;
+
+  .expanded-team-member {
+    align-items: center;
+    background: rgba(get-color-primary("fresh"), .8);
     display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
 
     div {
-      width: 20%;
+      opacity: 1;
+    }
 
-      img {
-          width: 100%;
+    p {
+      text-transform: lowercase;
+    }
+
+    &-text {
+      color: get-color-primary("white");
+      position: initial;
+
+      @include breakpoints("tablet") {
+        left: 14%;
+        position: absolute;
+        top: 16%;
+      }
+
+      &-name {
+        @include font-size("largish");
+        margin-bottom: 0.6em;
+
+        @include breakpoints("tablet") {
+          margin-bottom: 0;
+        }
+      }
+
+      &-position {
+        margin-top: 0.3em;
+        @include font-size("small");
+      }
+
+      &-egg {
+        @include font-size("smallest");
       }
     }
 
+    &-image {
+      display: flex;
+      justify-content: center;
+      max-width: 691px;
+      position: initial;
+
+      @include breakpoints("tablet") {
+        display: block;
+        left: 51%;
+        position: absolute;
+        top: 16%;
+      }
+
+      @include breakpoints("lg-desktop") {
+        left: 46%;
+      }
+
+      @include breakpoints("xl-desktop") {
+        left: 41%;
+      }
+
+      img {
+        width: 67%;
+
+        @include breakpoints("tablet") {
+          width: 51%;
+        }
+      }
+    }
+  }
 }

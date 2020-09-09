@@ -1,18 +1,21 @@
 import React, { Fragment } from "react";
+import ExpandedTeamMember from "components/molecules/ExpandedTeamMember"
 
 // Primary Component
 // ------------------------------------
 
+// TODO: add gradient to gray to bottom of each image (present in the invision comp)
+
 const TeamGridMember = (props) => {
-    let className = "";
 
     const employee = props.employee;
+    const onClick = () => props.handleExpand(employee);
 
     return (
-        <div className="">
+        <div onClick={onClick} className="team-grid-member">
             <img
-                src={props.employee.teamGridPhoto.image.childImageSharp.fluid.src}
-                alt={props.employee.teamGridPhoto.description}
+                src={employee.teamGridPhoto.image.childImageSharp.fluid.src}
+                alt={employee.teamGridPhoto.description}
             />
         </div>
     );
