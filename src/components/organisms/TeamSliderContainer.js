@@ -49,12 +49,6 @@ const TeamSliderContainer = (props) => {
     slidesToScroll: slidesPerPage,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
-    onSwipe: function() {
-      const pullIcon = document.querySelector(".pull-icon");
-      if (pullIcon) {
-        pullIcon.remove();
-      }
-    },
   };
 
   return (
