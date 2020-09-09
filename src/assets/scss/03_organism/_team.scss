@@ -54,6 +54,7 @@
     &-image {
       display: flex;
       justify-content: center;
+      max-width: 691px;
       position: initial;
 
       @include breakpoints("tablet") {
