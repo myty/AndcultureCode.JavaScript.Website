@@ -25,16 +25,27 @@
     &-text {
       color: get-color-primary("white");
       position: initial;
+      width: 80%;
 
       @include breakpoints("tablet") {
         left: 14%;
+        max-width: none;
         position: absolute;
         top: 16%;
+        width: initial;
       }
 
       &-name {
-        @include font-size("largish");
+        @include font-size(29px);
         margin-bottom: 0.6em;
+
+        @media (min-width: 360px) {
+          @include font-size(35px);
+        }
+
+        @include breakpoints("sm-tablet") {
+          @include font-size("largish");
+        }
 
         @include breakpoints("tablet") {
           margin-bottom: 0;
@@ -54,12 +65,12 @@
     &-image {
       display: flex;
       justify-content: center;
-      max-width: 691px;
       position: initial;
 
       @include breakpoints("tablet") {
         display: block;
         left: 51%;
+        max-width: 691px;
         position: absolute;
         top: 16%;
       }
@@ -73,7 +84,7 @@
       }
 
       img {
-        width: 67%;
+        width: 80%;
 
         @include breakpoints("tablet") {
           width: 51%;
