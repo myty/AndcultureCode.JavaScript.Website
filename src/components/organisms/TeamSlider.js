@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import TeamGridMember from "components/molecules/TeamGridMember";
-import PrevArrow from "components/atoms/PrevArrow";
-import NextArrow from "components/atoms/NextArrow";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,14 +14,13 @@ const TeamSlider = (props) => {
     const { data } = props;
     const settings = props.settings;
     const { edges: employees } = data.allMarkdownRemark;
-    const [expanded, setExpanded] = useState(false);
     const [employeeToShow, setEmployeeToShow] = useState(null);
     const handleExpand = (employeeToShow) => {
         setEmployeeToShow(employeeToShow);
-        setExpanded(true);
+        props.onExpand();
     }
     const handleHideExpanded = () => {
-        setExpanded(false);
+        props.onCollapse();
     }
     const sliderItems = employees.map(({ node: teamMemberGridItem }, index) => {
         const employee = teamMemberGridItem.frontmatter;
@@ -37,7 +34,7 @@ const TeamSlider = (props) => {
                     <Slider {...settings}>
                         { sliderItems }
                     </Slider>
-                    {expanded && <ExpandedTeamMember employee={employeeToShow} handleHideExpanded={handleHideExpanded} />}
+                    {props.isExpanded && <ExpandedTeamMember employee={employeeToShow} handleHideExpanded={handleHideExpanded} />}
                 </div>
             </div>
         </div>
