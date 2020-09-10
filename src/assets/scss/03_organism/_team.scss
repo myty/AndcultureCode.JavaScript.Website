@@ -63,6 +63,11 @@
 
       &-egg {
         @include font-size("smallest");
+
+        img {
+          vertical-align: super;
+          width: 6%;
+        }
       }
     }
 

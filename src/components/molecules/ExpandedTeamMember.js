@@ -13,7 +13,9 @@ const ExpandedTeamMember = (props) => {
             <div className="expanded-team-member-text">
                 <p className="expanded-team-member-text-name">
                     {props.employee.name}{" "}
-                    <img src={asteriskImg} alt="Asterisk" />
+                    <sup>
+                        <img src={asteriskImg} alt="Asterisk" />
+                    </sup>
                 </p>
                 <p className="expanded-team-member-text-position">
                     {props.employee.position}
