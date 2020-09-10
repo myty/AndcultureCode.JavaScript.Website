@@ -154,6 +154,12 @@
             }
         }
     }
+
+    .slick-arrow {
+        &:focus {
+            outline: 1px solid #19A87C;
+        }
+    }
 }
 
 .pull-icon {
