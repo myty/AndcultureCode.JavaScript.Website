@@ -14,6 +14,10 @@ const TeamSlider = (props) => {
     const { data } = props;
     const settings = props.settings;
     const { edges: employees } = data.allMarkdownRemark;
+    let className = "o-slider__container o-team";
+    if (props.isExpanded) {
+        className += " -is-expanded";
+    }
     const [employeeToShow, setEmployeeToShow] = useState(null);
     const handleExpand = (employeeToShow) => {
         setEmployeeToShow(employeeToShow);
@@ -28,7 +32,7 @@ const TeamSlider = (props) => {
         return <TeamGridMember employee={employee} key={`team-grid-member-${index}`} handleExpand={handleExpand} />;
     })
     return (
-        <div className = "o-slider__container o-team" aria-hidden = "true">
+        <div className = {className} aria-hidden = "true">
             <div className = "o-rhythm__container -full-width__mobile">
                 <div className = "o-slider">
                     <Slider {...settings}>

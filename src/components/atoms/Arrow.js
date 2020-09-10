@@ -4,7 +4,7 @@ export default function Arrow(props) {
     let { className, style, onClick } = props;
 
     if (props.isDisabled) {
-        className += " slick-disabled";
+        className += " -disabled";
     }
     return (
         <a

@@ -1,0 +1,18 @@
+.o-slider {
+    .-disabled {
+        opacity: 0.2;
+        pointer-events: none;
+    }
+}
+
+
+.-is-expanded {
+    .slick-dots li {
+    cursor: default;
+
+        button {
+            opacity: 0.2;
+            pointer-events: none;
+        }
+    }
+}
