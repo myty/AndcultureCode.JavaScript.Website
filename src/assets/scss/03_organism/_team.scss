@@ -113,7 +113,15 @@
             }
 
             img {
-                width: 80%;
+                width: 39%;
+
+                @include breakpoints("phone") {
+                    width: 63%;
+                }
+
+                @include breakpoints("sm-tablet") {
+                    width: 75%;
+                }
 
                 @include breakpoints("tablet") {
                     width: 46%;
