@@ -5,9 +5,9 @@ name: Greg Cooper
 position: sr. designer
 easterEgg: actual unicorn
 teamGridPhoto:
-  image: /img/team/grid-photos/placeholder.png
+  image: /img/team/placeholder1.jpg
   description: Greg Cooper
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/placeholder-2XL.png
+  image: /img/team/placeholder1.jpg
   description: Greg Cooper
 ---

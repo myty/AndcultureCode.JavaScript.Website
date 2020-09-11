@@ -5,9 +5,9 @@ name: Aaron Weinberger
 position: Software Engineer
 easterEgg: space & sneakers
 teamGridPhoto:
-  image: /img/team/grid-photos/placeholder.png
+  image: /img/team/placeholder1.jpg
   description: Aaron Weinberger
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/placeholder-2XL.png
+  image: /img/team/placeholder1.jpg
   description: Aaron Weinberger
 ---

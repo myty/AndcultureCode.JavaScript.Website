@@ -5,9 +5,9 @@ name: Lauren Berkoski
 position: client advisor
 easterEgg: sunsets & sushi
 teamGridPhoto:
-  image: /img/team/grid-photos/placeholder.png
+  image: /img/team/placeholder4.jpg
   description: Lauren Berkoski
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/placeholder-2XL.png
+  image: /img/team/placeholder4.jpg
   description: Lauren Berkoski
 ---

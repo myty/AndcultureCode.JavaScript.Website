@@ -5,9 +5,9 @@ name: Drew Hendrickson
 position: sr. research designer
 easterEgg: things-with-wheels enthusiast
 teamGridPhoto:
-  image: /img/team/grid-photos/placeholder.png
+  image: /img/team/placeholder5.jpg
   description: Drew Hendrickson
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/placeholder-2XL.png
+  image: /img/team/placeholder5.jpg
   description: Drew Hendrickson
 ---
