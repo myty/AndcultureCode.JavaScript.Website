@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import ExpandedTeamMember from "components/molecules/ExpandedTeamMember"
 
 // Primary Component
 // ------------------------------------
@@ -17,13 +16,10 @@ const TeamGridMember = (props) => {
                 src={employee.teamGridPhoto.image.childImageSharp.fluid.src}
                 alt={employee.teamGridPhoto.description}
             />
+            <div class="gradient"></div>
         </div>
     );
 };
-
-// Secondary Components
-// ------------------------------------
-
 
 // Exports
 // ------------------------------------

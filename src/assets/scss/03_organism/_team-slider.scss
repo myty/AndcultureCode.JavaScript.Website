@@ -1,20 +1,52 @@
 // Slider styles that are only relevant to the slider on the team page
 // but not the one on the contact page (which is currently the only other usage of slider on site)
 
-.o-slider {
-    .-disabled {
-        opacity: 0.2;
-        pointer-events: none;
-    }
-}
+.o-team {
 
-.o-slider.-is-expanded {
-    .slick-dots li {
-    cursor: default;
-
-        button {
+    .o-slider {
+        .-disabled {
             opacity: 0.2;
             pointer-events: none;
+        }
+    }
+
+    .o-slider.-is-expanded {
+        .slick-dots li {
+        cursor: default;
+
+            button {
+                opacity: 0.2;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .slick-slide {
+        div {
+            margin: 0 !important;
+            width: 100%;
+
+            .team-grid-member {
+                padding: 0 15px;
+                position: relative;
+                margin: 0 !important;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+
+                .gradient {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.15) 100%);
+                    margin: 0 !important;
+                }
+            }
         }
     }
 }
