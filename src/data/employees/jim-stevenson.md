@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: jim stevenson
+name: Jim Stevenson
 position: sr. software engineer
 easterEgg: christ, family, board games
 teamGridPhoto:

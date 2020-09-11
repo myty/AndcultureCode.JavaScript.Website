@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: dj vanscoyoc
+name: DJ Vanscoyoc
 position: facilities manager
 easterEgg: gone fishing
 teamGridPhoto:

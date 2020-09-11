@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: stefanie leitch
+name: Stefanie Leitch
 position: technical architect
 easterEgg: derby girl, baking enthusiast
 teamGridPhoto:

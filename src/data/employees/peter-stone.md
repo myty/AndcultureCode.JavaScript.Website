@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: peter stone
+name: Peter Stone
 position: software engineer
 easterEgg: sun & music & woodland streams
 teamGridPhoto:

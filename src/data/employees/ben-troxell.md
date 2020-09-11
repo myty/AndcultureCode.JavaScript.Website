@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: ben troxell
+name: Ben Troxell
 position: quality assurance analyst
 easterEgg: fast cars, photos, & good times
 teamGridPhoto:

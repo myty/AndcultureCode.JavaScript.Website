@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { graphql, StaticQuery } from "gatsby";
-import PrevArrow from "components/atoms/PrevArrow";
-import NextArrow from "components/atoms/NextArrow";
+import PrevArrow from "components/molecules/PrevArrow";
+import NextArrow from "components/molecules/NextArrow";
 import TeamSlider from "components/organisms/TeamSlider";
 
 // Primary Component
@@ -22,6 +22,8 @@ const TeamSliderContainer = (props) => {
   }
 
   const [slidesPerPage, setSlidesPerPage] = React.useState(initialSlidesPerPage);
+  const [isExpanded, setIsExpanded] = React.useState(false);
+  let isArrowDisabled = isExpanded;
 
   React.useEffect(() => {
     function handleResize() {
@@ -47,12 +49,19 @@ const TeamSliderContainer = (props) => {
     rows: 4,
     slidesToShow: slidesPerPage,
     slidesToScroll: slidesPerPage,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow isDisabled={isArrowDisabled} />,
+    nextArrow: <NextArrow isDisabled={isArrowDisabled} />,
   };
 
   return (
-    <TeamSlider settings={settings} data={props.data} count={props.count}/>
+    <TeamSlider
+      settings={settings}
+      data={props.data}
+      count={props.count}
+      onExpand={() => setIsExpanded(true)}
+      onCollapse={() => setIsExpanded(false)}
+      isExpanded={isExpanded}
+    />
   );
 };
 
@@ -63,7 +72,10 @@ export default (props) => (
     <StaticQuery
         query={graphql`
             query EmployeeListQuery {
-                allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "employee" }, position: { ne: null } } }) {
+                allMarkdownRemark(
+                    filter: { frontmatter: { templateKey: { eq: "employee" }, position: { ne: null } } }
+                    sort: { fields: [frontmatter___name], order: ASC }
+                ) {
                     edges {
                         node {
                             id

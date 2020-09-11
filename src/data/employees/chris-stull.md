@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: chris stull
+name: Chris Stull
 position: software engineer
 easterEgg: artist soul || coder role
 teamGridPhoto:

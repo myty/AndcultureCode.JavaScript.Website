@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: ralph mcintyre
+name: Ralph McIntyre
 position: software engineer
 easterEgg: hulkamaniac
 teamGridPhoto:

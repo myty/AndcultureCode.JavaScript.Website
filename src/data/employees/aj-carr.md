@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: a.j. carr
+name: A.J. Carr
 position: analyst lead
 easterEgg: dad, hockey guy, UI geek
 teamGridPhoto:

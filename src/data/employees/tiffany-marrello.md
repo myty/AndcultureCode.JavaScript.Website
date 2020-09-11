@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: tiffany marrello
+name: Tiffany Marrello
 position: designer
 easterEgg: pretzel & sweet tea devotee
 teamGridPhoto:

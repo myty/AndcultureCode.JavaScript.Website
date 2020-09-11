@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: alex getty
+name: Alex Getty
 position: catamaran
 easterEgg: paper, pixels, code, & caffeine
 teamGridPhoto:

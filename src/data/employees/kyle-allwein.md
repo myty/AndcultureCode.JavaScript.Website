@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: kyle allwein
+name: Kyle Allwein
 position: quality assurance analyst
 easterEgg: featherless biped
 teamGridPhoto:

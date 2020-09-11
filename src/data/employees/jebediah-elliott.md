@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: jebediah elliott
+name: Jebediah Elliott
 position: software engineer
 easterEgg: coffee is coming
 teamGridPhoto:

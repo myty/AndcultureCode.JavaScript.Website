@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: michael tyson
+name: Michael Tyson
 position: software engineer
 easterEgg: eat, drink & be melancholy
 teamGridPhoto:

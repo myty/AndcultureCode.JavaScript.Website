@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: maria clarke
+name: Maria Clarke
 position: associate client advisor
 easterEgg: rhinestones & rosé
 teamGridPhoto:

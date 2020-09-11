@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: lara colestock
+name: Lara Colestock
 position: head of experience
 easterEgg: balance, mom life, coffee wife
 teamGridPhoto:

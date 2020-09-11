@@ -1,0 +1,20 @@
+// Slider styles that are only relevant to the slider on the team page
+// but not the one on the contact page (which is currently the only other usage of slider on site)
+
+.o-slider {
+    .-disabled {
+        opacity: 0.2;
+        pointer-events: none;
+    }
+}
+
+.o-slider.-is-expanded {
+    .slick-dots li {
+    cursor: default;
+
+        button {
+            opacity: 0.2;
+            pointer-events: none;
+        }
+    }
+}

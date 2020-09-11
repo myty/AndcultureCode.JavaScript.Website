@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: josh peters
+name: Josh Peters
 position: software engineer
 easterEgg: little spoon
 teamGridPhoto:

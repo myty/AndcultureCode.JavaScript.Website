@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: chris walker
+name: Chris Walker
 position: business analyst
 easterEgg: travel | cooking | music | beansery
 teamGridPhoto:

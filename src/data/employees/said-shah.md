@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: said shah
+name: Said Shah
 position: software engineer
 easterEgg: love to learn & learn to love
 teamGridPhoto:

@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: drew harper
+name: Drew Harper
 position: software engineer
 easterEgg: lowkey being a wizard
 teamGridPhoto:

@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: nick snyder
+name: Nick Snyder
 position: software engineer
 easterEgg: woodworking, coding, dad
 teamGridPhoto:

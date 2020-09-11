@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: joshua benton
+name: Joshua Benton
 position: partner
 easterEgg: pragmagical
 teamGridPhoto:

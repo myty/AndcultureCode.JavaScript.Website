@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: von bock
+name: Von Bock
 position: software engineer
 easterEgg: and cat dad
 teamGridPhoto:

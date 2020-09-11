@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: zachary ball
+name: Zachary Ball
 position: software engineer
 easterEgg: grip it and rip it
 teamGridPhoto:

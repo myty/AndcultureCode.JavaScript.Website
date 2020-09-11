@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: bradley hawkins
+name: Bradley Hawkins
 position: sr. design lead, UI
 easterEgg: bearded cycling design nerd
 teamGridPhoto:

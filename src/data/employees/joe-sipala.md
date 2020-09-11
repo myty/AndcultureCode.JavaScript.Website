@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: joe sipala
+name: Joe Sipala
 position: quality assurance analyst
 easterEgg: woodworker & jerky enthusiast
 teamGridPhoto:

@@ -2,8 +2,8 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import PrevArrow from "components/atoms/PrevArrow";
-import NextArrow from "components/atoms/NextArrow";
+import PrevArrow from "components/molecules/PrevArrow";
+import NextArrow from "components/molecules/NextArrow";
 
 const settings = {
     dots:           true,

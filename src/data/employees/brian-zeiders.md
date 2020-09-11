@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: brian zeiders
+name: Brian Zeiders
 position: design lead
 easterEgg: does whatever a zeiders can
 teamGridPhoto:

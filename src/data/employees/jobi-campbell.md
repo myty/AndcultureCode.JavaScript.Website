@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: jobi campbell
+name: Jobi Campbell
 position: IT specialist
 easterEgg: beach lover
 teamGridPhoto:

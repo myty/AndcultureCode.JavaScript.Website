@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: sam epps
+name: Sam Epps
 position: project coordinator
 easterEgg: podcast fan, cat parent
 teamGridPhoto:

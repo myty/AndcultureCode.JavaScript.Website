@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: amanda mills
+name: Amanda Mills
 position: director of catamaran
 easterEgg: avocado-holic
 teamGridPhoto:

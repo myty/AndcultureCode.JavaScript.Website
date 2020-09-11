@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: cody spath
+name: Cody Spath
 position: software engineer
 easterEgg: music & gaming & the office
 teamGridPhoto:

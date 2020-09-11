@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: ángela capeles
+name: ángela Capeles
 position: senior strategist
 easterEgg: black belt in salsa dancing
 teamGridPhoto:

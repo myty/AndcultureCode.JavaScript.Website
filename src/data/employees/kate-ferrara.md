@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: kate ferrara
+name: Kate Ferrara
 position: catamaran
 easterEgg: touchtunes international icon
 teamGridPhoto:

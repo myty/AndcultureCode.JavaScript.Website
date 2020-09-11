@@ -1,7 +1,7 @@
 ---
 createPage: false
 templateKey: "employee"
-name: megan george
+name: Megan George
 position: scrum master
 easterEgg: swiss army knife
 teamGridPhoto:
