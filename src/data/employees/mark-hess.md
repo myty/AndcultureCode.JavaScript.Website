@@ -5,9 +5,9 @@ name: Mark Hess
 position: quality assurance lead
 easterEgg: sports enthusiast
 teamGridPhoto:
-  image: /img/team/grid-photos/placeholder.png
+  image: /img/team/placeholder6.jpg
   description: Mark Hess
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/placeholder-2XL.png
+  image: /img/team/placeholder6.jpg
   description: Mark Hess
 ---

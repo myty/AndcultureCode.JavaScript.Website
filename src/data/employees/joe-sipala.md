@@ -5,9 +5,9 @@ name: Joe Sipala
 position: quality assurance analyst
 easterEgg: woodworker & jerky enthusiast
 teamGridPhoto:
-  image: /img/team/grid-photos/placeholder.png
+  image: /img/team/placeholder3.jpg
   description: Joe Sipala
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/placeholder-2XL.png
+  image: /img/team/placeholder3.jpg
   description: Joe Sipala
 ---
