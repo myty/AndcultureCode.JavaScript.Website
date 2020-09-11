@@ -29,6 +29,14 @@
 
             img {
                 width: 10%;
+
+                @include breakpoints("tablet") {
+                    width: 7%;
+                }
+
+                @include breakpoints("lg-laptop") {
+                    width: 10%;
+                }
             }
 
             @include breakpoints("tablet") {
@@ -48,11 +56,19 @@
                 }
 
                 @include breakpoints("sm-tablet") {
-                    @include font-size("largish");
+                    @include font-size("medium-large");
                 }
 
                 @include breakpoints("tablet") {
                     margin-bottom: 0;
+                }
+
+                @include breakpoints("lg-laptop") {
+                    @include font-size("large");
+                }
+
+                @include breakpoints("sm-desktop") {
+                    @include font-size("largish");
                 }
             }
 
@@ -78,10 +94,14 @@
 
             @include breakpoints("tablet") {
                 display: block;
-                left: 51%;
+                left: 54%;
                 max-width: 691px;
                 position: absolute;
-                top: 16%;
+                top: 23%;
+            }
+
+            @include breakpoints("laptop") {
+                left: 51%;
             }
 
             @include breakpoints("lg-desktop") {
@@ -96,6 +116,10 @@
                 width: 80%;
 
                 @include breakpoints("tablet") {
+                    width: 46%;
+                }
+
+                @include breakpoints("laptop") {
                     width: 51%;
                 }
             }
