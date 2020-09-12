@@ -23,12 +23,6 @@ const TeamSliderContainer = (props) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
   let isArrowDisabled = isExpanded;
 
-  React.useLayoutEffect(() => {
-    if (isLargeViewport()) {
-        initialSlidesPerPage = 7;
-    }
-  });
-
   React.useEffect(() => {
     function handleResize() {
       if (isLargeViewport()) {
@@ -37,6 +31,8 @@ const TeamSliderContainer = (props) => {
       }
       setSlidesPerPage(3);
     }
+    
+    handleResize();
     if (typeof window !== `undefined`) {
       window.addEventListener("resize", handleResize);
       return () => {
