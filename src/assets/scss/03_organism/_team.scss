@@ -1,13 +1,13 @@
 .o-team {
-  display: flex;
-  position: relative;
+    display: flex;
+    position: relative;
 
     .expanded-team-member {
         align-items: center;
         background: rgba(get-color-primary("fresh"), 0.8);
         display: flex;
         flex-direction: column-reverse;
-        height: 100%;
+        height: 100.5%;
         justify-content: center;
         position: absolute;
         top: 0;
@@ -29,6 +29,14 @@
 
             img {
                 width: 10%;
+
+                @include breakpoints("tablet") {
+                    width: 7%;
+                }
+
+                @include breakpoints("lg-laptop") {
+                    width: 10%;
+                }
             }
 
             @include breakpoints("tablet") {
@@ -48,11 +56,19 @@
                 }
 
                 @include breakpoints("sm-tablet") {
-                    @include font-size("largish");
+                    @include font-size("medium-large");
                 }
 
                 @include breakpoints("tablet") {
                     margin-bottom: 0;
+                }
+
+                @include breakpoints("lg-laptop") {
+                    @include font-size("large");
+                }
+
+                @include breakpoints("sm-desktop") {
+                    @include font-size("largish");
                 }
             }
 
@@ -78,10 +94,14 @@
 
             @include breakpoints("tablet") {
                 display: block;
-                left: 51%;
+                left: 54%;
                 max-width: 691px;
                 position: absolute;
-                top: 16%;
+                top: 23%;
+            }
+
+            @include breakpoints("laptop") {
+                left: 51%;
             }
 
             @include breakpoints("lg-desktop") {
@@ -93,9 +113,21 @@
             }
 
             img {
-                width: 80%;
+                width: 39%;
+
+                @include breakpoints("phone") {
+                    width: 63%;
+                }
+
+                @include breakpoints("sm-tablet") {
+                    width: 75%;
+                }
 
                 @include breakpoints("tablet") {
+                    width: 46%;
+                }
+
+                @include breakpoints("laptop") {
                     width: 51%;
                 }
             }
