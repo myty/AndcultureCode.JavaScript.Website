@@ -4,7 +4,7 @@
 
     .expanded-team-member {
         align-items: center;
-        background: rgba(get-color-primary("fresh"), 0.8);
+        background: rgba(get-color-primary("fresh"), 0);
         display: flex;
         flex-direction: column-reverse;
         height: 100.5%;
@@ -14,16 +14,13 @@
         width: 100vw;
         z-index: 1;
 
-        div {
-            opacity: 1;
-        }
-
         p {
             text-transform: lowercase;
         }
 
         &-text {
             color: get-color-primary("white");
+            opacity: 0;
             position: initial;
             width: 80%;
 
@@ -90,6 +87,7 @@
         &-image {
             display: flex;
             justify-content: center;
+            opacity: 0;
             position: initial;
 
             @include breakpoints("tablet") {

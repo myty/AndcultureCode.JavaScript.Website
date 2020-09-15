@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import asteriskImg from "./../../../static/img/team/white-asterisk.png";
+import { gsap, Linear } from "gsap";
 
-// TODO : fade in green overlay, animate the person's image expanding out to the larger view
-//        for closing the expanded, maybe just fade out the overlay and images, maybe animate the expanded image going back to its smaller
-//        parent but that might be overdoing the animations
+
+// TODO : on expand have person's image grow to its full size
+//        for closing the expanded, just fade out the overlay and images, current thought is animating the expanded image going back to its smaller
+//        parent would be overdoing the animations
 
 const ExpandedTeamMember = (props) => {
+
+    useEffect(() => {
+        const parentDiv = document.querySelector(".expanded-team-member");
+        const textDiv = document.querySelector(".expanded-team-member-text");
+        const imageDiv = document.querySelector(".expanded-team-member-image");
+        gsap.to(parentDiv, {
+            background: 'rgba(25,168,124,0.8)',
+            duration: .5
+        });
+        gsap.to(textDiv, {
+            opacity: 1,
+            duration: 1.2
+        });
+        gsap.to(imageDiv, {
+            opacity: 1,
+            duration: 1.2,
+        });
+    })
+
     return (
         <div
             className="expanded-team-member"
