@@ -31,7 +31,7 @@ const TeamSliderContainer = (props) => {
       }
       setSlidesPerPage(3);
     }
-    
+
     handleResize();
     if (typeof window !== `undefined`) {
       window.addEventListener("resize", handleResize);
