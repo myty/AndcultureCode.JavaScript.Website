@@ -13,9 +13,9 @@ socialLinks:
   - platform: Dribbble
     url: https://dribbble.com/madpellman
 teamGridPhoto:
-  image: /img/team/grid-photos/Pellman_Madeline-2X.jpg
+  image: /img/team/grid-photos/Pellman_Madeline.jpg
   description: Madeline Pellman
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/Pellman_Madeline-2XL.jpg
+  image: /img/team/expanded-photos/Pellman_Madeline-2X.jpg
   description: Madeline Pellman
 ---

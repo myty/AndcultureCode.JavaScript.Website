@@ -5,9 +5,9 @@ name: Tiffany Marrello
 position: designer
 easterEgg: pretzel & sweet tea devotee
 teamGridPhoto:
-  image: /img/team/grid-photos/Marrello_Tiffany-2X.jpg
+  image: /img/team/grid-photos/Marrello_Tiffany.jpg
   description: Tiffany Marrello
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/Marrello_Tiffany-2XL.jpg
+  image: /img/team/expanded-photos/Marrello_Tiffany-2X.jpg
   description: Tiffany Marrello
 ---

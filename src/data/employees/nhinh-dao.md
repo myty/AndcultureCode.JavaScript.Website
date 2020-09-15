@@ -5,9 +5,9 @@ name: Nhinh Dao
 position: software engineer
 easterEgg: learning, traveling & playing
 teamGridPhoto:
-  image: /img/team/grid-photos/Dao_Nhinh-2X.jpg
+  image: /img/team/grid-photos/Dao_Nhinh.jpg
   description: Nhinh Dao
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/Dao_Nhinh-2XL.jpg
+  image: /img/team/expanded-photos/Dao_Nhinh-2X.jpg
   description: Nhinh Dao
 ---

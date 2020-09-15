@@ -5,9 +5,9 @@ name: Jim Stevenson
 position: sr. software engineer
 easterEgg: christ, family, board games
 teamGridPhoto:
-  image: /img/team/grid-photos/Stevenson_Jim-2X.jpg
+  image: /img/team/grid-photos/Stevenson_Jim.jpg
   description: Jim Stevenson
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/Stevenson_Jim-2XL.jpg
+  image: /img/team/expanded-photos/Stevenson_Jim-2X.jpg
   description: Jim Stevenson
 ---

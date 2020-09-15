@@ -13,9 +13,9 @@ socialLinks:
   - platform: Github
     url: https://github.com/wintondeshong
 teamGridPhoto:
-  image: /img/team/grid-photos/DeShong_Winton-2X.jpg
+  image: /img/team/grid-photos/DeShong_Winton.jpg
   description: Winton DeShong
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/DeShong_Winton-2XL.jpg
+  image: /img/team/expanded-photos/DeShong_Winton-2X.jpg
   description: Winton DeShong
 ---
