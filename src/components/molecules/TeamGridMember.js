@@ -16,7 +16,7 @@ const TeamGridMember = (props) => {
                 src={employee.teamGridPhoto.image.childImageSharp.fluid.src}
                 alt={employee.teamGridPhoto.description}
             />
-            <div class="gradient"></div>
+            <div className="gradient"></div>
         </div>
     );
 };
