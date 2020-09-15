@@ -5,9 +5,9 @@ name: Ryan Palmer
 position: associate designer
 easterEgg: does it have dark mode?
 teamGridPhoto:
-  image: /img/team/grid-photos/Palmer_Ryan-2X.jpg
+  image: /img/team/grid-photos/Palmer_Ryan.jpg
   description: Ryan Palmer
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/Palmer_Ryan-2XL.jpg
+  image: /img/team/expanded-photos/Palmer_Ryan-2X.jpg
   description: Ryan Palmer
 ---
