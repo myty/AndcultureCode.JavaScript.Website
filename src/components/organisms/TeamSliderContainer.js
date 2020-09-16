@@ -74,6 +74,7 @@ export default (props) => (
             query EmployeeListQuery {
                 allMarkdownRemark(
                     filter: { frontmatter: { templateKey: { eq: "employee" }, position: { ne: null } } }
+                    sort: { fields: [frontmatter___name], order: ASC }
                 ) {
                     edges {
                         node {
