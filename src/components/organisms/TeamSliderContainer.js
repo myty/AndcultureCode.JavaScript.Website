@@ -49,8 +49,8 @@ const TeamSliderContainer = (props) => {
     rows: 4,
     slidesToShow: slidesPerPage,
     slidesToScroll: slidesPerPage,
-    prevArrow: <PrevArrow isDisabled={isArrowDisabled} />,
-    nextArrow: <NextArrow isDisabled={isArrowDisabled} />,
+    prevArrow: <PrevArrow isDisabled={isArrowDisabled} title="Slide team grid left" />,
+    nextArrow: <NextArrow isDisabled={isArrowDisabled} title="Slide team grid right" />,
   };
 
   return (
@@ -74,7 +74,6 @@ export default (props) => (
             query EmployeeListQuery {
                 allMarkdownRemark(
                     filter: { frontmatter: { templateKey: { eq: "employee" }, position: { ne: null } } }
-                    sort: { fields: [frontmatter___name], order: ASC }
                 ) {
                     edges {
                         node {
