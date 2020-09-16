@@ -5,9 +5,9 @@ name: Jobi Campbell
 position: IT specialist
 easterEgg: beach lover
 teamGridPhoto:
-  image: /img/team/placeholder2.jpg
+  image: /img/team/grid-photos/placeholder2_sm.jpg
   description: Jobi Campbell
 teamExpandedPhoto:
-  image: /img/team/placeholder2.jpg
+  image: /img/team/expanded-photos/placeholder2_lg.jpg
   description: Jobi Campbell
 ---
