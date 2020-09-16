@@ -1,21 +1,18 @@
 import React, { useEffect } from "react";
 import asteriskImg from "./../../../static/img/team/white-asterisk.png";
 import { gsap } from "gsap";
+import closeButton from "./../../../static/img/close-button.png";
 
 // TODO : on expand have person's image grow to its full size
 
 const ExpandedTeamMember = (props) => {
     useEffect(() => {
         // fades in the expanded team member view
-        if (props.employee == null) {
-            return;
-        }
+        if (props.employee == null) { return; }
 
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
-        const imageDiv = document.querySelector(
-            ".expanded-team-member-image-div"
-        );
+        const imageDiv = document.querySelector(".expanded-team-member-image-div");
 
         gsap.to(parentDiv, {
             background: "rgba(25,168,124,0.8)",
@@ -35,15 +32,11 @@ const ExpandedTeamMember = (props) => {
 
     useEffect(() => {
         // fades out the expanded team member view
-        if (props.isExpanded == true) {
-            return;
-        }
+        if (props.isExpanded == true) { return; }
 
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
-        const imageDiv = document.querySelector(
-            ".expanded-team-member-image-div"
-        );
+        const imageDiv = document.querySelector(".expanded-team-member-image-div");
 
         if (parentDiv !== null) {
             gsap.to(parentDiv, {
@@ -94,13 +87,18 @@ const ExpandedTeamMember = (props) => {
             </div>
             <div className="expanded-team-member-image-div">
                 <img
+                    className="expanded-team-member-image"
                     src={
                         props.employee.teamExpandedPhoto.image.childImageSharp
                             .fluid.src
                     }
                     alt={props.employee.teamExpandedPhoto.description}
                 />
-                <span>x</span>
+                <img
+                    className="expanded-team-member-close-button"
+                    src={closeButton}
+                    alt="close button"
+                />
             </div>
         </div>
     );

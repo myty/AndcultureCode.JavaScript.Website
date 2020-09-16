@@ -125,7 +125,7 @@
                 left: 41%;
             }
 
-            img {
+            .expanded-team-member-image {
                 width: 39%;
 
                 @include breakpoints("phone") {
@@ -149,15 +149,11 @@
                 }
             }
 
-            span {
-                color: get-color("neutral", "light-gray");
+            .expanded-team-member-close-button {
                 cursor: pointer;
-                font-family: $font-primary;
-                font-weight: 300;
                 left: 65%;
                 position: absolute;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
+                width: .9rem;
 
                 @include breakpoints("phone") {
                     @include font-size("medium");
@@ -165,32 +161,24 @@
                 }
 
                 @include breakpoints("sm-tablet") {
-                    left: 84%;
+                    left: 73%;
+                    top: 16%;
                 }
 
                 @include breakpoints("tablet") {
                     @include font-size("smallest");
-                    left: 42%;
-                    top: 2%;
+                    left: 40%;
+                    top: 6%;
+                    width: .9rem;
                 }
 
                 @include breakpoints("laptop") {
-                    @include font-size("small");
-                    left: 48%;
-                    top: 0;
+                    left: 45%;
                 }
 
-                @include breakpoints("lg-laptop") {
-                    left: 47%;
-                }
-
-                @include breakpoints("sm-desktop") {
-                    top: 2%;
-                }
-
-                @include breakpoints("desktop") {
-                    left: 48%;
-                    top: 1%;
+                @include breakpoints("lg-desktop") {
+                    left: 54%;
+                    top: 6%;
                 }
             }
         }
