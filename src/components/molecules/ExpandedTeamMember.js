@@ -16,15 +16,15 @@ const ExpandedTeamMember = (props) => {
 
         gsap.to(parentDiv, {
             background: 'rgba(25,168,124,0.8)',
-            duration: .5
+            duration: .25
         });
         gsap.to(textDiv, {
             opacity: 1,
-            duration: 1.2
+            duration: .5
         });
         gsap.to(imageDiv, {
             opacity: 1,
-            duration: 1.4,
+            duration: .5,
         });
     }, [props.employee])
 
@@ -37,16 +37,16 @@ const ExpandedTeamMember = (props) => {
 
         gsap.to(parentDiv, {
             background: "rgba(25,168,124,0.0)",
-            duration: 1,
+            duration: .5,
             onComplete:() => props.onFadedOut()
         });
         gsap.to(textDiv, {
             opacity: 0,
-            duration: 0.5,
+            duration: 0.25,
         });
         gsap.to(imageDiv, {
             opacity: 0,
-            duration: 0.5,
+            duration: 0.25,
         });
     }, [props.isExpanded])
 
