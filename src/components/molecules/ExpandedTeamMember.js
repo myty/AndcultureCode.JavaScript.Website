@@ -1,18 +1,19 @@
 import React, { useEffect } from "react";
 import asteriskImg from "./../../../static/img/team/white-asterisk.png";
-import { gsap, Linear } from "gsap";
+import { gsap } from "gsap";
 
 
 // TODO : on expand have person's image grow to its full size
-//        for closing the expanded, just fade out the overlay and images, current thought is animating the expanded image going back to its smaller
-//        parent would be overdoing the animations
 
 const ExpandedTeamMember = (props) => {
 
-    useEffect(() => {
+    useEffect(() => { // fades in the expanded team member view
+        if (props.employee == null) { return; }
+
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
-        const imageDiv = document.querySelector(".expanded-team-member-image");
+        const imageDiv = document.querySelector(".expanded-team-member-image-div");
+
         gsap.to(parentDiv, {
             background: 'rgba(25,168,124,0.8)',
             duration: .5
@@ -23,9 +24,36 @@ const ExpandedTeamMember = (props) => {
         });
         gsap.to(imageDiv, {
             opacity: 1,
-            duration: 1.2,
+            duration: 1.4,
         });
-    })
+    }, [props.employee])
+
+    useEffect(() => { // fades out the expanded team member view
+        if (props.isExpanded == true) { return; }
+
+        const parentDiv = document.querySelector(".expanded-team-member");
+        const textDiv = document.querySelector(".expanded-team-member-text");
+        const imageDiv = document.querySelector(".expanded-team-member-image-div");
+
+        gsap.to(parentDiv, {
+            background: "rgba(25,168,124,0.0)",
+            duration: 1,
+            onComplete:() => props.onFadedOut()
+        });
+        gsap.to(textDiv, {
+            opacity: 0,
+            duration: 0.5,
+        });
+        gsap.to(imageDiv, {
+            opacity: 0,
+            duration: 0.5,
+        });
+    }, [props.isExpanded])
+
+    // If no employee is selected, don't render this component:
+    if (props.employee == null) {
+        return null;
+    }
 
     return (
         <div
@@ -46,7 +74,7 @@ const ExpandedTeamMember = (props) => {
                     {props.employee.easterEgg}
                 </p>
             </div>
-            <div className="expanded-team-member-image">
+            <div className="expanded-team-member-image-div">
                 <img
                     src={
                         props.employee.teamExpandedPhoto.image.childImageSharp
