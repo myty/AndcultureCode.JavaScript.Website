@@ -2,6 +2,17 @@
     display: flex;
     position: relative;
 
+    h2.people {
+        margin-bottom: 1rem;
+        @include breakpoints("tablet") {
+            margin-left: 80px;
+        }
+
+        @include breakpoints("lg-desktop") {
+            margin-left: 0;
+        }
+    }
+
     .expanded-team-member {
         align-items: center;
         background: rgba(get-color-primary("fresh"), 0);
