@@ -132,6 +132,10 @@
                 @include breakpoints("laptop") {
                     width: 51%;
                 }
+
+                @include breakpoints("lg-desktop") {
+                    width: 61%;
+                }
             }
 
             span {
