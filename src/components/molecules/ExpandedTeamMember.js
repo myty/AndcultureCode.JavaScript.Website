@@ -2,53 +2,71 @@ import React, { useEffect } from "react";
 import asteriskImg from "./../../../static/img/team/white-asterisk.png";
 import { gsap } from "gsap";
 
-
 // TODO : on expand have person's image grow to its full size
 
 const ExpandedTeamMember = (props) => {
-
-    useEffect(() => { // fades in the expanded team member view
-        if (props.employee == null) { return; }
-
-        const parentDiv = document.querySelector(".expanded-team-member");
-        const textDiv = document.querySelector(".expanded-team-member-text");
-        const imageDiv = document.querySelector(".expanded-team-member-image-div");
-
-        gsap.to(parentDiv, {
-            background: 'rgba(25,168,124,0.8)',
-            duration: .25
-        });
-        gsap.to(textDiv, {
-            opacity: 1,
-            duration: .5
-        });
-        gsap.to(imageDiv, {
-            opacity: 1,
-            duration: .5,
-        });
-    }, [props.employee])
-
-    useEffect(() => { // fades out the expanded team member view
-        if (props.isExpanded == true) { return; }
+    useEffect(() => {
+        // fades in the expanded team member view
+        if (props.employee == null) {
+            return;
+        }
 
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
-        const imageDiv = document.querySelector(".expanded-team-member-image-div");
+        const imageDiv = document.querySelector(
+            ".expanded-team-member-image-div"
+        );
 
         gsap.to(parentDiv, {
-            background: "rgba(25,168,124,0.0)",
-            duration: .5,
-            onComplete:() => props.onFadedOut()
+            background: "rgba(25,168,124,0.8)",
+            duration: 0.25,
         });
+
         gsap.to(textDiv, {
-            opacity: 0,
-            duration: 0.25,
+            opacity: 1,
+            duration: 0.5,
         });
+
         gsap.to(imageDiv, {
-            opacity: 0,
-            duration: 0.25,
+            opacity: 1,
+            duration: 0.5,
         });
-    }, [props.isExpanded])
+    }, [props.employee]);
+
+    useEffect(() => {
+        // fades out the expanded team member view
+        if (props.isExpanded == true) {
+            return;
+        }
+
+        const parentDiv = document.querySelector(".expanded-team-member");
+        const textDiv = document.querySelector(".expanded-team-member-text");
+        const imageDiv = document.querySelector(
+            ".expanded-team-member-image-div"
+        );
+
+        if (parentDiv !== null) {
+            gsap.to(parentDiv, {
+                background: "rgba(25,168,124,0.0)",
+                duration: 0.5,
+                onComplete: () => props.onFadedOut(),
+            });
+        }
+
+        if (textDiv !== null) {
+            gsap.to(textDiv, {
+                opacity: 0,
+                duration: 0.25,
+            });
+        }
+
+        if (imageDiv !== null) {
+            gsap.to(imageDiv, {
+                opacity: 0,
+                duration: 0.25,
+            });
+        }
+    }, [props.isExpanded]);
 
     // If no employee is selected, don't render this component:
     if (props.employee == null) {
