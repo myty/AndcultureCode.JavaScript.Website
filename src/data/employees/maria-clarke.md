@@ -5,9 +5,9 @@ name: Maria Clarke
 position: associate client advisor
 easterEgg: rhinestones & rosé
 teamGridPhoto:
-  image: /img/team/placeholder5.jpg
+  image: /img/team/grid-photos/placeholder5_sm.jpg
   description: placeholder
 teamExpandedPhoto:
-  image: /img/team/placeholder5.jpg
+  image: /img/team/expanded-photos/placeholder5_lg.jpg
   description: Maria Clarke
 ---

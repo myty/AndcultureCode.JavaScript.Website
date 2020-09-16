@@ -23,7 +23,7 @@ const Footer = class extends React.Component {
               <a
                 aria-label = "Go to home page"
                 href       = "/">
-                <img src = { logo } alt = "" />
+                <img src = { logo } alt = "Go to home page" />
               </a>
             </div>
             <div className = "m-footer__center">

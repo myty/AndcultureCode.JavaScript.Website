@@ -5,9 +5,9 @@ name: Frank Arendt
 position: director of production
 easterEgg: i'm only 75% kidding
 teamGridPhoto:
-  image: /img/team/placeholder6.jpg
+  image: /img/team/grid-photos/placeholder6_sm.jpg
   description: Frank Arendt
 teamExpandedPhoto:
-  image: /img/team/placeholder6.jpg
+  image: /img/team/expanded-photos/placeholder6_lg.jpg
   description: Frank Arendt
 ---
