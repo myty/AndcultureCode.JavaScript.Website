@@ -46,7 +46,7 @@
     "react-dom": "^16.8.4",
     "react-google-recaptcha": "^2.0.1",
     "react-helmet": "^5.2.0",
-    "react-slick": "^0.25.2",
+    "react-slick": "^0.27.10",
     "react-text-loop": "^2.3.0",
     "react-visibility-sensor": "^5.1.1",
     "resize-observer-polyfill": "^1.5.1",
