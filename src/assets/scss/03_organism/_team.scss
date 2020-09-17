@@ -99,7 +99,7 @@
             display: flex;
             justify-content: center;
             opacity: 0;
-            position: initial;
+            position: relative;
 
             @include breakpoints("tablet") {
                 display: block;
@@ -153,20 +153,21 @@
                 cursor: pointer;
                 left: 65%;
                 position: absolute;
-                width: .9rem;
+                top: 4%;
+                width: .6rem;
 
                 @include breakpoints("phone") {
-                    @include font-size("medium");
-                    left: 77%;
+                    left: 76%;
+                    top: 5%;
+                    width: .9rem;
                 }
 
                 @include breakpoints("sm-tablet") {
-                    left: 73%;
-                    top: 16%;
+                    left: 81%;
+                    top: 5%;
                 }
 
                 @include breakpoints("tablet") {
-                    @include font-size("smallest");
                     left: 40%;
                     top: 6%;
                     width: .9rem;
