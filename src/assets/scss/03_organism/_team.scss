@@ -126,59 +126,71 @@
             }
 
             .expanded-team-member-image {
-                width: 39%;
+                // starts here, animation takes it to 162px
+                // the other final px widths are noted on the following breakpts
+                width: 132px;
 
                 @include breakpoints("phone") {
-                    width: 63%;
+                    // 340px
+                    width: 310px;
                 }
 
                 @include breakpoints("sm-tablet") {
-                    width: 75%;
+                    // 429px
+                    width: 399px;
                 }
 
                 @include breakpoints("tablet") {
-                    width: 46%;
+                    // 172px
+                    width: 142px;
                 }
 
                 @include breakpoints("laptop") {
-                    width: 51%;
+                    // 239px
+                    width: 209px;
+                }
+
+                @include breakpoints("desktop") {
+                    // 303px
+                    width: 273px;
                 }
 
                 @include breakpoints("lg-desktop") {
-                    width: 61%;
+                    // 349px
+                    width: 319px; 
                 }
             }
 
             .expanded-team-member-close-button {
                 cursor: pointer;
-                left: 65%;
+                left: 89%;
                 position: absolute;
                 top: 4%;
                 width: .6rem;
 
                 @include breakpoints("phone") {
-                    left: 76%;
+                    left: 90%;
                     top: 5%;
                     width: .9rem;
                 }
 
                 @include breakpoints("sm-tablet") {
-                    left: 81%;
+                    left: 91%;
                     top: 5%;
                 }
 
                 @include breakpoints("tablet") {
-                    left: 40%;
+                    left: 85%;
                     top: 6%;
                     width: .9rem;
                 }
 
                 @include breakpoints("laptop") {
-                    left: 45%;
+                    left: 87%;
                 }
 
                 @include breakpoints("lg-desktop") {
-                    left: 54%;
+                    left: 89%;
                     top: 6%;
                 }
             }

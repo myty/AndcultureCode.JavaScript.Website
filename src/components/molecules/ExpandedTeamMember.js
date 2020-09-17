@@ -3,7 +3,28 @@ import asteriskImg from "./../../../static/img/team/white-asterisk.png";
 import { gsap } from "gsap";
 import closeButton from "./../../../static/img/close-button.png";
 
-// TODO : on expand have person's image grow to its full size
+// TODO : handle window resizing's interaction with the image width,
+// TODO   since it's now getting set by this animation, not css breakpoints
+
+const calculateTargetImageWidth = () => {
+    const windowWidth = window.innerWidth;
+    switch (true) {
+        case (windowWidth > 1451):
+            return 349;
+        case (windowWidth > 1181):
+            return 303;
+        case (windowWidth > 941):
+            return 239;
+        case (windowWidth > 769):
+            return 172;
+        case (windowWidth > 601):
+            return 429;
+        case (windowWidth > 481):
+            return 340;
+        default:
+            return 162;
+    }
+}
 
 const ExpandedTeamMember = (props) => {
     useEffect(() => {
@@ -13,6 +34,10 @@ const ExpandedTeamMember = (props) => {
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
         const imageDiv = document.querySelector(".expanded-team-member-image-div");
+        const image = document.querySelector(".expanded-team-member-image");
+
+        const finalImageWidth = calculateTargetImageWidth();
+
 
         gsap.to(parentDiv, {
             background: "rgba(25,168,124,0.8)",
@@ -28,6 +53,11 @@ const ExpandedTeamMember = (props) => {
             opacity: 1,
             duration: 0.5,
         });
+
+        gsap.to(image, {
+            width: finalImageWidth,
+            duration: 0.5,
+        })
     }, [props.employee]);
 
     useEffect(() => {
@@ -37,6 +67,8 @@ const ExpandedTeamMember = (props) => {
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
         const imageDiv = document.querySelector(".expanded-team-member-image-div");
+        const image = document.querySelector(".expanded-team-member-image");
+
 
         if (parentDiv !== null) {
             gsap.to(parentDiv, {
