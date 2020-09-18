@@ -5,9 +5,9 @@ name: Jebediah Elliott
 position: software engineer
 easterEgg: coffee is coming
 teamGridPhoto:
-  image: /img/team/grid-photos/Elliott_Jeb-2X.jpg
+  image: /img/team/grid-photos/Elliott_Jeb.jpg
   description: Jebediah Elliott
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/Elliott_Jeb-2XL.jpg
+  image: /img/team/expanded-photos/Elliott_Jeb-2X.jpg
   description: Jebediah Elliott
 ---

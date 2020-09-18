@@ -5,9 +5,9 @@ name: Michael Pepper
 position: quality assurance analyst
 easterEgg: aspiring M.D.
 teamGridPhoto:
-  image: /img/team/grid-photos/placeholder.png
+  image: /img/team/placeholder1.jpg
   description: Michael Pepper
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/placeholder-2XL.png
+  image: /img/team/placeholder1.jpg
   description: Michael Pepper
 ---

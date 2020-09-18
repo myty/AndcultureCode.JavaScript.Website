@@ -17,9 +17,9 @@ socialLinks:
   - platform: Instagram
     url: https://www.instagram.com/mikekoser/
 teamGridPhoto:
-  image: /img/team/grid-photos/Koser_Mike-2X.jpg
+  image: /img/team/grid-photos/Koser_Mike.jpg
   description: Mike Koser
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/Koser_Mike-2XL.jpg
+  image: /img/team/expanded-photos/Koser_Mike-2X.jpg
   description: Mike Koser
 ---

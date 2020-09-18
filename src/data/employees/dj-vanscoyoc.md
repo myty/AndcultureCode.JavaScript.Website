@@ -5,9 +5,9 @@ name: DJ Vanscoyoc
 position: facilities manager
 easterEgg: gone fishing
 teamGridPhoto:
-  image: /img/team/grid-photos/VanScoyoc_DJ-2X.jpg
+  image: /img/team/grid-photos/VanScoyoc_DJ.jpg
   description: Dj Vanscoyoc
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/VanScoyoc_DJ-2XL.jpg
+  image: /img/team/expanded-photos/VanScoyoc_DJ-2X.jpg
   description: Dj Vanscoyoc
 ---

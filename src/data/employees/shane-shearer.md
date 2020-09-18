@@ -15,9 +15,9 @@ socialLinks:
   - platform: Twitter
     url: https://twitter.com/shaneshearer
 teamGridPhoto:
-  image: /img/team/grid-photos/Shearer_Shane-2X.jpg
+  image: /img/team/grid-photos/Shearer_Shane.jpg
   description: Shane Shearer
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/Shearer_Shane-2XL.jpg
+  image: /img/team/expanded-photos/Shearer_Shane-2X.jpg
   description: Shane Shearer
 ---

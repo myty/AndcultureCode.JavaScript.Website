@@ -17,9 +17,7 @@ const TeamSliderContainer = (props) => {
     }
     return false;
   }
-  if (isLargeViewport()) {
-    initialSlidesPerPage = 7;
-  }
+
 
   const [slidesPerPage, setSlidesPerPage] = React.useState(initialSlidesPerPage);
   const [isExpanded, setIsExpanded] = React.useState(false);
@@ -33,6 +31,8 @@ const TeamSliderContainer = (props) => {
       }
       setSlidesPerPage(3);
     }
+    
+    handleResize();
     if (typeof window !== `undefined`) {
       window.addEventListener("resize", handleResize);
       return () => {

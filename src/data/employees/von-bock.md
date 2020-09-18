@@ -5,9 +5,9 @@ name: Von Bock
 position: software engineer
 easterEgg: and cat dad
 teamGridPhoto:
-  image: /img/team/grid-photos/Bock_Von-2X.jpg
+  image: /img/team/grid-photos/Bock_Von.jpg
   description: Von Bock
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/Bock_Von-2XL.jpg
+  image: /img/team/expanded-photos/Bock_Von-2X.jpg
   description: Von Bock
 ---

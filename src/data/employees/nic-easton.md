@@ -8,9 +8,9 @@ authorPhoto:
   image: /img/authors/author-scribble.png
   description: Nic Easton
 teamGridPhoto:
-  image: /img/team/grid-photos/placeholder.png
+  image: /img/team/placeholder2.jpg
   description: Nic Easton
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/placeholder-2XL.png
+  image: /img/team/placeholder2.jpg
   description: Nic Easton
 ---

@@ -33,6 +33,7 @@ const ExpandedTeamMember = (props) => {
                     }
                     alt={props.employee.teamExpandedPhoto.description}
                 />
+                <span>x</span>
             </div>
         </div>
     );
