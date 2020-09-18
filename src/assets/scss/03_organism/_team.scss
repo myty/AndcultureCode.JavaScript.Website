@@ -106,14 +106,14 @@
 
             @include breakpoints("tablet") {
                 display: block;
-                left: 54%;
+                left: 57%; //animates to 54%
                 max-width: 691px;
                 position: absolute;
                 top: 21%;
             }
 
             @include breakpoints("laptop") {
-                left: 51%;
+                left: 53%; //animates to 51%
             }
 
             @include breakpoints(1250px) {
@@ -121,46 +121,46 @@
             }
 
             @include breakpoints("lg-desktop") {
-                left: 46%;
+                left: 48%; //animates to 46%
             }
 
             @include breakpoints("xl-desktop") {
-                left: 41%;
+                left: 42.2%; //animates to 41%
             }
 
             .expanded-team-member-image {
                 // starts here, animation takes it to 162px
-                // the other final px widths are noted on the following breakpts
-                width: 132px;
+                // the other final px widths are noted on the following breakpts - they grow by 60px
+                width: 102px;
 
                 @include breakpoints("phone") {
                     // 340px
-                    width: 310px;
+                    width: 280px;
                 }
 
                 @include breakpoints("sm-tablet") {
                     // 429px
-                    width: 399px;
+                    width: 369px;
                 }
 
                 @include breakpoints("tablet") {
                     // 172px
-                    width: 142px;
+                    width: 112px;
                 }
 
                 @include breakpoints("laptop") {
                     // 239px
-                    width: 209px;
+                    width: 179px;
                 }
 
                 @include breakpoints("desktop") {
                     // 303px
-                    width: 273px;
+                    width: 243px;
                 }
 
                 @include breakpoints("lg-desktop") {
                     // 349px
-                    width: 319px; 
+                    width: 289px; 
                 }
             }
 

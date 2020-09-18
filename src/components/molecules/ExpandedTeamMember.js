@@ -23,6 +23,22 @@ const calculateFinalImageWidth = () => {
     }
 }
 
+const calculateFinalImageLeftValue = () => {
+    const windowWidth = window.innerWidth;
+    switch (true) {
+        case (windowWidth > 1801):
+            return "41%";
+        case (windowWidth > 1451):
+            return "46%";
+        case (windowWidth > 941):
+            return "51%";
+        case (windowWidth > 769):
+            return "54%";
+        default:
+            return "0%";
+    }
+}
+
 const ExpandedTeamMember = (props) => {
     useEffect(() => {
         // fades in the expanded team member view
@@ -34,6 +50,7 @@ const ExpandedTeamMember = (props) => {
         const image = document.querySelector(".expanded-team-member-image");
 
         const finalImageWidth = calculateFinalImageWidth();
+        const finalImageLeftValue = calculateFinalImageLeftValue();
 
 
         gsap.to(parentDiv, {
@@ -47,6 +64,7 @@ const ExpandedTeamMember = (props) => {
         });
 
         gsap.to(imageDiv, {
+            left: finalImageLeftValue,
             opacity: 1,
             duration: 0.5,
         });
