@@ -3,9 +3,6 @@ import asteriskImg from "./../../../static/img/team/white-asterisk.png";
 import { gsap } from "gsap";
 import closeButton from "./../../../static/img/close-button.png";
 
-// TODO : handle window resizing's interaction with the image width,
-// TODO   since it's now getting set by this animation, not css breakpoints
-
 const calculateFinalImageWidth = () => {
     const windowWidth = window.innerWidth;
     switch (true) {
