@@ -23,19 +23,28 @@ const calculateFinalImageWidth = () => {
     }
 }
 
-const calculateFinalImageLeftValue = () => {
+const calculateFinalImagePosValue = () => {
     const windowWidth = window.innerWidth;
+    let position = {
+        left: "41%",
+        top: "19%"
+    };
     switch (true) {
         case (windowWidth > 1801):
-            return "41%";
-        case (windowWidth > 1451):
-            return "46%";
+            return position;
+        case (windowWidth > 1251):
+            position.left = "46%";
+            return position;
         case (windowWidth > 941):
-            return "51%";
+            position.left = "51%";
+            position.top = "21%";
+            return position;
         case (windowWidth > 769):
-            return "54%";
+            position.left = "54%";
+            position.top = "21%";
+            return position;
         default:
-            return "0%";
+            return {left: 0, top: 0};
     }
 }
 
@@ -50,7 +59,7 @@ const ExpandedTeamMember = (props) => {
         const image = document.querySelector(".expanded-team-member-image");
 
         const finalImageWidth = calculateFinalImageWidth();
-        const finalImageLeftValue = calculateFinalImageLeftValue();
+        const finalImagePosValue = calculateFinalImagePosValue();
 
 
         gsap.to(parentDiv, {
@@ -64,7 +73,8 @@ const ExpandedTeamMember = (props) => {
         });
 
         gsap.to(imageDiv, {
-            left: finalImageLeftValue,
+            left: finalImagePosValue.left,
+            top: finalImagePosValue.top,
             opacity: 1,
             duration: 0.5,
         });

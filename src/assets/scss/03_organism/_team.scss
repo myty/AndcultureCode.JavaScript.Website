@@ -109,7 +109,7 @@
                 left: 57%; //animates to 54%
                 max-width: 691px;
                 position: absolute;
-                top: 21%;
+                top: 26%; //animates to 21%
             }
 
             @include breakpoints("laptop") {
@@ -117,7 +117,7 @@
             }
 
             @include breakpoints(1250px) {
-                top: 19%;
+                top: 24%; //animates to 19%
             }
 
             @include breakpoints("lg-desktop") {
