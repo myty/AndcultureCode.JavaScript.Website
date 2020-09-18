@@ -6,7 +6,7 @@ import closeButton from "./../../../static/img/close-button.png";
 // TODO : handle window resizing's interaction with the image width,
 // TODO   since it's now getting set by this animation, not css breakpoints
 
-const calculateTargetImageWidth = () => {
+const calculateFinalImageWidth = () => {
     const windowWidth = window.innerWidth;
     switch (true) {
         case (windowWidth > 1451):
@@ -36,7 +36,7 @@ const ExpandedTeamMember = (props) => {
         const imageDiv = document.querySelector(".expanded-team-member-image-div");
         const image = document.querySelector(".expanded-team-member-image");
 
-        const finalImageWidth = calculateTargetImageWidth();
+        const finalImageWidth = calculateFinalImageWidth();
 
 
         gsap.to(parentDiv, {
@@ -92,6 +92,16 @@ const ExpandedTeamMember = (props) => {
             });
         }
     }, [props.isExpanded]);
+
+    useEffect(() => {
+        // Handler to call on window resize
+        function handleResize() {
+            props.handleHideExpanded()
+        }
+        window.addEventListener("resize", handleResize);
+        handleResize();
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     // If no employee is selected, don't render this component:
     if (props.employee == null) {
