@@ -160,11 +160,11 @@ const ExpandedTeamMember = (props) => {
                 <Img
                     alt={props.employee.teamExpandedPhoto.description}
                     className="expanded-team-member-image"
-                    loading="eager" 
-                    src={
+                    fluid={
                         props.employee.teamExpandedPhoto.image.childImageSharp
-                            .fluid.src
+                            .fluid
                     }
+                    loading="eager"
                 />
                 <img
                     className="expanded-team-member-close-button"
