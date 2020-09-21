@@ -197,51 +197,6 @@
                     top: 6%;
                 }
             }
-
-            span {
-                color: get-color("neutral", "light-gray");
-                cursor: pointer;
-                font-family: $font-primary;
-                font-weight: 300;
-                left: 65%;
-                position: absolute;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-
-                @include breakpoints("phone") {
-                    @include font-size("medium");
-                    left: 77%;
-                }
-
-                @include breakpoints("sm-tablet") {
-                    left: 84%;
-                }
-
-                @include breakpoints("tablet") {
-                    @include font-size("smallest");
-                    left: 42%;
-                    top: 2%;
-                }
-
-                @include breakpoints("laptop") {
-                    @include font-size("small");
-                    left: 48%;
-                    top: 0;
-                }
-
-                @include breakpoints("lg-laptop") {
-                    left: 47%;
-                }
-
-                @include breakpoints("sm-desktop") {
-                    top: 2%;
-                }
-
-                @include breakpoints("desktop") {
-                    left: 48%;
-                    top: 1%;
-                }
-            }
         }
     }
 }
