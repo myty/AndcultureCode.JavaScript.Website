@@ -33,8 +33,11 @@ const calculateFinalImagePosValue = () => {
     switch (true) {
         case (windowWidth > 1801):
             return position;
-        case (windowWidth > 1251):
+        case (windowWidth > 1451):
             position.left = "46%";
+            return position;
+        case (windowWidth > 1251):
+            position.left = "51%";
             return position;
         case (windowWidth > 941):
             position.left = "51%";
