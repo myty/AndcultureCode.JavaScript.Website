@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import asteriskImg from "./../../../static/img/team/white-asterisk.png";
 import { gsap } from "gsap";
 import closeButton from "./../../../static/img/close-button.png";
+import Img from "gatsby-image";
 
 const calculateFinalImageWidth = () => {
     const windowWidth = window.innerWidth;
@@ -156,13 +157,14 @@ const ExpandedTeamMember = (props) => {
                 </p>
             </div>
             <div className="expanded-team-member-image-div">
-                <img
+                <Img
+                    alt={props.employee.teamExpandedPhoto.description}
                     className="expanded-team-member-image"
+                    loading="eager" 
                     src={
                         props.employee.teamExpandedPhoto.image.childImageSharp
                             .fluid.src
                     }
-                    alt={props.employee.teamExpandedPhoto.description}
                 />
                 <img
                     className="expanded-team-member-close-button"

@@ -88,7 +88,7 @@ export default (props) => (
                                 teamGridPhoto {
                                     image {
                                         childImageSharp {
-                                            fluid(maxWidth: 1920, quality: 100) {
+                                            fluid(maxWidth: 960, quality: 100) {
                                                 ...GatsbyImageSharpFluid
                                             }
                                         }
@@ -98,7 +98,7 @@ export default (props) => (
                                 teamExpandedPhoto {
                                     image {
                                         childImageSharp {
-                                            fluid(maxWidth: 1920, quality: 100) {
+                                            fluid(maxWidth: 960, quality: 75) {
                                                 ...GatsbyImageSharpFluid
                                             }
                                         }
