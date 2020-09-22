@@ -160,7 +160,7 @@ const ExpandedTeamMember = (props) => {
                 <Img
                     alt={props.employee.teamExpandedPhoto.description}
                     className="expanded-team-member-image"
-                    durationFadeIn={250}
+                    durationFadeIn={100}
                     fluid={
                         props.employee.teamExpandedPhoto.image.childImageSharp
                             .fluid
