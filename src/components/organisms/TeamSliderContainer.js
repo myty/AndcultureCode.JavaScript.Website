@@ -72,7 +72,12 @@ export default (props) => (
         query={graphql`
             query EmployeeListQuery {
                 allMarkdownRemark(
-                    filter: { frontmatter: { templateKey: { eq: "employee" }, position: { ne: null } } }
+                    filter: {
+                        frontmatter: {
+                            templateKey: { eq: "employee" }
+                            position: { ne: null }
+                        }
+                    }
                 ) {
                     edges {
                         node {
@@ -99,7 +104,7 @@ export default (props) => (
                                     image {
                                         childImageSharp {
                                             fluid(maxWidth: 960, quality: 75) {
-                                                ...GatsbyImageSharpFluid
+                                                ...GatsbyImageSharpFluid_noBase64
                                             }
                                         }
                                     }
@@ -111,6 +116,8 @@ export default (props) => (
                 }
             }
         `}
-        render={(data, count) => <TeamSliderContainer data={data} count={count} />}
+        render={(data, count) => (
+            <TeamSliderContainer data={data} count={count} />
+        )}
     />
 );
