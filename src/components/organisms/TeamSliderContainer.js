@@ -31,7 +31,6 @@ const TeamSliderContainer = (props) => {
       }
       setSlidesPerPage(3);
     }
-    
     handleResize();
     if (typeof window !== `undefined`) {
       window.addEventListener("resize", handleResize);
@@ -49,8 +48,8 @@ const TeamSliderContainer = (props) => {
     rows: 4,
     slidesToShow: slidesPerPage,
     slidesToScroll: slidesPerPage,
-    prevArrow: <PrevArrow isDisabled={isArrowDisabled} />,
-    nextArrow: <NextArrow isDisabled={isArrowDisabled} />,
+    prevArrow: <PrevArrow isDisabled={isArrowDisabled} title="Slide team grid left" />,
+    nextArrow: <NextArrow isDisabled={isArrowDisabled} title="Slide team grid right" />,
   };
 
   return (
@@ -73,8 +72,12 @@ export default (props) => (
         query={graphql`
             query EmployeeListQuery {
                 allMarkdownRemark(
-                    filter: { frontmatter: { templateKey: { eq: "employee" }, position: { ne: null } } }
-                    sort: { fields: [frontmatter___name], order: ASC }
+                    filter: {
+                        frontmatter: {
+                            templateKey: { eq: "employee" }
+                            position: { ne: null }
+                        }
+                    }
                 ) {
                     edges {
                         node {
@@ -90,7 +93,7 @@ export default (props) => (
                                 teamGridPhoto {
                                     image {
                                         childImageSharp {
-                                            fluid(maxWidth: 1920, quality: 100) {
+                                            fluid(maxWidth: 960, quality: 100) {
                                                 ...GatsbyImageSharpFluid
                                             }
                                         }
@@ -100,8 +103,8 @@ export default (props) => (
                                 teamExpandedPhoto {
                                     image {
                                         childImageSharp {
-                                            fluid(maxWidth: 1920, quality: 100) {
-                                                ...GatsbyImageSharpFluid
+                                            fluid(maxWidth: 960, quality: 75) {
+                                                ...GatsbyImageSharpFluid_noBase64
                                             }
                                         }
                                     }
@@ -113,6 +116,8 @@ export default (props) => (
                 }
             }
         `}
-        render={(data, count) => <TeamSliderContainer data={data} count={count} />}
+        render={(data, count) => (
+            <TeamSliderContainer data={data} count={count} />
+        )}
     />
 );

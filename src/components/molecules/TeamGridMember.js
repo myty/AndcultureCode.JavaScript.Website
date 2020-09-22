@@ -1,22 +1,39 @@
-import React, { Fragment } from "react";
+import React, { useState } from "react";
+import Img from "gatsby-image";
 
 // Primary Component
 // ------------------------------------
 
-// TODO: add gradient to gray to bottom of each image (present in the invision comp)
-
 const TeamGridMember = (props) => {
-
     const employee = props.employee;
-    const onClick = () => props.handleExpand(employee);
+    const [hasMouseMoved, setHasMouseMoved] = useState(false);
+
+    // These mouse events allow for dragging the whole slider without causing the handleExpand to fire.
+    // With these in place, handleExpand only fires if you click without dragging.
+    const onMouseDown = () => {
+        setHasMouseMoved(false);
+    };
+    const onMouseMove = () => {
+        setHasMouseMoved(true);
+    };
+    const onMouseUp = () => {
+        if (!hasMouseMoved) {
+            props.handleExpand(employee);
+        }
+        setHasMouseMoved(false);
+    };
 
     return (
-        <div onClick={onClick} className="team-grid-member">
-            <img
-                src={employee.teamGridPhoto.image.childImageSharp.fluid.src}
+        <div
+            onMouseDown={onMouseDown}
+            onMouseMove={onMouseMove}
+            onMouseUp={onMouseUp}
+            className="team-grid-member">
+            <Img
+                fluid={employee.teamGridPhoto.image.childImageSharp.fluid}
                 alt={employee.teamGridPhoto.description}
             />
-            <div class="gradient"></div>
+            <div className="gradient"></div>
         </div>
     );
 };

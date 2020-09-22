@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Arrow(props) {
-    let { className, style, onClick } = props;
+    let { className, style, onClick, title } = props;
 
     if (props.isDisabled) {
         className += " -disabled";
@@ -19,6 +19,7 @@ export default function Arrow(props) {
                 y="0px"
                 viewBox="0 0 34.51 27.08">
                 {props.children}
+                <title>{title}</title>
             </svg>
         </a>
     );

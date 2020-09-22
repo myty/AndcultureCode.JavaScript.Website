@@ -2,7 +2,7 @@
 createPage: false
 templateKey: "employee"
 name: Emmalynne Rosser
-position: associate strategist
+position: strategist
 easterEgg: personal growth enthusiast
 teamGridPhoto:
   image: /img/team/grid-photos/Rosser_Emmalynne.jpg

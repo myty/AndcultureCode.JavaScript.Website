@@ -365,7 +365,7 @@ collections:
       - {label: "Priority", name: "priority", widget: "number", valueType: "int"}
       - label: "Logo"
         name: "logo"
-        required: "true"
+        required: true
         widget: "object"
         fields:
          - {label: "Image", name: "image", widget: "image"}

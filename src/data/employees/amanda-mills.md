@@ -5,9 +5,9 @@ name: Amanda Mills
 position: director of catamaran
 easterEgg: avocado-holic
 teamGridPhoto:
-  image: /img/team/placeholder3.jpg
+  image: /img/team/grid-photos/placeholder3_sm.jpg
   description: Amanda Mills
 teamExpandedPhoto:
-  image: /img/team/placeholder3.jpg
+  image: /img/team/expanded-photos/placeholder3_lg.jpg
   description: Amanda Mills
 ---

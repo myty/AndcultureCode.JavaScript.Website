@@ -8,40 +8,67 @@ import ExpandedTeamMember from "components/molecules/ExpandedTeamMember";
 // Primary Component
 // ------------------------------------
 
-
 const TeamSlider = (props) => {
-
     const { data } = props;
     const settings = props.settings;
     const { edges: employees } = data.allMarkdownRemark;
+
     let className = "o-slider";
     if (props.isExpanded) {
         className += " -is-expanded";
     }
+
     const [employeeToShow, setEmployeeToShow] = useState(null);
+
     const handleExpand = (employeeToShow) => {
         setEmployeeToShow(employeeToShow);
         props.onExpand();
-    }
+    };
     const handleHideExpanded = () => {
         props.onCollapse();
-    }
-    const sliderItems = employees.map(({ node: teamMemberGridItem }, index) => {
+    };
+    const handleOnFadedOut = () => {
+        setEmployeeToShow(null);
+    };
+
+    let sliderItems = employees.map(({ node: teamMemberGridItem }, index) => {
         const employee = teamMemberGridItem.frontmatter;
 
-        return <TeamGridMember employee={employee} key={`team-grid-member-${index}`} handleExpand={handleExpand} />;
-    })
+        return (
+            <TeamGridMember
+                employee={employee}
+                key={`team-grid-member-${index}`}
+                handleExpand={handleExpand}
+            />
+        );
+    });
+
+    // Add in duplicate employees to end of list as necessary to fill in empty gaps.
+    const sliderItemsMiddleIndex = sliderItems.length / 2;
+    // TODO Verify whether this is causing a react "key" prop issue by duplicating the objects
+    if (sliderItems.length % 4 === 3) {
+        sliderItems.push(sliderItems[sliderItemsMiddleIndex]);
+        sliderItems.push(sliderItems[sliderItemsMiddleIndex + 1]);
+        sliderItems.push(sliderItems[sliderItemsMiddleIndex + 2]);
+    } else if (sliderItems.length % 4 === 2) {
+        sliderItems.push(sliderItems[sliderItemsMiddleIndex]);
+        sliderItems.push(sliderItems[sliderItemsMiddleIndex + 1]);
+    } else if (sliderItems.length % 4 === 1) {
+        sliderItems.push(sliderItems[sliderItemsMiddleIndex]);
+    }
+
     return (
         <div className="o-slider__container o-team" aria-hidden="true">
             <div className="o-rhythm__container -full-width__mobile">
+                <h2 className="people">people</h2>
                 <div className={className}>
                     <Slider {...settings}>{sliderItems}</Slider>
-                    {props.isExpanded && (
-                        <ExpandedTeamMember
-                            employee={employeeToShow}
-                            handleHideExpanded={handleHideExpanded}
-                        />
-                    )}
+                    <ExpandedTeamMember
+                        employee={employeeToShow}
+                        handleHideExpanded={handleHideExpanded}
+                        isExpanded={props.isExpanded}
+                        onFadedOut={handleOnFadedOut}
+                    />
                 </div>
             </div>
         </div>
