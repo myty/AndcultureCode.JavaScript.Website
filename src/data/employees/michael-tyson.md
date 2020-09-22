@@ -2,7 +2,7 @@
 createPage: false
 templateKey: "employee"
 name: Michael Tyson
-position: software engineer
+position: sr. software engineer
 easterEgg: eat, drink & be melancholy
 teamGridPhoto:
   image: /img/team/grid-photos/Tyson_Michael.jpg

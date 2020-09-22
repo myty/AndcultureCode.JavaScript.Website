@@ -2,7 +2,7 @@
 createPage: false
 templateKey: "employee"
 name: Lauren Berkoski
-position: client advisor
+position: client advisor lead
 easterEgg: sunsets & sushi
 teamGridPhoto:
   image: /img/team/grid-photos/placeholder4_sm.jpg

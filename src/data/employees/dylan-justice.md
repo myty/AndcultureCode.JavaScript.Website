@@ -2,7 +2,7 @@
 createPage: false
 templateKey: "employee"
 name: Dylan Justice
-position: technical lead
+position: sr. software engineer
 easterEgg: aquatic thrill seeker
 teamGridPhoto:
   image: /img/team/grid-photos/Justice_Dylan.jpg

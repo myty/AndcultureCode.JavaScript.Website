@@ -2,7 +2,7 @@
 createPage: false
 templateKey: "employee"
 name: Brandon Scott
-position: software engineer
+position: sr. software engineer
 easterEgg: big spoon
 teamGridPhoto:
   image: /img/team/grid-photos/Scott_Brandon.jpg

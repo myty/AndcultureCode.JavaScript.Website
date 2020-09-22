@@ -2,7 +2,7 @@
 createPage: false
 templateKey: "employee"
 name: Alicia Settle
-position: associate designer
+position: designer
 easterEgg: culturally curious calligrapher
 teamGridPhoto:
   image: /img/team/grid-photos/Settle_Alicia.jpg
