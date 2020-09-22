@@ -19,11 +19,11 @@ const TeamSliderContainer = (props) => {
   }
 
 
-  const [slidesPerPage, setSlidesPerPage] = React.useState(initialSlidesPerPage);
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [slidesPerPage, setSlidesPerPage] = useState(initialSlidesPerPage);
+  const [isExpanded, setIsExpanded] = useState(false);
   let isArrowDisabled = isExpanded;
 
-  React.useEffect(() => {
+  useEffect(() => {
     function handleResize() {
       if (isLargeViewport()) {
         setSlidesPerPage(7);
@@ -67,7 +67,7 @@ const TeamSliderContainer = (props) => {
 // Exports
 // ------------------------------------
 
-export default (props) => (
+export default () => (
     <StaticQuery
         query={graphql`
             query EmployeeListQuery {
