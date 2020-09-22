@@ -2,7 +2,7 @@
   "name": "andculture-2020",
   "description": "andculture website",
   "version": "1.0.0",
-  "author": "Zach McCleaf, Ralph McIntyre, Aaron Weinberger, Peter Stone",
+  "author": "andculture",
   "dependencies": {
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
