@@ -45,7 +45,7 @@ const TeamSlider = (props) => {
 
     // Add in duplicate employees to end of list as necessary to fill in empty gaps.
     const sliderItemsMiddleIndex = sliderItems.length / 2;
-    // TODO Verify whether this is causing a react "key" prop issue by duplicating the objects
+    // TODO Investigate further, this is duplicating react "key" props but it is not causing an error / issue
     if (sliderItems.length % 4 === 3) {
         sliderItems.push(sliderItems[sliderItemsMiddleIndex]);
         sliderItems.push(sliderItems[sliderItemsMiddleIndex + 1]);
