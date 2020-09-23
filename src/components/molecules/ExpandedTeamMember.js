@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import asteriskImg from "./../../../static/img/team/white-asterisk.png";
-import { gsap } from "gsap";
+import { gsap, Power4 } from "gsap";
 import closeButton from "./../../../static/img/close-button.png";
+import Img from "gatsby-image";
 
 const calculateFinalImageWidth = () => {
     const windowWidth = window.innerWidth;
@@ -71,21 +72,23 @@ const ExpandedTeamMember = (props) => {
         });
 
         gsap.to(textDiv, {
-            opacity: 1,
             duration: 0.5,
+            opacity: 1,
         });
 
         gsap.to(imageDiv, {
+            duration: 1,
+            ease: Power4.easeIn,
             left: finalImagePosValue.left,
-            top: finalImagePosValue.top,
             opacity: 1,
-            duration: 0.5,
+            top: finalImagePosValue.top,
         });
 
         gsap.to(image, {
+            duration: 1,
+            ease: Power4.easeIn,
             width: finalImageWidth,
-            duration: 0.5,
-        })
+        });
     }, [props.employee]);
 
     useEffect(() => {
@@ -95,8 +98,6 @@ const ExpandedTeamMember = (props) => {
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
         const imageDiv = document.querySelector(".expanded-team-member-image-div");
-        const image = document.querySelector(".expanded-team-member-image");
-
 
         if (parentDiv !== null) {
             gsap.to(parentDiv, {
@@ -156,13 +157,15 @@ const ExpandedTeamMember = (props) => {
                 </p>
             </div>
             <div className="expanded-team-member-image-div">
-                <img
+                <Img
                     alt={props.employee.teamExpandedPhoto.description}
                     className="expanded-team-member-image"
-                    src={
+                    durationFadeIn={50}
+                    fluid={
                         props.employee.teamExpandedPhoto.image.childImageSharp
-                            .fluid.src
-                    }
+                            .fluid
+                    } 
+                    loading="eager"
                 />
                 <img
                     className="expanded-team-member-close-button"
