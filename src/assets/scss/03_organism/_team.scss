@@ -50,6 +50,10 @@
                 }
             }
 
+            p {
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+
             @include breakpoints("tablet") {
                 left: 14%;
                 max-width: none;

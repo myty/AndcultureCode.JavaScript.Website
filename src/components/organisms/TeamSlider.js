@@ -47,7 +47,7 @@ const TeamSlider = (props) => {
     const sliderItemsMiddleIndex = Math.floor(sliderItems.length / 2);
     // TODO Investigate further, this is duplicating react "key" props but it is not causing an error / issue
     if (sliderItems.length % 4 == 3) {
-        sliderItems.push(sliderItems[sliderItemsMiddleIndex + 1]);
+        sliderItems.push(sliderItems[sliderItemsMiddleIndex]);
     } else if (sliderItems.length % 4 == 2) {
         sliderItems.push(sliderItems[sliderItemsMiddleIndex]);
         sliderItems.push(sliderItems[sliderItemsMiddleIndex + 1]);
