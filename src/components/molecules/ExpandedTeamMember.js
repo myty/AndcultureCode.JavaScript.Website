@@ -152,7 +152,9 @@ const ExpandedTeamMember = (props) => {
                     {props.employee.position}
                 </p>
                 <p className="expanded-team-member-text-egg">
-                    <img src={asteriskImg} alt="Asterisk" />{" "}
+                    <sup>
+                        <img src={asteriskImg} alt="Asterisk" />{" "}
+                    </sup>
                     {props.employee.easterEgg}
                 </p>
             </div>
@@ -164,7 +166,7 @@ const ExpandedTeamMember = (props) => {
                     fluid={
                         props.employee.teamExpandedPhoto.image.childImageSharp
                             .fluid
-                    } 
+                    }
                     loading="eager"
                 />
                 <img

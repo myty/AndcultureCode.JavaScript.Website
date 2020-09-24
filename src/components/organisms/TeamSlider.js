@@ -44,23 +44,23 @@ const TeamSlider = (props) => {
     });
 
     // Add in duplicate employees to end of list as necessary to fill in empty gaps.
-    const sliderItemsMiddleIndex = sliderItems.length / 2;
+    const sliderItemsMiddleIndex = Math.floor(sliderItems.length / 2);
     // TODO Investigate further, this is duplicating react "key" props but it is not causing an error / issue
     if (sliderItems.length % 4 === 3) {
         sliderItems.push(sliderItems[sliderItemsMiddleIndex]);
-        sliderItems.push(sliderItems[sliderItemsMiddleIndex + 1]);
-        sliderItems.push(sliderItems[sliderItemsMiddleIndex + 2]);
     } else if (sliderItems.length % 4 === 2) {
         sliderItems.push(sliderItems[sliderItemsMiddleIndex]);
         sliderItems.push(sliderItems[sliderItemsMiddleIndex + 1]);
     } else if (sliderItems.length % 4 === 1) {
         sliderItems.push(sliderItems[sliderItemsMiddleIndex]);
+        sliderItems.push(sliderItems[sliderItemsMiddleIndex + 1]);
+        sliderItems.push(sliderItems[sliderItemsMiddleIndex + 2]);
     }
 
     return (
         <div className="o-slider__container o-team" aria-hidden="true">
             <div className="o-rhythm__container -full-width__mobile">
-                <h2 className="people">people</h2>
+                <h2 className="people">meet the team</h2>
                 <div className={className}>
                     <Slider {...settings}>{sliderItems}</Slider>
                     <ExpandedTeamMember

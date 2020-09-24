@@ -28,10 +28,6 @@
         width: 100vw;
         z-index: 1;
 
-        p {
-            text-transform: lowercase;
-        }
-
         &-text {
             color: get-color-primary("white");
             opacity: 0;
@@ -48,6 +44,11 @@
                 @include breakpoints("lg-laptop") {
                     width: 10%;
                 }
+            }
+
+            p {
+                text-transform: lowercase;
+                -webkit-font-smoothing: subpixel-antialiased;
             }
 
             @include breakpoints("tablet") {
@@ -81,6 +82,10 @@
                 @include breakpoints("sm-desktop") {
                     @include font-size("largish");
                 }
+
+                img {
+                    vertical-align: baseline;
+                }
             }
 
             &-position {
@@ -92,7 +97,7 @@
                 @include font-size("smallest");
 
                 img {
-                    vertical-align: super;
+                    vertical-align: baseline;
                     width: 6%;
                 }
             }
