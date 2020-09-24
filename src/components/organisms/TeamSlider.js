@@ -60,7 +60,7 @@ const TeamSlider = (props) => {
     return (
         <div className="o-slider__container o-team" aria-hidden="true">
             <div className="o-rhythm__container -full-width__mobile">
-                <h2 className="people">people</h2>
+                <h2 className="people">meet the team</h2>
                 <div className={className}>
                     <Slider {...settings}>{sliderItems}</Slider>
                     <ExpandedTeamMember
