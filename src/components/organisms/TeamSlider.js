@@ -3,7 +3,7 @@ import TeamGridMember from "components/molecules/TeamGridMember";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ExpandedTeamMember from "components/molecules/ExpandedTeamMember";
+import ExpandedTeamMemberContainer from "components/molecules/ExpandedTeamMemberContainer";
 
 // Primary Component
 // ------------------------------------
@@ -18,17 +18,17 @@ const TeamSlider = (props) => {
         className += " -is-expanded";
     }
 
-    const [employeeToShow, setEmployeeToShow] = useState(null);
+    const [selectedEmployee, setSelectedEmployee] = useState(null);
 
-    const handleExpand = (employeeToShow) => {
-        setEmployeeToShow(employeeToShow);
+    const handleExpand = (selectedEmployee) => {
+        setSelectedEmployee(selectedEmployee);
         props.onExpand();
     };
     const handleHideExpanded = () => {
         props.onCollapse();
     };
     const handleOnFadedOut = () => {
-        setEmployeeToShow(null);
+        setSelectedEmployee(null);
     };
 
     let sliderItems = employees.map(({ node: teamMemberGridItem }, index) => {
@@ -63,8 +63,9 @@ const TeamSlider = (props) => {
                 <h2 className="people">meet the team</h2>
                 <div className={className}>
                     <Slider {...settings}>{sliderItems}</Slider>
-                    <ExpandedTeamMember
-                        employee={employeeToShow}
+                    <ExpandedTeamMemberContainer
+                        selectedEmployee={selectedEmployee}
+                        employees={employees}
                         handleHideExpanded={handleHideExpanded}
                         isExpanded={props.isExpanded}
                         onFadedOut={handleOnFadedOut}
