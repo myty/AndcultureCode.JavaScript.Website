@@ -33,6 +33,7 @@ const TeamSlider = (props) => {
 
     let sliderItems = employees.map(({ node: teamMemberGridItem }, index) => {
         const employee = teamMemberGridItem.frontmatter;
+        employee.index = index;
 
         return (
             <TeamGridMember
