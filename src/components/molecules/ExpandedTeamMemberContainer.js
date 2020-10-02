@@ -13,7 +13,7 @@ const ExpandedTeamMemberContainer = (props) => {
 
     useEffect(() => {
         if (selectedEmployee != null && props.selectedEmployee != null) {
-            setAnimationType("expanded-arrow");
+            setAnimationType("expanded-arrow"); //not sure I need this setAnimatinoType AND the other one below
         }
         setSelectedEmployee(props.selectedEmployee)
         if (props.selectedEmployee != null) {
