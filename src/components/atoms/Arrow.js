@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Arrow(props) {
     let { className, style, onClick, title } = props;
-
+    
     if (props.isDisabled) {
         className += " -disabled";
     }
@@ -10,7 +10,7 @@ export default function Arrow(props) {
         <a
             href="#"
             className={className}
-            style={{ ...style, display: "block" }}
+            style={{ ...style }}
             onClick={onClick}>
             <svg
                 version="1.1"

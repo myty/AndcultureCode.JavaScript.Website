@@ -55,12 +55,13 @@ const calculateFinalImagePosValue = () => {
 const ExpandedTeamMember = (props) => {
     useEffect(() => {
         // fades in the expanded team member view
-        if (props.employee == null) { return; }
+        if (props.employee == null || props.animationType == "expanded-arrow") { return; }
 
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
         const imageDiv = document.querySelector(".expanded-team-member-image-div");
         const image = document.querySelector(".expanded-team-member-image");
+        const arrows = document.querySelectorAll(".expanded-arrow");
 
         const finalImageWidth = calculateFinalImageWidth();
         const finalImagePosValue = calculateFinalImagePosValue();
@@ -89,6 +90,14 @@ const ExpandedTeamMember = (props) => {
             ease: Power4.easeIn,
             width: finalImageWidth,
         });
+        gsap.to(arrows[0], {
+            opacity: 0.9,
+            duration: 0.35,
+        });
+        gsap.to(arrows[1], {
+            opacity: 0.9,
+            duration: 0.35,
+        });
     }, [props.employee]);
 
     useEffect(() => {
@@ -98,6 +107,18 @@ const ExpandedTeamMember = (props) => {
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
         const imageDiv = document.querySelector(".expanded-team-member-image-div");
+        const arrows = document.querySelectorAll(".expanded-arrow");
+
+        if (arrows !== null) {
+            gsap.to(arrows[0], {
+                opacity: 0,
+                duration: .01
+            });
+            gsap.to(arrows[1], {
+                opacity: 0,
+                duration: .01
+            });
+        }
 
         if (parentDiv !== null) {
             gsap.to(parentDiv, {
@@ -120,6 +141,7 @@ const ExpandedTeamMember = (props) => {
                 duration: 0.25,
             });
         }
+
     }, [props.isExpanded]);
 
     useEffect(() => {

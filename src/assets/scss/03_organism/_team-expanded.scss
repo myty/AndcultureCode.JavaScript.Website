@@ -159,12 +159,12 @@
                 left: 89%;
                 position: absolute;
                 top: 4%;
-                width: .6rem;
+                width: 0.6rem;
 
                 @include breakpoints("phone") {
                     left: 90%;
                     top: 5%;
-                    width: .9rem;
+                    width: 0.9rem;
                 }
 
                 @include breakpoints("sm-tablet") {
@@ -175,7 +175,7 @@
                 @include breakpoints("tablet") {
                     left: 85%;
                     top: 6%;
-                    width: .9rem;
+                    width: 0.9rem;
                 }
 
                 @include breakpoints("laptop") {
@@ -190,18 +190,55 @@
         }
     }
     .expanded-arrow {
+        display: none;
         position: absolute;
-        fill: white;
-        width: 30px;
-        top: 0;
+        fill: get-color-primary("white");
+        opacity: 0;
+        top: 27%;
+        width: 39px;
         z-index: 2;
 
-        &-prev{
-            left: 2px;
+        @include breakpoints("phone") {
+            top: 45.5%;
+            width: 66px;
         }
 
-        &-next{
-            right: 2px;
+        @include breakpoints("tablet") {
+            top: 44.5%;
+            width: 35px;
+        }
+
+        @include breakpoints("lg-laptop") {
+            top: 45.5%;
+            width: 66px;
+        }
+
+        &-prev {
+            left: 5%;
+
+            @include breakpoints("lg-desktop") {
+                left: 66px;
+            }
+        }
+
+        &-next {
+            right: 5%;
+
+            @include breakpoints("tablet") {
+                right: 11%;
+            }
+            @include breakpoints("laptop") {
+                right: 7%;
+            }
+            @include breakpoints("desktop") {
+                right: 2%;
+            }
+            @include breakpoints(1375px) {
+                right: -4%;
+            }
+            @include breakpoints("lg-desktop") {
+                right: 0px;
+            }
         }
     }
 }
