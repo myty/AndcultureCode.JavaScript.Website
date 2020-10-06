@@ -7,7 +7,7 @@ export default function Arrow(props) {
         className += " -disabled";
     }
     return (
-        <a
+        <button
             href="#"
             className={className}
             style={{ ...style }}
@@ -21,6 +21,6 @@ export default function Arrow(props) {
                 {props.children}
                 <title>{title}</title>
             </svg>
-        </a>
+        </button>
     );
 }

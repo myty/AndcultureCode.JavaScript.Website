@@ -190,6 +190,8 @@
         }
     }
     .expanded-arrow {
+        background-color: transparent;
+        border: none;
         display: none;
         position: absolute;
         fill: get-color-primary("white");
