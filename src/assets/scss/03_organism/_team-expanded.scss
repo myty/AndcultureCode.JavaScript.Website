@@ -239,7 +239,13 @@
                 right: -4%;
             }
             @include breakpoints("lg-desktop") {
-                right: 0px;
+                right: -6px;
+            }
+            @include breakpoints(1700px) {
+                right: -8%;
+            }
+            @include breakpoints("xl-desktop") {
+                right: -14%;
             }
         }
     }
