@@ -4,7 +4,7 @@
         background: rgba(get-color-primary("fresh"), 0);
         display: flex;
         flex-direction: column-reverse;
-        height: 100.5%;
+        height: 100%;   // TODO Verify with Peter why this was 100.5 instead of 100%.
         justify-content: center;
         position: absolute;
         top: 0;
@@ -119,6 +119,11 @@
             }
 
             .expanded-team-member-image {
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -o-transition: opacity 3s ease-in-out;
+  transition: opacity 3s ease-in-out;
+
                 // starts here, animation takes it to 162px
                 // the other final px widths are noted on the following breakpts - they grow by 60px
                 width: 102px;
@@ -246,6 +251,9 @@
             }
             @include breakpoints("xl-desktop") {
                 right: -14%;
+            }
+            @include breakpoints(2000px) {
+                right: -25%;
             }
         }
     }
