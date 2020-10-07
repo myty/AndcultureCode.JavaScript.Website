@@ -5,9 +5,9 @@ name: Chris Edwards
 position: Executive Director, Engagement
 easterEgg:
 teamGridPhoto:
-  image: /img/team/grid-photos/placeholder1_sm.jpg
+  image: /img/team/grid-photos/placeholder3_sm.jpg
   description: Chris Edwards
 teamExpandedPhoto:
-  image: /img/team/expanded-photos/placeholder1_lg.jpg
+  image: /img/team/expanded-photos/placeholder3_lg.jpg
   description: Chris Edwards
 ---
