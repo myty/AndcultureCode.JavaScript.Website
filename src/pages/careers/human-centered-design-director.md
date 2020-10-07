@@ -1,15 +1,19 @@
 ---
-createPage: true
 templateKey: careers-detail-page
+createPage: true
 title: Human Centered Design Director
-description: "You’ll be joining us as the director of our Human Centered Design team, where we believe that magic only happens when we push to make a difference through empathetic thinking, and to ultimately create great experiences for people."
 function: HCD
-active: true
-applicationUrl: "https://recruiting.paylocity.com/recruiting/jobs/Apply/292304/andculture-Inc/Human-Centered-Design-Director"
+description: >-
+  You’ll be joining us as the director of our Human Centered Design team, where
+  we believe that magic only happens when we push to make a difference through
+  empathetic thinking, and to ultimately create great experiences for people.
+applicationUrl: >-
+  https://recruiting.paylocity.com/recruiting/jobs/Apply/292304/andculture-Inc/Human-Centered-Design-Director
+active: false
 seo:
+  metaDescription: 'Work at andculture, a design company based in Harrisburg, PA'
   metaTitle: careers | andculture
-  metaDescription: "Work at andculture, a design company based in Harrisburg, PA"
-  socialShareCopy: "Work at andculture, a design company based in Harrisburg, PA"
+  socialShareCopy: 'Work at andculture, a design company based in Harrisburg, PA'
 ---
 In your role as **Human Centered Design Director**, you will play a critical role in systematically building a team of empathetic researchers, lead the innovative ways in which they tackle finding out more about humans, contribute insights and research outcomes that translate directly into user, business and product impact, and inspire clients and internal teams alike with your passion for human centered thinking. You will drive the execution of research in HCD strategy. You will report to the Head of Experience, and lean into mentoring your team, finding ways to make our work bigger, better, broader in a team environment that collaborates and clashes to do the very best work. We do, and always will, set our bar super high. We  aim to design experiences that over deliver for our client partners, and most importantly, for their users. We don’t put our name on anything that is not *amazing*.
 
