@@ -31,6 +31,10 @@
                 position: relative;
                 margin: 0 !important;
 
+                &:hover {
+                    filter: grayscale(100%);
+                }
+
                 img {
                     display: block;
                     width: 100%;
