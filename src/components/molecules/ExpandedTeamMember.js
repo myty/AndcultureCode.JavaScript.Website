@@ -55,7 +55,9 @@ const calculateFinalImagePosValue = () => {
 const ExpandedTeamMember = (props) => {
     useEffect(() => {
         // fades in the expanded team member view
-        if (props.employee == null || props.animationType == "expanded-arrow") { return; }
+        if (props.employee == null) {
+            return;
+        }
 
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
@@ -66,9 +68,34 @@ const ExpandedTeamMember = (props) => {
         const finalImageWidth = calculateFinalImageWidth();
         const finalImagePosValue = calculateFinalImagePosValue();
 
+        if (props.animationType == "expanded-arrow") {
+            // Handle "next, prev" navigation
+            gsap.fromTo(
+                textDiv,
+                {
+                    opacity: 0,
+                },
+                { opacity: 1, duration: 1.5 }
+            );
+
+            // TODO temp fix to make consistent width
+            gsap.to(image, {
+                duration: 0,
+                width: finalImageWidth,
+            });
+            gsap.fromTo(
+                image,
+                {
+                    opacity: 0,
+                },
+                { duration: 3, opacity: 1 }
+            );
+
+            return;
+        }
 
         gsap.to(parentDiv, {
-            background: "rgba(25,168,124,0.8)",
+            background: "rgba(0, 119, 93, 0.9)",
             duration: 0.25,
         });
 
@@ -122,7 +149,7 @@ const ExpandedTeamMember = (props) => {
 
         if (parentDiv !== null) {
             gsap.to(parentDiv, {
-                background: "rgba(25,168,124,0.0)",
+                background: "rgba(0, 119, 93, 0.0)",
                 duration: 0.5,
                 onComplete: () => props.onFadedOut(),
             });
