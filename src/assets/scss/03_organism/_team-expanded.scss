@@ -202,22 +202,19 @@
         fill: get-color-primary("white");
         opacity: 0;
         top: 27%;
-        width: 39px;
+        width: 45px;
         z-index: 2;
 
         @include breakpoints("phone") {
             top: 45.5%;
-            width: 66px;
         }
 
         @include breakpoints("tablet") {
             top: 44.5%;
-            width: 35px;
         }
 
         @include breakpoints("lg-laptop") {
             top: 45.5%;
-            width: 66px;
         }
 
         &-prev {
