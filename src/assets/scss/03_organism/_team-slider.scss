@@ -31,10 +31,6 @@
                 position: relative;
                 margin: 0 !important;
 
-                &:hover {
-                    filter: grayscale(100%);
-                }
-
                 img {
                     display: block;
                     width: 100%;
@@ -49,6 +45,11 @@
                     left: 0;
                     background: linear-gradient(180deg, rgba(0,0,0,0) 75%, rgba(0,0,0,0.1) 100%);
                     margin: 0 !important;
+
+                    &:hover {
+                        background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), to(rgba(25,164,124,.35)));
+                        mix-blend-mode: darken;
+                    }
                 }
             }
         }
