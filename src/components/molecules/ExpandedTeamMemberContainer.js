@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ExpandedTeamMember from "./ExpandedTeamMember";
-import PrevArrow from "components/molecules/PrevArrow";
+import { gsap } from "gsap";
 import NextArrow from "components/molecules/NextArrow";
+import PrevArrow from "components/molecules/PrevArrow";
 
 
 const ExpandedTeamMemberContainer = (props) => {
@@ -28,12 +29,65 @@ const ExpandedTeamMemberContainer = (props) => {
         setAnimationType("expanded-arrow");
         const increment = direction == "previous" ? -1 : 1;
         let newIndex = selectedEmployee.index + increment;
-        if (newIndex >= employees.length) { newIndex = 0; }
-        else if (newIndex <= 0) { newIndex = (employees.length - 1); }
+        if (newIndex >= employees.length) {
+            newIndex = 0;
+        } else if (newIndex <= 0) {
+            newIndex = employees.length - 1;
+        }
         let newEmployee = employees[newIndex].node.frontmatter;
         newEmployee.index = newIndex;
-        setSelectedEmployee(newEmployee);
-    }
+
+        const imageDiv = document.querySelector(
+            ".expanded-team-member-image-div"
+        );
+        const textDiv = document.querySelector(
+            ".expanded-team-member-text"
+        );
+
+        if (direction === "previous") {
+            gsap.to(textDiv, {
+                duration: 2,
+                x: -1500,
+            });
+            gsap.to(imageDiv, {
+                duration: 2,
+                x: -1500,
+            });
+
+            setSelectedEmployee(newEmployee);
+
+            gsap.to(".expanded-team-member-text", {
+                duration: 2,
+                x: 0,
+            });
+            gsap.to(".expanded-team-member-image-div", {
+                duration: 2,
+                x: 0,
+            });
+        } else if (direction === "next") {
+            gsap.to(textDiv, {
+                duration: 2,
+                x: 1500,
+            });
+            gsap.to(imageDiv, {
+                duration: 2,
+                x: 1500,
+            });
+
+            setSelectedEmployee(newEmployee);
+
+            gsap.to(".expanded-team-member-text", {
+                duration: 2,
+                x: 0,
+            });
+            gsap.to(".expanded-team-member-image-div", {
+                duration: 2,
+                x: 0,
+            });
+        }
+
+
+    };
 
     return (
         <>
