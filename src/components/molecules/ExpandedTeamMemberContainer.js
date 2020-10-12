@@ -4,24 +4,24 @@ import { gsap } from "gsap";
 import NextArrow from "components/molecules/NextArrow";
 import PrevArrow from "components/molecules/PrevArrow";
 
-
 const ExpandedTeamMemberContainer = (props) => {
-
     const employees = props.employees;
-    const [selectedEmployee, setSelectedEmployee] = useState(props.selectedEmployee);
-    const [arrowDisplay, setArrowDisplay] = useState({display: "none"});
+    const [selectedEmployee, setSelectedEmployee] = useState(
+        props.selectedEmployee
+    );
+    const [arrowDisplay, setArrowDisplay] = useState({ display: "none" });
     const [animationType, setAnimationType] = useState("initial");
 
     useEffect(() => {
         if (selectedEmployee != null && props.selectedEmployee != null) {
             setAnimationType("expanded-arrow"); //not sure I need this setAnimatinoType AND the other one below
         }
-        setSelectedEmployee(props.selectedEmployee)
+        setSelectedEmployee(props.selectedEmployee);
         if (props.selectedEmployee != null) {
-            setArrowDisplay({display: "block"});
+            setArrowDisplay({ display: "block" });
             return;
         }
-        setArrowDisplay({display: "none"});
+        setArrowDisplay({ display: "none" });
         setAnimationType("initial");
     }, [props.selectedEmployee]);
 
@@ -40,53 +40,57 @@ const ExpandedTeamMemberContainer = (props) => {
         const imageDiv = document.querySelector(
             ".expanded-team-member-image-div"
         );
-        const textDiv = document.querySelector(
-            ".expanded-team-member-text"
-        );
+        const textDiv = document.querySelector(".expanded-team-member-text");
 
-        if (direction === "previous") {
-            gsap.to(textDiv, {
-                duration: 2,
-                x: -1500,
-            });
-            gsap.to(imageDiv, {
-                duration: 2,
-                x: -1500,
-            });
+        if (direction === "next") {
+            let tl = gsap.timeline();
+            tl.fromTo(
+                [textDiv, imageDiv],
+                { opacity: 1, x: 0 },
+                {
+                    duration: 0.5,
+                    opacity: 0,
+                    x: -1500,
+                }
+            );
+            setTimeout(() => setSelectedEmployee(newEmployee), 450);
 
-            setSelectedEmployee(newEmployee);
+            tl.fromTo(
+                [textDiv, imageDiv],
+                { x: 2000, opacity: 0 },
+                {
+                    duration: 0.5,
+                    opacity: 1,
+                    x: 0,
+                }
+            );
+        } else if (direction === "previous") {
+            let tl = gsap.timeline();
+            tl.fromTo(
+                [textDiv, imageDiv],
 
-            gsap.to(".expanded-team-member-text", {
-                duration: 2,
-                x: 0,
-            });
-            gsap.to(".expanded-team-member-image-div", {
-                duration: 2,
-                x: 0,
-            });
-        } else if (direction === "next") {
-            gsap.to(textDiv, {
-                duration: 2,
-                x: 1500,
-            });
-            gsap.to(imageDiv, {
-                duration: 2,
-                x: 1500,
-            });
+                { opacity: 1, x: 0 },
 
-            setSelectedEmployee(newEmployee);
+                {
+                    duration: 0.5,
+                    opacity: 0,
+                    x: 1500,
+                }
+            );
 
-            gsap.to(".expanded-team-member-text", {
-                duration: 2,
-                x: 0,
-            });
-            gsap.to(".expanded-team-member-image-div", {
-                duration: 2,
-                x: 0,
-            });
+            // Wait to change employee until invisible to user
+            setTimeout(() => setSelectedEmployee(newEmployee), 450);
+
+            tl.fromTo(
+                [textDiv, imageDiv],
+                { x: -1500, opacity: 0 },
+                {
+                    duration: 0.5,
+                    opacity: 1,
+                    x: 0,
+                }
+            );
         }
-
-
     };
 
     return (

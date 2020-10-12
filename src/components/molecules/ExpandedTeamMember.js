@@ -75,7 +75,7 @@ const ExpandedTeamMember = (props) => {
                 {
                     opacity: 0,
                 },
-                { opacity: 1, duration: 1.5 }
+                { duration: 2, opacity: 1 }
             );
 
             // TODO temp fix to make consistent width
@@ -88,7 +88,7 @@ const ExpandedTeamMember = (props) => {
                 {
                     opacity: 0,
                 },
-                { duration: 3, opacity: 1 }
+                { duration: 2, opacity: 1 }
             );
 
             return;

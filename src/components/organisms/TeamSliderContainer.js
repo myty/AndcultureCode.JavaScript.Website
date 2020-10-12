@@ -130,7 +130,7 @@ export default () => (
                                 teamExpandedPhoto {
                                     image {
                                         childImageSharp {
-                                            fluid(maxWidth: 960, quality: 75) {
+                                            fluid(maxWidth: 960, quality: 100) {
                                                 ...GatsbyImageSharpFluid
                                             }
                                         }
