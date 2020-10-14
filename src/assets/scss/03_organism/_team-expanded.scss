@@ -47,7 +47,7 @@
                 margin-bottom: 0.6em;
 
                 @media (min-width: 360px) {
-                    @include font-size(35px);
+                    @include font-size(34px);
                 }
 
                 @include breakpoints("sm-tablet") {
@@ -91,6 +91,8 @@
             justify-content: center;
             opacity: 0;
             position: relative;
+            clip-path: inset(0px 0px);
+            -webkit-clip-path: inset(0px 0px);
 
             @include breakpoints("tablet") {
                 display: block;
