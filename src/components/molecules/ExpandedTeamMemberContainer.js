@@ -48,12 +48,12 @@ const ExpandedTeamMemberContainer = (props) => {
                 [textDiv, imageDiv],
                 { opacity: 1, x: 0 },
                 {
-                    duration: 0.5,
+                    duration: 0.25,
                     opacity: 0,
-                    x: -1500,
+                    x: -1000,
                 }
             );
-            setTimeout(() => setSelectedEmployee(newEmployee), 450);
+            setTimeout(() => setSelectedEmployee(newEmployee), 225);
 
             tl.fromTo(
                 [textDiv, imageDiv],
@@ -68,9 +68,7 @@ const ExpandedTeamMemberContainer = (props) => {
             let tl = gsap.timeline();
             tl.fromTo(
                 [textDiv, imageDiv],
-
                 { opacity: 1, x: 0 },
-
                 {
                     duration: 0.5,
                     opacity: 0,
