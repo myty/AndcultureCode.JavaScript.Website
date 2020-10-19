@@ -220,9 +220,15 @@ const ExpandedTeamMember = (props) => {
                     loading="eager"
                 />
                 <img
-                    className="expanded-team-member-close-button"
-                    src={closeButton}
                     alt="close button"
+                    className="expanded-team-member-close-button"
+                    onKeyDown={(event) => {
+                        if (event.keyCode === 13) {
+                            props.handleHideExpanded();
+                        }
+                    }}
+                    src={closeButton}
+                    tabIndex="0"
                 />
             </div>
         </div>
