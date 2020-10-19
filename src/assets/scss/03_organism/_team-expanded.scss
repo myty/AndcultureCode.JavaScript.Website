@@ -4,7 +4,7 @@
         background: rgba(get-color-primary("fresh"), 0);
         display: flex;
         flex-direction: column-reverse;
-        height: 100%;   // TODO Verify with Peter after PTO why this was 100.5 instead of 100%. Caused green overlay to extend past grid.
+        height: 100%;
         justify-content: center;
         position: absolute;
         top: 0;

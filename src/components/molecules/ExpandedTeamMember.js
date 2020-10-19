@@ -78,7 +78,8 @@ const ExpandedTeamMember = (props) => {
                 { duration: 2, opacity: 1 }
             );
 
-            // TODO temp fix to make consistent width
+            // this animation with duration 0 is to ensure the images are at full size when using slider
+            // (when not using slider, the image grows when initially expanded)
             gsap.to(image, {
                 duration: 0,
                 width: finalImageWidth,
