@@ -224,28 +224,40 @@
             right: 5%;
 
             @include breakpoints("tablet") {
-                right: 11%;
+                right: 8%;
+            }
+            @include breakpoints(850px) {
+                right: 9%;
             }
             @include breakpoints("laptop") {
-                right: 7%;
+                right: 10%;
             }
             @include breakpoints("desktop") {
-                right: 2%;
+                right: 8%;
+            }
+            @include breakpoints(1280px) {
+                right: 1%;
             }
             @include breakpoints(1375px) {
-                right: -4%;
+                right: -3%;
             }
             @include breakpoints("lg-desktop") {
-                right: -6px;
+                right: 1%;
+            }
+            @include breakpoints(1550px) {
+                right: -6%;
             }
             @include breakpoints(1700px) {
-                right: -8%;
+                right: -10%;
             }
             @include breakpoints("xl-desktop") {
                 right: -14%;
             }
             @include breakpoints(2000px) {
                 right: -25%;
+            }
+            @include breakpoints(2500px) {
+                right: -50%;
             }
         }
     }
