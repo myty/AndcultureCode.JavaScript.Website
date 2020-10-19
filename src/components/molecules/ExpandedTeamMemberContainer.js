@@ -43,22 +43,25 @@ const ExpandedTeamMemberContainer = (props) => {
         const textDiv = document.querySelector(".expanded-team-member-text");
 
         if (direction === "next") {
-            let tl = gsap.timeline();
-            tl.fromTo(
+            gsap.fromTo(
                 [textDiv, imageDiv],
-                { opacity: 1, x: 0 },
+                { opacity: 1 },
                 {
-                    duration: 0.25,
+                    duration: 0.15,
                     opacity: 0,
-                    x: -1000,
                 }
             );
-            setTimeout(() => setSelectedEmployee(newEmployee), 225);
-
-            tl.fromTo(
+            gsap.fromTo(
+                [textDiv, imageDiv],
+                { x: 0 },
+                { duration: 0.25, x: -1000 }
+            );
+            setTimeout(() => setSelectedEmployee(newEmployee), 200);
+            gsap.fromTo(
                 [textDiv, imageDiv],
                 { x: 2000, opacity: 0 },
                 {
+                    delay: 0.22,
                     duration: 0.5,
                     opacity: 1,
                     x: 0,
