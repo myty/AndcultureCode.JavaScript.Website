@@ -32,6 +32,7 @@ const TeamGridMember = (props) => {
             <Img
                 fluid={employee.teamGridPhoto.image.childImageSharp.fluid}
                 alt={employee.teamGridPhoto.description}
+                loading="eager"
             />
             <div className="gradient"></div>
         </div>
