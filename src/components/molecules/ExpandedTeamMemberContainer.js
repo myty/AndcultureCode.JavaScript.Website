@@ -13,9 +13,6 @@ const ExpandedTeamMemberContainer = (props) => {
     const [animationType, setAnimationType] = useState("initial");
 
     useEffect(() => {
-        if (selectedEmployee != null && props.selectedEmployee != null) {
-            setAnimationType("expanded-arrow"); //not sure I need this setAnimatinoType AND the other one below
-        }
         setSelectedEmployee(props.selectedEmployee);
         if (props.selectedEmployee != null) {
             setArrowDisplay({ display: "block" });
@@ -31,7 +28,7 @@ const ExpandedTeamMemberContainer = (props) => {
         let newIndex = selectedEmployee.index + increment;
         if (newIndex >= employees.length) {
             newIndex = 0;
-        } else if (newIndex <= 0) {
+        } else if (newIndex < 0) {
             newIndex = employees.length - 1;
         }
         let newEmployee = employees[newIndex].node.frontmatter;
