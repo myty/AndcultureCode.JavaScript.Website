@@ -24,13 +24,7 @@ const ExpandedTeamMemberContainer = (props) => {
 
     const onClick = (direction) => {
         setAnimationType("expanded-arrow");
-        const increment = direction == "previous" ? -1 : 1;
-        let newIndex = selectedEmployee.index + increment;
-        if (newIndex >= employees.length) {
-            newIndex = 0;
-        } else if (newIndex < 0) {
-            newIndex = employees.length - 1;
-        }
+        const newIndex = getNewIndex(direction);
         let newEmployee = employees[newIndex].node.frontmatter;
         newEmployee.index = newIndex;
 
@@ -90,6 +84,17 @@ const ExpandedTeamMemberContainer = (props) => {
             );
         }
     };
+
+    const getNewIndex = (direction) => {
+        const increment = direction == "previous" ? -1 : 1;
+        let newIndex = selectedEmployee.index + increment;
+        if (newIndex >= employees.length) {
+            newIndex = 0;
+        } else if (newIndex < 0) {
+            newIndex = employees.length - 1;
+        }
+        return newIndex;
+    }
 
     return (
         <>
