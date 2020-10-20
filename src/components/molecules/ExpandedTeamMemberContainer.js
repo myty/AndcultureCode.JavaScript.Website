@@ -86,7 +86,7 @@ const ExpandedTeamMemberContainer = (props) => {
     };
 
     const getNewIndex = (direction) => {
-        const increment = direction == "previous" ? -1 : 1;
+        const increment = direction === "previous" ? -1 : 1;
         let newIndex = selectedEmployee.index + increment;
         if (newIndex >= employees.length) {
             newIndex = 0;
