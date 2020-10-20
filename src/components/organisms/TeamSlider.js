@@ -71,6 +71,17 @@ const TeamSlider = (props) => {
                         isExpanded={props.isExpanded}
                         onFadedOut={handleOnFadedOut}
                     />
+                    <button
+                        className="btn-expand-team"
+                        onClick={() => handleExpand(employees[0].node.frontmatter)}
+                        onKeyDown={(e) => {
+                            if (e.keyCode === 13) {
+                                handleExpand(employees[0].node.frontmatter);
+                            }
+                        }}
+                    >
+                        <span>Open Employee Details</span>
+                    </button>
                 </div>
             </div>
         </div>
