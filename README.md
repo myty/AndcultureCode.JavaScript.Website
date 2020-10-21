@@ -1,11 +1,11 @@
-# andculture Website 2020
+# AndcultureCode.JavaScript.Website
 Website built using GatsbyJS and NetlifyCMS.
 
 ## Getting started
 
 ```shell
 # git ssh clone
-git clone git@github.com:AndcultureCode/andculture-2020.git
+git clone git@github.com:AndcultureCode/AndcultureCode.JavaScript.Website.git
 
 # (optional) checkout development branch to see latest changes
 git checkout development
