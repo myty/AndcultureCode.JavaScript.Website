@@ -11,7 +11,7 @@
 
     .o-slider.-is-expanded {
         .slick-dots li {
-        cursor: default;
+            cursor: default;
 
             button {
                 opacity: 0.2;
@@ -37,18 +37,43 @@
                 }
 
                 .gradient {
-                    position: absolute;
-                    z-index: 1;
-                    top: 0;
-                    right: 0;
+                    background: linear-gradient(
+                        180deg,
+                        rgba(0, 0, 0, 0) 75%,
+                        rgba(0, 0, 0, 0.1) 100%
+                    );
                     bottom: 0;
                     left: 0;
-                    background: linear-gradient(180deg, rgba(0,0,0,0) 75%, rgba(0,0,0,0.1) 100%);
                     margin: 0 !important;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 1;
+                }
+
+                .green-gradient {
+                    // CSS doesn't allow transitions of background gradients, instead we have two
+                    // gradients and use opacity and z-index to transition between them.
+                    background: -webkit-gradient(
+                        linear,
+                        left top,
+                        left bottom,
+                        color-stop(50%, transparent),
+                        to(rgba(25, 164, 124, 0.35))
+                    );
+                    bottom: 0;
+                    left: 0;
+                    mix-blend-mode: normal;
+                    opacity: 0;
+                    position: absolute;
+                    transition: opacity 1s;
+                    top: 0;
+                    right: 0;
+                    z-index: 5;
 
                     &:hover {
-                        background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), to(rgba(25,164,124,.35)));
-                        mix-blend-mode: darken;
+                        opacity: .6;
+                        z-index: 5;
                     }
                 }
             }

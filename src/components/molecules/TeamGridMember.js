@@ -35,6 +35,7 @@ const TeamGridMember = (props) => {
                 loading="eager"
             />
             <div className="gradient"></div>
+            <div className="green-gradient"></div>
         </div>
     );
 };
