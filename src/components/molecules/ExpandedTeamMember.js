@@ -61,14 +61,16 @@ const ExpandedTeamMember = (props) => {
 
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
-        const imageDiv = document.querySelector(".expanded-team-member-image-div");
+        const imageDiv = document.querySelector(
+            ".expanded-team-member-image-div"
+        );
         const image = document.querySelector(".expanded-team-member-image");
         const arrows = document.querySelectorAll(".expanded-arrow");
 
         const finalImageWidth = calculateFinalImageWidth();
         const finalImagePosValue = calculateFinalImagePosValue();
 
-        if (props.animationType == "expanded-arrow") {
+        if (props.animationType === "expanded-arrow") {
             // Handle "next, prev" navigation
             gsap.fromTo(
                 textDiv,
@@ -94,6 +96,10 @@ const ExpandedTeamMember = (props) => {
 
             return;
         }
+
+        //if (props.animationType === "initial-keyboard") {
+        arrows[1].focus(); // TODO only set focus for keyboard users
+        //}
 
         gsap.to(parentDiv, {
             background: "rgba(0, 119, 93, 0.9)",
