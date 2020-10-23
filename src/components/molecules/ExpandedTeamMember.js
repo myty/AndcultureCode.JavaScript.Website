@@ -97,9 +97,9 @@ const ExpandedTeamMember = (props) => {
             return;
         }
 
-        //if (props.animationType === "initial-keyboard") {
-        arrows[1].focus(); // TODO only set focus for keyboard users
-        //}
+        if (props.wasOpenedByKeyboard) {
+            arrows[1].focus();
+        }
 
         gsap.to(parentDiv, {
             background: "rgba(0, 119, 93, 0.9)",

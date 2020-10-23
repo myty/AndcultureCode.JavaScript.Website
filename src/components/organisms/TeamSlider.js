@@ -19,6 +19,7 @@ const TeamSlider = (props) => {
     }
 
     const [selectedEmployee, setSelectedEmployee] = useState(null);
+    const [wasOpenedByKeyboard, setWasOpenedByKeyboard] = useState(false);
 
     const handleExpand = (selectedEmployee) => {
         setSelectedEmployee(selectedEmployee);
@@ -26,6 +27,7 @@ const TeamSlider = (props) => {
     };
     const handleHideExpanded = () => {
         props.onCollapse();
+        setWasOpenedByKeyboard(false);
     };
     const handleOnFadedOut = () => {
         setSelectedEmployee(null);
@@ -70,16 +72,20 @@ const TeamSlider = (props) => {
                         handleHideExpanded={handleHideExpanded}
                         isExpanded={props.isExpanded}
                         onFadedOut={handleOnFadedOut}
+                        wasOpenedByKeyboard={wasOpenedByKeyboard}
                     />
                     <button
-                        className="btn-expand-team"
-                        onClick={() => handleExpand(employees[0].node.frontmatter)}
+                        className={`btn-expand-team ${props.isExpanded ? "-hidden" : ""}`}
+                        onClick={() =>
+                            handleExpand(employees[0].node.frontmatter)
+                        }
                         onKeyDown={(e) => {
                             if (e.keyCode === 13) {
+                                setWasOpenedByKeyboard(true);
                                 handleExpand(employees[0].node.frontmatter);
+                                e.preventDefault();
                             }
-                        }}
-                    >
+                        }}>
                         <span>Open Employee Details</span>
                     </button>
                 </div>

@@ -109,6 +109,7 @@ const ExpandedTeamMemberContainer = (props) => {
                 handleHideExpanded={props.handleHideExpanded}
                 isExpanded={props.isExpanded}
                 onFadedOut={props.onFadedOut}
+                wasOpenedByKeyboard={props.wasOpenedByKeyboard}
             />
             <NextArrow
                 onClick={() => onClick("next")}

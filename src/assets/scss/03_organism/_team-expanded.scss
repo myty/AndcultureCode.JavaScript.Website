@@ -283,10 +283,6 @@
             opacity: 1;
         }
 
-        // span {
-        //     display: none;
-        // }
-
         @include breakpoints("sm-tablet") {
             left: calc(50% - 115px);
 
