@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ExpandedTeamMemberContainer from "components/molecules/ExpandedTeamMemberContainer";
+import ExpandTeamButton from "../atoms/ExpandTeamButton";
 
 // Primary Component
 // ------------------------------------
@@ -13,21 +14,27 @@ const TeamSlider = (props) => {
     const settings = props.settings;
     const { edges: employees } = data.allMarkdownRemark;
 
+    const [btnExpandTeamClassName, setBtnExpandTeamClassName] = useState("");
+    const [selectedEmployee, setSelectedEmployee] = useState(null);
+    const [wasOpenedByKeyboard, setWasOpenedByKeyboard] = useState(false);
+
     let className = "o-slider";
     if (props.isExpanded) {
         className += " -is-expanded";
     }
 
-    const [selectedEmployee, setSelectedEmployee] = useState(null);
-    const [wasOpenedByKeyboard, setWasOpenedByKeyboard] = useState(false);
 
     const handleExpand = (selectedEmployee) => {
         setSelectedEmployee(selectedEmployee);
+        setBtnExpandTeamClassName("-hidden");
         props.onExpand();
     };
+    const handleExpandFromButton = () => {
+        handleExpand(employees[0].node.frontmatter);
+    }
     const handleHideExpanded = () => {
+        setBtnExpandTeamClassName("");
         props.onCollapse();
-        setWasOpenedByKeyboard(false);
     };
     const handleOnFadedOut = () => {
         setSelectedEmployee(null);
@@ -74,20 +81,11 @@ const TeamSlider = (props) => {
                         onFadedOut={handleOnFadedOut}
                         wasOpenedByKeyboard={wasOpenedByKeyboard}
                     />
-                    <button
-                        className={`btn-expand-team ${props.isExpanded ? "-hidden" : ""}`}
-                        onClick={() =>
-                            handleExpand(employees[0].node.frontmatter)
-                        }
-                        onKeyDown={(e) => {
-                            if (e.keyCode === 13) {
-                                setWasOpenedByKeyboard(true);
-                                handleExpand(employees[0].node.frontmatter);
-                                e.preventDefault();
-                            }
-                        }}>
-                        <span>Open Employee Details</span>
-                    </button>
+                    <ExpandTeamButton
+                        handleExpand={handleExpandFromButton}
+                        className={btnExpandTeamClassName}
+                        setWasOpenedByKeyboard={setWasOpenedByKeyboard}
+                    />
                 </div>
             </div>
         </div>
