@@ -154,7 +154,7 @@ module.exports = {
       options: {
         trackingCode: "7690200",
         respectDNT: true,
-        productionOnly: false,
+        productionOnly: true,
       },
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
