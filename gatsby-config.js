@@ -149,6 +149,14 @@ module.exports = {
         path: `${__dirname}/src/pages/careers`
       }
     },
+    {
+      resolve: "gatsby-plugin-hubspot",
+      options: {
+        trackingCode: "7690200",
+        respectDNT: true,
+        productionOnly: false,
+      },
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
