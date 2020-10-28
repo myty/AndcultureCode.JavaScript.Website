@@ -181,7 +181,7 @@ const ExpandedTeamMember = (props) => {
     useEffect(() => {
         // Handler to call on window resize
         function handleResize() {
-            props.handleHideExpanded()
+            props.handleCollapse()
         }
         window.addEventListener("resize", handleResize);
         handleResize();
@@ -196,7 +196,7 @@ const ExpandedTeamMember = (props) => {
     return (
         <div
             className="expanded-team-member"
-            onClick={props.handleHideExpanded}>
+            onClick={props.handleCollapse}>
             <div className="expanded-team-member-text">
                 <p className="expanded-team-member-text-name">
                     {props.employee.name}{" "}
@@ -229,8 +229,9 @@ const ExpandedTeamMember = (props) => {
                     alt="close button"
                     className="expanded-team-member-close-button"
                     onKeyDown={(event) => {
-                        if (event.keyCode === 13) {
-                            props.handleHideExpanded();
+                        if (event.key === "Enter") {
+                            props.handleCollapse();
+                            event.preventDefault();
                         }
                     }}
                     src={closeButton}

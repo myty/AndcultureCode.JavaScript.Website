@@ -2,10 +2,11 @@ import React from "react";
 
 export default function Arrow(props) {
     let { className, style, onClick, title } = props;
-    
+
     if (props.isDisabled) {
         className += " -disabled";
     }
+
     return (
         <button
             href="#"

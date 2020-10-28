@@ -19,7 +19,6 @@ const TeamSliderContainer = (props) => {
 
     const [slidesPerPage, setSlidesPerPage] = useState(initialSlidesPerPage);
     const [isExpanded, setIsExpanded] = useState(false);
-    let isArrowDisabled = isExpanded;
     const [shuffledItems, setShuffledItems] = useState([]);
 
     useEffect(() => {
@@ -63,13 +62,13 @@ const TeamSliderContainer = (props) => {
         slidesToScroll: slidesPerPage,
         prevArrow: (
             <PrevArrow
-                isDisabled={isArrowDisabled}
+                isDisabled={isExpanded}
                 title="Slide team grid left"
             />
         ),
         nextArrow: (
             <NextArrow
-                isDisabled={isArrowDisabled}
+                isDisabled={isExpanded}
                 title="Slide team grid right"
             />
         ),

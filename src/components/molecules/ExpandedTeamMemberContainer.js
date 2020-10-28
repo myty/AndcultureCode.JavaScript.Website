@@ -106,7 +106,7 @@ const ExpandedTeamMemberContainer = (props) => {
             <ExpandedTeamMember
                 animationType={animationType}
                 employee={selectedEmployee}
-                handleHideExpanded={props.handleHideExpanded}
+                handleCollapse={props.handleCollapse}
                 isExpanded={props.isExpanded}
                 onFadedOut={props.onFadedOut}
                 wasOpenedByKeyboard={props.wasOpenedByKeyboard}

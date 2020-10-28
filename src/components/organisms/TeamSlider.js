@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TeamGridMember from "components/molecules/TeamGridMember";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -17,23 +17,38 @@ const TeamSlider = (props) => {
     const [btnExpandTeamClassName, setBtnExpandTeamClassName] = useState("");
     const [selectedEmployee, setSelectedEmployee] = useState(null);
     const [wasOpenedByKeyboard, setWasOpenedByKeyboard] = useState(false);
+    let buttonElement = React.createRef();
 
     let className = "o-slider";
-    if (props.isExpanded) {
-        className += " -is-expanded";
-    }
 
+    useEffect(() => {
+        if (props.isExpanded && wasOpenedByKeyboard) {
+            setBtnExpandTeamClassName("-hidden");
+        }
+        if (!props.isExpanded && wasOpenedByKeyboard) {
+            setBtnExpandTeamClassName("");
+        }
+        className = "o-slider";
+        if (props.isExpanded) {
+            className += " -is-expanded";
+        }
+    }, [props.isExpanded]);
+
+    useEffect(() => {
+        if (!props.isExpanded && wasOpenedByKeyboard) {
+            buttonElement.current.focus();
+            setWasOpenedByKeyboard(false);
+        }
+    }, [btnExpandTeamClassName]);
 
     const handleExpand = (selectedEmployee) => {
         setSelectedEmployee(selectedEmployee);
-        setBtnExpandTeamClassName("-hidden");
         props.onExpand();
     };
     const handleExpandFromButton = () => {
         handleExpand(employees[0].node.frontmatter);
     }
-    const handleHideExpanded = () => {
-        setBtnExpandTeamClassName("");
+    const handleCollapse = () => {
         props.onCollapse();
     };
     const handleOnFadedOut = () => {
@@ -76,7 +91,7 @@ const TeamSlider = (props) => {
                     <ExpandedTeamMemberContainer
                         selectedEmployee={selectedEmployee}
                         employees={employees}
-                        handleHideExpanded={handleHideExpanded}
+                        handleCollapse={handleCollapse}
                         isExpanded={props.isExpanded}
                         onFadedOut={handleOnFadedOut}
                         wasOpenedByKeyboard={wasOpenedByKeyboard}
@@ -85,6 +100,7 @@ const TeamSlider = (props) => {
                         handleExpand={handleExpandFromButton}
                         className={btnExpandTeamClassName}
                         setWasOpenedByKeyboard={setWasOpenedByKeyboard}
+                        buttonRef={buttonElement}
                     />
                 </div>
             </div>
