@@ -14,7 +14,7 @@ const TeamSlider = (props) => {
     const settings = props.settings;
     const { edges: employees } = data.allMarkdownRemark;
 
-    const [btnExpandTeamClassName, setBtnExpandTeamClassName] = useState("");
+    const [expandButtonIsHidden, setExpandButtonIsHidden] = useState(false);
     const [selectedEmployee, setSelectedEmployee] = useState(null);
     const [wasOpenedByKeyboard, setWasOpenedByKeyboard] = useState(false);
     let buttonElement = React.createRef();
@@ -23,10 +23,10 @@ const TeamSlider = (props) => {
 
     useEffect(() => {
         if (props.isExpanded && wasOpenedByKeyboard) {
-            setBtnExpandTeamClassName("-hidden");
+            setExpandButtonIsHidden(true);
         }
         if (!props.isExpanded && wasOpenedByKeyboard) {
-            setBtnExpandTeamClassName("");
+            setExpandButtonIsHidden(false);
         }
         className = "o-slider";
         if (props.isExpanded) {
@@ -39,7 +39,7 @@ const TeamSlider = (props) => {
             buttonElement.current.focus();
             setWasOpenedByKeyboard(false);
         }
-    }, [btnExpandTeamClassName]);
+    }, [expandButtonIsHidden]);
 
     const handleExpand = (selectedEmployee) => {
         setSelectedEmployee(selectedEmployee);
@@ -82,6 +82,8 @@ const TeamSlider = (props) => {
         sliderItems.push(sliderItems[sliderItemsMiddleIndex + 2]);
     }
 
+    let expandButtonClassName = expandButtonIsHidden ? "-hidden" : "";
+
     return (
         <div className="o-slider__container o-team" aria-hidden="true">
             <div className="o-rhythm__container -full-width__mobile">
@@ -98,7 +100,7 @@ const TeamSlider = (props) => {
                     />
                     <ExpandTeamButton
                         handleExpand={handleExpandFromButton}
-                        className={btnExpandTeamClassName}
+                        className={expandButtonClassName}
                         setWasOpenedByKeyboard={setWasOpenedByKeyboard}
                         buttonRef={buttonElement}
                     />
