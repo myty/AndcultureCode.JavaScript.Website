@@ -61,9 +61,7 @@ const ExpandedTeamMember = (props) => {
 
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
-        const imageDiv = document.querySelector(
-            ".expanded-team-member-image-div"
-        );
+        const imageDiv = document.querySelector(".expanded-team-member-image-div");
         const image = document.querySelector(".expanded-team-member-image");
         const arrows = document.querySelectorAll(".expanded-arrow");
 
@@ -72,25 +70,18 @@ const ExpandedTeamMember = (props) => {
 
         if (props.animationType === "expanded-arrow") {
             // Handle "next, prev" navigation
-            gsap.fromTo(
-                textDiv,
-                {
-                    opacity: 0,
-                },
+            gsap.fromTo(textDiv,
+                { opacity: 0,},
                 { duration: 2, opacity: 1 }
             );
 
             // this animation with duration 0 is to ensure the images are at full size when using slider
             // (when not using slider, the image grows when initially expanded)
-            gsap.to(image, {
-                duration: 0,
-                width: finalImageWidth,
-            });
-            gsap.fromTo(
-                image,
-                {
-                    opacity: 0,
-                },
+            gsap.to(image,
+                { duration: 0, width: finalImageWidth }
+            );
+            gsap.fromTo(image,
+                { opacity: 0 },
                 { duration: 2, opacity: 1 }
             );
 
@@ -101,15 +92,13 @@ const ExpandedTeamMember = (props) => {
             arrows[1].focus();
         }
 
-        gsap.to(parentDiv, {
-            background: "rgba(0, 119, 93, 0.9)",
-            duration: 0.25,
-        });
+        gsap.to(parentDiv,
+            { background: "rgba(0, 119, 93, 0.9)", duration: 0.25 }
+        );
 
-        gsap.to(textDiv, {
-            duration: 0.5,
-            opacity: 1,
-        });
+        gsap.to(textDiv,
+            { duration: 0.5, opacity: 1 }
+        );
 
         gsap.to(imageDiv, {
             duration: 1,
@@ -124,14 +113,15 @@ const ExpandedTeamMember = (props) => {
             ease: Power4.easeIn,
             width: finalImageWidth,
         });
-        gsap.to(arrows[0], {
-            opacity: 0.9,
-            duration: 0.35,
-        });
-        gsap.to(arrows[1], {
-            opacity: 0.9,
-            duration: 0.35,
-        });
+
+        gsap.to(arrows[0],
+            { opacity: 0.9, duration: 0.35 }
+        );
+
+        gsap.to(arrows[1],
+            { opacity: 0.9, duration: 0.35 }
+        );
+
     }, [props.employee]);
 
     useEffect(() => {

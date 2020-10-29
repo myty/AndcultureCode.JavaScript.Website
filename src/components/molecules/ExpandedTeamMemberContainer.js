@@ -11,6 +11,8 @@ const ExpandedTeamMemberContainer = (props) => {
     );
     const [arrowDisplay, setArrowDisplay] = useState({ display: "none" });
     const [animationType, setAnimationType] = useState("initial");
+    const previous = "previous";
+    const next = "next";
 
     useEffect(() => {
         setSelectedEmployee(props.selectedEmployee);
@@ -33,60 +35,17 @@ const ExpandedTeamMemberContainer = (props) => {
         );
         const textDiv = document.querySelector(".expanded-team-member-text");
 
-        if (direction === "next") {
-            gsap.fromTo(
-                [textDiv, imageDiv],
-                { opacity: 1 },
-                {
-                    duration: 0.15,
-                    opacity: 0,
-                }
-            );
-            gsap.fromTo(
-                [textDiv, imageDiv],
-                { x: 0 },
-                { duration: 0.25, x: -1000 }
-            );
-            setTimeout(() => setSelectedEmployee(newEmployee), 200);
-            gsap.fromTo(
-                [textDiv, imageDiv],
-                { x: 2000, opacity: 0 },
-                {
-                    delay: 0.22,
-                    duration: 0.5,
-                    opacity: 1,
-                    x: 0,
-                }
-            );
-        } else if (direction === "previous") {
-            let tl = gsap.timeline();
-            tl.fromTo(
-                [textDiv, imageDiv],
-                { opacity: 1, x: 0 },
-                {
-                    duration: 0.5,
-                    opacity: 0,
-                    x: 1500,
-                }
-            );
 
-            // Wait to change employee until invisible to user
-            setTimeout(() => setSelectedEmployee(newEmployee), 450);
+        if (direction === next) {
+            goToNextEmployee(textDiv, imageDiv, newEmployee);
 
-            tl.fromTo(
-                [textDiv, imageDiv],
-                { x: -1500, opacity: 0 },
-                {
-                    duration: 0.5,
-                    opacity: 1,
-                    x: 0,
-                }
-            );
+        } else if (direction === previous) {
+            goToPrevEmployee(textDiv, imageDiv, newEmployee);
         }
     };
 
     const getNewIndex = (direction) => {
-        const increment = direction === "previous" ? -1 : 1;
+        const increment = direction === previous ? -1 : 1;
         let newIndex = selectedEmployee.index + increment;
         if (newIndex >= employees.length) {
             newIndex = 0;
@@ -96,10 +55,63 @@ const ExpandedTeamMemberContainer = (props) => {
         return newIndex;
     }
 
+    const goToNextEmployee = (textDiv, imageDiv, newEmployee) => {
+        gsap.fromTo(
+            [textDiv, imageDiv],
+            { opacity: 1 },
+            {
+                duration: 0.15,
+                opacity: 0,
+            }
+        );
+        gsap.fromTo(
+            [textDiv, imageDiv],
+            { x: 0 },
+            { duration: 0.25, x: -1000 }
+        );
+        setTimeout(() => setSelectedEmployee(newEmployee), 200);
+        gsap.fromTo(
+            [textDiv, imageDiv],
+            { x: 2000, opacity: 0 },
+            {
+                delay: 0.22,
+                duration: 0.5,
+                opacity: 1,
+                x: 0,
+            }
+        );
+    }
+
+    const goToPrevEmployee = (textDiv, imageDiv, newEmployee) => {
+        let tl = gsap.timeline();
+        tl.fromTo(
+            [textDiv, imageDiv],
+            { opacity: 1, x: 0 },
+            {
+                duration: 0.5,
+                opacity: 0,
+                x: 1500,
+            }
+        );
+
+        // Wait to change employee until invisible to user
+        setTimeout(() => setSelectedEmployee(newEmployee), 450);
+
+        tl.fromTo(
+            [textDiv, imageDiv],
+            { x: -1500, opacity: 0 },
+            {
+                duration: 0.5,
+                opacity: 1,
+                x: 0,
+            }
+        );
+    }
+
     return (
         <>
             <PrevArrow
-                onClick={() => onClick("previous")}
+                onClick={() => onClick(previous)}
                 className="expanded-arrow expanded-arrow-prev"
                 style={arrowDisplay}
             />
@@ -112,7 +124,7 @@ const ExpandedTeamMemberContainer = (props) => {
                 wasOpenedByKeyboard={props.wasOpenedByKeyboard}
             />
             <NextArrow
-                onClick={() => onClick("next")}
+                onClick={() => onClick(next)}
                 className="expanded-arrow expanded-arrow-next"
                 style={arrowDisplay}
             />

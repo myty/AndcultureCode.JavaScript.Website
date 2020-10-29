@@ -3,6 +3,7 @@ import { graphql, StaticQuery } from "gatsby";
 import PrevArrow from "components/molecules/PrevArrow";
 import NextArrow from "components/molecules/NextArrow";
 import TeamSlider from "components/organisms/TeamSlider";
+import { TABLETBREAKPOINT } from "../../constants/index.js";
 
 // Primary Component
 // ------------------------------------
@@ -12,7 +13,8 @@ const TeamSliderContainer = (props) => {
 
     function isLargeViewport() {
         if (typeof window !== `undefined`) {
-            return window.matchMedia("(min-width: 769px)").matches;
+            const matchString = "(min-width: " + TABLETBREAKPOINT + ")";
+            return window.matchMedia(matchString).matches;
         }
         return false;
     }
