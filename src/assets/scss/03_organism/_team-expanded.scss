@@ -1,0 +1,298 @@
+.o-team {
+    .expanded-team-member {
+        align-items: center;
+        background: rgba(get-color-primary("fresh"), 0);
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        z-index: 1;
+
+        &-text {
+            color: get-color-primary("white");
+            opacity: 0;
+            position: initial;
+            width: 80%;
+
+            img {
+                width: 10%;
+
+                @include breakpoints("tablet") {
+                    width: 7%;
+                }
+
+                @include breakpoints("lg-laptop") {
+                    width: 10%;
+                }
+            }
+
+            p {
+                text-transform: lowercase;
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+
+            @include breakpoints("tablet") {
+                left: 14%;
+                max-width: none;
+                position: absolute;
+                top: 16%;
+                width: initial;
+            }
+
+            &-name {
+                @include font-size(29px);
+                margin-bottom: 0.6em;
+
+                @media (min-width: 360px) {
+                    @include font-size(34px);
+                }
+
+                @include breakpoints("sm-tablet") {
+                    @include font-size("medium-large");
+                }
+
+                @include breakpoints("tablet") {
+                    margin-bottom: 0;
+                }
+
+                @include breakpoints("lg-laptop") {
+                    @include font-size("large");
+                }
+
+                @include breakpoints("sm-desktop") {
+                    @include font-size("largish");
+                }
+
+                img {
+                    vertical-align: baseline;
+                }
+            }
+
+            &-position {
+                margin-top: 0.3em;
+                @include font-size("small");
+            }
+
+            &-egg {
+                @include font-size("smallest");
+
+                img {
+                    vertical-align: baseline;
+                    width: 6%;
+                }
+            }
+        }
+
+        &-image-div {
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            position: relative;
+
+            @include breakpoints("tablet") {
+                display: block;
+                left: 57%; //animates to 54%
+                max-width: 691px;
+                position: absolute;
+                top: 24%; //animates to 21%
+            }
+
+            @include breakpoints("laptop") {
+                left: 54%; //animates to 51%
+            }
+
+            @include breakpoints(1250px) {
+                left: 53%; //animates to 51%
+                top: 24%; //animates to 19%
+            }
+
+            @include breakpoints("lg-desktop") {
+                left: 48%; //animates to 46%
+                top: 23%; //animates to 19%
+            }
+
+            @include breakpoints("xl-desktop") {
+                left: 42.2%; //animates to 41%
+            }
+
+            .expanded-team-member-image {
+                // starts here, animation takes it to 162px
+                // the other final px widths are noted on the following breakpts - they grow by 60px
+                width: 102px;
+
+                @include breakpoints("phone") {
+                    // 340px
+                    width: 280px;
+                }
+
+                @include breakpoints("sm-tablet") {
+                    // 429px
+                    width: 369px;
+                }
+
+                @include breakpoints("tablet") {
+                    // 172px
+                    width: 112px;
+                }
+
+                @include breakpoints("laptop") {
+                    // 239px
+                    width: 179px;
+                }
+
+                @include breakpoints("desktop") {
+                    // 303px
+                    width: 243px;
+                }
+
+                @include breakpoints("lg-desktop") {
+                    // 349px
+                    width: 289px;
+                }
+            }
+
+            .expanded-team-member-close-button {
+                cursor: pointer;
+                left: 89%;
+                position: absolute;
+                top: 4%;
+                width: 0.6rem;
+
+                @include breakpoints("phone") {
+                    left: 90%;
+                    top: 5%;
+                    width: 0.9rem;
+                }
+
+                @include breakpoints("sm-tablet") {
+                    left: 91%;
+                    top: 5%;
+                }
+
+                @include breakpoints("tablet") {
+                    left: 85%;
+                    top: 6%;
+                    width: 0.9rem;
+                }
+
+                @include breakpoints("laptop") {
+                    left: 87%;
+                }
+
+                @include breakpoints("lg-desktop") {
+                    left: 89%;
+                    top: 6%;
+                }
+            }
+        }
+    }
+    .expanded-arrow {
+        background-color: transparent;
+        border: none;
+        display: none;
+        position: absolute;
+        fill: get-color-primary("white");
+        opacity: 0;
+        top: 27%;
+        width: 45px;
+        z-index: 2;
+
+        @include breakpoints("phone") {
+            top: 45.5%;
+        }
+
+        @include breakpoints("tablet") {
+            top: 44.5%;
+        }
+
+        @include breakpoints("lg-laptop") {
+            top: 45.5%;
+        }
+
+        &-prev {
+            left: 5%;
+
+            @include breakpoints("lg-desktop") {
+                left: 66px;
+            }
+        }
+
+        &-next {
+            right: 5%;
+
+            @include breakpoints("tablet") {
+                right: 8%;
+            }
+            @include breakpoints(850px) {
+                right: 9%;
+            }
+            @include breakpoints("laptop") {
+                right: 10%;
+            }
+            @include breakpoints("desktop") {
+                right: 8%;
+            }
+            @include breakpoints(1280px) {
+                right: 1%;
+            }
+            @include breakpoints(1375px) {
+                right: -3%;
+            }
+            @include breakpoints("lg-desktop") {
+                right: 1%;
+            }
+            @include breakpoints(1550px) {
+                right: -6%;
+            }
+            @include breakpoints(1700px) {
+                right: -10%;
+            }
+            @include breakpoints("xl-desktop") {
+                right: -14%;
+            }
+            @include breakpoints(2000px) {
+                right: -25%;
+            }
+            @include breakpoints(2500px) {
+                right: -50%;
+            }
+        }
+    }
+    .btn-expand-team {
+        @include font-size("base");
+        border-bottom: 2px solid get-color-primary("fresh");
+        display: inline-block;
+        margin: 0 auto;
+        opacity: 0;
+        padding-bottom: 0.2em;
+        position: absolute;
+        left: calc(50% - 115px);
+        bottom: -80px;
+        z-index: 10;
+        color: get-color-primary("fresh");
+        font-family: $font-secondary;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        transition: opacity 0.3s ease;
+
+        &:focus {
+            opacity: 1;
+        }
+
+        @include breakpoints("sm-tablet") {
+            left: calc(50% - 115px);
+
+            span {
+                display: inline;
+            }
+        }
+
+        @include breakpoints("tablet") {
+            bottom: -62px;
+        }
+    }
+}

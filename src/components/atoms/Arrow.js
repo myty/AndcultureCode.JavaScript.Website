@@ -6,11 +6,12 @@ export default function Arrow(props) {
     if (props.isDisabled) {
         className += " -disabled";
     }
+
     return (
-        <a
+        <button
             href="#"
             className={className}
-            style={{ ...style, display: "block" }}
+            style={{ ...style }}
             onClick={onClick}>
             <svg
                 version="1.1"
@@ -21,6 +22,6 @@ export default function Arrow(props) {
                 {props.children}
                 <title>{title}</title>
             </svg>
-        </a>
+        </button>
     );
 }

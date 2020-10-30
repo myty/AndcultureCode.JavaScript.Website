@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TeamGridMember from "components/molecules/TeamGridMember";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ExpandedTeamMember from "components/molecules/ExpandedTeamMember";
+import ExpandedTeamMemberContainer from "components/molecules/ExpandedTeamMemberContainer";
+import ExpandTeamButton from "../atoms/ExpandTeamButton";
 
 // Primary Component
 // ------------------------------------
@@ -13,26 +14,50 @@ const TeamSlider = (props) => {
     const settings = props.settings;
     const { edges: employees } = data.allMarkdownRemark;
 
+    const [expandButtonIsHidden, setExpandButtonIsHidden] = useState(false);
+    const [selectedEmployee, setSelectedEmployee] = useState(null);
+    const [wasOpenedByKeyboard, setWasOpenedByKeyboard] = useState(false);
+    let buttonElement = React.createRef();
+
     let className = "o-slider";
-    if (props.isExpanded) {
-        className += " -is-expanded";
-    }
 
-    const [employeeToShow, setEmployeeToShow] = useState(null);
+    useEffect(() => {
+        if (props.isExpanded && wasOpenedByKeyboard) {
+            setExpandButtonIsHidden(true);
+        }
+        if (!props.isExpanded && wasOpenedByKeyboard) {
+            setExpandButtonIsHidden(false);
+        }
+        className = "o-slider";
+        if (props.isExpanded) {
+            className += " -is-expanded";
+        }
+    }, [props.isExpanded]);
 
-    const handleExpand = (employeeToShow) => {
-        setEmployeeToShow(employeeToShow);
+    useEffect(() => {
+        if (!props.isExpanded && wasOpenedByKeyboard) {
+            buttonElement.current.focus();
+            setWasOpenedByKeyboard(false);
+        }
+    }, [expandButtonIsHidden]);
+
+    const handleExpand = (selectedEmployee) => {
+        setSelectedEmployee(selectedEmployee);
         props.onExpand();
     };
-    const handleHideExpanded = () => {
+    const handleExpandFromButton = () => {
+        handleExpand(employees[0].node.frontmatter);
+    }
+    const handleCollapse = () => {
         props.onCollapse();
     };
     const handleOnFadedOut = () => {
-        setEmployeeToShow(null);
+        setSelectedEmployee(null);
     };
 
     let sliderItems = employees.map(({ node: teamMemberGridItem }, index) => {
         const employee = teamMemberGridItem.frontmatter;
+        employee.index = index;
 
         return (
             <TeamGridMember
@@ -57,17 +82,27 @@ const TeamSlider = (props) => {
         sliderItems.push(sliderItems[sliderItemsMiddleIndex + 2]);
     }
 
+    let expandButtonClassName = expandButtonIsHidden ? "-hidden" : "";
+
     return (
         <div className="o-slider__container o-team" aria-hidden="true">
             <div className="o-rhythm__container -full-width__mobile">
                 <h2 className="people">meet the team</h2>
                 <div className={className}>
                     <Slider {...settings}>{sliderItems}</Slider>
-                    <ExpandedTeamMember
-                        employee={employeeToShow}
-                        handleHideExpanded={handleHideExpanded}
+                    <ExpandedTeamMemberContainer
+                        selectedEmployee={selectedEmployee}
+                        employees={employees}
+                        handleCollapse={handleCollapse}
                         isExpanded={props.isExpanded}
                         onFadedOut={handleOnFadedOut}
+                        wasOpenedByKeyboard={wasOpenedByKeyboard}
+                    />
+                    <ExpandTeamButton
+                        handleExpand={handleExpandFromButton}
+                        className={expandButtonClassName}
+                        setWasOpenedByKeyboard={setWasOpenedByKeyboard}
+                        buttonRef={buttonElement}
                     />
                 </div>
             </div>

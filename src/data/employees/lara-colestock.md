@@ -2,7 +2,7 @@
 createPage: false
 templateKey: "employee"
 name: Lara Colestock
-position: head of experience
+position: executive director, experience
 easterEgg: balance, mom life, coffee wife
 teamGridPhoto:
   image: /img/team/grid-photos/Colestock_Lara.jpg

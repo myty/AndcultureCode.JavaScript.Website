@@ -55,26 +55,50 @@ const calculateFinalImagePosValue = () => {
 const ExpandedTeamMember = (props) => {
     useEffect(() => {
         // fades in the expanded team member view
-        if (props.employee == null) { return; }
+        if (props.employee == null) {
+            return;
+        }
 
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
         const imageDiv = document.querySelector(".expanded-team-member-image-div");
         const image = document.querySelector(".expanded-team-member-image");
+        const arrows = document.querySelectorAll(".expanded-arrow");
 
         const finalImageWidth = calculateFinalImageWidth();
         const finalImagePosValue = calculateFinalImagePosValue();
 
+        if (props.animationType === "expanded-arrow") {
+            // Handle "next, prev" navigation
+            gsap.fromTo(textDiv,
+                { opacity: 0,},
+                { duration: 2, opacity: 1 }
+            );
 
-        gsap.to(parentDiv, {
-            background: "rgba(25,168,124,0.8)",
-            duration: 0.25,
-        });
+            // this animation with duration 0 is to ensure the images are at full size when using slider
+            // (when not using slider, the image grows when initially expanded)
+            gsap.to(image,
+                { duration: 0, width: finalImageWidth }
+            );
+            gsap.fromTo(image,
+                { opacity: 0 },
+                { duration: 2, opacity: 1 }
+            );
 
-        gsap.to(textDiv, {
-            duration: 0.5,
-            opacity: 1,
-        });
+            return;
+        }
+
+        if (props.wasOpenedByKeyboard) {
+            arrows[1].focus();
+        }
+
+        gsap.to(parentDiv,
+            { background: "rgba(0, 119, 93, 0.9)", duration: 0.25 }
+        );
+
+        gsap.to(textDiv,
+            { duration: 0.5, opacity: 1 }
+        );
 
         gsap.to(imageDiv, {
             duration: 1,
@@ -89,6 +113,15 @@ const ExpandedTeamMember = (props) => {
             ease: Power4.easeIn,
             width: finalImageWidth,
         });
+
+        gsap.to(arrows[0],
+            { opacity: 0.9, duration: 0.35 }
+        );
+
+        gsap.to(arrows[1],
+            { opacity: 0.9, duration: 0.35 }
+        );
+
     }, [props.employee]);
 
     useEffect(() => {
@@ -98,10 +131,22 @@ const ExpandedTeamMember = (props) => {
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
         const imageDiv = document.querySelector(".expanded-team-member-image-div");
+        const arrows = document.querySelectorAll(".expanded-arrow");
+
+        if (arrows !== null) {
+            gsap.to(arrows[0], {
+                opacity: 0,
+                duration: .01
+            });
+            gsap.to(arrows[1], {
+                opacity: 0,
+                duration: .01
+            });
+        }
 
         if (parentDiv !== null) {
             gsap.to(parentDiv, {
-                background: "rgba(25,168,124,0.0)",
+                background: "rgba(0, 119, 93, 0.0)",
                 duration: 0.5,
                 onComplete: () => props.onFadedOut(),
             });
@@ -120,12 +165,13 @@ const ExpandedTeamMember = (props) => {
                 duration: 0.25,
             });
         }
+
     }, [props.isExpanded]);
 
     useEffect(() => {
         // Handler to call on window resize
         function handleResize() {
-            props.handleHideExpanded()
+            props.handleCollapse()
         }
         window.addEventListener("resize", handleResize);
         handleResize();
@@ -140,7 +186,7 @@ const ExpandedTeamMember = (props) => {
     return (
         <div
             className="expanded-team-member"
-            onClick={props.handleHideExpanded}>
+            onClick={props.handleCollapse}>
             <div className="expanded-team-member-text">
                 <p className="expanded-team-member-text-name">
                     {props.employee.name}{" "}
@@ -170,9 +216,16 @@ const ExpandedTeamMember = (props) => {
                     loading="eager"
                 />
                 <img
-                    className="expanded-team-member-close-button"
-                    src={closeButton}
                     alt="close button"
+                    className="expanded-team-member-close-button"
+                    onKeyDown={(event) => {
+                        if (event.key === "Enter") {
+                            props.handleCollapse();
+                            event.preventDefault();
+                        }
+                    }}
+                    src={closeButton}
+                    tabIndex="0"
                 />
             </div>
         </div>
