@@ -124,6 +124,7 @@ const ExpandedTeamMemberContainer = (props) => {
                 isExpanded={props.isExpanded}
                 onFadedOut={props.onFadedOut}
                 wasOpenedByKeyboard={props.wasOpenedByKeyboard}
+                toggleIsAnimating={props.toggleIsAnimating}
             />
             <NextArrow
                 onClick={() => onClick(next)}

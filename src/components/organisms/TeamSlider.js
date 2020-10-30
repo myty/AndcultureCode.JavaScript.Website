@@ -20,9 +20,7 @@ const TeamSlider = (props) => {
     let buttonElement = React.createRef();
 
     let isAnimating = false;
-    const toggleIsAnimating = () => {
-        isAnimating = !isAnimating;
-    };
+    const toggleIsAnimating = () => { isAnimating = !isAnimating; };
 
     let className = "o-slider";
 
