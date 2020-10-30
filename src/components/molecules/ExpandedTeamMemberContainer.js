@@ -26,7 +26,7 @@ const ExpandedTeamMemberContainer = (props) => {
 
     const onClick = (direction) => {
         if (props.isAnimating) { return; }
-        props.toggleIsAnimating();
+        props.setIsAnimating(true);
         setAnimationType("expanded-arrow");
         const newIndex = getNewIndex(direction);
         let newEmployee = employees[newIndex].node.frontmatter;
@@ -70,7 +70,7 @@ const ExpandedTeamMemberContainer = (props) => {
             { duration: 0.25, x: -1000 }
         );
         setTimeout(() => setSelectedEmployee(newEmployee), 200);
-        setTimeout(() => props.toggleIsAnimating(), 2000);
+        setTimeout(() => props.setIsAnimating(false), 2000);
         gsap.fromTo(
             [textDiv, imageDiv],
             { x: 2000, opacity: 0 },
@@ -97,7 +97,7 @@ const ExpandedTeamMemberContainer = (props) => {
 
         // Wait to change employee until invisible to user
         setTimeout(() => setSelectedEmployee(newEmployee), 450);
-        setTimeout(() => props.toggleIsAnimating(), 2000);
+        setTimeout(() => props.setIsAnimating(false), 2000);
         tl.fromTo(
             [textDiv, imageDiv],
             { x: -1500, opacity: 0 },
@@ -124,7 +124,7 @@ const ExpandedTeamMemberContainer = (props) => {
                 isExpanded={props.isExpanded}
                 onFadedOut={props.onFadedOut}
                 wasOpenedByKeyboard={props.wasOpenedByKeyboard}
-                toggleIsAnimating={props.toggleIsAnimating}
+                setIsAnimating={props.setIsAnimating}
             />
             <NextArrow
                 onClick={() => onClick(next)}

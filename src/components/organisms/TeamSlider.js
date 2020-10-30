@@ -20,7 +20,7 @@ const TeamSlider = (props) => {
     let buttonElement = React.createRef();
 
     let isAnimating = false;
-    const toggleIsAnimating = () => { isAnimating = !isAnimating; };
+    const setIsAnimating = (boolVal) => { isAnimating = boolVal };
 
     let className = "o-slider";
 
@@ -101,7 +101,7 @@ const TeamSlider = (props) => {
                         onFadedOut={handleOnFadedOut}
                         wasOpenedByKeyboard={wasOpenedByKeyboard}
                         isAnimating={isAnimating}
-                        toggleIsAnimating={toggleIsAnimating}
+                        setIsAnimating={setIsAnimating}
                     />
                     <ExpandTeamButton
                         handleExpand={handleExpandFromButton}

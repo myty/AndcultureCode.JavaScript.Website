@@ -59,7 +59,7 @@ const ExpandedTeamMember = (props) => {
             return;
         }
 
-        props.toggleIsAnimating();
+        props.setIsAnimating(true);
 
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
@@ -94,7 +94,7 @@ const ExpandedTeamMember = (props) => {
             arrows[1].focus();
         }
 
-        setTimeout(() => props.toggleIsAnimating(), 1000);
+        setTimeout(() => props.setIsAnimating(false), 1000);
 
         gsap.to(parentDiv,
             { background: "rgba(0, 119, 93, 0.9)", duration: 0.25 }
