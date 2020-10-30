@@ -19,6 +19,9 @@ const TeamSlider = (props) => {
     const [wasOpenedByKeyboard, setWasOpenedByKeyboard] = useState(false);
     let buttonElement = React.createRef();
 
+    let isAnimating = false;
+    const setIsAnimating = (boolVal) => { isAnimating = boolVal };
+
     let className = "o-slider";
 
     useEffect(() => {
@@ -49,7 +52,7 @@ const TeamSlider = (props) => {
         handleExpand(employees[0].node.frontmatter);
     }
     const handleCollapse = () => {
-        props.onCollapse();
+        if (!isAnimating) { props.onCollapse(); }
     };
     const handleOnFadedOut = () => {
         setSelectedEmployee(null);
@@ -97,6 +100,8 @@ const TeamSlider = (props) => {
                         isExpanded={props.isExpanded}
                         onFadedOut={handleOnFadedOut}
                         wasOpenedByKeyboard={wasOpenedByKeyboard}
+                        isAnimating={isAnimating}
+                        setIsAnimating={setIsAnimating}
                     />
                     <ExpandTeamButton
                         handleExpand={handleExpandFromButton}

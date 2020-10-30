@@ -55,9 +55,11 @@ const calculateFinalImagePosValue = () => {
 const ExpandedTeamMember = (props) => {
     useEffect(() => {
         // fades in the expanded team member view
-        if (props.employee == null) {
+        if (!props.isExpanded || props.employee === null) {
             return;
         }
+
+        props.setIsAnimating(true);
 
         const parentDiv = document.querySelector(".expanded-team-member");
         const textDiv = document.querySelector(".expanded-team-member-text");
@@ -91,6 +93,8 @@ const ExpandedTeamMember = (props) => {
         if (props.wasOpenedByKeyboard) {
             arrows[1].focus();
         }
+
+        setTimeout(() => props.setIsAnimating(false), 1000);
 
         gsap.to(parentDiv,
             { background: "rgba(0, 119, 93, 0.9)", duration: 0.25 }
@@ -178,6 +182,11 @@ const ExpandedTeamMember = (props) => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    const handleClick = () => {
+        props.setAnimationType("initial");
+        props.handleCollapse();
+    }
+
     // If no employee is selected, don't render this component:
     if (props.employee == null) {
         return null;
@@ -186,7 +195,7 @@ const ExpandedTeamMember = (props) => {
     return (
         <div
             className="expanded-team-member"
-            onClick={props.handleCollapse}>
+            onClick={handleClick}>
             <div className="expanded-team-member-text">
                 <p className="expanded-team-member-text-name">
                     {props.employee.name}{" "}
