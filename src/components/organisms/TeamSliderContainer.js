@@ -55,6 +55,7 @@ const TeamSliderContainer = (props) => {
     }
 
     let settings = {
+        accessibility: false,
         dots: true,
         draggable: true,
         infinite: true,
