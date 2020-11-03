@@ -2,7 +2,7 @@
 createPage: false
 templateKey: "employee"
 name: Josh Ciotti
-position: senior strategist - data analytics
+position: sr. strategist - data analytics
 easterEgg: honestly? it depends.
 teamGridPhoto:
   image: /img/team/grid-photos/Ciotti_Josh.jpg

@@ -2,7 +2,7 @@
 createPage: false
 templateKey: "employee"
 name: Winton DeShong
-position: Technical Architect
+position: technical architect
 easterEgg: the biggest code muscles
 authorPhoto:
   image: /img/authors/author-winton-deshong.png

@@ -2,7 +2,7 @@
 createPage: false
 templateKey: "employee"
 name: Sam Epps
-position: project coordinator
+position: partnerships associate
 easterEgg: podcast fan, cat parent
 teamGridPhoto:
   image: /img/team/grid-photos/Epps_Sam.jpg

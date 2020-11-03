@@ -2,7 +2,7 @@
 createPage: false
 templateKey: "employee"
 name: Evan Keller
-position: Partner, Chief Experience Architect
+position: partner, chief experience architect
 easterEgg: wanderlust & whisky
 authorPhoto:
   image: /img/authors/author-evan-keller.png

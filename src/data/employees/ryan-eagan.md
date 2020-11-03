@@ -1,6 +1,5 @@
 ---
 createPage: false
-templateKey: "employee"
 name: Ryan Eagan
 easterEgg: zumba & outdoor adventurer
 authorPhoto:
