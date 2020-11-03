@@ -92,17 +92,21 @@ const TeamSlider = (props) => {
             <div className="o-rhythm__container -full-width__mobile">
                 <h2 className="people">meet the team</h2>
                 <div className={className}>
-                    <Slider {...settings}>{sliderItems}</Slider>
-                    <ExpandedTeamMemberContainer
-                        selectedEmployee={selectedEmployee}
-                        employees={employees}
-                        handleCollapse={handleCollapse}
-                        isExpanded={props.isExpanded}
-                        onFadedOut={handleOnFadedOut}
-                        wasOpenedByKeyboard={wasOpenedByKeyboard}
-                        isAnimating={isAnimating}
-                        setIsAnimating={setIsAnimating}
-                    />
+                    <div aria-hidden={isAnimating || props.isExpanded}>
+                        <Slider {...settings}>{sliderItems}</Slider>
+                    </div>
+                    <div aria-live="polite">
+                                <ExpandedTeamMemberContainer
+                                    selectedEmployee={selectedEmployee}
+                                    employees={employees}
+                                    handleCollapse={handleCollapse}
+                                    isExpanded={props.isExpanded}
+                                    onFadedOut={handleOnFadedOut}
+                                    wasOpenedByKeyboard={wasOpenedByKeyboard}
+                                    isAnimating={isAnimating}
+                                    setIsAnimating={setIsAnimating}
+                                />
+                    </div>
                     <ExpandTeamButton
                         handleExpand={handleExpandFromButton}
                         className={expandButtonClassName}
