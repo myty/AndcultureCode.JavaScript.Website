@@ -24,6 +24,20 @@ const ExpandedTeamMemberContainer = (props) => {
         setAnimationType("initial");
     }, [props.selectedEmployee]);
 
+    useEffect(() => {
+        document.addEventListener("keydown", escFunction, false);
+
+        return () => {
+            document.removeEventListener("keydown", escFunction, false);
+        };
+    }, []);
+
+    const escFunction = (e) => {
+        if (e.key === "Escape") {
+            props.handleCollapse();
+        }
+    };
+
     const onClick = (direction) => {
         if (props.isAnimating) { return; }
         props.setIsAnimating(true);
