@@ -1,7 +1,8 @@
 ---
 createPage: false
+templateKey: "employee"
 name: Mike Koser
-position: Director of Engineering
+position: director of engineering
 easterEgg: brews beer for the masses
 authorPhoto:
   image: /img/authors/author-mike-koser.png
@@ -15,4 +16,10 @@ socialLinks:
     url: https://github.com/HeyKos
   - platform: Instagram
     url: https://www.instagram.com/mikekoser/
+teamGridPhoto:
+  image: /img/team/grid-photos/Koser_Mike.jpg
+  description: Mike Koser
+teamExpandedPhoto:
+  image: /img/team/expanded-photos/Koser_Mike-2X.jpg
+  description: Mike Koser
 ---

@@ -1,7 +1,8 @@
 ---
 createPage: false
+templateKey: "employee"
 name: Winton DeShong
-position: Technical Architect
+position: technical architect
 easterEgg: the biggest code muscles
 authorPhoto:
   image: /img/authors/author-winton-deshong.png
@@ -11,4 +12,10 @@ socialLinks:
     url: http://linkedin.com/in/wintondeshong
   - platform: Github
     url: https://github.com/wintondeshong
+teamGridPhoto:
+  image: /img/team/grid-photos/DeShong_Winton.jpg
+  description: Winton DeShong
+teamExpandedPhoto:
+  image: /img/team/expanded-photos/DeShong_Winton-2X.jpg
+  description: Winton DeShong
 ---

@@ -1,0 +1,22 @@
+.o-team {
+    display: flex;
+    position: relative;
+
+    h2.people {
+        padding-left: 40px;
+        margin-bottom: 1rem;
+
+        @include breakpoints("tablet") {
+            padding-left: 0;
+            margin-left: 80px;
+        }
+
+        @include breakpoints("lg-desktop") {
+            margin-left: 0;
+        }
+    }
+
+    div.slick-cloned:focus {
+        outline: initial;
+    }
+}
