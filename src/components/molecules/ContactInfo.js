@@ -5,6 +5,7 @@ import IconSocialFacebook  from 'components/atoms/IconSocialFacebook';
 import IconSocialInstagram from 'components/atoms/IconSocialInstagram';
 import IconSocialGithub    from 'components/atoms/IconSocialGithub';
 import IconSocialDribbble  from 'components/atoms/IconSocialDribbble';
+import Paragraph           from '../atoms/Paragraph';
 
 const ContactInfo = class extends React.Component {
   constructor(props) {
@@ -60,7 +61,7 @@ const ContactInfo = class extends React.Component {
             <div className = "o-rhythm__container">
                 <div className = "m-contact-info__directions">
                     <div className = "m-contact-info__heading">Directions</div>
-                    <p>{ this.props.directions }</p>
+                    <Paragraph>{ this.props.directions }</Paragraph>
                 </div>
             </div>
         </div>
