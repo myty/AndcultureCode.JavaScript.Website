@@ -8,21 +8,19 @@ const Paragraph = class extends React.Component {
 
     render() {
         // add breaks between paragraphs
-        if (this.props.children != null && typeof(this.props.children) == "string") {
+        if (typeof(this.props.children) == "string") {
             const newlines = /\s*\n\s*\n\s*/g;
             const content = {
-                __html: this.props.children.toString().replace(newlines, "<br/>\n<br/>\n")
+                __html: this.props.children?.toString().replace(newlines, "<br/>\n<br/>\n")
             };
             return (
-                <p dangerouslySetInnerHTML = { content }></p>
+                <p dangerouslySetInnerHTML = { content } />
             );
         }
 
         // return default formatting
         return (
-            <p>
-                { this.props.children }
-            </p>
+            <p>{ this.props.children }</p>
         )
     }
 }
