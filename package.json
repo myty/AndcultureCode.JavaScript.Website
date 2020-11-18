@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "andculture",
   "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^2.1.4",
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
     "@rehooks/component-size": "^1.0.3",
