@@ -9,7 +9,16 @@ import '../assets/scss/app.scss';
 
 const AboutPage = ({ data }) => {
   const pageData = data.markdownRemark.frontmatter;
-
+//   fetch('../../lamda/fauna-create', {
+//     body: JSON.stringify({data: 'sttr'}),
+//     method: 'POST',
+//   }).then((res) => {
+//     return res.json();
+//   }).then((response) => {
+// console.log('response from lamda');
+//   }).catch((e) => {
+//     console.log('error from lamda', e);
+//   });
   return (
     <Layout
       pageTitle="About"
