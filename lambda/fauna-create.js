@@ -14,6 +14,7 @@ export const postFingerprint = async (data) => {
     if(u.matchCount > 3){
         console.log('matched higher user');
         addSiteHistory(u.value.data, { page: "Admin Panel", date: new Date().toISOString() });
+        submitLandingFormOne({}, u.value.data);
         return null;
     }
 
@@ -26,6 +27,7 @@ export const postFingerprint = async (data) => {
     .then((ret) => {
         console.log(ret)
         addSiteHistory(ret.data, { page: "Homepage" });
+        submitLandingFormOne({}, ret.data);
     })
     .catch((err) => console.log(err));
 
@@ -69,34 +71,73 @@ export const addSiteHistory = async (createFingerprintDto, createSiteHistoryDto)
     .catch((err) => console.log(err));
 }
 
-export const submitLandingFormOne = async (form) => {
-  const {email} = form;
-  const fingerprint = form.fingerprint.value.fingerprint;
+export const createUser = (data) => {
+    client.query(
+        q.Create(
+            q.Collection('users'),
+            { data: data },
+        )
+    )
+    .then((ret) => console.log(ret))
+    .catch((err) => console.log(err));
+}
+
+export const submitLandingFormOne = async (form, fingerprint) => {
+//   const {email} = form;
+//   const fingerprint = form.fingerprint.value.fingerprint;
+
 
 
   const probFingerprint = await checkFingerprint(fingerprint);
   //check language, long, lat, ip, city, postal, timezone, rather than whole fingerprint, highlight higher rated qualities rather than underrated weighted
   //check long lat with certian ranges to specify within a certian degree is it the same person
-  const marketingId = probFingerprint.value.id;
+//   const marketingId = probFingerprint.value.id;
+    // const marketingId = "282563941244076547";
   // TODO: add user table query
-  let dbUser = await this.userservice.findUserWithMarketingId(marketingId);
-  console.log('dbuser', dbUser);
+//   let dbUser = await this.userservice.findUserWithMarketingId(marketingId);
+//   console.log('dbuser', dbUser);
 
-  const marketingProf = await client.query(
-    q.Get(q.Ref(q.Collection('fingerprints'), marketingId))
-  );
+//   const marketingProf = await client.query(
+//     q.Get(q.Ref(q.Collection('fingerprints'), marketingId))
+//   );
+    console.log(probFingerprint);
 
 
-  marketingProf.visitHistory.push({date: new Date(), page:'blog', action: 'submit form' });
+  console.log(probFingerprint);
+//   const ret = await client.query(
+//     q.Map(
+//         q.Paginate(q.Documents(q.Collection('users'))),
+//         q.Lambda(x => x.fingerprintId == probFingerprint.value.ref.value.id)
+//       )
+//     );
+const allUsers = await client.query(
+    q.Map(
+        q.Paginate(q.Documents(q.Collection('users'))),
+        q.Lambda(x => q.Get(x))
+      )
+    );
 
-  await marketingProf.save();
-  if (dbUser === null) {
-   dbUser =  new User();
-   dbUser.marketingProfile = marketingProf;
-  }
+    console.log(allUsers);
 
-  dbUser.fingerprintMatchCount = probFingerprint.matchCount;
+    const theUser = allUsers.data.find((user) => user.data.fingerprintId === probFingerprint.value.ref.value.id);
+    console.log("THE USER:  ", theUser);
 
-  dbUser.email = email;
-  await dbUser.save();
+    if (theUser == null) {
+        const newUser = await createUser({ email: "asdf@asdf.com", fingerprintId: probFingerprint.value.ref.value.id, marketingMatchCount: probFingerprint.matchCount });
+        console.log("MADE NEW USER:  ", newUser);
+    }
+
+
+//   marketingProf.visitHistory.push({date: new Date().toISOString(), page:'blog', action: 'submit form' });
+
+//   await marketingProf.save();
+//   if (dbUser === null) {
+//    dbUser =  new User();
+//    dbUser.marketingProfile = marketingProf;
+//   }
+
+//   dbUser.fingerprintMatchCount = probFingerprint.matchCount;
+
+//   dbUser.email = email;
+//   await dbUser.save();
  }
