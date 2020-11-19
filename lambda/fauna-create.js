@@ -29,7 +29,7 @@ export const postFingerprint = async (data) => {
     })
     .catch((err) => console.log(err));
 
-    
+
 }
 
 export const checkFingerprint = async (createFingerprintDto) => {
@@ -68,3 +68,35 @@ export const addSiteHistory = async (createFingerprintDto, createSiteHistoryDto)
     .then((ret) => console.log(ret))
     .catch((err) => console.log(err));
 }
+
+export const submitLandingFormOne = async (form) => {
+  const {email} = form;
+  const fingerprint = form.fingerprint.value.fingerprint;
+
+
+  const probFingerprint = await checkFingerprint(fingerprint);
+  //check language, long, lat, ip, city, postal, timezone, rather than whole fingerprint, highlight higher rated qualities rather than underrated weighted
+  //check long lat with certian ranges to specify within a certian degree is it the same person
+  const marketingId = probFingerprint.value.id;
+  // TODO: add user table query
+  let dbUser = await this.userservice.findUserWithMarketingId(marketingId);
+  console.log('dbuser', dbUser);
+
+  const marketingProf = await client.query(
+    q.Get(q.Ref(q.Collection('fingerprints'), marketingId))
+  );
+
+
+  marketingProf.visitHistory.push({date: new Date(), page:'blog', action: 'submit form' });
+
+  await marketingProf.save();
+  if (dbUser === null) {
+   dbUser =  new User();
+   dbUser.marketingProfile = marketingProf;
+  }
+
+  dbUser.fingerprintMatchCount = probFingerprint.matchCount;
+
+  dbUser.email = email;
+  await dbUser.save();
+ }
