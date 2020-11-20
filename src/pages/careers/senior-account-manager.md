@@ -8,6 +8,7 @@ description: >-
   our client partners’ programs, products, and providing strategically sound
   solutions to their business objectives.
 applicationUrl: 'https://recruiting.paylocity.com/Recruiting/Jobs/Details/396336'
+active: true
 seo:
   metaDescription: 'Work at andculture, a design company based in Harrisburg, PA'
   metaTitle: senior account manager | careers | andculture
