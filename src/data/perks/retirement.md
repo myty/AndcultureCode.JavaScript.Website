@@ -1,7 +1,10 @@
 ---
+templateKey: perk
 createPage: false
-templateKey: "perk"
 name: Retirement
 priority: 4
-description: "andculture offers a simple IRA with employer matching after your first year."
+description: >-
+  andculture launched a new 401K plan that goes in effect on January 2021 with
+  employer match after the first year.
 ---
+
