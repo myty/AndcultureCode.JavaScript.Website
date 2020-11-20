@@ -20,9 +20,9 @@ The Senior Account Manager's role is to be the client advocate; they ensure the 
 
 This is an influential role at andculture -- both respected and trusted internally and externally. The position reports to the Executive Director of Experience.
 
-## Like all of us at andculture, we really hope you like to do lots of fun, crazy, and exciting things in your life! At the office, here are a few we hope you can help us with: 
+## Like all of us at andculture, we really hope you like to do lots of fun, crazy, and exciting things in your life! At the office, here are a few we hope you can help us with:
 
-**Advisory/Consultative**
+**Advisory/Consultative**
 
 * Own, lead, and manage andculture’s client relationships; build strong and lasting working relationships with clients.
 * Act as a client advisor/consultant.
@@ -32,7 +32,7 @@ This is an influential role at andculture -- both respected and trusted internal
 * Become immersed in the client’s business to become an expert and advocate for the client.
 * Responsible for helping to assemble a rock-star team for clients made up of the best practitioners; they know who to bring into the conversation from andculture to help solve client challenges.
 
-**Inside Sales/Opportunities**
+**Inside Sales/Opportunities**
 
 * Identify new business opportunities with existing clients and leverage existing opportunities to expand scope on current projects.
 * Communicate ideas and rationale to internal teams and clients.
@@ -40,7 +40,7 @@ This is an influential role at andculture -- both respected and trusted internal
 * Identify strategic opportunities for clients based on their industry.
 * May work with internal andculture team members to pitch work and write proposals, strategies, scopes of work, etc., to finalize opportunities.
 
-**Expectation Setting**
+**Expectation Setting**
 
 * Manage client expectations (based on a foundation of trust, and expectation of quality deliverables).
 * Lead and provide major input in developing strategic marketing plans for client partners and in executing the campaigns and projects against those plans on a daily basis.
