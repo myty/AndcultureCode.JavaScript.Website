@@ -104,17 +104,20 @@ const SubscriptionForm = class extends React.Component {
         const headerClass = this.props.lightTheme ? " -light " : "";
 
         return (
-            <form className = { formClass } name="subscription-info" method="POST" data-netlify="true">
+            <form style={{paddingLeft: '30px'}} className = { formClass } name="subscription-info" method="POST" data-netlify="true">
                 <div className = "o-subscription-form__container">
                     <div className = "o-subscription-form__wrapper">
                         <header className={ headerClass } aria-label="Info form header">{ this.props.header }</header>
+                        <p style={{ margin: '-36px', marginLeft: '0px'}}>
+                            Enter your email to receive new blog post notifications
+                        </p>
                         <input type = "hidden" data-netlify="true" />
                         <input type="hidden" name="form-name" value="subscription-info" />
                         <Input
                             description        = "Enter your email to receive new blog post notifications."
                             type               = "email"
                             // className          = { this.state.activeQuestion === 1 ? '-active': '' }
-                            name               = "name"
+                            name               = "email address"
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
