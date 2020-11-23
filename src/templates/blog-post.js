@@ -112,7 +112,13 @@ export const BlogPostTemplate = (props) => {
             </div>
           </section>
           <section className="o-rhythm__row p-blog__subscribe" aria-label="Blog post subscription form">
-              <SubscriptionForm header="there's more in the works" lightTheme={ true } />
+              <div>
+                <SubscriptionForm
+                    formName   = "blog-subscription-form"
+                    header     = "there's more in the works"
+                    lightTheme = { true }
+                    subHeader  = "Enter your email below and be the first to know when we drop a new blog post." />
+              </div>
           </section>
           <footer className="o-rhythm__row" aria-label="Blog post footer">
             <section>
