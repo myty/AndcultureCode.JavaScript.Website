@@ -2,13 +2,13 @@
     @include clearfix();
     position: relative;
 
-    header {
+    h2 {
         @include font-size(30px);
         color: get-color("primary", "fresh-dark");
 
         @include breakpoints("tablet") {
             @include font-size("medium-large");
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         &.-light {
@@ -19,8 +19,7 @@
     &__container {
         @include clearfix();
         position: relative;
-        padding: 80px 0;
-        padding-left: 0;
+        padding: 60px 30px;
 
         fieldset .a-radio + label {
             color: get-color-primary("white");
@@ -29,7 +28,7 @@
         &.-light {
             background: get-color("primary", "white");
 
-            header {
+            h2 {
                 color: get-color-primary("after-hours");
             }
 
@@ -55,6 +54,25 @@
             @include breakpoints("tablet") {
                 margin: 0 0 80px;
             }
+        }
+    }
+
+    input[type="email"] {
+        background-color: #f5f5f5;
+    }
+
+    fieldset {
+        margin-top: 43px;
+        margin-bottom: 36px;
+        max-width: 400px;
+    }
+
+    .a-button {
+        cursor: pointer;
+        padding-right: .2em;
+
+        &.-disabled {
+            cursor: default;
         }
     }
 }
