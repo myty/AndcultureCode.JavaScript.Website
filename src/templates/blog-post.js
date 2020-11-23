@@ -6,6 +6,7 @@ import IconSocialLinkedIn                     from 'components/atoms/IconSocialL
 import IconSocialFacebook                     from 'components/atoms/IconSocialFacebook';
 import IconSocialMail                         from 'components/atoms/IconSocialMail';
 import BlogAuthor                             from 'components/organisms/BlogAuthor';
+import SubscriptionForm                       from 'components/molecules/SubscriptionForm';
 import useWindowDimensions                    from 'utils/windowDimensionsHook';
 import useComponentSize                       from '@rehooks/component-size'
 import 'resize-observer-polyfill';
@@ -109,6 +110,9 @@ export const BlogPostTemplate = (props) => {
                 __html: props.html
               }}>
             </div>
+          </section>
+          <section className="o-rhythm__row p-blog__subscribe" aria-label="Blog post subscription form">
+              <SubscriptionForm header="there's more in the works" lightTheme={ true } />
           </section>
           <footer className="o-rhythm__row" aria-label="Blog post footer">
             <section>

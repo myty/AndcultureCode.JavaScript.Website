@@ -333,6 +333,10 @@
         }
     }
 
+    &__subscribe {
+        background-color: #f5f5f5;
+    }
+
     footer {
         section {
             @include span-col(11);

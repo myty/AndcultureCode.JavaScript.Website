@@ -100,8 +100,6 @@ export const submitLandingFormOne = async (form, fingerprint) => {
 //   const marketingProf = await client.query(
 //     q.Get(q.Ref(q.Collection('fingerprints'), marketingId))
 //   );
-    console.log(probFingerprint);
-
 
   console.log(probFingerprint);
 //   const ret = await client.query(
@@ -110,19 +108,22 @@ export const submitLandingFormOne = async (form, fingerprint) => {
 //         q.Lambda(x => x.fingerprintId == probFingerprint.value.ref.value.id)
 //       )
 //     );
-const allUsers = await client.query(
-    q.Map(
-        q.Paginate(q.Documents(q.Collection('users'))),
-        q.Lambda(x => q.Get(x))
-      )
+    // const allUsers = await client.query(
+    // q.Map(
+    //     q.Paginate(q.Documents(q.Collection('users'))),
+    //     q.Lambda(x => q.Get(x))
+    //   )
+    // );
+    const theUser = await client.query(
+        q.Paginate(q.Match(q.Index('fingerprintId'), probFingerprint.value.ref.value.id.toString()), {size: 1}),
     );
 
-    console.log(allUsers);
+    console.log(theUser);
 
-    const theUser = allUsers.data.find((user) => user.data.fingerprintId === probFingerprint.value.ref.value.id);
-    console.log("THE USER:  ", theUser);
+    // const theUser = allUsers.data.find((user) => user.data.fingerprintId === probFingerprint.value.ref.value.id);
+    // console.log("THE USER:  ", theUser);
 
-    if (theUser == null) {
+    if (theUser[0] == null) {
         const newUser = await createUser({ email: "asdf@asdf.com", fingerprintId: probFingerprint.value.ref.value.id, marketingMatchCount: probFingerprint.matchCount });
         console.log("MADE NEW USER:  ", newUser);
     }
