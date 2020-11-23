@@ -15,6 +15,7 @@ import 'resize-observer-polyfill';
 
 export const BlogPostTemplate = (props) => {
   const properties                                      = props.properties;
+  const fbp                                             =props.fingerprintObj;
   const contentRef                                      = useRef();
   const headerRef                                       = useRef();
   const backgroundRef                                   = useRef();
@@ -117,6 +118,7 @@ export const BlogPostTemplate = (props) => {
               <div>
                 <SubscriptionForm
                     formName   = "blog-subscription-form"
+                    fingerprint = {fbp}
                     header     = "there's more in the works"
                     lightTheme = { true }
                     subHeader  = "Enter your email below and be the first to know when we drop a new blog post." />
@@ -169,6 +171,7 @@ const BlogPost = ({ data }) => {
   const [scrollTop, setScrollTop] = useState(0);
   const [pageClass, setPageClass] = useState("");
   const [fingerprint, setFingerprint] = useState(false);
+  const [fingerprintObject, setFingerprintObject] = useState({});
   useEffect(() => {
     const onScroll = e => {
       setScrollTop(e.target.documentElement.scrollTop);
@@ -177,7 +180,7 @@ const BlogPost = ({ data }) => {
     if (window.requestIdleCallback && fingerprint === false) {
       requestIdleCallback(() => {
           Fingerprint2.get( (components) => {
-            postFingerprint({
+            const obj = {
               visitHistory: [],
               userAgent: components[0].value,
               webdriver: components[1].value,
@@ -185,8 +188,9 @@ const BlogPost = ({ data }) => {
               screenRes: components[6].value,
               timezone: components[9].value,
               platform: components[16].value,
-            });
-
+            };
+            postFingerprint(obj);
+            setFingerprintObject(obj)
             setFingerprint(true);
           });
       })
@@ -220,6 +224,7 @@ const BlogPost = ({ data }) => {
       <main aria-label="Main content">
         <BlogPostTemplate
           author         = { _getAuthor(data.authors, postProperties.author) }
+          fingerprintObj = { fingerprintObject }
           html           = { postHtml }
           nextPostUrl    = { _getNextPostUrl(data.posts, data.post.id) }
           onInvertChange = { onInvertChange }

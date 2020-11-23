@@ -1,7 +1,7 @@
 import React                   from 'react';
 import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
-import {SubmitLandingFormOne}  from '../../../lambda/fauna-create';
+import {submitLandingFormOne}  from '../../../lambda/fauna-create';
 
 function encode(data) {
     return Object.keys(data)
@@ -26,8 +26,9 @@ const SubscriptionForm = class extends React.Component {
         if (!this.state.formIsValid) {
             return;
         }
-
-        SubmitLandingFormOne(this.state.formData, this.props.fingerprint);
+console.log('from data', this.state.formData);
+console.log('fingerprint', this.props.fingerprint);
+        submitLandingFormOne(this.state.formData.email, this.props.fingerprint);
         this.setState({ submitted: true });
     }
 
