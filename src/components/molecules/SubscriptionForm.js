@@ -1,6 +1,7 @@
 import React                   from 'react';
 import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
+import {SubmitLandingFormOne}  from '../../../lambda/fauna-create';
 
 function encode(data) {
     return Object.keys(data)
@@ -40,15 +41,16 @@ const SubscriptionForm = class extends React.Component {
     // }
 
     _onSubmitClick = (e) => {
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact-info", ...this.state.formData })
-        })
-            .then(() =>
-                this._caclulateProgress(1)
-            )
-            .catch(error => alert(error));
+        // fetch("/", {
+        //     method: "POST",
+        //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        //     body: encode({ "form-name": "contact-info", ...this.state.formData })
+        // })
+        //     .then(() =>
+        //         this._caclulateProgress(1)
+        //     )
+        //     .catch(error => alert(error));
+        SubmitLandingFormOne(this.state.formData, this.props.fingerprint);
 
         e.preventDefault();
     }
@@ -121,7 +123,7 @@ const SubscriptionForm = class extends React.Component {
                             inputValueCallback = { this._setInputValue }
                             isRequired         = { true }
                             lightTheme         = { this.props.lightTheme }
-                            value              = { this.state.formData.name }
+                            value              = { this.state.formData.email }
                             id                 = "info-name" />
                         <div className = "o-subscription-form__buttons">
                             <button

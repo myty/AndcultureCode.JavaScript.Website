@@ -8,7 +8,9 @@ import IconSocialMail                         from 'components/atoms/IconSocialM
 import BlogAuthor                             from 'components/organisms/BlogAuthor';
 import SubscriptionForm                       from 'components/molecules/SubscriptionForm';
 import useWindowDimensions                    from 'utils/windowDimensionsHook';
-import useComponentSize                       from '@rehooks/component-size'
+import useComponentSize                       from '@rehooks/component-size';
+import {postFingerprint} from '../../lambda/fauna-create';
+import Fingerprint2 from '@fingerprintjs/fingerprintjs';
 import 'resize-observer-polyfill';
 
 export const BlogPostTemplate = (props) => {
@@ -85,7 +87,7 @@ export const BlogPostTemplate = (props) => {
           <div className="p-blog__background__gradient__bottom"></div>
         </div>
         <div
-          className = {`p-blog__background__wrapper ${contentClassName} o-rhythm__container`} 
+          className = {`p-blog__background__wrapper ${contentClassName} o-rhythm__container`}
           id        = "main-content"
           ref       = {contentRef}
           style     = { contentStyle } >
@@ -131,7 +133,7 @@ export const BlogPostTemplate = (props) => {
                 <IconSocialTwitter />
               </a>
               <a
-                href       = {`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`} 
+                href       = {`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`}
                 target     = "_blank"
                 aria-label = "Share on LinkedIn"
                 rel        = "noopener">
@@ -160,11 +162,36 @@ const BlogPost = ({ data }) => {
   const postProperties            = data.post.frontmatter;
   const [scrollTop, setScrollTop] = useState(0);
   const [pageClass, setPageClass] = useState("");
-
+  const [fingerprint, setFingerprint] = useState(false);
   useEffect(() => {
     const onScroll = e => {
       setScrollTop(e.target.documentElement.scrollTop);
     };
+
+    if (window.requestIdleCallback && fingerprint === false) {
+      requestIdleCallback(() => {
+          Fingerprint2.get( (components) => {
+            postFingerprint({
+              visitHistory: [],
+              userAgent: components[0].value,
+              webdriver: components[1].value,
+              language: components[2].value,
+              screenRes: components[6].value,
+              timezone: components[9].value,
+              platform: components[16].value,
+            });
+
+            setFingerprint(true);
+          });
+      })
+  } else {
+      setTimeout( () => {
+          Fingerprint2.get((components) => {
+            console.log('set timeout fingerprint',components) // an array of components: {key: ..., value: ...}
+          })
+      }, 500)
+  }
+
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
