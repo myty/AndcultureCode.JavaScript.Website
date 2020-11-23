@@ -7,14 +7,13 @@ const client = new faunadb.Client({
 })
 
 /* export our lambda function as named "handler" export */
-export const postFingerprint = async (data) => {
+export const postFingerprint = async (data, page) => {
     const u = await checkFingerprint(data);
     console.log(u);
 
-    if(u.matchCount > 3){
+    if(u.matchCount > 4){
         console.log('matched higher user');
-        addSiteHistory(u.value.data, { page: "blog", date: new Date().toISOString() });
-        // submitLandingFormOne({}, u.value.data);
+        addSiteHistory(u.value.data, { page, date: new Date().toISOString(), action: 'landed on page' });
         return null;
     }
 
@@ -26,8 +25,7 @@ export const postFingerprint = async (data) => {
     )
     .then((ret) => {
         console.log(ret)
-        addSiteHistory(ret.data, { page: "Homepage" });
-        //submitLandingFormOne({}, ret.data);
+        addSiteHistory(ret.data, { page, date: new Date().toISOString(), action: 'landed on page'  });
     })
     .catch((err) => console.log(err));
 
@@ -120,5 +118,5 @@ export const submitLandingFormOne = async (email, fingerprint) => {
 
       //marketingProf.visitHistory.push({date: new Date().toISOString(), page:'blog', action: 'submit form' });
       console.log('prob fingerprint', probFingerprint);
-      await addSiteHistory(probFingerprint.value.data, {date: new Date().toISOString(), page:'blog', action: 'submit form' })
+      await addSiteHistory(probFingerprint.value.data, {date: new Date().toISOString(), page:'blog-page', action: 'submit form' })
      }

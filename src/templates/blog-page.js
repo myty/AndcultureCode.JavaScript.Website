@@ -64,7 +64,7 @@ export const BlogPageTemplate = ({
                 screenRes: components[6].value,
                 timezone: components[9].value,
                 platform: components[16].value,
-              });
+              }, 'blog-page');
 
               setFingerprint(true);
             });

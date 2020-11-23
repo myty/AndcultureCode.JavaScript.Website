@@ -29,7 +29,7 @@ const AboutPage = ({ data }) => {
                 screenRes: components[6].value,
                 timezone: components[9].value,
                 platform: components[16].value,
-              });
+              }, 'about-page');
 
               setFingerprint(true);
             });

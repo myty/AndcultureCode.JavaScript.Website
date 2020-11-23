@@ -189,7 +189,7 @@ const BlogPost = ({ data }) => {
               timezone: components[9].value,
               platform: components[16].value,
             };
-            postFingerprint(obj);
+            postFingerprint(obj, 'specific blog');
             setFingerprintObject(obj)
             setFingerprint(true);
           });
