@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { graphql } from 'gatsby';
-import Layout from 'components/Layout';
-import AboutHero from 'components/molecules/AboutHero';
-import DepartmentList from 'components/organisms/DepartmentList';
+import { graphql }         from 'gatsby';
+import Layout              from 'components/Layout';
+import AboutHero           from 'components/molecules/AboutHero';
+import DepartmentList      from 'components/organisms/DepartmentList';
 import TeamSliderContainer from 'components/organisms/TeamSliderContainer';
-import {postFingerprint} from '../../lambda/fauna-create';
-import Fingerprint2 from '@fingerprintjs/fingerprintjs';
+import { postFingerprint } from '../../lambda/fauna-create';
+import Fingerprint2        from '@fingerprintjs/fingerprintjs';
 
 import '../assets/scss/app.scss';
 
