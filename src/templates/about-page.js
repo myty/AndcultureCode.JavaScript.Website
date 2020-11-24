@@ -13,14 +13,11 @@ const AboutPage = ({ data }) => {
   const pageData = data.markdownRemark.frontmatter;
 
   const [fingerprint, setFingerprint] = useState(false);
-//   const [lat, setLat] = useState(null);
-//   const [long, setLong] = useState(null);
 
   useEffect(() => {
     if (window.requestIdleCallback && fingerprint === false) {
         requestIdleCallback(() => {
             Fingerprint2.get( (components) => {
-              console.log('fingerprint callback',components) // an array of components: {key: ..., value: ...}
               postFingerprint({
                 visitHistory: [],
                 userAgent: components[0].value,

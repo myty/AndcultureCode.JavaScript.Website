@@ -3,12 +3,6 @@ import Input                   from '../atoms/Input';
 import Textarea                from '../atoms/Textarea';
 import {submitLandingFormOne}  from '../../../lambda/fauna-create';
 
-function encode(data) {
-    return Object.keys(data)
-        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&')
-}
-
 const SubscriptionForm = class extends React.Component {
     constructor(props) {
         super(props);
@@ -26,8 +20,7 @@ const SubscriptionForm = class extends React.Component {
         if (!this.state.formIsValid) {
             return;
         }
-console.log('from data', this.state.formData);
-console.log('fingerprint', this.props.fingerprint);
+
         submitLandingFormOne(this.state.formData.email, this.props.fingerprint);
         this.setState({ submitted: true });
     }
@@ -44,7 +37,6 @@ console.log('fingerprint', this.props.fingerprint);
     }
 
     _setInputValue = (name, value) => {
-        console.log(name, value);
         this.setState({ formData: {...this.state.formData, [name]: value }});
     }
 
@@ -79,8 +71,6 @@ console.log('fingerprint', this.props.fingerprint);
                             <React.Fragment>
                                 <h2 className={ headerClass } aria-label="Subscription form header">{ this.props.header }</h2>
                                 <p>{ this.props.subHeader }</p>
-                                <input type = "hidden" data-netlify="true" />
-                                <input type="hidden" name="form-name" value={ this.props.formName } />
                                 <Input
                                     description        = { this.props.description }
                                     type               = "email"

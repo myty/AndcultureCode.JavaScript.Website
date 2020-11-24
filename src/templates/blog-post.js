@@ -15,7 +15,7 @@ import 'resize-observer-polyfill';
 
 export const BlogPostTemplate = (props) => {
   const properties                                      = props.properties;
-  const fbp                                             =props.fingerprintObj;
+  const fbp                                             = props.fingerprintObj;
   const contentRef                                      = useRef();
   const headerRef                                       = useRef();
   const backgroundRef                                   = useRef();
@@ -117,11 +117,11 @@ export const BlogPostTemplate = (props) => {
           <section className="o-rhythm__row p-blog__subscribe" aria-label="Blog post subscription form">
               <div>
                 <SubscriptionForm
-                    formName   = "blog-subscription-form"
-                    fingerprint = {fbp}
-                    header     = "there's more in the works"
-                    lightTheme = { true }
-                    subHeader  = "Enter your email below and be the first to know when we drop a new blog post." />
+                    formName    = "blog-subscription-form"
+                    fingerprint = { fbp }
+                    header      = "there's more in the works"
+                    lightTheme  = { true }
+                    subHeader   = "Enter your email below and be the first to know when we drop a new blog post." />
               </div>
           </section>
           <footer className="o-rhythm__row" aria-label="Blog post footer">
@@ -166,11 +166,11 @@ export const BlogPostTemplate = (props) => {
 }
 
 const BlogPost = ({ data }) => {
-  const postHtml                  = data.post.html;
-  const postProperties            = data.post.frontmatter;
-  const [scrollTop, setScrollTop] = useState(0);
-  const [pageClass, setPageClass] = useState("");
-  const [fingerprint, setFingerprint] = useState(false);
+  const postHtml                                  = data.post.html;
+  const postProperties                            = data.post.frontmatter;
+  const [scrollTop, setScrollTop]                 = useState(0);
+  const [pageClass, setPageClass]                 = useState("");
+  const [fingerprint, setFingerprint]             = useState(false);
   const [fingerprintObject, setFingerprintObject] = useState({});
   useEffect(() => {
     const onScroll = e => {
