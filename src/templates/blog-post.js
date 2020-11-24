@@ -9,7 +9,7 @@ import BlogAuthor                             from 'components/organisms/BlogAut
 import SubscriptionForm                       from 'components/molecules/SubscriptionForm';
 import useWindowDimensions                    from 'utils/windowDimensionsHook';
 import useComponentSize                       from '@rehooks/component-size';
-import {postFingerprint}                      from '../../lambda/fauna-create';
+import { postFingerprint }                    from '../../lambda/fauna-create';
 import Fingerprint2                           from '@fingerprintjs/fingerprintjs';
 import 'resize-observer-polyfill';
 

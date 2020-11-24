@@ -9,10 +9,10 @@ const client = new faunadb.Client({
 
 /* export our lambda function as named "handler" export */
 export const postFingerprint = async (data, page) => {
-    const u = await checkFingerprint(data);
+    const fingerprint = await checkFingerprint(data);
 
 
-    if(u.matchCount > 4){
+    if(fingerprint.matchCount > 4){
         addSiteHistory(u.value.data, { page, date: new Date().toISOString(), action: 'landed on page' });
         return null;
     }
@@ -35,14 +35,14 @@ export const checkFingerprint = async (createFingerprintDto) => {
     const fingerprint = {...createFingerprintDto};
     const keys = Object.keys(fingerprint);
 
-    const ret = await client.query(
+    const returnedQueryResults = await client.query(
         q.Map(
             q.Paginate(q.Documents(q.Collection('fingerprints'))),
             q.Lambda(x => q.Get(x))
           )
     );
 
-    const finalResult = ret.data.reduce((prevValue, curVal) => {
+    const finalResult = returnedQueryResults.data.reduce((prevValue, curVal) => {
         const matches = keys.map(k => curVal[k] === fingerprint[k]);
         if (matches.length > prevValue.matchCount) {
             return {value: curVal, matchCount: matches.length};

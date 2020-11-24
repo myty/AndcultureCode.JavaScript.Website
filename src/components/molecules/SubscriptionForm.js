@@ -1,7 +1,7 @@
-import React                   from 'react';
-import Input                   from '../atoms/Input';
-import Textarea                from '../atoms/Textarea';
-import {submitLandingFormOne}  from '../../../lambda/fauna-create';
+import React                     from 'react';
+import Input                     from '../atoms/Input';
+import Textarea                  from '../atoms/Textarea';
+import { submitLandingFormOne }  from '../../../lambda/fauna-create';
 
 const SubscriptionForm = class extends React.Component {
     constructor(props) {
