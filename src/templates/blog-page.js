@@ -5,8 +5,8 @@ import BlogFeatured                           from 'components/molecules/BlogFea
 import BlogList                               from 'components/organisms/BlogList';
 import useWindowDimensions                    from 'utils/windowDimensionsHook';
 import useComponentSize                       from '@rehooks/component-size';
-import {postFingerprint} from '../../lambda/fauna-create';
-import Fingerprint2 from '@fingerprintjs/fingerprintjs';
+import {postFingerprint}                      from '../../lambda/fauna-create';
+import Fingerprint2                           from '@fingerprintjs/fingerprintjs';
 import 'resize-observer-polyfill';
 import '../assets/scss/app.scss'
 
