@@ -13,7 +13,7 @@ export const postFingerprint = async (data, page) => {
 
 
     if(fingerprint.matchCount > 4){
-        addSiteHistory(u.value.data, { page, date: new Date().toISOString(), action: 'landed on page' });
+        addSiteHistory(fingerprint.value.data, { page, date: new Date().toISOString(), action: 'landed on page' });
         return null;
     }
 
