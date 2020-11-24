@@ -13,7 +13,6 @@ export const postFingerprint = async (data, page) => {
 
 
     if(u.matchCount > 4){
-        console.log('matched higher user');
         addSiteHistory(u.value.data, { page, date: new Date().toISOString(), action: 'landed on page' });
         return null;
     }
@@ -25,7 +24,6 @@ export const postFingerprint = async (data, page) => {
       )
     )
     .then((ret) => {
-        console.log(ret)
         addSiteHistory(ret.data, { page, date: new Date().toISOString(), action: 'landed on page'  });
     })
     .catch((err) => console.log(err));
@@ -43,8 +41,6 @@ export const checkFingerprint = async (createFingerprintDto) => {
             q.Lambda(x => q.Get(x))
           )
     );
-
-    console.log(ret);
 
     const finalResult = ret.data.reduce((prevValue, curVal) => {
         const matches = keys.map(k => curVal[k] === fingerprint[k]);
@@ -96,7 +92,6 @@ export const submitLandingFormOne = async (email, fingerprint) => {
 
         if (theUser == null) {
             const newUser = await createUser({ email, fingerprintId: probFingerprint.value.ref.value.id, marketingMatchCount: probFingerprint.matchCount });
-            console.log("MADE NEW USER:  ", newUser);
         }
 
       await addSiteHistory(probFingerprint.value.data, {date: new Date().toISOString(), page:'blog-page', action: 'submit form' })

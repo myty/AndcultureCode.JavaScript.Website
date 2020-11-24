@@ -197,7 +197,7 @@ const BlogPost = ({ data }) => {
   } else {
       setTimeout( () => {
           Fingerprint2.get((components) => {
-            console.log('set timeout fingerprint',components) // an array of components: {key: ..., value: ...}
+           // console.log('set timeout fingerprint',components) // an array of components: {key: ..., value: ...}
           })
       }, 500)
   }

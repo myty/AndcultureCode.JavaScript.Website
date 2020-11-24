@@ -37,23 +37,12 @@ const AboutPage = ({ data }) => {
     } else {
         setTimeout( () => {
             Fingerprint2.get((components) => {
-              console.log('set timeout fingerprint',components) // an array of components: {key: ..., value: ...}
+             // console.log('set timeout fingerprint',components) // an array of components: {key: ..., value: ...}
             })
         }, 500)
     }
 
   }, []);
-//   fetch('../../lamda/fauna-create', {
-//     // body: {},
-//     method: 'POST',
-//   }).then((res) => {
-//       console.log(res);
-//     // return res.json();
-//   }).then((response) => {
-// console.log('response from lamda', response);
-//   }).catch((e) => {
-//     console.log('error from lamda', e);
-//   });
   return (
     <Layout
       pageTitle="About"
