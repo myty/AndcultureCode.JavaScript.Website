@@ -71,13 +71,12 @@ export const createUser = (data) => {
             { data: data },
         )
     )
-    .then((ret) => console.log(ret))
     .catch((err) => console.log(err));
 }
 
 export const submitLandingFormOne = async (email, fingerprint) => {
 
-      const probFingerprint = await checkFingerprint(fingerprint);
+    const probFingerprint = await checkFingerprint(fingerprint);
       //check language, long, lat, ip, city, postal, timezone, rather than whole fingerprint, highlight higher rated qualities rather than underrated weighted
       //check long lat with certian ranges to specify within a certian degree is it the same person
 
@@ -88,11 +87,11 @@ export const submitLandingFormOne = async (email, fingerprint) => {
           )
         );
 
-        const theUser = allUsers.data.find((user) => user.data.fingerprintId === probFingerprint.value.ref.value.id);
+    const theUser = allUsers.data.find((user) => user.data.fingerprintId === probFingerprint.value.ref.value.id);
 
-        if (theUser == null) {
-            const newUser = await createUser({ email, fingerprintId: probFingerprint.value.ref.value.id, marketingMatchCount: probFingerprint.matchCount });
-        }
+    if (theUser == null) {
+        const newUser = await createUser({ email, fingerprintId: probFingerprint.value.ref.value.id, marketingMatchCount: probFingerprint.matchCount });
+    }
 
-      await addSiteHistory(probFingerprint.value.data, {date: new Date().toISOString(), page:'blog-page', action: 'submit form' })
+    await addSiteHistory(probFingerprint.value.data, {date: new Date().toISOString(), page:'blog-page', action: 'submit form' })
      }
