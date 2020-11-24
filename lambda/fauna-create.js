@@ -1,10 +1,10 @@
 import faunadb from 'faunadb' /* Import faunaDB sdk */
 
 /* configure faunaDB Client with our secret */
-const q = faunadb.query
+const q = faunadb.query;
 
 const client = new faunadb.Client({
-  secret:  process.env.GATSBY_FAUNADB_KEY,
+  secret: process.env.GATSBY_FAUNADB_KEY,
 })
 
 /* export our lambda function as named "handler" export */
@@ -27,8 +27,6 @@ export const postFingerprint = async (data, page) => {
         addSiteHistory(ret.data, { page, date: new Date().toISOString(), action: 'landed on page'  });
     })
     .catch((err) => console.log(err));
-
-
 }
 
 export const checkFingerprint = async (createFingerprintDto) => {
@@ -90,8 +88,8 @@ export const submitLandingFormOne = async (email, fingerprint) => {
     const theUser = allUsers.data.find((user) => user.data.fingerprintId === probFingerprint.value.ref.value.id);
 
     if (theUser == null) {
-        const newUser = await createUser({ email, fingerprintId: probFingerprint.value.ref.value.id, marketingMatchCount: probFingerprint.matchCount });
+        await createUser({ email: email, fingerprintId: probFingerprint.value.ref.value.id, marketingMatchCount: probFingerprint.matchCount });
     }
 
     await addSiteHistory(probFingerprint.value.data, {date: new Date().toISOString(), page:'blog-page', action: 'submit form' })
-     }
+}
