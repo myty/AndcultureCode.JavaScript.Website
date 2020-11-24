@@ -6,12 +6,16 @@ import IconSocialLinkedIn                     from 'components/atoms/IconSocialL
 import IconSocialFacebook                     from 'components/atoms/IconSocialFacebook';
 import IconSocialMail                         from 'components/atoms/IconSocialMail';
 import BlogAuthor                             from 'components/organisms/BlogAuthor';
+import SubscriptionForm                       from 'components/molecules/SubscriptionForm';
 import useWindowDimensions                    from 'utils/windowDimensionsHook';
-import useComponentSize                       from '@rehooks/component-size'
+import useComponentSize                       from '@rehooks/component-size';
+import { postFingerprint }                    from '../../lambda/fauna-create';
+import Fingerprint2                           from '@fingerprintjs/fingerprintjs';
 import 'resize-observer-polyfill';
 
 export const BlogPostTemplate = (props) => {
   const properties                                      = props.properties;
+  const fbp                                             = props.fingerprintObj;
   const contentRef                                      = useRef();
   const headerRef                                       = useRef();
   const backgroundRef                                   = useRef();
@@ -84,7 +88,7 @@ export const BlogPostTemplate = (props) => {
           <div className="p-blog__background__gradient__bottom"></div>
         </div>
         <div
-          className = {`p-blog__background__wrapper ${contentClassName} o-rhythm__container`} 
+          className = {`p-blog__background__wrapper ${contentClassName} o-rhythm__container`}
           id        = "main-content"
           ref       = {contentRef}
           style     = { contentStyle } >
@@ -110,6 +114,16 @@ export const BlogPostTemplate = (props) => {
               }}>
             </div>
           </section>
+          <section className="o-rhythm__row p-blog__subscribe" aria-label="Blog post subscription form">
+              <div>
+                <SubscriptionForm
+                    formName    = "blog-subscription-form"
+                    fingerprint = { fbp }
+                    header      = "there's more in the works"
+                    lightTheme  = { true }
+                    subHeader   = "Enter your email below and be the first to know when we drop a new blog post." />
+              </div>
+          </section>
           <footer className="o-rhythm__row" aria-label="Blog post footer">
             <section>
               <a
@@ -127,7 +141,7 @@ export const BlogPostTemplate = (props) => {
                 <IconSocialTwitter />
               </a>
               <a
-                href       = {`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`} 
+                href       = {`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}`}
                 target     = "_blank"
                 aria-label = "Share on LinkedIn"
                 rel        = "noopener">
@@ -152,15 +166,42 @@ export const BlogPostTemplate = (props) => {
 }
 
 const BlogPost = ({ data }) => {
-  const postHtml                  = data.post.html;
-  const postProperties            = data.post.frontmatter;
-  const [scrollTop, setScrollTop] = useState(0);
-  const [pageClass, setPageClass] = useState("");
-
+  const postHtml                                  = data.post.html;
+  const postProperties                            = data.post.frontmatter;
+  const [scrollTop, setScrollTop]                 = useState(0);
+  const [pageClass, setPageClass]                 = useState("");
+  const [fingerprint, setFingerprint]             = useState(false);
+  const [fingerprintObject, setFingerprintObject] = useState({});
   useEffect(() => {
     const onScroll = e => {
       setScrollTop(e.target.documentElement.scrollTop);
     };
+
+    if (window.requestIdleCallback && fingerprint === false) {
+      requestIdleCallback(() => {
+          Fingerprint2.get( (components) => {
+            const obj = {
+              visitHistory: [],
+              userAgent: components[0].value,
+              webdriver: components[1].value,
+              language: components[2].value,
+              screenRes: components[6].value,
+              timezone: components[9].value,
+              platform: components[16].value,
+            };
+            postFingerprint(obj, 'specific blog');
+            setFingerprintObject(obj)
+            setFingerprint(true);
+          });
+      })
+  } else {
+      setTimeout( () => {
+          Fingerprint2.get((components) => {
+           // console.log('set timeout fingerprint',components) // an array of components: {key: ..., value: ...}
+          })
+      }, 500)
+  }
+
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
@@ -183,6 +224,7 @@ const BlogPost = ({ data }) => {
       <main aria-label="Main content">
         <BlogPostTemplate
           author         = { _getAuthor(data.authors, postProperties.author) }
+          fingerprintObj = { fingerprintObject }
           html           = { postHtml }
           nextPostUrl    = { _getNextPostUrl(data.posts, data.post.id) }
           onInvertChange = { onInvertChange }

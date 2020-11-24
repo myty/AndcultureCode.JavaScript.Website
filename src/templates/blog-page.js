@@ -4,7 +4,9 @@ import Layout                                 from 'components/Layout';
 import BlogFeatured                           from 'components/molecules/BlogFeatured';
 import BlogList                               from 'components/organisms/BlogList';
 import useWindowDimensions                    from 'utils/windowDimensionsHook';
-import useComponentSize                       from '@rehooks/component-size'
+import useComponentSize                       from '@rehooks/component-size';
+import {postFingerprint}                      from '../../lambda/fauna-create';
+import Fingerprint2                           from '@fingerprintjs/fingerprintjs';
 import 'resize-observer-polyfill';
 import '../assets/scss/app.scss'
 
@@ -43,12 +45,37 @@ export const BlogPageTemplate = ({
 
     const [scrollTop, setScrollTop] = useState(0);
 
+    const [fingerprint, setFingerprint] = useState(false);
+
+
     useEffect(() => {
       const onScroll = e => {
         setScrollTop(e.target.documentElement.scrollTop);
       };
       window.addEventListener("scroll", onScroll);
+      if (window.requestIdleCallback && fingerprint === false) {
+        requestIdleCallback(() => {
+            Fingerprint2.get( (components) => {
+              postFingerprint({
+                visitHistory: [],
+                userAgent: components[0].value,
+                webdriver: components[1].value,
+                language: components[2].value,
+                screenRes: components[6].value,
+                timezone: components[9].value,
+                platform: components[16].value,
+              }, 'blog-page');
 
+              setFingerprint(true);
+            });
+        })
+    } else {
+        setTimeout( () => {
+            Fingerprint2.get((components) => {
+              //console.log('set timeout fingerprint',components) // an array of components: {key: ..., value: ...}
+            })
+        }, 500)
+    }
       return () => window.removeEventListener("scroll", onScroll);
     }, [scrollTop]);
 
