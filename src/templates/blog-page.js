@@ -56,15 +56,15 @@ export const BlogPageTemplate = ({
       if (window.requestIdleCallback && fingerprint === false) {
         requestIdleCallback(() => {
             Fingerprint2.get( (components) => {
-              postFingerprint({
-                visitHistory: [],
-                userAgent: components[0].value,
-                webdriver: components[1].value,
-                language: components[2].value,
-                screenRes: components[6].value,
-                timezone: components[9].value,
-                platform: components[16].value,
-              }, 'blog-page');
+              // postFingerprint({
+              //   visitHistory: [],
+              //   userAgent: components[0].value,
+              //   webdriver: components[1].value,
+              //   language: components[2].value,
+              //   screenRes: components[6].value,
+              //   timezone: components[9].value,
+              //   platform: components[16].value,
+              // }, 'blog-page');
 
               setFingerprint(true);
             });

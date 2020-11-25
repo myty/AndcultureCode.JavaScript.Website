@@ -21,7 +21,7 @@ const SubscriptionForm = class extends React.Component {
             return;
         }
 
-        submitLandingFormOne(this.state.formData.email, this.props.fingerprint);
+        //submitLandingFormOne(this.state.formData.email, this.props.fingerprint);
         this.setState({ submitted: true });
     }
 
