@@ -4,7 +4,7 @@ import faunadb from 'faunadb' /* Import faunaDB sdk */
 const q = faunadb.query;
 
 const client = new faunadb.Client({
-  secret: process.env.GATSBY_FAUNADB_KEY,
+  secret: 'fnAD8ACvJ0ACAjhiL19AsuZeNvadoPoy1hHCMpa0',
 })
 
 /* export our lambda function as named "handler" export */
@@ -12,7 +12,7 @@ export const postFingerprint = async (data, page) => {
     const fingerprint = await checkFingerprint(data);
 
 
-    if(fingerprint.matchCount > 6){
+    if(fingerprint.matchCount > 8 && data.ip === fingerprint.ip){
         addSiteHistory(fingerprint.value.data, { page, date: new Date().toISOString(), action: 'landed on page' });
         return null;
     }
@@ -43,10 +43,11 @@ export const checkFingerprint = async (createFingerprintDto) => {
     const finalResult = returnedQueryResults.data.reduce((prevValue, curVal) => {
         const matches = keys.map(k => curVal[k] === fingerprint[k]);
         if (matches.length > prevValue.matchCount) {
-            return {value: curVal, matchCount: matches.length};
+            console.log('curval', curVal);
+            return {value: curVal, matchCount: matches.length, ip: curVal.data.ip};
         }
         return prevValue;
-    }, {value: null, matchCount: 0});
+    }, {value: null, matchCount: 0, ip: null});
 
     return finalResult;
 }
@@ -60,6 +61,7 @@ export const addSiteHistory = async (createFingerprintDto, createSiteHistoryDto)
     )
     .then((ret) => console.log(ret))
     .catch((err) => console.log(err));
+
 }
 
 export const createUser = (data) => {
