@@ -12,7 +12,7 @@ export const postFingerprint = async (data, page) => {
     const fingerprint = await checkFingerprint(data);
 
 
-    if(fingerprint.matchCount > 8 && data.ip === fingerprint.ip){
+    if(fingerprint.matchCount > 7 && data.ip === fingerprint.ip){
         addSiteHistory(fingerprint.value.data, { page, date: new Date().toISOString(), action: 'landed on page' });
         return null;
     }

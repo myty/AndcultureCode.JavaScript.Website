@@ -191,6 +191,7 @@ const BlogPost = ({ data }) => {
           Fingerprint2.get( (components) => {
 
             const obj = {
+              visitHistory: [],
               userAgent: components[0].value,
               webdriver: components[1].value,
               language: components[2].value,
